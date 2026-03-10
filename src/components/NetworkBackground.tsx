@@ -134,6 +134,7 @@ function MagneticNetwork() {
         nodesRef.current.geometry.attributes.color.needsUpdate = true;
         linesRef.current.geometry.attributes.position.needsUpdate = true;
         linesRef.current.geometry.attributes.color.needsUpdate = true;
+        linesRef.current.geometry.setDrawRange(0, lineIdx / 3);
 
         groupRef.current.rotation.y = time * 0.05;
     });
@@ -142,16 +143,16 @@ function MagneticNetwork() {
         <group ref={groupRef}>
             <lineSegments ref={linesRef}>
                 <bufferGeometry>
-                    <bufferAttribute attach="attributes-position" count={linesPosition.length / 3} array={linesPosition} itemSize={3} />
-                    <bufferAttribute attach="attributes-color" count={linesColor.length / 3} array={linesColor} itemSize={3} />
+                    <bufferAttribute attach="attributes-position" args={[linesPosition, 3]} />
+                    <bufferAttribute attach="attributes-color" args={[linesColor, 3]} />
                 </bufferGeometry>
                 <lineBasicMaterial vertexColors transparent opacity={0.25} />
             </lineSegments>
 
             <points ref={nodesRef}>
                 <bufferGeometry>
-                    <bufferAttribute attach="attributes-position" count={NODE_COUNT} array={nodesPosition} itemSize={3} />
-                    <bufferAttribute attach="attributes-color" count={NODE_COUNT} array={nodesColor} itemSize={3} />
+                    <bufferAttribute attach="attributes-position" args={[nodesPosition, 3]} />
+                    <bufferAttribute attach="attributes-color" args={[nodesColor, 3]} />
                 </bufferGeometry>
                 <pointsMaterial vertexColors size={0.18} transparent opacity={0.8} sizeAttenuation={true} />
             </points>

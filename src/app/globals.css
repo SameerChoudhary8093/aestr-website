@@ -12,16 +12,13 @@
   --radius-sm: 0.25rem;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-background-alt: var(--background-alt);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
   --color-accent-secondary: var(--accent-secondary);
   --color-muted: var(--muted);
-
-  --font-orbitron: var(--font-orbitron);
-  --font-roboto: var(--font-roboto);
 }
 
 body {
