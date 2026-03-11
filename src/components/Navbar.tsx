@@ -42,6 +42,7 @@ const Navbar = () => {
                             width={150}
                             height={40}
                             className="object-contain transform transition-transform duration-300 drop-shadow-[0_0_8px_rgba(91,29,214,0.6)] hover:drop-shadow-[0_0_12px_rgba(204,255,0,0.8)]"
+                            priority
                             onError={(e) => {
                                 // If image fails, hide it and the parent will show text or stay empty
                                 (e.target as any).style.display = 'none';

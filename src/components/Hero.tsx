@@ -33,6 +33,7 @@ const Hero = () => {
                                     width={120}
                                     height={30}
                                     className="h-6 w-auto object-contain"
+                                    priority
                                 />
                             </div>
                             <div className="flex flex-col items-start border-l border-white/10 pl-10">
@@ -43,6 +44,7 @@ const Hero = () => {
                                     width={140}
                                     height={35}
                                     className="h-8 w-auto object-contain"
+                                    priority
                                 />
                             </div>
                         </div>
