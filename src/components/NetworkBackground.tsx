@@ -4,7 +4,7 @@ import React, { useRef, useMemo, useEffect } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 
-const NODE_COUNT = 200;
+const NODE_COUNT = 300;
 const CONNECTION_DISTANCE = 4.5;
 const MOUSE_RADIUS = 6.0;
 
@@ -62,8 +62,8 @@ function MagneticNetwork() {
         let lineIdx = 0;
         let colorIdx = 0;
 
-        const baseColor = new THREE.Color("#CCFF00"); // Lime
-        const activeColor = new THREE.Color("#FFFFFF"); // White Glow
+        const baseColor = new THREE.Color("#D8F602"); // New Accent Neon
+        const activeColor = new THREE.Color("#EAF0BD"); // New Foreground Text Color
 
         data.pos.forEach((p, i) => {
             const b = data.basePos[i];
@@ -72,7 +72,6 @@ function MagneticNetwork() {
             // 1. Target logic: Home vs Mouse Pull
             const target = b.clone();
 
-            // Interaction distance (ignoring Z for stronger feel)
             const distToMouse = new THREE.Vector2(p.x, p.y).distanceTo(new THREE.Vector2(mouseV.x, mouseV.y));
 
             if (distToMouse < MOUSE_RADIUS) {
@@ -130,11 +129,15 @@ function MagneticNetwork() {
             }
         }
 
-        nodesRef.current.geometry.attributes.position.needsUpdate = true;
-        nodesRef.current.geometry.attributes.color.needsUpdate = true;
-        linesRef.current.geometry.attributes.position.needsUpdate = true;
-        linesRef.current.geometry.attributes.color.needsUpdate = true;
-        linesRef.current.geometry.setDrawRange(0, lineIdx / 3);
+        if (nodesRef.current && nodesRef.current.geometry.attributes.position) {
+            nodesRef.current.geometry.attributes.position.needsUpdate = true;
+            nodesRef.current.geometry.attributes.color.needsUpdate = true;
+        }
+        if (linesRef.current && linesRef.current.geometry.attributes.position) {
+            linesRef.current.geometry.attributes.position.needsUpdate = true;
+            linesRef.current.geometry.attributes.color.needsUpdate = true;
+            linesRef.current.geometry.setDrawRange(0, lineIdx / 3);
+        }
 
         groupRef.current.rotation.y = time * 0.05;
     });
@@ -143,18 +146,42 @@ function MagneticNetwork() {
         <group ref={groupRef}>
             <lineSegments ref={linesRef}>
                 <bufferGeometry>
-                    <bufferAttribute attach="attributes-position" args={[linesPosition, 3]} />
-                    <bufferAttribute attach="attributes-color" args={[linesColor, 3]} />
+                    <bufferAttribute 
+                        attach="attributes-position" 
+                         count={linesPosition.length / 3}
+                         array={linesPosition}
+                         itemSize={3}
+                         args={[linesPosition, 3]}
+                    />
+                    <bufferAttribute 
+                        attach="attributes-color" 
+                         count={linesColor.length / 3}
+                         array={linesColor}
+                         itemSize={3}
+                         args={[linesColor, 3]}
+                    />
                 </bufferGeometry>
-                <lineBasicMaterial vertexColors transparent opacity={0.25} />
+                <lineBasicMaterial vertexColors transparent opacity={0.15} />
             </lineSegments>
 
             <points ref={nodesRef}>
                 <bufferGeometry>
-                    <bufferAttribute attach="attributes-position" args={[nodesPosition, 3]} />
-                    <bufferAttribute attach="attributes-color" args={[nodesColor, 3]} />
+                    <bufferAttribute 
+                        attach="attributes-position" 
+                         count={nodesPosition.length / 3}
+                         array={nodesPosition}
+                         itemSize={3}
+                         args={[nodesPosition, 3]}
+                    />
+                    <bufferAttribute 
+                        attach="attributes-color" 
+                         count={nodesColor.length / 3}
+                         array={nodesColor}
+                         itemSize={3}
+                         args={[nodesColor, 3]}
+                    />
                 </bufferGeometry>
-                <pointsMaterial vertexColors size={0.18} transparent opacity={0.8} sizeAttenuation={true} />
+                <pointsMaterial vertexColors size={0.15} transparent opacity={0.6} sizeAttenuation={true} />
             </points>
         </group>
     );
@@ -162,17 +189,17 @@ function MagneticNetwork() {
 
 const NetworkBackground = () => {
     return (
-        <div className="fixed inset-0 z-[-1] bg-[#020617] overflow-hidden">
-            {/* Fallback & base layers */}
-            <div className="absolute inset-0 bg-[#1a0b2e] opacity-40" />
+        <div className="fixed inset-0 z-[-1] bg-[#111111] overflow-hidden">
+            {/* Base layer */}
+            <div className="absolute inset-0 bg-[#181818] opacity-20" />
 
             <Canvas camera={{ position: [0, 0, 10], fov: 60 }} dpr={[1, 2]}>
                 <MagneticNetwork />
             </Canvas>
 
             {/* Readability Masks */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#020617_90%)] opacity-85 pointer-events-none" />
-            <div className="absolute inset-x-0 bottom-0 h-80 bg-gradient-to-t from-[#020617] to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#111111_95%)] opacity-90 pointer-events-none" />
+            <div className="absolute inset-x-0 bottom-0 h-96 bg-gradient-to-t from-[#111111] to-transparent pointer-events-none" />
         </div>
     );
 };

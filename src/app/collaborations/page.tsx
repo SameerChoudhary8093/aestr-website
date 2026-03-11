@@ -5,90 +5,89 @@ import Image from 'next/image';
 import Link from 'next/link';
 import BottomCTA from '@/components/BottomCTA';
 
-const SparkleIcon = ({ className = "w-6 h-6" }: { className?: string }) => (
-    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2C12 7.5 16.5 12 22 12C16.5 12 12 16.5 12 22C12 16.5 7.5 12 2 12C7.5 12 12 7.5 12 2Z" />
-    </svg>
-);
 
 const CollaborationsPage = () => {
     return (
-        <main className="bg-[#0A1128] min-h-screen text-white font-roboto overflow-x-hidden selection:bg-[#FFD700] selection:text-black">
+        <main className="bg-background min-h-screen text-foreground font-orbitron overflow-x-hidden selection:bg-accent selection:text-black">
             
             {/* Hero Section */}
-            <section className="relative pt-40 pb-24 lg:pt-56 lg:pb-32 overflow-hidden px-6">
-                <div className="container mx-auto">
-                    <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <div className="w-full lg:w-1/2 space-y-8 animate-in fade-in slide-in-from-left duration-1000">
-                            <div className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[#FFD700] text-xs font-orbitron tracking-widest uppercase">
+            <section className="relative pt-48 pb-24 lg:pt-64 lg:pb-32 overflow-hidden px-6 bg-[radial-gradient(circle_at_top,rgba(216,246,2,0.05),transparent_50%)]">
+                <div className="container mx-auto relative z-10">
+                    <div className="flex flex-col lg:flex-row items-center gap-20">
+                        <div className="w-full lg:w-1/2 space-y-10 animate-in fade-in slide-in-from-left duration-1000">
+                            <div className="inline-block px-6 py-2 rounded-full bg-accent/5 border border-accent/20 text-accent text-[10px] font-black tracking-[0.3em] uppercase">
                                 Global Academic Excellence
                             </div>
-                            <h1 className="text-4xl md:text-6xl lg:text-7xl font-orbitron font-bold leading-tight">
+                            <h1 className="text-4xl md:text-7xl lg:text-8xl font-black leading-[0.85] uppercase tracking-tighter">
                                 A Partnership <br />
-                                <span className="text-[#FFD700] italic">Built For The Future.</span>
+                                <span className="text-accent italic">Built For The Future.</span>
                             </h1>
-                            <p className="text-lg md:text-xl text-white/60 max-w-2xl leading-relaxed">
+                            <p className="text-xl text-foreground/50 max-w-2xl leading-relaxed font-semibold">
                                 Global exposure, world-class curriculum, and industry-leading mentors. We bridge the gap between Indian engineering and global standards.
                             </p>
                             <div className="pt-4">
-                                <button className="px-10 py-4 bg-[#FFD700] text-black font-orbitron font-bold rounded-lg border border-[#FFD700] transition-all hover:bg-transparent hover:text-[#FFD700] group shadow-[0_0_30px_rgba(255,215,0,0.2)]">
+                                <button className="btn-aestr !px-12 !py-5 bg-accent text-black font-black uppercase tracking-widest shadow-[0_0_50px_rgba(216,246,2,0.2)] hover:shadow-none transition-all">
                                     Explore Partnerships
-                                    <span className="ml-2 inline-block group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">↗</span>
+                                    <span className="ml-3 inline-block group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">↗</span>
                                 </button>
                             </div>
                         </div>
                         
                         <div className="w-full lg:w-1/2 relative group animate-in fade-in slide-in-from-right duration-1000">
-                            <div className="aspect-video bg-black/40 rounded-3xl border border-white/10 overflow-hidden relative shadow-2xl transition-all duration-700 hover:border-[#FFD700]/30 group-hover:shadow-[0_0_50px_rgba(255,215,0,0.1)]">
-                                <div className="absolute inset-0 bg-[radial-gradient(#ffffff11_1px,transparent_1px)] bg-[size:20px_20px] opacity-30" />
+                            <div className="aspect-video bg-black/40 rounded-[3rem] border border-foreground/10 overflow-hidden relative shadow-[0_0_100px_rgba(0,0,0,0.5)] transition-all duration-700 hover:border-accent/40 group-hover:shadow-[0_0_80px_rgba(216,246,2,0.1)]">
                                 <Image 
                                     src="/Other/lab-5.webp" 
                                     alt="Global Campus" 
                                     fill 
-                                    className="object-cover opacity-60 group-hover:opacity-80 transition-opacity"
+                                    className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
                                 />
+                                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
                                 <div className="absolute inset-0 flex items-center justify-center">
-                                    <div className="w-20 h-20 bg-[#FFD700] rounded-full flex items-center justify-center shadow-2xl transition-transform duration-500 group-hover:scale-110">
-                                        <svg className="w-8 h-8 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <div className="w-24 h-24 bg-accent rounded-full flex items-center justify-center shadow-2xl transition-transform duration-500 group-hover:scale-110 shadow-accent/20">
+                                        <svg className="w-10 h-10 text-black ml-1.5" fill="currentColor" viewBox="0 0 24 24">
                                             <path d="M8 5v14l11-7z" />
                                         </svg>
                                     </div>
                                 </div>
                             </div>
                             {/* Decorative elements */}
-                            <div className="absolute -top-6 -right-6 w-32 h-32 bg-blue-600/20 rounded-full blur-3xl -z-10" />
-                            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-[#FFD700]/10 rounded-full blur-3xl -z-10" />
+                            <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/10 rounded-full blur-[100px] -z-10" />
+                            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-accent/5 rounded-full blur-[100px] -z-10" />
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Path to Dual Degree */}
-            <section className="py-24 relative overflow-hidden bg-black/20">
-                <div className="container mx-auto px-6 relative z-10">
-                    <div className="text-center mb-16 space-y-4">
-                        <h2 className="text-3xl md:text-5xl font-orbitron font-bold text-white uppercase tracking-widest">
-                            Your Path To A <span className="text-[#FFD700]">Dual Degree</span>
+            <section className="py-32 relative overflow-hidden bg-background-alt/30 border-y border-foreground/5">
+                <div className="container mx-auto px-6 relative z-10 text-center">
+                    <div className="mb-24 space-y-6">
+                        <span className="text-[12rem] font-black text-foreground/5 absolute top-0 left-1/2 -translate-x-1/2 leading-none select-none">DUAL</span>
+                        <h2 className="text-4xl md:text-7xl font-black text-foreground uppercase tracking-tighter relative z-10">
+                            Your Path To A <span className="text-accent italic">Dual Degree.</span>
                         </h2>
-                        <div className="h-1 w-20 bg-[#FFD700] mx-auto rounded-full" />
+                        <div className="h-2 w-32 bg-accent mx-auto rounded-full relative z-10" />
                     </div>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                        <div className="glass p-10 rounded-3xl bg-white/5 border border-white/10 hover:border-[#FFD700]/30 transition-all duration-500 group">
-                            <div className="w-14 h-14 bg-[#FFD700]/10 rounded-2xl flex items-center justify-center mb-8 border border-[#FFD700]/20">
-                                <SparkleIcon className="text-[#FFD700] w-8 h-8" />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto relative z-10">
+                        <div className="glass p-12 rounded-[2.5rem] bg-foreground/5 border border-foreground/10 hover:border-accent/30 transition-all duration-700 group hover:bg-accent/5 text-left">
+                            <div className="text-accent mb-10 flex items-center gap-4">
+                                <span className="text-sm font-black uppercase tracking-[0.4em]">PHASE 01</span>
+                                <div className="h-px flex-1 bg-accent/20" />
                             </div>
-                            <h3 className="text-2xl font-orbitron font-bold text-white mb-6 uppercase tracking-wider group-hover:text-[#FFD700] transition-colors">Phase 1: Foundation</h3>
-                            <p className="text-lg text-white/50 leading-relaxed font-light">
+                            <h3 className="text-3xl font-black text-foreground mb-8 uppercase tracking-tighter group-hover:text-accent transition-colors">Foundation Mastery</h3>
+                            <p className="text-xl text-foreground/50 leading-relaxed font-semibold">
                                 Start your journey in India with AESTR. Build a rock-solid foundation in AI, Robotics, and core computer science while working on real-world projects from day one.
                             </p>
                         </div>
-                        <div className="glass p-10 rounded-3xl bg-white/5 border border-white/10 hover:border-[#FFD700]/30 transition-all duration-500 group">
-                            <div className="w-14 h-14 bg-blue-600/10 rounded-2xl flex items-center justify-center mb-8 border border-blue-600/20">
-                                <span className="text-blue-400 text-3xl">✈</span>
+                        <div className="glass p-12 rounded-[2.5rem] bg-foreground/5 border border-foreground/10 hover:border-accent/30 transition-all duration-700 group hover:bg-accent/5 text-left">
+                            <div className="text-accent mb-10 flex items-center gap-4">
+                                <span className="text-sm font-black uppercase tracking-[0.4em]">PHASE 02</span>
+                                <div className="h-px flex-1 bg-accent/20" />
+                                <span className="text-2xl">✈</span>
                             </div>
-                            <h3 className="text-2xl font-orbitron font-bold text-white mb-6 uppercase tracking-wider group-hover:text-blue-400 transition-colors">Phase 2: Global Transition</h3>
-                            <p className="text-lg text-white/50 leading-relaxed font-light">
+                            <h3 className="text-3xl font-black text-foreground mb-8 uppercase tracking-tighter group-hover:text-accent transition-colors">Global Transition</h3>
+                            <p className="text-xl text-foreground/50 leading-relaxed font-semibold">
                                 Complete your final years at our partner universities in the USA. Gain global credits, participate in international hackathons, and graduate with a globally recognized dual degree.
                             </p>
                         </div>
@@ -97,28 +96,28 @@ const CollaborationsPage = () => {
             </section>
 
             {/* Smooth Sailing Section */}
-            <section className="py-32 relative bg-gradient-to-br from-blue-900/10 to-transparent">
+            <section className="py-40 relative overflow-hidden bg-[radial-gradient(circle_at_right,rgba(216,246,2,0.03),transparent_40%)]">
                 <div className="container mx-auto px-6 relative z-10">
-                    <div className="text-center mb-20 space-y-6">
-                        <h2 className="text-4xl md:text-6xl font-orbitron font-bold text-white">
-                            Smooth Sailing <span className="text-[#FFD700]">To The USA</span>
+                    <div className="text-center mb-24 space-y-8">
+                        <h2 className="text-4xl md:text-7xl font-black text-foreground uppercase tracking-tighter">
+                            Smooth Sailing <br /><span className="text-accent italic">To The USA.</span>
                         </h2>
-                        <p className="text-lg text-white/40 max-w-2xl mx-auto">We handle the complexity, you focus on your engineering future.</p>
+                        <p className="text-xl text-foreground/40 max-w-2xl mx-auto font-bold tracking-tight">We handle the complexity, you focus on your engineering future.</p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                        <div className="glass p-12 rounded-[2.5rem] bg-indigo-950/20 border border-white/5 flex flex-col items-center text-center group hover:bg-indigo-950/40 transition-all duration-500">
-                            <div className="text-6xl mb-8 group-hover:scale-110 transition-transform duration-500">🛂</div>
-                            <h3 className="text-2xl font-orbitron font-bold text-white mb-4 uppercase">Hassle Free Visa</h3>
-                            <p className="text-white/60 leading-relaxed italic">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                        <div className="glass p-14 rounded-[3rem] bg-foreground/5 border border-foreground/5 flex flex-col items-center text-center group hover:bg-accent/5 hover:border-accent/20 transition-all duration-700">
+                            <div className="w-24 h-24 bg-accent/10 rounded-full flex items-center justify-center text-5xl mb-10 group-hover:scale-110 transition-transform duration-700">🛂</div>
+                            <h3 className="text-3xl font-black text-foreground mb-6 uppercase tracking-tight">Hassle Free Visa</h3>
+                            <p className="text-foreground/50 leading-relaxed font-semibold">
                                 Our dedicated immigration specialists guide you through the entire F-1 visa process—from documentation to mock interviews.
                             </p>
                         </div>
-                        <div className="glass p-12 rounded-[2.5rem] bg-indigo-950/20 border border-white/5 flex flex-col items-center text-center group hover:bg-indigo-950/40 transition-all duration-500">
-                            <div className="text-6xl mb-8 group-hover:scale-110 transition-transform duration-500">💰</div>
-                            <h3 className="text-2xl font-orbitron font-bold text-white mb-4 uppercase">No Financial Worries</h3>
-                            <p className="text-white/60 leading-relaxed italic">
-                                Access to exclusive education loans at lower interest rates and merit-based scholarship assistance for the U.S. leg of your degree.
+                        <div className="glass p-14 rounded-[3rem] bg-foreground/5 border border-foreground/5 flex flex-col items-center text-center group hover:bg-accent/5 hover:border-accent/20 transition-all duration-700">
+                            <div className="w-24 h-24 bg-accent/10 rounded-full flex items-center justify-center text-5xl mb-10 group-hover:scale-110 transition-transform duration-700">💰</div>
+                            <h3 className="text-3xl font-black text-foreground mb-6 uppercase tracking-tight">Financial Support</h3>
+                            <p className="text-foreground/50 leading-relaxed font-semibold">
+                                Access to exclusive education loans at competitive rates and merit-based scholarship assistance for the U.S. leg of your degree.
                             </p>
                         </div>
                     </div>
@@ -126,19 +125,19 @@ const CollaborationsPage = () => {
             </section>
 
             {/* Benefits Grid */}
-            <section className="py-32 relative overflow-hidden px-6">
-                <div className="container mx-auto">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <section className="py-40 relative overflow-hidden border-t border-foreground/5 bg-background-alt/10">
+                <div className="container mx-auto px-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
-                            { icon: '💼', title: 'Amazing Internships', desc: 'Secure high-paying internships with U.S.-based tech giants.' },
-                            { icon: '🗽', title: 'Stay & Work in the U.S.', desc: 'Pathways for OPT and subsequent work authorization (H-1B).' },
-                            { icon: '🤝', title: 'Industry Connections', desc: 'Direct networking with leaders from Silicon Valley.' },
-                            { icon: '🌍', title: 'Build Your Network', desc: 'Join an elite alumni base spanning across the globe.' }
+                            { icon: '💼', title: 'Silicon Internships', desc: 'Secure high-paying internships with U.S.-based tech giants and startups.' },
+                            { icon: '🗽', title: 'OPT Pathways', desc: 'Expert guidance for OPT and subsequent work authorization in the United States.' },
+                            { icon: '🤝', title: 'Global Connections', desc: 'Direct networking with leaders from Silicon Valley tech ecosystem.' },
+                            { icon: '🌍', title: 'Elite Network', desc: 'Join a selective alumni base spanning across the world\'s top tech hubs.' }
                         ].map((item, i) => (
-                            <div key={i} className="glass p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-[#FFD700]/40 hover:-translate-y-2 transition-all duration-500 text-center">
-                                <div className="text-5xl mb-6">{item.icon}</div>
-                                <h4 className="text-lg font-orbitron font-bold text-[#FFD700] mb-4 uppercase tracking-tighter">{item.title}</h4>
-                                <p className="text-sm text-white/50 leading-relaxed">{item.desc}</p>
+                            <div key={i} className="glass p-10 rounded-3xl bg-foreground/5 border border-foreground/5 hover:border-accent/40 hover:-translate-y-3 transition-all duration-700 text-center flex flex-col items-center">
+                                <div className="w-16 h-16 bg-accent/5 rounded-2xl flex items-center justify-center text-4xl mb-8 group-hover:bg-accent/10 transition-colors">{item.icon}</div>
+                                <h4 className="text-xl font-black text-accent mb-4 uppercase tracking-tighter">{item.title}</h4>
+                                <p className="text-sm text-foreground/50 leading-relaxed font-bold">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -146,36 +145,36 @@ const CollaborationsPage = () => {
             </section>
 
             {/* Why This Matters */}
-            <section className="py-32 relative bg-black/40">
+            <section className="py-40 relative bg-background border-y border-foreground/5">
                 <div className="container mx-auto px-6 relative z-10">
-                    <div className="flex flex-col lg:flex-row items-center gap-20">
-                        <div className="w-full lg:w-1/2 space-y-8">
-                            <h2 className="text-4xl md:text-5xl font-orbitron font-bold text-white leading-tight">
-                                Why This <br /><span className="text-[#FFD700]">Matters For You.</span>
+                    <div className="flex flex-col lg:flex-row items-center gap-24">
+                        <div className="w-full lg:w-1/2 space-y-10">
+                            <h2 className="text-4xl md:text-7xl font-black text-foreground leading-[0.85] uppercase tracking-tighter">
+                                Why This <br /><span className="text-accent">Matters For You.</span>
                             </h2>
-                            <p className="text-lg text-white/60 leading-relaxed font-light">
+                            <p className="text-xl text-foreground/50 leading-relaxed font-bold">
                                 In a world dominated by AI, a global profile is your biggest asset. Our collaborations aren't just for a certificate; they are for providing you the perspective and connections required to lead in the global tech hierarchy.
                             </p>
-                            <ul className="space-y-4 pt-4">
+                            <ul className="space-y-6 pt-6">
                                 {[
                                     'Global Exposure through Semester Exchanges',
                                     'Exposure to International Patent Law & R&D',
                                     'Access to $100k+ starting salary opportunities'
                                 ].map((bullet, i) => (
-                                    <li key={i} className="flex items-start gap-4 text-white/80 group">
-                                        <div className="mt-1.5 w-2 h-2 rounded-full bg-[#FFD700] group-hover:scale-150 transition-transform" />
-                                        <span className="text-base font-orbitron text-sm uppercase tracking-widest leading-none mt-0.5">{bullet}</span>
+                                    <li key={i} className="flex items-center gap-6 group">
+                                        <div className="w-4 h-4 rounded-full border-2 border-accent group-hover:bg-accent transition-all duration-500" />
+                                        <span className="text-sm font-black text-foreground uppercase tracking-[0.4em] leading-none transition-transform group-hover:translate-x-2">{bullet}</span>
                                     </li>
                                 ))}
                             </ul>
                         </div>
                         <div className="w-full lg:w-1/2">
-                            <div className="aspect-video bg-indigo-950/40 rounded-3xl border border-white/20 overflow-hidden relative shadow-2xl group cursor-pointer">
-                                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-40 group-hover:opacity-20 transition-opacity" />
-                                <Image src="/Other/future-faculty-2.webp" alt="Global Classroom" fill className="object-cover group-hover:scale-110 transition-transform duration-1000" />
-                                <div className="absolute inset-0 border-[15px] border-[#0A1128] rounded-3xl" />
-                                <div className="z-10 absolute bottom-8 left-8">
-                                    <span className="text-[10px] font-orbitron text-[#FFD700] uppercase tracking-[0.5em] font-bold">Innovation Beyond Borders</span>
+                            <div className="aspect-video bg-black/40 rounded-[3rem] border border-foreground/10 overflow-hidden relative shadow-[0_0_100px_rgba(0,0,0,0.5)] group">
+                                <Image src="/Other/future-faculty-2.webp" alt="Global Classroom" fill className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
+                                <div className="absolute inset-10 border border-foreground/5 rounded-[2rem] pointer-events-none" />
+                                <div className="absolute bottom-12 left-12 z-20">
+                                    <span className="text-[10px] font-black text-accent uppercase tracking-[0.5em] bg-black/60 px-6 py-3 rounded-full backdrop-blur-md border border-accent/20">Innovation Beyond Borders</span>
                                 </div>
                             </div>
                         </div>
@@ -183,28 +182,28 @@ const CollaborationsPage = () => {
                 </div>
             </section>
 
-            {/* Campus Life Gallery */}
-            <section className="py-32 relative bg-gradient-to-t from-black to-transparent px-6">
+            {/* Campus Gallery */}
+            <section className="py-40 relative px-6 bg-background-alt/10">
                 <div className="container mx-auto">
-                    <div className="flex flex-col items-center text-center mb-20 space-y-4">
-                        <h2 className="text-4xl md:text-5xl font-orbitron font-bold text-white uppercase tracking-widest">
-                            Campus <span className="text-[#FFD700]">Life</span>
+                    <div className="flex flex-col items-center text-center mb-24 space-y-6">
+                        <h2 className="text-4xl md:text-7xl font-black text-foreground uppercase tracking-tighter">
+                            Campus <span className="text-accent italic">Life.</span>
                         </h2>
-                        <p className="text-lg text-white/40 max-w-xl">Experience the vibrant ecosystem across our partner locations.</p>
+                        <p className="text-xl text-foreground/40 max-w-xl font-bold tracking-tight">Experience the vibrant ecosystem across our partner locations.</p>
                     </div>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-7xl mx-auto">
                         {[1, 2, 3, 4].map((i) => (
-                            <div key={i} className="glass aspect-video md:aspect-[16/10] rounded-2xl bg-white/5 border border-white/10 relative group overflow-hidden transition-all duration-700 hover:border-[#FFD700]/30 hover:scale-[1.01] hover:shadow-[0_0_40px_rgba(255,215,0,0.05)]">
+                            <div key={i} className="glass aspect-video md:aspect-[16/10] rounded-[3rem] bg-foreground/5 border border-foreground/5 relative group overflow-hidden transition-all duration-700 hover:border-accent/40 hover:scale-[1.02] hover:shadow-[0_0_50px_rgba(216,246,2,0.1)]">
                                 <Image 
                                     src={`/Other/lab-${i === 1 ? '4' : i === 2 ? '3' : i === 3 ? '2' : '1'}.webp`} 
                                     alt={`Campus Gallery ${i}`} 
                                     fill 
-                                    className="object-cover opacity-50 group-hover:opacity-80 transition-all duration-700" 
+                                    className="object-cover opacity-50 group-hover:opacity-100 transition-all duration-1000" 
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
-                                <div className="absolute bottom-6 left-6 z-10 transition-transform duration-500 group-hover:translate-x-2">
-                                    <span className="text-xs font-orbitron text-white/60 tracking-widest uppercase">Global Center 0{i}</span>
+                                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
+                                <div className="absolute bottom-10 left-10 z-10 transition-transform duration-500 group-hover:translate-x-3">
+                                    <span className="text-[10px] font-black text-foreground/40 uppercase tracking-[0.5em] group-hover:text-accent transition-colors">Global Learning Center 0{i}</span>
                                 </div>
                             </div>
                         ))}
@@ -213,22 +212,37 @@ const CollaborationsPage = () => {
             </section>
 
             {/* Final CTA Section */}
-            <section className="py-12 px-6">
-                <div className="container mx-auto max-w-5xl">
-                    <div className="bg-gradient-to-r from-emerald-600/40 to-yellow-600/40 p-12 md:p-16 rounded-[3rem] border border-white/10 backdrop-blur-3xl flex flex-col md:flex-row items-center justify-between gap-12 group hover:shadow-[0_0_80px_rgba(52,211,153,0.1)] transition-all duration-700">
-                        <div className="text-center md:text-left space-y-4">
-                            <h2 className="text-3xl md:text-5xl font-orbitron font-bold text-white">Found Your <br /><span className="text-[#FFD700]">Program?</span></h2>
-                            <p className="text-lg text-white/60 font-light">Join the next cohort of global AI pioneers.</p>
+            <section className="py-20 px-6">
+                <div className="container mx-auto max-w-6xl">
+                    <div className="bg-gradient-to-br from-accent/20 to-transparent p-16 md:p-24 rounded-[4rem] border border-accent/10 backdrop-blur-3xl flex flex-col md:flex-row items-center justify-between gap-16 relative overflow-hidden group hover:border-accent/30 transition-all duration-700">
+                        <div className="absolute inset-0 bg-[radial-gradient(var(--accent)_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.05]" />
+                        <div className="text-center md:text-left space-y-8 relative z-10">
+                            <h2 className="text-4xl md:text-7xl font-black text-foreground leading-[0.85] uppercase tracking-tighter">Found Your <br /><span className="text-accent italic">Program?</span></h2>
+                            <p className="text-xl text-foreground/50 font-black tracking-tight uppercase">Join the next cohort of global AI pioneers.</p>
                         </div>
-                        <button className="px-12 py-5 bg-[#FFD700] text-black font-orbitron font-bold rounded-2xl hover:scale-110 active:scale-95 transition-all shadow-2xl hover:shadow-[0_0_30px_rgba(255,215,0,0.4)] whitespace-nowrap">
-                            Apply Now
+                        <button className="btn-aestr !px-16 !py-6 bg-accent text-black font-black uppercase tracking-[0.2em] shadow-[0_0_50px_rgba(216,246,2,0.3)] hover:scale-105 transition-all relative z-10">
+                            Apply for 2026
                         </button>
                     </div>
                 </div>
             </section>
 
-            {/* Bottom Banner with Robot illustration (shared with main site style) */}
+            {/* Bottom Banner with Robot illustration */}
             <BottomCTA />
+
+            {/* Minimalist Footer */}
+            <footer className="py-20 border-t border-foreground/5 px-6">
+                <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-12 opacity-30">
+                    <div className="flex items-center gap-8">
+                        <span className="text-[10px] font-black tracking-[0.4em] uppercase">AESTR GLOBAL © 2026</span>
+                    </div>
+                    <div className="flex gap-12">
+                        <Link href="/" className="text-[9px] font-black hover:text-accent transition-colors uppercase tracking-[0.4em]">Privacy</Link>
+                        <Link href="/" className="text-[9px] font-black hover:text-accent transition-colors uppercase tracking-[0.4em]">Governance</Link>
+                        <Link href="/" className="text-[9px] font-black hover:text-accent transition-colors uppercase tracking-[0.4em]">Contact</Link>
+                    </div>
+                </div>
+            </footer>
 
         </main>
     );

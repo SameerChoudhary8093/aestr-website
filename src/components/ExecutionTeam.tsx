@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const teamData = [
     {
@@ -44,85 +45,95 @@ const teamData = [
 
 const ExecutionTeam = () => {
     return (
-        <section className="relative py-24 bg-[#020617] overflow-hidden">
+        <section className="relative py-24 bg-background overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
                 {/* Header Area */}
-                <div className="text-center mb-20 space-y-4 animate-in fade-in slide-in-from-bottom duration-700">
-                    <h2 className="text-4xl md:text-5xl font-orbitron font-bold text-white leading-tight">
+                <motion.div 
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="text-center mb-20 space-y-4"
+                >
+                    <h2 className="text-4xl md:text-5xl font-orbitron font-bold text-foreground leading-tight">
                         Execution <span className="text-accent italic">Team</span>
                     </h2>
-                    <p className="text-lg text-white/50 max-w-2xl mx-auto leading-relaxed">
-                        Choose your path to excellence with our diverse program offerings designed to match your ambitions.
+                    <p className="text-lg text-foreground/50 max-w-2xl mx-auto leading-relaxed">
+                        Learn from the architects of tomorrow's AI. Our mentors don't just teach from books; they bring years of experience from Tier-1 tech giants.
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Team Members List */}
-                <div className="space-y-16">
+                <div className="space-y-24">
                     {teamData.map((member, idx) => (
-                        <div
+                        <motion.div
                             key={member.name}
-                            className={`flex flex-col md:items-center gap-8 md:gap-12 ${idx % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'}`}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ duration: 0.8, delay: idx * 0.1 }}
+                            className={`flex flex-col md:items-center gap-10 md:gap-16 ${idx % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'}`}
                         >
-                            {/* Image Placeholder */}
-                            <div className="w-full md:w-1/3 relative group">
-                                <div className="h-[400px] w-full bg-black/40 rounded-3xl border border-white/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/30 group-hover:shadow-[0_0_30px_rgba(204,255,0,0.05)] relative">
+                            {/* Image Side */}
+                            <div className="w-full md:w-5/12 relative group">
+                                <div className="aspect-[4/5] w-full bg-black/40 rounded-[2rem] border border-foreground/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/30 group-hover:shadow-[0_0_50px_rgba(216,246,2,0.1)] relative">
                                     <Image
                                         src={member.image}
                                         alt={member.name}
                                         fill
-                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                        className="object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
                                 </div>
                             </div>
 
                             {/* Content Side */}
-                            <div className="w-full md:w-2/3 flex flex-col justify-center space-y-4">
-                                <div className="space-y-1">
-                                    <h3 className="text-3xl font-orbitron font-bold text-white tracking-wide">
+                            <div className="w-full md:w-7/12 flex flex-col justify-center space-y-6">
+                                <div className="space-y-2">
+                                    <h3 className="text-3xl md:text-4xl font-orbitron font-bold text-foreground tracking-tight">
                                         {member.name}
                                     </h3>
-                                    <p className="text-sm font-orbitron uppercase tracking-widest text-accent font-semibold">
+                                    <p className="text-sm font-orbitron uppercase tracking-[0.3em] text-accent font-black">
                                         {member.role}
                                     </p>
                                 </div>
 
-                                <p className="text-lg text-white/50 leading-relaxed">
+                                <p className="text-lg text-foreground/70 leading-relaxed font-medium">
                                     {member.desc}
                                 </p>
 
                                 {/* Special Stats for Dr. Arastu */}
                                 {member.specialStats && (
-                                    <div className="flex flex-wrap items-center gap-4 py-2">
-                                        <div className="glass px-4 py-2 rounded-lg border-white/10 bg-white/5 flex items-center gap-2">
+                                    <div className="flex flex-wrap items-center gap-4 pt-2">
+                                        <div className="px-4 py-2 rounded-full border border-foreground/10 bg-foreground/5 flex items-center gap-2">
                                             <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-                                            <span className="text-xs font-orbitron text-white/80 uppercase tracking-wider">PhD Cambridge University</span>
+                                            <span className="text-[10px] font-orbitron text-foreground uppercase tracking-widest font-bold">PhD Cambridge University</span>
                                         </div>
-                                        <div className="glass px-4 py-2 rounded-lg border-white/10 bg-white/5 flex items-center gap-2">
+                                        <div className="px-4 py-2 rounded-full border border-accent/20 bg-accent/5 flex items-center gap-2">
                                             <span className="text-accent">✦</span>
-                                            <span className="text-xs font-orbitron text-white/80 uppercase tracking-wider">75+ Patents in AI</span>
+                                            <span className="text-[10px] font-orbitron text-accent uppercase tracking-widest font-bold">75+ Patents in AI</span>
                                         </div>
                                     </div>
                                 )}
 
-                                {/* Quote Box */}
-                                <div className="relative glass bg-white/5 border-l-4 border-accent p-6 rounded-r-xl mt-4 overflow-hidden">
-                                    <div className="absolute -top-6 -left-2 text-white/5 font-serif text-[120px] leading-none select-none pointer-events-none">
+                                {/* Quote Box - NOT ITALIC */}
+                                <div className="relative glass bg-foreground/5 border-l-4 border-accent p-8 rounded-r-2xl mt-4 group">
+                                    <div className="absolute -top-4 -left-2 text-foreground/5 font-serif text-[100px] leading-none select-none pointer-events-none group-hover:text-accent/5 transition-colors">
                                         "
                                     </div>
-                                    <p className="relative z-10 text-white/60 italic leading-relaxed">
+                                    <p className="relative z-10 text-foreground/80 leading-relaxed font-semibold font-orbitron text-sm md:text-base italic-none">
                                         "{member.quote}"
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
 
             {/* Background elements */}
-            <div className="absolute top-1/4 left-0 w-[400px] h-[400px] bg-blue-900/10 rounded-full blur-[100px] pointer-events-none" />
-            <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
+            <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[140px] pointer-events-none z-0" />
+            <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[140px] pointer-events-none z-0" />
         </section>
     );
 };

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Orbitron, Roboto } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import NetworkBackground from "@/components/NetworkBackground";
+import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 
 const orbitron = Orbitron({
@@ -33,9 +34,11 @@ export default function RootLayout({
       <body
         className={`${orbitron.variable} ${roboto.variable} antialiased selection:bg-accent selection:text-black`}
       >
-        <NetworkBackground />
-        <Navbar />
-        {children}
+        <SmoothScroll>
+          <NetworkBackground />
+          <Navbar />
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );

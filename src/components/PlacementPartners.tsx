@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const partners = [
     'Google', 'Amazon', 'NVIDIA', 'Accenture', 'Deloitte', 'Bank of America', 'Jio',
@@ -14,21 +15,27 @@ const partners = [
 
 const PlacementPartners = () => {
     return (
-        <section className="relative py-24 bg-transparent overflow-hidden">
+        <section className="relative py-24 bg-background overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
 
                 {/* Header Area */}
-                <div className="text-center mb-16 space-y-4 animate-in fade-in slide-in-from-bottom duration-700">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-orbitron font-bold text-white leading-tight">
+                <motion.div 
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="text-center mb-16 space-y-4"
+                >
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-orbitron font-bold text-foreground leading-tight uppercase tracking-tighter">
                         Prospective Placement <span className="text-accent italic">Partners</span>
                     </h2>
-                    <p className="text-lg text-white/50 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-lg text-foreground/50 max-w-2xl mx-auto leading-relaxed font-semibold">
                         Join the ranks of elite engineers hired by top global technology firms.
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Logos Grid */}
-                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-4">
+                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-5">
                     {partners.map((partner, index) => {
                         const domains: { [key: string]: string } = {
                             'Google': 'google.com',
@@ -76,25 +83,29 @@ const PlacementPartners = () => {
                         const logoPath = `https://logo.clearbit.com/${domain}?size=128`;
 
                         return (
-                            <div
+                            <motion.div
                                 key={index}
-                                className="h-20 glass bg-white/5 backdrop-blur-md border border-white/10 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/20 hover:border-accent shadow-lg group relative overflow-hidden p-4"
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.4, delay: (index % 10) * 0.05 }}
+                                className="h-20 glass bg-background-alt/40 border border-foreground/5 rounded-xl flex items-center justify-center transition-all duration-500 hover:scale-110 hover:border-accent shadow-xl group relative overflow-hidden p-5"
                             >
-                                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-5 transition-opacity" />
+                                <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 <div className="relative w-full h-full flex items-center justify-center">
                                     <Image
                                         src={logoPath}
                                         alt={partner}
                                         fill
                                         unoptimized
-                                        className="object-contain brightness-[1.1] contrast-[1.1] transition-all duration-300"
+                                        className="object-contain brightness-[1.2] grayscale group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500"
                                         onError={(e) => {
                                             const target = e.target as HTMLImageElement;
                                             target.style.display = 'none';
                                             const parent = target.parentElement;
                                             if (parent && !parent.querySelector('.fallback-text')) {
                                                 const span = document.createElement('span');
-                                                span.className = 'fallback-text text-[10px] font-orbitron font-bold text-white/40 text-center uppercase tracking-tighter w-full px-1';
+                                                span.className = 'fallback-text text-[9px] font-orbitron font-bold text-foreground/30 text-center uppercase tracking-tighter w-full px-1 group-hover:text-accent transition-colors';
                                                 span.innerText = partner;
                                                 parent.appendChild(span);
                                             }
@@ -102,7 +113,7 @@ const PlacementPartners = () => {
                                     />
                                 </div>
                                 <span className="sr-only">{partner}</span>
-                            </div>
+                            </motion.div>
                         );
                     })}
                 </div>
@@ -110,8 +121,8 @@ const PlacementPartners = () => {
             </div>
 
             {/* Ambient Background Glows */}
-            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
-            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-blue-600/5 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[140px] pointer-events-none" />
+            <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[140px] pointer-events-none" />
         </section>
     );
 };

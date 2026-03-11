@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #020617;
-  --background-alt: #5B1DD6;
-  --foreground: #FFFFFF;
-  --accent: #CCFF00;
-  --accent-secondary: #D4FF33;
+  --background: #111111;
+  --background-alt: #181818;
+  --foreground: #EAF0BD;
+  --accent: #D8F602;
+  --accent-secondary: #D7F601;
   --muted: #E2E8F0;
   
   --radius-2xl: 1.5rem;
@@ -37,14 +37,14 @@ html, body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background-color: #020617;
-  color: #FFFFFF;
+  background-color: var(--background);
+  color: var(--foreground);
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
-  background-image: radial-gradient(circle at top right, #5B1DD6 0%, #110934 40%, #000000 100%);
+  background-image: radial-gradient(circle at top right, #181818 0%, #111111 100%);
   background-attachment: fixed;
   font-family: var(--font-orbitron);
   -webkit-font-smoothing: antialiased;
@@ -55,44 +55,46 @@ body {
   Tailwind v4 Components & Utilities
 */
 .glass {
-  background: rgba(17, 9, 52, 0.4);
+  background: rgba(24, 24, 24, 0.4);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(234, 240, 189, 0.05); /* Using EAF0BD for border */
   box-shadow: 
-    inset 0 0 0 1px rgba(91, 29, 214, 0.8), 
-    inset 0 0 20px rgba(91, 29, 214, 0.4), 
-    0 0 20px rgba(91, 29, 214, 0.2);
+    inset 0 0 0 1px rgba(216, 246, 2, 0.1), 
+    0 0 20px rgba(0, 0, 0, 0.4);
   border-radius: var(--radius-2xl);
 }
 
 .btn-aestr {
   background-color: var(--accent);
-  color: #000000;
+  color: #111111;
   font-family: var(--font-orbitron);
-  font-weight: 700;
-  padding: 0.85rem 2rem;
-  border-top-left-radius: var(--radius-sm);
-  border-top-right-radius: 1.5rem;
-  border-bottom-right-radius: var(--radius-sm);
-  border-bottom-left-radius: var(--radius-sm);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 800;
+  padding: 0.85rem 2.5rem;
+  /* Specific shape from image: Top-Right heavily rounded, others minimal */
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 2.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
 }
 
 .btn-aestr:hover {
-  filter: brightness(1.15);
-  box-shadow: 0 0 30px rgba(204, 255, 0, 0.5);
-  transform: translateY(-3px) scale(1.02);
+  filter: brightness(1.1);
+  box-shadow: 0 10px 40px -10px rgba(216, 246, 2, 0.5);
+  transform: translateY(-2px) scale(1.02);
 }
 
 /* Fallback for the text-accent class if Tailwind is delayed */
 .text-accent { color: var(--accent); }
 .bg-accent { background-color: var(--accent); }
+.text-foreground-alt { color: var(--foreground); }
 
 /* 
   Animations 
@@ -128,16 +130,6 @@ body {
 .slide-in-from-right { animation-name: slideInRight; }
 .slide-in-from-bottom { animation-name: slideInBottom; }
 
-@keyframes ken-burns {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
-}
-
-.animate-ken-burns {
-  animation: ken-burns 30s ease-in-out infinite;
-}
-
 /* Selection Glow */
 ::selection {
   background-color: var(--accent);
@@ -147,66 +139,4 @@ body {
 /* SVG and Image structure */
 svg, img {
   display: block;
-}
-
-
-.glass {
-  background: rgba(17, 9, 52, 0.4);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: inset 0 0 0 1px rgba(91, 29, 214, 0.8), inset 0 0 20px rgba(91, 29, 214, 0.4), 0 0 20px rgba(91, 29, 214, 0.2);
-  border-radius: 1.5rem;
-}
-
-.btn-aestr {
-  background-color: var(--color-accent);
-  color: #000000;
-  font-family: var(--font-orbitron);
-  font-weight: 600;
-  padding: 0.75rem 1.75rem;
-  border-top-left-radius: var(--radius-sm);
-  border-top-right-radius: var(--radius-2xl);
-  border-bottom-right-radius: var(--radius-sm);
-  border-bottom-left-radius: var(--radius-sm);
-  transition: all 0.3s ease;
-}
-
-.btn-aestr:hover {
-  filter: brightness(1.1);
-  box-shadow: 0 0 20px rgba(204, 255, 0, 0.4);
-  transform: translateY(-2px);
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideInLeft {
-  from { transform: translateX(-30px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes slideInRight {
-  from { transform: translateX(30px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-
-.animate-in {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
-.fade-in { animation-name: fadeIn; }
-.slide-in-from-left { animation-name: slideInLeft; }
-.slide-in-from-right { animation-name: slideInRight; }
-
-@keyframes ken-burns {
-  0% { transform: scale(1) translate(0, 0); }
-  50% { transform: scale(1.1) translate(-1%, -1%); }
-  100% { transform: scale(1) translate(0, 0); }
-}
-
-.animate-ken-burns {
-  animation: ken-burns 20s ease-in-out infinite;
 }
