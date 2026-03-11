@@ -13,7 +13,7 @@ const ProgramFeatures = () => {
             <div className="absolute bottom-20 right-20 w-[500px] h-[500px] bg-accent/5 blur-[120px] rounded-full pointer-events-none z-0" />
 
 
-            <motion.div 
+            <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
@@ -23,7 +23,7 @@ const ProgramFeatures = () => {
 
                 {/* Part 1: Founding Team & Video */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -32,17 +32,17 @@ const ProgramFeatures = () => {
                     >
                         <div className="space-y-4">
                             <p className="text-xl text-foreground/80 leading-relaxed flex items-start gap-3">
-                                Our founding team includes engineers from Shodh AI (USA) and other global tech leaders...
+                                Our founding team includes engineers from Shodh AI (USA) and other global tech leaders. Here, you won’t be taught by disconnected faculty, you’ll learn from full-time software developers, AI practitioners, and system architects who are shaping the real world.
                             </p>
-                            <div className="glass p-8 rounded-2xl border-l-4 border-accent shadow-[0_8px_32px_rgba(0,0,0,0.3)] bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:20px_20px]">
-                                <p className="text-2xl font-orbitron font-bold text-foreground leading-tight">
+                            <div className="glass p-8 rounded-2xl border-l-4 border-accent shadow-[0_8px_32px_rgba(0,0,0,0.3)] bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:20px_20px] w-full lg:w-max">
+                                <p className="text-xl md:text-2xl font-bold text-foreground leading-tight whitespace-nowrap">
                                     "We believe only those who build the future can truly teach it."
                                 </p>
                             </div>
                         </div>
                     </motion.div>
 
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -64,9 +64,12 @@ const ProgramFeatures = () => {
                 {/* Part 2: Program Partners Section */}
                 <div className="text-center space-y-12 mb-40">
                     <div className="space-y-4">
-                        <h2 className="text-4xl md:text-5xl font-orbitron font-bold text-foreground flex items-center justify-center gap-4 uppercase tracking-tighter">
-                            Our Engineering <span className="text-accent italic">Teachers</span> From
+                        <h2 className="text-4xl md:text-5xl font-orbitron font-bold text-foreground flex items-center justify-center gap-4 tracking-tight">
+                            Program Partners with us
                         </h2>
+                        <p className="text-lg text-foreground/80 max-w-2xl leading-relaxed mx-auto text-center">
+                            Our Engineering Teachers from
+                        </p>
                     </div>
 
                     <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
@@ -77,8 +80,8 @@ const ProgramFeatures = () => {
                             { name: 'Google', logo: '/ProgramPartners/google.webp' },
                             { name: 'DRDO', logo: '/ProgramPartners/DRDO.webp' }
                         ].map((partner, i) => (
-                            <motion.div 
-                                key={partner.name} 
+                            <motion.div
+                                key={partner.name}
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
@@ -96,23 +99,54 @@ const ProgramFeatures = () => {
                         ))}
                     </div>
 
-                    <motion.div 
-                        initial={{ opacity: 0, y: 20 }}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ delay: 0.5 }}
-                        className="inline-block mt-8"
+                        transition={{ duration: 0.8, delay: 0.6 }}
+                        className="mt-20 max-w-3xl mx-auto"
                     >
-                        <div className="px-8 py-3 bg-accent/10 border border-accent/20 rounded-full text-[10px] font-orbitron tracking-[0.2em] text-accent flex items-center gap-3 uppercase font-bold">
-                            <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-                            Run Software Lab at SGVU
+                        <div className="relative group/box">
+                            {/* Animated Outer Glow */}
+                            <div className="absolute -inset-1 bg-gradient-to-r from-accent/0 via-accent/30 to-accent/0 rounded-2xl blur-xl opacity-0 group-hover/box:opacity-100 transition-all duration-700" />
+
+                            <div className="relative glass p-8 md:p-10 rounded-2xl border border-white/5 bg-black/40 flex flex-col md:flex-row items-center gap-10 overflow-hidden backdrop-blur-2xl transition-all duration-500 hover:border-accent/30 group-hover/box:bg-black/60">
+                                {/* Side Background Flare */}
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 blur-3xl rounded-full" />
+
+                                <div className="flex-shrink-0">
+                                    <div className="relative">
+                                        <div className="absolute inset-0 bg-accent/20 rounded-2xl blur-lg animate-pulse" />
+                                        <div className="relative w-16 h-16 rounded-2xl bg-accent/10 border border-accent/30 flex items-center justify-center shadow-inner">
+                                            <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8 text-accent" stroke="currentColor" strokeWidth="2">
+                                                <path d="M12 2L2 7L12 12L22 7L12 2Z" strokeLinecap="round" strokeLinejoin="round" />
+                                                <path d="M2 17L12 22L22 17" strokeLinecap="round" strokeLinejoin="round" />
+                                                <path d="M2 12L12 17L22 12" strokeLinecap="round" strokeLinejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="text-center md:text-left space-y-3">
+                                    <div className="flex items-center justify-center md:justify-start gap-2">
+                                        <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+                                        <span className="text-[10px] font-orbitron uppercase tracking-[0.4em] text-accent font-black">Active Partnership</span>
+                                    </div>
+                                    <h3 className="text-1xl md:text-2xl font-orbitron font-bold text-foreground leading-tight tracking-tight">
+                                        Running integrated software lab at SGVU
+                                    </h3>
+                                    <p className="text-xs text-foreground/50 font-medium tracking-wide leading-relaxed max-w-2xl">
+                                        Delivering industry-standard engineering training and active software development directly on the university campus.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </motion.div>
                 </div>
 
                 {/* Part 3: Point 3 - Targeting In-Demand Careers */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -136,15 +170,15 @@ const ProgramFeatures = () => {
                         </div>
                     </motion.div>
 
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7 }}
                         className="order-1 lg:order-2"
                     >
-                        <div className="relative group cursor-pointer lg:max-w-md mx-auto">
-                            <div className="aspect-[3/4] bg-black/40 rounded-[2rem] border border-foreground/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/30 group-hover:shadow-[0_0_80px_rgba(216,246,2,0.1)] relative">
+                        <div className="relative group cursor-pointer w-full max-w-3xl mx-auto">
+                            <div className="aspect-[21/9] bg-black/40 rounded-[2rem] border border-foreground/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/30 group-hover:shadow-[0_0_80px_rgba(216,246,2,0.1)] relative">
                                 <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:15px_15px] opacity-30" />
                                 <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -165,8 +199,8 @@ const ProgramFeatures = () => {
                     </motion.div>
                 </div>
 
-            </motion.div>
-        </section>
+            </motion.div >
+        </section >
     );
 };
 

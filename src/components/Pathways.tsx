@@ -16,37 +16,37 @@ const Pathways = () => {
             <div className="container mx-auto px-6 relative z-10">
 
                 {/* Header Area */}
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="text-center mb-24 space-y-8"
+                    className="text-center mb-16 md:mb-24 space-y-6 md:space-y-8"
                 >
                     <div className="flex justify-center">
-                        <div className="w-16 h-16 rounded-full border border-accent/20 flex items-center justify-center text-3xl font-orbitron font-bold text-accent bg-accent/5">
+                        <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border border-accent/20 flex items-center justify-center text-2xl md:text-3xl font-orbitron font-bold text-accent bg-accent/5">
                             7
                         </div>
                     </div>
                     <div className="space-y-4">
-                        <h2 className="text-4xl md:text-5xl font-orbitron font-bold text-foreground leading-tight uppercase tracking-tighter">
-                            AESTR Quality Assurance <span className="text-accent italic">Pathways</span>
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold text-foreground leading-tight tracking-tight px-4">
+                            AESTR quality assurance <span className="text-accent italic">pathways</span>
                         </h2>
-                        <p className="text-lg text-foreground/50 max-w-2xl mx-auto leading-relaxed font-semibold">
+                        <p className="text-base md:text-lg text-foreground/50 max-w-2xl mx-auto leading-relaxed font-semibold px-4">
                             We provide clear, ambitious pathways to ensure your career takes off.
                         </p>
                     </div>
                 </motion.div>
 
                 {/* Flowchart/Grid Section */}
-                <div className="relative mb-20">
+                <div className="relative mb-20 px-4">
                     {/* Connecting Line */}
-                    <div className="absolute top-0 left-[12.5%] right-[12.5%] h-px bg-foreground/10 hidden md:block" />
+                    <div className="absolute top-0 left-[12.5%] right-[12.5%] h-px bg-foreground/10 hidden lg:block" />
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:pt-12">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:pt-12">
                         {pathwaysData.map((item, idx) => (
-                            <motion.div 
-                                key={idx} 
+                            <motion.div
+                                key={idx}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
@@ -54,10 +54,10 @@ const Pathways = () => {
                                 className="relative group"
                             >
                                 {/* Vertical Drop Line */}
-                                <div className="absolute -top-12 left-1/2 w-px h-12 bg-foreground/10 hidden md:block group-hover:bg-accent transition-colors duration-500" />
+                                <div className="absolute -top-12 left-1/2 w-px h-12 bg-foreground/10 hidden lg:block group-hover:bg-accent transition-colors duration-500" />
 
-                                <div className={`glass p-10 rounded-2xl border-t-4 ${item.borderColor} flex flex-col items-center text-center transition-all duration-500 group-hover:transform group-hover:-translate-y-2 hover:bg-accent/5`}>
-                                    <h3 className="text-xl font-orbitron font-bold text-foreground mb-4 group-hover:text-accent transition-colors">
+                                <div className={`glass p-8 md:p-10 rounded-2xl border-t-4 ${item.borderColor} flex flex-col items-center text-center transition-all duration-500 group-hover:transform group-hover:-translate-y-2 hover:bg-accent/5`}>
+                                    <h3 className="text-lg md:text-xl font-orbitron font-bold text-foreground mb-4 group-hover:text-accent transition-colors leading-tight">
                                         {item.title}
                                     </h3>
                                     <p className="text-foreground/40 font-black uppercase tracking-[0.2em] text-[10px]">
@@ -73,7 +73,7 @@ const Pathways = () => {
                 </div>
 
                 {/* Bottom Action */}
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -81,7 +81,7 @@ const Pathways = () => {
                     className="flex justify-center"
                 >
                     <button className="btn-aestr flex items-center gap-2 group">
-                        Unlock More
+                        Read More
                         <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">↗</span>
                     </button>
                 </motion.div>

@@ -23,7 +23,7 @@ const BootcampsAndLabs = () => {
 
 
                 <div className="container mx-auto px-6 relative z-10">
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -31,7 +31,7 @@ const BootcampsAndLabs = () => {
                         className="space-y-20"
                     >
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                            <motion.div 
+                            <motion.div
                                 initial={{ opacity: 0, x: -30 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
@@ -50,10 +50,7 @@ const BootcampsAndLabs = () => {
                                         </h2>
                                         <div className="space-y-4">
                                             <p className="text-lg text-foreground font-bold leading-relaxed">
-                                                At AESTR, theory is just the beginning. We believe the best way to learn engineering is by building real things.
-                                            </p>
-                                            <p className="text-lg text-foreground/60 leading-relaxed font-medium">
-                                                That's why every semester includes immersive AI bootcamps, right on campus — fully integrated into your curriculum.
+                                                At AESTR, theory is just the beginning. We believe the best way to learn engineering is by building real things. That’s why every semester includes immersive AI bootcamps, right on campus — fully integrated into your curriculum.
                                             </p>
                                         </div>
                                         <button className="btn-aestr flex items-center gap-2 group">
@@ -64,7 +61,7 @@ const BootcampsAndLabs = () => {
                                 </div>
                             </motion.div>
 
-                            <motion.div 
+                            <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
@@ -80,12 +77,6 @@ const BootcampsAndLabs = () => {
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
                                     <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                                    
-                                    <div className="absolute inset-0 flex items-center justify-center z-10">
-                                        <div className="w-20 h-20 bg-accent/20 backdrop-blur-md rounded-2xl flex items-center justify-center border border-accent/30 group-hover:scale-110 transition-transform">
-                                            <div className="w-10 h-10 border-2 border-accent rounded-full animate-ping" />
-                                        </div>
-                                    </div>
                                 </div>
                             </motion.div>
                         </div>
@@ -98,8 +89,8 @@ const BootcampsAndLabs = () => {
                                 { title: 'Become a Senior Engineer, Faster', desc: 'Our practical methodology empowers you to develop senior-level engineering skills during your degree.' },
                                 { title: 'Craft Your Degree', desc: 'Unprecedented flexibility allows you to shape your educational journey to match your passions and career aspirations.' }
                             ].map((card, i) => (
-                                <motion.div 
-                                    key={card.title} 
+                                <motion.div
+                                    key={card.title}
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     viewport={{ once: true }}
@@ -125,7 +116,7 @@ const BootcampsAndLabs = () => {
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="space-y-24">
                         <div className="space-y-12">
-                            <motion.div 
+                            <motion.div
                                 initial={{ opacity: 0, x: -30 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
@@ -137,7 +128,7 @@ const BootcampsAndLabs = () => {
                                 </div>
                                 <div className="space-y-4">
                                     <h2 className="text-4xl md:text-5xl font-orbitron font-bold text-foreground flex items-center gap-4">
-                                        Innovation Labs Of 2030
+                                        Innovation labs of 2030
                                     </h2>
                                     <p className="text-lg text-foreground/50 max-w-3xl leading-relaxed">
                                         Learn from the architects of tomorrow's AI. AESTR is the brainchild of leading AI engineers dedicated to cultivating the next generation of tech innovators.
@@ -148,12 +139,12 @@ const BootcampsAndLabs = () => {
                             {/* Features Grid */}
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                                 {[
-                                    { title: 'Exclusive Designs', desc: 'Co-created with insights from our work with DRDO and top-tier labs.' },
-                                    { title: 'Become a Domain Champion', desc: 'Engage with at least three labs or achieve PhD-level expertise in one.' },
-                                    { title: 'Expert-Guided Product Development', desc: 'Each lab has dedicated experts to help you transform your innovative ideas.' }
+                                    { title: 'Exclusive Designs', desc: 'Co-created with insights from our work with DRDO, Silicon Valley startups, and our US-based company, Shodh AI (a top 1% AI startup).' },
+                                    { title: 'Become a Domain Champion', desc: 'Engage with at least three labs or achieve PhD-level expertise by dedicating your four years to a single lab.' },
+                                    { title: 'Expert-Guided Product Development', desc: 'Each lab has dedicated experts to help you transform your innovative ideas into real-world products.' }
                                 ].map((card, i) => (
-                                    <motion.div 
-                                        key={card.title} 
+                                    <motion.div
+                                        key={card.title}
                                         initial={{ opacity: 0, y: 20 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
