@@ -4,8 +4,8 @@
   --background: #111111;
   --background-alt: #181818;
   --foreground: #EAF0BD;
-  --accent: #D8F602;
-  --accent-secondary: #D7F601;
+  --accent: #D7F601;
+  --purple: #5B1DD6;
   --muted: #E2E8F0;
   
   --radius-2xl: 1.5rem;
@@ -20,7 +20,7 @@
   --color-background-alt: var(--background-alt);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
-  --color-accent-secondary: var(--accent-secondary);
+  --color-purple: var(--purple);
   --color-muted: var(--muted);
   
   --radius-2xl: 1.5rem;

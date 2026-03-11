@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 
 const AboutPointOne = () => {
     return (
-        <section className="relative py-24 bg-background-alt overflow-hidden">
-            <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
+        <section className="relative py-24 bg-accent overflow-hidden">
+            <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-white/10 rounded-full blur-[120px] pointer-events-none" />
 
             <motion.div
                 initial={{ opacity: 0, y: 40 }}
@@ -16,19 +16,19 @@ const AboutPointOne = () => {
                 className="container mx-auto px-6 relative z-10"
             >
                 <div className="text-center space-y-4 mb-16 md:mb-20">
-                    <h2 className="text-3xl sm:text-4xl md:text-6xl font-orbitron font-bold tracking-tight flex flex-wrap items-center justify-center gap-2 md:gap-4 text-foreground">
-                        Why to <span className="text-accent italic">join</span> AESTR ?
+                    <h2 className="text-3xl sm:text-4xl md:text-6xl font-orbitron font-bold tracking-tight flex flex-wrap items-center justify-center gap-2 md:gap-4 text-black">
+                        Why to <span className="text-black italic underline decoration-black/20">join</span> AESTR ?
                     </h2>
                 </div>
 
                 <div className="space-y-12">
                     <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6">
-                        <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full border border-accent/30 flex items-center justify-center text-2xl md:text-3xl font-orbitron font-bold text-accent bg-accent/5">
+                        <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full border border-black/30 flex items-center justify-center text-2xl md:text-3xl font-orbitron font-bold text-black bg-black/5">
                             1
                         </div>
                         <div className="space-y-2 text-left">
-                            <h3 className="text-xl md:text-3xl font-orbitron font-bold text-foreground">CSE 2030: Computer Science Won't Be Same Ever Again</h3>
-                            <p className="text-foreground/70 text-base md:text-lg leading-relaxed max-w-4xl font-normal">
+                            <h3 className="text-xl md:text-3xl font-orbitron font-bold text-black/90">CSE 2030: Computer Science Won't Be Same Ever Again</h3>
+                            <p className="text-black/70 text-base md:text-lg leading-relaxed max-w-4xl font-bold">
                                 The world of Computer Science is transforming by 2030, and our curriculum is built for that future. We move away from obsolete theories to architecting real-world AI systems.
                             </p>
                         </div>
@@ -47,10 +47,10 @@ const AboutPointOne = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                                className="glass p-6 md:p-8 rounded-2xl group hover:-translate-y-1 transition-transform duration-300 text-left"
+                                className="glass !bg-black/80 !border-black/5 p-6 md:p-8 rounded-2xl group hover:-translate-y-1 transition-transform duration-300 text-left"
                             >
-                                <h4 className="text-base md:text-lg font-orbitron font-bold text-foreground group-hover:text-accent transition-colors mb-4">{card.title}</h4>
-                                <p className="text-xs md:text-sm text-foreground/60 leading-relaxed font-normal">{card.desc}</p>
+                                <h4 className="text-base md:text-lg font-orbitron font-bold text-white group-hover:text-accent transition-colors mb-4">{card.title}</h4>
+                                <p className="text-xs md:text-sm text-white/60 leading-relaxed font-normal">{card.desc}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -85,14 +85,14 @@ const AboutPointOne = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: 0.3 + (idx * 0.1) }}
-                                className="glass p-6 rounded-2xl flex flex-col gap-4 border-t-2 border-accent/20 hover:border-accent transition-all duration-300 group"
+                                className="glass !bg-black/80 !border-black/5 p-6 rounded-2xl flex flex-col gap-4 border-t-2 border-accent/20 hover:border-accent transition-all duration-300 group"
                             >
                                 <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform duration-300">
                                     {item.icon}
                                 </div>
                                 <div className="space-y-2">
-                                    <h4 className="text-base font-orbitron font-bold text-foreground group-hover:text-accent transition-colors">{item.title}</h4>
-                                    <p className="text-xs text-foreground/60 leading-relaxed font-normal">{item.desc}</p>
+                                    <h4 className="text-base font-orbitron font-bold text-white group-hover:text-accent transition-colors">{item.title}</h4>
+                                    <p className="text-xs text-white/60 leading-relaxed font-normal">{item.desc}</p>
                                 </div>
                             </motion.div>
                         ))}
@@ -100,14 +100,14 @@ const AboutPointOne = () => {
 
                     {/* Bottom Full-Width Cards */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
-                        <div className="glass p-8 rounded-2xl group hover:-translate-y-1 transition-all duration-300 border-l-4 border-accent">
-                            <h4 className="text-xl font-orbitron font-bold text-foreground group-hover:text-accent mb-6 leading-tight">Learn by Doing, Excel by Creating:</h4>
+                        <div className="glass !bg-black/90 p-8 rounded-2xl group hover:-translate-y-1 transition-all duration-300 border-l-4 border-accent">
+                            <h4 className="text-xl font-orbitron font-bold text-white group-hover:text-accent mb-6 leading-tight">Learn by Doing, Excel by Creating:</h4>
                             <ul className="space-y-4">
                                 {[
                                     'Project-Powered Progress: Get graded on your real-world projects and software solutions, not just exams. Solve a problem, build the software, and master the subject.',
                                     'The Engineer’s Dream Education: Our courses are crafted the way seasoned engineers wish they had been taught – practical, innovative, and deeply engaging.'
                                 ].map((item) => (
-                                    <li key={item} className="flex items-start gap-3 text-sm text-foreground/70 font-normal">
+                                    <li key={item} className="flex items-start gap-3 text-sm text-white/70 font-normal">
                                         <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0 shadow-[0_0_8px_rgba(216,246,2,0.6)]" /> 
                                         <span className="leading-relaxed">{item}</span>
                                     </li>
@@ -115,9 +115,9 @@ const AboutPointOne = () => {
                             </ul>
                         </div>
                         
-                        <div className="glass p-8 rounded-2xl bg-accent/5 flex items-center justify-center text-center overflow-hidden relative">
+                        <div className="glass !bg-black/90 p-8 rounded-2xl flex items-center justify-center text-center overflow-hidden relative">
                             <div className="absolute inset-0 bg-[radial-gradient(#ffffff05_1px,transparent_1px)] bg-[size:20px_20px]" />
-                            <p className="relative z-10 text-2xl md:text-3xl font-orbitron font-light text-foreground/40 italic">
+                            <p className="relative z-10 text-2xl md:text-3xl font-orbitron font-light text-white italic">
                                 Craft your <span className="text-accent font-bold not-italic">future</span> with precision.
                             </p>
                         </div>

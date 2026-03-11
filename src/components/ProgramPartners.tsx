@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const ProgramPartners = () => {
     return (
-        <section className="relative py-24 bg-background overflow-hidden">
+        <section className="relative py-24 bg-background-alt overflow-hidden">
             <div className="absolute bottom-20 right-20 w-[500px] h-[500px] bg-accent/5 blur-[120px] rounded-full pointer-events-none z-0" />
             
             <div className="container mx-auto px-6 relative z-10">
@@ -15,7 +15,7 @@ const ProgramPartners = () => {
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold text-foreground flex items-center justify-center gap-4 tracking-tight">
                             Program Partners with us
                         </h2>
-                        <p className="text-base md:text-lg text-foreground/80 max-w-2xl leading-relaxed mx-auto text-center">
+                        <p className="text-base md:text-lg text-foreground/70 max-w-2xl leading-relaxed mx-auto text-center font-bold">
                             Our Engineering Teachers from
                         </p>
                     </div>
@@ -35,9 +35,9 @@ const ProgramPartners = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                                className={`glass aspect-[4/3] rounded-xl md:rounded-2xl flex flex-col items-center justify-center gap-3 md:gap-4 transition-all duration-500 hover:scale-105 hover:bg-white/[0.05] hover:border-accent/30 cursor-default group relative overflow-hidden p-4 ${partner.mobileWidth} md:w-full`}
+                                className={`glass !bg-black/40 !border-foreground/5 aspect-[4/3] rounded-xl md:rounded-2xl flex flex-col items-center justify-center gap-3 md:gap-4 transition-all duration-500 hover:scale-105 hover:!bg-black/60 cursor-default group relative overflow-hidden p-4 ${partner.mobileWidth} md:w-full`}
                             >
-                                <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors z-0" />
+                                <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity z-0" />
                                 <div className="z-10 w-full h-10 sm:h-12 md:h-20 flex items-center justify-center relative">
                                     <Image src={partner.logo} alt={partner.name} fill className="object-contain brightness-[1.2] group-hover:brightness-[1.5] transition-all duration-300" />
                                 </div>
@@ -58,8 +58,8 @@ const ProgramPartners = () => {
                         <div className="relative group/box">
                             <div className="absolute -inset-1 bg-gradient-to-r from-accent/0 via-accent/30 to-accent/0 rounded-2xl blur-xl opacity-0 group-hover/box:opacity-100 transition-all duration-700" />
 
-                            <div className="relative glass p-8 md:p-10 rounded-2xl border border-white/5 bg-black/40 flex flex-col md:flex-row items-center gap-10 overflow-hidden backdrop-blur-2xl transition-all duration-500 hover:border-accent/30 group-hover/box:bg-black/60">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 blur-3xl rounded-full" />
+                            <div className="relative glass !bg-white/5 p-8 md:p-10 rounded-2xl border border-foreground/5 flex flex-col md:flex-row items-center gap-10 overflow-hidden backdrop-blur-2xl transition-all duration-500 hover:border-accent/30 group-hover/box:bg-white/10">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 blur-3xl rounded-full" />
 
                                 <div className="flex-shrink-0">
                                     <div className="relative">
@@ -82,7 +82,7 @@ const ProgramPartners = () => {
                                     <h3 className="text-1xl md:text-2xl font-orbitron font-bold text-foreground leading-tight tracking-tight">
                                         Running integrated software lab at SGVU
                                     </h3>
-                                    <p className="text-xs text-foreground/50 font-medium tracking-wide leading-relaxed max-w-2xl">
+                                    <p className="text-xs text-foreground/60 font-medium tracking-wide leading-relaxed max-w-2xl">
                                         Delivering industry-standard engineering training and active software development directly on the university campus.
                                     </p>
                                 </div>

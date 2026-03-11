@@ -32,7 +32,7 @@ const Navbar = () => {
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className={`w-full max-w-[1550px] pointer-events-auto transition-all duration-500 rounded-lg border border-white/10 shadow-[0_15px_50px_-15px_rgba(0,0,0,0.5)] bg-[#111111] relative overflow-hidden group/nav ${scrolled ? 'py-1 scale-[0.99]' : 'py-1.5'
+                className={`w-full max-w-[1550px] pointer-events-auto transition-all duration-500 rounded-lg border border-white/10 shadow-[0_15px_50px_-15px_rgba(0,0,0,0.5)] bg-background-alt relative overflow-hidden group/nav ${scrolled ? 'py-1 scale-[0.99]' : 'py-1.5'
                     }`}
             >
                 {/* Subtle texture overlay */}

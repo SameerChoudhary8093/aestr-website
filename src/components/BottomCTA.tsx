@@ -6,25 +6,25 @@ import Image from 'next/image';
 const BottomCTA = () => {
     return (
         <>
-            <section className="relative py-24 bg-background-alt overflow-hidden">
+            <section className="relative py-24 bg-accent overflow-hidden">
                 <div className="container mx-auto px-6 relative z-10">
 
                     {/* Wide Glassmorphism Container */}
-                    <div className="glass rounded-[2rem] p-6 md:p-14 border border-foreground/5 bg-gradient-to-br from-foreground/5 to-transparent shadow-2xl">
+                    <div className="glass !bg-black/90 rounded-[2rem] p-6 md:p-14 border border-foreground/5 bg-gradient-to-br from-foreground/5 to-transparent shadow-2xl">
                         <div className="flex flex-col lg:flex-row items-center gap-10 md:gap-16">
 
                             {/* Left Side (Content) */}
                             <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-6 md:space-y-8 text-left">
-                                <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold text-foreground leading-tight tracking-tight">
+                                <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold text-white leading-tight tracking-tight">
                                     Only at <span className="text-accent italic">AESTR</span> you are trained for future safe professions
                                 </h2>
-                                <p className="text-base md:text-xl text-foreground/50 leading-relaxed font-semibold">
+                                <p className="text-base md:text-xl text-white/50 leading-relaxed font-semibold">
                                     Browse further to know more about our courses
                                 </p>
 
                                 {/* Action Box */}
-                                <div className="mt-8 bg-black/40 p-6 md:p-8 rounded-2xl flex flex-col sm:flex-row justify-between items-center gap-6 md:gap-8 border border-foreground/5">
-                                    <p className="text-foreground/70 text-xs md:text-sm flex-1 text-center sm:text-left font-medium">
+                                <div className="mt-8 bg-white/5 p-6 md:p-8 rounded-2xl flex flex-col sm:flex-row justify-between items-center gap-6 md:gap-8 border border-white/5">
+                                    <p className="text-white/70 text-xs md:text-sm flex-1 text-center sm:text-left font-medium">
                                         Don't be shy. We enjoy connecting with students and parents.
                                     </p>
                                     <button className="btn-aestr group whitespace-nowrap self-stretch sm:self-auto text-center">
@@ -36,7 +36,7 @@ const BottomCTA = () => {
 
                             {/* Right Side (Image Placeholder) */}
                             <div className="w-full lg:w-1/2">
-                                <div className="aspect-square w-full bg-black/20 rounded-2xl md:rounded-3xl border border-foreground/10 relative group overflow-hidden flex items-center justify-center p-4 md:p-8">
+                                <div className="aspect-square w-full bg-black/40 rounded-2xl md:rounded-3xl border border-white/10 relative group overflow-hidden flex items-center justify-center p-4 md:p-8">
                                     <Image
                                         src="/Other/Robo.webp"
                                         alt="Robotics Training"

@@ -6,10 +6,10 @@ import { motion } from 'framer-motion';
 
 const AboutPointFour = () => {
     return (
-        <section className="relative py-24 bg-background overflow-hidden">
+        <section className="relative py-24 bg-accent overflow-hidden">
             {/* Ambient Background Glows */}
-            <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[100px] pointer-events-none" />
-            <div className="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
+            <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-white/20 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-[120px] pointer-events-none" />
 
 
             <div className="container mx-auto px-6 relative z-10">
@@ -29,19 +29,19 @@ const AboutPointFour = () => {
                             className="space-y-6 md:space-y-8 text-left"
                         >
                             <div className="flex items-start gap-4 md:gap-6">
-                                <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full border border-accent/20 flex items-center justify-center text-2xl md:text-3xl font-orbitron font-bold text-accent bg-accent/5">
+                                <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full border border-black/30 flex items-center justify-center text-2xl md:text-3xl font-orbitron font-bold text-black bg-black/5">
                                     4
                                 </div>
                                 <div className="space-y-6">
-                                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold text-foreground leading-tight">
-                                        Bootcamp, Bootcamp, <span className="text-accent italic">Bootcamp.</span>
+                                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold text-black leading-tight">
+                                        Bootcamp, Bootcamp, <span className="text-black italic underline decoration-black/20">Bootcamp.</span>
                                     </h2>
                                     <div className="space-y-4">
-                                        <p className="text-base md:text-lg text-foreground font-bold leading-relaxed">
+                                        <p className="text-base md:text-lg text-black font-bold leading-relaxed">
                                             At AESTR, theory is just the beginning. We believe the best way to learn engineering is by building real things. That’s why every semester includes immersive AI bootcamps, right on campus — fully integrated into your curriculum.
                                         </p>
                                     </div>
-                                    <button className="btn-aestr flex items-center gap-2 group">
+                                    <button className="px-10 py-4 bg-black text-accent font-orbitron font-black text-sm uppercase rounded-lg hover:scale-105 transition-all flex items-center gap-2 group">
                                         Read More
                                         <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform ml-2">↗</span>
                                     </button>
@@ -56,15 +56,15 @@ const AboutPointFour = () => {
                             transition={{ duration: 0.7 }}
                             className="relative group cursor-pointer"
                         >
-                            <div className="aspect-[16/10] bg-black/40 rounded-[2rem] border border-foreground/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/30 group-hover:shadow-[0_0_80px_rgba(216,246,2,0.1)] relative">
+                            <div className="aspect-[16/10] bg-black/80 rounded-[2rem] border border-black/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-black/30 group-hover:shadow-[0_0_80px_rgba(0,0,0,0.2)] relative">
                                 <Image
                                     src="/Other/Bootcamp.webp"
                                     alt="Engineering Bootcamp"
                                     fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-80"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                                <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                                <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             </div>
                         </motion.div>
                     </div>
@@ -83,14 +83,14 @@ const AboutPointFour = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                                className="glass p-10 rounded-2xl group border-foreground/10 hover:border-accent/30 transition-all duration-500 relative overflow-hidden"
+                                className="glass !bg-black/90 p-10 rounded-2xl group border-foreground/5 hover:border-accent/30 transition-all duration-500 relative overflow-hidden"
                             >
                                 <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:15px_15px] opacity-20 pointer-events-none" />
                                 <div className="relative z-10">
-                                    <h4 className="text-xl font-orbitron font-bold text-foreground mb-4 group-hover:text-accent transition-colors flex items-center gap-2">
+                                    <h4 className="text-xl font-orbitron font-bold text-white mb-4 group-hover:text-accent transition-colors flex items-center gap-2">
                                         {card.title}
                                     </h4>
-                                    <p className="text-foreground/60 text-sm leading-relaxed font-medium">{card.desc}</p>
+                                    <p className="text-white/60 text-sm leading-relaxed font-medium">{card.desc}</p>
                                 </div>
                             </motion.div>
                         ))}

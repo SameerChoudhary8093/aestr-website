@@ -91,7 +91,7 @@ const CareerCarousel = () => {
     const displayData = [...careerData, ...careerData];
 
     return (
-        <section className="relative py-24 bg-background overflow-hidden">
+        <section className="relative py-24 bg-background-alt overflow-hidden">
             <div className="container mx-auto px-6 mb-16">
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 px-4">
                     <div className="space-y-4 text-left">

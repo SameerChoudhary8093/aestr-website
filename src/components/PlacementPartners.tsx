@@ -15,7 +15,7 @@ const partners = [
 
 const PlacementPartners = () => {
     return (
-        <section className="relative py-24 bg-background overflow-hidden">
+        <section className="relative py-24 bg-background-alt overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
 
                 {/* Header Area */}

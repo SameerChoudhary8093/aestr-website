@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const AboutPointTwo = () => {
     return (
-        <section className="relative py-24 bg-background overflow-hidden">
+        <section className="relative py-24 bg-background-alt overflow-hidden">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[150px] pointer-events-none" />
 
             <motion.div
