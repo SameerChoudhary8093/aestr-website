@@ -28,11 +28,11 @@ const ParticleEffect = () => {
                     value: "transparent",
                 },
             },
-            fpsLimit: 120,
+            fpsLimit: 60,
             interactivity: {
                 events: {
                     onClick: {
-                        enable: true,
+                        enable: false,
                         mode: "push",
                     },
                     onHover: {
@@ -45,20 +45,20 @@ const ParticleEffect = () => {
                         quantity: 4,
                     },
                     repulse: {
-                        distance: 200,
+                        distance: 100,
                         duration: 0.4,
                     },
                 },
             },
             particles: {
                 color: {
-                    value: "#CCFF00",
+                    value: "#D7F601",
                 },
                 links: {
-                    color: "#CCFF00",
+                    color: "#D7F601",
                     distance: 150,
                     enable: true,
-                    opacity: 0.3,
+                    opacity: 0.2,
                     width: 1,
                 },
                 move: {
@@ -68,26 +68,27 @@ const ParticleEffect = () => {
                         default: "bounce" as const,
                     },
                     random: false,
-                    speed: 1,
+                    speed: 0.8,
                     straight: false,
                 },
                 number: {
                     density: {
                         enable: true,
+                        area: 800,
                     },
-                    value: 120,
+                    value: 60,
                 },
                 opacity: {
-                    value: 0.5,
+                    value: 0.3,
                 },
                 shape: {
                     type: "circle",
                 },
                 size: {
-                    value: { min: 1, max: 3 },
+                    value: { min: 1, max: 2 },
                 },
             },
-            detectRetina: true,
+            detectRetina: false,
         }),
         [],
     );

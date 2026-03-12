@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import MagneticEffect from './MagneticEffect';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -32,48 +33,58 @@ const Navbar = () => {
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className={`w-full max-w-[1550px] pointer-events-auto transition-all duration-500 rounded-lg border border-white/10 shadow-[0_15px_50px_-15px_rgba(0,0,0,0.5)] bg-background-alt relative overflow-hidden group/nav ${scrolled ? 'py-1 scale-[0.99]' : 'py-1.5'
+                className={`w-full max-w-[1550px] pointer-events-auto transition-all duration-500 rounded-2xl border border-white/10 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.8)] backdrop-blur-md relative overflow-hidden group/nav ${scrolled ? 'py-1 bg-black/80 scale-[0.98]' : 'py-2 bg-black/40'
                     }`}
             >
-                {/* Subtle texture overlay */}
-                <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
+                {/* Futuristic Scanning Line Overlay */}
+                <motion.div 
+                    animate={{ x: ['-100%', '200%'] }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "linear", repeatDelay: 5 }}
+                    className="absolute inset-0 w-1/3 h-full bg-gradient-to-r from-transparent via-accent/5 to-transparent skew-x-12 pointer-events-none"
+                />
 
-                <div className="flex items-center justify-between relative z-10 w-full">
+                {/* Navbar Content */}
+                <div className="flex items-center justify-between relative z-10 w-full px-6 md:px-10">
                     {/* Left: AESTR Logo */}
-                    <div className="flex-1 flex justify-start pl-4 md:pl-[30px]">
+                    <div className="flex-1 flex justify-start">
                         <Link href="/" className="flex items-center group/logo">
-                            <div className="w-[140px] md:w-[200px] relative h-8 md:h-10 transition-all duration-300 group-hover/logo:scale-105">
+                            <div className="w-[140px] md:w-[200px] relative h-8 md:h-10 transition-all duration-500 group-hover/logo:scale-105">
                                 <Image
                                     src="/Herosection/aestr-logo.svg"
                                     alt="Aestr Logo"
                                     fill
-                                    className="object-contain"
+                                    className="object-contain brightness-[1.1]"
                                     priority
                                 />
                             </div>
                         </Link>
                     </div>
 
-                    {/* Center: Nav Links as 'Buttons' - Perfectly Centered */}
-                    <div className="hidden lg:flex flex-1 justify-center px-0">
-                        <div className="flex items-center space-x-1 xl:space-x-2">
+                    {/* Center: Nav Links with Magnetic Effect */}
+                    <div className="hidden lg:flex flex-[2] justify-center">
+                        <div className="flex items-center space-x-1">
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className="text-[14px] xl:text-[18px] font-orbitron font-extrabold text-[#EAF0BD] leading-[1.5] px-3 xl:px-6 py-4 hover:text-accent transition-all duration-300 whitespace-nowrap relative group/btn"
+                                    className="relative px-5 py-4 group/btn"
                                 >
-                                    {link.name}
-                                    <span className="absolute bottom-2 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-accent transition-all duration-300 group-hover/btn:w-1/2" />
+                                    <MagneticEffect strength={0.3}>
+                                        <span className="text-[14px] xl:text-[16px] font-orbitron font-extrabold text-[#EAF0BD]/80 tracking-wider group-hover/btn:text-accent transition-colors whitespace-nowrap">
+                                            {link.name}
+                                        </span>
+                                    </MagneticEffect>
+                                    <span className="absolute bottom-3 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-accent transition-all duration-300 group-hover/btn:w-1/3 shadow-[0_0_8px_#D7F601]" />
                                 </Link>
                             ))}
                         </div>
                     </div>
 
-                    {/* Right: SGVU Logo & Mobile Toggle */}
-                    <div className="flex-1 flex items-center justify-end pr-4 md:pr-[30px]">
-                        <div className="hidden md:flex items-center">
-                            <div className="relative h-10 md:h-14 w-[200px] xl:w-[420px] transition-transform duration-300 hover:scale-105">
+                    {/* Right: Partner Logos & Mobile Toggle */}
+                    <div className="flex-1 flex items-center justify-end space-x-6">
+                        <div className="hidden xl:flex items-center space-x-6">
+                            <div className="h-6 w-px bg-white/10" />
+                            <div className="relative h-12 w-[240px] transition-all duration-500 hover:brightness-125">
                                 <Image
                                     src="/Herosection/SGVU-NIRF-NAAC.webp"
                                     alt="SGVU Partners"
@@ -85,15 +96,15 @@ const Navbar = () => {
                         </div>
 
                         {/* Mobile menu button */}
-                        <div className="lg:hidden ml-4">
+                        <div className="lg:hidden">
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
-                                className="p-2 text-[#EAF0BD] hover:scale-110 transition-transform focus:outline-none"
+                                className="p-3 text-accent hover:bg-white/5 rounded-xl transition-all focus:outline-none border border-white/5"
                             >
                                 <div className="w-6 h-5 relative flex flex-col justify-between">
-                                    <span className={`w-full h-0.5 bg-[#EAF0BD] rounded-full transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`} />
-                                    <span className={`w-3/4 h-0.5 bg-[#EAF0BD] rounded-full transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`} />
-                                    <span className={`w-full h-0.5 bg-[#EAF0BD] rounded-full transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+                                    <span className={`w-full h-0.5 bg-accent rounded-full transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`} />
+                                    <span className={`w-3/4 h-0.5 bg-accent rounded-full transition-all duration-300 ${isOpen ? 'opacity-0' : 'ml-auto'}`} />
+                                    <span className={`w-full h-0.5 bg-accent rounded-full transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2' : ''}`} />
                                 </div>
                             </button>
                         </div>

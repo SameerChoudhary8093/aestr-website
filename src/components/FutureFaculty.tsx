@@ -63,9 +63,10 @@ const FutureFaculty = () => {
                     >
                         <div className="aspect-[16/10] md:aspect-[4/3] bg-black/60 rounded-2xl md:rounded-[2.5rem] border border-foreground/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/40 group-hover:shadow-[0_0_80px_rgba(216,246,2,0.1)] relative">
                             <Image
-                                src="/Other/Future-Faculty.png"
+                                src="/Other/AI-faculty.png"
                                 alt="AI & Robotics Faculty"
                                 fill
+                                sizes="(max-width: 768px) 100vw, 50vw"
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />

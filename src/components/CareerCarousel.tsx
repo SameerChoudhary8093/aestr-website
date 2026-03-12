@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 
 const careerData = [
     {
@@ -108,30 +107,29 @@ const CareerCarousel = () => {
             <style jsx>{`
                 @keyframes marquee {
                     0% { transform: translateX(0); }
-                    100% { transform: translateX(-50%); }
+                    100% { transform: translateX(calc(-50% - 20px)); }
                 }
-                .marquee-container {
+                .marquee {
                     display: flex;
                     width: max-content;
                     animation: marquee 60s linear infinite;
+                    gap: 40px;
                 }
-                /* Do not pause on hover as per user request */
-                .marquee-container:hover {
-                    animation-play-state: running;
+                /* Mobile optimization */
+                @media (max-width: 768px) {
+                    .marquee {
+                        animation-duration: 40s;
+                        gap: 24px;
+                    }
                 }
             `}</style>
             
-            <div className="relative overflow-hidden cursor-grab active:cursor-grabbing">
+            <div className="relative overflow-hidden group py-10">
                 {/* Gradient Masks */}
-                <div className="absolute inset-y-0 left-0 w-20 md:w-48 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-                <div className="absolute inset-y-0 right-0 w-20 md:w-48 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+                <div className="absolute inset-y-0 left-0 w-20 md:w-64 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+                <div className="absolute inset-y-0 right-0 w-20 md:w-64 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
-                <motion.div 
-                    className="marquee-container flex gap-6 md:gap-10 px-4"
-                    drag="x"
-                    dragConstraints={{ left: -3000, right: 0 }}
-                    style={{ animationPlayState: 'running' }}
-                >
+                <div className="marquee px-4">
                     {displayData.map((card, idx) => (
                         <div
                             key={`${card.title}-${idx}`}
@@ -154,7 +152,7 @@ const CareerCarousel = () => {
 
                             {/* Card Content */}
                             <div className="p-6 md:p-8 space-y-4 md:space-y-6 text-left">
-                                <h3 className="text-lg md:text-xl font-orbitron font-bold text-foreground group-hover:text-accent transition-colors duration-300">
+                                <h3 className="text-lg md:text-xl font-orbitron font-bold text-white group-hover:text-accent transition-colors duration-300">
                                     {card.title}
                                 </h3>
                                 <p className="text-xs md:text-sm text-foreground/50 leading-relaxed min-h-[50px] md:min-h-[60px] font-medium">
@@ -188,7 +186,7 @@ const CareerCarousel = () => {
                             </div>
                         </div>
                     ))}
-                </motion.div>
+                </div>
             </div>
         </section>
     );

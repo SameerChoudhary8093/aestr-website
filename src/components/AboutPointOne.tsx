@@ -29,7 +29,7 @@ const AboutPointOne = () => {
                         <div className="space-y-2 text-left">
                             <h3 className="text-xl md:text-3xl font-orbitron font-bold text-black/90">CSE 2030: Computer Science Won't Be Same Ever Again</h3>
                             <p className="text-black/70 text-base md:text-lg leading-relaxed max-w-4xl font-bold">
-                                The world of Computer Science is transforming by 2030, and our curriculum is built for that future. We move away from obsolete theories to architecting real-world AI systems.
+                                The world of Computer Science is transforming by 2030, and AESTR is already there! Traditional roles are evolving, and new opportunities are emerging. We’re not just preparing you for a job; we’re equipping you to define the future.
                             </p>
                         </div>
                     </div>
@@ -55,71 +55,69 @@ const AboutPointOne = () => {
                         ))}
                     </div>
 
-                    {/* Redefined Flexibility Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-                        {[
-                            { 
-                                title: 'Unique Expertise', 
-                                desc: 'Choose from 5 industry-focused Majors and 9 specialized Minors to tailor your skills.',
-                                icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
-                            },
-                            { 
-                                title: 'Innovation Labs', 
-                                desc: 'Dive into 5 revolutionary Innovation Labs, unlike any other labs in the world.',
-                                icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86 7.717l.542 1.708a2 2 0 001.022.547l2.387.477a6 6 0 003.86-7.717l-.542-1.708zM12 13V4M7 14H5L16 3h2L7 14z" /></svg>
-                            },
-                            { 
-                                title: 'Apple Ecosystem', 
-                                desc: 'Gain exclusive Swift Application Development training directly from the source.',
-                                icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
-                            },
-                            { 
-                                title: 'Global Mentors', 
-                                desc: 'Learn from experts in defense tech, robotics, computer vision, and building engines.',
-                                icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
-                            }
-                        ].map((item, idx) => (
-                            <motion.div 
-                                key={item.title}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: 0.3 + (idx * 0.1) }}
-                                className="glass !bg-black/80 !border-black/5 p-6 rounded-2xl flex flex-col gap-4 border-t-2 border-accent/20 hover:border-accent transition-all duration-300 group"
-                            >
-                                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform duration-300">
-                                    {item.icon}
-                                </div>
-                                <div className="space-y-2">
-                                    <h4 className="text-base font-orbitron font-bold text-white group-hover:text-accent transition-colors">{item.title}</h4>
-                                    <p className="text-xs text-white/60 leading-relaxed font-normal">{item.desc}</p>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
+                    {/* Unified Flexibility & Experience Section */}
+                    <div className="mt-16 md:mt-24 space-y-6">
+                        <div className="glass !bg-black/95 p-8 md:p-14 rounded-[2.5rem] border border-black/5 shadow-[0_20px_50px_rgba(0,0,0,0.3)] relative overflow-hidden group">
+                            {/* Decorative background glow */}
+                            <div className="absolute -top-24 -right-24 w-96 h-96 bg-accent/5 blur-[100px] rounded-full pointer-events-none transition-all duration-700 group-hover:bg-accent/10" />
+                            
+                            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center">
+                                {/* Left side: Heading and Points */}
+                                <div className="lg:col-span-12 space-y-12">
+                                    <div className="space-y-4 text-center">
+                                        <h3 className="text-2xl md:text-5xl font-orbitron font-extrabold text-white leading-tight tracking-tight">
+                                            Unparalleled Flexibility & <br className="hidden md:block" />
+                                            <span className="text-accent italic">Cutting-Edge Curriculum</span>
+                                        </h3>
+                                        <div className="h-1 w-20 bg-accent rounded-full mx-auto" />
+                                    </div>
+                                    
+                                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16">
+                                        {/* Left Side: Learn by Doing Header */}
+                                        <div className="lg:col-span-5 space-y-6">
+                                            <div className="bg-white/5 p-8 rounded-3xl border border-white/10 group-hover:border-accent/30 transition-all duration-500 h-full flex flex-col justify-center text-left">
+                                                <h4 className="text-2xl md:text-4xl font-orbitron font-bold text-accent mb-6 leading-tight">Learn by Doing, Excel by Creating:</h4>
+                                                <div className="space-y-4">
+                                                    <p className="text-white/70 text-sm md:text-base leading-relaxed">
+                                                        Project-Powered Progress: Get graded on your real-world projects and software solutions, not just exams.
+                                                    </p>
+                                                    <p className="text-white/70 text-sm md:text-base leading-relaxed">
+                                                        The Engineer’s Dream Education: Practical, innovative, and deeply engaging courses.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                    {/* Bottom Full-Width Cards */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
-                        <div className="glass !bg-black/90 p-8 rounded-2xl group hover:-translate-y-1 transition-all duration-300 border-l-4 border-accent">
-                            <h4 className="text-xl font-orbitron font-bold text-white group-hover:text-accent mb-6 leading-tight">Learn by Doing, Excel by Creating:</h4>
-                            <ul className="space-y-4">
-                                {[
-                                    'Project-Powered Progress: Get graded on your real-world projects and software solutions, not just exams. Solve a problem, build the software, and master the subject.',
-                                    'The Engineer’s Dream Education: Our courses are crafted the way seasoned engineers wish they had been taught – practical, innovative, and deeply engaging.'
-                                ].map((item) => (
-                                    <li key={item} className="flex items-start gap-3 text-sm text-white/70 font-normal">
-                                        <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0 shadow-[0_0_8px_rgba(216,246,2,0.6)]" /> 
-                                        <span className="leading-relaxed">{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        
-                        <div className="glass !bg-black/90 p-8 rounded-2xl flex items-center justify-center text-center overflow-hidden relative">
-                            <div className="absolute inset-0 bg-[radial-gradient(#ffffff05_1px,transparent_1px)] bg-[size:20px_20px]" />
-                            <p className="relative z-10 text-2xl md:text-3xl font-orbitron font-light text-white italic">
-                                Craft your <span className="text-accent font-bold not-italic">future</span> with precision.
-                            </p>
+                                        {/* Right Side: 4 Key Points Grid */}
+                                        <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+                                            {[
+                                                "Choose from 5 industry-focused Majors and 9 specialized Minors to tailor your unique expertise.",
+                                                "Dive into 5 revolutionary Innovation Labs, unlike any in the world.",
+                                                "Gain exclusive Apple Swift Application Development training directly from Apple.",
+                                                "Learn from global master teachers, experts in defense technologies, robotics, and more."
+                                            ].map((point, idx) => (
+                                                <motion.div 
+                                                    key={idx}
+                                                    initial={{ opacity: 0, scale: 0.95 }}
+                                                    whileInView={{ opacity: 1, scale: 1 }}
+                                                    viewport={{ once: true }}
+                                                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                                                    className="glass !bg-white/5 p-6 rounded-2xl border border-white/5 hover:border-accent/30 transition-all duration-300 group/item flex flex-col gap-4 text-left"
+                                                >
+                                                    <div className="w-10 h-10 rounded-full border border-accent/20 bg-accent/5 flex items-center justify-center text-accent group-hover/item:bg-accent group-hover/item:text-black transition-all duration-300">
+                                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
+                                                        </svg>
+                                                    </div>
+                                                    <p className="text-sm md:text-base text-white/80 leading-relaxed font-bold group-hover/item:text-white transition-colors">
+                                                        {point}
+                                                    </p>
+                                                </motion.div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

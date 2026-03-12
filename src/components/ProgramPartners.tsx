@@ -38,8 +38,13 @@ const ProgramPartners = () => {
                                 className={`glass !bg-black/40 !border-foreground/5 aspect-[4/3] rounded-xl md:rounded-2xl flex flex-col items-center justify-center gap-3 md:gap-4 transition-all duration-500 hover:scale-105 hover:!bg-black/60 cursor-default group relative overflow-hidden p-4 ${partner.mobileWidth} md:w-full`}
                             >
                                 <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity z-0" />
-                                <div className="z-10 w-full h-10 sm:h-12 md:h-20 flex items-center justify-center relative">
-                                    <Image src={partner.logo} alt={partner.name} fill className="object-contain brightness-[1.2] group-hover:brightness-[1.5] transition-all duration-300" />
+                                <div className="z-10 w-full h-16 md:h-24 flex items-center justify-center relative px-4">
+                                    <Image 
+                                        src={partner.logo} 
+                                        alt={partner.name} 
+                                        fill 
+                                        className="object-contain brightness-[1.2] group-hover:brightness-[1.5] transition-all duration-300 pointer-events-none" 
+                                    />
                                 </div>
                                 <span className="z-10 text-[7px] sm:text-[8px] md:text-[10px] font-orbitron uppercase tracking-widest text-foreground/40 group-hover:text-accent transition-colors font-bold">
                                     {partner.name}

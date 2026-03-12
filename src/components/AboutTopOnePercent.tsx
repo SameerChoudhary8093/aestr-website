@@ -53,22 +53,22 @@ const AboutTopOnePercent = () => {
                             <div className="space-y-4">
                                 <h3 className="text-xl md:text-2xl font-orbitron font-bold text-foreground leading-tight">B.Tech Computer Science & Engineering</h3>
 
-                                <div className="space-y-3">
-                                    <h4 className="text-[9px] md:text-[10px] font-orbitron tracking-widest text-foreground/40 font-bold uppercase">Major specialization</h4>
-                                    <div className="flex flex-wrap gap-2">
+                                <div className="space-y-4 md:space-y-6">
+                                    <h4 className="text-[11px] md:text-xs font-orbitron tracking-[0.2em] text-foreground/40 font-bold uppercase">Major specialization</h4>
+                                    <div className="flex flex-wrap gap-2 md:gap-4">
                                         {["Software engineering", "Cloud engineering", "Data science", "AI & ML", "Cyber security"].map((item) => (
-                                            <span key={item} className="px-2.5 py-1 text-[9px] md:text-[10px] bg-accent/10 text-accent border border-accent/20 rounded-full font-bold tracking-tight">
+                                            <span key={item} className="px-6 py-3 text-sm md:text-base bg-accent/10 text-accent border border-accent/20 rounded-full font-bold tracking-tight hover:bg-accent/20 transition-all cursor-default">
                                                 {item}
                                             </span>
                                         ))}
                                     </div>
                                 </div>
 
-                                <div className="space-y-3">
-                                    <h4 className="text-[10px] font-orbitron tracking-widest text-foreground/40 font-bold italic text-white/40">Minor specialization...</h4>
-                                    <div className="flex flex-wrap gap-2">
+                                <div className="space-y-4 md:space-y-6">
+                                    <h4 className="text-[11px] md:text-xs font-orbitron tracking-[0.2em] text-foreground/40 font-bold italic text-white/40">Minor specialization...</h4>
+                                    <div className="flex flex-wrap gap-2 md:gap-4">
                                         {["Robotics", "Bioinformatics", "Industry & manufacturing", "Design", "Fintech", "Nanotechnology", "Geoinformatics", "Chip & semiconductor", "Smart cities"].map((item) => (
-                                            <span key={item} className="px-3 py-1.5 text-[10px] bg-foreground/5 border border-foreground/10 rounded-full text-foreground/60 hover:border-accent/40 hover:text-accent transition-all cursor-default font-medium tracking-tight">
+                                            <span key={item} className="px-6 py-3 text-sm md:text-base bg-foreground/5 border border-foreground/10 rounded-full text-foreground/70 hover:border-accent/40 hover:text-accent transition-all cursor-default font-bold tracking-tight">
                                                 {item}
                                             </span>
                                         ))}

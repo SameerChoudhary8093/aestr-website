@@ -59,46 +59,69 @@ const AboutPointFive = () => {
                         </div>
                     </div>
 
-                    {/* Labs Alternating Grid */}
-                    <div className="space-y-20 md:space-y-32">
+                    {/* Labs Alternating Grid - Refactored for more Depth */}
+                    <div className="space-y-32 md:space-y-48">
                         {labs.map((lab, idx) => (
                             <motion.div
                                 key={lab.name}
-                                initial={{ opacity: 0, y: 50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
                                 viewport={{ once: true, margin: "-100px" }}
-                                transition={{ duration: 0.8 }}
-                                className={`flex flex-col md:items-center gap-8 md:gap-12 lg:gap-20 ${idx % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'}`}
+                                transition={{ duration: 1 }}
+                                className={`flex flex-col gap-10 md:gap-16 lg:gap-24 items-center ${idx % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'}`}
                             >
-                                {/* Image Side */}
-                                <div className="flex-1 relative group cursor-pointer w-full">
-                                    <div className="aspect-[16/9] w-full bg-black/40 rounded-2xl md:rounded-[2.5rem] border border-white/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/30 group-hover:shadow-[0_0_80px_rgba(216,246,2,0.1)] relative">
+                                {/* Image Side with Enhanced Glow */}
+                                <div className="flex-1 relative group w-full">
+                                    <div className="absolute -inset-4 bg-accent/5 rounded-[3rem] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                                    <div className="relative aspect-[16/10] w-full bg-black/40 rounded-3xl md:rounded-[3rem] border border-white/10 flex items-center justify-center overflow-hidden transition-all duration-700 group-hover:border-accent/40 group-hover:shadow-[0_0_100px_rgba(216,246,2,0.05)]">
                                         <Image
                                             src={lab.image}
                                             alt={lab.name}
                                             fill
-                                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                            className="object-cover transition-transform duration-1000 group-hover:scale-110"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                                        <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                                        <div className="absolute top-4 right-4 md:top-6 md:right-6 z-10 opacity-0 group-hover:opacity-100 transition-all duration-500 -translate-y-4 group-hover:translate-y-0">
-                                            <span className="text-[8px] md:text-[10px] font-orbitron uppercase tracking-[0.4em] font-black text-black bg-accent px-3 py-1.5 md:px-5 md:py-2.5 rounded-full shadow-xl">System 0{idx + 1}</span>
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+                                        
+                                        {/* Futuristic Overlay Elements */}
+                                        <div className="absolute inset-0 border-[0.5px] border-white/5 rounded-[2.5rem] pointer-events-none" />
+                                        <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 z-10">
+                                            <div className="bg-black/80 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 flex items-center gap-3">
+                                                <div className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
+                                                <span className="text-[10px] font-orbitron font-black text-white/70 uppercase tracking-widest">Lab {String(idx + 1).padStart(2, '0')}</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 {/* Content Side */}
-                                <div className="flex-1 space-y-4 md:space-y-8 text-left">
-                                    <div className="space-y-4">
-                                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-orbitron font-bold text-white group-hover:text-accent transition-colors">
+                                <div className="flex-1 space-y-6 md:space-y-10 text-left">
+                                    <div className="space-y-6">
+                                        <div className="inline-block px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20">
+                                            <span className="text-[10px] font-orbitron font-black text-accent uppercase tracking-[0.3em]">Advanced Research Lab</span>
+                                        </div>
+                                        <h3 className="text-3xl md:text-5xl lg:text-6xl font-orbitron font-extrabold text-white leading-tight tracking-tight uppercase">
                                             {lab.name}
                                         </h3>
-                                        <p className="text-base md:text-xl text-white/50 leading-relaxed font-medium">
+                                        <p className="text-lg md:text-2xl text-white/50 leading-relaxed font-bold max-w-xl">
                                             {lab.description}
                                         </p>
                                     </div>
-                                    <button className="flex items-center gap-3 group text-accent font-orbitron uppercase tracking-[0.25em] text-[8px] md:text-[10px] font-black hover:text-white transition-all duration-300 py-2">
-                                        <span>Explore Documentation</span>
+
+                                    {/* Lab Meta Stats */}
+                                    <div className="flex flex-wrap gap-4 pt-4 border-t border-white/5">
+                                        <div className="space-y-1">
+                                            <p className="text-[10px] text-white/30 uppercase font-black tracking-widest">Level</p>
+                                            <p className="text-sm text-white font-orbitron font-bold">Tier 1 Elite</p>
+                                        </div>
+                                        <div className="w-px h-10 bg-white/10 mx-2" />
+                                        <div className="space-y-1">
+                                            <p className="text-[10px] text-white/30 uppercase font-black tracking-widest">Access</p>
+                                            <p className="text-sm text-white font-orbitron font-bold">24/7 Dedicated</p>
+                                        </div>
+                                    </div>
+
+                                    <button className="flex items-center gap-4 group text-accent font-orbitron uppercase tracking-[0.3em] text-[10px] md:text-xs font-black transition-all duration-300 py-4 px-8 border border-accent/20 rounded-xl bg-accent/5 hover:bg-accent hover:text-black hover:border-accent">
+                                        <span>View Documentation</span>
                                         <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
                                     </button>
                                 </div>

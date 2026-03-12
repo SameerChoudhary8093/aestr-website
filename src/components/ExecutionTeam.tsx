@@ -15,7 +15,7 @@ const teamData = [
     {
         name: 'Dr. Arastu Sharma',
         role: 'CEO AESTR',
-        image: '/ExecutionTeam/Arastu.png',
+        image: '/ExecutionTeam/Arastu.jpeg',
         desc: 'Dr. Arastu Sharma’s journey spans Cambridge, Columbia, Microsoft Research, and entrepreneurship with multiple AI companies. His pioneering healthcare patent was acquired by global pharmaceutical giant GSK. Today, as CEO of Shodh AI and AESTR, he embodies innovation and industry expertise.',
         specialStats: true,
         quote: 'AI education is not just about technology, it’s about creating responsible innovators for tomorrow.'
@@ -74,6 +74,7 @@ const ExecutionTeam = () => {
                                         src={member.image}
                                         alt={member.name}
                                         fill
+                                        sizes="(max-width: 768px) 100vw, 40vw"
                                         className="object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />

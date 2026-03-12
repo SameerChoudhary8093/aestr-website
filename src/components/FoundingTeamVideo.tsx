@@ -27,8 +27,8 @@ const FoundingTeamVideo = () => {
                             <p className="text-lg md:text-xl text-black font-medium leading-relaxed">
                                 Our founding team includes engineers from Shodh AI (USA) and other global tech leaders. Here, you won’t be taught by disconnected faculty, you’ll learn from full-time software developers, AI practitioners, and system architects who are shaping the real world.
                             </p>
-                            <div className="glass !bg-black/90 p-6 md:p-8 rounded-2xl border-l-4 border-accent shadow-[0_8px_32px_rgba(0,0,0,0.3)] bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:20px_20px] w-full">
-                                <p className="text-lg md:text-2xl font-bold text-white leading-tight">
+                            <div className="glass !bg-black/90 p-6 md:p-10 rounded-2xl border-l-4 border-accent shadow-[0_8px_32px_rgba(0,0,0,0.3)] bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:20px_20px] w-full lg:w-max">
+                                <p className="text-base md:text-2xl font-bold text-white leading-tight whitespace-nowrap px-4">
                                     "We believe only those who build the future can truly teach it."
                                 </p>
                             </div>
