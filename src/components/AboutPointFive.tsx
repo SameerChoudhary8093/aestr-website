@@ -14,7 +14,7 @@ const labs = [
 const AboutPointFive = () => {
     return (
         <section className="relative py-32 bg-purple overflow-hidden">
-            <div className="container mx-auto px-6 relative z-10">
+            <div className="container-boxed relative z-10">
                 <div className="space-y-16 md:space-y-24">
                     <div className="space-y-12">
                         <motion.div
@@ -31,7 +31,7 @@ const AboutPointFive = () => {
                                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold text-white">
                                     Innovation labs of 2030
                                 </h2>
-                                <p className="text-base md:text-lg text-white/50 max-w-3xl leading-relaxed">
+                                <p className="text-lg md:text-xl text-white/90 max-w-3xl leading-relaxed font-bold">
                                     Learn from the architects of tomorrow's AI. AESTR is the brainchild of leading AI engineers dedicated to cultivating the next generation of tech innovators.
                                 </p>
                             </div>
@@ -52,28 +52,28 @@ const AboutPointFive = () => {
                                     transition={{ duration: 0.5, delay: i * 0.1 }}
                                     className="glass !bg-black/40 !border-white/5 p-6 md:p-8 rounded-2xl group hover:bg-black/60 hover:border-accent/30 transition-all duration-300 text-left"
                                 >
-                                    <h4 className="text-xs md:text-base font-orbitron font-bold text-accent mb-4 leading-tight group-hover:text-accent transition-colors uppercase tracking-widest">{card.title}</h4>
-                                    <p className="text-xs md:text-sm text-white/50 leading-relaxed font-semibold">{card.desc}</p>
+                                    <h4 className="text-base md:text-xl font-orbitron font-bold text-[#EAF0BD] mb-4 leading-tight transition-colors uppercase tracking-widest">{card.title}</h4>
+                                    <p className="text-sm md:text-base text-[#EAF0BD] leading-relaxed font-normal">{card.desc}</p>
                                 </motion.div>
                             ))}
                         </div>
                     </div>
 
                     {/* Labs Alternating Grid - Refactored for more Depth */}
-                    <div className="space-y-32 md:space-y-48">
+                    <div className="space-y-12">
                         {labs.map((lab, idx) => (
                             <motion.div
                                 key={lab.name}
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-100px" }}
-                                transition={{ duration: 1 }}
-                                className={`flex flex-col gap-10 md:gap-16 lg:gap-24 items-center ${idx % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'}`}
+                                transition={{ duration: 0.8 }}
+                                className={`glass !bg-black/40 !border-white/5 p-8 md:p-12 lg:p-16 rounded-[2.5rem] md:rounded-[4rem] flex flex-col gap-10 md:gap-16 lg:gap-20 items-center ${idx % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} group/lab hover:!bg-black/50 transition-all duration-500`}
                             >
                                 {/* Image Side with Enhanced Glow */}
                                 <div className="flex-1 relative group w-full">
                                     <div className="absolute -inset-4 bg-accent/5 rounded-[3rem] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                                    <div className="relative aspect-[16/10] w-full bg-black/40 rounded-3xl md:rounded-[3rem] border border-white/10 flex items-center justify-center overflow-hidden transition-all duration-700 group-hover:border-accent/40 group-hover:shadow-[0_0_100px_rgba(216,246,2,0.05)]">
+                                    <div className="relative aspect-[16/10] w-full bg-black/40 rounded-3xl md:rounded-[2.5rem] border border-white/10 flex items-center justify-center overflow-hidden transition-all duration-700 group-hover:border-accent/40 group-hover:shadow-[0_0_100px_rgba(216,246,2,0.05)]">
                                         <Image
                                             src={lab.image}
                                             alt={lab.name}
@@ -94,21 +94,21 @@ const AboutPointFive = () => {
                                 </div>
 
                                 {/* Content Side */}
-                                <div className="flex-1 space-y-6 md:space-y-10 text-left">
+                                <div className="flex-1 space-y-6 md:space-y-8 text-left">
                                     <div className="space-y-6">
                                         <div className="inline-block px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20">
                                             <span className="text-[10px] font-orbitron font-black text-accent uppercase tracking-[0.3em]">Advanced Research Lab</span>
                                         </div>
-                                        <h3 className="text-3xl md:text-5xl lg:text-6xl font-orbitron font-extrabold text-white leading-tight tracking-tight uppercase">
+                                        <h3 className="text-3xl md:text-5xl lg:text-3xl font-orbitron font-extrabold text-white leading-tight tracking-tight uppercase">
                                             {lab.name}
                                         </h3>
-                                        <p className="text-lg md:text-2xl text-white/50 leading-relaxed font-bold max-w-xl">
+                                        <p className="text-lg md:text-xl text-[#EAF0BD] leading-relaxed font-normal">
                                             {lab.description}
                                         </p>
                                     </div>
 
                                     {/* Lab Meta Stats */}
-                                    <div className="flex flex-wrap gap-4 pt-4 border-t border-white/5">
+                                    <div className="flex flex-wrap gap-4 pt-4 border-t border-white/10">
                                         <div className="space-y-1">
                                             <p className="text-[10px] text-white/30 uppercase font-black tracking-widest">Level</p>
                                             <p className="text-sm text-white font-orbitron font-bold">Tier 1 Elite</p>
@@ -120,7 +120,7 @@ const AboutPointFive = () => {
                                         </div>
                                     </div>
 
-                                    <button className="flex items-center gap-4 group text-accent font-orbitron uppercase tracking-[0.3em] text-[10px] md:text-xs font-black transition-all duration-300 py-4 px-8 border border-accent/20 rounded-xl bg-accent/5 hover:bg-accent hover:text-black hover:border-accent">
+                                    <button className="flex items-center gap-4 group text-accent font-orbitron uppercase tracking-[0.3em] text-[10px] md:text-xs font-black transition-all duration-300 py-3 md:py-4 px-6 md:px-8 border border-accent/20 rounded-xl bg-accent/5 hover:bg-accent hover:text-black hover:border-accent">
                                         <span>View Documentation</span>
                                         <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
                                     </button>

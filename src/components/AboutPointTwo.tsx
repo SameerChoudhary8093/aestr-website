@@ -13,7 +13,7 @@ const AboutPointTwo = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8 }}
-                className="container mx-auto px-6 relative z-10"
+                className="container-boxed relative z-10"
             >
                 <div className="space-y-12">
                     <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6">
@@ -22,7 +22,7 @@ const AboutPointTwo = () => {
                         </div>
                         <div className="space-y-2 text-left">
                             <h3 className="text-xl md:text-3xl font-orbitron font-bold text-foreground">Built By AI Engineers</h3>
-                            <p className="text-foreground/70 text-base md:text-lg leading-relaxed max-w-4xl font-normal">
+                            <p className="text-foreground/90 text-base md:text-lg leading-relaxed max-w-4xl font-bold">
                                 Learn from the architects of tomorrow’s AI. AESTR is the brainchild of leading AI engineers dedicated to cultivating the next generation of tech innovators.
                             </p>
                         </div>
@@ -36,9 +36,9 @@ const AboutPointTwo = () => {
                             { title: 'Learn From The Best:', accent: 'border-accent/20', desc: 'Gain insights from Apple trainers, Google Cloud experts, and professionals from other tech giants.' },
                             { title: 'Young, Agile, And Connected', accent: 'border-foreground/10', desc: 'We are real engineers, deeply embedded in the industry. We speak your language & are committed to transforming you into our colleague within four years.' }
                         ].map((card) => (
-                            <div key={card.title} className={`glass p-6 md:p-8 rounded-2xl border-t-2 ${card.accent} hover:-translate-y-1 transition-transform duration-300 group text-left`}>
-                                <h4 className="text-base font-orbitron font-bold text-foreground mb-4 leading-tight group-hover:text-accent transition-colors">{card.title}</h4>
-                                <p className="text-[11px] md:text-xs text-foreground/50 leading-relaxed font-normal">{card.desc}</p>
+                            <div key={card.title} className={`glass p-8 rounded-2xl border-t-2 ${card.accent} hover:-translate-y-1 transition-transform duration-300 group text-left`}>
+                                <h4 className="text-lg font-orbitron font-bold text-foreground mb-4 leading-tight group-hover:text-accent transition-colors">{card.title}</h4>
+                                <p className="text-sm md:text-base text-foreground/80 leading-relaxed font-bold">{card.desc}</p>
                             </div>
                         ))}
                     </div>

@@ -113,7 +113,7 @@ const BootcampsAndLabs = () => {
 
             {/* Section 5: Innovation Labs Of 2030 */}
             <section className="relative py-32 bg-background overflow-hidden">
-                <div className="container mx-auto px-6 relative z-10">
+                <div className="container-boxed relative z-10">
                     <div className="space-y-24">
                         <div className="space-y-12">
                             <motion.div

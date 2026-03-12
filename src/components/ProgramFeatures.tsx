@@ -18,7 +18,7 @@ const ProgramFeatures = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="container mx-auto px-6 relative z-10"
+                className="container-boxed relative z-10"
             >
 
                 {/* Part 1: Founding Team & Video */}

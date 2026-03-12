@@ -12,7 +12,7 @@ const AboutTopOnePercent = () => {
                 <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px]" />
             </div>
 
-            <div className="container mx-auto px-6 relative z-10">
+            <div className="container-boxed relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -37,15 +37,15 @@ const AboutTopOnePercent = () => {
 
                     {/* Specialization Card */}
                     <div className="glass p-5 md:p-8 rounded-2xl md:rounded-3xl grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 items-center overflow-hidden">
-                        {/* Left: Video Placeholder */}
-                        <div className="aspect-[16/9] md:aspect-video bg-black/40 rounded-xl md:rounded-2xl border border-foreground/10 flex items-center justify-center relative group cursor-pointer overflow-hidden backdrop-blur-lg">
-                            <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                            <div className="w-12 h-12 md:w-16 md:h-16 bg-accent rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(216,246,2,0.4)] group-hover:scale-110 transition-transform duration-500 z-10 text-black">
-                                <svg className="w-5 h-5 md:w-6 md:h-6 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M8 5v14l11-7z" />
-                                </svg>
-                            </div>
-                            <span className="absolute bottom-3 left-3 md:bottom-4 md:left-4 text-[9px] md:text-[10px] font-orbitron uppercase tracking-widest text-foreground/40 font-bold">Watch Concept Video</span>
+                        {/* Left: Video Embed */}
+                        <div className="aspect-video w-full rounded-xl md:rounded-2xl border border-white/10 overflow-hidden shadow-2xl relative group bg-black">
+                            <iframe
+                                src="https://www.youtube.com/embed/mA3Z2VYMNXo?rel=0&modestbranding=1"
+                                title="B.Tech for The top 1%"
+                                className="w-full h-full"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
                         </div>
 
                         {/* Right: Specializations */}

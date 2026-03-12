@@ -7,8 +7,8 @@ const AboutPointThree = () => {
     return (
         <section className="relative py-24 bg-accent overflow-hidden">
             <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[400px] h-[400px] bg-white/10 blur-[120px] rounded-full pointer-events-none z-0" />
-            
-            <div className="container mx-auto px-6 relative z-10">
+
+            <div className="container-boxed relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 items-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -25,7 +25,7 @@ const AboutPointThree = () => {
                                 <h3 className="text-2xl md:text-4xl font-orbitron font-bold text-black leading-tight">
                                     Targeting <span className="text-black italic underline decoration-black/20">In-Demand Careers</span> Of 2030
                                 </h3>
-                                <p className="text-base md:text-xl text-black/60 leading-relaxed max-w-xl font-bold">
+                                <p className="text-lg md:text-xl text-black/90 leading-relaxed max-w-xl font-bold">
                                     Train for roles powering the next generation of banking, robotics, healthcare, and more—with real-world impact and future security.
                                 </p>
                             </div>
@@ -33,29 +33,21 @@ const AboutPointThree = () => {
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7 }}
                         className="order-1 lg:order-2"
                     >
-                        <div className="relative group cursor-pointer w-full max-w-3xl mx-auto">
-                            <div className="aspect-[21/9] bg-black/80 rounded-[2rem] border border-black/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-black/30 group-hover:shadow-[0_0_80px_rgba(0,0,0,0.2)] relative">
-                                <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:15px_15px] opacity-30" />
-                                <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                                {/* Inner Sleek Glow */}
-                                <div className="absolute inset-4 border border-white/5 rounded-[1.8rem] pointer-events-none" />
-
-                                <div className="w-24 h-24 bg-black rounded-full flex items-center justify-center shadow-[0_0_40px_rgba(0,0,0,0.4)] transition-transform duration-700 group-hover:scale-110 z-10 text-accent">
-                                    <svg className="w-10 h-10 ml-1.5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                </div>
-
-                                <div className="absolute bottom-10 left-0 w-full text-center z-10">
-                                    <span className="text-[10px] font-orbitron uppercase tracking-[0.5em] text-white/30 font-bold">The Future of Education</span>
-                                </div>
+                        <div className="relative group">
+                            <div className="aspect-video bg-black rounded-3xl border border-black/10 overflow-hidden transition-all duration-500 shadow-2xl">
+                                <iframe
+                                    src="https://www.instagram.com/aestr.gyanvihar/reel/DHYPi9QJIT-/"
+                                    title="Targeting In-Demand Careers"
+                                    className="w-full h-full"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
                             </div>
                         </div>
                     </motion.div>

@@ -15,7 +15,7 @@ const AboutAestr = () => {
                     <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px]" />
                 </div>
 
-                <div className="container mx-auto px-6 relative z-10">
+                <div className="container-boxed relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -120,9 +120,9 @@ const AboutAestr = () => {
                         {/* Middle Cards Grid */}
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {[
-                                { title: 'Future-Proof Your Career', desc: 'The AI job market is exploding, and old institutional models can’t keep up. AESTR is built for the 2030 job landscape, focusing on roles that will dominate the next decade.' },
+                                { title: 'Future-Proof Your Career', desc: 'Future-Proof Your Career' },
                                 { title: 'Beyond Traditional Tech', desc: 'Forget outdated job titles. Think specialized AI roles across diverse industries. We anticipate the shift, so you lead it.' },
-                                { title: 'Engineered By Experts, For Experts-To-Be', desc: 'Our curriculum is designed and delivered by practicing AI engineers who are actively shaping the industry and know exactly what skills you’ll need.' }
+                                { title: 'Engineered By Experts, For Experts-To-Be', desc: 'Our curriculum is designed and delivered by practicing AI engineers who are actively shaping the industry and know exactly what skills you’ll need. They’re not just teachers; they’re your future colleagues and potential employers.' }
                             ].map((card, i) => (
                                 <motion.div
                                     key={card.title}
@@ -143,7 +143,7 @@ const AboutAestr = () => {
                             <div className="glass p-8 md:p-14 rounded-[2.5rem] border border-foreground/5 shadow-[0_20px_50px_rgba(0,0,0,0.3)] relative overflow-hidden group">
                                 {/* Decorative background glow */}
                                 <div className="absolute -top-24 -right-24 w-96 h-96 bg-accent/5 blur-[100px] rounded-full pointer-events-none transition-all duration-700 group-hover:bg-accent/10" />
-                                
+
                                 <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center">
                                     <div className="lg:col-span-12 space-y-12">
                                         <div className="space-y-4 text-center">
@@ -153,7 +153,7 @@ const AboutAestr = () => {
                                             </h3>
                                             <div className="h-1 w-20 bg-accent rounded-full mx-auto" />
                                         </div>
-                                        
+
                                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16">
                                             {/* Left half: Learn by Doing */}
                                             <div className="bg-foreground/5 p-8 rounded-3xl border border-foreground/10 group-hover:border-accent/30 transition-colors">
@@ -179,7 +179,7 @@ const AboutAestr = () => {
                                                     "Gain exclusive Apple Swift Application Development training directly from Apple.",
                                                     "Learn from global master teachers, experts in defense technologies, robotics, exo-robotics, computer vision, and engine building."
                                                 ].map((point, idx) => (
-                                                    <motion.div 
+                                                    <motion.div
                                                         key={idx}
                                                         initial={{ opacity: 0, x: -20 }}
                                                         whileInView={{ opacity: 1, x: 0 }}

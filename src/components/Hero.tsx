@@ -16,7 +16,7 @@ const Hero = () => {
             <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[100px] pointer-events-none z-0" />
 
 
-            <div className="container mx-auto px-6 relative z-10 py-20">
+            <div className="container-boxed relative z-10 w-full py-20">
                 <div className="max-w-4xl text-left">
 
                     {/* Left Column: Text & CTA */}

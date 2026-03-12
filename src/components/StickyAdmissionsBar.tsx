@@ -44,7 +44,7 @@ const StickyAdmissionsBar = () => {
                     transition={{ duration: 0.5 }}
                     className="fixed bottom-0 left-0 w-full z-[100] px-4 pb-4 pointer-events-none"
                 >
-                    <div className="container mx-auto max-w-6xl pointer-events-auto">
+                    <div className="container-boxed pointer-events-auto">
                         <div className="glass border-accent/20 bg-black/80 backdrop-blur-xl rounded-2xl md:rounded-full px-4 md:px-6 py-2.5 md:py-3 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-[0_-10px_40px_rgba(0,0,0,0.5)]">
                             <div className="flex items-center gap-2 md:gap-3 text-center sm:text-left">
                                 <span className="relative flex h-2 w-2 md:h-3 md:w-3 flex-shrink-0">

@@ -7,11 +7,11 @@ import MagneticEffect from './MagneticEffect';
 const BottomCTA = () => {
     return (
         <>
-            <section className="relative py-24 bg-accent overflow-hidden">
-                <div className="container mx-auto px-6 relative z-10">
+            <section className="relative py-24 bg-black overflow-hidden">
+                <div className="container-boxed relative z-20">
 
                     {/* Wide Glassmorphism Container */}
-                    <div className="glass !bg-black/95 rounded-[2rem] p-6 md:p-14 border border-white/5 bg-gradient-to-br from-white/5 to-transparent shadow-2xl relative overflow-hidden group">
+                    <div className="glass !bg-purple/10 p-8 md:p-16 rounded-[2rem] md:rounded-[3.5rem] border-white/5 relative overflow-hidden group">
                         <div className="absolute -top-24 -right-24 w-96 h-96 bg-accent/5 blur-[100px] rounded-full pointer-events-none group-hover:bg-accent/10 transition-all duration-700" />
                         
                         <div className="flex flex-col lg:flex-row items-center gap-10 md:gap-16 relative z-10">

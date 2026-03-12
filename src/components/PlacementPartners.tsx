@@ -5,18 +5,52 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const partners = [
-    'Google', 'Amazon', 'NVIDIA', 'Accenture', 'Deloitte', 'Bank of America', 'Jio',
-    'TCS', 'Tech Mahindra', 'Goldman Sachs', 'Oracle', 'Samsung', 'Wipro', 'Apollo',
-    'SAP', 'Capgemini', 'Cyient', 'HCL', 'Cognizant', 'CGI', 'Merkle', 'Mindtree',
-    'Delhivery', 'Needl.ai', 'Prodapt', 'Tanla', 'GlobalLogic', 'NTT Data', 'Fractal',
-    'Napier', 'Systech', 'PwC', 'Siply', 'Publicis Sapient', 'Mentor Graphics',
-    'Observe.ai', 'Birlasoft', 'Intellect', 'Perficient', 'Rakuten'
+    { name: 'Google', logo: '/ProgramPartners/google.webp' },
+    { name: 'Amazon', logo: '/placement/amazon.webp' },
+    { name: 'NVIDIA', logo: '/placement/nvidia.webp' },
+    { name: 'Accenture', logo: '/placement/accenture.webp' },
+    { name: 'Deloitte', logo: '/placement/deloitte.webp' },
+    { name: 'Bank of America', logo: '/placement/bankofamerica.webp' },
+    { name: 'Jio', logo: '/placement/jio.webp' },
+    { name: 'TCS', logo: '/placement/tcs.webp' },
+    { name: 'Tech Mahindra', logo: '/placement/techmahednra.webp' },
+    { name: 'Goldman Sachs', logo: '/placement/goldman.webp' },
+    { name: 'Oracle', logo: '/placement/oracle.webp' },
+    { name: 'Samsung', logo: '/placement/samsung.webp' },
+    { name: 'Wipro', logo: '/placement/wipro.webp' },
+    { name: 'Apollo', logo: '/placement/apollo.webp' },
+    { name: 'SAP', logo: '/placement/sap.webp' },
+    { name: 'Capgemini', logo: '/placement/capgemini.webp' },
+    { name: 'Cyient', logo: '/placement/cyient.webp' },
+    { name: 'HCL', logo: '/placement/hcl.webp' },
+    { name: 'Cognizant', logo: '/placement/cognizant.webp' },
+    { name: 'CGI', logo: '/placement/cgi.webp' },
+    { name: 'Merkle', logo: '/placement/merkle.webp' },
+    { name: 'Mindtree', logo: '/placement/mindtree.webp' },
+    { name: 'Delhivery', logo: '/placement/delhivery.webp' },
+    { name: 'Needl.ai', logo: '/placement/needl.webp' },
+    { name: 'Prodapt', logo: '/placement/prodapt.webp' },
+    { name: 'Tanla', logo: '/placement/tanla.webp' },
+    { name: 'GlobalLogic', logo: '/placement/globallogic.webp' },
+    { name: 'NTT Data', logo: '/placement/nttdata.webp' },
+    { name: 'Fractal', logo: '/placement/fractal.webp' },
+    { name: 'Napier', logo: '/placement/napier.webp' },
+    { name: 'Systech', logo: '/placement/systech.webp' },
+    { name: 'PwC', logo: '/placement/pwc.webp' },
+    { name: 'Siply', logo: '/placement/siply.webp' },
+    { name: 'Publicis Sapient', logo: '/placement/publicis.webp' },
+    { name: 'Mentor Graphics', logo: '/placement/mentor.webp' },
+    { name: 'Observe.ai', logo: '/placement/observe.webp' },
+    { name: 'Birlasoft', logo: '/placement/birlasoft.webp' },
+    { name: 'Intellect', logo: '/placement/intellect.webp' },
+    { name: 'Perficient', logo: '/placement/erficient.webp' },
+    { name: 'Rakuten', logo: '/placement/rakuten.webp' }
 ];
 
 const PlacementPartners = () => {
     return (
         <section className="relative py-24 bg-background-alt overflow-hidden">
-            <div className="container mx-auto px-6 relative z-10">
+            <div className="container-boxed relative z-10">
 
                 {/* Header Area */}
                 <motion.div 
@@ -79,87 +113,32 @@ const PlacementPartners = () => {
     );
 };
 
-const PartnerLogo = ({ partner, index }: { partner: string, index: number }) => {
-    const domains: { [key: string]: string } = {
-        'Google': 'google.com',
-        'Amazon': 'amazon.com',
-        'NVIDIA': 'nvidia.com',
-        'Accenture': 'accenture.com',
-        'Deloitte': 'deloitte.com',
-        'Bank of America': 'bankofamerica.com',
-        'Jio': 'jio.com',
-        'TCS': 'tcs.com',
-        'Tech Mahindra': 'techmahindra.com',
-        'Goldman Sachs': 'goldmansachs.com',
-        'Oracle': 'oracle.com',
-        'Samsung': 'samsung.com',
-        'Wipro': 'wipro.com',
-        'Apollo': 'apollo.com',
-        'SAP': 'sap.com',
-        'Capgemini': 'capgemini.com',
-        'Cyient': 'cyient.com',
-        'HCL': 'hcl.com',
-        'Cognizant': 'cognizant.com',
-        'CGI': 'cgi.com',
-        'Merkle': 'merkle.com',
-        'Mindtree': 'ltimindtree.com',
-        'Delhivery': 'delhivery.com',
-        'Needl.ai': 'needl.ai',
-        'Prodapt': 'prodapt.com',
-        'Tanla': 'tanla.com',
-        'GlobalLogic': 'globallogic.com',
-        'NTT Data': 'nttdata.com',
-        'Fractal': 'fractal.ai',
-        'Napier': 'napierai.com',
-        'Systech': 'systechusa.com',
-        'PwC': 'pwc.com',
-        'Siply': 'siply.in',
-        'Publicis Sapient': 'publicissapient.com',
-        'Mentor Graphics': 'mentor.com',
-        'Observe.ai': 'observe.ai',
-        'Birlasoft': 'birlasoft.com',
-        'Intellect': 'intellectdesign.com',
-        'Perficient': 'perficient.com',
-        'Rakuten': 'rakuten.com'
-    };
-    const domain = domains[partner] || `${partner.toLowerCase().replace(/[\s.]+/g, '')}.com`;
-    const logoPath = `https://logo.clearbit.com/${domain}?size=128`;
-
+const PartnerLogo = ({ partner, index }: { partner: { name: string, logo: string }, index: number }) => {
     return (
         <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: (index % 10) * 0.05 }}
-            className="h-16 md:h-20 w-32 md:w-auto glass bg-background-alt/40 border border-foreground/5 rounded-xl flex items-center justify-center transition-all duration-500 hover:scale-110 hover:border-accent shadow-xl group relative overflow-hidden p-4 md:p-5 flex-shrink-0"
+            className="h-24 md:h-28 w-full bg-white rounded-xl md:rounded-2xl flex items-center justify-center transition-all duration-500 hover:scale-105 shadow-[0_10px_30px_rgba(0,0,0,0.1)] group relative overflow-hidden p-6 md:p-8"
         >
-            <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+            {/* Soft inner glow for premium feel */}
+            <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent pointer-events-none" />
+            
             <div className="relative w-full h-full flex items-center justify-center">
                 <Image
-                    src={logoPath}
-                    alt={partner}
+                    src={partner.logo}
+                    alt={partner.name}
                     fill
-                    unoptimized
-                    className="object-contain brightness-[1.2] grayscale group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500"
-                    onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.style.display = 'none';
-                        const parent = target.parentElement;
-                        if (parent && !parent.querySelector('.fallback-text')) {
-                            const span = document.createElement('span');
-                            span.className = 'fallback-text text-[8px] md:text-[9px] font-orbitron font-bold text-foreground/30 text-center uppercase tracking-tighter w-full px-1 group-hover:text-accent transition-colors';
-                            span.innerText = partner;
-                            parent.appendChild(span);
-                        }
-                    }}
+                    className="object-contain mix-blend-multiply transition-all duration-500"
                 />
             </div>
-            <span className="sr-only">{partner}</span>
+            <span className="sr-only">{partner.name}</span>
         </motion.div>
     );
 };
 
-const MarqueeRow = ({ items, direction, speed }: { items: string[], direction: 'left' | 'right', speed: number }) => {
+const MarqueeRow = ({ items, direction, speed }: { items: { name: string, logo: string }[], direction: 'left' | 'right', speed: number }) => {
     // Duplicate items to create infinite effect
     const displayItems = [...items, ...items, ...items];
     
@@ -170,7 +149,7 @@ const MarqueeRow = ({ items, direction, speed }: { items: string[], direction: '
                 style={{ animationDuration: `${speed}s` }}
             >
                 {displayItems.map((partner, idx) => (
-                    <PartnerLogo key={`${partner}-${idx}`} partner={partner} index={idx} />
+                    <PartnerLogo key={`${partner.name}-${idx}`} partner={partner} index={idx} />
                 ))}
             </div>
         </div>

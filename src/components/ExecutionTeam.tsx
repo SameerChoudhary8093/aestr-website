@@ -39,7 +39,7 @@ const teamData = [
 const ExecutionTeam = () => {
     return (
         <section className="relative py-24 bg-purple overflow-hidden">
-            <div className="container mx-auto px-6 relative z-10">
+            <div className="container-boxed relative z-10">
                 {/* Header Area */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

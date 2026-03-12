@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const AboutPointFour = () => {
@@ -12,7 +13,7 @@ const AboutPointFour = () => {
             <div className="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-[120px] pointer-events-none" />
 
 
-            <div className="container mx-auto px-6 relative z-10">
+            <div className="container-boxed relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -37,14 +38,16 @@ const AboutPointFour = () => {
                                         Bootcamp, Bootcamp, <span className="text-black italic underline decoration-black/20">Bootcamp.</span>
                                     </h2>
                                     <div className="space-y-4">
-                                        <p className="text-base md:text-lg text-black font-bold leading-relaxed">
+                                        <p className="text-lg md:text-xl text-black font-extrabold leading-relaxed">
                                             At AESTR, theory is just the beginning. We believe the best way to learn engineering is by building real things. That’s why every semester includes immersive AI bootcamps, right on campus — fully integrated into your curriculum.
                                         </p>
                                     </div>
-                                    <button className="px-10 py-4 bg-black text-accent font-orbitron font-black text-sm uppercase rounded-lg hover:scale-105 transition-all flex items-center gap-2 group">
-                                        Read More
-                                        <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform ml-2">↗</span>
-                                    </button>
+                                    <Link href="/day-at-aestr">
+                                        <button className="px-10 py-4 bg-black text-accent font-orbitron font-black text-sm uppercase rounded-lg hover:scale-105 transition-all flex items-center gap-2 group">
+                                            Read More
+                                            <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform ml-2">↗</span>
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
                         </motion.div>
@@ -87,10 +90,10 @@ const AboutPointFour = () => {
                             >
                                 <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:15px_15px] opacity-20 pointer-events-none" />
                                 <div className="relative z-10">
-                                    <h4 className="text-xl font-orbitron font-bold text-white mb-4 group-hover:text-accent transition-colors flex items-center gap-2">
+                                    <h4 className="text-xl md:text-2xl font-orbitron font-bold text-[#EAF0BD] mb-4 transition-colors flex items-center gap-2">
                                         {card.title}
                                     </h4>
-                                    <p className="text-white/60 text-sm leading-relaxed font-medium">{card.desc}</p>
+                                    <p className="text-base md:text-lg text-[#EAF0BD] leading-relaxed font-normal">{card.desc}</p>
                                 </div>
                             </motion.div>
                         ))}

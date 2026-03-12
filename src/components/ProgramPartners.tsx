@@ -9,7 +9,7 @@ const ProgramPartners = () => {
         <section className="relative py-24 bg-background-alt overflow-hidden">
             <div className="absolute bottom-20 right-20 w-[500px] h-[500px] bg-accent/5 blur-[120px] rounded-full pointer-events-none z-0" />
             
-            <div className="container mx-auto px-6 relative z-10">
+            <div className="container-boxed relative z-10">
                 <div className="text-center space-y-12 mb-24 md:mb-40">
                     <div className="space-y-4">
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold text-foreground flex items-center justify-center gap-4 tracking-tight">

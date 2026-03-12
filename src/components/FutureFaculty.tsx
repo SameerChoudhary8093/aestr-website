@@ -19,7 +19,7 @@ const FutureFaculty = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="container mx-auto px-6 relative z-10"
+                className="container-boxed relative z-10"
             >
 
                 {/* Top Half: Content & Image */}
@@ -43,10 +43,10 @@ const FutureFaculty = () => {
                                     <span className="text-accent italic">AI & robotics.</span>
                                 </h2>
                                 <div className="space-y-4">
-                                    <h3 className="text-lg md:text-xl text-foreground font-bold leading-relaxed">
+                                    <h3 className="text-xl md:text-2xl text-foreground font-black leading-relaxed">
                                         At AESTR, we don't just use technology we teach through it.
                                     </h3>
-                                    <p className="text-base md:text-lg text-foreground/70 leading-relaxed">
+                                    <p className="text-lg md:text-xl text-foreground/90 leading-relaxed font-bold">
                                         We are proud to be the first institution in the world to deploy AI-powered virtual teachers and humanoid robots as part of the core academic experience.
                                     </p>
                                 </div>
@@ -86,10 +86,10 @@ const FutureFaculty = () => {
                     >
                         <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:15px_15px] opacity-20 pointer-events-none" />
                         <div className="relative z-10">
-                            <h4 className="text-xl md:text-2xl font-orbitron font-bold text-foreground mb-4 md:mb-6 flex items-center gap-3 group-hover:text-accent transition-colors">
+                            <h4 className="text-xl md:text-3xl font-orbitron font-bold text-foreground mb-4 md:mb-6 flex items-center gap-3 group-hover:text-accent transition-colors">
                                  AI Teachers
                             </h4>
-                            <p className="text-sm md:text-base text-foreground/70 leading-relaxed font-medium">
+                            <p className="text-base md:text-lg text-foreground/90 leading-relaxed font-bold">
                                 Trained on the world’s best textbooks, industry manuals, open research, and real-world case studies, our AI teachers can explain complex topics in simple language — tailored to your pace, level, and interests.
                             </p>
                         </div>
@@ -104,10 +104,10 @@ const FutureFaculty = () => {
                     >
                         <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:15px_15px] opacity-20 pointer-events-none" />
                         <div className="relative z-10">
-                            <h4 className="text-xl md:text-2xl font-orbitron font-bold text-foreground mb-4 md:mb-6 flex items-center gap-3 group-hover:text-accent transition-colors">
+                            <h4 className="text-xl md:text-3xl font-orbitron font-bold text-foreground mb-4 md:mb-6 flex items-center gap-3 group-hover:text-accent transition-colors">
                                  Humanoid Robot Teachers
                             </h4>
-                            <p className="text-sm md:text-base text-foreground/70 leading-relaxed font-medium">
+                            <p className="text-base md:text-lg text-foreground/90 leading-relaxed font-bold">
                                 These physical AI-powered robots teach in labs, interact in real time, and even read your facial cues to adjust their delivery.
                             </p>
                         </div>

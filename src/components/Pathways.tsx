@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const highlights = [
     {
@@ -12,7 +13,7 @@ const highlights = [
     },
     {
         title: "B.Tech. with 3+1 degrees abroad for TOP 10% of our students with scholarships and offers",
-        image: "/Herosection/University of cambridge.webp",
+        image: "/Other/lab-1.webp",
         accentColor: "text-accent",
         badge: "+25 Education partners in US, UK and Europe"
     },
@@ -108,26 +109,24 @@ const Pathways = () => {
 
     return (
         <section className="relative py-32 bg-accent overflow-hidden">
-            <div className="container mx-auto px-6 relative z-10">
+            <div className="container-boxed relative z-10">
 
                 {/* Header Area */}
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="text-center mb-16 md:mb-24 space-y-6 md:space-y-8"
+                    className="mb-16 md:mb-24 flex flex-col md:flex-row items-start gap-4 md:gap-8"
                 >
-                    <div className="flex justify-center">
-                        <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border border-black/30 flex items-center justify-center text-2xl md:text-3xl font-orbitron font-bold text-black bg-black/5">
-                            7
-                        </div>
+                    <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full border border-black/30 flex items-center justify-center text-2xl md:text-3xl font-orbitron font-bold text-black bg-black/5">
+                        7
                     </div>
-                    <div className="space-y-4">
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold text-black leading-tight tracking-tight px-4">
+                    <div className="space-y-4 text-left">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold text-black leading-tight tracking-tight">
                             AESTR quality assurance <span className="text-black italic underline decoration-black/20 underline-offset-8">pathways</span>
                         </h2>
-                        <p className="text-base md:text-lg text-black/60 max-w-2xl mx-auto leading-relaxed font-bold px-4">
+                        <p className="text-lg md:text-xl text-black/80 max-w-4xl leading-relaxed font-bold">
                             We provide clear, ambitious pathways to ensure your career takes off.
                         </p>
                     </div>
@@ -152,10 +151,10 @@ const Pathways = () => {
                                 <div className="absolute -top-12 left-1/2 w-px h-12 bg-black/10 hidden lg:block group-hover:bg-black transition-colors duration-500" />
 
                                 <div className={`glass !bg-black/80 !border-black/5 p-8 md:p-10 rounded-2xl border-t-4 ${item.borderColor} flex flex-col items-center text-center transition-all duration-500 group-hover:transform group-hover:-translate-y-2 hover:!bg-black w-full min-h-[200px] md:min-h-[250px]`}>
-                                    <h3 className="text-lg md:text-xl font-orbitron font-bold text-white mb-4 group-hover:text-accent transition-colors leading-tight">
+                                    <h3 className="text-lg md:text-xl font-orbitron font-bold text-[#EAF0BD] mb-4 transition-colors leading-tight">
                                         {item.title}
                                     </h3>
-                                    <p className="text-white/40 font-black uppercase tracking-[0.2em] text-[10px] mt-auto">
+                                    <p className="text-[#EAF0BD]/60 font-normal uppercase tracking-[0.2em] text-[10px] mt-auto">
                                         {item.subtitle}
                                     </p>
 
@@ -176,10 +175,12 @@ const Pathways = () => {
                         transition={{ duration: 0.5, delay: 0.4 }}
                         className="flex justify-center"
                     >
-                        <button className="px-10 py-4 bg-black text-accent font-orbitron font-black text-sm uppercase rounded-lg hover:scale-105 transition-all flex items-center gap-2 group shadow-xl">
-                            Read More
-                            <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">↗</span>
-                        </button>
+                        <Link href="/aestr-pathways">
+                            <button className="px-10 py-4 bg-black text-accent font-orbitron font-black text-sm uppercase rounded-lg hover:scale-105 transition-all flex items-center gap-2 group shadow-xl">
+                                Read More
+                                <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">↗</span>
+                            </button>
+                        </Link>
                     </motion.div>
 
                     {/* Auto-Swiping Highlights Section */}
