@@ -22,20 +22,25 @@ const AboutPointFive = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.7 }}
-                            className="flex flex-col md:flex-row items-start gap-4 md:gap-6"
                         >
+                           <div className="flex flex-col md:flex-row items-start gap-4 md:gap-8">
                             <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full border border-accent/20 flex items-center justify-center text-2xl md:text-3xl font-orbitron font-bold text-accent bg-accent/5">
                                 5
                             </div>
-                            <div className="space-y-4 text-left">
-                                <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold text-white">
-                                    Innovation labs of 2030
-                                </h2>
+                            <div className="space-y-6 text-left">
+                                <div className="space-y-1">
+                                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-orbitron font-bold text-white leading-tight tracking-tight capitalize">
+                                        Innovation labs
+                                    </h2>
+                                    <p className="text-2xl md:text-4xl lg:text-5xl font-serif italic leading-tight tracking-tight text-white opacity-90">
+                                        of 2030
+                                    </p>
+                                </div>
                                 <p className="text-lg md:text-xl text-white/90 max-w-3xl leading-relaxed font-bold">
                                     Learn from the architects of tomorrow's AI. AESTR is the brainchild of leading AI engineers dedicated to cultivating the next generation of tech innovators.
                                 </p>
                             </div>
-                        </motion.div>
+                        </div></motion.div>
 
                         {/* Features Grid */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -52,7 +57,7 @@ const AboutPointFive = () => {
                                     transition={{ duration: 0.5, delay: i * 0.1 }}
                                     className="glass !bg-black/40 !border-white/5 p-6 md:p-8 rounded-2xl group hover:bg-black/60 hover:border-accent/30 transition-all duration-300 text-left"
                                 >
-                                    <h4 className="text-base md:text-xl font-orbitron font-bold text-[#EAF0BD] mb-4 leading-tight transition-colors uppercase tracking-widest">{card.title}</h4>
+                                    <h4 className="text-base md:text-xl font-orbitron font-bold text-[#EAF0BD] mb-4 leading-tight transition-colors">{card.title}</h4>
                                     <p className="text-sm md:text-base text-[#EAF0BD] leading-relaxed font-normal">{card.desc}</p>
                                 </motion.div>
                             ))}
@@ -87,7 +92,7 @@ const AboutPointFive = () => {
                                         <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 z-10">
                                             <div className="bg-black/80 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 flex items-center gap-3">
                                                 <div className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
-                                                <span className="text-[10px] font-orbitron font-black text-white/70 uppercase tracking-widest">Lab {String(idx + 1).padStart(2, '0')}</span>
+                                                <span className="text-[10px] font-orbitron font-black text-white/70 tracking-widest">Lab {String(idx + 1).padStart(2, '0')}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -97,9 +102,9 @@ const AboutPointFive = () => {
                                 <div className="flex-1 space-y-6 md:space-y-8 text-left">
                                     <div className="space-y-6">
                                         <div className="inline-block px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20">
-                                            <span className="text-[10px] font-orbitron font-black text-accent uppercase tracking-[0.3em]">Advanced Research Lab</span>
+                                            <span className="text-[10px] font-orbitron font-black text-accent tracking-[0.3em]">Advanced research lab</span>
                                         </div>
-                                        <h3 className="text-3xl md:text-5xl lg:text-3xl font-orbitron font-extrabold text-white leading-tight tracking-tight uppercase">
+                                        <h3 className="text-3xl md:text-5xl lg:text-3xl font-orbitron font-extrabold text-white leading-tight tracking-tight">
                                             {lab.name}
                                         </h3>
                                         <p className="text-lg md:text-xl text-[#EAF0BD] leading-relaxed font-normal">
@@ -110,17 +115,17 @@ const AboutPointFive = () => {
                                     {/* Lab Meta Stats */}
                                     <div className="flex flex-wrap gap-4 pt-4 border-t border-white/10">
                                         <div className="space-y-1">
-                                            <p className="text-[10px] text-white/30 uppercase font-black tracking-widest">Level</p>
+                                            <p className="text-[10px] text-white/30 font-black tracking-widest">Level</p>
                                             <p className="text-sm text-white font-orbitron font-bold">Tier 1 Elite</p>
                                         </div>
                                         <div className="w-px h-10 bg-white/10 mx-2" />
                                         <div className="space-y-1">
-                                            <p className="text-[10px] text-white/30 uppercase font-black tracking-widest">Access</p>
+                                            <p className="text-[10px] text-white/30 font-black tracking-widest">Access</p>
                                             <p className="text-sm text-white font-orbitron font-bold">24/7 Dedicated</p>
                                         </div>
                                     </div>
 
-                                    <button className="flex items-center gap-4 group text-accent font-orbitron uppercase tracking-[0.3em] text-[10px] md:text-xs font-black transition-all duration-300 py-3 md:py-4 px-6 md:px-8 border border-accent/20 rounded-xl bg-accent/5 hover:bg-accent hover:text-black hover:border-accent">
+                                    <button className="flex items-center gap-4 group text-accent font-orbitron tracking-[0.3em] text-[10px] md:text-xs font-black transition-all duration-300 py-3 md:py-4 px-6 md:px-8 border border-accent/20 rounded-xl bg-accent/5 hover:bg-accent hover:text-black hover:border-accent">
                                         <span>View Documentation</span>
                                         <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
                                     </button>

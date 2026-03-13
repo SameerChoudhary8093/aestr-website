@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent">
+        <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent">
             {/* The global 3D background handles the visuals */}
             <ParticleEffect />
 

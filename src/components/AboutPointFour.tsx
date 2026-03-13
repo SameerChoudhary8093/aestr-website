@@ -33,18 +33,21 @@ const AboutPointFour = () => {
                                 <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full border border-black/30 flex items-center justify-center text-2xl md:text-3xl font-orbitron font-bold text-black bg-black/5">
                                     4
                                 </div>
-                                <div className="space-y-6">
-                                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold text-black leading-tight">
-                                        Bootcamp, Bootcamp, <span className="text-black italic underline decoration-black/20">Bootcamp.</span>
-                                    </h2>
-                                    <div className="space-y-4">
-                                        <p className="text-lg md:text-xl text-black font-extrabold leading-relaxed">
-                                            At AESTR, theory is just the beginning. We believe the best way to learn engineering is by building real things. That’s why every semester includes immersive AI bootcamps, right on campus — fully integrated into your curriculum.
+                                <div className="space-y-8 text-left">
+                                    <div className="space-y-1">
+                                        <h2 className="text-2xl md:text-4xl lg:text-5xl font-orbitron font-bold text-black leading-tight tracking-tight">
+                                            Bootcamp, Bootcamp,
+                                        </h2>
+                                        <p className="text-2xl md:text-4xl lg:text-5xl font-serif italic leading-tight tracking-tight text-black opacity-90">
+                                            Bootcamp.
                                         </p>
                                     </div>
-                                    <Link href="/day-at-aestr">
-                                        <button className="px-10 py-4 bg-black text-accent font-orbitron font-black text-sm uppercase rounded-lg hover:scale-105 transition-all flex items-center gap-2 group">
-                                            Read More
+                                    <p className="text-lg md:text-xl text-black/90 leading-relaxed font-bold">
+                                        At AESTR, theory is just the beginning. We believe the best way to learn engineering is by building real things. That’s why every semester includes immersive AI bootcamps, right on campus — fully integrated into your curriculum.
+                                    </p>
+                                    <Link href="/day-at-aestr" className="inline-block pt-4">
+                                        <button className="px-10 py-4 bg-black text-accent font-orbitron font-black text-sm rounded-lg hover:scale-105 transition-all flex items-center gap-2 group">
+                                            Read more
                                             <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform ml-2">↗</span>
                                         </button>
                                     </Link>

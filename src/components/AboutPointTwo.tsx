@@ -16,13 +16,16 @@ const AboutPointTwo = () => {
                 className="container-boxed relative z-10"
             >
                 <div className="space-y-12">
-                    <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6">
+                    <div className="flex flex-col md:flex-row items-start gap-4 md:gap-8">
                         <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full border border-accent/30 flex items-center justify-center text-2xl md:text-3xl font-orbitron font-bold text-accent bg-accent/5">
                             2
                         </div>
-                        <div className="space-y-2 text-left">
-                            <h3 className="text-xl md:text-3xl font-orbitron font-bold text-foreground">Built By AI Engineers</h3>
-                            <p className="text-foreground/90 text-base md:text-lg leading-relaxed max-w-4xl font-bold">
+                        <div className="space-y-6 text-left">
+                            <div className="space-y-1">
+                                <h3 className="text-2xl md:text-4xl lg:text-5xl font-orbitron font-bold text-foreground leading-tight tracking-tight">Built By</h3>
+                                <p className="text-2xl md:text-4xl lg:text-5xl font-serif italic text-foreground leading-tight tracking-tight opacity-90">AI Engineers</p>
+                            </div>
+                            <p className="text-lg md:text-xl text-foreground/90 leading-relaxed max-w-4xl font-bold">
                                 Learn from the architects of tomorrow’s AI. AESTR is the brainchild of leading AI engineers dedicated to cultivating the next generation of tech innovators.
                             </p>
                         </div>

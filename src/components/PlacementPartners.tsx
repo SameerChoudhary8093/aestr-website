@@ -53,7 +53,7 @@ const PlacementPartners = () => {
             <div className="container-boxed relative z-10">
 
                 {/* Header Area */}
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -120,17 +120,17 @@ const PartnerLogo = ({ partner, index }: { partner: { name: string, logo: string
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: (index % 10) * 0.05 }}
-            className="h-24 md:h-28 w-full bg-white rounded-xl md:rounded-2xl flex items-center justify-center transition-all duration-500 hover:scale-105 shadow-[0_10px_30px_rgba(0,0,0,0.1)] group relative overflow-hidden p-6 md:p-8"
+            className="h-24 md:h-28 w-full bg-white rounded-xl md:rounded-2xl flex items-center justify-center transition-all duration-500 hover:scale-105 shadow-[0_10px_30px_rgba(0,0,0,0.1)] group relative overflow-hidden p-2 md:p-4"
         >
             {/* Soft inner glow for premium feel */}
             <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent pointer-events-none" />
-            
-            <div className="relative w-full h-full flex items-center justify-center">
+
+            <div className="relative w-5/5 h-5/5 flex items-center justify-center">
                 <Image
                     src={partner.logo}
                     alt={partner.name}
                     fill
-                    className="object-contain mix-blend-multiply transition-all duration-500"
+                    className="object-contain mix-blend-multiply transition-all duration-500 group-hover:scale-110"
                 />
             </div>
             <span className="sr-only">{partner.name}</span>
@@ -141,10 +141,10 @@ const PartnerLogo = ({ partner, index }: { partner: { name: string, logo: string
 const MarqueeRow = ({ items, direction, speed }: { items: { name: string, logo: string }[], direction: 'left' | 'right', speed: number }) => {
     // Duplicate items to create infinite effect
     const displayItems = [...items, ...items, ...items];
-    
+
     return (
         <div className="relative overflow-hidden w-full">
-            <div 
+            <div
                 className={`marquee-row ${direction === 'left' ? 'animate-marquee-left' : 'animate-marquee-right'}`}
                 style={{ animationDuration: `${speed}s` }}
             >

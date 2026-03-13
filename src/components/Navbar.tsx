@@ -47,7 +47,7 @@ const Navbar = () => {
                 <div className="flex items-center justify-between relative z-10 w-full px-6 md:px-10">
                     {/* Left: AESTR Logo */}
                     <div className="flex-1 flex justify-start">
-                        <Link href="/" className="flex items-center group/logo">
+                        <Link href="/#hero" className="flex items-center group/logo">
                             <div className="w-[140px] md:w-[200px] relative h-8 md:h-10 transition-all duration-500 group-hover/logo:scale-105">
                                 <Image
                                     src="/Herosection/aestr-logo.svg"
@@ -122,9 +122,9 @@ const Navbar = () => {
                         className="fixed inset-0 bg-background/95 z-[100] p-6 lg:hidden pointer-events-auto flex flex-col"
                     >
                         <div className="flex justify-between items-center mb-12">
-                            <div className="w-[130px] relative h-8">
+                            <Link href="/#hero" onClick={() => setIsOpen(false)} className="w-[130px] relative h-8">
                                 <Image src="/Herosection/aestr-logo.svg" alt="Aestr Logo" fill className="object-contain" />
-                            </div>
+                            </Link>
                             <button
                                 onClick={() => setIsOpen(false)}
                                 className="text-accent text-3xl font-light p-2"

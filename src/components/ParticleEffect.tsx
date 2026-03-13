@@ -18,7 +18,7 @@ const ParticleEffect = () => {
     }, []);
 
     const particlesLoaded = async (container?: Container): Promise<void> => {
-        console.log("Particles loaded", container);
+        // Particles initialized
     };
 
     const options: ISourceOptions = useMemo(
@@ -76,7 +76,7 @@ const ParticleEffect = () => {
                         enable: true,
                         area: 800,
                     },
-                    value: 60,
+                    value: 200,
                 },
                 opacity: {
                     value: 0.3,

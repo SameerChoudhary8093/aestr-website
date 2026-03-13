@@ -20,11 +20,16 @@ const AboutPointOne = () => {
                     <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full border border-black/30 flex items-center justify-center text-2xl md:text-3xl font-orbitron font-bold text-black bg-black/5">
                         1
                     </div>
-                    <div className="space-y-4 text-left">
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold tracking-tight text-black leading-tight">
-                            CSE 2030: <span className="italic font-light">Computer Science Won't Be Same Ever Again</span>
-                        </h2>
-                        <p className="text-black/90 text-base md:text-lg leading-relaxed max-w-4xl font-bold">
+                    <div className="space-y-6 text-left">
+                        <div className="space-y-1">
+                            <h2 className="text-2xl md:text-4xl lg:text-5xl font-orbitron font-bold leading-tight tracking-tight text-black">
+                                CSE 2030:
+                            </h2>
+                            <p className="text-2xl md:text-4xl lg:text-5xl font-serif italic leading-tight tracking-tight text-black opacity-90">
+                                Computer Science Won't Be Same Ever Again
+                            </p>
+                        </div>
+                        <p className="text-lg md:text-xl text-black/90 leading-relaxed max-w-4xl font-bold">
                             The world of Computer Science is transforming by 2030, and AESTR is already there! Traditional roles are evolving, and new opportunities are emerging. We’re not just preparing you for a job; we’re equipping you to define the future.
                         </p>
                     </div>
