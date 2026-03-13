@@ -60,10 +60,10 @@ const PlacementPartners = () => {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-12 md:mb-16 space-y-4"
                 >
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-orbitron font-bold text-foreground leading-tight tracking-tight px-4">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-orbitron font-bold text-foreground leading-tight tracking-tight">
                         Prospective placement <span className="text-accent italic">partners</span>
                     </h2>
-                    <p className="text-base md:text-lg text-foreground/50 max-w-2xl mx-auto leading-relaxed font-semibold px-4">
+                    <p className="text-base md:text-lg text-foreground/50 max-w-2xl mx-auto leading-relaxed font-semibold">
                         Join the ranks of elite engineers hired by top global technology firms.
                     </p>
                 </motion.div>
@@ -120,7 +120,7 @@ const PartnerLogo = ({ partner, index }: { partner: { name: string, logo: string
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: (index % 10) * 0.05 }}
-            className="h-24 md:h-28 w-full bg-white rounded-xl md:rounded-2xl flex items-center justify-center transition-all duration-500 hover:scale-105 shadow-[0_10px_30px_rgba(0,0,0,0.1)] group relative overflow-hidden p-2 md:p-4"
+            className="h-24 md:h-28 w-full bg-white rounded-xl md:rounded-2xl flex items-center justify-center transition-all duration-500 hover:scale-105 shadow-[0_10px_30px_rgba(0,0,0,0.1)] group relative overflow-hidden p-1 md:p-1.5"
         >
             {/* Soft inner glow for premium feel */}
             <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent pointer-events-none" />

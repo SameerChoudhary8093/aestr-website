@@ -34,8 +34,8 @@ const ProgramFeatures = () => {
                             <p className="text-xl text-foreground/80 leading-relaxed flex items-start gap-3">
                                 Our founding team includes engineers from Shodh AI (USA) and other global tech leaders. Here, you won’t be taught by disconnected faculty, you’ll learn from full-time software developers, AI practitioners, and system architects who are shaping the real world.
                             </p>
-                            <div className="glass p-8 rounded-2xl border-l-4 border-accent shadow-[0_8px_32px_rgba(0,0,0,0.3)] bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:20px_20px] w-full lg:w-max">
-                                <p className="text-xl md:text-2xl font-bold text-foreground leading-tight whitespace-nowrap">
+                            <div className="glass p-8 rounded-2xl border-l-4 border-accent shadow-[0_8px_32px_rgba(0,0,0,0.3)] bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:20px_20px] w-full">
+                                <p className="text-xl md:text-2xl font-bold text-foreground leading-tight">
                                     "We believe only those who build the future can truly teach it."
                                 </p>
                             </div>
@@ -160,7 +160,7 @@ const ProgramFeatures = () => {
                             <div className="space-y-4">
                                 <h3 className="text-3xl md:text-4xl font-orbitron font-bold text-foreground leading-tight flex items-start gap-3">
                                     <div>
-                                        Targeting <span className="text-accent italic">In-Demand Careers</span> Of 2030
+                                        Targeting <span className="text-accent italic">In-Demand Careers Of 2030</span>
                                     </div>
                                 </h3>
                                 <p className="text-xl text-foreground/60 leading-relaxed max-w-xl">

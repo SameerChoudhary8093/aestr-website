@@ -5,10 +5,10 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const labs = [
-    { name: 'Apple Ecosystem', image: '/Other/lab-5.webp', description: 'Master cutting-edge development inside the Apple environment. Work with iOS, macOS, and VisionOS architectures.', icon: 'apple' },
-    { name: 'NVIDIA Pipeline', image: '/Other/lab-4.webp', description: 'Dive deep into GPU-accelerated computing and CUDA. Build the hardware intelligence that moves the modern data center.', icon: 'nvidia' },
-    { name: 'RISC-V Lab', image: '/Other/lab-3.webp', description: 'Engineer the future with India\'s pioneering semiconductor technology. Design chips and low-level systems for the AI era.', icon: 'chip' },
-    { name: 'Embodied Brain Lab', image: '/Other/lab-2.webp', description: 'Dive into Robotics, Exoskeletons, and ROS on Nvidia Jetson. Build physical intelligence that moves and interacts with the real world.', icon: 'robotics' }
+    { name: 'Apple Ecosystem', image: '/Other/lab-5.webp', description: 'Master the art of building world-class applications within the premium Apple environment. From deep dives into Swift and SwiftUI to exploring advanced architectures for macOS, iOS, and the revolutionary VisionOS, you will gain hands-on experience with the tools that power the most elegant user experiences. This lab provides a unique opportunity to understand the synergy between high-end hardware and intuitive software design, preparing you for elite development roles worldwide.', icon: 'apple' },
+    { name: 'NVIDIA Pipeline', image: '/Other/lab-4.webp', description: 'Harness the massive power of GPU-accelerated computing in our high-performance NVIDIA lab. Master CUDA programming, TensorRT optimization, and the foundational software stacks that drive today’s generative AI and deep learning breakthroughs. You will build the data-intensive intelligence that moves the modern cloud and data center, positioning yourself at the core of the infrastructure revolution. By bridging the gap between raw compute power and algorithmic excellence, you become an architect of the AI-driven future.', icon: 'nvidia' },
+    { name: 'RISC-V Lab', image: '/Other/lab-3.webp', description: 'Take your place at the forefront of India\'s semiconductor sovereignty in our pioneering RISC-V hardware lab. Students engage in the complete lifecycle of chip design, from RTL development to physical implementation of custom silicon for AI-specific workloads. By mastering open-source hardware architectures, you will be prepared to engineer the systems that define the next generation of global computing. This hands-on experience with silicon logic ensures you understand the fundamental building blocks of modern digital civilization.', icon: 'chip' },
+    { name: 'Embodied Brain Lab', image: '/Other/lab-2.webp', description: 'Experience the convergence of neural intelligence and physical machines in our robotics and autonomous systems lab. Using the NVIDIA Jetson platform and ROS, you will build robots that can perceive, reason, and react to real-time environments with machine precision. This lab focuses on creating advanced exoskeletons and smart robotics that will redefine the future of healthcare, logistics, and industrial automation. You will learn to breathe life into metal and silicon, mastering the complex interplay of computer vision and mechanical control.', icon: 'robotics' }
 ];
 
 const AboutPointFive = () => {
@@ -30,11 +30,8 @@ const AboutPointFive = () => {
                             <div className="space-y-6 text-left">
                                 <div className="space-y-1">
                                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-orbitron font-bold text-white leading-tight tracking-tight capitalize">
-                                        Innovation labs
+                                        Innovation labs <span className="font-serif italic opacity-90">of 2030</span>
                                     </h2>
-                                    <p className="text-2xl md:text-4xl lg:text-5xl font-serif italic leading-tight tracking-tight text-white opacity-90">
-                                        of 2030
-                                    </p>
                                 </div>
                                 <p className="text-lg md:text-xl text-white/90 max-w-3xl leading-relaxed font-bold">
                                     Learn from the architects of tomorrow's AI. AESTR is the brainchild of leading AI engineers dedicated to cultivating the next generation of tech innovators.
@@ -101,9 +98,6 @@ const AboutPointFive = () => {
                                 {/* Content Side */}
                                 <div className="flex-1 space-y-6 md:space-y-8 text-left">
                                     <div className="space-y-6">
-                                        <div className="inline-block px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20">
-                                            <span className="text-[10px] font-orbitron font-black text-accent tracking-[0.3em]">Advanced research lab</span>
-                                        </div>
                                         <h3 className="text-3xl md:text-5xl lg:text-3xl font-orbitron font-extrabold text-white leading-tight tracking-tight">
                                             {lab.name}
                                         </h3>
@@ -112,21 +106,8 @@ const AboutPointFive = () => {
                                         </p>
                                     </div>
 
-                                    {/* Lab Meta Stats */}
-                                    <div className="flex flex-wrap gap-4 pt-4 border-t border-white/10">
-                                        <div className="space-y-1">
-                                            <p className="text-[10px] text-white/30 font-black tracking-widest">Level</p>
-                                            <p className="text-sm text-white font-orbitron font-bold">Tier 1 Elite</p>
-                                        </div>
-                                        <div className="w-px h-10 bg-white/10 mx-2" />
-                                        <div className="space-y-1">
-                                            <p className="text-[10px] text-white/30 font-black tracking-widest">Access</p>
-                                            <p className="text-sm text-white font-orbitron font-bold">24/7 Dedicated</p>
-                                        </div>
-                                    </div>
-
                                     <button className="flex items-center gap-4 group text-accent font-orbitron tracking-[0.3em] text-[10px] md:text-xs font-black transition-all duration-300 py-3 md:py-4 px-6 md:px-8 border border-accent/20 rounded-xl bg-accent/5 hover:bg-accent hover:text-black hover:border-accent">
-                                        <span>View Documentation</span>
+                                        <span>View More</span>
                                         <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
                                     </button>
                                 </div>

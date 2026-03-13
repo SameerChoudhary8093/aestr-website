@@ -62,53 +62,39 @@ const BottomCTA = () => {
             {/* SGVU Rankings Section */}
             <section className="bg-black py-4 md:py-6 border-t border-white/5 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:40px_40px]" />
-                <div className="container mx-auto px-6 relative z-10">
-                    <div className="flex flex-col items-center text-center space-y-2">
-                        <div className="flex flex-col md:flex-row items-center gap-4 mb-6">
-                            <div className="relative w-64 h-16 transition-all duration-500 hover:scale-105">
-                                <Image
-                                    src="/Herosection/sgvu-logo.png"
-                                    alt="SGVU Logo"
-                                    fill
-                                    className="object-contain brightness-0 invert"
-                                />
-                            </div>
-                            <div className="flex gap-4">
-                                <div className="relative w-24 h-24 bg-white p-0 rounded-2xl shadow-lg flex items-center justify-center transition-all duration-500 hover:scale-110 overflow-hidden">
-                                    <Image
-                                        src="/Herosection/Nirf_dot_small-removebg-preview.png"
-                                        alt="NIRF"
-                                        fill
-                                        className="object-contain scale-110"
-                                    />
-                                </div>
-                                <div className="relative w-24 h-24 bg-white p-0 rounded-2xl shadow-lg flex items-center justify-center transition-all duration-500 hover:scale-110 overflow-hidden">
-                                    <Image
-                                        src="/Herosection/naac_equal_-removebg-preview.png"
-                                        alt="NAAC"
-                                        fill
-                                        className="object-contain scale-125"
-                                    />
-                                </div>
-                            </div>
+                <div className="container-boxed relative z-10">
+                    <div className="flex flex-col items-center text-center space-y-8 py-12">
+                        {/* SGVU Logo */}
+                        <div className="relative w-64 h-16 transition-all duration-500 hover:scale-105 mb-4">
+                            <Image
+                                src="/Herosection/sgvu-logo.png"
+                                alt="SGVU Logo"
+                                fill
+                                className="object-contain brightness-0 invert"
+                            />
                         </div>
-                        <div className="flex flex-col items-center gap-4 text-white/60">
-                            <div className="flex items-center gap-4">
-                                <h3 className="text-[10px] md:text-xs font-orbitron font-extrabold tracking-[0.2em] text-white">NAAC A+</h3>
-                                <div className="w-1 h-1 bg-white/20 rounded-full" />
-                                <p className="text-[10px] md:text-xs font-orbitron font-medium tracking-[0.1em]">NIRF Ranked 101-150</p>
-                            </div>
 
+                        {/* Ranking Text */}
+                        <div className="space-y-4">
+                            <h3 className="text-3xl md:text-5xl font-roboto text-white font-medium tracking-tight">
+                                NAAC A+
+                            </h3>
+                            <p className="text-3xl md:text-6xl font-roboto text-white font-medium tracking-tight">
+                                NIRF Ranked 101-150
+                            </p>
+                        </div>
+
+                        {/* Divider & Copyright */}
+                        <div className="w-full pt-12 border-t border-white/20 flex flex-col items-center gap-12">
                             {/* Contact Section - Toll Free Number */}
-                            <div className="flex flex-col items-center gap-1 group/phone cursor-pointer">
-                                <p className="text-[9px] font-orbitron font-medium text-white/30 uppercase tracking-[0.2em]">Contact</p>
+                            <div className="flex flex-col items-center gap-2 group/phone cursor-pointer">
+                                <p className="text-xs font-orbitron font-medium text-white/30 uppercase tracking-[0.3em]">Contact</p>
                                 <div className="flex items-center gap-3 text-accent group-hover/phone:text-white transition-colors duration-300">
-                                    <span className="text-[10px] md:text-sm font-semibold tracking-widest font-orbitron">Toll free number - 1800 - 309 - 4545</span>
+                                    <span className="text-sm md:text-lg font-semibold tracking-widest font-orbitron">Toll free number - 1800 - 309 - 4545</span>
                                 </div>
                             </div>
-                        </div>
-                        <div className="pt-4 border-t border-white/10 w-full max-w-[200px]">
-                            <p className="text-[8px] md:text-[9px] font-medium text-white/30 tracking-[0.4em] font-orbitron uppercase">
+                            
+                            <p className="text-2xl md:text-4xl font-roboto text-white font-medium tracking-tight">
                                 AESTR &copy; 2026
                             </p>
                         </div>
@@ -118,7 +104,7 @@ const BottomCTA = () => {
 
             {/* Admissions Bar */}
             <div className="relative w-full bg-background border-t border-foreground/10 py-5 md:py-6 z-10 admissions-bar-footer">
-                <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6">
+                <div className="container-boxed flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6">
                     <p className="text-xs sm:text-sm md:text-base font-orbitron font-bold text-foreground uppercase tracking-[0.1em] text-center md:text-left flex flex-col md:flex-row items-center gap-2 md:gap-3">
                         <span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-accent rounded-full animate-ping inline-block" />
                         Admissions Open at Suresh Gyan Vihar University for 2026-2027

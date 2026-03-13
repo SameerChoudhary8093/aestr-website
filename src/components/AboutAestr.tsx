@@ -93,7 +93,7 @@ const AboutAestr = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8 }}
-                    className="container mx-auto px-6 relative z-10"
+                    className="container-boxed relative z-10"
                 >
                     <div className="text-center space-y-4 mb-20">
                         <h2 className="text-4xl md:text-6xl font-orbitron font-bold tracking-tight flex items-center justify-center gap-4 text-foreground">

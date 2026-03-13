@@ -7,26 +7,32 @@ import Link from 'next/link';
 
 const highlights = [
     {
-        mainTitle: "AESTR and Shodh AI are working with",
-        subTitle: "with DRDO to train fine-tuned Material Science LLMs",
-        image: "/ProgramPartners/DRDO.webp",
-        accentColor: "text-white",
-        bgColor: "bg-[#5B1DD6]"
-    },
-    {
         mainTitle: "B.Tech. with 3+1 degrees abroad for TOP 10% of our students",
         subTitle: "with scholarships and offers",
         image: "/Other/building-global.jpg",
-        accentColor: "text-white",
+        textColor: "text-white",
+        bgColor: "bg-[#181818]",
+        hex: "#181818",
         badge: "+25 Education partners in US, UK and Europe",
-        bgColor: "bg-[#181818]"
+        hasApply: true
     },
     {
         mainTitle: "First engineering college in India",
         subTitle: "with self trained Robot teachers",
         image: "/Other/robot-class.jpg",
-        accentColor: "text-white",
-        bgColor: "bg-[#5B1DD6]"
+        textColor: "text-white",
+        bgColor: "bg-[#181818]",
+        hex: "#181818",
+        hasApply: false
+    },
+    {
+        mainTitle: "AESTR and Shodh AI are working with",
+        subTitle: "with DRDO to train fine-tuned Material Science LLMs",
+        image: "/ProgramPartners/DRDO.webp",
+        textColor: "text-white",
+        bgColor: "bg-[#181818]",
+        hex: "#181818",
+        hasApply: false
     }
 ];
 
@@ -48,60 +54,67 @@ const HighlightCarousel = () => {
                 {highlights.map((item, idx) => (
                     <div
                         key={idx}
-                        className={`absolute inset-0 flex flex-col md:flex-row transition-opacity duration-700 ${current === idx ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'} ${(item as any).bgColor || 'bg-black'}`}
+                        className={`absolute inset-0 flex flex-col md:flex-row transition-opacity duration-700 ${current === idx ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'} ${item.bgColor || 'bg-black'}`}
                     >
                         {/* Left: Content */}
-                        <div className="flex-1 flex flex-col justify-center p-8 md:p-12 lg:p-16 space-y-6 relative z-10">
+                        <div className="flex-1 flex flex-col justify-center p-8 md:p-12 lg:p-20 space-y-10 relative z-10">
                             {/* Title Component */}
                             <div className="space-y-4">
-                                <h3 className={`text-2xl md:text-4xl lg:text-5xl font-orbitron font-bold leading-tight tracking-tight ${item.accentColor}`}>
-                                    {(item as any).mainTitle}
+                                <h3 className={`text-3xl md:text-5xl lg:text-5xl font-sans font-black leading-tight tracking-tight ${item.textColor}`}>
+                                    {item.mainTitle}
                                 </h3>
-                                <p className={`text-2xl md:text-4xl lg:text-5xl font-serif italic leading-tight tracking-tight ${item.accentColor} opacity-90`}>
-                                    {(item as any).subTitle}
+                                <p className={`text-2xl md:text-4xl lg:text-5xl font-serif italic leading-tight tracking-tight ${item.textColor} opacity-80`}>
+                                    {item.subTitle}
                                 </p>
                             </div>
 
-                            {/* Badge */}
-                            {item.badge && (
-                                <div className="inline-flex w-fit items-center gap-2 bg-accent py-2.5 px-6 rounded-full shadow-[0_4px_20px_rgba(215,246,1,0.3)]">
-                                    <span className="w-2 h-2 bg-black rounded-full animate-pulse" />
-                                    <p className="text-xs md:text-sm font-black text-black tracking-widest">{item.badge}</p>
+                            {/* Special Badge/Apply Now for first slide */}
+                            {item.hasApply && (
+                                <div className="flex flex-col md:flex-row items-center gap-4">
+                                    <div className="bg-black/5 backdrop-blur-sm p-4 md:p-8 rounded-3xl flex flex-col md:flex-row items-center gap-8 border border-black/5">
+                                        <p className={`text-sm md:text-lg font-bold ${item.textColor} leading-snug max-w-[300px]`}>
+                                            {item.badge}
+                                        </p>
+                                        <Link href="/apply" className="flex-shrink-0">
+                                            <button className="bg-black text-white px-10 py-4 rounded-xl font-orbitron font-black text-xs uppercase flex items-center gap-3 hover:scale-105 transition-all shadow-lg">
+                                                Apply Now
+                                                <span className="text-xl">↗</span>
+                                            </button>
+                                        </Link>
+                                    </div>
                                 </div>
                             )}
-
-                            {/* Footer tag */}
-                            <div className="flex items-center gap-4 pt-6">
-                                <span className="w-4 h-4 bg-accent rounded-full animate-pulse shadow-[0_0_15px_#D7F601]" />
-                                <span className="text-[11px] md:text-[13px] font-orbitron font-black tracking-[0.6em] text-accent">Aestr Global Excellence</span>
-                            </div>
                         </div>
 
                         {/* Right: Image */}
                         <div className="hidden md:block flex-1 relative overflow-hidden">
                             <Image
                                 src={item.image}
-                                alt={(item as any).mainTitle || "Highlight"}
+                                alt={item.mainTitle || "Highlight"}
                                 fill
                                 className="object-cover transition-transform duration-[10000ms] ease-linear scale-100 group-hover:scale-110"
                             />
-                            <div className={`absolute inset-0 bg-gradient-to-r ${item.bgColor === 'bg-[#181818]' ? 'from-[#181818] via-[#181818]/60' : 'from-[#5B1DD6] via-[#5B1DD6]/40'} to-transparent z-10`} />
+                            {/* Gradient Overlay using hex from data */}
+                            <div 
+                                className="absolute inset-0 z-10" 
+                                style={{ background: `linear-gradient(to right, ${item.hex} 0%, transparent 60%)` }}
+                            />
                         </div>
                     </div>
                 ))}
 
-                {/* Navigation Overlay (Overlayed on Active Slide) */}
-                <div className="absolute bottom-6 left-8 md:left-12 lg:left-16 right-8 md:right-12 lg:right-16 z-20 flex items-center justify-between pointer-events-none">
-                    <div className="flex gap-2 pointer-events-auto">
+                {/* Navigation Overlay */}
+                <div className="absolute bottom-10 left-8 md:left-12 lg:left-20 right-8 md:right-12 lg:right-20 z-20 flex items-center justify-between pointer-events-auto">
+                    <div className="flex gap-3">
                         {highlights.map((_, i) => (
                             <button
                                 key={i}
                                 onClick={() => setCurrent(i)}
-                                className={`h-1 rounded-full transition-all duration-500 cursor-pointer ${current === i ? 'bg-accent w-10' : 'bg-white/30 w-4 hover:bg-white/60'}`}
+                                className={`h-1.5 rounded-full transition-all duration-500 cursor-pointer ${current === i ? 'bg-accent w-14 shadow-sm' : 'bg-white/20 w-4 hover:bg-white/40'}`}
                             />
                         ))}
                     </div>
-                    <span className="text-[10px] font-orbitron font-black text-white/40 uppercase tracking-[0.3em]">
+                    <span className="text-[10px] font-orbitron font-black text-white/40 uppercase tracking-[0.4em] pointer-events-none">
                         {String(current + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
                     </span>
                 </div>

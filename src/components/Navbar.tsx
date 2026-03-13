@@ -28,12 +28,12 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 px-4 py-6 pointer-events-none flex justify-center">
+        <nav className="fixed top-0 left-0 w-full z-50 py-6 pointer-events-none flex justify-center">
             <motion.div
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className={`w-full max-w-[1550px] pointer-events-auto transition-all duration-500 rounded-2xl border border-white/10 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.8)] backdrop-blur-md relative overflow-hidden group/nav ${scrolled ? 'py-1 bg-black/80 scale-[0.98]' : 'py-2 bg-black/40'
+                className={`w-full max-w-[1600px] mx-auto pointer-events-auto transition-all duration-500 rounded-2xl border border-white/10 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.8)] backdrop-blur-md relative overflow-hidden group/nav ${scrolled ? 'py-1 bg-black/80 scale-[0.98]' : 'py-2 bg-black/40'
                     }`}
             >
                 {/* Futuristic Scanning Line Overlay */}
@@ -44,7 +44,7 @@ const Navbar = () => {
                 />
 
                 {/* Navbar Content */}
-                <div className="flex items-center justify-between relative z-10 w-full pl-6 md:pl-10 pr-3 md:pr-6">
+                <div className="flex items-center justify-between relative z-10 w-full px-3">
                     {/* Left: AESTR Logo */}
                     <div className="flex-1 flex justify-start">
                         <Link href="/#hero" className="flex items-center group/logo">
@@ -80,17 +80,15 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    {/* Right: Partner Logos & Mobile Toggle */}
-                    <div className="flex-1 flex items-center justify-end space-x-0">
+                    <div className="flex-1 flex items-center justify-end">
                         <div className="hidden xl:flex items-center">
-                            <div className="h-6 w-px bg-white/10" />
-                            <div className="flex items-center gap-3">
-                                <div className="relative h-14 w-48 transition-all duration-500 hover:scale-105">
+                            <div className="flex items-center gap-2">
+                                <div className="relative h-14 w-44 transition-all duration-500 hover:scale-105">
                                     <Image
                                         src="/Herosection/sgvu-logo.png"
                                         alt="SGVU Logo"
                                         fill
-                                        className="object-contain object-left brightness-0 invert"
+                                        className="object-contain object-right brightness-0 invert"
                                         priority
                                     />
                                 </div>
@@ -154,36 +152,36 @@ const Navbar = () => {
                                 ✕
                             </button>
                         </div>
-                        <div className="flex flex-col space-y-6 flex-grow">
+                        <div className="flex flex-col space-y-8 flex-grow justify-center items-center">
                             {navLinks.map((link, idx) => (
                                 <motion.div
                                     key={link.name}
-                                    initial={{ opacity: 0, x: -20 }}
-                                    animate={{ opacity: 1, x: 0 }}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: idx * 0.1 }}
+                                    className="text-center"
                                 >
                                     <Link
                                         href={link.href}
                                         onClick={() => setIsOpen(false)}
-                                        className="text-2xl font-orbitron font-extrabold text-[#EAF0BD] hover:text-accent transition-all block"
+                                        className="text-3xl md:text-4xl font-orbitron font-extrabold text-[#EAF0BD] hover:text-accent transition-all block"
                                     >
                                         {link.name}
                                     </Link>
                                 </motion.div>
                             ))}
                         </div>
-                        <div className="pt-10 border-t border-white/10 text-left">
-                            <div className="flex items-center gap-3">
-                                <div className="relative h-14 w-44">
-                                    <Image src="/Herosection/sgvu-logo.png" alt="SGVU" fill className="object-contain object-left brightness-0 invert" />
-                                </div>
-                                <div className="relative h-16 w-16 bg-white p-0 rounded-xl flex items-center justify-center overflow-hidden">
-                                    <Image src="/Herosection/Nirf_dot_small-removebg-preview.png" alt="NIRF" fill className="object-contain scale-110" />
-                                </div>
-                                <div className="relative h-16 w-16 bg-white p-0 rounded-xl flex items-center justify-center overflow-hidden">
-                                    <Image src="/Herosection/naac_equal_-removebg-preview.png" alt="NAAC" fill className="object-contain scale-125" />
-                                </div>
-                            </div>
+                        <div className="mt-10 pt-10 border-t border-white/10 flex flex-col items-center gap-6">
+                            <Link 
+                                href="/apply" 
+                                onClick={() => setIsOpen(false)}
+                                className="w-full max-w-sm bg-accent hover:bg-white text-black py-5 rounded-2xl font-orbitron font-black text-lg uppercase tracking-widest text-center transition-all shadow-[0_0_30px_rgba(216,246,2,0.3)]"
+                            >
+                                Apply Now
+                            </Link>
+                            <p className="text-[10px] font-orbitron font-medium text-white/30 uppercase tracking-[0.4em]">
+                                AESTR &copy; 2026
+                            </p>
                         </div>
                     </motion.div>
                 )}

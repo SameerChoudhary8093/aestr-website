@@ -1,221 +1,389 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 
+// Reusable Lab Data (Same as home page)
+const labs = [
+    {
+        name: 'Apple Ecosystem',
+        image: '/Other/lab-5.webp',
+        description: 'Master the art of building world-class applications within the premium Apple environment. From deep dives into Swift and SwiftUI to exploring advanced architectures for macOS, iOS, and the revolutionary VisionOS.',
+        icon: 'apple'
+    },
+    {
+        name: 'NVIDIA Pipeline',
+        image: '/Other/lab-4.webp',
+        description: 'Harness the massive power of GPU-accelerated computing in our high-performance NVIDIA lab. Master CUDA programming, TensorRT optimization, and the foundational software stacks.',
+        icon: 'nvidia'
+    },
+    {
+        name: 'RISC-V Lab',
+        image: '/Other/lab-3.webp',
+        description: 'Take your place at the forefront of India\'s semiconductor sovereignty in our pioneering RISC-V hardware lab. Students engage in the complete lifecycle of chip design.',
+        icon: 'chip'
+    },
+    {
+        name: 'Embodied Brain Lab',
+        image: '/Other/lab-2.webp',
+        description: 'Experience the convergence of neural intelligence and physical machines in our robotics and autonomous systems lab using NVIDIA Jetson platform and ROS.',
+        icon: 'robotics'
+    }
+];
 
 const BtechAIShodhAI = () => {
     return (
-        <main className="bg-background min-h-screen text-foreground font-orbitron overflow-x-hidden selection:bg-accent selection:text-black">
+        <main className="bg-background min-h-screen text-foreground overflow-x-hidden selection:bg-accent selection:text-black">
 
             {/* Hero Section */}
-            <section className="relative pt-48 pb-24 lg:pt-64 lg:pb-32 overflow-hidden flex flex-col items-center justify-center text-center px-6 border-b border-foreground/5 bg-[radial-gradient(circle_at_top,rgba(216,246,2,0.05),transparent_50%)]">
-                <div className="container mx-auto max-w-5xl space-y-10 animate-in fade-in slide-in-from-bottom duration-1000 relative z-10">
-                    <div className="inline-block px-6 py-2 rounded-full bg-accent/5 border border-accent/20 text-accent text-[10px] font-black tracking-[0.3em] uppercase mb-4">
-                        AESTR AI + SHODH AI (USA)
-                    </div>
-                    <h1 className="text-4xl md:text-7xl lg:text-8xl font-black leading-[0.9] uppercase tracking-tighter">
-                        This Isn’t College. <br />
-                        <span className="text-accent italic">It’s A 4-Year Internship.</span>
-                    </h1>
-                    <p className="text-lg md:text-xl text-foreground/50 max-w-2xl mx-auto leading-relaxed font-semibold">
-                        AESTR AI + Shodh AI: The most advanced Tech degree in the world. Engineered by the architects of the future.
-                    </p>
-                    <div className="pt-6">
-                        <button className="btn-aestr !px-12 !py-5 bg-accent text-black font-black uppercase tracking-widest shadow-[0_0_50px_rgba(216,246,2,0.2)] hover:shadow-none transition-all">
-                            Apply for 2026 Intake
-                            <span className="ml-3 inline-block group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">↗</span>
-                        </button>
-                    </div>
+            <section className="relative min-h-[90vh] flex items-center pt-24 overflow-hidden">
+                {/* Background Image with Overlay */}
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src="/Other/building-global.jpg" // Using an existing college building image
+                        alt="AESTR Campus"
+                        fill
+                        className="object-cover brightness-[0.4]"
+                        priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/40 to-background" />
                 </div>
-                {/* Visual Backdrop */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-accent/5 rounded-full blur-[160px] pointer-events-none z-0 rotate-12" />
+
+                <div className="container-boxed relative z-10">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1 }}
+                        className="max-w-4xl space-y-8"
+                    >
+                        <div className="inline-block px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-[10px] font-orbitron font-black tracking-[0.3em] uppercase">
+                            AESTR B.TECH PRO
+                        </div>
+                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-orbitron font-black leading-[0.9] uppercase tracking-tighter">
+                            This Isn't College. <br />
+                            <span className="text-accent italic">It's A 4-Year Internship.</span>
+                        </h1>
+                        <p className="text-xl md:text-2xl text-white/80 max-w-2xl leading-relaxed font-bold">
+                            A unique industry-embedded degree designed for the top 1% who want to build the future.
+                            Engineered by the architects of the future.
+                        </p>
+                        <div className="pt-6">
+                            <button className="btn-aestr !px-12 !py-5">
+                                APPLY FOR 2026 INTAKE
+                                <span className="ml-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">↗</span>
+                            </button>
+                        </div>
+                    </motion.div>
+                </div>
+
+                {/* Aesthetic bottom shadow for transition */}
+                <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent" />
             </section>
 
             {/* Section 1: The Crisis */}
-            <section className="py-32 relative overflow-hidden bg-background-alt/30">
-                <div className="container mx-auto px-6 relative z-10">
-                    <div className="flex flex-col md:flex-row items-center gap-20">
-                        <div className="relative w-full md:w-1/2">
-                            <span className="text-[15rem] font-black text-foreground/5 absolute -top-32 -left-20 leading-none select-none">01</span>
-                            <div className="relative z-10 space-y-8">
-                                <h2 className="text-4xl md:text-6xl font-black text-foreground leading-tight uppercase tracking-tighter">
-                                    The Crisis Of <br /><span className="text-accent">Indian Engineering.</span>
+            <section className="py-24 relative overflow-hidden">
+                <div className="container-boxed relative z-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            className="space-y-8"
+                        >
+                            <div className="flex items-center gap-6">
+                                <div className="w-16 h-16 rounded-full border border-accent/30 flex items-center justify-center text-3xl font-orbitron font-black text-accent bg-accent/5">
+                                    1
+                                </div>
+                                <h2 className="text-4xl md:text-6xl font-orbitron font-black text-white leading-tight uppercase tracking-tighter">
+                                    The Crisis Of <br /><span className="text-accent">Indian Engineering</span>
                                 </h2>
-                                <p className="text-xl text-foreground/60 leading-relaxed font-medium">
-                                    Obsolete curriculums, theoretical learning, and a massive gap between graduation and employment. We aren't just changing the classroom; we're replacing it.
+                            </div>
+                            <div className="space-y-6">
+                                <h3 className="text-2xl font-orbitron font-bold text-white/90">A Generation of Unemployable Talent</h3>
+                                <p className="text-lg text-white/60 leading-relaxed font-medium">
+                                    Traditional degrees are failing. Only 7% of Indian engineers are truly employable because they are taught theory by people who never worked in the industry.
+                                </p>
+                                <p className="text-lg text-white/60 leading-relaxed font-medium">
+                                    At AESTR, we are bridging this massive gap by placing you inside a high-performance engineering lab from Day 1. You don't just study for exams; you build software that solves world-class problems.
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full md:w-1/2">
-                            {[1, 2].map((i) => (
-                                <div key={i} className="glass p-1 rounded-[2.5rem] border border-foreground/5 bg-foreground/5 aspect-[4/5] relative group overflow-hidden">
-                                    <div className="h-full w-full bg-black/40 rounded-[2.3rem] overflow-hidden relative">
-                                        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 opacity-80" />
-                                        <div className="absolute bottom-10 left-8 right-8 z-20 space-y-4">
-                                            <div className="h-1.5 w-16 bg-accent rounded-full" />
-                                            <div className="h-4 w-full bg-foreground/10 rounded-full" />
-                                            <div className="h-4 w-3/4 bg-foreground/5 rounded-full" />
-                                        </div>
-                                        <span className="absolute top-10 right-10 text-[9px] font-black text-foreground/20 uppercase tracking-[0.4em] transform rotate-90 origin-right transition-all group-hover:text-accent">ARCHIVE VOL: 0{i}</span>
-                                    </div>
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            className="relative grid grid-cols-1 sm:grid-cols-2 gap-6"
+                        >
+                            <div className="glass p-1 rounded-3xl overflow-hidden aspect-[4/5] relative group scale-95 translate-y-4">
+                                <Image
+                                    src="/Other/patent-ai.png" // Placeholder for newspaper clipping
+                                    alt="Crisis Data 1"
+                                    fill
+                                    className="object-cover grayscale brightness-50 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
+                                <div className="absolute bottom-6 left-6 right-6">
+                                    <p className="text-xs font-orbitron font-bold text-accent">ARCHIVE VOL: 01</p>
                                 </div>
-                            ))}
-                        </div>
+                            </div>
+                            <div className="glass p-1 rounded-3xl overflow-hidden aspect-[4/5] relative group">
+                                <Image
+                                    src="/Other/AI-faculty.png" // Placeholder for newspaper clipping
+                                    alt="Crisis Data 2"
+                                    fill
+                                    className="object-cover grayscale brightness-50 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
+                                <div className="absolute bottom-6 left-6 right-6">
+                                    <p className="text-xs font-orbitron font-bold text-accent">ARCHIVE VOL: 02</p>
+                                </div>
+                            </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
 
             {/* Section 2: Introducing */}
-            <section className="py-40 relative overflow-hidden">
-                <div className="container mx-auto px-6 relative z-10">
-                    <div className="flex flex-col lg:flex-row-reverse items-center gap-24">
-                        <div className="relative w-full lg:w-1/2">
-                            <span className="text-[15rem] font-black text-foreground/5 absolute -top-32 -right-20 leading-none select-none">02</span>
-                            <div className="relative z-10 space-y-10">
-                                <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-foreground leading-tight uppercase tracking-tighter">
+            <section className="py-24 relative bg-background-alt/30 overflow-hidden">
+                <div className="container-boxed relative z-10">
+                    <div className="flex flex-col lg:flex-row-reverse items-center gap-16 lg:gap-24">
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            className="lg:w-1/2 space-y-8"
+                        >
+                            <div className="flex items-center gap-6">
+                                <div className="w-16 h-16 rounded-full border border-accent/30 flex items-center justify-center text-3xl font-orbitron font-black text-accent bg-accent/5">
+                                    2
+                                </div>
+                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-orbitron font-black text-white leading-tight uppercase tracking-tighter">
                                     Introducing <br />
-                                    <span className="text-accent">B.Tech AI with <br />Shodh AI.</span>
+                                    <span className="text-accent">B.TECH AESTR PRO :</span>
                                 </h2>
-                                <p className="text-xl text-foreground/60 leading-relaxed font-semibold">
-                                    Engineered in collaboration with <span className="text-foreground font-black border-b-2 border-accent/30">Shodh AI (USA)</span>, this program bypasses traditional academic gatekeeping. We focus on producing senior AI engineers ready to lead global teams on Day 1.
+                            </div>
+                            <div className="space-y-6">
+                                <h3 className="text-2xl font-orbitron font-bold text-white/90">Built by the industry, for the industry</h3>
+                                <p className="text-lg text-white/60 leading-relaxed font-semibold">
+                                    B.Tech AESTR PRO is the most advanced tech degree in the world. Engineered in collaboration with leading US-based tech firms, this program bypasses traditional academic gatekeeping.
                                 </p>
-                                <div className="flex items-center gap-6">
-                                    <div className="w-12 h-1 px-0 bg-accent rounded-full" />
-                                    <p className="text-xs font-black text-foreground uppercase tracking-[0.3em]">Validated by Silicon Valley Standards</p>
+                                <p className="text-lg text-white/60 leading-relaxed font-semibold">
+                                    We focus on producing senior AI engineers ready to lead global teams on Day 1. Our methodology ensures you're already 4 years ahead of any traditional graduate.
+                                </p>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            className="lg:w-1/2 relative group"
+                        >
+                            <div className="aspect-[4/3] bg-black/40 rounded-[3rem] border border-white/10 overflow-hidden shadow-2xl relative">
+                                <Image
+                                    src="/Other/lab-1.webp"
+                                    alt="BTech Pro Environment"
+                                    fill
+                                    className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
+                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-accent/20 blur-[80px] rounded-full pointer-events-none" />
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Section 3: Heart of AESTR PRO (Labs) */}
+            <section className="py-24 relative overflow-hidden">
+                <div className="container-boxed relative z-10">
+                    <div className="flex flex-col items-center text-center mb-20 space-y-6">
+                        <div className="w-16 h-16 rounded-full border border-accent/30 flex items-center justify-center text-3xl font-orbitron font-black text-accent bg-accent/5">
+                            3
+                        </div>
+                        <h2 className="text-4xl md:text-6xl font-orbitron font-black text-white uppercase tracking-tighter">
+                            THE <span className="text-accent italic">HEART</span> OF AESTR PRO:
+                        </h2>
+                        <p className="text-xl text-white/60 max-w-2xl font-bold">
+                            Our innovation labs are where the magic happens.
+                            India's first and only university based on industry labs.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {labs.map((lab, i) => (
+                            <motion.div
+                                key={lab.name}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: i * 0.1 }}
+                                className="glass group hover:bg-accent/5 hover:border-accent/40 transition-all duration-500 overflow-hidden"
+                            >
+                                <div className="aspect-[4/3] relative overflow-hidden">
+                                    <Image
+                                        src={lab.image}
+                                        alt={lab.name}
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
+                                </div>
+                                <div className="p-8 space-y-4">
+                                    <h4 className="text-xl font-orbitron font-bold text-accent uppercase tracking-wider">{lab.name}</h4>
+                                    <p className="text-sm text-white/50 leading-relaxed line-clamp-3 group-hover:text-white/80 transition-colors">
+                                        {lab.description}
+                                    </p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Section 4: The Career Arc */}
+            <section className="py-24 relative bg-background-alt overflow-hidden">
+                <div className="container-boxed relative z-10">
+                    <div className="flex flex-col items-start mb-20 space-y-6">
+                        <div className="w-16 h-16 rounded-full border border-accent/30 flex items-center justify-center text-3xl font-orbitron font-black text-accent bg-accent/5">
+                            4
+                        </div>
+                        <h2 className="text-4xl md:text-6xl font-orbitron font-black text-white leading-[0.9] uppercase tracking-tighter">
+                            The Job We're <br /><span className="text-accent">Training You For.</span>
+                        </h2>
+                        <p className="text-xl text-white/60 font-bold">Transforming Learners into Architects of Tomorrow.</p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+                        {[
+                            { title: 'The Architect', desc: 'Designing complex systems and scalable AI frameworks that power global enterprises.', icon: '📐' },
+                            { title: 'The Builder', desc: 'Coding high-performance applications with precision, efficiency, and industrial standards.', icon: '🛠️' },
+                            { title: 'The Consultant', desc: 'Advising global industries on AI adoption, digital transformation, and future-readiness.', icon: '💡' },
+                            { title: 'The Maverick', desc: 'Innovating beyond limits, building patents, and defining new paradigms in tech.', icon: '🚀' }
+                        ].map((role, i) => (
+                            <motion.div
+                                key={role.title}
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: i * 0.1 }}
+                                className="glass p-10 flex gap-8 group hover:border-accent/40 transition-all duration-500"
+                            >
+                                <div className="text-4xl md:text-5xl group-hover:scale-110 transition-transform duration-500 shrink-0">
+                                    {role.icon}
+                                </div>
+                                <div className="space-y-4">
+                                    <h3 className="text-2xl font-orbitron font-black text-white group-hover:text-accent transition-colors">
+                                        {role.title}
+                                    </h3>
+                                    <p className="text-white/60 font-medium leading-relaxed group-hover:text-white transition-colors">
+                                        {role.desc}
+                                    </p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Section 5: The Outcome */}
+            <section className="py-24 relative overflow-hidden">
+                <div className="container-boxed relative z-10">
+                    <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            className="lg:w-1/2 space-y-8"
+                        >
+                            <div className="flex items-center gap-6">
+                                <div className="w-16 h-16 rounded-full border border-accent/30 flex items-center justify-center text-3xl font-orbitron font-black text-accent bg-accent/5">
+                                    5
+                                </div>
+                                <h2 className="text-4xl md:text-5xl lg:text-7xl font-orbitron font-black text-white uppercase tracking-tighter">
+                                    Graduate As A <br /><span className="text-accent italic">Senior Engineer.</span>
+                                </h2>
+                            </div>
+                            <div className="space-y-6">
+                                <h3 className="text-2xl font-orbitron font-bold text-white/90">Ready for the world on Day 1</h3>
+                                <p className="text-lg text-white/60 leading-relaxed font-semibold">
+                                    At AESTR Pro, you don't just leave with a degree; you leave with a portfolio of real-world impact. Our graduates are highly sought after by top-tier tech firms because they have already spent 4 years working as engineers.
+                                </p>
+                                <div className="grid grid-cols-2 gap-8 pt-4">
+                                    <div className="space-y-2">
+                                        <p className="text-3xl font-orbitron font-black text-accent">100%</p>
+                                        <p className="text-xs uppercase tracking-widest text-white/40 font-bold">Employability Index</p>
+                                    </div>
+                                    <div className="space-y-2">
+                                        <p className="text-3xl font-orbitron font-black text-accent">Senior</p>
+                                        <p className="text-xs uppercase tracking-widest text-white/40 font-bold">Role Preparedness</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className="w-full lg:w-1/2 relative group">
-                            <div className="aspect-[4/3] bg-black/40 rounded-[3rem] border border-foreground/10 flex items-center justify-center overflow-hidden shadow-[0_0_100px_rgba(0,0,0,0.5)] transition-all duration-700 group-hover:border-accent/30">
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            className="lg:w-1/2 relative group"
+                        >
+                            <div className="aspect-[4/3] bg-black/40 rounded-[3rem] border border-white/10 overflow-hidden shadow-2xl relative">
                                 <Image
-                                    src="/Other/lab-2.webp"
-                                    alt="Student Lab"
+                                    src="/Other/robot-class.jpg"
+                                    alt="Graduation Success"
                                     fill
                                     className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
-                                <div className="absolute inset-8 border border-foreground/5 rounded-[2.5rem] pointer-events-none" />
-                                <div className="absolute bottom-12 left-12 z-20">
-                                    <span className="text-[10px] font-black text-accent uppercase tracking-[0.5em] bg-black/60 px-6 py-3 rounded-full backdrop-blur-md border border-accent/20">System Live</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Section 3: Heart of AESTR */}
-            <section className="py-40 relative bg-background-alt/40 border-y border-foreground/5">
-                <div className="container mx-auto px-6 relative z-10">
-                    <div className="flex flex-col items-center text-center mb-32 space-y-8">
-                        <span className="text-9xl font-black text-foreground/5 select-none leading-none">03</span>
-                        <h2 className="text-5xl md:text-7xl font-black text-foreground uppercase tracking-tighter">
-                            THE <span className="text-accent italic">HEART</span> OF AESTR
-                        </h2>
-                        <div className="h-2 w-32 bg-accent rounded-full" />
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
-                        {[
-                            { name: 'Foundation Lab', desc: 'Core CS & Logic Mastery. Building the base for complex thinking.' },
-                            { name: 'Embedded AI', desc: 'Silicon & Hardware Intelligence. Bridge between code and matter.' },
-                            { name: 'Soft Brain Lab', desc: 'Neural Architecture Design. The essence of generative systems.' },
-                            { name: 'RISC-V Lab', desc: 'National Processor Engineering. Strategic chip design for India.' },
-                            { name: 'Augmented Human', desc: 'Interface & Haptics Research. Redefining human-machine interaction.' }
-                        ].map((lab, i) => (
-                            <div key={i} className="glass p-10 rounded-3xl bg-foreground/5 border-t-4 border-accent/20 hover:border-accent transition-all duration-700 group hover:bg-accent/5 flex flex-col justify-between h-[320px]">
-                                <div className="space-y-6">
-                                    <h4 className="text-xl font-black text-foreground group-hover:text-accent transition-colors uppercase tracking-tight">{lab.name}</h4>
-                                    <p className="text-sm text-foreground/50 leading-relaxed font-bold">{lab.desc}</p>
-                                </div>
-                                <div className="flex justify-between items-end">
-                                    <span className="text-5xl font-black text-foreground/5 group-hover:text-accent/10 transition-colors">0{i + 1}</span>
-                                    <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                        <span className="text-accent text-sm">→</span>
+                                <div className="absolute bottom-10 left-10 flex items-center gap-4">
+                                    <div className="w-12 h-12 rounded-full border border-accent/30 flex items-center justify-center bg-accent/10">
+                                        <span className="text-accent font-black">★</span>
                                     </div>
+                                    <p className="text-xs font-orbitron font-black text-white tracking-widest bg-black/40 px-4 py-2 rounded-full backdrop-blur-sm">INDUSTRY RECOGNIZED</p>
                                 </div>
                             </div>
-                        ))}
+                        </motion.div>
                     </div>
                 </div>
             </section>
 
-            {/* Section 4: Jobs/Training */}
-            <section className="py-40 relative overflow-hidden">
-                <div className="container mx-auto px-6 relative z-10">
-                    <div className="flex flex-col items-start mb-24 space-y-8">
-                        <span className="text-9xl font-black text-foreground/5 select-none leading-none">04</span>
-                        <h2 className="text-5xl md:text-7xl font-black text-foreground leading-[0.8] uppercase tracking-tighter">
-                            The Job We're <br /> <span className="text-accent">Training You For.</span>
-                        </h2>
+            {/* Section: Degree Structure */}
+            <section className="py-24 relative bg-background-alt/30 border-y border-white/5 overflow-hidden">
+                <div className="container-boxed relative z-10 text-center space-y-16">
+                    <div className="space-y-4">
+                        <h2 className="text-4xl md:text-5xl font-orbitron font-black text-white uppercase tracking-tighter">Tailor Your Path</h2>
+                        <div className="h-1 w-20 bg-accent mx-auto rounded-full" />
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-                        {[
-                            { title: 'The Vision', desc: 'Transforming learners into industry leaders who architect the future of AI paradigms.' },
-                            { title: 'The Focus', desc: 'Deep-dive projects that solve critical engineering problems globally across sectors.' },
-                            { title: 'The Core Objective', desc: '100% employability with profiles validated by Tier-1 tech giants in Silicon Valley.' },
-                            { title: 'The Methodology', desc: 'Immersive bootcamps, 1:1 mentorship from Stanford & Microsoft Research alumni.' }
-                        ].map((item, i) => (
-                            <div key={i} className="glass p-12 rounded-[2.5rem] bg-foreground/5 border border-foreground/5 hover:border-accent/40 transition-all duration-700 group relative">
-                                <div className="absolute -top-6 -left-6 w-14 h-14 rounded-2xl bg-accent flex items-center justify-center text-black font-black text-xl shadow-[0_0_30px_rgba(216,246,2,0.3)]">0{i + 1}</div>
-                                <h3 className="text-2xl font-black text-foreground mb-8 group-hover:text-accent transition-colors pt-6 uppercase tracking-tighter">{item.title}</h3>
-                                <p className="text-base text-foreground/60 leading-relaxed font-semibold">{item.desc}</p>
-                                <div className="mt-10 pt-10 border-t border-foreground/10 opacity-30 group-hover:opacity-100 transition-opacity">
-                                    <span className="text-[10px] font-black text-accent tracking-[0.4em] uppercase">SYSTEMS 2030 CERTIFIED</span>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Section 5: Graduation */}
-            <section className="py-40 relative bg-background-alt/20">
-                <div className="container mx-auto px-6 relative z-10">
-                    <div className="flex flex-col items-center text-center mb-32 space-y-10">
-                        <span className="text-9xl font-black text-foreground/5 select-none leading-none">05</span>
-                        <h2 className="text-5xl md:text-7xl font-black text-foreground uppercase tracking-tighter">
-                            Graduate As A <br /> <span className="text-accent italic">Senior Engineer.</span>
-                        </h2>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32 relative">
-                        {/* Major */}
-                        <div className="glass p-10 rounded-[2.5rem] bg-foreground/5 border border-foreground/10 flex flex-col items-center min-h-[550px] transition-all hover:border-accent/30 group">
-                            <h3 className="text-xl font-black text-accent mb-12 text-center tracking-[0.2em] border-b border-accent/20 pb-6 w-full uppercase">B. Tech. Majors</h3>
-                            <div className="flex flex-col gap-5 w-full">
-                                {[
-                                    'Artificial Intelligence & ML',
-                                    'Data Science',
-                                    'Cloud Engineering',
-                                    'Software Engineering',
-                                    'Cyber Security'
-                                ].map((item, idx) => (
-                                    <div key={idx} className="bg-background-alt p-5 rounded-2xl text-[14px] font-black text-foreground/70 border border-foreground/5 hover:bg-accent/10 hover:text-accent transition-all uppercase tracking-widest shadow-xl flex items-center justify-between group/item">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {/* Majors */}
+                        <div className="glass p-10 space-y-8 flex flex-col items-center">
+                            <h3 className="text-lg font-orbitron font-black text-accent uppercase tracking-[0.2em] border-b border-accent/20 pb-4 w-full">B.Tech Majors</h3>
+                            <div className="space-y-4 w-full">
+                                {['B.Tech in Computer Science & AI', 'Data Science', 'Cloud Engineering', 'Software Engineering', 'Cyber Security'].map(item => (
+                                    <div key={item} className="bg-white/5 p-4 rounded-xl text-sm font-bold border border-white/5 text-white/70 hover:bg-accent/10 hover:text-accent transition-all cursor-default">
                                         {item}
-                                        <span className="opacity-0 group-hover/item:opacity-100 transition-opacity">+</span>
                                     </div>
                                 ))}
                             </div>
                         </div>
 
-                        {/* Minor */}
-                        <div className="glass p-10 rounded-[2.5rem] bg-foreground/5 border border-foreground/10 flex flex-col items-center min-h-[550px] transition-all hover:border-accent/30">
-                            <h3 className="text-xl font-black text-accent mb-12 text-center tracking-[0.2em] border-b border-accent/20 pb-6 w-full uppercase">With one Minor</h3>
-                            <div className="flex flex-wrap gap-3.5 justify-center">
-                                {[
-                                    'Robotics', 'Bio-Informatics',
-                                    'Manufacturing',
-                                    'Design', 'Fintech',
-                                    'Nanotechnology', 'Smart Cities',
-                                    'Semiconductor', 'Geoinformatics'
-                                ].map((item, idx) => (
-                                    <div key={idx} className="bg-background-alt px-5 py-3 rounded-xl text-[12px] font-black text-foreground/70 border border-foreground/5 hover:bg-black hover:text-accent hover:border-accent/30 transition-all uppercase tracking-widest shadow-lg">
+                        {/* Minors */}
+                        <div className="glass p-10 space-y-8 flex flex-col items-center">
+                            <h3 className="text-lg font-orbitron font-black text-accent uppercase tracking-[0.2em] border-b border-accent/20 pb-4 w-full">AESTR Specialisations</h3>
+                            <div className="flex flex-wrap gap-2.5 justify-center">
+                                {['Robotics', 'Bio-Informatics', 'Manufacturing', 'Design', 'Fintech', 'Nanotechnology', 'Smart Cities', 'Semiconductor', 'Geoinformatics'].map(item => (
+                                    <div key={item} className="bg-white/5 px-3 py-2 rounded-lg text-[11px] font-bold border border-white/5 text-white/70 hover:bg-black hover:text-accent transition-all cursor-default uppercase">
                                         {item}
                                     </div>
                                 ))}
@@ -223,103 +391,101 @@ const BtechAIShodhAI = () => {
                         </div>
 
                         {/* Labs */}
-                        <div className="glass p-10 rounded-[2.5rem] bg-foreground/5 border border-foreground/10 flex flex-col items-center min-h-[550px] transition-all hover:border-accent/30">
-                            <h3 className="text-xl font-black text-accent mb-12 text-center tracking-[0.2em] border-b border-accent/20 pb-6 w-full uppercase">Required Labs</h3>
-                            <div className="flex flex-col gap-5 w-full">
-                                {[
-                                    'Foundation Model Lab',
-                                    'Embodied Brain Lab',
-                                    'Soft "Brain" Lab',
-                                    'RISC-V Systems Lab',
-                                    'Augmented Human Lab'
-                                ].map((item, idx) => (
-                                    <div key={idx} className="bg-background-alt p-5 rounded-2xl text-[14px] font-black text-foreground/70 border border-foreground/5 hover:bg-accent/10 hover:text-accent transition-all uppercase tracking-widest shadow-xl flex items-center justify-between">
+                        <div className="glass p-10 space-y-8 flex flex-col items-center">
+                            <h3 className="text-lg font-orbitron font-black text-accent uppercase tracking-[0.2em] border-b border-accent/20 pb-4 w-full">Innovation Labs</h3>
+                            <div className="space-y-4 w-full">
+                                {['Apple Ecosystem', 'NVIDIA Pipeline', 'RISC-V Lab', 'Embodied Brain Lab'].map(item => (
+                                    <div key={item} className="bg-white/5 p-4 rounded-xl text-sm font-bold border border-white/5 text-white/70 hover:bg-accent/10 hover:text-accent transition-all cursor-default flex justify-between items-center group">
                                         {item}
-                                        <span className="w-2 h-2 bg-accent/40 rounded-full" />
+                                        <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-40 group-hover:opacity-100 transition-opacity" />
                                     </div>
                                 ))}
                             </div>
                         </div>
                     </div>
 
-                    <div className="flex flex-col items-center mb-16 px-4">
-                        <div className="w-full max-w-5xl h-32 mb-10 hidden md:block">
-                            <svg className="w-full h-full" viewBox="0 0 1000 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M166 0 V50 H834 V0" stroke="var(--accent)" strokeWidth="3" strokeOpacity="0.4" />
-                                <path d="M500 50 V100" stroke="var(--accent)" strokeWidth="3" strokeOpacity="0.4" />
-                                <g fill="var(--accent)" filter="drop-shadow(0 0 10px rgba(216,246,2,0.4))">
-                                    <circle cx="166" cy="0" r="6" />
-                                    <circle cx="500" cy="0" r="6" />
-                                    <circle cx="834" cy="0" r="6" />
-                                    <circle cx="500" cy="50" r="6" />
-                                    <circle cx="500" cy="100" r="10" />
-                                </g>
+                    <div className="pt-10 space-y-12">
+                        <div className="relative inline-block">
+                            <svg className="w-full max-w-4xl h-24 hidden md:block opacity-30" viewBox="0 0 1000 100">
+                                <path d="M166 0 V40 H834 V0" stroke="var(--accent)" strokeWidth="2" fill="none" />
+                                <path d="M500 40 V100" stroke="var(--accent)" strokeWidth="2" fill="none" />
+                                <circle cx="500" cy="100" r="5" fill="var(--accent)" />
                             </svg>
+                            <div className="md:hidden w-px h-16 bg-accent mx-auto opacity-30" />
                         </div>
-                        <div className="md:hidden w-px h-16 bg-accent/40 mb-8" />
-                        
-                        <Link href="/" className="text-3xl md:text-6xl font-black text-foreground border-b-[8px] border-accent pb-6 hover:text-accent transition-all text-center uppercase tracking-tighter max-w-4xl leading-none">
-                            MAKE YOUR OWN DEGREE BY YOURSELF
+
+                        <Link
+                            href="/"
+                            className="text-3xl md:text-5xl lg:text-7xl font-orbitron font-black text-white hover:text-accent transition-all border-b-[6px] border-accent pb-4 uppercase tracking-tighter"
+                        >
+                            Make Your Own Degree By Yourself
                         </Link>
                     </div>
                 </div>
             </section>
 
-            {/* Final CTA Section */}
-            <section className="relative py-40 bg-background overflow-hidden">
-                <div className="container mx-auto px-6 relative z-10">
-                    <div className="glass rounded-[4rem] p-12 md:p-24 border border-foreground/5 bg-gradient-to-br from-foreground/5 via-transparent to-transparent shadow-[0_0_100px_rgba(0,0,0,0.5)] relative overflow-hidden backdrop-blur-3xl">
-                        <div className="absolute inset-0 bg-[radial-gradient(var(--accent)_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.03]" />
+            {/* Final CTA */}
+            <section className="py-24 relative bg-background overflow-hidden">
+                <div className="container-boxed relative z-10">
+                    <div className="glass p-12 md:p-20 rounded-[4rem] relative overflow-hidden group">
+                        {/* Aesthetic Glows */}
+                        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple/10 blur-[120px] rounded-full pointer-events-none" />
+                        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-accent/5 blur-[100px] rounded-full pointer-events-none" />
 
-                        <div className="flex flex-col lg:flex-row items-center gap-24 relative z-10">
-                            {/* Content */}
-                            <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-10 text-center lg:text-left">
-                                <h2 className="text-4xl md:text-7xl font-black text-foreground leading-[0.8] uppercase tracking-tighter">
-                                    Future Safe <br /> <span className="text-accent italic">Professions.</span>
+                        <div className="flex flex-col lg:flex-row items-center gap-16 relative z-10">
+                            <div className="lg:w-1/2 space-y-10 text-center lg:text-left">
+                                <h2 className="text-5xl md:text-7xl font-orbitron font-black text-white leading-[0.85] uppercase tracking-tighter">
+                                    ONLY AT AESTR <br />
+                                    <span className="text-accent italic">Future Safe Professions</span>
                                 </h2>
-                                <p className="text-xl text-foreground/50 leading-relaxed font-bold">
-                                    Only at AESTR you are trained for professions that remain secure even in the wake of AI disruption. Start your journey with the pioneers of AI.
+                                <p className="text-xl text-white/50 leading-relaxed font-bold">
+                                    We believe only those who build the future can truly teach it. Start your journey with the pioneers.
                                 </p>
                                 <div className="flex flex-col sm:flex-row items-center gap-8 pt-6">
-                                    <button className="btn-aestr !px-16 !py-6 bg-accent text-black font-black uppercase tracking-[0.2em] shadow-[0_0_50px_rgba(216,246,2,0.2)] hover:shadow-none">
-                                        Join The 1%
-                                        <span className="ml-3 group-hover:translate-x-2 transition-transform">→</span>
+                                    <button className="btn-aestr !px-16 !py-6">
+                                        JOIN THE 1%
+                                        <span className="ml-3 group-hover:translate-x-2 transition-transform duration-500">→</span>
                                     </button>
-                                    <span className="text-[10px] font-black text-foreground/20 tracking-[0.5em] uppercase">Limited Intake for 2026</span>
+                                    <span className="text-[10px] font-orbitron font-black text-white/20 tracking-[0.5em] uppercase">Limited Intake for 2026</span>
                                 </div>
                             </div>
 
-                            {/* Robot Image */}
-                            <div className="w-full lg:w-1/2 relative">
-                                <div className="aspect-square w-full lg:w-[500px] mx-auto bg-black/40 rounded-full border border-foreground/5 relative group overflow-hidden flex items-center justify-center p-16 transition-all duration-1000 hover:border-accent/40">
+                            <div className="lg:w-1/2 relative flex justify-center">
+                                <motion.div
+                                    animate={{ y: [0, -15, 0] }}
+                                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                                    className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px]"
+                                >
+                                    <div className="absolute inset-0 bg-accent/20 rounded-full blur-[80px] opacity-20" />
                                     <Image
                                         src="/Other/Robo.webp"
-                                        alt="AESTR AI Robotics"
-                                        width={400}
-                                        height={400}
-                                        className="object-contain filter brightness-125 group-hover:scale-110 transition-transform duration-1000"
+                                        alt="AESTR AI Safety Robot"
+                                        fill
+                                        className="object-contain filter brightness-110"
                                     />
-                                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(216,246,2,0.1),transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity" />
-                                </div>
-                                <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/10 rounded-full blur-[100px]" />
-                                <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-accent/5 rounded-full blur-[100px]" />
+                                </motion.div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Aesthetic footer signature */}
-                <div className="mt-40 border-t border-foreground/5 py-16">
-                    <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-10 opacity-30">
-                        <p className="text-[10px] font-black tracking-[0.5em] text-foreground uppercase">AESTR AI SPECIALIZATION PROGRAM © 2026</p>
-                        <div className="flex gap-12">
-                            <Link href="/" className="text-[9px] font-black hover:text-accent transition-colors uppercase tracking-[0.4em]">Privacy</Link>
-                            <Link href="/" className="text-[9px] font-black hover:text-accent transition-colors uppercase tracking-[0.4em]">Terms</Link>
-                            <Link href="/" className="text-[9px] font-black hover:text-accent transition-colors uppercase tracking-[0.4em]">Partnerships</Link>
                         </div>
                     </div>
                 </div>
             </section>
+
+            {/* Simple Footer for Landing Page */}
+            <footer className="py-12 border-t border-white/5 bg-background">
+                <div className="container-boxed flex flex-col md:flex-row justify-between items-center gap-8 opacity-40">
+                    <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center">
+                            <Image src="/Herosection/aestr-logo.svg" alt="Aestr" width={16} height={16} />
+                        </div>
+                        <p className="text-[10px] font-orbitron font-black tracking-[0.4em] uppercase">AESTR PRO SPECIALIZATION © 2026</p>
+                    </div>
+                    <div className="flex gap-10">
+                        {['Privacy', 'Terms', 'Strategic Partners'].map(item => (
+                            <Link key={item} href="/" className="text-[9px] font-orbitron font-black text-white hover:text-accent transition-colors uppercase tracking-[0.3em]">{item}</Link>
+                        ))}
+                    </div>
+                </div>
+            </footer>
         </main>
     );
 };

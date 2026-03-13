@@ -94,6 +94,7 @@ const AboutPointFour = () => {
                                 <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:15px_15px] opacity-20 pointer-events-none" />
                                 <div className="relative z-10">
                                     <h4 className="text-xl md:text-2xl font-orbitron font-bold text-[#EAF0BD] mb-4 transition-colors flex items-center gap-2">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                                         {card.title}
                                     </h4>
                                     <p className="text-base md:text-lg text-[#EAF0BD] leading-relaxed font-normal">{card.desc}</p>

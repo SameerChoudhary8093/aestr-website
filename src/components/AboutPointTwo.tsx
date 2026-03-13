@@ -21,10 +21,9 @@ const AboutPointTwo = () => {
                             2
                         </div>
                         <div className="space-y-6 text-left">
-                            <div className="space-y-1">
-                                <h3 className="text-2xl md:text-4xl lg:text-5xl font-orbitron font-bold text-foreground leading-tight tracking-tight">Built By</h3>
-                                <p className="text-2xl md:text-4xl lg:text-5xl font-serif italic text-foreground leading-tight tracking-tight opacity-90">AI Engineers</p>
-                            </div>
+                                <h3 className="text-2xl md:text-4xl lg:text-5xl font-orbitron font-bold text-foreground leading-tight tracking-tight">
+                                    Built By <span className="font-serif italic opacity-90 ml-2">AI Engineers</span>
+                                </h3>
                             <p className="text-lg md:text-xl text-foreground/90 leading-relaxed max-w-4xl font-bold">
                                 Learn from the architects of tomorrow’s AI. AESTR is the brainchild of leading AI engineers dedicated to cultivating the next generation of tech innovators.
                             </p>

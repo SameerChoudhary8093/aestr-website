@@ -87,6 +87,7 @@ const FutureFaculty = () => {
                         <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:15px_15px] opacity-20 pointer-events-none" />
                         <div className="relative z-10">
                             <h4 className="text-xl md:text-3xl font-orbitron font-bold text-foreground mb-4 md:mb-6 flex items-center gap-3 group-hover:text-accent transition-colors">
+                                 <span className="w-2 h-2 rounded-full bg-accent" />
                                  AI Teachers
                             </h4>
                             <p className="text-base md:text-lg text-foreground/90 leading-relaxed font-bold">
@@ -105,6 +106,7 @@ const FutureFaculty = () => {
                         <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:15px_15px] opacity-20 pointer-events-none" />
                         <div className="relative z-10">
                             <h4 className="text-xl md:text-3xl font-orbitron font-bold text-foreground mb-4 md:mb-6 flex items-center gap-3 group-hover:text-accent transition-colors">
+                                 <span className="w-2 h-2 rounded-full bg-accent" />
                                  Humanoid Robot Teachers
                             </h4>
                             <p className="text-base md:text-lg text-foreground/90 leading-relaxed font-bold">

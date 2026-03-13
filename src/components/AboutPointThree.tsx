@@ -32,13 +32,13 @@ const VideoPlayer = ({ src }: { src: string }) => {
 
             {/* Play Button Overlay */}
             {!isPlaying && (
-                <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-all">
-                    <div className="w-16 h-16 md:w-20 md:h-20 bg-accent rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(215,246,1,0.5)] transform transition-transform group-hover:scale-110">
+                <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-all duration-500">
+                    <div className="w-16 h-16 md:w-20 md:h-20 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full flex items-center justify-center shadow-2xl transform transition-transform group-hover:scale-110 group-hover:bg-white/20">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"
                             fill="currentColor"
-                            className="w-8 h-8 md:w-10 md:h-10 text-black ml-1"
+                            className="w-8 h-8 md:w-10 md:h-10 text-white ml-1"
                         >
                             <path d="M8 5.14v14l11-7-11-7z" />
                         </svg>
@@ -72,12 +72,9 @@ const AboutPointThree = () => {
                             </div>
                             <div className="space-y-6 text-left">
                                 <div className="space-y-1">
-                                    <h3 className="text-2xl md:text-4xl lg:text-5xl font-orbitron font-bold text-black leading-tight tracking-tight">
-                                        Targeting
+                                    <h3 className="text-2xl md:text-4xl lg:text-5xl font-orbitron font-bold text-black leading-tight tracking-tight capitalize">
+                                        Targeting <span className="font-serif italic opacity-90">In-Demand Careers Of 2030</span>
                                     </h3>
-                                    <p className="text-2xl md:text-4xl lg:text-5xl font-serif italic leading-tight tracking-tight text-black opacity-90">
-                                        In-Demand Careers Of 2030
-                                    </p>
                                 </div>
                                 <p className="text-lg md:text-xl text-black/90 leading-relaxed max-w-xl font-bold">
                                     Train for roles powering the next generation of banking, robotics, healthcare, and more—with real-world impact and future security.

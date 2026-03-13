@@ -46,7 +46,7 @@ const ExecutionTeam = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="text-center mb-16 md:mb-20 space-y-4 px-4"
+                    className="text-center mb-16 md:mb-20 space-y-4"
                 >
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold text-white leading-tight">
                         Execution <span className="text-accent italic">team</span>

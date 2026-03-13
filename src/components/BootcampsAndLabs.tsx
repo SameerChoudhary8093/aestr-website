@@ -6,10 +6,10 @@ import { motion } from 'framer-motion';
 
 
 const labs = [
-    { name: 'Apple Ecosystem', image: '/Other/lab-5.webp', description: 'Master cutting-edge development inside the Apple environment. Work with iOS, macOS, and VisionOS architectures.', icon: 'apple' },
-    { name: 'NVIDIA Pipeline', image: '/Other/lab-4.webp', description: 'Dive deep into GPU-accelerated computing and CUDA. Build the hardware intelligence that moves the modern data center.', icon: 'nvidia' },
-    { name: 'RISC-V Lab', image: '/Other/lab-3.webp', description: 'Engineer the future with India\'s pioneering semiconductor technology. Design chips and low-level systems for the AI era.', icon: 'chip' },
-    { name: 'Embodied Brain Lab', image: '/Other/lab-2.webp', description: 'Dive into Robotics, Exoskeletons, and ROS on Nvidia Jetson. Build physical intelligence that moves and interacts with the real world.', icon: 'robotics' }
+    { name: 'Apple Ecosystem', image: '/Other/lab-5.webp', description: 'Master the art of building world-class applications within the premium Apple environment. From deep dives into Swift and SwiftUI to exploring advanced architectures for macOS, iOS, and the revolutionary VisionOS, you will gain hands-on experience with the tools that power the most elegant user experiences. This lab provides a unique opportunity to understand the synergy between high-end hardware and intuitive software design, preparing you for elite development roles worldwide.', icon: 'apple' },
+    { name: 'NVIDIA Pipeline', image: '/Other/lab-4.webp', description: 'Harness the massive power of GPU-accelerated computing in our high-performance NVIDIA lab. Master CUDA programming, TensorRT optimization, and the foundational software stacks that drive today’s generative AI and deep learning breakthroughs. You will build the data-intensive intelligence that moves the modern cloud and data center, positioning yourself at the core of the infrastructure revolution. By bridging the gap between raw compute power and algorithmic excellence, you become an architect of the AI-driven future.', icon: 'nvidia' },
+    { name: 'RISC-V Lab', image: '/Other/lab-3.webp', description: 'Take your place at the forefront of India\'s semiconductor sovereignty in our pioneering RISC-V hardware lab. Students engage in the complete lifecycle of chip design, from RTL development to physical implementation of custom silicon for AI-specific workloads. By mastering open-source hardware architectures, you will be prepared to engineer the systems that define the next generation of global computing. This hands-on experience with silicon logic ensures you understand the fundamental building blocks of modern digital civilization.', icon: 'chip' },
+    { name: 'Embodied Brain Lab', image: '/Other/lab-2.webp', description: 'Experience the convergence of neural intelligence and physical machines in our robotics and autonomous systems lab. Using the NVIDIA Jetson platform and ROS, you will build robots that can perceive, reason, and react to real-time environments with machine precision. This lab focuses on creating advanced exoskeletons and smart robotics that will redefine the future of healthcare, logistics, and industrial automation. You will learn to breathe life into metal and silicon, mastering the complex interplay of computer vision and mechanical control.', icon: 'robotics' }
 ];
 
 const BootcampsAndLabs = () => {
@@ -22,7 +22,7 @@ const BootcampsAndLabs = () => {
                 <div className="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
 
 
-                <div className="container mx-auto px-6 relative z-10">
+                <div className="container-boxed relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -100,6 +100,7 @@ const BootcampsAndLabs = () => {
                                     <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:15px_15px] opacity-20 pointer-events-none" />
                                     <div className="relative z-10">
                                         <h4 className="text-xl font-orbitron font-bold text-foreground mb-4 group-hover:text-accent transition-colors flex items-center gap-2">
+                                            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                                             {card.title}
                                         </h4>
                                         <p className="text-foreground/60 text-sm leading-relaxed font-medium">{card.desc}</p>
@@ -128,7 +129,7 @@ const BootcampsAndLabs = () => {
                                 </div>
                                 <div className="space-y-4">
                                     <h2 className="text-4xl md:text-5xl font-orbitron font-bold text-foreground flex items-center gap-4">
-                                        Innovation labs of 2030
+                                        Innovation labs <span className="text-accent italic">of 2030</span>
                                     </h2>
                                     <p className="text-lg text-foreground/50 max-w-3xl leading-relaxed">
                                         Learn from the architects of tomorrow's AI. AESTR is the brainchild of leading AI engineers dedicated to cultivating the next generation of tech innovators.
@@ -197,7 +198,7 @@ const BootcampsAndLabs = () => {
                                             </p>
                                         </div>
                                         <button className="flex items-center gap-3 group text-accent font-orbitron uppercase tracking-[0.25em] text-[10px] font-black hover:text-foreground transition-all duration-300 py-2">
-                                            <span>Explore Documentation</span>
+                                            <span>View More</span>
                                             <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
                                         </button>
                                     </div>

@@ -92,7 +92,7 @@ const CareerCarousel = () => {
     return (
         <section className="relative py-24 bg-background-alt overflow-hidden">
             <div className="container-boxed mb-16">
-                <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 px-4">
+                <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
                     <div className="space-y-4 text-left">
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold text-foreground leading-tight uppercase tracking-tighter">
                             Future <span className="text-accent italic">Careers</span>

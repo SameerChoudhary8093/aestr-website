@@ -1,8 +1,52 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
+
+const YouTubePlayer = ({ videoId, title }: { videoId: string; title: string }) => {
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    if (isPlaying) {
+        return (
+            <iframe
+                src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`}
+                title={title}
+                className="w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+            ></iframe>
+        );
+    }
+
+    return (
+        <div 
+            className="relative w-full h-full cursor-pointer group"
+            onClick={() => setIsPlaying(true)}
+        >
+            <Image 
+                src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
+                alt={title}
+                fill
+                className="object-cover transition-transform duration-1000 group-hover:scale-105"
+            />
+            {/* Transparent Play Button Overlay */}
+            <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-all duration-500">
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full flex items-center justify-center shadow-2xl transform transition-all duration-500 group-hover:scale-110 group-hover:bg-white/20">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        className="w-8 h-8 md:w-10 md:h-10 text-white ml-1"
+                    >
+                        <path d="M8 5.14v14l11-7-11-7z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    );
+};
 
 const AboutTopOnePercent = () => {
     return (
@@ -39,13 +83,10 @@ const AboutTopOnePercent = () => {
                     <div className="glass p-5 md:p-8 rounded-2xl md:rounded-3xl grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 items-center overflow-hidden">
                         {/* Left: Video Embed */}
                         <div className="aspect-video w-full rounded-xl md:rounded-2xl border border-white/10 overflow-hidden shadow-2xl relative group bg-black">
-                            <iframe
-                                src="https://www.youtube.com/embed/mA3Z2VYMNXo?rel=0&modestbranding=1"
-                                title="B.Tech for The top 1%"
-                                className="w-full h-full"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            ></iframe>
+                            <YouTubePlayer 
+                                videoId="mA3Z2VYMNXo" 
+                                title="B.Tech for The top 1%" 
+                            />
                         </div>
 
                         {/* Right: Specializations */}
@@ -54,21 +95,21 @@ const AboutTopOnePercent = () => {
                                 <h3 className="text-xl md:text-2xl font-orbitron font-bold text-foreground leading-tight">B.Tech Computer Science & Engineering</h3>
 
                                 <div className="space-y-4 md:space-y-6">
-                                    <h4 className="text-[11px] md:text-xs font-orbitron tracking-[0.2em] text-foreground/40 font-bold uppercase">Major specialization</h4>
-                                    <div className="flex flex-wrap gap-2 md:gap-4">
-                                        {["Software engineering", "Cloud engineering", "Data science", "AI & ML", "Cyber security"].map((item) => (
-                                            <span key={item} className="px-6 py-3 text-sm md:text-base bg-accent/10 text-accent border border-accent/20 rounded-full font-bold tracking-tight hover:bg-accent/20 transition-all cursor-default">
+                                    <h4 className="text-base md:text-lg font-roboto text-white font-medium">Major Specialization</h4>
+                                    <div className="flex flex-wrap gap-2 md:gap-3">
+                                        {["Software Engineering", "Cloud Engineering", "Data Science", "Artificial Intelligence & Machine Learning", "Cyber Security"].map((item) => (
+                                            <span key={item} className="px-5 py-2.5 text-sm md:text-base bg-foreground/5 border border-foreground/10 text-foreground/80 rounded-lg font-medium transition-all cursor-default hover:border-accent/40 hover:text-accent">
                                                 {item}
                                             </span>
                                         ))}
                                     </div>
                                 </div>
 
-                                <div className="space-y-4 md:space-y-6">
-                                    <h4 className="text-[11px] md:text-xs font-orbitron tracking-[0.2em] text-foreground/40 font-bold italic text-white/40">Minor specialization...</h4>
-                                    <div className="flex flex-wrap gap-2 md:gap-4">
-                                        {["Robotics", "Bioinformatics", "Industry & manufacturing", "Design", "Fintech", "Nanotechnology", "Geoinformatics", "Chip & semiconductor", "Smart cities"].map((item) => (
-                                            <span key={item} className="px-6 py-3 text-sm md:text-base bg-foreground/5 border border-foreground/10 rounded-full text-foreground/70 hover:border-accent/40 hover:text-accent transition-all cursor-default font-bold tracking-tight">
+                                <div className="space-y-4 md:space-y-6 pt-4">
+                                    <h4 className="text-base md:text-lg font-roboto text-white font-medium">Minor specialization along with one Major</h4>
+                                    <div className="flex flex-wrap gap-2 md:gap-2.5">
+                                        {["Robotics", "Bioinformatics", "Industry & Manufacturing", "Design", "Fintech", "Nanotechnology", "Geoinformatics", "Chip & Semiconductor", "Smart Cities"].map((item) => (
+                                            <span key={item} className="px-4 md:px-5 py-2 md:py-2.5 text-xs md:text-sm bg-foreground/5 border border-foreground/10 text-foreground/80 rounded-lg font-medium transition-all cursor-default hover:border-accent/40 hover:text-accent whitespace-nowrap">
                                                 {item}
                                             </span>
                                         ))}
