@@ -44,7 +44,7 @@ const Navbar = () => {
                 />
 
                 {/* Navbar Content */}
-                <div className="flex items-center justify-between relative z-10 w-full px-6 md:px-10">
+                <div className="flex items-center justify-between relative z-10 w-full pl-6 md:pl-10 pr-3 md:pr-6">
                     {/* Left: AESTR Logo */}
                     <div className="flex-1 flex justify-start">
                         <Link href="/#hero" className="flex items-center group/logo">
@@ -81,17 +81,39 @@ const Navbar = () => {
                     </div>
 
                     {/* Right: Partner Logos & Mobile Toggle */}
-                    <div className="flex-1 flex items-center justify-end space-x-6">
-                        <div className="hidden xl:flex items-center space-x-6">
+                    <div className="flex-1 flex items-center justify-end space-x-0">
+                        <div className="hidden xl:flex items-center">
                             <div className="h-6 w-px bg-white/10" />
-                            <div className="relative h-12 w-[240px] transition-all duration-500 hover:brightness-125">
-                                <Image
-                                    src="/Herosection/SGVU-NIRF-NAAC.webp"
-                                    alt="SGVU Partners"
-                                    fill
-                                    className="object-contain object-right"
-                                    priority
-                                />
+                            <div className="flex items-center gap-3">
+                                <div className="relative h-14 w-48 transition-all duration-500 hover:scale-105">
+                                    <Image
+                                        src="/Herosection/sgvu-logo.png"
+                                        alt="SGVU Logo"
+                                        fill
+                                        className="object-contain object-left brightness-0 invert"
+                                        priority
+                                    />
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <div className="relative h-16 w-16 bg-white p-0 rounded-xl shadow-sm transition-all duration-500 hover:scale-110 flex items-center justify-center overflow-hidden">
+                                        <Image
+                                            src="/Herosection/Nirf_dot_small-removebg-preview.png"
+                                            alt="NIRF 101-150"
+                                            fill
+                                            className="object-contain scale-110"
+                                            priority
+                                        />
+                                    </div>
+                                    <div className="relative h-16 w-16 bg-white p-0 rounded-xl shadow-sm transition-all duration-500 hover:scale-110 flex items-center justify-center overflow-hidden">
+                                        <Image
+                                            src="/Herosection/naac_equal_-removebg-preview.png"
+                                            alt="NAAC A+"
+                                            fill
+                                            className="object-contain scale-125"
+                                            priority
+                                        />
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -151,8 +173,16 @@ const Navbar = () => {
                             ))}
                         </div>
                         <div className="pt-10 border-t border-white/10 text-left">
-                            <div className="relative h-16 w-full max-w-[300px]">
-                                <Image src="/Herosection/SGVU-NIRF-NAAC.webp" alt="SGVU" fill className="object-contain object-left" />
+                            <div className="flex items-center gap-3">
+                                <div className="relative h-14 w-44">
+                                    <Image src="/Herosection/sgvu-logo.png" alt="SGVU" fill className="object-contain object-left brightness-0 invert" />
+                                </div>
+                                <div className="relative h-16 w-16 bg-white p-0 rounded-xl flex items-center justify-center overflow-hidden">
+                                    <Image src="/Herosection/Nirf_dot_small-removebg-preview.png" alt="NIRF" fill className="object-contain scale-110" />
+                                </div>
+                                <div className="relative h-16 w-16 bg-white p-0 rounded-xl flex items-center justify-center overflow-hidden">
+                                    <Image src="/Herosection/naac_equal_-removebg-preview.png" alt="NAAC" fill className="object-contain scale-125" />
+                                </div>
                             </div>
                         </div>
                     </motion.div>

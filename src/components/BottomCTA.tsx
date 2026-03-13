@@ -13,7 +13,7 @@ const BottomCTA = () => {
                     {/* Wide Glassmorphism Container */}
                     <div className="glass !bg-purple/10 p-8 md:p-16 rounded-[2rem] md:rounded-[3.5rem] border-white/5 relative overflow-hidden group">
                         <div className="absolute -top-24 -right-24 w-96 h-96 bg-accent/5 blur-[100px] rounded-full pointer-events-none group-hover:bg-accent/10 transition-all duration-700" />
-                        
+
                         <div className="flex flex-col lg:flex-row items-center gap-10 md:gap-16 relative z-10">
                             {/* Left Side (Content) */}
                             <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-6 md:space-y-10 text-left">
@@ -64,20 +64,50 @@ const BottomCTA = () => {
                 <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:40px_40px]" />
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="flex flex-col items-center text-center space-y-2">
-                        <div className="relative w-24 md:w-32 h-8 md:h-12">
-                            <Image 
-                                src="/Herosection/SGVU-NIRF-NAAC.webp" 
-                                alt="SGVU Rankings" 
-                                fill 
-                                className="object-contain brightness-[1.2]"
-                            />
+                        <div className="flex flex-col md:flex-row items-center gap-4 mb-6">
+                            <div className="relative w-64 h-16 transition-all duration-500 hover:scale-105">
+                                <Image
+                                    src="/Herosection/sgvu-logo.png"
+                                    alt="SGVU Logo"
+                                    fill
+                                    className="object-contain brightness-0 invert"
+                                />
+                            </div>
+                            <div className="flex gap-4">
+                                <div className="relative w-24 h-24 bg-white p-0 rounded-2xl shadow-lg flex items-center justify-center transition-all duration-500 hover:scale-110 overflow-hidden">
+                                    <Image
+                                        src="/Herosection/Nirf_dot_small-removebg-preview.png"
+                                        alt="NIRF"
+                                        fill
+                                        className="object-contain scale-110"
+                                    />
+                                </div>
+                                <div className="relative w-24 h-24 bg-white p-0 rounded-2xl shadow-lg flex items-center justify-center transition-all duration-500 hover:scale-110 overflow-hidden">
+                                    <Image
+                                        src="/Herosection/naac_equal_-removebg-preview.png"
+                                        alt="NAAC"
+                                        fill
+                                        className="object-contain scale-125"
+                                    />
+                                </div>
+                            </div>
                         </div>
-                        <div className="flex items-center gap-4 text-white/60">
-                            <h3 className="text-[10px] md:text-xs font-orbitron font-extrabold tracking-[0.2em] text-white">NAAC A+</h3>
-                            <div className="w-1 h-1 bg-white/20 rounded-full" />
-                            <p className="text-[10px] md:text-xs font-orbitron font-medium tracking-[0.1em]">NIRF Ranked 101-150</p>
+                        <div className="flex flex-col items-center gap-4 text-white/60">
+                            <div className="flex items-center gap-4">
+                                <h3 className="text-[10px] md:text-xs font-orbitron font-extrabold tracking-[0.2em] text-white">NAAC A+</h3>
+                                <div className="w-1 h-1 bg-white/20 rounded-full" />
+                                <p className="text-[10px] md:text-xs font-orbitron font-medium tracking-[0.1em]">NIRF Ranked 101-150</p>
+                            </div>
+
+                            {/* Contact Section - Toll Free Number */}
+                            <div className="flex flex-col items-center gap-1 group/phone cursor-pointer">
+                                <p className="text-[9px] font-orbitron font-medium text-white/30 uppercase tracking-[0.2em]">Contact</p>
+                                <div className="flex items-center gap-3 text-accent group-hover/phone:text-white transition-colors duration-300">
+                                    <span className="text-[10px] md:text-sm font-semibold tracking-widest font-orbitron">Toll free number - 1800 - 309 - 4545</span>
+                                </div>
+                            </div>
                         </div>
-                        <div className="pt-2 border-t border-white/10 w-full max-w-[200px]">
+                        <div className="pt-4 border-t border-white/10 w-full max-w-[200px]">
                             <p className="text-[8px] md:text-[9px] font-medium text-white/30 tracking-[0.4em] font-orbitron uppercase">
                                 AESTR &copy; 2026
                             </p>
