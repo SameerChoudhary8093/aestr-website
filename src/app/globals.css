@@ -13,6 +13,7 @@
   
   --font-orbitron: "Orbitron", sans-serif;
   --font-roboto: "Roboto", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
 }
 
 @theme {
@@ -28,6 +29,7 @@
   
   --font-orbitron: var(--font-orbitron);
   --font-roboto: var(--font-roboto);
+  --font-outfit: var(--font-outfit);
 
   --container-3xl: 1800px;
 }

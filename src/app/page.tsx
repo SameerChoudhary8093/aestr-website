@@ -12,7 +12,6 @@ import FutureFaculty from "@/components/FutureFaculty";
 import Pathways from "@/components/Pathways";
 import PlacementPartners from "@/components/PlacementPartners";
 import ExecutionTeam from "@/components/ExecutionTeam";
-import BottomCTA from "@/components/BottomCTA";
 import StickyAdmissionsBar from "@/components/StickyAdmissionsBar";
 
 export default function Home() {
@@ -33,7 +32,6 @@ export default function Home() {
       <Pathways />
       <PlacementPartners />
       <ExecutionTeam />
-      <BottomCTA />
     </main>
   );
 }

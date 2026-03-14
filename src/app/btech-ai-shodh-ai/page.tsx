@@ -52,111 +52,136 @@ const minimumSteps = [
 ];
 
 const BtechAIShodhAI = () => {
+    const [currentImage, setCurrentImage] = useState(0);
+    const heroImages = ['/Other/hero-campus.jpg', '/Other/hero-lab.jpg'];
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentImage((prev) => (prev + 1) % heroImages.length);
+        }, 4000);
+        return () => clearInterval(timer);
+    }, []);
+
     return (
         <main className="bg-background min-h-screen text-foreground overflow-x-hidden selection:bg-accent selection:text-black">
-
-            {/* ── HERO ─────────────────────────────────────────────────── */}
-            <section className="relative min-h-screen flex items-center pt-24 pb-0 overflow-hidden" style={{ backgroundColor: '#5B1DD6' }}>
-                {/* Purple gradient layers */}
+            
+            {/* Hero Section */}
+            <section className="relative w-full h-[884px] overflow-hidden flex items-center">
+                {/* Background Slider */}
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #3a0fa8 0%, #5B1DD6 50%, #7b2ff7 100%)' }} />
-                    {/* Circuit line art overlay */}
-                    <svg className="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <pattern id="circuit" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
-                                <path d="M0 40 H30 M50 40 H80 M40 0 V30 M40 50 V80" stroke="#D8F602" strokeWidth="0.8" fill="none" />
-                                <circle cx="40" cy="40" r="4" stroke="#D8F602" strokeWidth="0.8" fill="none" />
-                                <circle cx="0" cy="40" r="2" fill="#D8F602" opacity="0.6" />
-                                <circle cx="80" cy="40" r="2" fill="#D8F602" opacity="0.6" />
-                            </pattern>
-                        </defs>
-                        <rect width="100%" height="100%" fill="url(#circuit)" />
-                    </svg>
-                    {/* City silhouette */}
-                    <svg className="absolute bottom-0 left-0 w-full opacity-15" viewBox="0 0 1440 300" preserveAspectRatio="none">
-                        <path d="M0,300 L0,200 L60,200 L60,150 L120,150 L120,100 L180,100 L180,180 L240,180 L240,120 L300,120 L300,80 L360,80 L360,140 L420,140 L420,160 L480,160 L480,90 L540,90 L540,60 L600,60 L600,130 L660,130 L660,170 L720,170 L720,100 L780,100 L780,140 L840,140 L840,70 L900,70 L900,120 L960,120 L960,160 L1020,160 L1020,100 L1080,100 L1080,80 L1140,80 L1140,150 L1200,150 L1200,180 L1260,180 L1260,120 L1320,120 L1320,200 L1380,200 L1380,180 L1440,180 L1440,300 Z" fill="#D8F602" />
-                    </svg>
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={currentImage}
+                            initial={{ opacity: 0, scale: 1.1 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 1.2, ease: "easeInOut" }}
+                            className="absolute inset-0"
+                        >
+                            <Image 
+                                src={heroImages[currentImage]}
+                                alt="AESTR Environment"
+                                fill
+                                className="absolute inset-0 w-full h-full object-cover brightness-[0.4]"
+                                priority
+                            />
+                        </motion.div>
+                    </AnimatePresence>
+                    
+                    {/* Dark Gradient Overlay consistent with user's code */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent z-10" />
                 </div>
 
-                {/* Floating glows */}
-                <div className="absolute top-1/4 right-1/3 w-[500px] h-[500px] rounded-full blur-[200px] pointer-events-none z-0" style={{ backgroundColor: 'rgba(216,246,2,0.12)' }} />
-                <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] rounded-full blur-[160px] pointer-events-none z-0" style={{ backgroundColor: 'rgba(91,29,214,0.5)' }} />
+                {/* Content Container Integrated with container-boxed for consistency */}
+                <div className="container-boxed relative z-20 flex flex-col justify-end h-full pb-24 md:pb-32">
+                    <motion.div 
+                        initial={{ opacity: 0, x: -30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1, delay: 0.2 }}
+                        className="max-w-4xl space-y-6"
+                    >
+                        <h1 className="text-white text-[55px] font-outfit font-semibold max-w-[900px] leading-[65px] tracking-tight">
+                            This Isn't College. It's A <br />
+                            4-Year Internship
+                        </h1>
+                        <p className="text-white text-xl md:text-2xl max-w-2xl opacity-100 font-serif leading-relaxed">
+                            At AESTR Pro, every student becomes an intern from day one. Learn by doing. Lead by innovating.
+                        </p>
+                        
+                        <div className="pt-4">
+                            <button className="btn-aestr !px-12 !py-5">
+                                APPLY FOR 2026 INTAKE
+                                <span className="ml-3 transition-transform group-hover:translate-x-1 duration-300">↗</span>
+                            </button>
+                        </div>
+                    </motion.div>
+                </div>
+            </section>            {/* Section 1: The Crisis */}
+            <section className="py-24 relative overflow-hidden bg-background text-foreground">
+                {/* Subtle Background 'A' or shapes */}
+                <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0 opacity-[0.03] flex items-center justify-center">
+                    <span className="text-[60rem] font-orbitron font-black select-none">A</span>
+                </div>
 
-                <div className="container-boxed relative z-10 w-full">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center min-h-[85vh] py-16">
-
-                        {/* Left */}
-                        <motion.div
-                            initial={{ opacity: 0, x: -40 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                <div className="container-boxed relative z-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <motion.div 
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
                             className="space-y-8"
                         >
-                            {/* Badges row */}
-                            <div className="flex items-center gap-4 flex-wrap">
-                                <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-                                    <span className="text-[10px] font-orbitron font-black text-white/80 tracking-[0.3em] uppercase">AESTR · Gyan Vihar</span>
+                            <div className="space-y-6">
+                                {/* Numbered Circle - Dark Theme */}
+                                <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-serif italic text-purple shadow-lg border border-purple/30">
+                                    1
                                 </div>
-                                <div className="px-4 py-2 rounded-full border border-accent/40 bg-accent/10">
-                                    <span className="text-[10px] font-orbitron font-black text-accent tracking-[0.25em] uppercase">B.Tech AI · Shodh AI</span>
-                                </div>
-                            </div>
-
-                            {/* Main headline */}
-                            <div className="space-y-2">
-                                <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-orbitron font-black leading-[0.85] uppercase tracking-tighter text-accent">
-                                    THE B.TECH<br />IS DEAD.
-                                </h1>
-                                <h2 className="text-2xl sm:text-3xl md:text-4xl font-orbitron font-black leading-tight uppercase tracking-tight text-white">
-                                    WELCOME TO THE<br />ENGINEERING RESIDENCY.
+                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-outfit font-bold text-foreground leading-tight tracking-tight">
+                                    The Crisis Of Indian Engineering
                                 </h2>
-                            </div>
-
-                            <p className="text-lg md:text-xl text-white/75 font-bold leading-relaxed max-w-lg">
-                                A 4-Year Silicon Valley Incubator.<br />The degree? Just a byproduct.
-                            </p>
-
-                            {/* CTA */}
-                            <div className="flex flex-col sm:flex-row gap-5 items-start pt-4">
-                                <button className="btn-aestr !px-12 !py-5 group">
-                                    APPLY FOR 2026 INTAKE
-                                    <span className="ml-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">↗</span>
-                                </button>
-                                <div className="flex items-center gap-3 self-center">
-                                    <div className="w-1 h-1 rounded-full bg-white/40" />
-                                    <span className="text-[10px] font-orbitron font-black text-white/35 tracking-[0.3em] uppercase">Only 60 Seats</span>
+                                <h3 className="text-2xl md:text-3xl font-serif font-medium text-foreground/80">
+                                    A Generation of "Un-hirable" Talent
+                                </h3>
+                                <div className="space-y-6 text-lg text-foreground/70 leading-relaxed font-medium">
+                                    <p>
+                                        For too long, the story of engineering in India has been a paradox. We produce millions of engineers, yet industries lament a scarcity of "hirable" talent.
+                                    </p>
+                                    <p>
+                                        The truth is, our traditional engineering education system, built for a bygone era, has created a generation of graduates who are armed with theoretical knowledge but lack the practical skills to make a real-world impact.
+                                    </p>
+                                    <p>
+                                        They are often unequipped to tackle the complex challenges of the modern world, leaving them struggling to find their place in a competitive global landscape. This disconnect between what is taught and what is needed has led to a crisis of confidence, not just in our engineers, but in our ability to innovate and build a better future for India.
+                                    </p>
                                 </div>
                             </div>
                         </motion.div>
 
-                        {/* Right – VR/AR image */}
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-                            className="relative flex justify-center lg:justify-end"
+                        <motion.div 
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            className="relative grid grid-cols-1 sm:grid-cols-2 gap-6"
                         >
-                            <div className="relative w-full max-w-sm lg:max-w-none lg:w-[500px] h-[480px] lg:h-[620px]">
-                                <div className="absolute inset-0 rounded-[3rem] overflow-hidden">
-                                    <Image
-                                        src="/Other/Bootcamp.webp"
-                                        alt="Engineering Residency"
+                            <div className="bg-[#181818] p-2 rounded-xl shadow-2xl rotate-[-2deg] hover:rotate-0 transition-transform duration-500 border border-white/5">
+                                <div className="aspect-[4/5] relative overflow-hidden rounded-lg">
+                                    <Image 
+                                        src="/Other/patent-ai.png" 
+                                        alt="IIT Placement News 1"
                                         fill
-                                        className="object-cover brightness-90"
-                                        priority
+                                        className="object-cover"
                                     />
-                                    <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, transparent 40%, #5B1DD6 100%)' }} />
-                                    <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(91,29,214,0.3) 0%, transparent 60%)' }} />
                                 </div>
-                                {/* Floating stat chip */}
-                                <div className="absolute top-8 right-8 bg-accent text-black px-5 py-3 rounded-2xl font-orbitron font-black text-xs uppercase tracking-wider shadow-xl">
-                                    Elite 60 Seats
-                                </div>
-                                <div className="absolute bottom-8 left-8 flex items-center gap-3 bg-black/50 backdrop-blur-md border border-white/10 px-5 py-3 rounded-2xl">
-                                    <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                                    <span className="text-xs font-orbitron font-black text-white tracking-widest uppercase">NVIDIA · Shodh AI</span>
+                            </div>
+                             <div className="bg-[#181818] p-2 rounded-xl shadow-2xl rotate-[2deg] hover:rotate-0 transition-transform duration-500 border border-white/5 sm:translate-y-8">
+                                <div className="aspect-[4/5] relative overflow-hidden rounded-lg">
+                                    <Image 
+                                        src="/Other/AI-faculty.png" 
+                                        alt="IIT Placement News 2"
+                                        fill
+                                        className="object-cover"
+                                    />
                                 </div>
                             </div>
                         </motion.div>
@@ -164,186 +189,104 @@ const BtechAIShodhAI = () => {
                 </div>
             </section>
 
-            {/* ── BY 2030 ──────────────────────────────────────────────── */}
-            <section className="py-28 relative overflow-hidden bg-background">
-                <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full blur-[200px] pointer-events-none" style={{ backgroundColor: 'rgba(91,29,214,0.12)' }} />
-                <div className="container-boxed relative z-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+            {/* Section 2: Introducing */}
+            <section className="py-24 relative overflow-hidden bg-background-alt">
+                {/* Blurred Background Elements */}
+                <div className="absolute inset-0 z-0 overflow-hidden">
+                    <div className="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] bg-[#5B1DD6] rounded-full blur-[120px] opacity-20" />
+                    <div className="absolute bottom-[-10%] left-[-10%] w-[60%] h-[60%] bg-[#D7F601] rounded-full blur-[120px] opacity-10" />
+                    <Image 
+                        src="/Other/lab-2.webp"
+                        alt="Background"
+                        fill
+                        className="object-cover opacity-20 blur-sm"
+                    />
+                </div>
 
-                        {/* Image */}
+                <div className="container-boxed relative z-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.9 }}
-                            className="relative group"
+                            transition={{ duration: 0.8 }}
+                            className="space-y-8"
                         >
-                            <div className="aspect-[4/3] rounded-[3rem] overflow-hidden border border-white/8 relative">
-                                <Image src="/Other/lab-1.webp" alt="AI Lab" fill className="object-cover brightness-75 group-hover:brightness-100 group-hover:scale-105 transition-all duration-1000" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-purple/20" />
-                            </div>
-                            {/* Floating card */}
-                            <div className="absolute -bottom-4 -right-4 glass px-6 py-4 rounded-2xl border-accent/20">
-                                <p className="text-[10px] font-orbitron font-black text-accent uppercase tracking-widest mb-1">NIRF · NAAC A+</p>
-                                <p className="text-xs text-white/50 font-bold">India Govt Recognized</p>
+                            <div className="space-y-6">
+                                {/* Numbered Circle - Purple */}
+                                <div className="w-20 h-20 rounded-full bg-[#E8E2FF]/20 backdrop-blur-md flex items-center justify-center text-4xl font-serif italic text-white border border-white/10 shadow-xl">
+                                    2
+                                </div>
+                                <h2 className="text-4xl md:text-5xl lg:text-5xl font-outfit font-bold text-white leading-tight tracking-tight">
+                                    Introducing B.TECH AESTR PRO :
+                                </h2>
+                                <h3 className="text-2xl md:text-3xl font-serif font-medium text-white/90">
+                                    Your 4-Year Internship Starts Now
+                                </h3>
+                                <div className="space-y-6 text-lg text-white/80 leading-relaxed font-medium">
+                                    <p>
+                                        AESTR PRO eliminates the gap between education and industry. From day one, you are a full-time engineering intern at our AI research partner, Shodh AI.
+                                    </p>
+                                    <p>
+                                        Your schedule is 9-to-5. Your mentors are senior engineers. Your projects are real.
+                                    </p>
+                                    <p>
+                                        Your deliverable in four years? A B.Tech. degree and a portfolio that proves you are already a Senior Engineer, ready to lead.
+                                    </p>
+                                </div>
                             </div>
                         </motion.div>
 
                         {/* Text */}
                         <motion.div
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, scale: 0.9, x: 30 }}
+                            whileInView={{ opacity: 1, scale: 1, x: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.9 }}
-                            className="space-y-8"
+                            transition={{ duration: 0.8 }}
+                            className="relative flex justify-center lg:justify-end"
                         >
-                            <div className="p-8 rounded-3xl border border-purple/40 space-y-6" style={{ backgroundColor: 'rgba(91,29,214,0.15)', backdropFilter: 'blur(12px)' }}>
-                                <h2 className="text-3xl md:text-4xl font-orbitron font-black text-white leading-tight">
-                                    By 2030, AI will code basics, analyze data, and build apps.
-                                </h2>
-                                <p className="text-base text-white/65 leading-relaxed font-medium">
-                                    Traditional IT jobs vanish. Whiteboard syntax? Obsolete. AESTR isn't college—it's a residency.
-                                    Join deployment teams, tackle Jira tickets, build deployment history.
-                                    No homework, no resumes—just real impact.
-                                </p>
-                                <div className="flex items-center gap-3 pt-2">
-                                    <div className="h-px flex-1 bg-accent/30" />
-                                    <span className="text-[10px] font-orbitron font-black text-accent tracking-[0.4em] uppercase">The Residency Model</span>
-                                    <div className="h-px flex-1 bg-accent/30" />
+                            {/* Student Image with Arch */}
+                            <div className="relative w-full max-w-[450px]">
+                                {/* Yellow Arch Frame */}
+                                <div className="absolute inset-[-15px] border-4 border-accent rounded-t-full pointer-events-none z-10 opacity-60" />
+                                <div className="relative aspect-[4/5] rounded-t-full overflow-hidden border-4 border-white/10 shadow-2xl">
+                                    <Image 
+                                        src="/Other/Bootcamp.webp" 
+                                        alt="Student Success"
+                                        fill
+                                        className="object-cover"
+                                    />
                                 </div>
+                                {/* Floating Particles/Dots Effect like in image */}
+                                <div className="absolute top-10 right-10 w-20 h-20 bg-white/20 rounded-full blur-2xl animate-pulse" />
                             </div>
                         </motion.div>
                     </div>
                 </div>
             </section>
 
-            {/* ── CROWN JEWEL: SHODH AI ──────────────────────────────── */}
-            <section className="py-28 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #1a0a3d 0%, #2d0e8a 50%, #3a12b0 100%)' }}>
-                <div className="absolute inset-0 opacity-8">
-                    <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <pattern id="dots2" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-                                <circle cx="20" cy="20" r="1" fill="#D8F602" opacity="0.5" />
-                            </pattern>
-                        </defs>
-                        <rect width="100%" height="100%" fill="url(#dots2)" />
-                    </svg>
-                </div>
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] rounded-full blur-[150px] pointer-events-none" style={{ backgroundColor: 'rgba(216,246,2,0.08)' }} />
-
-                <div className="container-boxed relative z-10 space-y-14">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                        className="text-center space-y-4"
-                    >
-                        <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-accent/30 bg-accent/10">
-                            <span className="text-accent text-lg">♛</span>
-                            <span className="text-[10px] font-orbitron font-black text-accent tracking-[0.35em] uppercase">Crown Jewel</span>
+            {/* Section 3: Heart of AESTR PRO (Labs) */}
+            <section className="py-24 relative overflow-hidden bg-background text-foreground">
+                <div className="container-boxed relative z-10">
+                    <div className="flex flex-col items-start mb-16 space-y-6">
+                        {/* Numbered Circle - Dark Theme */}
+                        <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-serif italic text-purple shadow-lg border border-purple/30">
+                            3
                         </div>
-                        <h2 className="text-4xl md:text-6xl font-orbitron font-black text-white leading-tight uppercase tracking-tighter">
-                            SHODH AI <span className="text-accent italic">"ELITE 60"</span>
-                        </h2>
-                        <p className="text-lg text-white/60 font-bold max-w-2xl mx-auto">
-                            B.Tech in Artificial Intelligence — Powered by SHODH AI & NVIDIA
-                        </p>
-                    </motion.div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {[
-                            {
-                                icon: '🇮🇳',
-                                title: 'B.Tech AI with Shodh AI',
-                                body: 'Shodh AI leads AI in India. Intern with the elite team. Be ready for the 2030 AI world.',
-                                tag: 'INDIA AI MISSION',
-                            },
-                            {
-                                icon: '⚡',
-                                title: 'Built With Google & NVIDIA',
-                                body: 'Indian Govt mandate to build AI for science. Shodh AI released the world\'s first Large Physics Model — Project Skanda.',
-                                tag: 'SOVEREIGN AI',
-                            },
-                            {
-                                icon: '🎯',
-                                title: 'Brutally Selective',
-                                body: 'Only 60 seats. While others code "Hello World," you fine-tune LLMs on NVIDIA Hopper GPUs.',
-                                tag: 'ELITE COHORT',
-                            },
-                        ].map((card, i) => (
-                            <motion.div
-                                key={card.title}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: i * 0.12 }}
-                                className="relative group rounded-3xl p-8 space-y-5 border border-white/10 hover:border-accent/40 transition-all duration-500 overflow-hidden"
-                                style={{ backgroundColor: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(12px)' }}
-                            >
-                                <div className="absolute top-0 right-0 w-32 h-32 rounded-full blur-[60px] pointer-events-none group-hover:opacity-100 opacity-0 transition-opacity duration-500" style={{ backgroundColor: 'rgba(216,246,2,0.2)' }} />
-                                <div className="text-4xl">{card.icon}</div>
-                                <div className="space-y-1">
-                                    <p className="text-[9px] font-orbitron font-black text-accent tracking-[0.35em] uppercase">{card.tag}</p>
-                                    <h3 className="text-xl font-orbitron font-bold text-white group-hover:text-accent transition-colors">{card.title}</h3>
-                                </div>
-                                <p className="text-sm text-white/55 leading-relaxed font-medium group-hover:text-white/80 transition-colors">{card.body}</p>
-                            </motion.div>
-                        ))}
+                        <div className="space-y-4">
+                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-outfit font-bold text-foreground leading-tight tracking-tight">
+                                The Heart Of AESTR PRO:
+                            </h2>
+                            <h3 className="text-2xl md:text-3xl font-serif font-medium text-foreground/80">
+                                Our Innovation Labs, Powered by Shodh AI
+                            </h3>
+                            <p className="text-lg text-foreground/70 max-w-3xl leading-relaxed font-medium">
+                                The engine of the AESTR PRO experience is our state-of-the-art Innovation Labs, run by our industry partner, Shodh AI.
+                            </p>
+                        </div>
                     </div>
 
-                    {/* Shodh AI banner */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                        className="rounded-3xl overflow-hidden relative border border-accent/20"
-                        style={{ background: 'linear-gradient(90deg, rgba(216,246,2,0.08) 0%, rgba(91,29,214,0.3) 100%)' }}
-                    >
-                        <div className="flex flex-col md:flex-row items-center gap-8 p-10">
-                            <div className="flex-1 space-y-3">
-                                <p className="text-[10px] font-orbitron font-black text-accent tracking-[0.4em] uppercase">Led by Dr. Arastu Sharma</p>
-                                <h3 className="text-2xl md:text-3xl font-orbitron font-bold text-white">
-                                    Shodh AI is one of <span className="text-accent">12 handpicked</span> for INDIA AI Mission
-                                </h3>
-                                <p className="text-base text-white/60 font-medium">
-                                    Building Sovereign AI Models and Project Skanda — the world's first Physics Model for materials science.
-                                </p>
-                            </div>
-                            <div className="shrink-0 flex flex-col items-center gap-2">
-                                <div className="text-5xl font-orbitron font-black text-accent">12</div>
-                                <p className="text-[10px] font-orbitron text-white/50 uppercase tracking-wider text-center">of 12<br />National AI Labs</p>
-                            </div>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
-
-            {/* ── HARDWARE ARSENAL / LABS ──────────────────────────────── */}
-            <section className="py-28 relative overflow-hidden bg-background">
-                <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full blur-[200px] pointer-events-none" style={{ backgroundColor: 'rgba(91,29,214,0.1)' }} />
-                <div className="container-boxed relative z-10 space-y-14">
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                        className="space-y-4"
-                    >
-                        <p className="text-[10px] font-orbitron font-black text-accent tracking-[0.5em] uppercase">Atoms + Bits</p>
-                        <h2 className="text-4xl md:text-6xl font-orbitron font-black text-white uppercase tracking-tighter leading-[0.9]">
-                            The <span className="text-accent italic">Hardware</span><br />Arsenal
-                        </h2>
-                        <p className="text-lg text-white/55 font-bold max-w-xl">
-                            Build on elite tools from Day 1. No simulators. No theory-only. Real infrastructure.
-                        </p>
-                        <div className="h-1 w-16 rounded-full bg-accent" />
-                    </motion.div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-20">
                         {labs.map((lab, i) => (
                             <motion.div
                                 key={lab.name}
@@ -351,75 +294,166 @@ const BtechAIShodhAI = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                                className="group overflow-hidden rounded-3xl border border-white/8 hover:border-accent/35 transition-all duration-500 flex flex-col"
-                                style={{ backgroundColor: 'rgba(24,24,24,0.6)', backdropFilter: 'blur(10px)' }}
+                                className="group"
                             >
-                                <div className="aspect-[4/3] relative overflow-hidden shrink-0">
-                                    <Image src={lab.image} alt={lab.name} fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-                                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(to top, rgba(91,29,214,0.6), transparent)' }} />
+                                <div className="aspect-[16/10] relative overflow-hidden rounded-xl mb-6 shadow-xl border border-black/5">
+                                    <Image
+                                        src={lab.image}
+                                        alt={lab.name}
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                    />
                                 </div>
-                                <div className="p-6 space-y-3 flex-1">
-                                    <h4 className="text-base font-orbitron font-bold text-accent uppercase tracking-wide">{lab.name}</h4>
-                                    <p className="text-[11px] font-orbitron font-black text-white/40 uppercase tracking-wider leading-snug">{lab.tag}</p>
-                                    <p className="text-xs text-white/50 leading-relaxed group-hover:text-white/75 transition-colors font-medium">{lab.desc}</p>
+                                <div className="space-y-3">
+                                    <h4 className="text-xl font-outfit font-bold text-foreground">{lab.name}</h4>
+                                    <p className="text-sm text-foreground/60 leading-relaxed font-medium">
+                                        {lab.description}
+                                    </p>
                                 </div>
                             </motion.div>
                         ))}
                     </div>
+
+                    {/* Bottom Descriptive Boxes */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="bg-background-alt p-8 md:p-10 rounded-2xl border border-white/5"
+                        >
+                            <p className="text-base text-foreground/70 leading-relaxed font-medium">
+                                These are not your typical college labs. They are dynamic, professional environments where you will spend your four years as an intern, working on cutting-edge projects that are shaping the future of technology.
+                            </p>
+                        </motion.div>
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="bg-background-alt p-8 md:p-10 rounded-2xl border border-white/5"
+                        >
+                            <p className="text-base text-foreground/70 leading-relaxed font-medium">
+                                Each lab is a hub of innovation, led by senior engineers and researchers from Shodh AI and other leading tech companies. Here, you'll get your hands dirty, experiment with the latest technologies, and contribute to real-world solutions that have the potential to make a global impact.
+                            </p>
+                        </motion.div>
+                    </div>
                 </div>
             </section>
 
-            {/* ── SELECTION PROTOCOL ───────────────────────────────────── */}
-            <section className="py-28 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #111111 0%, #1a0a3d 60%, #2d0e8a 100%)' }}>
-                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple/60 to-transparent" />
-                <div className="container-boxed relative z-10 space-y-14">
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                        className="max-w-2xl space-y-5"
-                    >
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/15 bg-white/5">
-                            <span className="text-sm">⚔️</span>
-                            <span className="text-[10px] font-orbitron font-black text-white/60 tracking-[0.35em] uppercase">The Builder's Draft</span>
+            {/* Section 4: The Job We're Training You For */}
+            <section className="py-24 relative overflow-hidden bg-background-alt text-foreground">
+                <div className="container-boxed relative z-10">
+                    <div className="flex flex-col items-start mb-16 space-y-6">
+                        {/* Numbered Circle - Dark Theme */}
+                        <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-serif italic text-purple shadow-lg border border-purple/30">
+                            4
                         </div>
-                        <h2 className="text-4xl md:text-6xl font-orbitron font-black text-white uppercase tracking-tighter leading-[0.9]">
-                            The Selection<br /><span className="text-accent italic">Protocol</span>
-                        </h2>
-                        <p className="text-lg text-white/60 font-medium leading-relaxed">
-                            We don't care how well you memorize. We care what you can build. You cannot just pay a fee to get into AESTR.
-                            We don't have an admissions office; we have a <strong className="text-white">Technical Draft.</strong>
-                        </p>
-                        <p className="text-base text-white/45 font-medium leading-relaxed">
-                            Future India will not be built by crammers. It will be built by creators with dirt on their hands and code on their screens.
-                        </p>
-                    </motion.div>
+                        <div className="space-y-4 max-w-4xl">
+                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-outfit font-bold text-foreground leading-tight tracking-tight">
+                                The Job We're Training You For
+                            </h2>
+                            <h3 className="text-2xl md:text-3xl font-serif font-medium text-foreground/80 italic">
+                                From Intern to Innovator
+                            </h3>
+                            <div className="space-y-6 text-lg text-foreground/70 leading-relaxed font-medium">
+                                <p>
+                                    The entire AESTR PRO curriculum is reverse-engineered from the demands of elite AI research roles in the industry. We prepare you for the job of tomorrow by giving you that job today. A day in the life of an AESTR PRO student is the life of a Machine Learning Engineer at Shodh AI, our AI Research Division.
+                                </p>
+                                <p className="font-bold text-accent text-xl">
+                                    Your Future Job Description: Machine Learning Engineer, Applied AI Research
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-                    {/* Steps */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {selectionSteps.map((s, i) => (
-                            <motion.div
-                                key={s.num}
-                                initial={{ opacity: 0, y: 24 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: i * 0.15 }}
-                                className="relative rounded-3xl p-8 space-y-5 border border-white/10 hover:border-accent/40 transition-all duration-500 overflow-hidden group"
-                                style={{ backgroundColor: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(12px)' }}
-                            >
-                                <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full blur-[40px] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ backgroundColor: 'rgba(216,246,2,0.25)' }} />
-                                <div className="flex items-center gap-4">
-                                    <div className="w-12 h-12 rounded-2xl border border-accent/30 flex items-center justify-center text-xl font-orbitron font-black text-accent bg-accent/10 shrink-0">
-                                        {s.num}
-                                    </div>
-                                    <h3 className="text-xl font-orbitron font-bold text-white group-hover:text-accent transition-colors leading-snug">{s.title}</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {/* Mission Card */}
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="p-1 border-[1.5px] border-accent/20 rounded-lg group hover:border-accent/50 transition-colors"
+                        >
+                            <div className="h-full p-8 border-[1.5px] border-accent/20 rounded-sm space-y-4 bg-background">
+                                <div className="w-12 h-12 flex items-center justify-center">
+                                    <svg className="w-10 h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                    </svg>
                                 </div>
-                                <p className="text-base text-white/55 leading-relaxed font-medium pl-16">{s.desc}</p>
-                            </motion.div>
-                        ))}
+                                <h4 className="text-xl font-outfit font-bold uppercase tracking-wide text-foreground">The Mission:</h4>
+                                <p className="text-foreground/70 leading-relaxed">
+                                    Bridge the chasm between foundational research and real-world impact. You will be part of the engine that drives the company's expansion into the next frontier of artificial intelligence.
+                                </p>
+                            </div>
+                        </motion.div>
+
+                        {/* Role Card */}
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="p-1 border-[1.5px] border-accent/20 rounded-lg group hover:border-accent/50 transition-colors"
+                        >
+                            <div className="h-full p-8 border-[1.5px] border-accent/20 rounded-sm space-y-4 bg-background">
+                                <div className="w-12 h-12 flex items-center justify-center">
+                                    <svg className="w-10 h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                </div>
+                                <h4 className="text-xl font-outfit font-bold uppercase tracking-wide text-foreground">The Role:</h4>
+                                <p className="text-foreground/70 leading-relaxed">
+                                    A unique blend of scientist, inventor, and engineer where you will architect the next generation of intelligent systems from the ground up.
+                                </p>
+                            </div>
+                        </motion.div>
+
+                        {/* Domains Card */}
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="p-1 border-[1.5px] border-accent/20 rounded-lg group hover:border-accent/50 transition-colors"
+                        >
+                            <div className="h-full p-8 border-[1.5px] border-accent/20 rounded-sm space-y-4 bg-background">
+                                <div className="w-12 h-12 flex items-center justify-center">
+                                    <svg className="w-10 h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a2 2 0 00-1.996 1.389l-.498 1.494a2 2 0 01-1.125 1.258l-1.509.604a2 2 0 01-1.442 0l-1.509-.604a2 2 0 01-1.125-1.258l-.498-1.494a2 2 0 00-1.996-1.389l-2.387.477a2 2 0 00-1.022.547l-1.162 1.162a2 2 0 01-2.828 0l-1.162-1.162a2 2 0 010-2.828l1.162-1.162a2 2 0 00.547-1.022l.477-2.387a2 2 0 00-1.389-1.996l-1.494-.498a2 2 0 01-1.258-1.125l-.604-1.509a2 2 0 010-1.442l.604-1.509a2 2 0 011.258-1.125l1.494-.498a2 2 0 001.389-1.996l-.477-2.387a2 2 0 00-.547-1.022l-1.162-1.162a2 2 0 010-2.828l1.162-1.162a2 2 0 012.828 0l1.162 1.162a2 2 0 001.022.547l2.387.477a2 2 0 001.996-1.389l.498-1.494a2 2 0 011.125-1.258l1.509-.604a2 2 0 011.442 0l1.509.604a2 2 0 011.125 1.258l.498 1.494a2 2 0 001.996 1.389l2.387-.477a2 2 0 001.022-.547l1.162-1.162a2 2 0 012.828 0l1.162 1.162a2 2 0 010 2.828l-1.162 1.162a2 2 0 00-.547 1.022l-.477 2.387a2 2 0 001.389 1.996l1.494.498a2 2 0 011.258 1.125l.604 1.509a2 2 0 010 1.442l-.604-1.509a2 2 0 01-1.258 1.125l-1.494.498a2 2 0 00-1.389 1.996l.477 2.387a2 2 0 00.547 1.022l1.162 1.162a2 2 0 010 2.828l-1.162 1.162a2 2 0 01-2.828 0l-1.162-1.162z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                </div>
+                                <h4 className="text-xl font-outfit font-bold uppercase tracking-wide text-foreground">The Core Domains:</h4>
+                                <ul className="space-y-2 text-foreground/70 list-disc pl-5">
+                                    <li><span className="font-bold text-accent">Robotics & Embodied AI:</span> Build intelligent agents that can perceive, reason, and physically interact with the world.</li>
+                                    <li><span className="font-bold text-accent">Large Language Models & Agentic Systems:</span> Architect autonomous agents and sophisticated applications that leverage the power of LLMs.</li>
+                                    <li><span className="font-bold text-accent">Custom Silicon:</span> Design the next generation of chipsets purpose-built for AI workloads.</li>
+                                </ul>
+                            </div>
+                        </motion.div>
+
+                        {/* Mindset Card */}
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3 }}
+                            className="p-1 border-[1.5px] border-accent/20 rounded-lg group hover:border-accent/50 transition-colors"
+                        >
+                            <div className="h-full p-8 border-[1.5px] border-accent/20 rounded-sm space-y-4 bg-background">
+                                <div className="w-12 h-12 flex items-center justify-center">
+                                    <svg className="w-10 h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                    </svg>
+                                </div>
+                                <h4 className="text-xl font-outfit font-bold uppercase tracking-wide text-foreground">The Mindset:</h4>
+                                <p className="text-foreground/70 leading-relaxed">
+                                    We are looking for those with a "builder's mindset," driven by a deep curiosity to create and implement new things. Your personal research interests are not just welcome; they are a critical part of our strategy.
+                                </p>
+                            </div>
+                        </motion.div>
                     </div>
 
                     {/* Minimum to Enter */}
@@ -455,14 +489,10 @@ const BtechAIShodhAI = () => {
                 </div>
             </section>
 
-            {/* ── FINAL CTA ────────────────────────────────────────────── */}
-            <section className="relative overflow-hidden" style={{ backgroundColor: '#5B1DD6' }}>
-                <div className="absolute inset-0">
-                    <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #3a0fa8 0%, #5B1DD6 100%)' }} />
-                    <div className="absolute top-0 right-0 w-[600px] h-[400px] rounded-full blur-[200px] pointer-events-none" style={{ backgroundColor: 'rgba(216,246,2,0.15)' }} />
-                </div>
-                <div className="container-boxed relative z-10 py-24">
-                    <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
+            {/* Section 5: The Outcome */}
+            <section className="py-24 relative overflow-hidden bg-background text-foreground">
+                <div className="container-boxed relative z-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -470,18 +500,24 @@ const BtechAIShodhAI = () => {
                             transition={{ duration: 0.8 }}
                             className="space-y-8"
                         >
-                            <h2 className="text-5xl md:text-7xl lg:text-8xl font-orbitron font-black uppercase tracking-tighter leading-[0.85]">
-                                <span className="text-accent">STOP</span> STUDYING<br />
-                                <span className="text-accent">START</span> BUILDING
-                            </h2>
-                            <div className="flex flex-wrap gap-6 items-center">
-                                <button className="btn-aestr !px-14 !py-6 group">
-                                    APPLY NOW
-                                    <span className="ml-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">↗</span>
-                                </button>
-                                <div className="space-y-1">
-                                    <p className="text-xs font-orbitron font-black text-white/50 uppercase tracking-wider">aestr.gyanvihar.org</p>
-                                    <p className="text-xs font-orbitron font-black text-white/50 uppercase tracking-wider">Toll-Free: 1800 309 4545</p>
+                            <div className="space-y-6">
+                                {/* Numbered Circle - Dark Theme */}
+                                <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-serif italic text-purple shadow-lg border border-purple/30">
+                                    5
+                                </div>
+                                <h2 className="text-4xl md:text-5xl lg:text-5xl font-outfit font-bold text-foreground leading-tight tracking-tight">
+                                    Graduate As A Senior Engineer
+                                </h2>
+                                <h3 className="text-2xl md:text-3xl font-serif font-medium text-foreground/80 italic">
+                                    Ready to Lead the Future
+                                </h3>
+                                <div className="space-y-6 text-lg text-foreground/70 leading-relaxed font-medium">
+                                    <p>
+                                        The outcome of the AESTR PRO program is a new breed of engineer – an engineer who is not just "hirable", but is a leader, an innovator, and a problem-solver. After four years of intensive, hands-on experience in our Innovation Labs, you will graduate as a senior engineer, with a portfolio of real-world projects and a deep understanding of the latest technologies.
+                                    </p>
+                                    <p>
+                                        You will be equipped with the skills, the confidence, and the experience to make an immediate impact in any organization you join. You will be a part of a new generation of Indian engineers who are not just ready for the future, but are actively shaping it.
+                                    </p>
                                 </div>
                             </div>
                         </motion.div>
@@ -490,38 +526,104 @@ const BtechAIShodhAI = () => {
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 1 }}
-                            className="shrink-0"
+                            transition={{ duration: 0.8 }}
+                            className="relative group"
                         >
-                            <motion.div
-                                animate={{ y: [0, -14, 0] }}
-                                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                                className="relative w-60 h-60 md:w-80 md:h-80"
-                            >
-                                <div className="absolute inset-0 rounded-full blur-[80px] opacity-30" style={{ backgroundColor: '#D8F602' }} />
-                                <Image src="/Other/Robo.webp" alt="AESTR AI Robot" fill className="object-contain brightness-110" />
-                            </motion.div>
+                            <div className="aspect-[4/3] rounded-sm overflow-hidden border border-black/10 shadow-2xl relative">
+                                <Image
+                                    src="/Other/robot-class.jpg"
+                                    alt="Graduate Success"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+                            {/* Decorative accent */}
+                            <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#5B1DD6]/10 rounded-full blur-2xl pointer-events-none" />
                         </motion.div>
                     </div>
                 </div>
             </section>
 
-            {/* ── FOOTER ───────────────────────────────────────────────── */}
-            <footer className="py-12 border-t border-white/5 bg-background">
-                <div className="container-boxed flex flex-col md:flex-row justify-between items-center gap-8 opacity-40">
-                    <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center overflow-hidden relative">
-                            <Image src="/Herosection/aestr-logo.svg" alt="Aestr" fill className="object-contain p-1" />
+            {/* Section: Degree Structure */}
+            <section className="py-24 relative bg-background overflow-hidden">
+                <div className="container-boxed relative z-10 text-center space-y-16">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {/* Majors */}
+                        <div className="bg-purple/10 backdrop-blur-md p-10 rounded-xl space-y-8 flex flex-col items-center border border-purple/20 shadow-2xl">
+                            <h3 className="text-xl font-outfit font-bold text-foreground">B. Tech. Majors:</h3>
+                            <div className="space-y-3 w-full">
+                                {[
+                                    'B. Tech. Artificial Intelligence & Machine Learning',
+                                    'B. Tech. Data Science',
+                                    'B. Tech. Cloud Engineering',
+                                    'B. Tech. Software Engineering',
+                                    'B. Tech. Cyber Security'
+                                ].map(item => (
+                                    <div key={item} className="bg-background-alt px-4 py-2.5 rounded-lg text-sm font-bold text-foreground/80 border border-white/5 shadow-inner transition-all text-left hover:border-accent/30">
+                                        {item}
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                        <p className="text-[10px] font-orbitron font-black tracking-[0.4em] uppercase">AESTR · B.Tech AI Shodh AI © 2026</p>
+
+                        {/* Minors */}
+                        <div className="bg-purple/10 backdrop-blur-md p-10 rounded-xl space-y-8 flex flex-col items-center border border-purple/20 shadow-2xl">
+                            <h3 className="text-xl font-outfit font-bold text-foreground">With one Minor:</h3>
+                            <div className="flex flex-wrap gap-2 justify-center">
+                                {[
+                                    'Robotics', 'Bio-Informatics',
+                                    'Industry & Manufacturing',
+                                    'Design', 'Fintech',
+                                    'Nanotechnology', 'Smart Cities',
+                                    'Chip & Semiconductor', 'Geoinformatics'
+                                ].map(item => (
+                                    <div key={item} className="bg-background-alt px-3 py-2 rounded-lg text-xs font-bold text-foreground/80 border border-white/5 shadow-inner transition-all hover:border-accent/30">
+                                        {item}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Labs */}
+                        <div className="bg-purple/10 backdrop-blur-md p-10 rounded-xl space-y-8 flex flex-col items-center border border-purple/20 shadow-2xl">
+                            <h3 className="text-xl font-outfit font-bold text-foreground">Labs:</h3>
+                            <div className="space-y-3 w-full">
+                                {[
+                                    'Foundation Model Lab',
+                                    'Embodied Brain Lab',
+                                    'Soft "Brain" Lab',
+                                    'RISC-V Systems Lab',
+                                    'Augmented Human Lab'
+                                ].map(item => (
+                                    <div key={item} className="bg-background-alt px-4 py-2.5 rounded-lg text-sm font-bold text-foreground/80 border border-white/5 shadow-inner transition-all text-left hover:border-accent/30">
+                                        {item}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
-                    <div className="flex gap-10">
-                        {['Privacy', 'Terms', 'Strategic Partners'].map(item => (
-                            <Link key={item} href="/" className="text-[9px] font-orbitron font-black text-white hover:text-accent transition-colors uppercase tracking-[0.3em]">{item}</Link>
-                        ))}
+
+                    <div className="pt-10 flex flex-col items-center space-y-8">
+                        {/* Connector lines */}
+                        <div className="w-full max-w-4xl relative h-20 hidden md:block">
+                            <svg className="w-full h-full" viewBox="0 0 1000 100">
+                                <path d="M166 20 V50 H834 V20" stroke="currentColor" className="text-foreground" strokeWidth="2" fill="none" opacity="0.3" />
+                                <path d="M500 50 V100" stroke="currentColor" className="text-foreground" strokeWidth="2" fill="none" opacity="0.3" />
+                                <circle cx="166" cy="20" r="3" fill="currentColor" className="text-foreground" opacity="0.3" />
+                                <circle cx="500" cy="20" r="3" fill="currentColor" className="text-foreground" opacity="0.3" />
+                                <circle cx="834" cy="20" r="3" fill="currentColor" className="text-foreground" opacity="0.3" />
+                                <circle cx="500" cy="100" r="3" fill="currentColor" className="text-foreground" opacity="0.3" />
+                            </svg>
+                        </div>
+                        <div className="md:hidden w-px h-12 bg-foreground opacity-20" />
+
+                        <h2 className="text-3xl md:text-5xl lg:text-6xl font-outfit font-bold text-foreground underline decoration-accent decoration-[3px] underline-offset-[12px]">
+                            Make Your Own Degree By Yourself
+                        </h2>
                     </div>
                 </div>
-            </footer>
+            </section>
+
         </main>
     );
 };
