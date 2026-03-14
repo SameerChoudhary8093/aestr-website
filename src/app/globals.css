@@ -16,6 +16,12 @@
   --font-outfit: "Outfit", sans-serif;
 }
 
+.decorative-serif {
+  font-family: var(--font-playfair) !important;
+  font-style: italic !important;
+  text-transform: none !important;
+}
+
 @theme {
   --color-background: var(--background);
   --color-background-alt: var(--background-alt);

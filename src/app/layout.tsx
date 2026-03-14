@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Orbitron, Outfit } from "next/font/google";
+import { Orbitron, Outfit, Playfair_Display } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NetworkBackground from "@/components/NetworkBackground";
@@ -17,6 +17,12 @@ const outfit = Outfit({
   weight: ["300", "400", "500", "600", "700", "800"],
 });
 
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+});
+
 export const metadata: Metadata = {
   title: "AESTR: Best Computer Science Engineering College in India",
   description: "A modern, futuristic web application inspired by Aestr Alpha",
@@ -32,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth">
-      <body className={`${orbitron.variable} ${outfit.variable} antialiased selection:bg-accent selection:text-black`}>
+      <body className={`${orbitron.variable} ${outfit.variable} ${playfair.variable} antialiased selection:bg-accent selection:text-black`}>
         <SmoothScroll>
           <NetworkBackground />
           <Navbar />
