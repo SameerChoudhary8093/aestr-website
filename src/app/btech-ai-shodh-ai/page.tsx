@@ -1,36 +1,54 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
-// Reusable Lab Data (Same as home page)
 const labs = [
     {
-        name: 'Foundation Model Lab',
+        name: 'Apple Ecosystem',
+        tag: "India's Only Apple Certified Engineering Center",
+        desc: 'MacBooks + Vision Pros for spatial computing. Build world-class apps for iOS, macOS, and the revolutionary VisionOS.',
+        image: '/Other/lab-5.webp',
+    },
+    {
+        name: 'NVIDIA Pipeline',
+        tag: 'Dedicated GPU Hours — Train Your Own Models',
+        desc: 'Dedicated GPU hours on NVIDIA Hopper. Fine-tune LLMs, master CUDA, and run real inference pipelines.',
         image: '/Other/lab-4.webp',
-        description: 'Master cutting-edge AI by fine-tuning models for material science (with Microsoft\'s MatterGen), drug discovery, and more. Outcome: Become a leading AI Engineer, Foundation Model Engineer, or Data Engineer.',
-        icon: 'nvidia'
+    },
+    {
+        name: 'RISC-V Lab',
+        tag: "Design Custom AI Chips for India's Semiconductor Edge",
+        desc: "Take your place at the forefront of India's semiconductor sovereignty. Complete lifecycle of chip design from RTL to tapeout.",
+        image: '/Other/lab-3.webp',
     },
     {
         name: 'Embodied Brain Lab',
+        tag: 'Deploy AI Into Robots, Exoskeletons & ROS Systems',
+        desc: '3D-printed robots, exoskeletons, and NVIDIA Jetson-powered ROS systems. Where AI meets the physical world.',
         image: '/Other/lab-2.webp',
-        description: 'Dive into Robotics, Exoskeletons, and ROS on Nvidia Jetson. Build 3D printed humanoids and leverage our patented multi-agentic \'brain\' system - your key to becoming a top 1% AI engineer.',
-        icon: 'robotics'
+    },
+];
+
+const selectionSteps = [
+    {
+        num: '01',
+        title: 'Show Us Your "Proof of Work"',
+        desc: 'Have a GitHub link? Wired an Arduino? Launched a website? Drop the link. Give us anything real you\'ve done outside an exam hall.',
     },
     {
-        name: 'RISC-V Systems Lab',
-        image: '/Other/lab-3.webp',
-        description: 'Engineer the future with India\'s pioneering semiconductor technology, building essential systems and chips for tomorrow.',
-        icon: 'chip'
+        num: '02',
+        title: 'The Peer Interview',
+        desc: "Senior student-engineers will interview you. If you don't have the grit, logic, and hunger, the team will reject you—no matter how high your JEE score is.",
     },
-    {
-        name: 'Augmented Human Lab',
-        image: '/Other/lab-5.webp',
-        description: 'Explore the frontiers of Human-AI interaction - from Apple Vision Pro and holography to AI filmmaking, UX design, and future communication.',
-        icon: 'apple'
-    }
+];
+
+const minimumSteps = [
+    { step: 'Step 1', desc: '75% Boards + 75th Percentile SAT/JEE/CUET (exception cases maybe considered).' },
+    { step: 'Step 2', desc: 'Portfolio: Code, project, or hardware link.' },
+    { step: 'Step 3', desc: 'Peer Interview: Prove your hunger.' },
 ];
 
 const BtechAIShodhAI = () => {
@@ -219,6 +237,7 @@ const BtechAIShodhAI = () => {
                             </div>
                         </motion.div>
 
+                        {/* Text */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9, x: 30 }}
                             whileInView={{ opacity: 1, scale: 1, x: 0 }}
@@ -436,6 +455,37 @@ const BtechAIShodhAI = () => {
                             </div>
                         </motion.div>
                     </div>
+
+                    {/* Minimum to Enter */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="rounded-3xl border border-accent/20 overflow-hidden"
+                        style={{ background: 'linear-gradient(135deg, rgba(216,246,2,0.06) 0%, rgba(91,29,214,0.15) 100%)' }}
+                    >
+                        <div className="p-8 md:p-12 space-y-8">
+                            <div className="flex items-center gap-4">
+                                <div className="h-px flex-1 bg-accent/20" />
+                                <h3 className="text-xl font-orbitron font-black text-white uppercase tracking-widest whitespace-nowrap">Minimum to Enter</h3>
+                                <div className="h-px flex-1 bg-accent/20" />
+                            </div>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                {minimumSteps.map((item, i) => (
+                                    <div key={item.step} className="flex items-start gap-4 p-5 rounded-2xl border border-white/8 hover:border-accent/25 transition-all" style={{ backgroundColor: 'rgba(0,0,0,0.25)' }}>
+                                        <div className="w-8 h-8 rounded-xl bg-accent/15 border border-accent/30 flex items-center justify-center shrink-0">
+                                            <span className="text-xs font-orbitron font-black text-accent">{i + 1}</span>
+                                        </div>
+                                        <div className="space-y-1">
+                                            <p className="text-[10px] font-orbitron font-black text-accent uppercase tracking-wider">{item.step}</p>
+                                            <p className="text-sm text-white/60 font-medium leading-snug">{item.desc}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
             </section>
 
@@ -473,8 +523,8 @@ const BtechAIShodhAI = () => {
                         </motion.div>
 
                         <motion.div
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                             className="relative group"
