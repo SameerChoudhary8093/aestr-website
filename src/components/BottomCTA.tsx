@@ -76,10 +76,10 @@ const BottomCTA = () => {
 
                         {/* Ranking Text */}
                         <div className="space-y-4">
-                            <h3 className="text-3xl md:text-5xl font-roboto text-white font-medium tracking-tight">
+                            <h3 className="text-3xl md:text-5xl subheading-font text-white font-medium tracking-tight">
                                 NAAC A+
                             </h3>
-                            <p className="text-3xl md:text-6xl font-roboto text-white font-medium tracking-tight">
+                            <p className="text-3xl md:text-6xl subheading-font text-white font-medium tracking-tight">
                                 NIRF Ranked 101-150
                             </p>
                         </div>
@@ -94,7 +94,7 @@ const BottomCTA = () => {
                                 </div>
                             </div>
                             
-                            <p className="text-2xl md:text-4xl font-roboto text-white font-medium tracking-tight">
+                            <p className="text-2xl md:text-4xl subheading-font text-white font-medium tracking-tight">
                                 AESTR &copy; 2026
                             </p>
                         </div>

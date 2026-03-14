@@ -30,10 +30,10 @@ const AboutPointFive = () => {
                             <div className="space-y-6 text-left">
                                 <div className="space-y-1">
                                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-orbitron font-bold text-white leading-tight tracking-tight capitalize">
-                                        Innovation labs <span className="font-serif italic opacity-90">of 2030</span>
+                                        Innovation labs <span className="font-orbitron opacity-90">of 2030</span>
                                     </h2>
                                 </div>
-                                <p className="text-lg md:text-xl text-white/90 max-w-3xl leading-relaxed font-bold">
+                                <p className="subheading-font text-white/90 max-w-3xl leading-relaxed font-bold">
                                     Learn from the architects of tomorrow's AI. AESTR is the brainchild of leading AI engineers dedicated to cultivating the next generation of tech innovators.
                                 </p>
                             </div>

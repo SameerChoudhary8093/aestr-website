@@ -36,13 +36,10 @@ const AboutPointFour = () => {
                                 <div className="space-y-8 text-left">
                                     <div className="space-y-1">
                                         <h2 className="text-2xl md:text-4xl lg:text-5xl font-orbitron font-bold text-black leading-tight tracking-tight">
-                                            Bootcamp, Bootcamp,
+                                            Bootcamp, Bootcamp, <span className="font-orbitron opacity-90">Bootcamp.</span>
                                         </h2>
-                                        <p className="text-2xl md:text-4xl lg:text-5xl font-serif italic leading-tight tracking-tight text-black opacity-90">
-                                            Bootcamp.
-                                        </p>
                                     </div>
-                                    <p className="text-lg md:text-xl text-black/90 leading-relaxed font-bold">
+                                    <p className="subheading-font text-black/90 leading-relaxed font-bold">
                                         At AESTR, theory is just the beginning. We believe the best way to learn engineering is by building real things. That’s why every semester includes immersive AI bootcamps, right on campus — fully integrated into your curriculum.
                                     </p>
                                     <Link href="/day-at-aestr" className="inline-block pt-4">

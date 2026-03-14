@@ -1,9 +1,9 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const labs = [
     {
@@ -53,7 +53,7 @@ const minimumSteps = [
 
 const BtechAIShodhAI = () => {
     const [currentImage, setCurrentImage] = useState(0);
-    const heroImages = ['/Other/hero-campus.jpg', '/Other/hero-lab.jpg'];
+    const heroImages = ['/Other/hero-campus.png', '/Other/hero-lab.png'];
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -100,11 +100,11 @@ const BtechAIShodhAI = () => {
                         transition={{ duration: 1, delay: 0.2 }}
                         className="max-w-4xl space-y-6"
                     >
-                        <h1 className="text-white text-[55px] font-outfit font-semibold max-w-[900px] leading-[65px] tracking-tight">
+                        <h1 className="text-white text-[55px] font-orbitron font-bold max-w-[900px] leading-[65px] tracking-tight">
                             This Isn't College. It's A <br />
                             4-Year Internship
                         </h1>
-                        <p className="text-white text-xl md:text-2xl max-w-2xl opacity-100 font-serif leading-relaxed">
+                        <p className="text-white subheading-font max-w-2xl opacity-100 leading-relaxed">
                             At AESTR Pro, every student becomes an intern from day one. Learn by doing. Lead by innovating.
                         </p>
                         
@@ -134,13 +134,13 @@ const BtechAIShodhAI = () => {
                         >
                             <div className="space-y-6">
                                 {/* Numbered Circle - Dark Theme */}
-                                <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-serif italic text-purple shadow-lg border border-purple/30">
+                                <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-orbitron font-bold text-purple shadow-lg border border-purple/30">
                                     1
                                 </div>
-                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-outfit font-bold text-foreground leading-tight tracking-tight">
+                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold text-foreground leading-tight tracking-tight">
                                     The Crisis Of Indian Engineering
                                 </h2>
-                                <h3 className="text-2xl md:text-3xl font-serif font-medium text-foreground/80">
+                                <h3 className="subheading-font italic text-foreground/80">
                                     A Generation of "Un-hirable" Talent
                                 </h3>
                                 <div className="space-y-6 text-lg text-foreground/70 leading-relaxed font-medium">
@@ -214,13 +214,13 @@ const BtechAIShodhAI = () => {
                         >
                             <div className="space-y-6">
                                 {/* Numbered Circle - Purple */}
-                                <div className="w-20 h-20 rounded-full bg-[#E8E2FF]/20 backdrop-blur-md flex items-center justify-center text-4xl font-serif italic text-white border border-white/10 shadow-xl">
+                                <div className="w-20 h-20 rounded-full bg-[#E8E2FF]/20 backdrop-blur-md flex items-center justify-center text-4xl font-orbitron font-bold text-white border border-white/10 shadow-xl">
                                     2
                                 </div>
-                                <h2 className="text-4xl md:text-5xl lg:text-5xl font-outfit font-bold text-white leading-tight tracking-tight">
-                                    Introducing B.TECH AESTR PRO :
+                                <h2 className="text-4xl md:text-5xl lg:text-5xl font-orbitron font-bold text-white leading-tight tracking-tight">
+                                    Introducing B.TECH AESTR PRO:
                                 </h2>
-                                <h3 className="text-2xl md:text-3xl font-serif font-medium text-white/90">
+                                <h3 className="subheading-font italic text-white/90">
                                     Your 4-Year Internship Starts Now
                                 </h3>
                                 <div className="space-y-6 text-lg text-white/80 leading-relaxed font-medium">
@@ -270,14 +270,15 @@ const BtechAIShodhAI = () => {
                 <div className="container-boxed relative z-10">
                     <div className="flex flex-col items-start mb-16 space-y-6">
                         {/* Numbered Circle - Dark Theme */}
-                        <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-serif italic text-purple shadow-lg border border-purple/30">
+                        <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-orbitron font-bold text-purple shadow-lg border border-purple/30">
                             3
                         </div>
                         <div className="space-y-4">
-                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-outfit font-bold text-foreground leading-tight tracking-tight">
-                                The Heart Of AESTR PRO:
-                            </h2>
-                            <h3 className="text-2xl md:text-3xl font-serif font-medium text-foreground/80">
+                            <h1 className="text-5xl md:text-7xl lg:text-8xl font-orbitron font-bold text-foreground leading-none tracking-tight">
+                                B.Tech AI with <br />
+                                <span className="text-accent">Shodh AI</span>
+                            </h1>
+                            <h3 className="subheading-font italic text-foreground/80">
                                 Our Innovation Labs, Powered by Shodh AI
                             </h3>
                             <p className="text-lg text-foreground/70 max-w-3xl leading-relaxed font-medium">
@@ -305,9 +306,10 @@ const BtechAIShodhAI = () => {
                                     />
                                 </div>
                                 <div className="space-y-3">
-                                    <h4 className="text-xl font-outfit font-bold text-foreground">{lab.name}</h4>
+                                    <h2 className="text-2xl md:text-4xl font-orbitron font-bold text-foreground tracking-tight">{lab.name}</h2>
+                                    <h3 className="subheading-font italic text-foreground/60">{lab.tag}</h3>
                                     <p className="text-sm text-foreground/60 leading-relaxed font-medium">
-                                        {lab.description}
+                                        {lab.desc}
                                     </p>
                                 </div>
                             </motion.div>
@@ -346,14 +348,14 @@ const BtechAIShodhAI = () => {
                 <div className="container-boxed relative z-10">
                     <div className="flex flex-col items-start mb-16 space-y-6">
                         {/* Numbered Circle - Dark Theme */}
-                        <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-serif italic text-purple shadow-lg border border-purple/30">
+                        <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-orbitron font-bold text-purple shadow-lg border border-purple/30">
                             4
                         </div>
                         <div className="space-y-4 max-w-4xl">
-                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-outfit font-bold text-foreground leading-tight tracking-tight">
+                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold text-foreground leading-tight tracking-tight">
                                 The Job We're Training You For
                             </h2>
-                            <h3 className="text-2xl md:text-3xl font-serif font-medium text-foreground/80 italic">
+                            <h3 className="subheading-font italic text-foreground/80">
                                 From Intern to Innovator
                             </h3>
                             <div className="space-y-6 text-lg text-foreground/70 leading-relaxed font-medium">
@@ -502,13 +504,13 @@ const BtechAIShodhAI = () => {
                         >
                             <div className="space-y-6">
                                 {/* Numbered Circle - Dark Theme */}
-                                <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-serif italic text-purple shadow-lg border border-purple/30">
+                                <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-orbitron font-bold text-purple shadow-lg border border-purple/30">
                                     5
                                 </div>
-                                <h2 className="text-4xl md:text-5xl lg:text-5xl font-outfit font-bold text-foreground leading-tight tracking-tight">
+                                <h2 className="text-4xl md:text-5xl lg:text-5xl font-orbitron font-bold text-foreground leading-tight tracking-tight">
                                     Graduate As A Senior Engineer
                                 </h2>
-                                <h3 className="text-2xl md:text-3xl font-serif font-medium text-foreground/80 italic">
+                                <h3 className="subheading-font italic text-foreground/80">
                                     Ready to Lead the Future
                                 </h3>
                                 <div className="space-y-6 text-lg text-foreground/70 leading-relaxed font-medium">
@@ -617,7 +619,7 @@ const BtechAIShodhAI = () => {
                         </div>
                         <div className="md:hidden w-px h-12 bg-foreground opacity-20" />
 
-                        <h2 className="text-3xl md:text-5xl lg:text-6xl font-outfit font-bold text-foreground underline decoration-accent decoration-[3px] underline-offset-[12px]">
+                        <h2 className="text-3xl md:text-5xl lg:text-6xl font-orbitron font-bold text-foreground underline decoration-accent decoration-[3px] underline-offset-[12px]">
                             Make Your Own Degree By Yourself
                         </h2>
                     </div>

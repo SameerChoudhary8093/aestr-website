@@ -34,7 +34,7 @@ const Hero = () => {
                                     AI Engineers.
                                 </span>
                             </h1>
-                            <p className="text-lg md:text-xl text-foreground font-medium opacity-80 max-w-xl leading-relaxed">
+                            <p className="subheading-font text-foreground font-medium opacity-80 max-w-xl leading-relaxed">
                                 Founders are former Microsoft Engineers and Cambridge Researchers
                             </p>
                         </div>

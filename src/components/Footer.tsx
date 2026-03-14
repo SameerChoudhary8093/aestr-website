@@ -13,18 +13,18 @@ const Footer = () => {
                 <div className="container-boxed relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
                     <div className="lg:w-3/5 space-y-10">
                         <div className="space-y-4">
-                            <h2 className="text-4xl md:text-5xl lg:text-7xl font-outfit font-bold text-foreground leading-tight max-w-2xl">
+                            <h2 className="text-4xl md:text-5xl lg:text-7xl font-orbitron font-bold text-foreground leading-tight max-w-2xl">
                                 Only At AESTR You Are Trained For <br />
-                                <span className="text-accent italic font-serif">Future Safe Professions</span>
+                                <span className="text-accent font-orbitron">Future Safe Professions</span>
                             </h2>
-                            <p className="text-xl font-outfit font-medium text-foreground/60">
+                            <p className="subheading-font text-foreground/60">
                                 Browse further to know more about our courses
                             </p>
                         </div>
 
                         {/* Apply Box - Glassmorphism */}
                         <div className="bg-white/5 backdrop-blur-xl p-2 rounded-2xl flex flex-col sm:flex-row items-center justify-between border border-white/10 max-w-xl group shadow-2xl">
-                            <p className="px-6 py-4 text-sm font-outfit font-bold text-foreground/80 text-center sm:text-left leading-relaxed">
+                            <p className="px-6 py-4 subheading-font font-bold text-foreground/80 text-center sm:text-left leading-relaxed">
                                 Don't be shy. We enjoy connecting with students and parents.
                             </p>
                             <Link 
@@ -76,22 +76,22 @@ const Footer = () => {
                             />
                         </motion.div>
                         <div className="space-y-4">
-                            <h3 className="text-4xl md:text-6xl font-outfit font-bold tracking-tighter text-foreground">NAAC A+</h3>
-                            <p className="text-2xl md:text-3xl font-outfit font-medium text-foreground/40 tracking-tight">NIRF Ranked 101-150</p>
+                            <h3 className="text-4xl md:text-6xl font-orbitron font-bold tracking-tighter text-foreground">NAAC A+</h3>
+                            <p className="text-2xl md:text-3xl subheading-font font-medium text-foreground/40 tracking-tight">NIRF Ranked 101-150</p>
                         </div>
                     </div>
 
                     {/* Contact & Copyright */}
                     <div className="w-full pt-16 border-t border-white/5 flex flex-col items-center gap-12">
                         <div className="flex flex-col items-center gap-4">
-                            <span className="text-[10px] font-outfit font-extrabold text-accent uppercase tracking-[0.6em]">Reach Out To Us</span>
-                            <a href="tel:18003094545" className="text-3xl md:text-5xl font-outfit font-bold text-foreground hover:text-accent transition-all duration-300 transform hover:scale-105">
+                            <span className="text-[10px] subheading-font font-extrabold text-accent uppercase tracking-[0.6em]">Reach Out To Us</span>
+                            <a href="tel:18003094545" className="text-3xl md:text-5xl font-orbitron font-bold text-foreground hover:text-accent transition-all duration-300 transform hover:scale-105">
                                 1800 - 309 - 4545
                             </a>
                         </div>
                         
                         <div className="flex flex-col items-center gap-4 py-6 px-12 border border-white/5 rounded-full bg-white/2">
-                            <p className="text-[10px] font-outfit font-black tracking-[0.7em] text-foreground/40 uppercase">AESTR ALPHA © 2025</p>
+                            <p className="text-[10px] subheading-font font-black tracking-[0.7em] text-foreground/40 uppercase">AESTR ALPHA © 2025</p>
                         </div>
                     </div>
                 </div>

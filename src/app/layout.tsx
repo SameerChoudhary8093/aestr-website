@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Orbitron, Roboto, Outfit } from "next/font/google";
+import { Orbitron, Outfit } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NetworkBackground from "@/components/NetworkBackground";
@@ -9,12 +9,6 @@ import "./globals.css";
 const orbitron = Orbitron({
   variable: "--font-orbitron",
   subsets: ["latin"],
-});
-
-const roboto = Roboto({
-  variable: "--font-roboto",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
 });
 
 const outfit = Outfit({
@@ -38,9 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth">
-      <body
-        className={`${orbitron.variable} ${roboto.variable} ${outfit.variable} antialiased selection:bg-accent selection:text-black`}
-      >
+      <body className={`${orbitron.variable} ${outfit.variable} antialiased selection:bg-accent selection:text-black`}>
         <SmoothScroll>
           <NetworkBackground />
           <Navbar />

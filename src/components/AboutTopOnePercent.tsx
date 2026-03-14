@@ -69,7 +69,7 @@ const AboutTopOnePercent = () => {
                             <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold leading-tight flex flex-wrap items-center gap-2 md:gap-3 text-foreground">
                                 B.Tech for <span className="italic font-light text-accent">The top 1%</span>
                             </h2>
-                            <p className="text-base md:text-lg text-foreground/80 max-w-2xl leading-relaxed">
+                            <p className="subheading-font text-foreground/80 max-w-2xl leading-relaxed">
                                 Blend of deep CS knowledge with expertise in healthcare, nanotech, robotics, and material science.
                             </p>
                         </div>
@@ -95,18 +95,28 @@ const AboutTopOnePercent = () => {
                                 <h3 className="text-xl md:text-2xl font-orbitron font-bold text-foreground leading-tight">B.Tech Computer Science & Engineering</h3>
 
                                 <div className="space-y-4 md:space-y-6">
-                                    <h4 className="text-base md:text-lg font-roboto text-white font-medium">Major Specialization</h4>
+                                    <h4 className="subheading-font text-white font-medium uppercase tracking-widest">Major Specialization</h4>
                                     <div className="flex flex-wrap gap-2 md:gap-3">
-                                        {["Software Engineering", "Cloud Engineering", "Data Science", "Artificial Intelligence & Machine Learning", "Cyber Security"].map((item) => (
-                                            <span key={item} className="px-5 py-2.5 text-sm md:text-base bg-foreground/5 border border-foreground/10 text-foreground/80 rounded-lg font-medium transition-all cursor-default hover:border-accent/40 hover:text-accent">
-                                                {item}
-                                            </span>
+                                        {[
+                                            { name: "Software Engineering", href: "#" },
+                                            { name: "Cloud Engineering", href: "/btech-cloud-engineering" },
+                                            { name: "Data Science", href: "#" },
+                                            { name: "Artificial Intelligence & Machine Learning", href: "/btech-ai-shodh-ai" },
+                                            { name: "Cyber Security", href: "#" }
+                                        ].map((item) => (
+                                            <Link 
+                                                key={item.name} 
+                                                href={item.href}
+                                                className="px-5 py-2.5 text-sm md:text-base bg-foreground/5 border border-foreground/10 text-foreground/80 rounded-lg font-medium transition-all cursor-pointer hover:border-accent/40 hover:text-accent hover:bg-accent/5 backdrop-blur-sm shadow-sm"
+                                            >
+                                                {item.name}
+                                            </Link>
                                         ))}
                                     </div>
                                 </div>
 
                                 <div className="space-y-4 md:space-y-6 pt-4">
-                                    <h4 className="text-base md:text-lg font-roboto text-white font-medium">Minor specialization along with one Major</h4>
+                                    <h4 className="subheading-font text-white font-medium uppercase tracking-widest">Minor specialization along with one Major</h4>
                                     <div className="flex flex-wrap gap-2 md:gap-2.5">
                                         {["Robotics", "Bioinformatics", "Industry & Manufacturing", "Design", "Fintech", "Nanotechnology", "Geoinformatics", "Chip & Semiconductor", "Smart Cities"].map((item) => (
                                             <span key={item} className="px-4 md:px-5 py-2 md:py-2.5 text-xs md:text-sm bg-foreground/5 border border-foreground/10 text-foreground/80 rounded-lg font-medium transition-all cursor-default hover:border-accent/40 hover:text-accent whitespace-nowrap">

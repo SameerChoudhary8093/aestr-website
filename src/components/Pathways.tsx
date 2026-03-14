@@ -60,10 +60,10 @@ const HighlightCarousel = () => {
                         <div className="flex-1 flex flex-col justify-center p-8 md:p-12 lg:p-20 space-y-10 relative z-10">
                             {/* Title Component */}
                             <div className="space-y-4">
-                                <h3 className={`text-3xl md:text-5xl lg:text-5xl font-sans font-black leading-tight tracking-tight ${item.textColor}`}>
+                                <h3 className={`text-3xl md:text-5xl lg:text-5xl font-orbitron font-black leading-tight tracking-tight ${item.textColor}`}>
                                     {item.mainTitle}
                                 </h3>
-                                <p className={`text-2xl md:text-4xl lg:text-5xl font-serif italic leading-tight tracking-tight ${item.textColor} opacity-80`}>
+                                <p className={`subheading-font italic leading-tight tracking-tight ${item.textColor} opacity-80`}>
                                     {item.subTitle}
                                 </p>
                             </div>
@@ -145,14 +145,14 @@ const Pathways = () => {
                 >
                     {/* Number Circle - Styled to match others */}
                     <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-black/30 flex items-center justify-center bg-black/5">
-                        <span className="text-3xl md:text-5xl font-serif italic text-black">7</span>
+                        <span className="text-3xl md:text-5xl font-orbitron font-bold text-black">7</span>
                     </div>
 
                     <div className="space-y-4">
                         <h2 className="text-2xl md:text-3xl lg:text-5xl font-orbitron font-bold text-black leading-tight tracking-tight">
-                            Aestr quality assurance <span className="font-serif italic opacity-90">pathways</span>
+                            Aestr quality assurance <span className="font-orbitron text-black">pathways</span>
                         </h2>
-                        <p className="text-base md:text-lg text-black/80 max-w-2xl mx-auto leading-relaxed font-bold">
+                        <p className="subheading-font text-black/80 max-w-2xl mx-auto leading-relaxed font-bold">
                             We provide clear, ambitious pathways to ensure your career takes off.
                         </p>
                     </div>
