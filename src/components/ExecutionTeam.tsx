@@ -48,10 +48,10 @@ const ExecutionTeam = () => {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-16 md:mb-20 space-y-4"
                 >
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold text-white leading-tight">
+                    <h2 className="text-h2 text-white">
                         Execution <span className="text-accent italic">team</span>
                     </h2>
-                    <p className="text-base md:text-lg text-white/50 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-body text-white/50 max-w-2xl mx-auto">
                         Choose your path to excellence with our diverse program offerings designed to match your ambitions.
                     </p>
                 </motion.div>
@@ -84,7 +84,7 @@ const ExecutionTeam = () => {
                             {/* Content Side */}
                             <div className="w-full md:w-7/12 flex flex-col justify-center space-y-6 text-left">
                                 <div className="space-y-2">
-                                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-orbitron font-bold text-white tracking-tight">
+                                    <h3 className="text-h3 text-white tracking-tight">
                                         {member.name}
                                     </h3>
                                     <p className="text-[10px] md:text-sm font-orbitron uppercase tracking-[0.2em] md:tracking-[0.3em] text-accent font-black">
@@ -92,7 +92,7 @@ const ExecutionTeam = () => {
                                     </p>
                                 </div>
 
-                                <p className="text-base md:text-lg text-white/70 leading-relaxed font-medium">
+                                <p className="text-body text-white/70 font-medium">
                                     {member.desc}
                                 </p>
 
@@ -128,7 +128,7 @@ const ExecutionTeam = () => {
                                     <div className="absolute -top-4 -left-2 text-white/5 font-serif text-[60px] md:text-[100px] leading-none select-none pointer-events-none group-hover:text-accent/5 transition-colors">
                                         "
                                     </div>
-                                    <p className="relative z-10 text-white/80 leading-relaxed font-semibold text-xs md:text-base">
+                                    <p className="relative z-10 text-body text-white/80 font-semibold">
                                         "{member.quote}"
                                     </p>
                                 </div>

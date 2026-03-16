@@ -72,11 +72,11 @@ const AboutPointThree = () => {
                             </div>
                             <div className="space-y-6 text-left">
                                 <div className="space-y-1">
-                                    <h3 className="text-2xl md:text-4xl lg:text-5xl font-orbitron font-bold text-black leading-tight tracking-tight capitalize">
-                                        Targeting <span className="font-orbitron opacity-90">In-Demand Careers Of 2030</span>
+                                    <h3 className="text-h2 text-black capitalize">
+                                        Targeting <span className="opacity-90">In-Demand Careers Of 2030</span>
                                     </h3>
                                 </div>
-                                <p className="subheading-font text-black/90 leading-relaxed max-w-xl font-bold">
+                                <p className="text-body text-black/90 font-bold">
                                     Train for roles powering the next generation of banking, robotics, healthcare, and more—with real-world impact and future security.
                                 </p>
                             </div>

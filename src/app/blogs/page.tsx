@@ -50,10 +50,10 @@ const BlogsPage = () => {
                     <div className="inline-block px-6 py-2 rounded-full bg-accent/5 border border-accent/20 text-accent text-[10px] font-black tracking-[0.3em] uppercase mb-10">
                         Insights & Intelligence
                     </div>
-                    <h1 className="text-5xl md:text-8xl lg:text-9xl font-black leading-[0.8] uppercase tracking-tighter mb-12">
-                        The AESTR <br />
-                        <span className="text-accent italic">Chronicles.</span>
-                    </h1>
+                        <h1 className="text-hero text-black">
+                            Insights from <br />
+                            <span className="opacity-70">industry experts</span>
+                        </h1>
                     <p className="text-xl md:text-2xl text-foreground/50 max-w-4xl mx-auto leading-relaxed font-bold tracking-tight">
                         Explore the latest research, tech breakthroughs, and pedagogical shifts from the architects of India's AI future.
                     </p>
@@ -83,7 +83,7 @@ const BlogsPage = () => {
                             <h2 className="text-3xl md:text-5xl font-black text-foreground uppercase tracking-tighter leading-none group-hover:text-accent transition-colors">
                                 {blogPosts[0].title}
                             </h2>
-                            <p className="text-lg text-foreground/50 leading-relaxed font-semibold">
+                            <p className="text-body text-foreground/50 font-semibold">
                                 {blogPosts[0].excerpt}
                             </p>
                             <div className="flex items-center gap-4 pt-6">
@@ -117,7 +117,7 @@ const BlogsPage = () => {
                                 </div>
                                 <div className="p-10 flex flex-col flex-grow space-y-6">
                                     <div className="text-[10px] text-foreground/30 font-black uppercase tracking-widest">{post.date}</div>
-                                    <h3 className="text-2xl font-black text-foreground uppercase tracking-tighter group-hover:text-accent transition-colors leading-tight">
+                                    <h3 className="text-h3 text-black">
                                         {post.title}
                                     </h3>
                                     <p className="text-sm text-foreground/50 leading-relaxed font-bold flex-grow">

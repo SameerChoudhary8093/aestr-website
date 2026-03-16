@@ -61,11 +61,11 @@ const AlumniPage = () => {
                     <div className="inline-block px-6 py-2 rounded-full bg-accent/5 border border-accent/20 text-accent text-[10px] font-black tracking-[0.3em] uppercase mb-4">
                         The Global AESTR Network
                     </div>
-                    <h1 className="text-5xl md:text-8xl lg:text-9xl font-black leading-[0.8] uppercase tracking-tighter">
-                        Our Alumni, <br />
-                        <span className="text-accent italic">Our Legacy.</span>
-                    </h1>
-                    <p className="text-xl md:text-2xl text-foreground/50 max-w-4xl mx-auto leading-relaxed font-bold tracking-tight">
+                        <h1 className="text-hero text-black">
+                            Where our students <br />
+                            <span className="opacity-70">are working today</span>
+                        </h1>
+                    <p className="text-body text-foreground/50 max-w-4xl mx-auto font-bold tracking-tight">
                         The innovators, leaders, and problem-solvers who have passed through our doors are the true testament to the power of future-safe education.
                     </p>
                 </div>
@@ -105,7 +105,9 @@ const AlumniPage = () => {
                                     </div>
                                 </div>
                                 <div className="space-y-2">
-                                    <h3 className="text-xl md:text-2xl font-black text-foreground group-hover:text-accent transition-colors uppercase tracking-tight leading-none">{alumni.name}</h3>
+                                    <h3 className="text-h3 text-black">
+                                        {alumni.name}
+                                    </h3>
                                     <p className="text-[10px] font-black uppercase tracking-[0.2em] text-accent/70">{alumni.role}</p>
                                     <div className="pt-4 mt-4 border-t border-foreground/5 w-full">
                                         <p className="text-[11px] text-foreground/30 uppercase tracking-[0.15em] font-black">{alumni.company}</p>
@@ -123,10 +125,11 @@ const AlumniPage = () => {
                 <div className="absolute inset-0 bg-[radial-gradient(var(--accent)_1px,transparent_1px)] bg-[size:50px_50px] opacity-[0.02]" />
                 <div className="container mx-auto relative z-10">
                     <div className="flex flex-col items-center mb-24 text-center space-y-6">
-                        <h2 className="text-4xl md:text-7xl font-black text-foreground uppercase tracking-tighter">
+
+                        <h2 className="text-h2 text-foreground uppercase tracking-tighter">
                             Alumni <span className="text-accent italic">Engagement.</span>
                         </h2>
-                        <p className="text-xl text-foreground/40 font-bold uppercase tracking-[0.3em]">Build the Ecosystem</p>
+                        <p className="text-body text-foreground/40 font-bold uppercase tracking-[0.3em]">Build the Ecosystem</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -141,9 +144,9 @@ const AlumniPage = () => {
                                 <h3 className="text-2xl font-black text-foreground mb-6 uppercase tracking-tighter leading-none group-hover:text-accent transition-colors">
                                     {opportunity.title}
                                 </h3>
-                                <p className="text-base text-foreground/40 leading-relaxed font-bold tracking-tight">
-                                    {opportunity.desc}
-                                </p>
+                                    <p className="text-body text-black/60">
+                                        {opportunity.desc}
+                                    </p>
                             </div>
                         ))}
                     </div>

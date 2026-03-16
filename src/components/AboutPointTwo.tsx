@@ -21,10 +21,10 @@ const AboutPointTwo = () => {
                             2
                         </div>
                         <div className="space-y-6 text-left">
-                                <h3 className="text-2xl md:text-4xl lg:text-5xl font-orbitron font-bold text-foreground leading-tight tracking-tight">
-                                    Built By <span className="font-orbitron opacity-90 ml-2">AI Engineers</span>
+                                <h3 className="text-h2 text-foreground">
+                                    Built By <span className="opacity-90 ml-2">AI Engineers</span>
                                 </h3>
-                            <p className="subheading-font text-foreground/90 leading-relaxed max-w-4xl font-bold">
+                            <p className="text-body text-foreground/90 font-bold">
                                 Learn from the architects of tomorrow’s AI. AESTR is the brainchild of leading AI engineers dedicated to cultivating the next generation of tech innovators.
                             </p>
                         </div>
@@ -39,8 +39,8 @@ const AboutPointTwo = () => {
                             { title: 'Young, Agile, And Connected', accent: 'border-foreground/10', desc: 'We are real engineers, deeply embedded in the industry. We speak your language & are committed to transforming you into our colleague within four years.' }
                         ].map((card) => (
                             <div key={card.title} className={`glass p-8 rounded-2xl border-t-2 ${card.accent} hover:-translate-y-1 transition-transform duration-300 group text-left`}>
-                                <h4 className="text-lg font-orbitron font-bold text-foreground mb-4 leading-tight group-hover:text-accent transition-colors">{card.title}</h4>
-                                <p className="text-sm md:text-base text-foreground/80 leading-relaxed font-bold">{card.desc}</p>
+                                <h4 className="text-h3 text-foreground mb-4 leading-tight group-hover:text-accent transition-colors">{card.title}</h4>
+                                <p className="text-body text-foreground/80 font-bold">{card.desc}</p>
                             </div>
                         ))}
                     </div>

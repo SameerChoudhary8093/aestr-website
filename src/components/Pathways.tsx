@@ -60,10 +60,10 @@ const HighlightCarousel = () => {
                         <div className="flex-1 flex flex-col justify-center p-8 md:p-12 lg:p-20 space-y-10 relative z-10">
                             {/* Title Component */}
                             <div className="space-y-4">
-                                <h3 className={`text-3xl md:text-5xl lg:text-5xl font-orbitron font-black leading-tight tracking-tight ${item.textColor}`}>
+                                <h3 className={`text-h2 leading-tight tracking-tight ${item.textColor}`}>
                                     {item.mainTitle}
                                 </h3>
-                                <p className={`subheading-font italic leading-tight tracking-tight ${item.textColor} opacity-80`}>
+                                <p className={`text-body italic leading-tight tracking-tight ${item.textColor} opacity-80`}>
                                     {item.subTitle}
                                 </p>
                             </div>
@@ -72,7 +72,7 @@ const HighlightCarousel = () => {
                             {item.hasApply && (
                                 <div className="flex flex-col md:flex-row items-center gap-4">
                                     <div className="bg-black/5 backdrop-blur-sm p-4 md:p-8 rounded-3xl flex flex-col md:flex-row items-center gap-8 border border-black/5">
-                                        <p className={`text-sm md:text-lg font-bold ${item.textColor} leading-snug max-w-[300px]`}>
+                                        <p className={`text-body font-bold ${item.textColor} leading-snug max-w-[300px]`}>
                                             {item.badge}
                                         </p>
                                         <Link href="/apply" className="flex-shrink-0">
@@ -149,10 +149,10 @@ const Pathways = () => {
                     </div>
 
                     <div className="space-y-4">
-                        <h2 className="text-2xl md:text-3xl lg:text-5xl font-orbitron font-bold text-black leading-tight tracking-tight">
-                            Aestr quality assurance <span className="font-orbitron text-black">pathways</span>
+                        <h2 className="text-h2 text-black">
+                            Aestr quality assurance <span className="text-black">pathways</span>
                         </h2>
-                        <p className="subheading-font text-black/80 max-w-2xl mx-auto leading-relaxed font-bold">
+                        <p className="text-body text-black/80 max-w-2xl mx-auto font-bold">
                             We provide clear, ambitious pathways to ensure your career takes off.
                         </p>
                     </div>
@@ -189,7 +189,7 @@ const Pathways = () => {
                                 </div>
 
                                 <div className={`glass !bg-black/80 !border-black/5 p-6 md:p-8 rounded-2xl border-t-4 ${item.borderColor} flex flex-col items-center text-center transition-all duration-500 group-hover:transform group-hover:-translate-y-2 hover:!bg-black w-full min-h-[160px] md:min-h-[180px]`}>
-                                    <h3 className="text-xl md:text-2xl font-orbitron font-bold text-[#EAF0BD] mb-3 transition-colors leading-tight">
+                                    <h3 className="text-h3 text-[#EAF0BD] mb-3 transition-colors leading-tight">
                                         {item.title}
                                     </h3>
                                     <p className="text-[#EAF0BD]/60 font-bold tracking-widest text-[11px] md:text-[13px] mt-auto">

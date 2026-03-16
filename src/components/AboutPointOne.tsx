@@ -22,11 +22,11 @@ const AboutPointOne = () => {
                     </div>
                     <div className="space-y-6 text-left">
                         <div className="space-y-1">
-                            <h2 className="text-2xl md:text-4xl lg:text-5xl font-orbitron font-bold leading-tight tracking-tight text-black">
-                                CSE 2030: <span className="font-orbitron text-black opacity-90">Computer Science Won't Be Same Ever Again</span>
+                            <h2 className="text-h2 text-black">
+                                CSE 2030: <span className="opacity-90">Computer Science Won't Be Same Ever Again</span>
                             </h2>
                         </div>
-                        <p className="subheading-font text-black/90 leading-relaxed max-w-4xl font-bold">
+                        <p className="text-body text-black/90 font-bold">
                             The world of Computer Science is transforming by 2030...
                         </p>
                     </div>
@@ -48,8 +48,8 @@ const AboutPointOne = () => {
                                 transition={{ duration: 0.5, delay: i * 0.1 }}
                                 className="glass !bg-black/85 !border-black/5 p-8 rounded-3xl hover:-translate-y-1 transition-transform duration-500 text-left min-h-[300px] flex flex-col"
                             >
-                                <h4 className="text-xl md:text-2xl font-orbitron font-bold text-[#EAF0BD] mb-6 leading-tight transition-colors">{card.title}</h4>
-                                <p className="text-base md:text-lg text-[#EAF0BD] leading-relaxed font-normal">{card.desc}</p>
+                                <h4 className="text-h3 text-[#EAF0BD] mb-6 leading-tight transition-colors">{card.title}</h4>
+                                <p className="text-body text-[#EAF0BD] font-normal">{card.desc}</p>
                                 
                                 {/* Decor shape like in image */}
                                 <div className="mt-auto pt-4 flex justify-end opacity-20">
@@ -70,7 +70,7 @@ const AboutPointOne = () => {
                             className="glass !bg-black/90 !border-black/5 p-8 md:p-12 rounded-[2.5rem] text-left relative overflow-hidden group"
                         >
                             <div className="relative z-10 space-y-8">
-                                <h4 className="text-2xl md:text-3xl font-orbitron font-bold text-[#EAF0BD] leading-tight">
+                                <h4 className="text-h3 text-[#EAF0BD] leading-tight">
                                     Unparalleled Flexibility & <br />
                                     <span className="italic opacity-80">Cutting-Edge Curriculum:</span>
                                 </h4>
@@ -83,7 +83,7 @@ const AboutPointOne = () => {
                                     ].map((point, idx) => (
                                         <li key={idx} className="flex gap-4">
                                             <span className="flex-shrink-0 w-3 h-3 bg-[#EAF0BD] rounded-full mt-2" />
-                                            <p className="text-base md:text-lg text-[#EAF0BD] leading-relaxed font-normal">{point}</p>
+                                            <p className="text-body text-[#EAF0BD] font-normal">{point}</p>
                                         </li>
                                     ))} </ul>
                             </div>
@@ -98,24 +98,24 @@ const AboutPointOne = () => {
                             className="glass !bg-black/90 !border-black/5 p-8 md:p-12 rounded-[2.5rem] text-left relative overflow-hidden group"
                         >
                             <div className="relative z-10 space-y-10">
-                                <h4 className="text-2xl md:text-3xl font-orbitron font-bold text-[#EAF0BD] leading-tight">
+                                <h4 className="text-h3 text-[#EAF0BD] leading-tight">
                                     Learn By Doing, <br />
                                     <span className="opacity-80">Excel By Creating:</span>
                                 </h4>
                                 <div className="space-y-8">
                                     <div className="space-y-4">
-                                        <p className="text-[#EAF0BD] text-lg md:text-xl font-bold">
+                                        <p className="text-body text-[#EAF0BD] font-bold">
                                             <span className="underline decoration-[#EAF0BD]/30 underline-offset-4 tracking-tight">Project-Powered Progress:</span>
                                         </p>
-                                        <p className="text-base md:text-lg text-[#EAF0BD] leading-relaxed font-normal">
+                                        <p className="text-body text-[#EAF0BD] font-normal">
                                             Get graded on your real-world projects and software solutions, not just exams. Solve a problem, build the software, and master the subject.
                                         </p>
                                     </div>
                                     <div className="space-y-4">
-                                        <p className="text-[#EAF0BD] text-lg md:text-xl font-bold">
+                                        <p className="text-body text-[#EAF0BD] font-bold">
                                             <span className="underline decoration-[#EAF0BD]/30 underline-offset-4 tracking-tight">The Engineer’s Dream Education:</span>
                                         </p>
-                                        <p className="text-base md:text-lg text-[#EAF0BD] leading-relaxed font-normal">
+                                        <p className="text-body text-[#EAF0BD] font-normal">
                                             Our courses are crafted the way seasoned engineers wish they had been taught – practical, innovative, and deeply engaging.
                                         </p>
                                     </div>

@@ -46,11 +46,11 @@ export default function DayAtAestr() {
             <section className="relative py-20 px-6">
                 <div className="container-boxed max-w-6xl mx-auto space-y-16">
                     <div className="space-y-4">
-                        <h1 className="text-4xl md:text-6xl font-orbitron font-bold text-foreground">
+                        <h1 className="text-hero text-foreground">
                             Day of <span className="text-accent underline decoration-accent/20">AESTR Student</span>
                         </h1>
-                        <p className="text-lg md:text-xl text-foreground/80 max-w-3xl font-medium">
-                            At AESTR, a typical day blends hands-on innovation with AI-driven learning.
+                        <p className="text-body text-white/80 max-w-2xl mx-auto">
+                            Experience the intense, focused, and rewarding life of an AI engineering student at India's most innovative institution.
                         </p>
                     </div>
 
@@ -92,7 +92,7 @@ export default function DayAtAestr() {
             {/* Section 2: TRADITIONAL vs AESTR */}
             <section className="relative py-24 bg-background-alt">
                 <div className="container-boxed max-w-6xl mx-auto space-y-16">
-                    <h2 className="text-3xl md:text-5xl font-orbitron font-bold text-center">
+                    <h2 className="text-h2 text-center text-foreground uppercase">
                         TRADITIONAL <span className="text-accent italic">vs</span> AESTR
                     </h2>
 

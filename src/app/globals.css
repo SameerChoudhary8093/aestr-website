@@ -17,9 +17,14 @@
 }
 
 .decorative-serif {
-  font-family: var(--font-playfair) !important;
-  font-style: italic !important;
+  font-family: var(--font-orbitron) !important;
+  font-style: normal !important;
   text-transform: none !important;
+}
+
+.subheading-font {
+  font-family: var(--font-arial) !important;
+  font-size: 18px !important;
 }
 
 @theme {
@@ -38,6 +43,8 @@
   --font-outfit: var(--font-outfit);
 
   --container-3xl: 1800px;
+
+  --font-sans: var(--font-arial);
 }
 
 /* Custom Container for Boxed Layout */
@@ -82,34 +89,58 @@ body {
   background-image: radial-gradient(circle at top right, #181818 0%, #111111 100%);
   background-attachment: fixed;
   font-family: var(--font-arial);
-  font-size: 16px;
+  font-size: 18px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* 
-  Global Typography Enforcement
+  Global Typography scale
 */
-h1, h2, h3, h4, h5, h6, 
-.font-orbitron, .font-outfit, .heading-font {
-  font-family: var(--font-orbitron), sans-serif !important;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
+.text-hero {
+  font-size: 2.5rem; /* Mobile */
+  line-height: 1;
+  font-weight: 900;
+  font-family: var(--font-orbitron);
 }
 
-.sub-heading, .subheading-font, .font-serif, .italic {
-  font-family: Arial, sans-serif !important;
-  font-size: 16px !important;
-  text-transform: none !important;
-  letter-spacing: normal !important;
-  font-style: normal !important; /* Overriding serif italic if used as subheading */
+@media (min-width: 1024px) {
+  .text-hero {
+    font-size: 68.25px; /* Large Desktop as per Image 1 */
+  }
 }
 
-/* Specific override for italic titles that act as subheaders */
-.italic.font-serif, h3.italic {
-  font-family: Arial, sans-serif !important;
-  font-size: 16px !important;
-  font-style: italic !important;
+.text-h2 {
+  font-size: 2.25rem; /* Mobile */
+  line-height: 1.1;
+  font-weight: 700;
+  font-family: var(--font-orbitron);
+}
+
+@media (min-width: 1024px) {
+  .text-h2 {
+    font-size: 3rem; /* Desktop */
+  }
+}
+
+.text-h3 {
+  font-size: 1.5rem; /* Mobile */
+  line-height: 1.2;
+  font-weight: 700;
+  font-family: var(--font-orbitron);
+}
+
+@media (min-width: 1024px) {
+  .text-h3 {
+    font-size: 1.875rem; /* Desktop */
+  }
+}
+
+.text-body {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: var(--font-arial);
 }
 
 /* 

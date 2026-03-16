@@ -67,10 +67,10 @@ const AboutTopOnePercent = () => {
                 >
                     <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
                         <div className="space-y-4 text-left">
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold leading-tight flex flex-wrap items-center gap-2 md:gap-3 text-foreground">
-                                B.Tech for <span className="italic font-light text-accent">The top 1%</span>
+                            <h2 className="text-h2 font-orbitron leading-tight flex flex-wrap items-center gap-2 md:gap-3 text-foreground">
+                                B.Tech for <span className="text-accent">the top 1%</span>
                             </h2>
-                            <p className="subheading-font text-foreground/80 max-w-2xl leading-relaxed">
+                            <p className="text-body text-foreground/80 max-w-2xl leading-relaxed">
                                 Blend of deep CS knowledge with expertise in healthcare, nanotech, robotics, and material science.
                             </p>
                         </div>
@@ -93,10 +93,10 @@ const AboutTopOnePercent = () => {
                         {/* Right: Specializations */}
                         <div className="space-y-6 md:space-y-8 text-left">
                             <div className="space-y-4">
-                                <h3 className="text-xl md:text-2xl font-orbitron font-bold text-foreground leading-tight">B.Tech Computer Science & Engineering</h3>
+                                <h3 className="text-h3 font-orbitron text-foreground leading-tight">B.Tech Computer Science & Engineering</h3>
 
                                 <div className="space-y-4 md:space-y-6">
-                                    <h4 className="subheading-font text-white font-medium uppercase tracking-widest">Major Specialization</h4>
+                                    <h4 className="subheading-font text-white font-medium uppercase tracking-widest">Major specialization</h4>
                                     <div className="flex flex-wrap gap-2 md:gap-3">
                                         {[
                                             { name: "Software Engineering", href: "/software-engineering" },
@@ -117,7 +117,7 @@ const AboutTopOnePercent = () => {
                                 </div>
 
                                 <div className="space-y-4 md:space-y-6 pt-4">
-                                    <h4 className="subheading-font text-white font-medium uppercase tracking-widest">Minor specialization along with one Major</h4>
+                                    <h4 className="subheading-font text-white font-medium uppercase tracking-widest">Minor specialization along with one major</h4>
                                     <div className="flex flex-wrap gap-2 md:gap-2.5">
                                         {["Robotics", "Bioinformatics", "Industry & Manufacturing", "Design", "Fintech", "Nanotechnology", "Geoinformatics", "Chip & Semiconductor", "Smart Cities"].map((item) => (
                                             <span key={item} className="px-4 md:px-5 py-2 md:py-2.5 text-xs md:text-sm bg-foreground/5 border border-foreground/10 text-foreground/80 rounded-lg font-medium transition-all cursor-default hover:border-accent/40 hover:text-accent whitespace-nowrap">

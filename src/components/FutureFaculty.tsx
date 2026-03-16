@@ -36,17 +36,17 @@ const FutureFaculty = () => {
                                 6
                             </div>
                             <div className="space-y-6">
-                                <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold text-foreground leading-tight flex flex-col items-start gap-2">
+                                <h2 className="text-h2 text-foreground flex flex-col items-start gap-2">
                                     <span className="flex items-center gap-4">
                                         Future faculty
                                     </span>
                                     <span className="text-accent italic">AI & robotics.</span>
                                 </h2>
                                 <div className="space-y-4">
-                                    <h3 className="text-xl md:text-2xl text-foreground font-black leading-relaxed">
+                                    <h3 className="text-h3 text-foreground font-black leading-relaxed">
                                         At AESTR, we don't just use technology we teach through it.
                                     </h3>
-                                    <p className="text-lg md:text-xl text-foreground/90 leading-relaxed font-bold">
+                                    <p className="text-body text-foreground/90 font-bold">
                                         We are proud to be the first institution in the world to deploy AI-powered virtual teachers and humanoid robots as part of the core academic experience.
                                     </p>
                                 </div>
@@ -86,11 +86,11 @@ const FutureFaculty = () => {
                     >
                         <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:15px_15px] opacity-20 pointer-events-none" />
                         <div className="relative z-10">
-                            <h4 className="text-xl md:text-3xl font-orbitron font-bold text-foreground mb-4 md:mb-6 flex items-center gap-3 group-hover:text-accent transition-colors">
+                            <h4 className="text-h3 text-foreground mb-4 md:mb-6 flex items-center gap-3 group-hover:text-accent transition-colors">
                                  <span className="w-2 h-2 rounded-full bg-accent" />
                                  AI Teachers
                             </h4>
-                            <p className="text-base md:text-lg text-foreground/90 leading-relaxed font-bold">
+                            <p className="text-body text-foreground/90 font-bold">
                                 Trained on the world’s best textbooks, industry manuals, open research, and real-world case studies, our AI teachers can explain complex topics in simple language — tailored to your pace, level, and interests.
                             </p>
                         </div>
@@ -105,11 +105,11 @@ const FutureFaculty = () => {
                     >
                         <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:15px_15px] opacity-20 pointer-events-none" />
                         <div className="relative z-10">
-                            <h4 className="text-xl md:text-3xl font-orbitron font-bold text-foreground mb-4 md:mb-6 flex items-center gap-3 group-hover:text-accent transition-colors">
+                            <h4 className="text-h3 text-foreground mb-4 md:mb-6 flex items-center gap-3 group-hover:text-accent transition-colors">
                                  <span className="w-2 h-2 rounded-full bg-accent" />
                                  Humanoid Robot Teachers
                             </h4>
-                            <p className="text-base md:text-lg text-foreground/90 leading-relaxed font-bold">
+                            <p className="text-body text-foreground/90 font-bold">
                                 These physical AI-powered robots teach in labs, interact in real time, and even read your facial cues to adjust their delivery.
                             </p>
                         </div>

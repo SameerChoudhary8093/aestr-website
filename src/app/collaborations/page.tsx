@@ -13,237 +13,276 @@ const CollaborationsPage = () => {
             {/* Hero Section */}
             <section className="relative pt-48 pb-24 lg:pt-64 lg:pb-32 overflow-hidden px-6 bg-[radial-gradient(circle_at_top,rgba(216,246,2,0.05),transparent_50%)]">
                 <div className="container mx-auto relative z-10">
-                    <div className="flex flex-col lg:flex-row items-center gap-20">
-                        <div className="w-full lg:w-1/2 space-y-10 animate-in fade-in slide-in-from-left duration-1000">
-                            <div className="inline-block px-6 py-2 rounded-full bg-accent/5 border border-accent/20 text-accent text-[10px] font-black tracking-[0.3em] uppercase">
-                                Global Academic Excellence
-                            </div>
-                            <h1 className="text-4xl md:text-7xl lg:text-8xl font-black leading-[0.85] uppercase tracking-tighter">
-                                A Partnership <br />
-                                <span className="text-accent italic">Built For The Future.</span>
+                    <div className="flex flex-col lg:flex-row items-center gap-16">
+                        <div className="w-full lg:w-[55%] space-y-8 animate-in fade-in slide-in-from-left duration-1000">
+                            <h1 className="text-hero font-black leading-tight uppercase tracking-tight">
+                                Your Global Engineering <br />
+                                <span className="text-accent">Journey Starts Here</span>
                             </h1>
-                            <p className="text-xl text-foreground/50 max-w-2xl leading-relaxed font-semibold">
-                                Global exposure, world-class curriculum, and industry-leading mentors. We bridge the gap between Indian engineering and global standards.
-                            </p>
-                            <div className="pt-4">
-                                <button className="btn-aestr !px-12 !py-5 bg-accent text-black font-black uppercase tracking-widest shadow-[0_0_50px_rgba(216,246,2,0.2)] hover:shadow-none transition-all">
-                                    Explore Partnerships
-                                    <span className="ml-3 inline-block group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">↗</span>
-                                </button>
+                            <div className="space-y-6">
+                                <h3 className="text-h3 font-bold text-foreground/80 italic font-playfair">
+                                    A Partnership Built for Your Future
+                                </h3>
+                                <p className="text-lg text-foreground/60 max-w-2xl leading-relaxed font-outfit">
+                                    Imagine a world-class engineering education that takes you from India to the USA. That's exactly what the new AESTR x Roosevelt University, USA collaboration offers! We're teaming up to give aspiring engineers like you unparalleled global learning, amazing career opportunities, and exposure to cutting-edge industries.
+                                </p>
                             </div>
                         </div>
                         
-                        <div className="w-full lg:w-1/2 relative group animate-in fade-in slide-in-from-right duration-1000">
-                            <div className="aspect-video bg-black/40 rounded-[3rem] border border-foreground/10 overflow-hidden relative shadow-[0_0_100px_rgba(0,0,0,0.5)] transition-all duration-700 hover:border-accent/40 group-hover:shadow-[0_0_80px_rgba(216,246,2,0.1)]">
+                        <div className="w-full lg:w-[45%] relative group animate-in fade-in slide-in-from-right duration-1000">
+                            <div className="aspect-[4/3] bg-black/40 rounded-3xl border border-foreground/10 overflow-hidden relative shadow-[0_0_100px_rgba(0,0,0,0.5)] transition-all duration-700 hover:border-accent/40 group-hover:shadow-[0_0_80px_rgba(216,246,2,0.1)]">
                                 <Image 
                                     src="/Other/lab-5.webp" 
-                                    alt="Global Campus" 
+                                    alt="Roosevelt University Campus" 
                                     fill 
-                                    className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
+                                    className="object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
                                 <div className="absolute inset-0 flex items-center justify-center">
-                                    <div className="w-24 h-24 bg-accent rounded-full flex items-center justify-center shadow-2xl transition-transform duration-500 group-hover:scale-110 shadow-accent/20">
-                                        <svg className="w-10 h-10 text-black ml-1.5" fill="currentColor" viewBox="0 0 24 24">
+                                    <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30 transition-transform duration-500 group-hover:scale-110">
+                                        <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
                                             <path d="M8 5v14l11-7z" />
                                         </svg>
                                     </div>
                                 </div>
                             </div>
-                            {/* Decorative elements */}
+                            {/* Decorative background blur */}
                             <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/10 rounded-full blur-[100px] -z-10" />
-                            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-accent/5 rounded-full blur-[100px] -z-10" />
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Path to Dual Degree */}
-            <section className="py-32 relative overflow-hidden bg-background-alt/30 border-y border-foreground/5">
+            <section className="py-24 relative overflow-hidden bg-white text-black">
                 <div className="container mx-auto px-6 relative z-10 text-center">
-                    <div className="mb-24 space-y-6">
-                        <span className="text-[12rem] font-black text-foreground/5 absolute top-0 left-1/2 -translate-x-1/2 leading-none select-none">DUAL</span>
-                        <h2 className="text-4xl md:text-7xl font-black text-foreground uppercase tracking-tighter relative z-10">
-                            Your Path To A <span className="text-accent italic">Dual Degree.</span>
+                    <div className="mb-16 space-y-4">
+                        <h2 className="text-h2 font-black uppercase tracking-tight font-orbitron">
+                            Your Path to a Dual Degree
                         </h2>
-                        <div className="h-2 w-32 bg-accent mx-auto rounded-full relative z-10" />
+                        <p className="text-lg text-gray-600 max-w-3xl mx-auto font-outfit">
+                            For too long, the story of engineering in India has been a paradox. We produce millions of engineers, yet industries lament a scarcity of "hirable" talent.
+                        </p>
                     </div>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto relative z-10">
-                        <div className="glass p-12 rounded-[2.5rem] bg-foreground/5 border border-foreground/10 hover:border-accent/30 transition-all duration-700 group hover:bg-accent/5 text-left">
-                            <div className="text-accent mb-10 flex items-center gap-4">
-                                <span className="text-sm font-black uppercase tracking-[0.4em]">PHASE 01</span>
-                                <div className="h-px flex-1 bg-accent/20" />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                        {/* Card 1 */}
+                        <div className="rounded-[2.5rem] bg-[#F3E8FF] border border-purple-100 overflow-hidden text-left flex flex-col h-full shadow-sm hover:shadow-md transition-shadow">
+                            <div className="aspect-[16/9] relative">
+                                <Image src="/Other/future-faculty-1.webp" alt="Global Classroom" fill className="object-cover" />
                             </div>
-                            <h3 className="text-3xl font-black text-foreground mb-8 uppercase tracking-tighter group-hover:text-accent transition-colors">Foundation Mastery</h3>
-                            <p className="text-xl text-foreground/50 leading-relaxed font-semibold">
-                                Start your journey in India with AESTR. Build a rock-solid foundation in AI, Robotics, and core computer science while working on real-world projects from day one.
-                            </p>
+                            <div className="p-8 md:p-10 space-y-6 flex-grow">
+                                <h3 className="text-h3 font-black uppercase tracking-tight font-orbitron">Your Path to a Dual Degree</h3>
+                                <div className="space-y-4 font-outfit">
+                                    <p className="text-sm leading-relaxed">
+                                        <span className="font-bold">Years 1 & 2:</span> You'll start strong at AESTR right here in India, building a solid foundation in engineering.
+                                    </p>
+                                    <p className="text-sm leading-relaxed">
+                                        <span className="font-bold">Years 3 & 4:</span> Then, you'll jet off to Roosevelt University in the U.S. to complete your degree.
+                                    </p>
+                                    <p className="text-sm leading-relaxed">
+                                        <span className="font-bold underline decoration-accent decoration-2 underline-offset-4 italic">Result:</span> You graduate with a globally recognized degree and incredible international experience.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div className="glass p-12 rounded-[2.5rem] bg-foreground/5 border border-foreground/10 hover:border-accent/30 transition-all duration-700 group hover:bg-accent/5 text-left">
-                            <div className="text-accent mb-10 flex items-center gap-4">
-                                <span className="text-sm font-black uppercase tracking-[0.4em]">PHASE 02</span>
-                                <div className="h-px flex-1 bg-accent/20" />
-                                <span className="text-2xl">✈</span>
+
+                        {/* Card 2 */}
+                        <div className="rounded-[2.5rem] bg-[#F3E8FF] border border-purple-100 overflow-hidden text-left flex flex-col h-full shadow-sm hover:shadow-md transition-shadow">
+                            <div className="aspect-[16/9] relative">
+                                <Image src="/Other/lab-3.webp" alt="Innovation Lab" fill className="object-cover" />
                             </div>
-                            <h3 className="text-3xl font-black text-foreground mb-8 uppercase tracking-tighter group-hover:text-accent transition-colors">Global Transition</h3>
-                            <p className="text-xl text-foreground/50 leading-relaxed font-semibold">
-                                Complete your final years at our partner universities in the USA. Gain global credits, participate in international hackathons, and graduate with a globally recognized dual degree.
-                            </p>
+                            <div className="p-8 md:p-10 space-y-6 flex-grow">
+                                <h3 className="text-h3 font-black uppercase tracking-tight font-orbitron">The "3+1" Immersion:</h3>
+                                <div className="space-y-4 font-outfit">
+                                    <p className="text-sm leading-relaxed">
+                                        <span className="font-bold">Years 1-3:</span> You'll get comprehensive knowledge and skills during your studies at AESTR.
+                                    </p>
+                                    <p className="text-sm leading-relaxed">
+                                        <span className="font-bold">Years 4:</span> Your final year will be spent at Roosevelt University in the U.S., diving deep into advanced research, innovation labs, and expanding your professional network.
+                                    </p>
+                                    <p className="text-sm leading-relaxed">
+                                        <span className="font-bold underline decoration-accent decoration-2 underline-offset-4 italic">Ideal for:</span> Students who want an intensive international capstone year.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Smooth Sailing Section */}
-            <section className="py-40 relative overflow-hidden bg-[radial-gradient(circle_at_right,rgba(216,246,2,0.03),transparent_40%)]">
+            <section className="py-24 relative overflow-hidden bg-white text-black border-t border-gray-100">
                 <div className="container mx-auto px-6 relative z-10">
-                    <div className="text-center mb-24 space-y-8">
-                        <h2 className="text-4xl md:text-7xl font-black text-foreground uppercase tracking-tighter">
-                            Smooth Sailing <br /><span className="text-accent italic">To The USA.</span>
+                    <div className="text-center mb-16 space-y-4">
+                        <h2 className="text-h2 font-black uppercase tracking-tight font-orbitron">
+                            Smooth Sailing to the USA
                         </h2>
-                        <p className="text-xl text-foreground/40 max-w-2xl mx-auto font-bold tracking-tight">We handle the complexity, you focus on your engineering future.</p>
+                        <p className="text-lg text-gray-600 max-w-2xl mx-auto font-outfit">
+                            We know moving abroad can be daunting, so we're making it easy:
+                        </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-                        <div className="glass p-14 rounded-[3rem] bg-foreground/5 border border-foreground/5 flex flex-col items-center text-center group hover:bg-accent/5 hover:border-accent/20 transition-all duration-700">
-                            <div className="w-24 h-24 bg-accent/10 rounded-full flex items-center justify-center text-5xl mb-10 group-hover:scale-110 transition-transform duration-700">🛂</div>
-                            <h3 className="text-3xl font-black text-foreground mb-6 uppercase tracking-tight">Hassle Free Visa</h3>
-                            <p className="text-foreground/50 leading-relaxed font-semibold">
-                                Our dedicated immigration specialists guide you through the entire F-1 visa process—from documentation to mock interviews.
-                            </p>
+                    <div className="max-w-5xl mx-auto border border-gray-100 rounded-[3rem] p-12 md:p-16 flex flex-col md:flex-row items-center gap-16 shadow-sm">
+                        {/* Visa */}
+                        <div className="flex-1 flex flex-col items-center text-center space-y-8">
+                            <div className="w-48 h-48 relative">
+                                {/* Use an illustrative icon or emoji if image path is unknown, but here I'll use a placeholder representing the visa icon */}
+                                <div className="w-full h-full bg-blue-50 rounded-full flex items-center justify-center text-8xl">🛂</div>
+                            </div>
+                            <div className="space-y-4">
+                                <h3 className="text-h3 font-black uppercase tracking-tight font-orbitron italic">Hassle-Free Visa:</h3>
+                                <p className="text-gray-600 leading-relaxed font-outfit">
+                                    Our dedicated team works directly with U.S. immigration experts to guide you through every step of your visa application. No stress, just clear guidance.
+                                </p>
+                            </div>
                         </div>
-                        <div className="glass p-14 rounded-[3rem] bg-foreground/5 border border-foreground/5 flex flex-col items-center text-center group hover:bg-accent/5 hover:border-accent/20 transition-all duration-700">
-                            <div className="w-24 h-24 bg-accent/10 rounded-full flex items-center justify-center text-5xl mb-10 group-hover:scale-110 transition-transform duration-700">💰</div>
-                            <h3 className="text-3xl font-black text-foreground mb-6 uppercase tracking-tight">Financial Support</h3>
-                            <p className="text-foreground/50 leading-relaxed font-semibold">
-                                Access to exclusive education loans at competitive rates and merit-based scholarship assistance for the U.S. leg of your degree.
-                            </p>
+
+                        {/* Divider */}
+                        <div className="hidden md:block w-px h-64 bg-gray-100" />
+
+                        {/* Financial */}
+                        <div className="flex-1 flex flex-col items-center text-center space-y-8">
+                            <div className="w-48 h-48 relative">
+                                <div className="w-full h-full bg-green-50 rounded-full flex items-center justify-center text-8xl">💰</div>
+                            </div>
+                            <div className="space-y-4">
+                                <h3 className="text-h3 font-black uppercase tracking-tight font-orbitron italic">No Financial Worries:</h3>
+                                <p className="text-gray-600 leading-relaxed font-outfit">
+                                    We're partnering with financial institutions to offer collateral-free educational loans. This means financial barriers won't stop you from chasing your global dreams.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Benefits Grid */}
-            <section className="py-40 relative overflow-hidden border-t border-foreground/5 bg-background-alt/10">
-                <div className="container mx-auto px-6">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Launch Your Global Career Section */}
+            <section className="py-24 relative overflow-hidden bg-white text-black">
+                <div className="container mx-auto px-6 relative z-10">
+                    <div className="text-center mb-16 space-y-4">
+                        <h2 className="text-h2 font-black uppercase tracking-tight font-orbitron">
+                            Launch Your Global Career
+                        </h2>
+                        <p className="text-lg text-gray-600 max-w-3xl mx-auto font-outfit">
+                            Studying at Roosevelt University isn't just about academics; it's about opening doors to your future:
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
                         {[
-                            { icon: '💼', title: 'Silicon Internships', desc: 'Secure high-paying internships with U.S.-based tech giants and startups.' },
-                            { icon: '🗽', title: 'OPT Pathways', desc: 'Expert guidance for OPT and subsequent work authorization in the United States.' },
-                            { icon: '🤝', title: 'Global Connections', desc: 'Direct networking with leaders from Silicon Valley tech ecosystem.' },
-                            { icon: '🌍', title: 'Elite Network', desc: 'Join a selective alumni base spanning across the world\'s top tech hubs.' }
+                            { 
+                                icon: '🎓', 
+                                title: 'Amazing Internships', 
+                                desc: 'Access a wide network for global internships and get dedicated support for job placement.',
+                                highlight: false
+                            },
+                            { 
+                                icon: '💻', 
+                                title: 'Stay & Work in the U.S', 
+                                desc: 'As a STEM graduate, you\'re eligible for the STEM OPT extension, allowing you to stay and work in the U.S. for up to 3 years after you graduate.',
+                                highlight: false
+                            },
+                            { 
+                                icon: '🎧', 
+                                title: 'Industry Connections', 
+                                desc: 'Get direct exposure to top international industry leaders, bustling research parks, and dynamic tech communities.',
+                                highlight: true
+                            },
+                            { 
+                                icon: '📜', 
+                                title: 'Build Your Network', 
+                                desc: 'Connect with a vast global alumni community and experienced mentors who can guide your career.',
+                                highlight: false
+                            }
                         ].map((item, i) => (
-                            <div key={i} className="glass p-10 rounded-3xl bg-foreground/5 border border-foreground/5 hover:border-accent/40 hover:-translate-y-3 transition-all duration-700 text-center flex flex-col items-center">
-                                <div className="w-16 h-16 bg-accent/5 rounded-2xl flex items-center justify-center text-4xl mb-8 group-hover:bg-accent/10 transition-colors">{item.icon}</div>
-                                <h4 className="text-xl font-black text-accent mb-4 uppercase tracking-tighter">{item.title}</h4>
-                                <p className="text-sm text-foreground/50 leading-relaxed font-bold">{item.desc}</p>
+                            <div key={i} className={`p-8 rounded-[2rem] border ${item.highlight ? 'bg-[#C084FC] border-purple-400 text-white' : 'bg-white border-gray-100 text-black'} shadow-sm flex flex-col items-center text-center space-y-6 h-full transition-transform hover:-translate-y-2`}>
+                                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-4xl ${item.highlight ? 'bg-white/20' : 'bg-gray-50'}`}>
+                                    {item.icon}
+                                </div>
+                                <h4 className="text-h3 font-black uppercase tracking-tight font-orbitron leading-tight">{item.title}</h4>
+                                <p className={`text-sm font-outfit ${item.highlight ? 'text-white/90' : 'text-gray-600'}`}>{item.desc}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Why This Matters */}
-            <section className="py-40 relative bg-background border-y border-foreground/5">
+            {/* Campus Life Section - Special Grid */}
+            <section className="py-24 relative overflow-hidden bg-white text-black border-t border-gray-100">
                 <div className="container mx-auto px-6 relative z-10">
-                    <div className="flex flex-col lg:flex-row items-center gap-24">
-                        <div className="w-full lg:w-1/2 space-y-10">
-                            <h2 className="text-4xl md:text-7xl font-black text-foreground leading-[0.85] uppercase tracking-tighter">
-                                Why This <br /><span className="text-accent">Matters For You.</span>
-                            </h2>
-                            <p className="text-xl text-foreground/50 leading-relaxed font-bold">
-                                In a world dominated by AI, a global profile is your biggest asset. Our collaborations aren't just for a certificate; they are for providing you the perspective and connections required to lead in the global tech hierarchy.
-                            </p>
-                            <ul className="space-y-6 pt-6">
-                                {[
-                                    'Global Exposure through Semester Exchanges',
-                                    'Exposure to International Patent Law & R&D',
-                                    'Access to $100k+ starting salary opportunities'
-                                ].map((bullet, i) => (
-                                    <li key={i} className="flex items-center gap-6 group">
-                                        <div className="w-4 h-4 rounded-full border-2 border-accent group-hover:bg-accent transition-all duration-500" />
-                                        <span className="text-sm font-black text-foreground uppercase tracking-[0.4em] leading-none transition-transform group-hover:translate-x-2">{bullet}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className="w-full lg:w-1/2">
-                            <div className="aspect-video bg-black/40 rounded-[3rem] border border-foreground/10 overflow-hidden relative shadow-[0_0_100px_rgba(0,0,0,0.5)] group">
-                                <Image src="/Other/future-faculty-2.webp" alt="Global Classroom" fill className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
-                                <div className="absolute inset-10 border border-foreground/5 rounded-[2rem] pointer-events-none" />
-                                <div className="absolute bottom-12 left-12 z-20">
-                                    <span className="text-[10px] font-black text-accent uppercase tracking-[0.5em] bg-black/60 px-6 py-3 rounded-full backdrop-blur-md border border-accent/20">Innovation Beyond Borders</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Campus Gallery */}
-            <section className="py-40 relative px-6 bg-background-alt/10">
-                <div className="container mx-auto">
-                    <div className="flex flex-col items-center text-center mb-24 space-y-6">
-                        <h2 className="text-4xl md:text-7xl font-black text-foreground uppercase tracking-tighter">
-                            Campus <span className="text-accent italic">Life.</span>
+                    <div className="text-center mb-16">
+                        <h2 className="text-h2 font-black uppercase tracking-tight font-orbitron">
+                            Campus Life
                         </h2>
-                        <p className="text-xl text-foreground/40 max-w-xl font-bold tracking-tight">Experience the vibrant ecosystem across our partner locations.</p>
                     </div>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-7xl mx-auto">
-                        {[1, 2, 3, 4].map((i) => (
-                            <div key={i} className="glass aspect-video md:aspect-[16/10] rounded-[3rem] bg-foreground/5 border border-foreground/5 relative group overflow-hidden transition-all duration-700 hover:border-accent/40 hover:scale-[1.02] hover:shadow-[0_0_50px_rgba(216,246,2,0.1)]">
-                                <Image 
-                                    src={`/Other/lab-${i === 1 ? '4' : i === 2 ? '3' : i === 3 ? '2' : '1'}.webp`} 
-                                    alt={`Campus Gallery ${i}`} 
-                                    fill 
-                                    className="object-cover opacity-50 group-hover:opacity-100 transition-all duration-1000" 
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
-                                <div className="absolute bottom-10 left-10 z-10 transition-transform duration-500 group-hover:translate-x-3">
-                                    <span className="text-[10px] font-black text-foreground/40 uppercase tracking-[0.5em] group-hover:text-accent transition-colors">Global Learning Center 0{i}</span>
+                    <div className="max-w-7xl mx-auto space-y-8">
+                        {/* Top Two Large Images with Icon Junction */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative items-center">
+                            <div className="aspect-[16/10] rounded-[2rem] overflow-hidden relative shadow-lg">
+                                <Image src="/Other/future-faculty-2.webp" alt="Campus View 1" fill className="object-cover" />
+                                <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/60 to-transparent">
+                                    <div className="w-10 h-10 bg-white/20 backdrop-blur-md rounded-lg flex items-center justify-center border border-white/20">
+                                        <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                                    </div>
                                 </div>
                             </div>
-                        ))}
+
+                            {/* Center Icon Junction */}
+                            <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-16 h-16 items-center justify-center">
+                                <div className="w-12 h-12 bg-[#D8F602] rotate-45 flex items-center justify-center rounded-lg shadow-xl shadow-accent/20 border-4 border-white">
+                                    <div className="w-6 h-6 border-l-4 border-t-4 border-black -rotate-45 translate-x-1 translate-y-1" />
+                                    <div className="w-6 h-6 border-r-4 border-b-4 border-black -rotate-45 -translate-x-1 -translate-y-1 absolute" />
+                                </div>
+                            </div>
+
+                            <div className="aspect-[16/10] rounded-[2rem] overflow-hidden relative shadow-lg">
+                                <Image src="/Other/lab-4.webp" alt="Campus View 2" fill className="object-cover" />
+                                <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/60 to-transparent text-right">
+                                    <div className="ml-auto w-10 h-10 bg-white/20 backdrop-blur-md rounded-lg flex items-center justify-center border border-white/20">
+                                        <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Bottom Four Small Images */}
+                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                            {[1, 2, 3, 4].map((i) => (
+                                <div key={i} className="aspect-square rounded-2xl overflow-hidden relative shadow-md group">
+                                    <Image 
+                                        src={`/Other/lab-${i}.webp`} 
+                                        alt={`Campus Thumbnail ${i}`} 
+                                        fill 
+                                        className="object-cover transition-transform duration-700 group-hover:scale-110" 
+                                    />
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Final CTA Section */}
-            <section className="py-20 px-6">
+            <section className="py-24 px-6 bg-white text-black">
                 <div className="container mx-auto max-w-6xl">
-                    <div className="bg-gradient-to-br from-accent/20 to-transparent p-16 md:p-24 rounded-[4rem] border border-accent/10 backdrop-blur-3xl flex flex-col md:flex-row items-center justify-between gap-16 relative overflow-hidden group hover:border-accent/30 transition-all duration-700">
-                        <div className="absolute inset-0 bg-[radial-gradient(var(--accent)_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.05]" />
-                        <div className="text-center md:text-left space-y-8 relative z-10">
-                            <h2 className="text-4xl md:text-7xl font-black text-foreground leading-[0.85] uppercase tracking-tighter">Found Your <br /><span className="text-accent italic">Program?</span></h2>
-                            <p className="text-xl text-foreground/50 font-black tracking-tight uppercase">Join the next cohort of global AI pioneers.</p>
+                    <div className="bg-[#F3E8FF] p-12 md:p-24 rounded-[4rem] border border-purple-100 flex flex-col items-center justify-center text-center gap-12 relative overflow-hidden group shadow-sm hover:shadow-md transition-shadow">
+                        <div className="space-y-6 relative z-10">
+                            <h2 className="text-h2 font-black uppercase tracking-tight font-orbitron">
+                                Ready to Take the <br />
+                                <span className="text-[#C084FC]">Next Step?</span>
+                            </h2>
+                            <p className="text-lg text-gray-600 font-outfit max-w-2xl mx-auto">
+                                Join the next cohort of global engineering pioneers and build your future without borders.
+                            </p>
                         </div>
-                        <button className="btn-aestr !px-16 !py-6 bg-accent text-black font-black uppercase tracking-[0.2em] shadow-[0_0_50px_rgba(216,246,2,0.3)] hover:scale-105 transition-all relative z-10">
+                        <button className="btn-aestr !px-16 !py-6 bg-[#D8F602] text-black font-black uppercase tracking-[0.2em] shadow-lg hover:scale-105 transition-all relative z-10 border-2 border-black">
                             Apply for 2026
                         </button>
                     </div>
                 </div>
             </section>
-
-            {/* Bottom Banner with Robot illustration */}
-            <BottomCTA />
-
-            {/* Minimalist Footer */}
-            <footer className="py-20 border-t border-foreground/5 px-6">
-                <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-12 opacity-30">
-                    <div className="flex items-center gap-8">
-                        <span className="text-[10px] font-black tracking-[0.4em] uppercase">AESTR GLOBAL © 2026</span>
-                    </div>
-                    <div className="flex gap-12">
-                        <Link href="/" className="text-[9px] font-black hover:text-accent transition-colors uppercase tracking-[0.4em]">Privacy</Link>
-                        <Link href="/" className="text-[9px] font-black hover:text-accent transition-colors uppercase tracking-[0.4em]">Governance</Link>
-                        <Link href="/" className="text-[9px] font-black hover:text-accent transition-colors uppercase tracking-[0.4em]">Contact</Link>
-                    </div>
-                </div>
-            </footer>
-
         </main>
     );
 };

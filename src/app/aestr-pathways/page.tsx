@@ -83,7 +83,7 @@ export default function AestrPathways() {
                     <motion.h1 
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-4xl md:text-6xl font-orbitron font-bold text-foreground mb-4"
+                        className="text-hero text-foreground mb-4"
                     >
                         AESTR <span className="text-accent underline decoration-accent/20">Pathways</span>
                     </motion.h1>
@@ -91,7 +91,7 @@ export default function AestrPathways() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-lg md:text-xl text-foreground/80 max-w-3xl font-medium"
+                        className="text-body text-foreground/80 max-w-3xl font-medium"
                     >
                         At AESTR, a typical day blends hands-on innovation with AI-driven learning.
                     </motion.p>
@@ -127,7 +127,7 @@ export default function AestrPathways() {
                                         </div>
                                         <div className="space-y-1">
                                             <p className="font-bold text-lg">{item.title}</p>
-                                            <p className="text-foreground/60 leading-relaxed">{item.desc}</p>
+                                            <p className="text-body text-foreground/60">{item.desc}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -325,7 +325,7 @@ export default function AestrPathways() {
                 <div className="container-boxed max-w-6xl mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
                         <div className="lg:col-span-6 space-y-12">
-                            <h2 className="text-4xl md:text-5xl font-orbitron font-bold text-foreground">Key Features</h2>
+                            <h2 className="text-h2 text-foreground">Key Features</h2>
                             <div className="space-y-10">
                                 {entrepreneurshipKeyFeatures.map((item) => (
                                     <div key={item.num} className="flex gap-8 items-start group">
@@ -333,7 +333,7 @@ export default function AestrPathways() {
                                             {item.num}
                                         </div>
                                         <div className="space-y-4">
-                                            <p className="font-bold text-xl text-foreground">{item.title}</p>
+                                            <p className="text-body text-foreground">{item.title}</p>
                                             <ul className="space-y-3">
                                                 {item.points.map((point, idx) => (
                                                     <li key={idx} className="flex items-start gap-3 text-foreground/60 leading-relaxed font-bold">

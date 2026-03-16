@@ -29,11 +29,11 @@ const AboutPointFive = () => {
                             </div>
                             <div className="space-y-6 text-left">
                                 <div className="space-y-1">
-                                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-orbitron font-bold text-white leading-tight tracking-tight capitalize">
-                                        Innovation labs <span className="font-orbitron opacity-90">of 2030</span>
+                                    <h2 className="text-h2 text-white capitalize">
+                                        Innovation labs <span className="opacity-90">of 2030</span>
                                     </h2>
                                 </div>
-                                <p className="subheading-font text-white/90 max-w-3xl leading-relaxed font-bold">
+                                <p className="text-body text-white/90 font-bold">
                                     Learn from the architects of tomorrow's AI. AESTR is the brainchild of leading AI engineers dedicated to cultivating the next generation of tech innovators.
                                 </p>
                             </div>
@@ -54,8 +54,8 @@ const AboutPointFive = () => {
                                     transition={{ duration: 0.5, delay: i * 0.1 }}
                                     className="glass !bg-black/40 !border-white/5 p-6 md:p-8 rounded-2xl group hover:bg-black/60 hover:border-accent/30 transition-all duration-300 text-left"
                                 >
-                                    <h4 className="text-base md:text-xl font-orbitron font-bold text-[#EAF0BD] mb-4 leading-tight transition-colors">{card.title}</h4>
-                                    <p className="text-sm md:text-base text-[#EAF0BD] leading-relaxed font-normal">{card.desc}</p>
+                                    <h4 className="text-h3 text-[#EAF0BD] mb-4 leading-tight transition-colors">{card.title}</h4>
+                                    <p className="text-body text-[#EAF0BD] font-normal">{card.desc}</p>
                                 </motion.div>
                             ))}
                         </div>
@@ -98,10 +98,10 @@ const AboutPointFive = () => {
                                 {/* Content Side */}
                                 <div className="flex-1 space-y-6 md:space-y-8 text-left">
                                     <div className="space-y-6">
-                                        <h3 className="text-3xl md:text-5xl lg:text-3xl font-orbitron font-extrabold text-white leading-tight tracking-tight">
+                                        <h3 className="text-h2 text-white capitalize">
                                             {lab.name}
                                         </h3>
-                                        <p className="text-lg md:text-xl text-[#EAF0BD] leading-relaxed font-normal">
+                                        <p className="text-body text-[#EAF0BD] font-normal">
                                             {lab.description}
                                         </p>
                                     </div>

@@ -35,11 +35,11 @@ const AboutPointFour = () => {
                                 </div>
                                 <div className="space-y-8 text-left">
                                     <div className="space-y-1">
-                                        <h2 className="text-2xl md:text-4xl lg:text-5xl font-orbitron font-bold text-black leading-tight tracking-tight">
-                                            Bootcamp, Bootcamp, <span className="font-orbitron opacity-90">Bootcamp.</span>
+                                        <h2 className="text-h2 text-black">
+                                            Bootcamp, Bootcamp, <span className="opacity-90">Bootcamp.</span>
                                         </h2>
                                     </div>
-                                    <p className="subheading-font text-black/90 leading-relaxed font-bold">
+                                    <p className="text-body text-black/90 font-bold">
                                         At AESTR, theory is just the beginning. We believe the best way to learn engineering is by building real things. That’s why every semester includes immersive AI bootcamps, right on campus — fully integrated into your curriculum.
                                     </p>
                                     <Link href="/day-at-aestr" className="inline-block pt-4">
@@ -90,11 +90,11 @@ const AboutPointFour = () => {
                             >
                                 <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:15px_15px] opacity-20 pointer-events-none" />
                                 <div className="relative z-10">
-                                    <h4 className="text-xl md:text-2xl font-orbitron font-bold text-[#EAF0BD] mb-4 transition-colors flex items-center gap-2">
+                                    <h4 className="text-h3 text-[#EAF0BD] mb-4 transition-colors flex items-center gap-2">
                                         <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                                         {card.title}
                                     </h4>
-                                    <p className="text-base md:text-lg text-[#EAF0BD] leading-relaxed font-normal">{card.desc}</p>
+                                    <p className="text-body text-[#EAF0BD] font-normal">{card.desc}</p>
                                 </div>
                             </motion.div>
                         ))}

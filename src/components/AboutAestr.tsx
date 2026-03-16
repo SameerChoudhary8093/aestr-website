@@ -25,10 +25,10 @@ const AboutAestr = () => {
                     >
                         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
                             <div className="space-y-4">
-                                <h2 className="text-4xl md:text-5xl font-orbitron font-bold leading-tight flex items-center gap-3 text-foreground">
-                                    B.Tech for <span className="italic font-light text-accent">The top 1%</span>
+                                <h2 className="text-h2 font-orbitron leading-tight flex items-center gap-3 text-foreground">
+                                    B.Tech for <span className="text-accent">the top 1%</span>
                                 </h2>
-                                <p className="text-lg text-foreground/80 max-w-2xl leading-relaxed">
+                                <p className="text-body text-foreground/80 max-w-2xl">
                                     Blend of deep CS knowledge with expertise in healthcare, nanotech, robotics, and material science.
                                 </p>
                             </div>
@@ -54,7 +54,7 @@ const AboutAestr = () => {
                             {/* Right: Specializations */}
                             <div className="space-y-8">
                                 <div className="space-y-4">
-                                    <h3 className="text-2xl font-orbitron font-bold text-foreground">B.Tech Computer Science & Engineering</h3>
+                                    <h3 className="text-h3 font-orbitron text-foreground">B.Tech Computer Science & Engineering</h3>
 
                                     <div className="space-y-4 md:space-y-6">
                                         <h4 className="text-[11px] md:text-xs font-orbitron tracking-[0.2em] text-foreground/40 font-bold uppercase">Major specialization</h4>
@@ -78,7 +78,7 @@ const AboutAestr = () => {
                                     </div>
 
                                     <div className="space-y-4 md:space-y-6">
-                                        <h4 className="text-[11px] md:text-xs font-orbitron tracking-[0.2em] text-foreground/40 font-bold italic text-white/40">Minor specialization...</h4>
+                                        <h4 className="text-[11px] md:text-xs font-orbitron tracking-[0.2em] text-foreground/40 font-bold text-white/40">Minor specialization...</h4>
                                         <div className="flex flex-wrap gap-2 md:gap-3">
                                             {["Robotics", "Bioinformatics", "Industry & manufacturing", "Design", "Fintech", "Nanotechnology", "Geoinformatics", "Chip & semiconductor", "Smart cities"].map((item) => (
                                                 <span key={item} className="px-4 py-2 text-xs md:text-sm bg-foreground/5 border border-foreground/10 rounded-full text-foreground/70 hover:border-accent/40 hover:text-accent transition-all cursor-default font-bold tracking-tight">
@@ -106,8 +106,8 @@ const AboutAestr = () => {
                     className="container-boxed relative z-10"
                 >
                     <div className="text-center space-y-4 mb-20">
-                        <h2 className="text-4xl md:text-6xl font-orbitron font-bold tracking-tight flex items-center justify-center gap-4 text-foreground">
-                            Why to <span className="text-accent italic">join</span> AESTR ?
+                        <h2 className="text-h2 font-orbitron tracking-tight flex items-center justify-center gap-4 text-foreground">
+                            Why to <span className="text-accent">join</span> Aestr?
                         </h2>
                     </div>
 
@@ -118,8 +118,8 @@ const AboutAestr = () => {
                                 1
                             </div>
                             <div className="space-y-2">
-                                <h3 className="text-2xl md:text-3xl font-orbitron font-bold text-foreground">CSE 2030: Computer Science Won't Be Same Ever Again</h3>
-                                <p className="text-foreground/70 text-lg leading-relaxed max-w-4xl font-normal">
+                                <h3 className="text-h3 font-orbitron text-foreground">CSE 2030: Computer Science Won't Be Same Ever Again</h3>
+                                <p className="text-foreground/70 text-body max-w-4xl">
                                     The world of Computer Science is transforming by 2030, and AESTR is already there! Traditional roles are evolving, and new opportunities are emerging. We’re not just preparing you for a job; we’re equipping you to define the future.
 
 
@@ -157,9 +157,9 @@ const AboutAestr = () => {
                                 <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center">
                                     <div className="lg:col-span-12 space-y-12">
                                         <div className="space-y-4 text-center">
-                                            <h3 className="text-2xl md:text-5xl font-orbitron font-extrabold text-foreground leading-tight tracking-tight">
-                                                Unparalleled Flexibility & <br className="hidden md:block" />
-                                                <span className="text-accent italic">Cutting-Edge Curriculum</span>
+                                            <h3 className="text-h2 font-orbitron text-foreground leading-tight tracking-tight">
+                                                Unparalleled flexibility & <br className="hidden md:block" />
+                                                <span className="text-accent">cutting-edge curriculum</span>
                                             </h3>
                                             <div className="h-1 w-20 bg-accent rounded-full mx-auto" />
                                         </div>
@@ -222,8 +222,8 @@ const AboutAestr = () => {
                                 2
                             </div>
                             <div className="space-y-2">
-                                <h3 className="text-2xl md:text-3xl font-orbitron font-bold text-foreground">Built By AI Engineers</h3>
-                                <p className="text-foreground/70 text-lg leading-relaxed max-w-4xl font-normal">
+                                <h3 className="text-h3 font-orbitron text-foreground">Built By AI Engineers</h3>
+                                <p className="text-foreground/70 text-body max-w-4xl">
                                     Learn from the architects of tomorrow’s AI. AESTR is the brainchild of leading AI engineers dedicated to cultivating the next generation of tech innovators.
                                 </p>
                             </div>

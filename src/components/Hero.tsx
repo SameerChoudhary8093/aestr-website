@@ -29,13 +29,13 @@ const Hero = () => {
                         className="space-y-6 md:space-y-8 lg:col-span-7"
                     >
                         <div className="space-y-4">
-                            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-orbitron font-bold leading-tight tracking-tighter text-foreground">
+                            <h1 className="text-hero font-orbitron tracking-tighter text-foreground">
                                 Built by a team of <br className="hidden sm:block" />
                                 <span className="text-accent">
                                     AI Engineers.
                                 </span>
                             </h1>
-                            <p className="subheading-font text-foreground font-medium opacity-80 max-w-xl leading-relaxed">
+                            <p className="text-body text-foreground font-medium opacity-80 max-w-xl">
                                 Founders are former Microsoft Engineers and Cambridge Researchers
                             </p>
                         </div>

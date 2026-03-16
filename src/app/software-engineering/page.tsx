@@ -280,7 +280,7 @@ const SoftwareEngineeringPage = () => {
                                 <h2 className="subheading-font font-medium text-foreground/80 tracking-wide">
                                     B.Tech Computer Science & Engineering with
                                 </h2>
-                                <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-orbitron font-bold text-foreground leading-[1.1] tracking-tight">
+                                <h1 className="text-hero font-orbitron text-foreground tracking-tight">
                                     Software <br />
                                     <span className="text-accent">Engineering</span>
                                 </h1>
@@ -312,7 +312,7 @@ const SoftwareEngineeringPage = () => {
 
                             <div className="pt-4">
                                 <button className="btn-aestr !px-12 !py-5 text-base shadow-xl hover:shadow-accent/20">
-                                    APPLY NOW
+                                    Apply now
                                     <span className="ml-3 transition-transform group-hover:translate-x-2 duration-300">→</span>
                                 </button>
                             </div>
@@ -327,7 +327,7 @@ const SoftwareEngineeringPage = () => {
                             <div className="aspect-[4/3] w-full rounded-2xl overflow-hidden border border-white/10 shadow-3xl bg-background-alt group">
                                 <YouTubePlayer 
                                     videoId="mA3Z2VYMNXo" 
-                                    title="Software Engineering Overview"
+                                    title="Software Engineering overview"
                                 />
                             </div>
                             <div className="absolute -inset-4 border border-white/5 rounded-[2rem] -z-10 pointer-events-none" />
@@ -344,9 +344,9 @@ const SoftwareEngineeringPage = () => {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold text-foreground"
+                            className="text-h2 font-orbitron text-foreground"
                         >
-                            What is <span className="decorative-serif text-accent">Software Engineering?</span>
+                            What is <span className="text-accent">software engineering?</span>
                         </motion.h2>
 
                         <motion.div 
@@ -368,7 +368,7 @@ const SoftwareEngineeringPage = () => {
                 </div>
             </section>
 
-            {/* Why AESTR Section */}
+            {/* Why Aestr Section */}
             <section className="py-24 bg-[#F8F9FB] relative overflow-hidden">
                 <div className="container-boxed">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -379,8 +379,8 @@ const SoftwareEngineeringPage = () => {
                             className="space-y-10"
                         >
                             <div className="space-y-6">
-                                <h2 className="text-5xl md:text-6xl font-orbitron font-bold text-black">
-                                    Why AESTR ?
+                                <h2 className="text-h2 font-orbitron text-black">
+                                    Why Aestr?
                                 </h2>
                                 <p className="text-xl md:text-2xl subheading-font text-black/70 leading-relaxed font-medium">
                                     Learn from the architects of the digital world.
@@ -389,7 +389,7 @@ const SoftwareEngineeringPage = () => {
 
                             <div className="space-y-6 pt-4">
                                 <div className="space-y-2">
-                                    <h3 className="text-3xl md:text-4xl font-outfit font-bold text-black">
+                                    <h3 className="text-h3 font-outfit text-black">
                                         Industry-Led Bootcamps
                                     </h3>
                                     <p className="text-lg text-black/60 font-medium leading-relaxed max-w-xl">
@@ -441,8 +441,8 @@ const SoftwareEngineeringPage = () => {
                 <div className="container-boxed relative z-10">
                     <div className="space-y-16">
                         <div className="space-y-4">
-                            <h2 className="text-5xl md:text-7xl font-orbitron font-bold text-foreground tracking-tight">Curriculum</h2>
-                            <h3 className="decorative-serif text-3xl text-foreground/60 italic">Curriculum Highlights</h3>
+                            <h2 className="text-h2 font-orbitron font-bold text-foreground tracking-tight">Curriculum</h2>
+                            <h3 className="text-h3 text-foreground/60">Curriculum highlights</h3>
                         </div>
 
                         <div className="flex flex-wrap gap-3 md:gap-4">
@@ -463,9 +463,9 @@ const SoftwareEngineeringPage = () => {
                         <div className="h-px w-full bg-white/5" />
 
                         <div className="space-y-12">
-                            <h3 className="text-4xl md:text-5xl font-orbitron font-bold text-foreground tracking-tight">
+                            <h3 className="text-h2 font-orbitron font-bold text-foreground tracking-tight">
                                 Programme <br />
-                                <span className="decorative-serif text-accent italic">Curriculum</span>
+                                <span className="text-accent">curriculum</span>
                             </h3>
 
                             <div className="flex flex-col lg:flex-row gap-12">
@@ -518,7 +518,7 @@ const SoftwareEngineeringPage = () => {
                 </div>
             </section>
 
-            {/* Pathways Tree Section (Image 2) */}
+            {/* pathways Tree Section (Image 2) */}
             <section className="py-24 bg-white relative overflow-hidden">
                 <div className="container-boxed text-center space-y-16">
                     <motion.div 
@@ -527,8 +527,8 @@ const SoftwareEngineeringPage = () => {
                         viewport={{ once: true }}
                         className="space-y-4"
                     >
-                        <h2 className="text-4xl md:text-5xl lg:text-7xl font-orbitron font-bold text-black tracking-tight">
-                            AESTR Quality Assurance <span className="decorative-serif text-black italic">Pathways</span>
+                        <h2 className="text-h2 font-orbitron text-black tracking-tight">
+                            Aestr Quality Assurance <span className="text-black">pathways</span>
                         </h2>
                         <p className="text-lg md:text-xl text-black/60 font-medium subheading-font">
                             We provide clear, ambitious pathways to ensure your career takes off.
@@ -550,7 +550,7 @@ const SoftwareEngineeringPage = () => {
                         {/* Four boxes */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-16">
                             {[
-                                { title: "AESTR Pro Track", sub: "35LPA+ jobs", color: "bg-[#FFC9E3] border-[#FF99C8]" },
+                                { title: "Aestr Pro Track", sub: "35LPA+ jobs", color: "bg-[#FFC9E3] border-[#FF99C8]" },
                                 { title: "Global Opportunities", sub: "2+2, 3+1 Programs", color: "bg-[#E3D4FF] border-[#C3AAFF]" },
                                 { title: "Industry Partner Training", sub: "& Direct Placements", color: "bg-[#C9F6FF] border-[#99E8FF]" },
                                 { title: "Nurturing Entrepreneurs", sub: "Silicon Valley of AI", color: "bg-[#FFC9FF] border-[#FF99FF]" }
@@ -569,7 +569,7 @@ const SoftwareEngineeringPage = () => {
                                     </div>
                                     
                                     <div className={`${item.color} w-full p-8 rounded-none border-b-[6px] border-black border-r-2 shadow-sm transition-transform hover:-translate-y-2 text-center flex flex-col justify-center min-h-[160px]`}>
-                                        <h4 className="text-xl md:text-2xl font-orbitron font-bold text-black leading-tight border-b-2 border-black/10 pb-4 mb-4">
+                                        <h4 className="text-h3 font-orbitron text-black leading-tight border-b-2 border-black/10 pb-4 mb-4">
                                             {item.title}
                                         </h4>
                                         <p className="text-black font-bold tracking-tight text-sm md:text-lg">
@@ -588,7 +588,7 @@ const SoftwareEngineeringPage = () => {
                 <div className="container-boxed">
                     <div className="space-y-16">
                         <div className="space-y-6">
-                            <h2 className="text-5xl md:text-7xl font-orbitron font-bold text-foreground">Innovation Labs</h2>
+                            <h2 className="text-h2 font-orbitron font-bold text-foreground">Innovation Labs</h2>
                             <p className="text-xl text-foreground/60 max-w-2xl leading-relaxed">
                                 Experience the cutting edge of tech in our specialized innovation hubs.
                             </p>
@@ -624,16 +624,16 @@ const SoftwareEngineeringPage = () => {
                 </div>
             </section>
 
-            {/* Emerging Trends Section (Image 1) */}
+            {/* Emerging trends Section (Image 1) */}
             <section className="py-24 bg-white relative overflow-hidden">
                 <div className="container-boxed">
                     <motion.h2 
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-5xl md:text-6xl font-orbitron font-bold text-black mb-16"
+                        className="text-h2 font-orbitron font-bold text-black mb-16"
                     >
-                        Emerging <span className="decorative-serif text-black italic">Trends</span>
+                        Emerging <span className="text-black">trends</span>
                         <div className="h-1 w-24 bg-purple/20 mt-2 relative">
                             <div className="absolute inset-0 bg-purple/10 skew-x-12 translate-y-2 opacity-50" />
                         </div>
@@ -655,7 +655,7 @@ const SoftwareEngineeringPage = () => {
                                 transition={{ delay: idx * 0.1 }}
                                 className={`${trend.color} p-8 rounded-none border-b-8 border-black flex flex-col gap-6 shadow-sm min-h-[220px] group hover:scale-[1.02] transition-all`}
                             >
-                                <span className={`text-4xl font-playfair italic font-bold ${
+                                <span className={`text-4xl font-playfair  font-bold ${
                                     idx === 0 ? "text-pink-400" : idx === 1 ? "text-blue-400" : idx === 2 ? "text-purple-400" : idx === 3 ? "text-pink-400" : "text-purple-400"
                                 }`}>
                                     {trend.num}
@@ -683,16 +683,16 @@ const SoftwareEngineeringPage = () => {
                 </div>
             </section>
 
-            {/* An Overview (Image 3) */}
+            {/* An overview (Image 3) */}
             <section className="py-24 bg-[#E6A0B0]/40 relative overflow-hidden">
                 <div className="container-boxed">
                     <motion.h2 
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-5xl md:text-6xl font-orbitron font-bold text-black mb-16"
+                        className="text-h2 font-orbitron font-bold text-black mb-16"
                     >
-                        An <span className="decorative-serif text-black italic">Overview</span>
+                        An <span className="text-black">overview</span>
                     </motion.h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -729,16 +729,16 @@ const SoftwareEngineeringPage = () => {
                 </div>
             </section>
 
-            {/* AESTR @Advantages (Image 4) */}
+            {/* Aestr @advantages (Image 4) */}
             <section className="py-24 bg-white relative overflow-hidden text-black">
                 <div className="container-boxed">
                     <motion.h2 
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="text-5xl md:text-6xl font-orbitron font-bold text-black mb-6"
+                        className="text-h2 font-orbitron font-bold text-black mb-6"
                     >
-                        AESTR <span className="decorative-serif text-black italic">@Advantages</span>
+                        Aestr <span className="text-black">@advantages</span>
                     </motion.h2>
                     <p className="max-w-3xl text-lg font-medium text-gray-700 mb-16 leading-relaxed">
                         Train for roles powering the next generation of banking, robotics, healthcare, and more—with real-world impact and future security.
@@ -754,7 +754,7 @@ const SoftwareEngineeringPage = () => {
                                 <span className="text-7xl font-orbitron font-black text-gray-100 group-hover:text-purple/5 transition-colors absolute -left-4 -top-4 -z-10">
                                     A
                                 </span>
-                                <span className="text-6xl font-playfair italic font-bold text-black">
+                                <span className="text-6xl font-playfair  font-bold text-black">
                                     {item.num}
                                 </span>
                                 <p className="text-xl font-bold leading-tight">
@@ -787,7 +787,7 @@ const SoftwareEngineeringPage = () => {
                         >
                             <div className="space-y-4">
                                 <h2 className="text-5xl md:text-6xl font-orbitron font-bold text-foreground leading-[1.1]">
-                                    Future Scope Of <span className="decorative-serif text-foreground/60 italic">Software Engineering</span>
+                                    Future scope of <span className="text-foreground/60">software engineering</span>
                                 </h2>
                                 <p className="text-lg text-foreground/70 leading-relaxed font-medium">
                                     Software Engineering is the disciplined application of engineering principles to the design, development, maintenance, and testing of software.
@@ -841,7 +841,7 @@ const SoftwareEngineeringPage = () => {
                             viewport={{ once: true }}
                             className="text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold text-foreground"
                         >
-                            Applications of <span className="decorative-serif text-accent">Software Engineering</span>
+                            Applications of <span className=" text-accent">Software Engineering</span>
                         </motion.h2>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -907,7 +907,7 @@ const SoftwareEngineeringPage = () => {
                             viewport={{ once: true }}
                             className="text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold text-foreground"
                         >
-                            Fees <span className="decorative-serif text-foreground/60 italic">Structure</span>
+                            Fees <span className=" text-foreground/60 ">Structure</span>
                         </motion.h2>
 
                         <motion.div 
@@ -974,7 +974,7 @@ const SoftwareEngineeringPage = () => {
                                                 <p>
                                                     Passed 10+2 from any government recognized board with <span className="text-foreground font-bold">Physics and Mathematics</span> as compulsory subjects,
                                                 </p>
-                                                <p className="italic">along with one of the following:</p>
+                                                <p className="">along with one of the following:</p>
                                                 <div className="bg-purple/10 p-6 rounded-2xl border border-purple/20">
                                                     <p className="text-foreground font-bold">
                                                         Chemistry / Biotechnology / Computer Science / Biology

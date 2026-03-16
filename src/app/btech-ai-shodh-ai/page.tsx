@@ -83,11 +83,11 @@ const BtechAIShodhAIPage = () => {
                         transition={{ duration: 1, delay: 0.2 }}
                         className="max-w-4xl space-y-6"
                     >
-                        <h1 className="text-white text-[55px] font-outfit font-semibold max-w-[900px] leading-[65px] tracking-tight">
+                        <h1 className="text-white text-hero max-w-[900px]">
                             This Isn't College. It's A <br />
                             4-Year Internship
                         </h1>
-                        <p className="text-white text-xl md:text-2xl max-w-2xl opacity-100 font-serif leading-relaxed">
+                        <p className="text-white text-body max-w-2xl opacity-100 font-serif">
                             At AESTR Pro, every student becomes an intern from day one. Learn by doing. Lead by innovating.
                         </p>
                         
@@ -120,13 +120,13 @@ const BtechAIShodhAIPage = () => {
                                 <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-serif italic text-purple shadow-lg border border-purple/30">
                                     1
                                 </div>
-                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-outfit font-bold text-foreground leading-tight tracking-tight">
+                                <h2 className="text-h2 text-foreground">
                                     The Crisis Of Indian Engineering
                                 </h2>
-                                <h3 className="text-2xl md:text-3xl font-serif font-medium text-foreground/80">
+                                <h3 className="text-h3 text-foreground/80">
                                     A Generation of "Un-hirable" Talent
                                 </h3>
-                                <div className="space-y-6 text-lg text-foreground/70 leading-relaxed font-medium">
+                                <div className="space-y-6 text-body text-foreground/70 font-medium">
                                     <p>
                                         For too long, the story of engineering in India has been a paradox. We produce millions of engineers, yet industries lament a scarcity of "hirable" talent.
                                     </p>
@@ -200,13 +200,13 @@ const BtechAIShodhAIPage = () => {
                                 <div className="w-20 h-20 rounded-full bg-[#E8E2FF]/20 backdrop-blur-md flex items-center justify-center text-4xl font-serif italic text-white border border-white/10 shadow-xl">
                                     2
                                 </div>
-                                <h2 className="text-4xl md:text-5xl lg:text-5xl font-outfit font-bold text-white leading-tight tracking-tight">
+                                <h2 className="text-h2 text-white">
                                     Introducing B.TECH AESTR PRO :
                                 </h2>
-                                <h3 className="text-2xl md:text-3xl font-serif font-medium text-white/90">
+                                <h3 className="text-h3 text-white/90">
                                     Your 4-Year Internship Starts Now
                                 </h3>
-                                <div className="space-y-6 text-lg text-white/80 leading-relaxed font-medium">
+                                <div className="space-y-6 text-body text-white/80 font-medium">
                                     <p>
                                         AESTR PRO eliminates the gap between education and industry. From day one, you are a full-time engineering intern at our AI research partner, Shodh AI.
                                     </p>
@@ -256,13 +256,13 @@ const BtechAIShodhAIPage = () => {
                             3
                         </div>
                         <div className="space-y-4">
-                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-outfit font-bold text-foreground leading-tight tracking-tight">
+                            <h2 className="text-h2 text-foreground">
                                 The Heart Of AESTR PRO:
                             </h2>
-                            <h3 className="text-2xl md:text-3xl font-serif font-medium text-foreground/80">
+                            <h3 className="text-h3 text-foreground/80">
                                 Our Innovation Labs, Powered by Shodh AI
                             </h3>
-                            <p className="text-lg text-foreground/70 max-w-3xl leading-relaxed font-medium">
+                            <p className="text-body text-foreground/70 max-w-3xl font-medium">
                                 The engine of the AESTR PRO experience is our state-of-the-art Innovation Labs, run by our industry partner, Shodh AI.
                             </p>
                         </div>
@@ -287,7 +287,7 @@ const BtechAIShodhAIPage = () => {
                                     />
                                 </div>
                                 <div className="space-y-3">
-                                    <h4 className="text-xl font-outfit font-bold text-foreground">{lab.name}</h4>
+                                    <h4 className="text-h3 text-foreground">{lab.name}</h4>
                                     <p className="text-sm text-foreground/60 leading-relaxed font-medium">
                                         {lab.description}
                                     </p>
@@ -332,17 +332,17 @@ const BtechAIShodhAIPage = () => {
                             4
                         </div>
                         <div className="space-y-4 max-w-4xl">
-                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-outfit font-bold text-foreground leading-tight tracking-tight">
+                            <h2 className="text-h2 text-foreground">
                                 The Job We're Training You For
                             </h2>
-                            <h3 className="text-2xl md:text-3xl font-serif font-medium text-foreground/80 italic">
+                            <h3 className="text-h3 text-foreground/80 italic">
                                 From Intern to Innovator
                             </h3>
-                            <div className="space-y-6 text-lg text-foreground/70 leading-relaxed font-medium">
+                            <div className="space-y-6 text-body text-foreground/70 font-medium">
                                 <p>
                                     The entire AESTR PRO curriculum is reverse-engineered from the demands of elite AI research roles in the industry. We prepare you for the job of tomorrow by giving you that job today. A day in the life of an AESTR PRO student is the life of a Machine Learning Engineer at Shodh AI, our AI Research Division.
                                 </p>
-                                <p className="font-bold text-accent text-xl">
+                                <p className="font-bold text-accent">
                                     Your Future Job Description: Machine Learning Engineer, Applied AI Research
                                 </p>
                             </div>
@@ -363,8 +363,8 @@ const BtechAIShodhAIPage = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                                     </svg>
                                 </div>
-                                <h4 className="text-xl font-outfit font-bold uppercase tracking-wide text-foreground">The Mission:</h4>
-                                <p className="text-foreground/70 leading-relaxed">
+                                <h4 className="text-h3 uppercase tracking-wide text-foreground">The Mission:</h4>
+                                <p className="text-body text-foreground/70">
                                     Bridge the chasm between foundational research and real-world impact. You will be part of the engine that drives the company's expansion into the next frontier of artificial intelligence.
                                 </p>
                             </div>
@@ -385,8 +385,8 @@ const BtechAIShodhAIPage = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
                                 </div>
-                                <h4 className="text-xl font-outfit font-bold uppercase tracking-wide text-foreground">The Role:</h4>
-                                <p className="text-foreground/70 leading-relaxed">
+                                <h4 className="text-h3 uppercase tracking-wide text-foreground">The Role:</h4>
+                                <p className="text-body text-foreground/70">
                                     A unique blend of scientist, inventor, and engineer where you will architect the next generation of intelligent systems from the ground up.
                                 </p>
                             </div>
@@ -407,8 +407,8 @@ const BtechAIShodhAIPage = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
                                 </div>
-                                <h4 className="text-xl font-outfit font-bold uppercase tracking-wide text-foreground">The Core Domains:</h4>
-                                <ul className="space-y-2 text-foreground/70 list-disc pl-5">
+                                <h4 className="text-h3 uppercase tracking-wide text-foreground">The Core Domains:</h4>
+                                <ul className="space-y-2 text-body text-foreground/70 list-disc pl-5">
                                     <li><span className="font-bold text-accent">Robotics & Embodied AI:</span> Build intelligent agents that can perceive, reason, and physically interact with the world.</li>
                                     <li><span className="font-bold text-accent">Large Language Models & Agentic Systems:</span> Architect autonomous agents and sophisticated applications that leverage the power of LLMs.</li>
                                     <li><span className="font-bold text-accent">Custom Silicon:</span> Design the next generation of chipsets purpose-built for AI workloads.</li>
@@ -430,8 +430,8 @@ const BtechAIShodhAIPage = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                                     </svg>
                                 </div>
-                                <h4 className="text-xl font-outfit font-bold uppercase tracking-wide text-foreground">The Mindset:</h4>
-                                <p className="text-foreground/70 leading-relaxed">
+                                <h4 className="text-h3 uppercase tracking-wide text-foreground">The Mindset:</h4>
+                                <p className="text-body text-foreground/70">
                                     We are looking for those with a "builder's mindset," driven by a deep curiosity to create and implement new things. Your personal research interests are not just welcome; they are a critical part of our strategy.
                                 </p>
                             </div>
@@ -456,13 +456,13 @@ const BtechAIShodhAIPage = () => {
                                 <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-serif italic text-purple shadow-lg border border-purple/30">
                                     5
                                 </div>
-                                <h2 className="text-4xl md:text-5xl lg:text-5xl font-outfit font-bold text-foreground leading-tight tracking-tight">
+                                <h2 className="text-h2 text-foreground">
                                     Graduate As A Senior Engineer
                                 </h2>
-                                <h3 className="text-2xl md:text-3xl font-serif font-medium text-foreground/80 italic">
+                                <h3 className="text-h3 text-foreground/80 italic">
                                     Ready to Lead the Future
                                 </h3>
-                                <div className="space-y-6 text-lg text-foreground/70 leading-relaxed font-medium">
+                                <div className="space-y-6 text-body text-foreground/70 font-medium">
                                     <p>
                                         The outcome of the AESTR PRO program is a new breed of engineer – an engineer who is not just "hirable", but is a leader, an innovator, and a problem-solver. After four years of intensive, hands-on experience in our Innovation Labs, you will graduate as a senior engineer, with a portfolio of real-world projects and a deep understanding of the latest technologies.
                                     </p>
@@ -501,7 +501,7 @@ const BtechAIShodhAIPage = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {/* Majors */}
                         <div className="bg-purple/10 backdrop-blur-md p-10 rounded-xl space-y-8 flex flex-col items-center border border-purple/20 shadow-2xl">
-                            <h3 className="text-xl font-outfit font-bold text-foreground">B. Tech. Majors:</h3>
+                            <h3 className="text-h3 text-foreground">B. Tech. Majors:</h3>
                             <div className="space-y-3 w-full">
                                 {[
                                     'B. Tech. Artificial Intelligence & Machine Learning',
@@ -519,7 +519,7 @@ const BtechAIShodhAIPage = () => {
 
                         {/* Minors */}
                         <div className="bg-purple/10 backdrop-blur-md p-10 rounded-xl space-y-8 flex flex-col items-center border border-purple/20 shadow-2xl">
-                            <h3 className="text-xl font-outfit font-bold text-foreground">With one Minor:</h3>
+                            <h3 className="text-h3 text-foreground">With one Minor:</h3>
                             <div className="flex flex-wrap gap-2 justify-center">
                                 {[
                                     'Robotics', 'Bio-Informatics',
@@ -537,7 +537,7 @@ const BtechAIShodhAIPage = () => {
 
                         {/* Labs */}
                         <div className="bg-purple/10 backdrop-blur-md p-10 rounded-xl space-y-8 flex flex-col items-center border border-purple/20 shadow-2xl">
-                            <h3 className="text-xl font-outfit font-bold text-foreground">Labs:</h3>
+                            <h3 className="text-h3 text-foreground">Labs:</h3>
                             <div className="space-y-3 w-full">
                                 {[
                                     'Foundation Model Lab',
@@ -568,7 +568,7 @@ const BtechAIShodhAIPage = () => {
                         </div>
                         <div className="md:hidden w-px h-12 bg-foreground opacity-20" />
 
-                        <h2 className="text-3xl md:text-5xl lg:text-6xl font-outfit font-bold text-foreground underline decoration-accent decoration-[3px] underline-offset-[12px]">
+                        <h2 className="text-h2 text-foreground underline decoration-accent decoration-[3px] underline-offset-[12px]">
                             Make Your Own Degree By Yourself
                         </h2>
                     </div>
