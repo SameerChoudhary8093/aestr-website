@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import MagneticEffect from './MagneticEffect';
+import { scrollToRegistrationForm } from '@/utils/navigation';
 
 const BottomCTA = () => {
     return (
@@ -33,7 +34,10 @@ const BottomCTA = () => {
                                     </p>
                                     <div className="w-full sm:w-auto h-12">
                                         <MagneticEffect strength={0.4}>
-                                            <button className="bg-accent hover:bg-white text-black px-10 py-3 rounded-xl font-orbitron font-black text-[10px] md:text-xs uppercase flex items-center justify-center gap-2 group/btn transition-all duration-300 shadow-[0_0_20px_rgba(216,246,2,0.2)] h-full w-full">
+                                            <button 
+                                                onClick={scrollToRegistrationForm}
+                                                className="bg-accent hover:bg-white text-black px-10 py-3 rounded-xl font-orbitron font-black text-[10px] md:text-xs uppercase flex items-center justify-center gap-2 group/btn transition-all duration-300 shadow-[0_0_20px_rgba(216,246,2,0.2)] h-full w-full cursor-pointer"
+                                            >
                                                 Apply Now
                                                 <span className="group-hover/btn:translate-x-1 transition-transform">↗</span>
                                             </button>
@@ -109,7 +113,10 @@ const BottomCTA = () => {
                         <span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-accent rounded-full animate-ping inline-block" />
                         Admissions Open at Suresh Gyan Vihar University for 2026-2027
                     </p>
-                    <button className="btn-aestr font-black tracking-[0.2em] uppercase py-2 md:py-3 px-6 md:px-10 w-full md:w-auto text-center text-xs md:text-sm">
+                    <button 
+                        onClick={scrollToRegistrationForm}
+                        className="btn-aestr font-black tracking-[0.2em] uppercase py-2 md:py-3 px-6 md:px-10 w-full md:w-auto text-center text-xs md:text-sm cursor-pointer"
+                    >
                         Apply Now
                     </button>
                 </div>

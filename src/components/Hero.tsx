@@ -2,6 +2,8 @@
 
 import Image from 'next/image';
 import ParticleEffect from './ParticleEffect';
+import RegistrationForm from './RegistrationForm';
+import { scrollToRegistrationForm } from '@/utils/navigation';
 import { motion } from 'framer-motion';
 
 
@@ -15,9 +17,8 @@ const Hero = () => {
             <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px] pointer-events-none z-0" />
             <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[100px] pointer-events-none z-0" />
 
-
-            <div className="container-boxed relative z-10 w-full py-20">
-                <div className="max-w-4xl text-left">
+            <div id="registration-form" className="container-boxed relative z-10 w-full py-20">
+                <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center max-w-7xl mx-auto">
 
                     {/* Left Column: Text & CTA */}
                     <motion.div
@@ -25,7 +26,7 @@ const Hero = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="space-y-6 md:space-y-8"
+                        className="space-y-6 md:space-y-8 lg:col-span-7"
                     >
                         <div className="space-y-4">
                             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-orbitron font-bold leading-tight tracking-tighter text-foreground">
@@ -69,11 +70,25 @@ const Hero = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.3 }}
                         >
-                            <button className="btn-aestr flex items-center gap-2 group">
-                                Apply Now
-                                <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">↗</span>
-                            </button>
+                            <button 
+                            onClick={scrollToRegistrationForm}
+                            className="btn-aestr flex items-center gap-2 group cursor-pointer"
+                        >
+                            Apply Now
+                            <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">↗</span>
+                        </button>
                         </motion.div>
+                    </motion.div>
+
+                    {/* Right Column: Registration Form */}
+                    <motion.div 
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="lg:col-span-5 lg:ml-auto"
+                    >
+                        <RegistrationForm />
                     </motion.div>
 
                 </div>

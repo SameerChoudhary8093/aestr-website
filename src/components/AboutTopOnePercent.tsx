@@ -21,14 +21,15 @@ const YouTubePlayer = ({ videoId, title }: { videoId: string; title: string }) =
     }
 
     return (
-        <div 
+        <div
             className="relative w-full h-full cursor-pointer group"
             onClick={() => setIsPlaying(true)}
         >
-            <Image 
+            <Image
                 src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
                 alt={title}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
             />
             {/* Transparent Play Button Overlay */}
@@ -83,9 +84,9 @@ const AboutTopOnePercent = () => {
                     <div className="glass p-5 md:p-8 rounded-2xl md:rounded-3xl grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 items-center overflow-hidden">
                         {/* Left: Video Embed */}
                         <div className="aspect-video w-full rounded-xl md:rounded-2xl border border-white/10 overflow-hidden shadow-2xl relative group bg-black">
-                            <YouTubePlayer 
-                                videoId="mA3Z2VYMNXo" 
-                                title="B.Tech for The top 1%" 
+                            <YouTubePlayer
+                                videoId="mA3Z2VYMNXo"
+                                title="B.Tech for The top 1%"
                             />
                         </div>
 
@@ -98,14 +99,14 @@ const AboutTopOnePercent = () => {
                                     <h4 className="subheading-font text-white font-medium uppercase tracking-widest">Major Specialization</h4>
                                     <div className="flex flex-wrap gap-2 md:gap-3">
                                         {[
-                                            { name: "Software Engineering", href: "#" },
+                                            { name: "Software Engineering", href: "/software-engineering" },
                                             { name: "Cloud Engineering", href: "/btech-cloud-engineering" },
-                                            { name: "Data Science", href: "#" },
-                                            { name: "Artificial Intelligence & Machine Learning", href: "/btech-ai-shodh-ai" },
-                                            { name: "Cyber Security", href: "#" }
+                                            { name: "Data Science", href: "/data-science" },
+                                            { name: "Artificial Intelligence & Machine Learning", href: "/ai-ml" },
+                                            { name: "Cyber Security", href: "/cyber-security" }
                                         ].map((item) => (
-                                            <Link 
-                                                key={item.name} 
+                                            <Link
+                                                key={item.name}
                                                 href={item.href}
                                                 className="px-5 py-2.5 text-sm md:text-base bg-foreground/5 border border-foreground/10 text-foreground/80 rounded-lg font-medium transition-all cursor-pointer hover:border-accent/40 hover:text-accent hover:bg-accent/5 backdrop-blur-sm shadow-sm"
                                             >

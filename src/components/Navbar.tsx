@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import MagneticEffect from './MagneticEffect';
+import { scrollToRegistrationForm } from '@/utils/navigation';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +38,7 @@ const Navbar = () => {
                     }`}
             >
                 {/* Futuristic Scanning Line Overlay */}
-                <motion.div 
+                <motion.div
                     animate={{ x: ['-100%', '200%'] }}
                     transition={{ duration: 3, repeat: Infinity, ease: "linear", repeatDelay: 5 }}
                     className="absolute inset-0 w-1/3 h-full bg-gradient-to-r from-transparent via-accent/5 to-transparent skew-x-12 pointer-events-none"
@@ -50,7 +51,7 @@ const Navbar = () => {
                         <Link href="/#hero" className="flex items-center group/logo">
                             <div className="w-[140px] md:w-[200px] relative h-8 md:h-10 transition-all duration-500 group-hover/logo:scale-105">
                                 <Image
-                                    src="/Herosection/aestr-logo.svg"
+                                    src="/Herosection/AESTR.webp"
                                     alt="Aestr Logo"
                                     fill
                                     className="object-contain brightness-[1.1]"
@@ -85,28 +86,31 @@ const Navbar = () => {
                             <div className="flex items-center gap-2">
                                 <div className="relative h-14 w-44 transition-all duration-500 hover:scale-105">
                                     <Image
-                                        src="/Herosection/sgvu-logo.png"
+                                        src="/Herosection/Container.svg"
                                         alt="SGVU Logo"
                                         fill
+                                        sizes="(max-width: 768px) 144px, 176px"
                                         className="object-contain object-right brightness-0 invert"
                                         priority
                                     />
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <div className="relative h-16 w-16 bg-white p-0 rounded-xl shadow-sm transition-all duration-500 hover:scale-110 flex items-center justify-center overflow-hidden">
+                                    <div className="relative h-20 w-20 shadow-sm transition-all duration-500 hover:scale-110 flex items-center justify-center overflow-hidden">
                                         <Image
-                                            src="/Herosection/Nirf_dot_small-removebg-preview.png"
+                                            src="/Herosection/Nirf white.png"
                                             alt="NIRF 101-150"
                                             fill
+                                            sizes="64px"
                                             className="object-contain scale-110"
                                             priority
                                         />
                                     </div>
-                                    <div className="relative h-16 w-16 bg-white p-0 rounded-xl shadow-sm transition-all duration-500 hover:scale-110 flex items-center justify-center overflow-hidden">
+                                    <div className="relative h-20 w-20 shadow-sm transition-all duration-500 hover:scale-110 flex items-center justify-center overflow-hidden">
                                         <Image
-                                            src="/Herosection/naac_equal_-removebg-preview.png"
+                                            src="/Herosection/naac white  .png"
                                             alt="NAAC A+"
                                             fill
+                                            sizes="64px"
                                             className="object-contain scale-125"
                                             priority
                                         />
@@ -172,13 +176,15 @@ const Navbar = () => {
                             ))}
                         </div>
                         <div className="mt-10 pt-10 border-t border-white/10 flex flex-col items-center gap-6">
-                            <Link 
-                                href="/apply" 
-                                onClick={() => setIsOpen(false)}
-                                className="w-full max-w-sm bg-accent hover:bg-white text-black py-5 rounded-2xl font-orbitron font-black text-lg uppercase tracking-widest text-center transition-all shadow-[0_0_30px_rgba(216,246,2,0.3)]"
+                            <button
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    scrollToRegistrationForm();
+                                }}
+                                className="w-full max-w-sm bg-accent hover:bg-white text-black py-5 rounded-2xl font-orbitron font-black text-lg uppercase tracking-widest text-center transition-all shadow-[0_0_30px_rgba(216,246,2,0.3)] cursor-pointer"
                             >
                                 Apply Now
-                            </Link>
+                            </button>
                             <p className="text-[10px] font-orbitron font-medium text-white/30 uppercase tracking-[0.4em]">
                                 AESTR &copy; 2026
                             </p>

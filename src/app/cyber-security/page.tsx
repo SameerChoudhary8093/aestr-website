@@ -4,7 +4,19 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import RegistrationForm from '@/components/RegistrationForm';
+import RegistrationForm from "@/components/RegistrationForm";
+
+// ─── Data ────────────────────────────────────────────────────────────────────
+
+const curriculumHighlights = [
+    "Ethical Hacking & Penetration Testing",
+    "Network Security & Defence Architecture",
+    "Cryptography & Digital Trust Systems",
+    "Cloud Security & Infrastructure Protection",
+    "Digital Forensics & Incident Response",
+    "Application Security & Secure Coding",
+    "Cyber Laws & Regulatory Compliance"
+];
 
 const yearData = [
     {
@@ -38,7 +50,8 @@ const yearData = [
                     "Applied Physics & Experimental Design Lab II",
                     "Innovation Catalyst II: Foundational Skills & Lab Project Prototyping",
                     "Cloud Systems & Infrastructure Essentials",
-                    "Cloud Systems Deployment Studio"
+                    "Identity & Access Management (IAM) Foundations",
+                    "Secure Scripting for Security Professionals"
                 ],
             },
         ],
@@ -54,10 +67,10 @@ const yearData = [
                     "Economics and Social Sciences",
                     "Data Structures and Algorithms",
                     "Principles of Programming Languages",
-                    "Cloud Computing Architecture",
-                    "Cloud Computing Architecture Lab) -> Designing Scalable Cloud Architectures",
+                    "Network Security & Defense: Protocol Analysis",
+                    "Network Security Studio -> Building Defensive perimeters",
                     "Data Structures and Algorithms Lab",
-                    "Field Project/Field Visit-3 -> Innovation Lab Project I: Cloud System Design & Core Service Development",
+                    "Field Project -> Innovation Lab Project I: Security Audit & Perimeter Defense",
                     "Digital Systems & Logic Engineering"
                 ],
             },
@@ -71,8 +84,8 @@ const yearData = [
                     "Core Java",
                     "Industrial oriented Core Java Project Lab",
                     "Design Practice with UML Lab",
-                    "Cloud Computing Deployment Models -> Cloud Service & Deployment Strategies (Public, Private, Hybrid, Multi-Cloud)",
-                    "Cloud Computing Deployment Models Lab -> Multi-Cloud Deployment & Management Studio",
+                    "Applied Cryptography: Algorithms & Digital Signatures",
+                    "Cryptography Studio -> Building Secure Communication Channels",
                     "Internship/Project-4 -> Innovation Lab Project II"
                 ],
             },
@@ -88,10 +101,10 @@ const yearData = [
                     "Proficiency and Co-Curricular Activities-V",
                     "Database Management System",
                     "Logical & Functional Programming",
-                    "Software Testing & QA",
-                    "Computer Architectures",
-                    "Cloud Security Fundamentals",
-                    "Innovation Lab Project III: Cloud Optimization & Scalability",
+                    "Penetration Testing & VAPT Foundations",
+                    "VAPT Studio -> Ethical Hacking & Vulnerability Assessment",
+                    "Cloud Security Architecture: Protecting Multi-cloud workloads",
+                    "Innovation Lab Project III: Incident Response & Threat Hunting",
                     "Advanced Data Structures",
                     "Minor Specialization Capstone Project Design"
                 ],
@@ -104,8 +117,9 @@ const yearData = [
                     "Design & Analysis of Algorithms",
                     "Theory of Computation",
                     "Computer Network",
-                    "Cloud orchestration and Automation (DevOps)",
-                    "Innovation Lab Project IV: Multi-Cloud Integration & Deployment",
+                    "Digital Forensics & Investigation: Evidence & Recovery",
+                    "Forensics Studio -> Cybercrime Investigation & Reconstruction",
+                    "Innovation Lab Project IV: Managed Security Operations (SOC)",
                     "Minor Specialization Mastery"
                 ],
             },
@@ -119,12 +133,12 @@ const yearData = [
                 subjects: [
                     "Group Discussion, Aptitude & Reasoning-I",
                     "Proficiency and Co-Curricular Activities-VII",
-                    "Network Security & Cryptography Fundamentals (NSCF)",
+                    "Cyber Laws, Ethics & Regulatory Compliance",
                     "Operating Systems",
-                    "Asynchronous Transfer Mode -> Advanced Cloud Networking & Content Delivery",
-                    "Cloud Application Development -> Serverless & Microservices Architectures for Cloud Applications",
-                    "Cloud Application Development Lab -> Serverless & Microservices Development Studio",
-                    "Major Project Stage-I -> PE403 Innovation Lab Grand Challenge Seminar I (Cloud Major): Cloud System Architecture Review & Ethics"
+                    "Application Security & DevSecOps",
+                    "Zero Trust Architecture & Digital Trust",
+                    "Red Teaming & Advanced Persistent Threats (APT)",
+                    "Major Project Stage-I -> Innovation Lab Grand Challenge (Cyber Major)"
                 ],
             },
             {
@@ -133,14 +147,13 @@ const yearData = [
                     "Group Discussion, Aptitude & Reasoning-II",
                     "Intellectual Property Rights",
                     "Seminar",
-                    "Major Project-II -> PE404 Innovation Lab Grand Challenge Showcase (Cloud Major): Cloud Platform Beta Release, Impact & Scalability Analysis",
-                    "Real Time Systems",
-                    "Distributed Systems",
+                    "Major Project-II -> Innovation Lab Grand Challenge Showcase (Cyber Major)",
+                    "Real Time Security Analytics",
+                    "Distributed Systems Security",
                     "Compiler Construction",
-                    "Compiler Construction Lab",
-                    "Embedded Systems",
-                    "Advance Computer Architectures",
-                    "Advance Computer Architectures Lab"
+                    "Blockchain Security & Smart Contract Auditing",
+                    "Quantum Cryptography Foundations",
+                    "Security in IoT & Edge Computing"
                 ],
             },
         ],
@@ -167,14 +180,12 @@ const YouTubePlayer = ({ videoId, title }: { videoId: string; title: string }) =
             className="relative w-full h-full cursor-pointer group"
             onClick={() => setIsPlaying(true)}
         >
-            {/* Using a high-quality robot/cloud related placeholder if exact is not available */}
             <Image 
-                src="/Other/lab-2.webp" 
+                src="/Other/lab-3.webp" 
                 alt={title}
                 fill
                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
             />
-            {/* Transparent Play Button Overlay */}
             <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-all duration-500">
                 <div className="w-20 h-20 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full flex items-center justify-center shadow-2xl transform transition-all duration-500 group-hover:scale-110 group-hover:bg-white/20">
                     <svg
@@ -191,15 +202,14 @@ const YouTubePlayer = ({ videoId, title }: { videoId: string; title: string }) =
     );
 };
 
-const BtechCloudEngineering = () => {
+const CyberSecurityPage = () => {
     const [activeYear, setActiveYear] = useState(0);
 
     return (
         <main className="bg-background min-h-screen text-foreground selection:bg-accent selection:text-black">
             {/* Hero / Header Section */}
             <section className="pt-32 pb-24 relative overflow-hidden">
-                {/* Decorative background effects */}
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple/10 rounded-full blur-[150px] -translate-y-1/2 translate-x-1/2" />
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-red-600/10 rounded-full blur-[150px] -translate-y-1/2 translate-x-1/2" />
                 <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[120px] translate-y-1/4 -translate-x-1/4" />
 
                 <div className="container-boxed relative z-10">
@@ -214,21 +224,21 @@ const BtechCloudEngineering = () => {
                                 <h2 className="subheading-font font-medium text-foreground/80 tracking-wide">
                                     B.Tech Computer Science & Engineering with
                                 </h2>
-                                <h1 className="text-5xl md:text-7xl lg:text-8xl font-orbitron font-bold text-foreground leading-none tracking-tight">
-                                    Cloud <br />
-                                    <span className="text-accent">Engineering</span>
+                                <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-orbitron font-bold text-foreground leading-[1.1] tracking-tight">
+                                    Cyber <br />
+                                    <span className="text-accent">Security</span>
                                 </h1>
                             </div>
 
                             <div className="space-y-4">
                                 <div className="flex items-center gap-4 group">
-                                    <div className="w-10 h-10 rounded-lg bg-purple/20 flex items-center justify-center text-purple border border-purple/30 group-hover:bg-purple/30 transition-colors">
+                                    <div className="w-10 h-10 rounded-lg bg-red-600/20 flex items-center justify-center text-red-500 border border-red-600/30 group-hover:bg-red-600/30 transition-colors">
                                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                                         </svg>
                                     </div>
                                     <p className="subheading-font font-semibold text-foreground/90">
-                                        Eligibility: <span className="underline decoration-purple/50 decoration-2 underline-offset-4 decoration-dashed group-hover:decoration-solid transition-all cursor-help">SGVUEEE/JEE/CUET UG</span>
+                                        Eligibility: <span className="underline decoration-red-600/50 decoration-2 underline-offset-4 decoration-dashed group-hover:decoration-solid transition-all cursor-help">SGVUEEE/JEE/CUET UG</span>
                                     </p>
                                 </div>
 
@@ -261,10 +271,9 @@ const BtechCloudEngineering = () => {
                             <div className="aspect-[4/3] w-full rounded-2xl overflow-hidden border border-white/10 shadow-3xl bg-background-alt group">
                                 <YouTubePlayer 
                                     videoId="mA3Z2VYMNXo" 
-                                    title="Cloud Engineering Overview"
+                                    title="Cyber Security Overview"
                                 />
                             </div>
-                            {/* Decorative Frame Element */}
                             <div className="absolute -inset-4 border border-white/5 rounded-[2rem] -z-10 pointer-events-none" />
                         </motion.div>
                     </div>
@@ -281,7 +290,7 @@ const BtechCloudEngineering = () => {
                             viewport={{ once: true }}
                             className="text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold text-foreground"
                         >
-                            What is <span className="decorative-serif text-accent">Cloud Engineering?</span>
+                            What is <span className="decorative-serif text-accent">Cyber Security?</span>
                         </motion.h2>
 
                         <motion.div 
@@ -291,21 +300,19 @@ const BtechCloudEngineering = () => {
                             transition={{ duration: 0.6, delay: 0.2 }}
                             className="bg-background-alt p-8 md:p-12 rounded-[2rem] border border-white/10 shadow-2xl relative overflow-hidden group"
                         >
-                            {/* Inner Glow */}
                             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
                             
                             <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed font-medium">
-                                <strong className="text-foreground">Cloud Engineering</strong> is the study of internet-based computing that helps students design, deploy, and manage scalable applications and systems without depending on local infrastructure, preparing them for modern tech careers. It allows <span className="text-foreground font-bold">on-demand access to computing resources</span> such as servers, storage, databases, software, and networks, without needing to own the hardware.
+                                <strong className="text-foreground">Cyber Security</strong> is the practice of protecting systems, networks, and programs from digital attacks. It involves implementing <span className="text-foreground font-bold">multi-layered defense strategies</span> to ensure the confidentiality, integrity, and availability of information in an increasingly hostile digital landscape, from national infrastructure to personal devices.
                             </p>
 
-                            {/* Background Pattern */}
                             <div className="absolute inset-0 bg-[radial-gradient(#ffffff03_1px,transparent_1px)] bg-[size:30px_30px] opacity-40 pointer-events-none" />
                         </motion.div>
                     </div>
                 </div>
             </section>
 
-            {/* Why AESTR Section (Image 1) */}
+            {/* Why AESTR Section */}
             <section className="py-24 bg-[#F8F9FB] relative overflow-hidden">
                 <div className="container-boxed">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -320,17 +327,17 @@ const BtechCloudEngineering = () => {
                                     Why AESTR ?
                                 </h2>
                                 <p className="text-xl md:text-2xl subheading-font text-black/70 leading-relaxed font-medium">
-                                    The only engineering school where AI teaches you, and the future hires you.
+                                    Defend the digital frontier in real-time simulators.
                                 </p>
                             </div>
 
                             <div className="space-y-6 pt-4">
                                 <div className="space-y-2">
                                     <h3 className="text-3xl md:text-4xl font-outfit font-bold text-black">
-                                        Intensive Bootcamps
+                                        Cyber Range Experience
                                     </h3>
                                     <p className="text-lg text-black/60 font-medium leading-relaxed max-w-xl">
-                                        Taught by senior industry Engineers, offering hands on real-world learning experiences.
+                                        Access India's most advanced Cyber Range where you simulate national-scale cyber wars and build real-time defense infrastructures.
                                     </p>
                                 </div>
                             </div>
@@ -342,7 +349,6 @@ const BtechCloudEngineering = () => {
                             viewport={{ once: true }}
                             className="relative"
                         >
-                            {/* Arastu Sharma Thumbnail */}
                             <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-2xl relative border-4 border-white group bg-gray-200">
                                 <Image 
                                     src="/ExecutionTeam/Arastu.jpeg" 
@@ -352,29 +358,21 @@ const BtechCloudEngineering = () => {
                                 />
                                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-all pointer-events-none" />
                                 
-                                {/* Labels like in image */}
                                 <div className="absolute top-6 left-6 z-10 bg-black/60 backdrop-blur-md px-5 py-3 rounded-lg border border-white/20">
                                     <h4 className="text-white font-bold text-xl leading-none">Arastu Sharma, PhD.</h4>
                                     <p className="text-white/70 text-sm mt-1">University of Cambridge</p>
                                 </div>
 
-                                {/* Sureshg Gyan Vihar University Logo on top right as in image */}
                                 <div className="absolute top-6 right-6 z-10 opacity-80">
                                     <p className="text-black font-black text-[10px] leading-tight text-right uppercase tracking-tighter">Suresh<br/><span className="text-sm">Gyan Vihar</span><br/>University</p>
                                 </div>
 
-                                {/* Play Button */}
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/40 shadow-xl group-hover:scale-110 transition-transform">
                                         <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
                                             <path d="M8 5v14l11-7z" />
                                         </svg>
                                     </div>
-                                </div>
-
-                                {/* Subtitle at bottom */}
-                                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-center text-white/90 text-[10px] md:text-sm font-medium w-full px-10">
-                                    from Cambridge. <br className="md:hidden" /> I have led
                                 </div>
                             </div>
                         </motion.div>
@@ -386,85 +384,71 @@ const BtechCloudEngineering = () => {
             <section className="py-24 bg-background relative overflow-hidden">
                 <div className="container-boxed relative z-10">
                     <div className="space-y-16">
-                        {/* Header */}
                         <div className="space-y-4">
                             <h2 className="text-5xl md:text-7xl font-orbitron font-bold text-foreground tracking-tight">Curriculum</h2>
                             <h3 className="decorative-serif text-3xl text-foreground/60 italic">Curriculum Highlights</h3>
                         </div>
 
-                        {/* Highlights Tags */}
                         <div className="flex flex-wrap gap-3 md:gap-4">
-                            {[
-                                "1. Cloud Platforms & Services",
-                                "2. Cloud Architecture & Design",
-                                "3. Security & Compliance",
-                                "4. Cloud Cost Management",
-                                "5. Cloud Networking",
-                                "6. DevOps & Automation in Cloud",
-                                "7. Capstone Projects & Industry Integration"
-                            ].map((highlight, idx) => (
-                                <motion.div
-                                    key={idx}
+                            {curriculumHighlights.map((tag, i) => (
+                                <motion.span 
+                                    key={tag}
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     viewport={{ once: true }}
-                                    transition={{ delay: idx * 0.05 }}
-                                    className="px-6 py-3 bg-purple/10 border border-purple/20 text-foreground/90 rounded-full subheading-font font-medium text-sm md:text-base hover:bg-purple/20 transition-all cursor-default"
+                                    transition={{ delay: i * 0.05 }}
+                                    className="px-6 py-3 rounded-xl bg-background-alt border border-white/5 text-foreground/70 font-semibold hover:border-accent/30 hover:text-accent transition-all cursor-default text-sm md:text-base shadow-lg"
                                 >
-                                    {highlight}
-                                </motion.div>
+                                    {tag}
+                                </motion.span>
                             ))}
                         </div>
 
-                        {/* Programme Curriculum */}
-                        <div className="pt-12 space-y-10">
-                            <h3 className="text-3xl md:text-5xl font-orbitron font-bold text-foreground">
-                                Programme <span className="decorative-serif text-foreground/60 italic">Curriculum</span>
+                        <div className="h-px w-full bg-white/5" />
+
+                        <div className="space-y-12">
+                            <h3 className="text-4xl md:text-5xl font-orbitron font-bold text-foreground tracking-tight">
+                                Programme <br />
+                                <span className="decorative-serif text-accent italic">Curriculum</span>
                             </h3>
 
-                            <div className="flex flex-col lg:flex-row gap-8 items-start">
-                                {/* Year Tabs */}
-                                <div className="flex flex-row lg:flex-col gap-3 w-full lg:w-48 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0">
-                                    {yearData.map((y, idx) => (
+                            <div className="flex flex-col lg:flex-row gap-12">
+                                <div className="flex lg:flex-col gap-3 overflow-x-auto pb-4 lg:pb-0 lg:w-48 shrink-0">
+                                    {yearData.map((y, i) => (
                                         <button
-                                            key={idx}
-                                            onClick={() => setActiveYear(idx)}
-                                            className={`px-8 py-4 rounded-xl text-left subheading-font font-bold text-lg transition-all flex items-center justify-between min-w-[140px] lg:w-full border shadow-lg ${
-                                                activeYear === idx 
-                                                ? "bg-accent/15 border-accent/50 text-accent shadow-[0_0_20px_rgba(215,246,1,0.12)]" 
-                                                : "bg-background-alt/50 text-foreground/40 border-white/5 hover:border-white/10"
+                                            key={y.year}
+                                            onClick={() => setActiveYear(i)}
+                                            className={`px-6 py-4 rounded-2xl font-orbitron font-bold text-sm transition-all duration-300 whitespace-nowrap text-left border ${
+                                                activeYear === i 
+                                                ? 'bg-accent text-black border-accent' 
+                                                : 'bg-background-alt text-foreground/40 border-white/5 hover:border-accent/30'
                                             }`}
                                         >
                                             {y.year}
-                                            <span className={`hidden lg:block transition-transform duration-300 ${activeYear === idx ? "translate-x-1" : ""}`}>→</span>
                                         </button>
                                     ))}
                                 </div>
 
-                                {/* Semester Grid */}
                                 <AnimatePresence mode="wait">
-                                    <motion.div 
+                                    <motion.div
                                         key={activeYear}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        exit={{ opacity: 0, y: -20 }}
+                                        initial={{ opacity: 0, x: 20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        exit={{ opacity: 0, x: -20 }}
                                         transition={{ duration: 0.3 }}
-                                        className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6 w-full"
+                                        className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-8"
                                     >
-                                        {yearData[activeYear].semesters.map((sem, sIdx) => (
-                                            <div 
-                                                key={sem.name}
-                                                className="bg-purple/5 backdrop-blur-sm p-8 md:p-10 rounded-3xl border border-purple/10 space-y-8 hover:border-accent/20 transition-all duration-300"
-                                            >
-                                                <h4 className="text-2xl subheading-font font-bold text-foreground border-b border-purple/10 pb-4 flex items-center gap-3">
-                                                    <div className="w-1.5 h-6 bg-accent rounded-full" />
-                                                    {sem.name}
-                                                </h4>
-                                                <ul className="space-y-4">
-                                                    {sem.subjects.map((course, idx) => (
-                                                        <li key={idx} className="flex gap-3 text-foreground/70 text-sm md:text-base leading-snug group/item">
-                                                            <span className="text-accent/50 mt-1 flex-shrink-0 group-hover/item:text-accent transition-colors">•</span>
-                                                            <span className="group-hover/item:text-foreground transition-colors">{course}</span>
+                                        {yearData[activeYear].semesters.map((sem) => (
+                                            <div key={sem.name} className="bg-background-alt p-8 rounded-3xl border border-white/5 shadow-2xl space-y-6 group hover:border-accent/20 transition-all">
+                                                <div className="flex items-center gap-4">
+                                                    <div className="w-1 h-8 bg-accent rounded-full" />
+                                                    <h4 className="text-2xl font-orbitron font-bold text-foreground">{sem.name}</h4>
+                                                </div>
+                                                <ul className="space-y-3">
+                                                    {sem.subjects.map((s, idx) => (
+                                                        <li key={idx} className="flex items-start gap-3">
+                                                            <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0 opacity-40 group-hover:opacity-100 transition-opacity" />
+                                                            <span className="text-foreground/60 leading-relaxed font-medium group-hover:text-foreground/90 transition-colors">{s}</span>
                                                         </li>
                                                     ))}
                                                 </ul>
@@ -476,9 +460,6 @@ const BtechCloudEngineering = () => {
                         </div>
                     </div>
                 </div>
-                
-                {/* Visual decoration */}
-                <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[150px] pointer-events-none" />
             </section>
 
             {/* Pathways Tree Section (Image 2) */}
@@ -546,46 +527,43 @@ const BtechCloudEngineering = () => {
                 </div>
             </section>
 
-            {/* Future-Ready Tech Labs Section */}
-            <section className="py-28 bg-background relative overflow-hidden">
+            {/* Labs Section */}
+            <section className="py-24 bg-background-alt">
                 <div className="container-boxed">
-                    <div className="flex flex-col items-center text-center space-y-8 mb-20">
-                        <motion.h2 
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="text-5xl md:text-7xl font-orbitron font-bold text-foreground"
-                        >
-                            Future-Ready <span className="decorative-serif text-accent">Tech Labs</span>
-                        </motion.h2>
-                        <p className="max-w-3xl text-lg text-foreground/60 subheading-font">
-                            Our state-of-the-art facilities provide a hands-on learning environment where theory meets production-grade infrastructure.
-                        </p>
-                    </div>
+                    <div className="space-y-16">
+                        <div className="space-y-6">
+                            <h2 className="text-5xl md:text-7xl font-orbitron font-bold text-foreground">Innovation Labs</h2>
+                            <p className="text-xl text-foreground/60 max-w-2xl leading-relaxed">
+                                Master the tools of the trade in our world-class security operations centers.
+                            </p>
+                        </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {[
-                            { name: "Sovereign Cloud Lab", desc: "Build and manage private cloud infrastructures with absolute control.", img: "/Other/lab-1.webp" },
-                            { name: "Edge Computing Hub", desc: "Deploy Low-latency applications for the next generation of IoT.", img: "/Other/lab-2.webp" },
-                            { name: "Cloud Security Studio", desc: "Pentest and secure distributed systems against modern threats.", img: "/Other/lab-3.webp" }
-                        ].map((lab, i) => (
-                            <motion.div 
-                                key={i}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                                className="group bg-background-alt rounded-[2rem] overflow-hidden border border-white/5 hover:border-accent/30 transition-all"
-                            >
-                                <div className="aspect-[16/10] relative overflow-hidden">
-                                    <Image src={lab.img} alt={lab.name} fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
-                                </div>
-                                <div className="p-8 space-y-3">
-                                    <h4 className="text-xl font-bold font-orbitron text-foreground group-hover:text-accent transition-colors">{lab.name}</h4>
-                                    <p className="text-sm text-foreground/60 leading-relaxed">{lab.desc}</p>
-                                </div>
-                            </motion.div>
-                        ))}
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {[
+                                { name: 'Cyber Range & VAPT Lab', tag: "Offensive Security & Red Teaming", image: '/Other/lab-3.webp' },
+                                { name: 'SOC Operations Center', tag: 'Defensive Security & Threat Hunting', image: '/Other/lab-4.webp' },
+                                { name: 'Digital Forensics Lab', tag: "Investigation & Evidence Recovery", image: '/Other/lab-2.webp' },
+                                { name: 'Cloud Security Unit', tag: 'Securing Hybrid & Multi-cloud', image: '/Other/lab-1.webp' }
+                            ].map((lab, i) => (
+                                <motion.div 
+                                    key={lab.name}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: i * 0.1 }}
+                                    className="group space-y-6"
+                                >
+                                    <div className="aspect-square relative rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
+                                        <Image src={lab.image} alt={lab.name} fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <h3 className="text-2xl font-orbitron font-bold text-foreground">{lab.name}</h3>
+                                        <p className="text-sm text-accent subheading-font font-semibold uppercase tracking-wider">{lab.tag}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
@@ -607,11 +585,11 @@ const BtechCloudEngineering = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
                         {[
-                            { num: "01", title: "AI-Integrated Cloud Services", color: "bg-pink-50 border-pink-200" },
-                            { num: "02", title: "Multi-Cloud and Hybrid Cloud Adoption", color: "bg-blue-50 border-blue-200 shadow-blue-100" },
-                            { num: "03", title: "Cloud-Native Development", color: "bg-purple-50 border-purple-200" },
-                            { num: "04", title: "Quantum Computing as a Cloud Service", color: "bg-pink-50 border-pink-200" },
-                            { num: "05", title: "Cloud Automation & Platform Engineering", color: "bg-purple-50 border-purple-300" }
+                            { num: "01", title: "AI-Powered Threat Intelligence", color: "bg-pink-50 border-pink-200" },
+                            { num: "02", title: "Zero Trust Network Access (ZTNA)", color: "bg-blue-50 border-blue-200 shadow-blue-100" },
+                            { num: "03", title: "Quantum-Safe Cryptography (PQC)", color: "bg-purple-50 border-purple-200" },
+                            { num: "04", title: "Cloud-Native Security (CNAPP)", color: "bg-pink-50 border-pink-200" },
+                            { num: "05", title: "Supply Chain & API Security", color: "bg-purple-50 border-purple-300" }
                         ].map((trend, idx) => (
                             <motion.div
                                 key={idx}
@@ -635,46 +613,16 @@ const BtechCloudEngineering = () => {
                 </div>
             </section>
 
-            {/* Prospective Placement Partners (Image 2) */}
-            <section className="py-24 bg-[#E8E2FF]/30 relative overflow-hidden">
+            {/* Partners Section */}
+            <section className="py-24 bg-background-alt border-y border-white/5">
                 <div className="container-boxed">
-                    <motion.h2 
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-5xl md:text-6xl font-orbitron font-bold text-black mb-16"
-                    >
-                        Prospective Placement <span className="decorative-serif text-black italic">Partners</span>
-                    </motion.h2>
-
-                    <div className="space-y-6">
-                        <div className="flex flex-wrap items-center justify-center gap-6">
-                            {[
-                                { name: "AWS", logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" },
-                                { name: "Azure", logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg" },
-                                { name: "Google Cloud", logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_Logo.svg" },
-                                { name: "IBM", logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" },
-                                { name: "Oracle", logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" },
-                                { name: "VMware", logo: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Vmware.svg" }
-                            ].map((partner) => (
-                                <div key={partner.name} className="bg-white p-6 h-24 w-48 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
-                                    <Image src={partner.logo} alt={partner.name} width={120} height={40} className="max-h-12 w-auto object-contain" />
-                                </div>
-                            ))}
-                        </div>
-                        <div className="flex flex-wrap items-center justify-center gap-6">
-                            {[
-                                { name: "Red Hat", logo: "https://upload.wikimedia.org/wikipedia/commons/d/d8/Red_Hat_logo.svg" },
-                                { name: "Infosys", logo: "https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg" },
-                                { name: "Accenture", logo: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg" },
-                                { name: "Deloitte", logo: "https://upload.wikimedia.org/wikipedia/commons/5/56/Deloitte.svg" },
-                                { name: "TCS", logo: "https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg" }
-                            ].map((partner) => (
-                                <div key={partner.name} className="bg-white p-6 h-24 w-48 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
-                                    <Image src={partner.logo} alt={partner.name} width={120} height={40} className="max-h-12 w-auto object-contain" />
-                                </div>
-                            ))}
-                        </div>
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 grayscale opacity-50">
+                        <div className="h-10 flex items-center justify-center font-orbitron font-bold text-foreground/40 text-center uppercase">CISCO</div>
+                        <div className="h-10 flex items-center justify-center font-orbitron font-bold text-foreground/40 text-center uppercase">FORTINET</div>
+                        <div className="h-10 flex items-center justify-center font-orbitron font-bold text-foreground/40 text-center uppercase">Palo Alto</div>
+                        <div className="h-10 flex items-center justify-center font-orbitron font-bold text-foreground/40 text-center uppercase">Check Point</div>
+                        <div className="h-10 flex items-center justify-center font-orbitron font-bold text-foreground/40 text-center uppercase">IBM Security</div>
+                        <div className="h-10 flex items-center justify-center font-orbitron font-bold text-foreground/40 text-center uppercase">Microsoft</div>
                     </div>
                 </div>
             </section>
@@ -771,7 +719,7 @@ const BtechCloudEngineering = () => {
                 </div>
             </section>
 
-            {/* Future Scope Of Cloud Engineering (Image 5) */}
+            {/* Future Scope Of Cyber Security (Image 5) */}
             <section className="py-24 bg-background relative overflow-hidden">
                 <div className="container-boxed">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -783,19 +731,19 @@ const BtechCloudEngineering = () => {
                         >
                             <div className="space-y-4">
                                 <h2 className="text-5xl md:text-6xl font-orbitron font-bold text-foreground leading-[1.1]">
-                                    Future Scope Of <span className="decorative-serif text-foreground/60 italic">Cloud Engineering</span>
+                                    Future Scope Of <span className="decorative-serif text-foreground/60 italic">Cyber Security</span>
                                 </h2>
                                 <p className="text-lg text-foreground/70 leading-relaxed font-medium">
-                                    Cloud Computing is a technology that enables on-demand access to computing resources—such as servers, storage, databases, and software—over the internet.
+                                    Cyber Security is the guardian of the digital age, ensuring that the innovations of today don't become the vulnerabilities of tomorrow.
                                 </p>
                             </div>
 
                             <div className="space-y-6">
-                                <h4 className="text-2xl font-bold font-orbitron text-foreground">Massive Growth</h4>
+                                <h4 className="text-2xl font-bold font-orbitron text-foreground">Global Demand</h4>
                                 <ul className="space-y-4">
                                     {[
-                                        "The cloud market in India is growing at >30% annually.",
-                                        "Government and private sectors are shifting completely to cloud infra."
+                                        "The cybersecurity market is projected to reach $538 billion by 2030, with a severe talent shortage.",
+                                        "Rise of autonomous security agents and AI-driven defense mechanisms."
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-4 group">
                                             <span className="w-2 h-2 rounded-full bg-accent mt-2 group-hover:scale-150 transition-transform shrink-0" />
@@ -816,8 +764,8 @@ const BtechCloudEngineering = () => {
                             <div className="absolute bottom-0 right-0 w-full h-[60%] bg-purple/20 rounded-l-[10rem] -z-10 translate-y-10" />
                             <div className="relative aspect-square w-full max-w-[600px] ml-auto">
                                 <Image 
-                                    src="/Other/cloud-robot.png" 
-                                    alt="Future Cloud Robotics" 
+                                    src="/Other/future-robot.png" 
+                                    alt="Future Cyber Systems" 
                                     fill 
                                     className="object-contain drop-shadow-[0_20px_50px_rgba(215,246,1,0.2)]" 
                                 />
@@ -826,6 +774,7 @@ const BtechCloudEngineering = () => {
                     </div>
                 </div>
             </section>
+
             {/* Applications Section */}
             <section className="py-24 bg-background-alt/30 border-t border-white/5">
                 <div className="container-boxed">
@@ -836,39 +785,38 @@ const BtechCloudEngineering = () => {
                             viewport={{ once: true }}
                             className="text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold text-foreground"
                         >
-                            Applications of <span className="decorative-serif text-accent">Cloud Engineering</span>
+                            Applications of <span className="decorative-serif text-accent">Cyber Security</span>
                         </motion.h2>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             {[
                                 {
-                                    title: "Cloud Engineer",
-                                    desc: "From fraud detection to smart loans—this role is at the heart of India's $150B fintech revolution.",
-                                    image: "/Other/app-cloud.jpg",
-                                    major: "Cloud Engineering",
-                                    lab: "Soft \"Brain\" Lab"
+                                    title: "Penetration Tester",
+                                    desc: "Ethically hacking into systems to identify and patch security loopholes before malicious actors find them.",
+                                    image: "/Other/lab-3.webp",
+                                    major: "Cyber Security",
+                                    lab: "Cyber Range"
                                 },
                                 {
-                                    title: "DevOps Engineer",
-                                    desc: "An AI Materials Innovation Engineer applies AI to discover and optimize new materials faster.",
-                                    image: "/Other/app-devops.jpg",
-                                    major: "Cloud Engineering",
-                                    lab: "Soft \"Brain\" Lab",
-                                    partner: "/Herosection/google-logo.png" // Using an existing logo path if available, or placeholder
+                                    title: "Incident Responder",
+                                    desc: "Leading the defense during active cyber attacks, neutralizing threats and restoring secure operations.",
+                                    image: "/Other/lab-4.webp",
+                                    major: "Cyber Security",
+                                    lab: "SOC Center"
                                 },
                                 {
-                                    title: "Cloud Security Engineer",
-                                    desc: "A Multi-Modal AI Model Trainer builds AI models that learn from text, images, and more.",
-                                    image: "/Other/app-security.jpg",
-                                    major: "Cloud Engineering",
-                                    lab: "Soft \"Brain\" Lab"
+                                    title: "Cloud Security Lead",
+                                    desc: "Architecting secure multicloud environments for global enterprises with advanced identity controls.",
+                                    image: "/Other/lab-1.webp",
+                                    major: "Cyber Security",
+                                    lab: "Digital Trust Lab"
                                 },
                                 {
-                                    title: "Cloud Solutions Architect",
-                                    desc: "A Robotics AI Specialist develops intelligent systems that enable robots to perceive, learn, and act autonomously.",
-                                    image: "/Other/app-architect.jpg",
-                                    major: "Cloud Engineering",
-                                    lab: "Soft \"Brain\" Lab"
+                                    title: "Forensics Investigator",
+                                    desc: "Uncovering digital evidence and reconstructing cybercrime scenes for legal and corporate investigations.",
+                                    image: "/Other/lab-2.webp",
+                                    major: "Cyber Security",
+                                    lab: "Investigation Lab"
                                 }
                             ].map((app, idx) => (
                                 <motion.div
@@ -899,7 +847,7 @@ const BtechCloudEngineering = () => {
                                             <div className="flex items-center justify-between">
                                                 <div className="flex items-center gap-3">
                                                     <span className="text-[10px] font-bold text-foreground/40 uppercase tracking-widest">Major</span>
-                                                    <span className="px-3 py-1 bg-purple/10 border border-purple/20 text-purple text-[10px] font-bold rounded-md uppercase">
+                                                    <span className="px-3 py-1 bg-red-600/10 border border-red-600/20 text-red-500 text-[10px] font-bold rounded-md uppercase">
                                                         {app.major}
                                                     </span>
                                                 </div>
@@ -912,19 +860,6 @@ const BtechCloudEngineering = () => {
                                                         {app.lab}
                                                     </span>
                                                 </div>
-                                                {app.partner && (
-                                                    <div className="relative w-16 h-6 grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all">
-                                                         {/* Google logo placeholder or actual if exists */}
-                                                         <div className="flex items-center gap-1">
-                                                            <span className="text-[10px] font-black italic text-[#4285F4]">G</span>
-                                                            <span className="text-[10px] font-black italic text-[#EA4335]">o</span>
-                                                            <span className="text-[10px] font-black italic text-[#FBBC05]">o</span>
-                                                            <span className="text-[10px] font-black italic text-[#4285F4]">g</span>
-                                                            <span className="text-[10px] font-black italic text-[#34A853]">l</span>
-                                                            <span className="text-[10px] font-black italic text-[#EA4335]">e</span>
-                                                         </div>
-                                                    </div>
-                                                )}
                                             </div>
                                         </div>
                                     </div>
@@ -934,6 +869,7 @@ const BtechCloudEngineering = () => {
                     </div>
                 </div>
             </section>
+
             {/* Fees Structure Section */}
             <section className="py-24 bg-background relative overflow-hidden">
                 <div className="container-boxed relative z-10">
@@ -964,7 +900,6 @@ const BtechCloudEngineering = () => {
                                 </thead>
                                 <tbody>
                                     <tr className="bg-background-alt/30 group">
-                                        {/* Program Name */}
                                         <td className="p-10 border-r border-white/5 align-top space-y-8">
                                             <div className="space-y-4">
                                                 <p className="text-foreground/60 font-medium">B.Tech. (with one Major & one Minor Specialization pattern)</p>
@@ -972,7 +907,7 @@ const BtechCloudEngineering = () => {
                                                     Computer Science & Engineering with any one Major Specialization in
                                                 </h4>
                                                 <ul className="grid grid-cols-1 gap-2">
-                                                    {["Cloud Engineering", "Software Engineering", "Artificial Intelligence & Machine Learning", "Data Science", "Cyber Security"].map((item) => (
+                                                    {["Cyber Security", "Cloud Engineering", "Software Engineering", "Artificial Intelligence & Machine Learning", "Data Science"].map((item) => (
                                                         <li key={item} className="flex items-center gap-3 text-foreground/70">
                                                             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                                                             {item}
@@ -988,7 +923,7 @@ const BtechCloudEngineering = () => {
                                                 <ul className="grid grid-cols-2 gap-x-6 gap-y-2">
                                                     {["Robotics", "Bioinformatics", "Industry & Manufacturing", "Nanotechnology", "Geoinformatics", "Chip & Semiconductor", "Smart Cities", "Design", "Fintech"].map((item) => (
                                                         <li key={item} className="flex items-center gap-3 text-foreground/70">
-                                                            <span className="w-1 h-1 rounded-full bg-purple" />
+                                                            <span className="w-1 h-1 rounded-full bg-red-600" />
                                                             {item}
                                                         </li>
                                                     ))}
@@ -996,12 +931,10 @@ const BtechCloudEngineering = () => {
                                             </div>
                                         </td>
 
-                                        {/* Duration */}
                                         <td className="p-10 border-r border-white/5 text-center align-middle">
                                             <span className="text-2xl subheading-font font-bold text-foreground">4 Years</span>
                                         </td>
 
-                                        {/* Annual Fee */}
                                         <td className="p-10 border-r border-white/5 text-center align-middle">
                                             <div className="space-y-1">
                                                 <span className="text-3xl subheading-font font-bold text-accent">₹ 2,00,000</span>
@@ -1009,14 +942,13 @@ const BtechCloudEngineering = () => {
                                             </div>
                                         </td>
 
-                                        {/* Qualification */}
                                         <td className="p-10 align-top">
                                             <div className="space-y-6 text-foreground/70 leading-relaxed font-medium">
                                                 <p>
                                                     Passed 10+2 from any government recognized board with <span className="text-foreground font-bold">Physics and Mathematics</span> as compulsory subjects,
                                                 </p>
                                                 <p className="italic">along with one of the following:</p>
-                                                <div className="bg-purple/10 p-6 rounded-2xl border border-purple/20">
+                                                <div className="bg-red-600/10 p-6 rounded-2xl border border-red-600/20">
                                                     <p className="text-foreground font-bold">
                                                         Chemistry / Biotechnology / Computer Science / Biology
                                                     </p>
@@ -1037,4 +969,4 @@ const BtechCloudEngineering = () => {
     );
 };
 
-export default BtechCloudEngineering;
+export default CyberSecurityPage;

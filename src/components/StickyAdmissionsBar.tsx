@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { scrollToRegistrationForm } from '@/utils/navigation';
 
 const StickyAdmissionsBar = () => {
     const [isVisible, setIsVisible] = useState(true);
@@ -57,7 +58,10 @@ const StickyAdmissionsBar = () => {
                             </div>
                             
                             <div className="flex items-center gap-4 w-full sm:w-auto">
-                                <button className="w-full sm:w-auto px-6 md:px-8 py-2 md:py-2.5 bg-accent text-black font-orbitron font-black text-[10px] md:text-xs uppercase rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(216,246,2,0.3)]">
+                                <button 
+                                    onClick={scrollToRegistrationForm}
+                                    className="w-full sm:w-auto px-6 md:px-8 py-2 md:py-2.5 bg-accent text-black font-orbitron font-black text-[10px] md:text-xs uppercase rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(216,246,2,0.3)] cursor-pointer"
+                                >
                                     Apply Now ↗
                                 </button>
                             </div>

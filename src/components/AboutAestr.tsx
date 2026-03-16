@@ -59,10 +59,20 @@ const AboutAestr = () => {
                                     <div className="space-y-4 md:space-y-6">
                                         <h4 className="text-[11px] md:text-xs font-orbitron tracking-[0.2em] text-foreground/40 font-bold uppercase">Major specialization</h4>
                                         <div className="flex flex-wrap gap-2 md:gap-3">
-                                            {["Software engineering", "Cloud engineering", "Data science", "AI & ML", "Cyber security"].map((item) => (
-                                                <span key={item} className="px-4 py-2 text-xs md:text-sm bg-accent/10 text-accent border border-accent/20 rounded-full font-bold tracking-tight hover:bg-accent/20 transition-all cursor-default">
-                                                    {item}
-                                                </span>
+                                            {[
+                                                { name: "Software engineering", href: "/software-engineering" },
+                                                { name: "Cloud engineering", href: "/btech-cloud-engineering" },
+                                                { name: "Data science", href: "/data-science" },
+                                                { name: "AI & ML", href: "/ai-ml" },
+                                                { name: "Cyber security", href: "/cyber-security" }
+                                            ].map((item) => (
+                                                <Link
+                                                    key={item.name}
+                                                    href={item.href}
+                                                    className="px-4 py-2 text-xs md:text-sm bg-accent/10 text-accent border border-accent/20 rounded-full font-bold tracking-tight hover:bg-accent/20 transition-all cursor-pointer"
+                                                >
+                                                    {item.name}
+                                                </Link>
                                             ))}
                                         </div>
                                     </div>

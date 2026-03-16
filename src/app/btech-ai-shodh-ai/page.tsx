@@ -4,56 +4,39 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import RegistrationForm from "@/components/RegistrationForm";
 
+// Reusable Lab Data (Same as home page)
 const labs = [
     {
-        name: 'Apple Ecosystem',
-        tag: "India's Only Apple Certified Engineering Center",
-        desc: 'MacBooks + Vision Pros for spatial computing. Build world-class apps for iOS, macOS, and the revolutionary VisionOS.',
-        image: '/Other/lab-5.webp',
-    },
-    {
-        name: 'NVIDIA Pipeline',
-        tag: 'Dedicated GPU Hours — Train Your Own Models',
-        desc: 'Dedicated GPU hours on NVIDIA Hopper. Fine-tune LLMs, master CUDA, and run real inference pipelines.',
+        name: 'Foundation Model Lab',
         image: '/Other/lab-4.webp',
-    },
-    {
-        name: 'RISC-V Lab',
-        tag: "Design Custom AI Chips for India's Semiconductor Edge",
-        desc: "Take your place at the forefront of India's semiconductor sovereignty. Complete lifecycle of chip design from RTL to tapeout.",
-        image: '/Other/lab-3.webp',
+        description: 'Master cutting-edge AI by fine-tuning models for material science (with Microsoft\'s MatterGen), drug discovery, and more. Outcome: Become a leading AI Engineer, Foundation Model Engineer, or Data Engineer.',
+        icon: 'nvidia'
     },
     {
         name: 'Embodied Brain Lab',
-        tag: 'Deploy AI Into Robots, Exoskeletons & ROS Systems',
-        desc: '3D-printed robots, exoskeletons, and NVIDIA Jetson-powered ROS systems. Where AI meets the physical world.',
         image: '/Other/lab-2.webp',
-    },
-];
-
-const selectionSteps = [
-    {
-        num: '01',
-        title: 'Show Us Your "Proof of Work"',
-        desc: 'Have a GitHub link? Wired an Arduino? Launched a website? Drop the link. Give us anything real you\'ve done outside an exam hall.',
+        description: 'Dive into Robotics, Exoskeletons, and ROS on Nvidia Jetson. Build 3D printed humanoids and leverage our patented multi-agentic \'brain\' system - your key to becoming a top 1% AI engineer.',
+        icon: 'robotics'
     },
     {
-        num: '02',
-        title: 'The Peer Interview',
-        desc: "Senior student-engineers will interview you. If you don't have the grit, logic, and hunger, the team will reject you—no matter how high your JEE score is.",
+        name: 'RISC-V Systems Lab',
+        image: '/Other/lab-3.webp',
+        description: 'Engineer the future with India\'s pioneering semiconductor technology, building essential systems and chips for tomorrow.',
+        icon: 'chip'
     },
+    {
+        name: 'Augmented Human Lab',
+        image: '/Other/lab-5.webp',
+        description: 'Explore the frontiers of Human-AI interaction - from Apple Vision Pro and holography to AI filmmaking, UX design, and future communication.',
+        icon: 'apple'
+    }
 ];
 
-const minimumSteps = [
-    { step: 'Step 1', desc: '75% Boards + 75th Percentile SAT/JEE/CUET (exception cases maybe considered).' },
-    { step: 'Step 2', desc: 'Portfolio: Code, project, or hardware link.' },
-    { step: 'Step 3', desc: 'Peer Interview: Prove your hunger.' },
-];
-
-const BtechAIShodhAI = () => {
+const BtechAIShodhAIPage = () => {
     const [currentImage, setCurrentImage] = useState(0);
-    const heroImages = ['/Other/hero-campus.png', '/Other/hero-lab.png'];
+    const heroImages = ['/Other/hero-campus.jpg', '/Other/hero-lab.jpg'];
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -100,11 +83,11 @@ const BtechAIShodhAI = () => {
                         transition={{ duration: 1, delay: 0.2 }}
                         className="max-w-4xl space-y-6"
                     >
-                        <h1 className="text-white text-[55px] font-orbitron font-bold max-w-[900px] leading-[65px] tracking-tight">
+                        <h1 className="text-white text-[55px] font-outfit font-semibold max-w-[900px] leading-[65px] tracking-tight">
                             This Isn't College. It's A <br />
                             4-Year Internship
                         </h1>
-                        <p className="text-white subheading-font max-w-2xl opacity-100 leading-relaxed">
+                        <p className="text-white text-xl md:text-2xl max-w-2xl opacity-100 font-serif leading-relaxed">
                             At AESTR Pro, every student becomes an intern from day one. Learn by doing. Lead by innovating.
                         </p>
                         
@@ -134,13 +117,13 @@ const BtechAIShodhAI = () => {
                         >
                             <div className="space-y-6">
                                 {/* Numbered Circle - Dark Theme */}
-                                <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-orbitron font-bold text-purple shadow-lg border border-purple/30">
+                                <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-serif italic text-purple shadow-lg border border-purple/30">
                                     1
                                 </div>
-                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold text-foreground leading-tight tracking-tight">
+                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-outfit font-bold text-foreground leading-tight tracking-tight">
                                     The Crisis Of Indian Engineering
                                 </h2>
-                                <h3 className="subheading-font italic text-foreground/80">
+                                <h3 className="text-2xl md:text-3xl font-serif font-medium text-foreground/80">
                                     A Generation of "Un-hirable" Talent
                                 </h3>
                                 <div className="space-y-6 text-lg text-foreground/70 leading-relaxed font-medium">
@@ -214,13 +197,13 @@ const BtechAIShodhAI = () => {
                         >
                             <div className="space-y-6">
                                 {/* Numbered Circle - Purple */}
-                                <div className="w-20 h-20 rounded-full bg-[#E8E2FF]/20 backdrop-blur-md flex items-center justify-center text-4xl font-orbitron font-bold text-white border border-white/10 shadow-xl">
+                                <div className="w-20 h-20 rounded-full bg-[#E8E2FF]/20 backdrop-blur-md flex items-center justify-center text-4xl font-serif italic text-white border border-white/10 shadow-xl">
                                     2
                                 </div>
-                                <h2 className="text-4xl md:text-5xl lg:text-5xl font-orbitron font-bold text-white leading-tight tracking-tight">
-                                    Introducing B.TECH AESTR PRO:
+                                <h2 className="text-4xl md:text-5xl lg:text-5xl font-outfit font-bold text-white leading-tight tracking-tight">
+                                    Introducing B.TECH AESTR PRO :
                                 </h2>
-                                <h3 className="subheading-font italic text-white/90">
+                                <h3 className="text-2xl md:text-3xl font-serif font-medium text-white/90">
                                     Your 4-Year Internship Starts Now
                                 </h3>
                                 <div className="space-y-6 text-lg text-white/80 leading-relaxed font-medium">
@@ -237,7 +220,6 @@ const BtechAIShodhAI = () => {
                             </div>
                         </motion.div>
 
-                        {/* Text */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9, x: 30 }}
                             whileInView={{ opacity: 1, scale: 1, x: 0 }}
@@ -270,15 +252,14 @@ const BtechAIShodhAI = () => {
                 <div className="container-boxed relative z-10">
                     <div className="flex flex-col items-start mb-16 space-y-6">
                         {/* Numbered Circle - Dark Theme */}
-                        <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-orbitron font-bold text-purple shadow-lg border border-purple/30">
+                        <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-serif italic text-purple shadow-lg border border-purple/30">
                             3
                         </div>
                         <div className="space-y-4">
-                            <h1 className="text-5xl md:text-7xl lg:text-8xl font-orbitron font-bold text-foreground leading-none tracking-tight">
-                                B.Tech AI with <br />
-                                <span className="text-accent">Shodh AI</span>
-                            </h1>
-                            <h3 className="subheading-font italic text-foreground/80">
+                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-outfit font-bold text-foreground leading-tight tracking-tight">
+                                The Heart Of AESTR PRO:
+                            </h2>
+                            <h3 className="text-2xl md:text-3xl font-serif font-medium text-foreground/80">
                                 Our Innovation Labs, Powered by Shodh AI
                             </h3>
                             <p className="text-lg text-foreground/70 max-w-3xl leading-relaxed font-medium">
@@ -306,10 +287,9 @@ const BtechAIShodhAI = () => {
                                     />
                                 </div>
                                 <div className="space-y-3">
-                                    <h2 className="text-2xl md:text-4xl font-orbitron font-bold text-foreground tracking-tight">{lab.name}</h2>
-                                    <h3 className="subheading-font italic text-foreground/60">{lab.tag}</h3>
+                                    <h4 className="text-xl font-outfit font-bold text-foreground">{lab.name}</h4>
                                     <p className="text-sm text-foreground/60 leading-relaxed font-medium">
-                                        {lab.desc}
+                                        {lab.description}
                                     </p>
                                 </div>
                             </motion.div>
@@ -348,14 +328,14 @@ const BtechAIShodhAI = () => {
                 <div className="container-boxed relative z-10">
                     <div className="flex flex-col items-start mb-16 space-y-6">
                         {/* Numbered Circle - Dark Theme */}
-                        <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-orbitron font-bold text-purple shadow-lg border border-purple/30">
+                        <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-serif italic text-purple shadow-lg border border-purple/30">
                             4
                         </div>
                         <div className="space-y-4 max-w-4xl">
-                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold text-foreground leading-tight tracking-tight">
+                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-outfit font-bold text-foreground leading-tight tracking-tight">
                                 The Job We're Training You For
                             </h2>
-                            <h3 className="subheading-font italic text-foreground/80">
+                            <h3 className="text-2xl md:text-3xl font-serif font-medium text-foreground/80 italic">
                                 From Intern to Innovator
                             </h3>
                             <div className="space-y-6 text-lg text-foreground/70 leading-relaxed font-medium">
@@ -457,37 +437,6 @@ const BtechAIShodhAI = () => {
                             </div>
                         </motion.div>
                     </div>
-
-                    {/* Minimum to Enter */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                        className="rounded-3xl border border-accent/20 overflow-hidden"
-                        style={{ background: 'linear-gradient(135deg, rgba(216,246,2,0.06) 0%, rgba(91,29,214,0.15) 100%)' }}
-                    >
-                        <div className="p-8 md:p-12 space-y-8">
-                            <div className="flex items-center gap-4">
-                                <div className="h-px flex-1 bg-accent/20" />
-                                <h3 className="text-xl font-orbitron font-black text-white uppercase tracking-widest whitespace-nowrap">Minimum to Enter</h3>
-                                <div className="h-px flex-1 bg-accent/20" />
-                            </div>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                {minimumSteps.map((item, i) => (
-                                    <div key={item.step} className="flex items-start gap-4 p-5 rounded-2xl border border-white/8 hover:border-accent/25 transition-all" style={{ backgroundColor: 'rgba(0,0,0,0.25)' }}>
-                                        <div className="w-8 h-8 rounded-xl bg-accent/15 border border-accent/30 flex items-center justify-center shrink-0">
-                                            <span className="text-xs font-orbitron font-black text-accent">{i + 1}</span>
-                                        </div>
-                                        <div className="space-y-1">
-                                            <p className="text-[10px] font-orbitron font-black text-accent uppercase tracking-wider">{item.step}</p>
-                                            <p className="text-sm text-white/60 font-medium leading-snug">{item.desc}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </motion.div>
                 </div>
             </section>
 
@@ -504,13 +453,13 @@ const BtechAIShodhAI = () => {
                         >
                             <div className="space-y-6">
                                 {/* Numbered Circle - Dark Theme */}
-                                <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-orbitron font-bold text-purple shadow-lg border border-purple/30">
+                                <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-serif italic text-purple shadow-lg border border-purple/30">
                                     5
                                 </div>
-                                <h2 className="text-4xl md:text-5xl lg:text-5xl font-orbitron font-bold text-foreground leading-tight tracking-tight">
+                                <h2 className="text-4xl md:text-5xl lg:text-5xl font-outfit font-bold text-foreground leading-tight tracking-tight">
                                     Graduate As A Senior Engineer
                                 </h2>
-                                <h3 className="subheading-font italic text-foreground/80">
+                                <h3 className="text-2xl md:text-3xl font-serif font-medium text-foreground/80 italic">
                                     Ready to Lead the Future
                                 </h3>
                                 <div className="space-y-6 text-lg text-foreground/70 leading-relaxed font-medium">
@@ -525,8 +474,8 @@ const BtechAIShodhAI = () => {
                         </motion.div>
 
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                             className="relative group"
@@ -619,15 +568,16 @@ const BtechAIShodhAI = () => {
                         </div>
                         <div className="md:hidden w-px h-12 bg-foreground opacity-20" />
 
-                        <h2 className="text-3xl md:text-5xl lg:text-6xl font-orbitron font-bold text-foreground underline decoration-accent decoration-[3px] underline-offset-[12px]">
+                        <h2 className="text-3xl md:text-5xl lg:text-6xl font-outfit font-bold text-foreground underline decoration-accent decoration-[3px] underline-offset-[12px]">
                             Make Your Own Degree By Yourself
                         </h2>
                     </div>
                 </div>
             </section>
 
+            <RegistrationForm />
         </main>
     );
 };
 
-export default BtechAIShodhAI;
+export default BtechAIShodhAIPage;
