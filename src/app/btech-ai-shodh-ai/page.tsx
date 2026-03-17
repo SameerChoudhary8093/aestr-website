@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import RegistrationForm from "@/components/RegistrationForm";
+
 
 // Reusable Lab Data (Same as home page)
 const labs = [
@@ -91,12 +91,7 @@ const BtechAIShodhAIPage = () => {
                             At AESTR Pro, every student becomes an intern from day one. Learn by doing. Lead by innovating.
                         </p>
                         
-                        <div className="pt-4">
-                            <button className="btn-aestr !px-12 !py-5">
-                                APPLY FOR 2026 INTAKE
-                                <span className="ml-3 transition-transform group-hover:translate-x-1 duration-300">↗</span>
-                            </button>
-                        </div>
+
                     </motion.div>
                 </div>
             </section>            {/* Section 1: The Crisis */}
@@ -575,7 +570,7 @@ const BtechAIShodhAIPage = () => {
                 </div>
             </section>
 
-            <RegistrationForm />
+
         </main>
     );
 };

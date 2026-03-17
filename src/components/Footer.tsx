@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+
 import { motion } from 'framer-motion';
 
 const Footer = () => {
@@ -22,18 +22,7 @@ const Footer = () => {
                             </p>
                         </div>
 
-                        {/* Apply Box - Glassmorphism */}
-                        <div className="bg-white/5 backdrop-blur-xl p-2 rounded-2xl flex flex-col sm:flex-row items-center justify-between border border-white/10 max-w-xl group shadow-2xl">
-                            <p className="px-6 py-4 subheading-font font-bold text-foreground/80 text-center sm:text-left leading-relaxed">
-                                Don't be shy. We enjoy connecting with students and parents.
-                            </p>
-                            <Link 
-                                href="/apply"
-                                className="btn-aestr !rounded-xl !py-4 transition-all duration-500 whitespace-nowrap m-1 text-center w-full sm:w-auto"
-                            >
-                                Apply Now
-                            </Link>
-                        </div>
+
                     </div>
 
                     {/* Robot Image */}

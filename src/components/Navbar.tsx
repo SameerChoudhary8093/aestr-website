@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import MagneticEffect from './MagneticEffect';
-import { scrollToRegistrationForm } from '@/utils/navigation';
+
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -176,15 +176,7 @@ const Navbar = () => {
                             ))}
                         </div>
                         <div className="mt-10 pt-10 border-t border-white/10 flex flex-col items-center gap-6">
-                            <button
-                                onClick={() => {
-                                    setIsOpen(false);
-                                    scrollToRegistrationForm();
-                                }}
-                                className="w-full max-w-sm bg-accent hover:bg-white text-black py-5 rounded-2xl font-orbitron font-black text-lg uppercase tracking-widest text-center transition-all shadow-[0_0_30px_rgba(216,246,2,0.3)] cursor-pointer"
-                            >
-                                Apply Now
-                            </button>
+
                             <p className="text-[10px] font-orbitron font-medium text-white/30 uppercase tracking-[0.4em]">
                                 AESTR &copy; 2026
                             </p>

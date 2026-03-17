@@ -12,12 +12,12 @@ import FutureFaculty from "@/components/FutureFaculty";
 import Pathways from "@/components/Pathways";
 import PlacementPartners from "@/components/PlacementPartners";
 import ExecutionTeam from "@/components/ExecutionTeam";
-import StickyAdmissionsBar from "@/components/StickyAdmissionsBar";
+
 
 export default function Home() {
   return (
     <main className="relative">
-      <StickyAdmissionsBar />
+
       <Hero />
       <AboutTopOnePercent />
       <AboutPointOne />
