@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
+
 const highlights = [
     {
         mainTitle: "B.Tech. with 3+1 degrees abroad for TOP 10% of our students",
@@ -14,7 +15,6 @@ const highlights = [
         bgColor: "bg-[#181818]",
         hex: "#181818",
         badge: "+25 Education partners in US, UK and Europe",
-        hasApply: true
     },
     {
         mainTitle: "First engineering college in India",
@@ -23,7 +23,6 @@ const highlights = [
         textColor: "text-white",
         bgColor: "bg-[#181818]",
         hex: "#181818",
-        hasApply: false
     },
     {
         mainTitle: "AESTR and Shodh AI are working with",
@@ -32,7 +31,6 @@ const highlights = [
         textColor: "text-white",
         bgColor: "bg-[#181818]",
         hex: "#181818",
-        hasApply: false
     }
 ];
 
@@ -68,22 +66,7 @@ const HighlightCarousel = () => {
                                 </p>
                             </div>
 
-                            {/* Special Badge/Apply Now for first slide */}
-                            {item.hasApply && (
-                                <div className="flex flex-col md:flex-row items-center gap-4">
-                                    <div className="bg-black/5 backdrop-blur-sm p-4 md:p-8 rounded-3xl flex flex-col md:flex-row items-center gap-8 border border-black/5">
-                                        <p className={`text-body font-bold ${item.textColor} leading-snug max-w-[300px]`}>
-                                            {item.badge}
-                                        </p>
-                                        <Link href="/apply" className="flex-shrink-0">
-                                            <button className="bg-black text-white px-10 py-4 rounded-xl font-orbitron font-black text-xs uppercase flex items-center gap-3 hover:scale-105 transition-all shadow-lg">
-                                                Apply Now
-                                                <span className="text-xl">↗</span>
-                                            </button>
-                                        </Link>
-                                    </div>
-                                </div>
-                            )}
+
                         </div>
 
                         {/* Right: Image */}

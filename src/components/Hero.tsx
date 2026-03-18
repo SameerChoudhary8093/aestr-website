@@ -18,7 +18,7 @@ const Hero = () => {
             <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[100px] pointer-events-none z-0" />
 
             <div id="registration-form" className="container-boxed relative z-10 w-full pt-32 pb-12 md:py-20 lg:py-24">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center max-w-7xl mx-auto">
 
                     {/* Left Column: Text & CTA */}
                     <motion.div
@@ -90,6 +90,8 @@ const Hero = () => {
                     >
                         <RegistrationForm />
                     </motion.div>
+
+
 
                 </div>
             </div>

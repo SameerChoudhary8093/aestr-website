@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import FoundingTeamVideo from '@/components/FoundingTeamVideo';
 import BottomCTA from '@/components/BottomCTA';
-import StickyAdmissionsBar from '@/components/StickyAdmissionsBar';
+
 
 const comparisons = [
     {
@@ -41,7 +41,7 @@ const comparisons = [
 export default function DayAtAestr() {
     return (
         <main className="pt-32 pb-0 bg-background overflow-hidden">
-            <StickyAdmissionsBar />
+
             {/* Section 1: Day of AESTR Student */}
             <section className="relative py-20 px-6">
                 <div className="container-boxed max-w-6xl mx-auto space-y-16">

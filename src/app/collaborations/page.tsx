@@ -277,9 +277,7 @@ const CollaborationsPage = () => {
                                 Join the next cohort of global engineering pioneers and build your future without borders.
                             </p>
                         </div>
-                        <button className="btn-aestr !px-16 !py-6 bg-[#D8F602] text-black font-black uppercase tracking-[0.2em] shadow-lg hover:scale-105 transition-all relative z-10 border-2 border-black">
-                            Apply for 2026
-                        </button>
+
                     </div>
                 </div>
             </section>

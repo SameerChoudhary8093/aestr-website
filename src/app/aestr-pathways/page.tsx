@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import BottomCTA from '@/components/BottomCTA';
-import StickyAdmissionsBar from '@/components/StickyAdmissionsBar';
+
 
 const proTrackFeatures = [
     { num: '01', title: 'Tailored for Global Tech Giants', desc: 'Students receive specialized training to crack jobs at Google, Meta, Microsoft, Amazon, OpenAI, etc.' },
@@ -75,7 +75,7 @@ const facilities = [
 export default function AestrPathways() {
     return (
         <main className="bg-background pt-32 overflow-hidden">
-            <StickyAdmissionsBar />
+
 
             {/* Header section */}
             <section className="py-20 px-6 border-b border-white/5">

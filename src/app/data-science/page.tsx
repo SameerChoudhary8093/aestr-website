@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import RegistrationForm from "@/components/RegistrationForm";
+
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -254,12 +254,7 @@ const DataSciencePage = () => {
                                 </div>
                             </div>
 
-                            <div className="pt-4">
-                                <button className="btn-aestr !px-12 !py-5 text-base shadow-xl hover:shadow-accent/20">
-                                    Apply now
-                                    <span className="ml-3 transition-transform group-hover:translate-x-2 duration-300">→</span>
-                                </button>
-                            </div>
+
                         </motion.div>
 
                         <motion.div 
@@ -712,9 +707,7 @@ const DataSciencePage = () => {
                         <div className="flex-1 text-2xl font-bold leading-relaxed px-4 md:px-0">
                             Student chapters of Professional Bodies IEEE, CSI, NPTEL, ICT, IETE, SAE, IAESTE, etc.
                         </div>
-                        <button className="bg-black text-white px-10 py-5 font-bold uppercase tracking-widest text-sm hover:bg-gray-800 transition-colors flex items-center gap-3">
-                            Apply Now <span>↗</span>
-                        </button>
+
                     </div>
                 </div>
             </section>
@@ -964,7 +957,7 @@ const DataSciencePage = () => {
                 </div>
             </section>
 
-            <RegistrationForm />
+
         </main>
     );
 };

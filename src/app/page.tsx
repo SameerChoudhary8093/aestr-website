@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import StickyAdmissionsBar from "@/components/StickyAdmissionsBar";
 import AboutTopOnePercent from "@/components/AboutTopOnePercent";
 import AboutPointOne from "@/components/AboutPointOne";
 import AboutPointTwo from "@/components/AboutPointTwo";
@@ -12,7 +13,7 @@ import FutureFaculty from "@/components/FutureFaculty";
 import Pathways from "@/components/Pathways";
 import PlacementPartners from "@/components/PlacementPartners";
 import ExecutionTeam from "@/components/ExecutionTeam";
-import StickyAdmissionsBar from "@/components/StickyAdmissionsBar";
+
 
 export default function Home() {
   return (
