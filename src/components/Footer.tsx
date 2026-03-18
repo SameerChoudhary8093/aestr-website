@@ -32,8 +32,8 @@ const Footer = () => {
                             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                             className="relative w-full aspect-square max-w-[450px] mx-auto drop-shadow-[0_0_50px_rgba(215,246,1,0.2)]"
                         >
-                            <Image 
-                                src="/Other/Robo.webp" 
+                            <Image
+                                src="/Other/Robo.webp"
                                 alt="AESTR Future Robot"
                                 fill
                                 className="object-contain"
@@ -41,7 +41,7 @@ const Footer = () => {
                         </motion.div>
                     </div>
                 </div>
-                
+
                 {/* Decorative glow */}
                 <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-purple/10 blur-[150px] rounded-full pointer-events-none" />
                 <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
@@ -51,40 +51,58 @@ const Footer = () => {
             <section className="bg-background text-white py-20 relative overflow-hidden border-t border-white/5">
                 <div className="container-boxed relative z-10 flex flex-col items-center text-center space-y-16">
                     {/* University Branding */}
-                    <div className="space-y-10">
-                        <motion.div 
+                    <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 w-full max-w-5xl mx-auto">
+                        <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            className="relative w-80 h-28 mx-auto"
+                            className="relative w-64 h-20 lg:w-80 lg:h-28"
                         >
-                            <Image 
-                                src="/Herosection/sgvu-logo.png" 
+                            <Image
+                                src="/Herosection/sgvu-logo.png"
                                 alt="Suresh Gyan Vihar University"
                                 fill
                                 className="object-contain brightness-110"
                             />
                         </motion.div>
-                        <div className="space-y-4">
-                            <h3 className="text-4xl md:text-6xl font-orbitron font-bold tracking-tighter text-foreground">NAAC A+</h3>
-                            <p className="text-2xl md:text-3xl subheading-font font-medium text-foreground/40 tracking-tight">NIRF Ranked 101-150</p>
+                        <div className="flex items-center justify-center gap-6 md:gap-10">
+                            <div className="relative h-16 w-16 md:h-24 md:w-24 lg:h-28 lg:w-28 transition-all duration-500 hover:scale-110 flex items-center justify-center">
+                                <Image
+                                    src="/Herosection/Nirf white.png"
+                                    alt="NIRF"
+                                    fill
+                                    sizes="120px"
+                                    className="object-contain"
+                                />
+                            </div>
+                            <div className="relative h-16 w-16 md:h-24 md:w-24 lg:h-28 lg:w-28 transition-all duration-500 hover:scale-110 flex items-center justify-center">
+                                <Image
+                                    src="/Herosection/naac white  .png"
+                                    alt="NAAC A+"
+                                    fill
+                                    sizes="120px"
+                                    className="object-contain"
+                                />
+                            </div>
                         </div>
                     </div>
 
                     {/* Contact & Copyright */}
-                    <div className="w-full pt-16 border-t border-white/5 flex flex-col items-center gap-12">
-                        <div className="flex flex-col items-center gap-4">
-                            <span className="text-[10px] subheading-font font-extrabold text-accent uppercase tracking-[0.6em]">Reach out to us</span>
-                            <a href="tel:18003094545" className="text-3xl md:text-5xl font-orbitron font-bold text-foreground hover:text-accent transition-all duration-300 transform hover:scale-105">
-                                1800 - 309 - 4545
-                            </a>
-                        </div>
-                        
-                        <div className="flex flex-col items-center gap-4 py-6 px-12 border border-white/5 rounded-full bg-white/2">
-                            <p className="text-[10px] subheading-font font-black tracking-[0.7em] text-foreground/40 uppercase">AESTR ALPHA © 2025</p>
+                    <div className="w-full pt-12 border-t border-white/5 space-y-6">
+                        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-foreground/60 px-4 md:px-8">
+                            <div className="flex flex-col md:flex-row items-center gap-2">
+                                <span>Reach out to us:</span>
+                                <a href="tel:18003094545" className="font-orbitron font-semibold text-foreground hover:text-accent transition-colors">
+                                    1800 - 309 - 4545
+                                </a>
+                            </div>
+
+                            <div className="text-foreground/40 tracking-wider">
+                                AESTR ALPHA © 2026
+                            </div>
                         </div>
                     </div>
                 </div>
-                
+
                 {/* Background Grid Structure */}
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:60px_60px] pointer-events-none" />
             </section>

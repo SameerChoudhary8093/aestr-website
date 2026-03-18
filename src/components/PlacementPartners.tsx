@@ -113,14 +113,14 @@ const PlacementPartners = () => {
     );
 };
 
-const PartnerLogo = ({ partner, index }: { partner: { name: string, logo: string }, index: number }) => {
+const PartnerLogo = ({ partner, index, isMarquee = false }: { partner: { name: string, logo: string }, index: number, isMarquee?: boolean }) => {
     return (
         <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: (index % 10) * 0.05 }}
-            className="h-24 md:h-28 w-full bg-white rounded-xl md:rounded-2xl flex items-center justify-center transition-all duration-500 hover:scale-105 shadow-[0_10px_30px_rgba(0,0,0,0.1)] group relative overflow-hidden p-1 md:p-1.5"
+            className={`h-24 md:h-28 bg-white rounded-xl md:rounded-2xl flex items-center justify-center transition-all duration-500 hover:scale-105 shadow-[0_10px_30px_rgba(0,0,0,0.1)] group relative overflow-hidden p-1 md:p-1.5 ${isMarquee ? 'w-40 flex-shrink-0' : 'w-full'}`}
         >
             {/* Soft inner glow for premium feel */}
             <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent pointer-events-none" />
@@ -149,7 +149,7 @@ const MarqueeRow = ({ items, direction, speed }: { items: { name: string, logo: 
                 style={{ animationDuration: `${speed}s` }}
             >
                 {displayItems.map((partner, idx) => (
-                    <PartnerLogo key={`${partner.name}-${idx}`} partner={partner} index={idx} />
+                    <PartnerLogo key={`${partner.name}-${idx}`} partner={partner} index={idx} isMarquee={true} />
                 ))}
             </div>
         </div>

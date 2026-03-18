@@ -38,7 +38,7 @@ const Hero = () => {
                             </p>
                             <p className="text-lg text-foreground/80 font-medium max-w-xl leading-relaxed">
                                 The AESTR Solution: The 4-Year Engineering Residency
-                                AESTR by Gyan Vihar is built on a single, uncompromising premise: Stop studying. Start building.We are not a college; we are a Silicon Valley-style incubator.
+                                AESTR by Gyan Vihar is built on a single, uncompromising premise: Stop studying. Start building. We are not a college we are a Silicon Valley-style incubator.
 
                             </p>
                         </div>
@@ -54,13 +54,13 @@ const Hero = () => {
                             <div className="relative group">
                                 {/* Animated background gradient */}
                                 <div className="absolute inset-0 bg-gradient-to-r from-purple/20 via-blue/20 to-accent/20 rounded-[1rem] blur-xl group-hover:blur-2xl transition-all duration-700 opacity-60"></div>
-                                
+
                                 {/* Main container */}
                                 <div className="relative inline-flex items-center gap-3 md:gap-6 p-4 md:p-6 rounded-[1.5rem] bg-black/40 backdrop-blur-xl border border-white/30 shadow-2xl mt-8 overflow-hidden hover:shadow-[0_0_40px_rgba(215,246,1,0.3)] transition-all duration-500">
-                                    
+
                                     {/* Logo items with individual animations */}
-                                    <motion.div 
-                                        whileHover={{ scale: 1.1, y: -2 }} 
+                                    <motion.div
+                                        whileHover={{ scale: 1.1, y: -2 }}
                                         transition={{ duration: 0.3 }}
                                         className="flex items-center"
                                     >
@@ -70,8 +70,8 @@ const Hero = () => {
                                         </div>
                                     </motion.div>
 
-                                    <motion.div 
-                                        whileHover={{ scale: 1.1, y: -2 }} 
+                                    <motion.div
+                                        whileHover={{ scale: 1.1, y: -2 }}
                                         transition={{ duration: 0.3, delay: 0.1 }}
                                         className="flex items-center"
                                     >
@@ -81,8 +81,8 @@ const Hero = () => {
                                         </div>
                                     </motion.div>
 
-                                    <motion.div 
-                                        whileHover={{ scale: 1.15, y: -3 }} 
+                                    <motion.div
+                                        whileHover={{ scale: 1.15, y: -3 }}
                                         transition={{ duration: 0.3, delay: 0.2 }}
                                         className="flex items-center"
                                     >
@@ -92,8 +92,8 @@ const Hero = () => {
                                         </div>
                                     </motion.div>
 
-                                    <motion.div 
-                                        whileHover={{ scale: 1.1, y: -2 }} 
+                                    <motion.div
+                                        whileHover={{ scale: 1.1, y: -2 }}
                                         transition={{ duration: 0.3, delay: 0.3 }}
                                         className="flex items-center"
                                     >
@@ -103,8 +103,8 @@ const Hero = () => {
                                         </div>
                                     </motion.div>
 
-                                    <motion.div 
-                                        whileHover={{ scale: 1.1, y: -2 }} 
+                                    <motion.div
+                                        whileHover={{ scale: 1.1, y: -2 }}
                                         transition={{ duration: 0.3, delay: 0.4 }}
                                         className="flex items-center"
                                     >

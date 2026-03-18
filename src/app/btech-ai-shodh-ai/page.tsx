@@ -36,213 +36,199 @@ const labs = [
 
 const BtechAIShodhAIPage = () => {
     const [currentImage, setCurrentImage] = useState(0);
-    const heroImages = ['/Other/hero-campus.jpg', '/Other/hero-lab.jpg'];
+    const heroImages = ['/b.tech-ai-with/DSC08261.jpg'];
 
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentImage((prev) => (prev + 1) % heroImages.length);
         }, 4000);
         return () => clearInterval(timer);
-    }, []);
+    }, [heroImages.length]);
 
     return (
         <main className="bg-background min-h-screen text-foreground overflow-x-hidden selection:bg-accent selection:text-black">
-            
-            {/* Hero Section */}
-            <section className="relative w-full h-[884px] overflow-hidden flex items-center">
-                {/* Background Slider */}
-                <div className="absolute inset-0 z-0">
-                    <AnimatePresence mode="wait">
-                        <motion.div
-                            key={currentImage}
-                            initial={{ opacity: 0, scale: 1.1 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 1.2, ease: "easeInOut" }}
-                            className="absolute inset-0"
-                        >
-                            <Image 
-                                src={heroImages[currentImage]}
-                                alt="AESTR Environment"
-                                fill
-                                className="absolute inset-0 w-full h-full object-cover brightness-[0.4]"
-                                priority
-                            />
-                        </motion.div>
-                    </AnimatePresence>
+
+
+            {/* Hero Section Redesigned (Brochure Style) */}
+            <section className="relative w-full min-h-[90vh] lg:h-[800px] overflow-hidden flex items-center bg-[#5B1DD6] pt-32 lg:pt-24 pb-20 lg:pb-0">
+                <div className="container-boxed relative z-20 flex flex-col lg:flex-row items-center justify-between h-full gap-12 lg:gap-16">
                     
-                    {/* Dark Gradient Overlay consistent with user's code */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent z-10" />
-                </div>
-
-                {/* Content Container Integrated with container-boxed for consistency */}
-                <div className="container-boxed relative z-20 flex flex-col justify-end h-full pb-24 md:pb-32">
-                    <motion.div 
-                        initial={{ opacity: 0, x: -30 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 1, delay: 0.2 }}
-                        className="max-w-4xl space-y-6"
-                    >
-                        <h1 className="text-white text-hero max-w-[900px]">
-                            This Isn't College. It's A<br />
-                            4-Year Internship
-                        </h1>
-                        <p className="text-white text-body max-w-2xl opacity-100 font-serif">
-                            At AESTR Pro, every student becomes an intern from day one. Learn by doing. Lead by innovating.
-                        </p>
+                    {/* Left: Text Content */}
+                    <div className="lg:w-[55%] flex flex-col justify-center space-y-8 text-left z-10 w-full pt-10 lg:pt-0">
+                        <div className="space-y-1 relative">
+                            {/* Decorative graphical element like the brochure circles */}
+                            <div className="absolute -left-20 -top-20 opacity-20 pointer-events-none">
+                                <svg width="150" height="150" viewBox="0 0 100 100" fill="none" stroke="#D7F601" strokeWidth="2">
+                                    <circle cx="50" cy="50" r="40" />
+                                    <path d="M50 0 V100 M0 50 H100" opacity="0.3" strokeDasharray="4 4" />
+                                </svg>
+                            </div>
+                            
+                            <h1 className="text-[#D7F601] text-[2.5rem] sm:text-[3.2rem] lg:text-[4.1rem] font-orbitron font-black leading-[1.05] tracking-tighter">
+                                This isn't college.
+                            </h1>
+                            <h2 className="text-[#D7F601] text-[1.8rem] sm:text-[2.5rem] lg:text-[3.2rem] font-orbitron font-black leading-[1.05] tracking-tighter">
+                                It's a 4-year internship
+                            </h2>
+                        </div>
                         
+                        <div className="pt-2">
+                            <h3 className="text-white text-[1.4rem] sm:text-[1.8rem] lg:text-[2.2rem] font-orbitron font-extrabold tracking-tight">
+                                B.tech ai with shodh ai
+                            </h3>
+                        </div>
 
-                    </motion.div>
-                </div>
-            </section>            {/* Section 1: The Crisis */}
-            <section className="py-24 relative overflow-hidden bg-background text-foreground">
-                {/* Subtle Background 'A' or shapes */}
-                <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0 opacity-[0.03] flex items-center justify-center">
-                    <span className="text-[60rem] font-orbitron font-black select-none">A</span>
-                </div>
-
-                <div className="container-boxed relative z-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <motion.div 
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8 }}
-                            className="space-y-8"
-                        >
-                            <div className="space-y-6">
-                                {/* Numbered Circle - Dark Theme */}
-                                <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-serif italic text-purple shadow-lg border border-purple/30">
-                                    1
-                                </div>
-                                <h2 className="text-h2 text-foreground">
-                                    The Crisis Of Indian Engineering
-                                </h2>
-                                <h3 className="text-h3 text-foreground/80">
-                                    A Generation of "Un-hirable" Talent
-                                </h3>
-                                <div className="space-y-6 text-body text-foreground/70 font-medium">
-                                    <p>
-                                        For too long, the story of engineering in India has been a paradox. We produce millions of engineers, yet industries lament a scarcity of "hirable" talent.
-                                    </p>
-                                    <p>
-                                        The truth is, our traditional engineering education system, built for a bygone era, has created a generation of graduates who are armed with theoretical knowledge but lack the practical skills to make a real-world impact.
-                                    </p>
-                                    <p>
-                                        They are often unequipped to tackle the complex challenges of the modern world, leaving them struggling to find their place in a competitive global landscape. This disconnect between what is taught and what is needed has led to a crisis of confidence, not just in our engineers, but in our ability to innovate and build a better future for India.
-                                    </p>
-                                </div>
-                            </div>
-                        </motion.div>
-
-                        <motion.div 
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8 }}
-                            className="relative grid grid-cols-1 sm:grid-cols-2 gap-6"
-                        >
-                            <div className="bg-[#181818] p-2 rounded-xl shadow-2xl rotate-[-2deg] hover:rotate-0 transition-transform duration-500 border border-white/5">
-                                <div className="aspect-[4/5] relative overflow-hidden rounded-lg">
-                                    <Image 
-                                        src="/Other/patent-ai.png" 
-                                        alt="IIT Placement News 1"
-                                        fill
-                                        className="object-cover"
-                                    />
-                                </div>
-                            </div>
-                             <div className="bg-[#181818] p-2 rounded-xl shadow-2xl rotate-[2deg] hover:rotate-0 transition-transform duration-500 border border-white/5 sm:translate-y-8">
-                                <div className="aspect-[4/5] relative overflow-hidden rounded-lg">
-                                    <Image 
-                                        src="/Other/AI-faculty.png" 
-                                        alt="IIT Placement News 2"
-                                        fill
-                                        className="object-cover"
-                                    />
-                                </div>
-                            </div>
-                        </motion.div>
+                        {/* Brochure style context box */}
+                        <div className="bg-[#181818] p-6 lg:p-8 rounded-2xl shadow-2xl max-w-xl border-l-[6px] border-[#D7F601] mt-4 relative overflow-hidden">
+                            {/* subtle internal glow/texture */}
+                            <div className="absolute right-0 top-0 w-32 h-32 bg-[#D7F601]/5 blur-3xl rounded-full"></div>
+                            <p className="text-white text-lg lg:text-[19px] font-medium leading-relaxed relative z-10">
+                                At B.Tech AI with Shodh AI, every student becomes an intern from day one.
+                                <span className="text-[#D7F601] font-bold tracking-wide mt-2 block">Stop studying. Start building.</span>
+                            </p>
+                        </div>
                     </div>
+
+                    {/* Right: Image Slider with Chamfered/Angled cut like Brochure */}
+                    <div className="lg:w-[45%] w-full h-[45vh] min-h-[350px] lg:h-[600px] relative">
+                         {/* Clip-path for the cool tech-y brochure shape */}
+                         <div className="absolute inset-0 z-10 bg-black overflow-hidden shadow-2xl border-[4px] border-[#D7F601]/30" style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%)' }}>
+                            <img 
+                                src="/b.tech-ai-with/DSC08261.jpg"
+                                alt="AESTR Environment"
+                                className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                            />
+                            {/* subtle overlay to ensure content feels integrated */}
+                            <div className="absolute inset-0 bg-purple/10 pointer-events-none"></div>
+                         </div>
+                         
+                         {/* Decorative Background Offset Box (Solid Lime Green) */}
+                         <div className="absolute -right-4 -bottom-4 lg:-right-6 lg:-bottom-6 w-[95%] h-[95%] z-0 bg-[#D7F601] opacity-60" style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%)' }}/>
+                    </div>
+
                 </div>
             </section>
 
-            {/* Section 2: Introducing */}
-            <section className="py-24 relative overflow-hidden bg-background-alt">
-                {/* Blurred Background Elements */}
-                <div className="absolute inset-0 z-0 overflow-hidden">
-                    <div className="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] bg-[#5B1DD6] rounded-full blur-[120px] opacity-20" />
-                    <div className="absolute bottom-[-10%] left-[-10%] w-[60%] h-[60%] bg-[#D7F601] rounded-full blur-[120px] opacity-10" />
-                    <Image 
-                        src="/Other/lab-2.webp"
-                        alt="Background"
-                        fill
-                        className="object-cover opacity-20 blur-sm"
-                    />
-                </div>
+            {/* Purple Cards Section */}
+            <section className="py-20 relative overflow-hidden bg-[#5B1DD6]">
+                <div className="container-boxed relative z-10 flex flex-col lg:flex-row gap-6 lg:gap-8 justify-center items-stretch">
 
-                <div className="container-boxed relative z-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8 }}
-                            className="space-y-8"
-                        >
-                            <div className="space-y-6">
-                                {/* Numbered Circle - Purple */}
-                                <div className="w-20 h-20 rounded-full bg-[#E8E2FF]/20 backdrop-blur-md flex items-center justify-center text-4xl font-serif italic text-white border border-white/10 shadow-xl">
-                                    2
-                                </div>
-                                <h2 className="text-h2 text-white">
-                                    Introducing B.TECH AESTR PRO :
-                                </h2>
-                                <h3 className="text-h3 text-white/90">
-                                    Your 4-Year Internship Starts Now
-                                </h3>
-                                <div className="space-y-6 text-body text-white/80 font-medium">
-                                    <p>
-                                        AESTR PRO eliminates the gap between education and industry. From day one, you are a full-time engineering intern at our AI research partner, Shodh AI.
-                                    </p>
-                                    <p>
-                                        Your schedule is 9-to-5. Your mentors are senior engineers. Your projects are real.
-                                    </p>
-                                    <p>
-                                        Your deliverable in four years? A B.Tech. degree and a portfolio that proves you are already a Senior Engineer, ready to lead.
-                                    </p>
-                                </div>
+                    {/* Card 1 */}
+                    <div className="bg-white rounded-[2rem] p-6 pb-8 flex flex-col gap-6 lg:w-1/3 shadow-2xl hover:-translate-y-2 transition-transform duration-300 border-2 border-black/5">
+                        <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden relative border border-black/10">
+                            <Image src="/b.tech-ai-with/robo.jpg" alt="Lab robot" fill className="object-cover" />
+                        </div>
+                        <div className="flex justify-between items-start gap-4">
+                            <h3 className="text-3xl lg:text-4xl font-bold font-orbitron text-[#5B1DD6] leading-tight tracking-tight">
+                                B.Tech AI <br />with Shodh AI
+                            </h3>
+                            <div className="shrink-0 mt-1">
+                                <svg className="w-10 h-10 text-[#5B1DD6]/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                                </svg>
                             </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9, x: 30 }}
-                            whileInView={{ opacity: 1, scale: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8 }}
-                            className="relative flex justify-center lg:justify-end"
-                        >
-                            {/* Student Image with Arch */}
-                            <div className="relative w-full max-w-[450px]">
-                                {/* Yellow Arch Frame */}
-                                <div className="absolute inset-[-15px] border-4 border-accent rounded-t-full pointer-events-none z-10 opacity-60" />
-                                <div className="relative aspect-[4/5] rounded-t-full overflow-hidden border-4 border-white/10 shadow-2xl">
-                                    <Image 
-                                        src="/Other/Bootcamp.webp" 
-                                        alt="Student Success"
-                                        fill
-                                        className="object-cover"
-                                    />
-                                </div>
-                                {/* Floating Particles/Dots Effect like in image */}
-                                <div className="absolute top-10 right-10 w-20 h-20 bg-white/20 rounded-full blur-2xl animate-pulse" />
-                            </div>
-                        </motion.div>
+                        </div>
+                        <p className="text-black font-bold text-lg leading-snug tracking-tight opacity-90">
+                            Shodh AI leads AI in India. Intern with the elite team. Be ready for the 2030 AI world.
+                        </p>
                     </div>
+
+                    {/* Card 2 */}
+                    <div className="bg-white rounded-[2rem] p-6 pb-8 flex flex-col gap-6 lg:w-1/3 shadow-2xl hover:-translate-y-2 transition-transform duration-300 border-2 border-black/5">
+                        <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden relative border border-black/10 bg-[#0b0e14] p-8 flex items-center justify-center">
+                            <Image src="/b.tech-ai-with/shodh.png" alt="Shodh AI" fill className="object-contain p-4" />
+                        </div>
+                        <div className="flex justify-between items-start gap-4">
+                            <h3 className="text-3xl lg:text-4xl font-bold font-orbitron text-[#5B1DD6] leading-tight tracking-tight flex-1">
+                                Built With
+                                <div className="flex items-center gap-4 mt-6">
+                                    <Image src="/ProgramPartners/google.webp" alt="Google" width={80} height={26} className="object-contain" />
+                                    <Image src="/placement/nvidia.webp" alt="NVIDIA" width={100} height={32} className="object-contain" />
+                                </div>
+                            </h3>
+                            <div className="shrink-0 mt-1">
+                                <svg className="w-8 h-8 text-[#5B1DD6]" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <p className="text-black font-bold text-lg leading-snug tracking-tight opacity-90 mt-auto">
+                            Indian Govt mandate to build AI for science. Shodh AI released the world's first Large Physics Model.
+                        </p>
+                    </div>
+
+                    {/* Card 3 */}
+                    <div className="bg-white rounded-[2rem] p-6 pb-8 flex flex-col gap-6 lg:w-1/3 shadow-2xl hover:-translate-y-2 transition-transform duration-300 border-2 border-black/5">
+                        <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden relative border border-black/10">
+                            <Image src="/b.tech-ai-with/lab.JPG" alt="Class" fill className="object-cover" />
+                        </div>
+                        <div className="flex justify-between items-start gap-4">
+                            <h3 className="text-3xl lg:text-4xl font-bold font-orbitron text-[#5B1DD6] leading-tight tracking-tight">
+                                Brutally <br />Selective
+                            </h3>
+                            <div className="shrink-0 mt-1 text-[#5B1DD6]">
+                                <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0L13.5 10.5L24 12L13.5 13.5L12 24L10.5 13.5L0 12L10.5 10.5L12 0Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <p className="text-black font-bold text-lg leading-snug tracking-tight opacity-90">
+                            Only 60 seats. While others code "Hello World," you fine-tune LLMs on NVIDIA Hopper GPUs.
+                        </p>
+                    </div>
+
                 </div>
             </section>
 
-            {/* Section 3: Heart of AESTR PRO (Labs) */}
+
+            {/* New Founder Section */}
+            <section className="py-24 relative overflow-hidden bg-[#D7F601] text-black">
+                <div className="container-boxed relative z-10 flex flex-col items-center text-center max-w-5xl mx-auto space-y-12">
+
+                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-orbitron font-black leading-[1.1] tracking-tighter">
+                        From Shodh AI to <br/>Aestr
+                    </h2>
+
+                    <div className="space-y-8 text-lg md:text-xl lg:text-[20px] font-medium leading-relaxed max-w-4xl text-black/90">
+                        <p>
+                            <span className="font-bold">Arastu Sharma</span> is the Founder & CEO of Aestr and the Founder of <span className="font-bold">Shodh AI</span>, a deep-tech AI company building <span className="font-bold">India's Sovereign "AI for Science" Foundation Model.</span>
+                        </p>
+
+                        <p>
+                            Through Shodh AI, Arastu leads national-scale AI systems backed by IndiaAI, with access to <span className="font-bold">1.2M+ GPU hours</span> and partnerships with NVIDIA, Yotta, and Amazon Web Services.
+                        </p>
+
+                        <p>
+                            He was recently invited to meet <span className="font-bold">Prime Minister Narendra Modi</span> and was highlighted among the key contributors shaping India's AI future.
+                        </p>
+
+                        <p className="pt-4">
+                            B.Tech AI with Shodh AI exists to transfer this real-world AI engineering experience to the next generation of builders.
+                        </p>
+                    </div>
+
+                    {/* Logos Area - Pyramid Layout */}
+                    <div className="pt-16 pb-12 flex flex-col items-center justify-center gap-12 w-full max-w-4xl mx-auto">
+                        <div className="grid grid-cols-2 gap-12 md:gap-24 items-center justify-center">
+                            {/* NVIDIA */}
+                            <div className="relative h-20 md:h-28 w-40 md:w-56 mix-blend-multiply">
+                                <Image src="/b.tech-ai-with/nvidia.svg" alt="NVIDIA" fill className="object-contain" />
+                            </div>
+                            {/* YOTTA */}
+                            <div className="relative h-20 md:h-28 w-40 md:w-56 mix-blend-multiply">
+                                <Image src="/b.tech-ai-with/yotta.svg" alt="YOTTA" fill className="object-contain" />
+                            </div>
+                        </div>
+                        {/* AWS */}
+                        <div className="relative h-24 md:h-32 w-56 md:w-72 mix-blend-multiply flex justify-center">
+                            <Image src="/b.tech-ai-with/aws.svg" alt="AWS" fill className="object-contain" />
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            {/* Section 3: Heart of B.Tech AI (Labs) */}
             <section className="py-24 relative overflow-hidden bg-background text-foreground">
                 <div className="container-boxed relative z-10">
                     <div className="flex flex-col items-start mb-16 space-y-6">
@@ -252,13 +238,13 @@ const BtechAIShodhAIPage = () => {
                         </div>
                         <div className="space-y-4">
                             <h2 className="text-h2 text-foreground">
-                                The Heart Of AESTR PRO:
+                                The Heart Of B.Tech AI With Shodh AI:
                             </h2>
                             <h3 className="text-h3 text-foreground/80">
                                 Our Innovation Labs, Powered by Shodh AI
                             </h3>
                             <p className="text-body text-foreground/70 max-w-3xl font-medium">
-                                The engine of the AESTR PRO experience is our state-of-the-art Innovation Labs, run by our industry partner, Shodh AI.
+                                The engine of the B.Tech AI with Shodh AI experience is our state-of-the-art Innovation Labs, run by our industry partner, Shodh AI.
                             </p>
                         </div>
                     </div>
@@ -293,7 +279,7 @@ const BtechAIShodhAIPage = () => {
 
                     {/* Bottom Descriptive Boxes */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -303,7 +289,7 @@ const BtechAIShodhAIPage = () => {
                                 These are not your typical college labs. They are dynamic, professional environments where you will spend your four years as an intern, working on cutting-edge projects that are shaping the future of technology.
                             </p>
                         </motion.div>
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -335,7 +321,7 @@ const BtechAIShodhAIPage = () => {
                             </h3>
                             <div className="space-y-6 text-body text-foreground/70 font-medium">
                                 <p>
-                                    The entire AESTR PRO curriculum is reverse-engineered from the demands of elite AI research roles in the industry. We prepare you for the job of tomorrow by giving you that job today. A day in the life of an AESTR PRO student is the life of a Machine Learning Engineer at Shodh AI, our AI Research Division.
+                                    The entire curriculum is reverse-engineered from the demands of elite AI research roles in the industry. We prepare you for the job of tomorrow by giving you that job today. A day in the life of a B.Tech AI with Shodh AI student is the life of a Machine Learning Engineer at Shodh AI, our AI Research Division.
                                 </p>
                                 <p className="font-bold text-accent">
                                     Your Future Job Description: Machine Learning Engineer, Applied AI Research
@@ -346,7 +332,7 @@ const BtechAIShodhAIPage = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {/* Mission Card */}
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -366,7 +352,7 @@ const BtechAIShodhAIPage = () => {
                         </motion.div>
 
                         {/* Role Card */}
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -388,7 +374,7 @@ const BtechAIShodhAIPage = () => {
                         </motion.div>
 
                         {/* Domains Card */}
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -412,7 +398,7 @@ const BtechAIShodhAIPage = () => {
                         </motion.div>
 
                         {/* Mindset Card */}
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -489,87 +475,6 @@ const BtechAIShodhAIPage = () => {
                     </div>
                 </div>
             </section>
-
-            {/* Section: Degree Structure */}
-            <section className="py-24 relative bg-background overflow-hidden">
-                <div className="container-boxed relative z-10 text-center space-y-16">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {/* Majors */}
-                        <div className="bg-purple/10 backdrop-blur-md p-10 rounded-xl space-y-8 flex flex-col items-center border border-purple/20 shadow-2xl">
-                            <h3 className="text-h3 text-foreground">B. Tech. Majors:</h3>
-                            <div className="space-y-3 w-full">
-                                {[
-                                    'B. Tech. Artificial Intelligence & Machine Learning',
-                                    'B. Tech. Data Science',
-                                    'B. Tech. Cloud Engineering',
-                                    'B. Tech. Software Engineering',
-                                    'B. Tech. Cyber Security'
-                                ].map(item => (
-                                    <div key={item} className="bg-background-alt px-4 py-2.5 rounded-lg text-sm font-bold text-foreground/80 border border-white/5 shadow-inner transition-all text-left hover:border-accent/30">
-                                        {item}
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Minors */}
-                        <div className="bg-purple/10 backdrop-blur-md p-10 rounded-xl space-y-8 flex flex-col items-center border border-purple/20 shadow-2xl">
-                            <h3 className="text-h3 text-foreground">With one Minor:</h3>
-                            <div className="flex flex-wrap gap-2 justify-center">
-                                {[
-                                    'Robotics', 'Bio-Informatics',
-                                    'Industry & Manufacturing',
-                                    'Design', 'Fintech',
-                                    'Nanotechnology', 'Smart Cities',
-                                    'Chip & Semiconductor', 'Geoinformatics'
-                                ].map(item => (
-                                    <div key={item} className="bg-background-alt px-3 py-2 rounded-lg text-xs font-bold text-foreground/80 border border-white/5 shadow-inner transition-all hover:border-accent/30">
-                                        {item}
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Labs */}
-                        <div className="bg-purple/10 backdrop-blur-md p-10 rounded-xl space-y-8 flex flex-col items-center border border-purple/20 shadow-2xl">
-                            <h3 className="text-h3 text-foreground">Labs:</h3>
-                            <div className="space-y-3 w-full">
-                                {[
-                                    'Foundation Model Lab',
-                                    'Embodied Brain Lab',
-                                    'Soft "Brain" Lab',
-                                    'RISC-V Systems Lab',
-                                    'Augmented Human Lab'
-                                ].map(item => (
-                                    <div key={item} className="bg-background-alt px-4 py-2.5 rounded-lg text-sm font-bold text-foreground/80 border border-white/5 shadow-inner transition-all text-left hover:border-accent/30">
-                                        {item}
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="pt-10 flex flex-col items-center space-y-8">
-                        {/* Connector lines */}
-                        <div className="w-full max-w-4xl relative h-20 hidden md:block">
-                            <svg className="w-full h-full" viewBox="0 0 1000 100">
-                                <path d="M166 20 V50 H834 V20" stroke="currentColor" className="text-foreground" strokeWidth="2" fill="none" opacity="0.3" />
-                                <path d="M500 50 V100" stroke="currentColor" className="text-foreground" strokeWidth="2" fill="none" opacity="0.3" />
-                                <circle cx="166" cy="20" r="3" fill="currentColor" className="text-foreground" opacity="0.3" />
-                                <circle cx="500" cy="20" r="3" fill="currentColor" className="text-foreground" opacity="0.3" />
-                                <circle cx="834" cy="20" r="3" fill="currentColor" className="text-foreground" opacity="0.3" />
-                                <circle cx="500" cy="100" r="3" fill="currentColor" className="text-foreground" opacity="0.3" />
-                            </svg>
-                        </div>
-                        <div className="md:hidden w-px h-12 bg-foreground opacity-20" />
-
-                        <h2 className="text-h2 text-foreground underline decoration-accent decoration-[3px] underline-offset-[12px]">
-                            Make Your Own Degree By Yourself
-                        </h2>
-                    </div>
-                </div>
-            </section>
-
 
         </main>
     );

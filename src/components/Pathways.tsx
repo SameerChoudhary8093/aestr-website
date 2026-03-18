@@ -6,106 +6,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 
-const highlights = [
-    {
-        mainTitle: "B.tech. with 3+1 degrees abroad for top 10% of our students",
-        subTitle: "with scholarships and offers",
-        image: "/Other/building-global.jpg",
-        textColor: "text-white",
-        bgColor: "bg-[#181818]",
-        hex: "#181818",
-        badge: "+25 Education partners in US, UK and Europe",
-    },
-    {
-        mainTitle: "First engineering college in India",
-        subTitle: "with self trained Robot teachers",
-        image: "/Other/robot-class.jpg",
-        textColor: "text-white",
-        bgColor: "bg-[#181818]",
-        hex: "#181818",
-    },
-    {
-        mainTitle: "Aestr and Shodh AI are working with",
-        subTitle: "with DRDO to train fine-tuned Material Science LLMs",
-        image: "/ProgramPartners/DRDO.webp",
-        textColor: "text-white",
-        bgColor: "bg-[#181818]",
-        hex: "#181818",
-    }
-];
-
-const HighlightCarousel = () => {
-    const [current, setCurrent] = React.useState(0);
-    const total = highlights.length;
-
-    React.useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrent((prev) => (prev + 1) % total);
-        }, 5000);
-        return () => clearInterval(timer);
-    }, [total]);
-
-    return (
-        <div className="relative w-full rounded-[3rem] overflow-hidden border border-white/5 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
-            {/* Main Container */}
-            <div className="relative min-h-[620px] md:min-h-[520px]">
-                {highlights.map((item, idx) => (
-                    <div
-                        key={idx}
-                        className={`absolute inset-0 flex flex-col md:flex-row transition-opacity duration-700 ${current === idx ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'} ${item.bgColor || 'bg-black'}`}
-                    >
-                        {/* Left: Content */}
-                        <div className="flex-1 flex flex-col justify-center p-8 md:p-12 lg:p-20 space-y-10 relative z-10">
-                            {/* Title Component */}
-                            <div className="space-y-4">
-                                <h3 className={`text-h2 leading-tight tracking-tight ${item.textColor}`}>
-                                    {item.mainTitle}
-                                </h3>
-                                <p className={`text-body italic leading-tight tracking-tight ${item.textColor} opacity-80`}>
-                                    {item.subTitle}
-                                </p>
-                            </div>
-
-
-                        </div>
-
-                        {/* Right: Image */}
-                        <div className="hidden md:block flex-1 relative overflow-hidden">
-                            <Image
-                                src={item.image}
-                                alt={item.mainTitle || "Highlight"}
-                                fill
-                                className="object-cover transition-transform duration-[10000ms] ease-linear scale-100 group-hover:scale-110"
-                            />
-                            {/* Gradient Overlay using hex from data */}
-                            <div 
-                                className="absolute inset-0 z-10" 
-                                style={{ background: `linear-gradient(to right, ${item.hex} 0%, transparent 60%)` }}
-                            />
-                        </div>
-                    </div>
-                ))}
-
-                {/* Navigation Overlay */}
-                <div className="absolute bottom-10 left-8 md:left-12 lg:left-20 right-8 md:right-12 lg:right-20 z-20 flex items-center justify-between pointer-events-auto">
-                    <div className="flex gap-3">
-                        {highlights.map((_, i) => (
-                            <button
-                                key={i}
-                                onClick={() => setCurrent(i)}
-                                className={`h-1.5 rounded-full transition-all duration-500 cursor-pointer ${current === i ? 'bg-accent w-14 shadow-sm' : 'bg-white/20 w-4 hover:bg-white/40'}`}
-                            />
-                        ))}
-                    </div>
-                    <span className="text-[10px] font-orbitron font-black text-white/40 uppercase tracking-[0.4em] pointer-events-none">
-                        {String(current + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
-                    </span>
-                </div>
-            </div>
-        </div>
-    );
-};
-
 const Pathways = () => {
     const pathwaysData = [
         { title: 'Btech ai with Shodh ai', subtitle: '35LPA+ jobs', borderColor: 'border-accent/40' },
@@ -204,15 +104,6 @@ const Pathways = () => {
                         </Link>
                     </motion.div>
 
-                    {/* Auto-Swiping Highlights Section */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                    >
-                         <HighlightCarousel />
-                    </motion.div>
                 </div>
 
             </div>
