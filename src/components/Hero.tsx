@@ -29,39 +29,16 @@ const Hero = () => {
                         className="space-y-6 md:space-y-8 lg:col-span-7"
                     >
                         <div className="space-y-4">
-                            <h1 className="text-hero font-orbitron tracking-tighter text-foreground">
-                                Built by a team of <br className="hidden sm:block" />
-                                <span className="text-accent">
-                                    AI Engineers.
-                                </span>
+                            <h1 className="text-5xl md:text-7xl lg:text-8xl font-orbitron font-black tracking-tighter leading-none">
+                                <span className="text-foreground block">The b.tech</span>
+                                <span className="text-foreground block">is dead</span>
                             </h1>
-                            <p className="text-body text-foreground font-medium opacity-80 max-w-xl">
-                                Founders are former Microsoft Engineers and Cambridge Researchers
+                            <p className="text-xl md:text-2xl text-foreground font-bold max-w-2xl leading-tight">
+                                The AESTR Solution: <span className="text-accent underline decoration-accent/30 underline-offset-4">The 4-Year Engineering Residency.</span>
                             </p>
-                        </div>
-
-                        {/* Company Logos */}
-                        <div className="flex flex-wrap items-center gap-6 md:gap-10 py-4 opacity-90 transition-all duration-500">
-                            <div className="flex flex-col items-start">
-                                <Image
-                                    src="/Herosection/Microsoft.webp"
-                                    alt="Microsoft"
-                                    width={120}
-                                    height={30}
-                                    className="h-6 md:h-10 w-auto object-contain brightness-[1.5] contrast-[1.2]"
-                                    priority
-                                />
-                            </div>
-                            <div className="flex flex-col items-start sm:border-l sm:border-foreground/10 sm:pl-10">
-                                <Image
-                                    src="/Herosection/University of cambridge.webp"
-                                    alt="University of Cambridge"
-                                    width={140}
-                                    height={35}
-                                    className="h-6 md:h-10 w-auto object-contain brightness-[1.5] contrast-[1.2]"
-                                    priority
-                                />
-                            </div>
+                            <p className="text-lg text-foreground/80 font-medium max-w-xl leading-relaxed">
+                                AESTR by Gyan Vihar is built on a single, uncompromising premise: Stop studying. Start building. We are not a college; we are a Silicon Valley-style incubator.
+                            </p>
                         </div>
 
                         <motion.div
@@ -70,18 +47,43 @@ const Hero = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.3 }}
                         >
-                            <button 
-                            onClick={scrollToRegistrationForm}
-                            className="btn-aestr flex items-center gap-2 group cursor-pointer"
+                            <button
+                                onClick={scrollToRegistrationForm}
+                                className="btn-aestr flex items-center gap-3 group cursor-pointer !bg-accent !text-black text-lg py-4 px-10"
+                            >
+                                Apply Now
+                                <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">↗</span>
+                            </button>
+                        </motion.div>
+
+                        {/* Monochromatic Partner Logos Row */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8, delay: 0.5 }}
+                            className="flex flex-wrap items-center gap-8 md:gap-12 pt-8 border-t border-white/5"
                         >
-                            Apply Now
-                            <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">↗</span>
-                        </button>
+                            <div className="flex items-center">
+                                <Image src="/Herosection/Container.svg" alt="SGVU" width={140} height={35} className="h-6 md:h-8 w-auto object-contain brightness-0 invert opacity-40 hover:opacity-100 transition-all duration-500" />
+                            </div>
+                            <div className="flex items-center">
+                                <Image src="/Herosection/Nirf white.png" alt="NIRF" width={50} height={50} className="h-8 md:h-10 w-auto object-contain brightness-0 invert opacity-40 hover:opacity-100 transition-all duration-500" />
+                            </div>
+                            <div className="flex items-center">
+                                <Image src="/Herosection/naac white  .png" alt="NAAC" width={50} height={50} className="h-8 md:h-10 w-auto object-contain brightness-0 invert opacity-40 hover:opacity-100 transition-all duration-500" />
+                            </div>
+                            <div className="flex items-center">
+                                <Image src="/Herosection/Microsoft.webp" alt="Microsoft" width={110} height={28} className="h-6 md:h-7 w-auto object-contain brightness-0 invert opacity-40 hover:opacity-100 transition-all duration-500" />
+                            </div>
+                            <div className="flex items-center">
+                                <Image src="/Herosection/University of cambridge.webp" alt="Cambridge" width={130} height={32} className="h-6 md:h-8 w-auto object-contain brightness-0 invert opacity-40 hover:opacity-100 transition-all duration-500" />
+                            </div>
                         </motion.div>
                     </motion.div>
 
                     {/* Right Column: Registration Form */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}

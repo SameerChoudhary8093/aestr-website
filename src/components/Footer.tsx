@@ -14,8 +14,8 @@ const Footer = () => {
                     <div className="lg:w-3/5 space-y-10">
                         <div className="space-y-4">
                             <h2 className="text-4xl md:text-5xl lg:text-7xl font-orbitron font-bold text-foreground leading-tight max-w-2xl">
-                                Only At AESTR You Are Trained For <br />
-                                <span className="text-accent font-orbitron">Future Safe Professions</span>
+                                Only at Aestr you are trained for <br />
+                                <span className="text-accent font-orbitron">future safe professions</span>
                             </h2>
                             <p className="subheading-font text-foreground/60">
                                 Browse further to know more about our courses
@@ -73,7 +73,7 @@ const Footer = () => {
                     {/* Contact & Copyright */}
                     <div className="w-full pt-16 border-t border-white/5 flex flex-col items-center gap-12">
                         <div className="flex flex-col items-center gap-4">
-                            <span className="text-[10px] subheading-font font-extrabold text-accent uppercase tracking-[0.6em]">Reach Out To Us</span>
+                            <span className="text-[10px] subheading-font font-extrabold text-accent uppercase tracking-[0.6em]">Reach out to us</span>
                             <a href="tel:18003094545" className="text-3xl md:text-5xl font-orbitron font-bold text-foreground hover:text-accent transition-all duration-300 transform hover:scale-105">
                                 1800 - 309 - 4545
                             </a>

@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import StickyAdmissionsBar from "@/components/StickyAdmissionsBar";
+import FrontierHub from "@/components/FrontierHub";
 import AboutTopOnePercent from "@/components/AboutTopOnePercent";
 import AboutPointOne from "@/components/AboutPointOne";
 import AboutPointTwo from "@/components/AboutPointTwo";
@@ -20,6 +21,7 @@ export default function Home() {
     <main className="relative">
       <StickyAdmissionsBar />
       <Hero />
+      <FrontierHub />
       <AboutTopOnePercent />
       <AboutPointOne />
       <AboutPointTwo />

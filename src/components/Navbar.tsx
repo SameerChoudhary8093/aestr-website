@@ -82,39 +82,37 @@ const Navbar = () => {
                     </div>
 
                     <div className="flex-1 flex items-center justify-end">
-                        <div className="hidden xl:flex items-center">
-                            <div className="flex items-center gap-2">
-                                <div className="relative h-14 w-44 transition-all duration-500 hover:scale-105">
+                        <div className="hidden xl:flex items-center gap-6">
+                            <div className="relative h-10 w-40 transition-all duration-500 hover:scale-105">
+                                <Image
+                                    src="/Herosection/Container.svg"
+                                    alt="SGVU Logo"
+                                    fill
+                                    sizes="160px"
+                                    className="object-contain brightness-0 invert"
+                                    priority
+                                />
+                            </div>
+                            <div className="flex items-center gap-4 border-l border-white/10 pl-6 h-10">
+                                <div className="relative h-10 w-10 shadow-sm transition-all duration-500 hover:scale-110 flex items-center justify-center">
                                     <Image
-                                        src="/Herosection/Container.svg"
-                                        alt="SGVU Logo"
+                                        src="/Herosection/Nirf white.png"
+                                        alt="NIRF"
                                         fill
-                                        sizes="(max-width: 768px) 144px, 176px"
-                                        className="object-contain object-right brightness-0 invert"
+                                        sizes="40px"
+                                        className="object-contain"
                                         priority
                                     />
                                 </div>
-                                <div className="flex items-center gap-2">
-                                    <div className="relative h-20 w-20 shadow-sm transition-all duration-500 hover:scale-110 flex items-center justify-center overflow-hidden">
-                                        <Image
-                                            src="/Herosection/Nirf white.png"
-                                            alt="NIRF 101-150"
-                                            fill
-                                            sizes="64px"
-                                            className="object-contain scale-110"
-                                            priority
-                                        />
-                                    </div>
-                                    <div className="relative h-20 w-20 shadow-sm transition-all duration-500 hover:scale-110 flex items-center justify-center overflow-hidden">
-                                        <Image
-                                            src="/Herosection/naac white  .png"
-                                            alt="NAAC A+"
-                                            fill
-                                            sizes="64px"
-                                            className="object-contain scale-125"
-                                            priority
-                                        />
-                                    </div>
+                                <div className="relative h-10 w-10 shadow-sm transition-all duration-500 hover:scale-110 flex items-center justify-center">
+                                    <Image
+                                        src="/Herosection/naac white  .png"
+                                        alt="NAAC A+"
+                                        fill
+                                        sizes="40px"
+                                        className="object-contain scale-110"
+                                        priority
+                                    />
                                 </div>
                             </div>
                         </div>

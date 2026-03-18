@@ -40,11 +40,11 @@ const FutureFaculty = () => {
                                     <span className="flex items-center gap-4">
                                         Future faculty
                                     </span>
-                                    <span className="text-accent italic">AI & robotics.</span>
+                                    <span className="text-accent italic">Ai & robotics.</span>
                                 </h2>
                                 <div className="space-y-4">
                                     <h3 className="text-h3 text-foreground font-black leading-relaxed">
-                                        At AESTR, we don't just use technology we teach through it.
+                                        At Aestr, we don&apos;t just use technology we teach through it.
                                     </h3>
                                     <p className="text-body text-foreground/90 font-bold">
                                         We are proud to be the first institution in the world to deploy AI-powered virtual teachers and humanoid robots as part of the core academic experience.
@@ -88,7 +88,7 @@ const FutureFaculty = () => {
                         <div className="relative z-10">
                             <h4 className="text-h3 text-foreground mb-4 md:mb-6 flex items-center gap-3 group-hover:text-accent transition-colors">
                                  <span className="w-2 h-2 rounded-full bg-accent" />
-                                 AI Teachers
+                                 Ai teachers
                             </h4>
                             <p className="text-body text-foreground/90 font-bold">
                                 Trained on the world’s best textbooks, industry manuals, open research, and real-world case studies, our AI teachers can explain complex topics in simple language — tailored to your pace, level, and interests.
@@ -107,7 +107,7 @@ const FutureFaculty = () => {
                         <div className="relative z-10">
                             <h4 className="text-h3 text-foreground mb-4 md:mb-6 flex items-center gap-3 group-hover:text-accent transition-colors">
                                  <span className="w-2 h-2 rounded-full bg-accent" />
-                                 Humanoid Robot Teachers
+                                 Humanoid robot teachers
                             </h4>
                             <p className="text-body text-foreground/90 font-bold">
                                 These physical AI-powered robots teach in labs, interact in real time, and even read your facial cues to adjust their delivery.

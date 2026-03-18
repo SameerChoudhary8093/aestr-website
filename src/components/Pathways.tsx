@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 const highlights = [
     {
-        mainTitle: "B.Tech. with 3+1 degrees abroad for TOP 10% of our students",
+        mainTitle: "B.tech. with 3+1 degrees abroad for top 10% of our students",
         subTitle: "with scholarships and offers",
         image: "/Other/building-global.jpg",
         textColor: "text-white",
@@ -25,7 +25,7 @@ const highlights = [
         hex: "#181818",
     },
     {
-        mainTitle: "AESTR and Shodh AI are working with",
+        mainTitle: "Aestr and Shodh AI are working with",
         subTitle: "with DRDO to train fine-tuned Material Science LLMs",
         image: "/ProgramPartners/DRDO.webp",
         textColor: "text-white",
@@ -108,7 +108,7 @@ const HighlightCarousel = () => {
 
 const Pathways = () => {
     const pathwaysData = [
-        { title: 'Btech AI with Shodh AI', subtitle: '35LPA+ jobs', borderColor: 'border-accent/40' },
+        { title: 'Btech ai with Shodh ai', subtitle: '35LPA+ jobs', borderColor: 'border-accent/40' },
         { title: 'Global opportunities', subtitle: '2+2, 3+1 programs', borderColor: 'border-accent/30' },
         { title: 'Industry partner training', subtitle: '& direct placements', borderColor: 'border-accent/20' },
         { title: 'Nurturing entrepreneurs', subtitle: 'Silicon Valley of AI', borderColor: 'border-accent/30' },

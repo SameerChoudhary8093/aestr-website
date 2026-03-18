@@ -45,7 +45,7 @@ const BootcampsAndLabs = () => {
                                     <div className="space-y-6">
                                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold text-foreground leading-tight flex flex-wrap items-start gap-3">
                                             <div>
-                                                Bootcamp, Bootcamp, <span className="text-accent italic">Bootcamp.</span>
+                                                Bootcamp, bootcamp, <span className="text-accent italic">bootcamp.</span>
                                             </div>
                                         </h2>
                                         <div className="space-y-4">
@@ -140,9 +140,9 @@ const BootcampsAndLabs = () => {
                             {/* Features Grid */}
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                                 {[
-                                    { title: 'Exclusive Designs', desc: 'Co-created with insights from our work with DRDO, Silicon Valley startups, and our US-based company, Shodh AI (a top 1% AI startup).' },
-                                    { title: 'Become a Domain Champion', desc: 'Engage with at least three labs or achieve PhD-level expertise by dedicating your four years to a single lab.' },
-                                    { title: 'Expert-Guided Product Development', desc: 'Each lab has dedicated experts to help you transform your innovative ideas into real-world products.' }
+                                    { title: 'Exclusive designs', desc: 'Co-created with insights from our work with DRDO, Silicon Valley startups, and our US-based company, Shodh AI (a top 1% AI startup).' },
+                                    { title: 'Become a domain champion', desc: 'Engage with at least three labs or achieve PhD-level expertise by dedicating your four years to a single lab.' },
+                                    { title: 'Expert-guided product development', desc: 'Each lab has dedicated experts to help you transform your innovative ideas into real-world products.' }
                                 ].map((card, i) => (
                                     <motion.div
                                         key={card.title}

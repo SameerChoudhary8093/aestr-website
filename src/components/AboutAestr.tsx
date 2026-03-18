@@ -118,7 +118,7 @@ const AboutAestr = () => {
                                 1
                             </div>
                             <div className="space-y-2">
-                                <h3 className="text-h3 font-orbitron text-foreground">CSE 2030: Computer Science Won't Be Same Ever Again</h3>
+                                <h3 className="text-h3 font-orbitron text-foreground">Cse 2030: Computer science won&apos;t be same ever again</h3>
                                 <p className="text-foreground/70 text-body max-w-4xl">
                                     The world of Computer Science is transforming by 2030, and AESTR is already there! Traditional roles are evolving, and new opportunities are emerging. We’re not just preparing you for a job; we’re equipping you to define the future.
 
@@ -167,7 +167,7 @@ const AboutAestr = () => {
                                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16">
                                             {/* Left half: Learn by Doing */}
                                             <div className="bg-foreground/5 p-8 rounded-3xl border border-foreground/10 group-hover:border-accent/30 transition-colors">
-                                                <h4 className="text-xl md:text-2xl font-orbitron font-bold text-accent mb-6 leading-tight">Learn by Doing, Excel by Creating:</h4>
+                                                <h4 className="text-xl md:text-2xl font-orbitron font-bold text-accent mb-6 leading-tight">Learn by doing, excel by creating:</h4>
                                                 <ul className="space-y-5">
                                                     {[
                                                         'Project-Powered Progress: Get graded on your real-world projects and software solutions, not just exams. Solve a problem, build the software, and master the subject.',
@@ -222,7 +222,7 @@ const AboutAestr = () => {
                                 2
                             </div>
                             <div className="space-y-2">
-                                <h3 className="text-h3 font-orbitron text-foreground">Built By AI Engineers</h3>
+                                <h3 className="text-h3 font-orbitron text-foreground">Built by ai engineers</h3>
                                 <p className="text-foreground/70 text-body max-w-4xl">
                                     Learn from the architects of tomorrow’s AI. AESTR is the brainchild of leading AI engineers dedicated to cultivating the next generation of tech innovators.
                                 </p>

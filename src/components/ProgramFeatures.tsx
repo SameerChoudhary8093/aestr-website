@@ -47,16 +47,16 @@ const ProgramFeatures = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7 }}
-                        className="relative group cursor-pointer"
+                        className="relative"
                     >
-                        <div className="aspect-video bg-black/40 rounded-3xl border border-foreground/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/30 group-hover:shadow-[0_0_50px_rgba(216,246,2,0.1)]">
-                            <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:10px_10px] opacity-20" />
-                            <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                            <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(216,246,2,0.3)] transition-transform duration-500 group-hover:scale-110 z-10 text-black">
-                                <svg className="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M8 5v14l11-7z" />
-                                </svg>
-                            </div>
+                        <div className="aspect-video glass rounded-3xl border border-white/10 overflow-hidden shadow-2xl">
+                            <iframe
+                                src="https://www.youtube.com/embed/mA3Z2VYMNXo?rel=0&modestbranding=1"
+                                title="Aestr Founding Team"
+                                className="w-full h-full"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
                         </div>
                     </motion.div>
                 </div>
@@ -65,7 +65,7 @@ const ProgramFeatures = () => {
                 <div className="text-center space-y-12 mb-24 md:mb-40">
                     <div className="space-y-4">
                         <h2 className="text-4xl md:text-5xl font-orbitron font-bold text-foreground flex items-center justify-center gap-4 tracking-tight">
-                            Program Partners with us
+                            Program partners with us
                         </h2>
                         <p className="text-lg text-foreground/80 max-w-2xl leading-relaxed mx-auto text-center">
                             Our Engineering Teachers from
@@ -133,7 +133,7 @@ const ProgramFeatures = () => {
                                         <span className="text-[10px] font-orbitron uppercase tracking-[0.4em] text-accent font-black">Active Partnership</span>
                                     </div>
                                     <h3 className="text-1xl md:text-2xl font-orbitron font-bold text-foreground leading-tight tracking-tight">
-                                        Running integrated software lab at SGVU
+                                        Running integrated software lab at sgvu
                                     </h3>
                                     <p className="text-xs text-foreground/50 font-medium tracking-wide leading-relaxed max-w-2xl">
                                         Delivering industry-standard engineering training and active software development directly on the university campus.
