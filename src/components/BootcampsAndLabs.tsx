@@ -43,7 +43,7 @@ const BootcampsAndLabs = () => {
                                         4
                                     </div>
                                     <div className="space-y-6">
-                                        <h2 className="text-4xl md:text-5xl font-orbitron font-bold text-foreground leading-tight flex items-start gap-3">
+                                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold text-foreground leading-tight flex flex-wrap items-start gap-3">
                                             <div>
                                                 Bootcamp, Bootcamp, <span className="text-accent italic">Bootcamp.</span>
                                             </div>
@@ -128,7 +128,7 @@ const BootcampsAndLabs = () => {
                                     5
                                 </div>
                                 <div className="space-y-4">
-                                    <h2 className="text-4xl md:text-5xl font-orbitron font-bold text-foreground flex items-center gap-4">
+                                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold text-foreground flex flex-wrap items-center gap-4">
                                         Innovation labs <span className="text-accent italic">of 2030</span>
                                     </h2>
                                     <p className="text-lg text-foreground/50 max-w-3xl leading-relaxed">

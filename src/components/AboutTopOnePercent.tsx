@@ -67,7 +67,7 @@ const AboutTopOnePercent = () => {
                 >
                     <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
                         <div className="space-y-4 text-left">
-                            <h2 className="text-h2 font-orbitron leading-tight flex flex-wrap items-center gap-2 md:gap-3 text-foreground">
+                            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-orbitron font-bold leading-tight flex flex-wrap items-center gap-2 md:gap-3 text-foreground">
                                 B.Tech for <span className="text-accent">the top 1%</span>
                             </h2>
                             <p className="text-body text-foreground/80 max-w-2xl leading-relaxed">

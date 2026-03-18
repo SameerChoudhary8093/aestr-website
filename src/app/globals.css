@@ -52,22 +52,44 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  max-width: 1600px;
+  padding-left: 1rem; /* Better for mobile */
+  padding-right: 1rem;
+  max-width: 100%; /* Default to full width */
+}
+
+@media (min-width: 640px) {
+  .container-boxed {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 @media (min-width: 768px) {
   .container-boxed {
-    padding-left: 5rem; /* Consistent 80px gap */
-    padding-right: 5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   .container-boxed {
-    padding-left: 6rem; /* Consistent 96px gap for larger screens */
+    padding-left: 4rem;
+    padding-right: 4rem;
+    max-width: 1440px; /* Cap for laptops */
+  }
+}
+
+@media (min-width: 1536px) {
+  .container-boxed {
+    padding-left: 6rem;
     padding-right: 6rem;
+    max-width: 1600px; /* Cap for desktops */
+  }
+}
+
+@media (min-width: 1920px) {
+  .container-boxed {
+    max-width: 1800px; /* Cap for large projectors/TVs */
   }
 }
 
@@ -89,9 +111,15 @@ body {
   background-image: radial-gradient(circle at top right, #181818 0%, #111111 100%);
   background-attachment: fixed;
   font-family: var(--font-arial);
-  font-size: 18px;
+  font-size: 16px; /* Slightly smaller base for mobile */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
 }
 
 /* 
@@ -99,22 +127,40 @@ body {
 */
 .text-hero {
   font-size: 2.5rem; /* Mobile */
-  line-height: 1;
+  line-height: 1.1;
   font-weight: 900;
   font-family: var(--font-orbitron);
 }
 
+@media (min-width: 640px) {
+  .text-hero {
+    font-size: 3.5rem;
+  }
+}
+
 @media (min-width: 1024px) {
+  .text-hero {
+    font-size: 4.5rem; 
+  }
+}
+
+@media (min-width: 1280px) {
   .text-hero {
     font-size: 68.25px; /* Large Desktop as per Image 1 */
   }
 }
 
 .text-h2 {
-  font-size: 2.25rem; /* Mobile */
-  line-height: 1.1;
+  font-size: 1.75rem; /* Mobile */
+  line-height: 1.2;
   font-weight: 700;
   font-family: var(--font-orbitron);
+}
+
+@media (min-width: 768px) {
+  .text-h2 {
+    font-size: 2.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -124,10 +170,16 @@ body {
 }
 
 .text-h3 {
-  font-size: 1.5rem; /* Mobile */
-  line-height: 1.2;
+  font-size: 1.25rem; /* Mobile */
+  line-height: 1.3;
   font-weight: 700;
   font-family: var(--font-orbitron);
+}
+
+@media (min-width: 768px) {
+  .text-h3 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -137,10 +189,16 @@ body {
 }
 
 .text-body {
-  font-size: 18px;
+  font-size: 0.9rem; /* Mobile */
   line-height: 1.6;
   font-weight: 400;
   font-family: var(--font-arial);
+}
+
+@media (min-width: 768px) {
+  .text-body {
+    font-size: 18px;
+  }
 }
 
 /* 

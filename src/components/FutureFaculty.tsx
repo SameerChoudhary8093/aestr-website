@@ -23,7 +23,7 @@ const FutureFaculty = () => {
             >
 
                 {/* Top Half: Content & Image */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center mb-16">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center mb-12 md:mb-16">
                     <motion.div 
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}

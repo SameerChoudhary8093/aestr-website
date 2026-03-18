@@ -48,7 +48,7 @@ const ExecutionTeam = () => {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-16 md:mb-20 space-y-4"
                 >
-                    <h2 className="text-h2 text-white">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-orbitron font-bold text-white">
                         Execution <span className="text-accent italic">team</span>
                     </h2>
                     <p className="text-body text-white/50 max-w-2xl mx-auto">
@@ -82,7 +82,7 @@ const ExecutionTeam = () => {
                             </div>
 
                             {/* Content Side */}
-                            <div className="w-full md:w-7/12 flex flex-col justify-center space-y-6 text-left">
+                            <div className="w-full lg:w-7/12 flex flex-col justify-center space-y-6 text-left">
                                 <div className="space-y-2">
                                     <h3 className="text-h3 text-white tracking-tight">
                                         {member.name}

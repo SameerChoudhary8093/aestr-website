@@ -25,7 +25,7 @@ const AboutAestr = () => {
                     >
                         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
                             <div className="space-y-4">
-                                <h2 className="text-h2 font-orbitron leading-tight flex items-center gap-3 text-foreground">
+                                <h2 className="text-h2 font-orbitron leading-tight flex flex-wrap items-center gap-3 text-foreground">
                                     B.Tech for <span className="text-accent">the top 1%</span>
                                 </h2>
                                 <p className="text-body text-foreground/80 max-w-2xl">
@@ -39,7 +39,7 @@ const AboutAestr = () => {
                         </div>
 
                         {/* Specialization Card */}
-                        <div className="glass p-8 rounded-3xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-center overflow-hidden">
+                        <div className="glass p-6 md:p-8 rounded-3xl grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 items-center overflow-hidden">
                             {/* Left: Video Placeholder */}
                             <div className="aspect-video bg-black/40 rounded-2xl border border-foreground/10 flex items-center justify-center relative group cursor-pointer overflow-hidden backdrop-blur-lg">
                                 <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -128,7 +128,7 @@ const AboutAestr = () => {
                         </div>
 
                         {/* Middle Cards Grid */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                             {[
                                 { title: 'Future-Proof Your Career', desc: 'Future-Proof Your Career' },
                                 { title: 'Beyond Traditional Tech', desc: 'Forget outdated job titles. Think specialized AI roles across diverse industries. We anticipate the shift, so you lead it.' },
@@ -154,7 +154,7 @@ const AboutAestr = () => {
                                 {/* Decorative background glow */}
                                 <div className="absolute -top-24 -right-24 w-96 h-96 bg-accent/5 blur-[100px] rounded-full pointer-events-none transition-all duration-700 group-hover:bg-accent/10" />
 
-                                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center">
+                                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
                                     <div className="lg:col-span-12 space-y-12">
                                         <div className="space-y-4 text-center">
                                             <h3 className="text-h2 font-orbitron text-foreground leading-tight tracking-tight">
@@ -230,7 +230,7 @@ const AboutAestr = () => {
                         </div>
 
                         {/* Grid of 4 Cards */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                             {[
                                 { title: 'Visionary Leadership', accent: 'border-foreground/10', desc: 'Founded by experts like Dr. Arastu Sharma (PhD, University of Cambridge; ex-scientist, Microsoft Research Cambridge).' },
                                 { title: 'Mentorship from Active Industry Professionals', accent: 'border-accent/30', desc: 'Our faculty aren\'t just academics; they are full-time engineers from our integrated software engineering labs and leading companies like Shodh AI (USA).' },

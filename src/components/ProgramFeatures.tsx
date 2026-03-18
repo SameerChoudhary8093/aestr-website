@@ -22,7 +22,7 @@ const ProgramFeatures = () => {
             >
 
                 {/* Part 1: Founding Team & Video */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center mb-24 md:mb-32">
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -62,7 +62,7 @@ const ProgramFeatures = () => {
                 </div>
 
                 {/* Part 2: Program Partners Section */}
-                <div className="text-center space-y-12 mb-40">
+                <div className="text-center space-y-12 mb-24 md:mb-40">
                     <div className="space-y-4">
                         <h2 className="text-4xl md:text-5xl font-orbitron font-bold text-foreground flex items-center justify-center gap-4 tracking-tight">
                             Program Partners with us
@@ -72,7 +72,7 @@ const ProgramFeatures = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
                         {[
                             { name: 'Shodh AI', logo: '/ProgramPartners/Shodh-ai.svg' },
                             { name: 'Apple', logo: '/ProgramPartners/Apple-logo.png' },
@@ -145,7 +145,7 @@ const ProgramFeatures = () => {
                 </div>
 
                 {/* Part 3: Point 3 - Targeting In-Demand Careers */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
