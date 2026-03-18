@@ -82,35 +82,35 @@ const Navbar = () => {
                     </div>
 
                     <div className="flex-1 flex items-center justify-end">
-                        <div className="hidden xl:flex items-center gap-6">
-                            <div className="relative h-10 w-40 transition-all duration-500 hover:scale-105">
+                        <div className="hidden xl:flex items-center gap-4">
+                            <div className="relative h-12 w-48 transition-all duration-500 hover:scale-105">
                                 <Image
                                     src="/Herosection/Container.svg"
                                     alt="SGVU Logo"
                                     fill
-                                    sizes="160px"
+                                    sizes="192px"
                                     className="object-contain brightness-0 invert"
                                     priority
                                 />
                             </div>
-                            <div className="flex items-center gap-4 border-l border-white/10 pl-6 h-10">
-                                <div className="relative h-10 w-10 shadow-sm transition-all duration-500 hover:scale-110 flex items-center justify-center">
+                            <div className="flex items-center gap-3 border-l border-white/10 pl-4">
+                                <div className="relative h-16 w-16 transition-all duration-500 hover:scale-110 flex items-center justify-center">
                                     <Image
                                         src="/Herosection/Nirf white.png"
                                         alt="NIRF"
                                         fill
-                                        sizes="40px"
+                                        sizes="64px"
                                         className="object-contain"
                                         priority
                                     />
                                 </div>
-                                <div className="relative h-10 w-10 shadow-sm transition-all duration-500 hover:scale-110 flex items-center justify-center">
+                                <div className="relative h-16 w-16 transition-all duration-500 hover:scale-110 flex items-center justify-center">
                                     <Image
                                         src="/Herosection/naac white  .png"
                                         alt="NAAC A+"
                                         fill
-                                        sizes="40px"
-                                        className="object-contain scale-110"
+                                        sizes="64px"
+                                        className="object-contain"
                                         priority
                                     />
                                 </div>

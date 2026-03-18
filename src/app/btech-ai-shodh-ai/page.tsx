@@ -84,7 +84,7 @@ const BtechAIShodhAIPage = () => {
                         className="max-w-4xl space-y-6"
                     >
                         <h1 className="text-white text-hero max-w-[900px]">
-                            This Isn't College. It's A <br />
+                            This Isn't College. It's A<br />
                             4-Year Internship
                         </h1>
                         <p className="text-white text-body max-w-2xl opacity-100 font-serif">
