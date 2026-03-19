@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import MagneticEffect from './MagneticEffect';
 
@@ -10,6 +11,7 @@ import MagneticEffect from './MagneticEffect';
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const pathname = usePathname();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -21,12 +23,51 @@ const Navbar = () => {
     }, [scrolled]);
 
     const navLinks = [
-        { name: 'Home', href: '/' },
+        { name: 'Home', href: '/#hero' },
         { name: 'B.tech AI With Shodh AI', href: '/btech-ai-shodh-ai' },
         { name: 'Collaborations', href: '/collaborations' },
         { name: 'Alumni', href: '/alumni' },
         { name: 'Blogs', href: '/blogs' },
     ];
+
+    const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        if (pathname !== '/') {
+            setIsOpen(false);
+            return;
+        }
+
+        e.preventDefault();
+
+        const heroSection = document.getElementById('hero');
+        if (heroSection) {
+            heroSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            if (window.location.hash !== '#hero') {
+                window.history.replaceState(null, '', '/#hero');
+            }
+        } else {
+            window.location.hash = 'hero';
+        }
+
+        setIsOpen(false);
+    };
+
+    const handlePageLinkClick = (href: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+        if (pathname !== href) {
+            setIsOpen(false);
+            return;
+        }
+
+        e.preventDefault();
+
+        const firstSection = document.querySelector('main section');
+        if (firstSection instanceof HTMLElement) {
+            firstSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        setIsOpen(false);
+    };
 
     return (
         <nav className="fixed top-0 left-0 w-full z-50 py-6 pointer-events-none flex justify-center">
@@ -48,7 +89,7 @@ const Navbar = () => {
                 <div className="flex items-center justify-between relative z-10 w-full px-3">
                     {/* Left: AESTR Logo */}
                     <div className="flex-1 flex justify-start">
-                        <Link href="/#hero" className="flex items-center group/logo">
+                        <Link href="/#hero" onClick={handleHomeClick} className="flex items-center group/logo">
                             <div className="w-[140px] md:w-[200px] relative h-8 md:h-10 transition-all duration-500 group-hover/logo:scale-105">
                                 <Image
                                     src="/Herosection/AESTR.webp"
@@ -68,6 +109,7 @@ const Navbar = () => {
                                 <Link
                                     key={link.name}
                                     href={link.href}
+                                    onClick={link.name === 'Home' ? handleHomeClick : handlePageLinkClick(link.href)}
                                     className="relative px-5 py-4 group/btn"
                                 >
                                     <MagneticEffect strength={0.3}>
@@ -144,7 +186,7 @@ const Navbar = () => {
                         className="fixed inset-0 bg-background/95 z-[100] p-6 lg:hidden pointer-events-auto flex flex-col"
                     >
                         <div className="flex justify-between items-center mb-12">
-                            <Link href="/#hero" onClick={() => setIsOpen(false)} className="w-[130px] relative h-8">
+                            <Link href="/#hero" onClick={handleHomeClick} className="w-[130px] relative h-8">
                                 <Image src="/Herosection/aestr-logo.svg" alt="Aestr Logo" fill className="object-contain" />
                             </Link>
                             <button
@@ -165,7 +207,7 @@ const Navbar = () => {
                                 >
                                     <Link
                                         href={link.href}
-                                        onClick={() => setIsOpen(false)}
+                                        onClick={link.name === 'Home' ? handleHomeClick : handlePageLinkClick(link.href)}
                                         className="text-3xl md:text-4xl font-orbitron font-extrabold text-[#EAF0BD] hover:text-accent transition-all block"
                                     >
                                         {link.name}

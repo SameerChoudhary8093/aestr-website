@@ -86,11 +86,11 @@ const ProgramPartners = () => {
                                             >
                                                 <div className="mt-1 h-2 w-2 rounded-full bg-[#D7F601] shadow-[0_0_12px_rgba(215,246,1,0.7)] flex-shrink-0" />
                                                 <div className="space-y-0.5">
-                                                    <p className="text-sm md:text-base font-orbitron font-semibold tracking-tight text-white">
+                                                    <p className="text-base md:text-lg font-orbitron font-semibold tracking-tight text-white">
                                                         {item.title}
                                                     </p>
                                                     {item.subtitle && (
-                                                        <p className="text-[11px] md:text-xs font-semibold text-white/65">
+                                                        <p className="text-xs md:text-sm font-semibold text-white/65">
                                                             {item.subtitle}
                                                         </p>
                                                     )}
