@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Users, GraduationCap, Briefcase, Network, MessageSquare, Award, Presentation, Heart } from 'lucide-react';
-import BottomCTA from '@/components/BottomCTA';
+import StickyAdmissionsBar from '@/components/StickyAdmissionsBar';
 
 const AlumniPage = () => {
     const alumniSpotlights = [
@@ -43,6 +43,7 @@ const AlumniPage = () => {
 
     return (
         <main className="bg-background min-h-screen text-foreground font-orbitron overflow-x-hidden selection:bg-accent selection:text-black">
+            <StickyAdmissionsBar />
             
             {/* Hero Section */}
             <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-black">
@@ -152,23 +153,6 @@ const AlumniPage = () => {
                     </div>
                 </div>
             </section>
-
-            {/* Final CTA Section */}
-            <BottomCTA />
-
-            {/* Aesthetic footer signature */}
-            <footer className="py-20 border-t border-foreground/5 px-6">
-                <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-12 opacity-30">
-                    <div className="flex items-center gap-8">
-                        <span className="text-[10px] font-black tracking-[0.4em] uppercase">The Legacy of AESTR Engineers © 2026</span>
-                    </div>
-                    <div className="flex gap-12">
-                        <Link href="/" className="text-[9px] font-black hover:text-accent transition-colors uppercase tracking-[0.4em]">Directory</Link>
-                        <Link href="/" className="text-[9px] font-black hover:text-accent transition-colors uppercase tracking-[0.4em]">Events</Link>
-                        <Link href="/" className="text-[9px] font-black hover:text-accent transition-colors uppercase tracking-[0.4em]">Support</Link>
-                    </div>
-                </div>
-            </footer>
 
         </main>
     );

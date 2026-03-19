@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import BottomCTA from '@/components/BottomCTA';
+import StickyAdmissionsBar from '@/components/StickyAdmissionsBar';
 
 const BlogsPage = () => {
     const blogPosts = [
@@ -43,6 +43,7 @@ const BlogsPage = () => {
 
     return (
         <main className="bg-background min-h-screen text-foreground font-orbitron overflow-x-hidden selection:bg-accent selection:text-black">
+            <StickyAdmissionsBar />
             
             {/* Hero Section */}
             <section className="relative pt-48 pb-24 lg:pt-64 lg:pb-32 overflow-hidden px-6 bg-[#D7F601]">
@@ -160,22 +161,6 @@ const BlogsPage = () => {
                 </div>
             </section>
 
-            {/* Bottom CTA */}
-            <BottomCTA />
-
-            {/* Footer */}
-            <footer className="py-20 border-t border-foreground/5 px-6">
-                <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-12 opacity-30">
-                    <div className="flex items-center gap-8">
-                        <span className="text-[10px] font-black tracking-[0.5em] text-foreground uppercase">AESTR CHRONICLES © 2026</span>
-                    </div>
-                    <div className="flex gap-12">
-                        <Link href="/" className="text-[9px] font-black hover:text-accent transition-colors uppercase tracking-[0.4em]">RSS Feed</Link>
-                        <Link href="/" className="text-[9px] font-black hover:text-accent transition-colors uppercase tracking-[0.4em]">Substack</Link>
-                        <Link href="/" className="text-[9px] font-black hover:text-accent transition-colors uppercase tracking-[0.4em]">Archive</Link>
-                    </div>
-                </div>
-            </footer>
         </main>
     );
 };

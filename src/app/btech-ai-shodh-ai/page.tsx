@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import StickyAdmissionsBar from '@/components/StickyAdmissionsBar';
 
 
 // Reusable Lab Data (Same as home page)
@@ -47,6 +48,9 @@ const BtechAIShodhAIPage = () => {
 
     return (
         <main className="bg-background min-h-screen text-foreground overflow-x-hidden selection:bg-accent selection:text-black">
+
+
+            <StickyAdmissionsBar />
 
 
             {/* Hero Section Redesigned (Brochure Style) */}

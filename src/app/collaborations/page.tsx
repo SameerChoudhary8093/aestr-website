@@ -3,12 +3,13 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import BottomCTA from '@/components/BottomCTA';
+import StickyAdmissionsBar from '@/components/StickyAdmissionsBar';
 
 
 const CollaborationsPage = () => {
     return (
         <main className="bg-background min-h-screen text-foreground font-orbitron overflow-x-hidden selection:bg-accent selection:text-black">
+            <StickyAdmissionsBar />
             
             {/* Hero Section */}
             <section className="relative pt-48 pb-24 lg:pt-64 lg:pb-32 overflow-hidden px-6 bg-[#5B1DD6]">
@@ -54,33 +55,33 @@ const CollaborationsPage = () => {
             </section>
 
             {/* Path to Dual Degree */}
-            <section className="py-24 relative overflow-hidden bg-white text-black">
+            <section className="py-24 relative overflow-hidden bg-black text-white">
                 <div className="container mx-auto px-6 relative z-10 text-center">
                     <div className="mb-16 space-y-4">
                         <h2 className="text-h2 font-black uppercase tracking-tight font-orbitron">
                             Your Path to a Dual Degree
                         </h2>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto font-outfit">
+                        <p className="text-lg text-white/70 max-w-3xl mx-auto font-outfit">
                             For too long, the story of engineering in India has been a paradox. We produce millions of engineers, yet industries lament a scarcity of "hirable" talent.
                         </p>
                     </div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                         {/* Card 1 */}
-                        <div className="rounded-[2.5rem] bg-[#F3E8FF] border border-purple-100 overflow-hidden text-left flex flex-col h-full shadow-sm hover:shadow-md transition-shadow">
+                        <div className="rounded-[2.5rem] bg-[#181818] border border-white/10 overflow-hidden text-left flex flex-col h-full shadow-sm hover:shadow-lg transition-shadow">
                             <div className="aspect-[16/9] relative">
                                 <Image src="/Other/future-faculty-1.webp" alt="Global Classroom" fill className="object-cover" />
                             </div>
                             <div className="p-8 md:p-10 space-y-6 flex-grow">
-                                <h3 className="text-h3 font-black uppercase tracking-tight font-orbitron">Your Path to a Dual Degree</h3>
+                                <h3 className="text-h3 font-black uppercase tracking-tight font-orbitron text-white">Your Path to a Dual Degree</h3>
                                 <div className="space-y-4 font-outfit">
-                                    <p className="text-sm leading-relaxed">
+                                    <p className="text-sm leading-relaxed text-white/80">
                                         <span className="font-bold">Years 1 & 2:</span> You'll start strong at AESTR right here in India, building a solid foundation in engineering.
                                     </p>
                                     <p className="text-sm leading-relaxed">
                                         <span className="font-bold">Years 3 & 4:</span> Then, you'll jet off to Roosevelt University in the U.S. to complete your degree.
                                     </p>
-                                    <p className="text-sm leading-relaxed">
+                                    <p className="text-sm leading-relaxed text-white/80">
                                         <span className="font-bold underline decoration-accent decoration-2 underline-offset-4 italic">Result:</span> You graduate with a globally recognized degree and incredible international experience.
                                     </p>
                                 </div>
@@ -88,20 +89,20 @@ const CollaborationsPage = () => {
                         </div>
 
                         {/* Card 2 */}
-                        <div className="rounded-[2.5rem] bg-[#F3E8FF] border border-purple-100 overflow-hidden text-left flex flex-col h-full shadow-sm hover:shadow-md transition-shadow">
+                        <div className="rounded-[2.5rem] bg-[#181818] border border-white/10 overflow-hidden text-left flex flex-col h-full shadow-sm hover:shadow-lg transition-shadow">
                             <div className="aspect-[16/9] relative">
                                 <Image src="/Other/lab-3.webp" alt="Innovation Lab" fill className="object-cover" />
                             </div>
                             <div className="p-8 md:p-10 space-y-6 flex-grow">
-                                <h3 className="text-h3 font-black uppercase tracking-tight font-orbitron">The "3+1" Immersion:</h3>
+                                <h3 className="text-h3 font-black uppercase tracking-tight font-orbitron text-white">The "3+1" Immersion:</h3>
                                 <div className="space-y-4 font-outfit">
-                                    <p className="text-sm leading-relaxed">
+                                    <p className="text-sm leading-relaxed text-white/80">
                                         <span className="font-bold">Years 1-3:</span> You'll get comprehensive knowledge and skills during your studies at AESTR.
                                     </p>
                                     <p className="text-sm leading-relaxed">
                                         <span className="font-bold">Years 4:</span> Your final year will be spent at Roosevelt University in the U.S., diving deep into advanced research, innovation labs, and expanding your professional network.
                                     </p>
-                                    <p className="text-sm leading-relaxed">
+                                    <p className="text-sm leading-relaxed text-white/80">
                                         <span className="font-bold underline decoration-accent decoration-2 underline-offset-4 italic">Ideal for:</span> Students who want an intensive international capstone year.
                                     </p>
                                 </div>
@@ -112,27 +113,28 @@ const CollaborationsPage = () => {
             </section>
 
             {/* Smooth Sailing Section */}
-            <section className="py-24 relative overflow-hidden bg-white text-black border-t border-gray-100">
+            <section className="py-24 relative overflow-hidden bg-[#D7F601] text-black border-t border-gray-100">
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="text-center mb-16 space-y-4">
                         <h2 className="text-h2 font-black uppercase tracking-tight font-orbitron">
                             Smooth Sailing to the USA
                         </h2>
-                        <p className="text-lg text-gray-600 max-w-2xl mx-auto font-outfit">
+                        <p className="text-lg text-black/80 max-w-2xl mx-auto font-outfit">
                             We know moving abroad can be daunting, so we're making it easy:
                         </p>
                     </div>
 
-                    <div className="max-w-5xl mx-auto border border-gray-100 rounded-[3rem] p-12 md:p-16 flex flex-col md:flex-row items-center gap-16 shadow-sm">
+                    <div className="max-w-5xl mx-auto border border-black/40 rounded-[3rem] p-12 md:p-16 flex flex-col md:flex-row items-center gap-16 shadow-[0_24px_60px_rgba(0,0,0,0.6)] bg-[#181818]">
                         {/* Visa */}
                         <div className="flex-1 flex flex-col items-center text-center space-y-8">
                             <div className="w-48 h-48 relative">
-                                {/* Use an illustrative icon or emoji if image path is unknown, but here I'll use a placeholder representing the visa icon */}
-                                <div className="w-full h-full bg-blue-50 rounded-full flex items-center justify-center text-8xl">🛂</div>
+                                <div className="w-full h-full rounded-full flex items-center justify-center bg-[#5B1DD6]/15 border border-[#5B1DD6]/40 text-7xl shadow-[0_0_40px_rgba(91,29,214,0.45)]">
+                                    🛂
+                                </div>
                             </div>
                             <div className="space-y-4">
-                                <h3 className="text-h3 font-black uppercase tracking-tight font-orbitron italic">Hassle-Free Visa:</h3>
-                                <p className="text-gray-600 leading-relaxed font-outfit">
+                                <h3 className="text-h3 font-black uppercase tracking-tight font-orbitron italic text-white">Hassle-Free Visa:</h3>
+                                <p className="text-white/80 leading-relaxed font-outfit">
                                     Our dedicated team works directly with U.S. immigration experts to guide you through every step of your visa application. No stress, just clear guidance.
                                 </p>
                             </div>
@@ -144,11 +146,13 @@ const CollaborationsPage = () => {
                         {/* Financial */}
                         <div className="flex-1 flex flex-col items-center text-center space-y-8">
                             <div className="w-48 h-48 relative">
-                                <div className="w-full h-full bg-green-50 rounded-full flex items-center justify-center text-8xl">💰</div>
+                                <div className="w-full h-full rounded-full flex items-center justify-center bg-[#D7F601]/15 border border-[#D7F601]/40 text-7xl shadow-[0_0_40px_rgba(215,246,1,0.45)]">
+                                    💰
+                                </div>
                             </div>
                             <div className="space-y-4">
-                                <h3 className="text-h3 font-black uppercase tracking-tight font-orbitron italic">No Financial Worries:</h3>
-                                <p className="text-gray-600 leading-relaxed font-outfit">
+                                <h3 className="text-h3 font-black uppercase tracking-tight font-orbitron italic text-white">No Financial Worries:</h3>
+                                <p className="text-white/80 leading-relaxed font-outfit">
                                     We're partnering with financial institutions to offer collateral-free educational loans. This means financial barriers won't stop you from chasing your global dreams.
                                 </p>
                             </div>
@@ -158,13 +162,13 @@ const CollaborationsPage = () => {
             </section>
 
             {/* Launch Your Global Career Section */}
-            <section className="py-24 relative overflow-hidden bg-white text-black">
+            <section className="py-24 relative overflow-hidden bg-black text-white">
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="text-center mb-16 space-y-4">
                         <h2 className="text-h2 font-black uppercase tracking-tight font-orbitron">
                             Launch Your Global Career
                         </h2>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto font-outfit">
+                        <p className="text-lg text-white/70 max-w-3xl mx-auto font-outfit">
                             Studying at Roosevelt University isn't just about academics; it's about opening doors to your future:
                         </p>
                     </div>
@@ -196,12 +200,18 @@ const CollaborationsPage = () => {
                                 highlight: false
                             }
                         ].map((item, i) => (
-                            <div key={i} className={`p-8 rounded-[2rem] border ${item.highlight ? 'bg-[#C084FC] border-purple-400 text-white' : 'bg-white border-gray-100 text-black'} shadow-sm flex flex-col items-center text-center space-y-6 h-full transition-transform hover:-translate-y-2`}>
-                                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-4xl ${item.highlight ? 'bg-white/20' : 'bg-gray-50'}`}>
+                            <div
+                                key={i}
+                                className={`group p-8 rounded-[2rem] border shadow-sm flex flex-col items-start text-left space-y-6 h-full transition-transform hover:-translate-y-2
+                                    ${item.highlight
+                                        ? 'bg-[#181818] border-white/10 text-white group-hover:bg-[#C084FC] group-hover:border-purple-400'
+                                        : 'bg-[#181818] border-white/10 text-white'}`}
+                            >
+                                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-4xl ${item.highlight ? 'bg-white/10 group-hover:bg-white/20' : 'bg-white/10'}`}>
                                     {item.icon}
                                 </div>
                                 <h4 className="text-h3 font-black uppercase tracking-tight font-orbitron leading-tight">{item.title}</h4>
-                                <p className={`text-sm font-outfit ${item.highlight ? 'text-white/90' : 'text-gray-600'}`}>{item.desc}</p>
+                                <p className={`text-sm font-outfit ${item.highlight ? 'text-white/90' : 'text-white/80'}`}>{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -209,7 +219,7 @@ const CollaborationsPage = () => {
             </section>
 
             {/* Campus Life Section - Special Grid */}
-            <section className="py-24 relative overflow-hidden bg-white text-black border-t border-gray-100">
+            <section className="py-24 relative overflow-hidden bg-[#D7F601] text-black border-t border-gray-100">
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="text-center mb-16">
                         <h2 className="text-h2 font-black uppercase tracking-tight font-orbitron">
@@ -282,8 +292,6 @@ const CollaborationsPage = () => {
                 </div>
             </section>
 
-            {/* Shared Bottom CTA + Footer for consistency */}
-            <BottomCTA />
         </main>
     );
 };
