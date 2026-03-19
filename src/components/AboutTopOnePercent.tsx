@@ -51,7 +51,7 @@ const YouTubePlayer = ({ videoId, title }: { videoId: string; title: string }) =
 
 const AboutTopOnePercent = () => {
     return (
-        <section className="relative py-24 bg-background-alt overflow-hidden">
+        <section id="about-top-one-percent" className="relative py-24 bg-background-alt overflow-hidden scroll-mt-24">
             {/* Ambient subtle shapes - Neon accents */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none z-0">
                 <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px]" />

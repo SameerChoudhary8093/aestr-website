@@ -45,21 +45,21 @@ const BlogsPage = () => {
         <main className="bg-background min-h-screen text-foreground font-orbitron overflow-x-hidden selection:bg-accent selection:text-black">
             
             {/* Hero Section */}
-            <section className="relative pt-48 pb-24 lg:pt-64 lg:pb-32 overflow-hidden px-6 bg-[radial-gradient(circle_at_top,rgba(216,246,2,0.05),transparent_50%)]">
+            <section className="relative pt-48 pb-24 lg:pt-64 lg:pb-32 overflow-hidden px-6 bg-[#D7F601]">
                 <div className="container mx-auto relative z-10 text-center">
-                    <div className="inline-block px-6 py-2 rounded-full bg-accent/5 border border-accent/20 text-accent text-[10px] font-black tracking-[0.3em] uppercase mb-10">
+                    <div className="inline-block px-6 py-2 rounded-full bg-black text-[#D7F601] text-[10px] font-black tracking-[0.3em] uppercase mb-10">
                         Insights & Intelligence
                     </div>
                         <h1 className="text-hero text-black">
                             Insights from <br />
                             <span className="opacity-70">industry experts</span>
                         </h1>
-                    <p className="text-xl md:text-2xl text-foreground/50 max-w-4xl mx-auto leading-relaxed font-bold tracking-tight">
+                    <p className="text-xl md:text-2xl text-black/70 max-w-4xl mx-auto leading-relaxed font-bold tracking-tight">
                         Explore the latest research, tech breakthroughs, and pedagogical shifts from the architects of India's AI future.
                     </p>
                 </div>
                 {/* Background pulse */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] bg-accent/5 rounded-full blur-[180px] pointer-events-none" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] bg-black/10 rounded-full blur-[180px] pointer-events-none" />
             </section>
 
             {/* Featured Post */}

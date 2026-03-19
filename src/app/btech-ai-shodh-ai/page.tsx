@@ -74,7 +74,7 @@ const BtechAIShodhAIPage = () => {
                         
                         <div className="pt-2">
                             <h3 className="text-white text-[1.4rem] sm:text-[1.8rem] lg:text-[2.2rem] font-orbitron font-extrabold tracking-tight">
-                                B.tech ai with shodh ai
+                                B.Tech AI With Shodh AI
                             </h3>
                         </div>
 
@@ -83,7 +83,7 @@ const BtechAIShodhAIPage = () => {
                             {/* subtle internal glow/texture */}
                             <div className="absolute right-0 top-0 w-32 h-32 bg-[#D7F601]/5 blur-3xl rounded-full"></div>
                             <p className="text-white text-lg lg:text-[19px] font-medium leading-relaxed relative z-10">
-                                At B.Tech AI with Shodh AI, every student becomes an intern from day one.
+                            Every student becomes an intern from day one.
                                 <span className="text-[#D7F601] font-bold tracking-wide mt-2 block">Stop studying. Start building.</span>
                             </p>
                         </div>
@@ -183,67 +183,433 @@ const BtechAIShodhAIPage = () => {
 
             {/* New Founder Section */}
             <section className="py-24 relative overflow-hidden bg-[#D7F601] text-black">
-                <div className="container-boxed relative z-10 flex flex-col items-center text-center max-w-5xl mx-auto space-y-12">
+                <div className="container-boxed relative z-10 max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                        {/* Left: Heading + Text (left aligned) */}
+                        <div className="lg:col-span-7 space-y-8 text-left">
+                            <h2 className="text-5xl md:text-6xl lg:text-7xl font-orbitron font-black leading-[1.1] tracking-tighter">
+                                From Shodh AI to
+                                <br />
+                                Aestr
+                            </h2>
 
-                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-orbitron font-black leading-[1.1] tracking-tighter">
-                        From Shodh AI to <br/>Aestr
-                    </h2>
+                            <div className="space-y-6 text-lg md:text-xl lg:text-[20px] font-medium leading-relaxed max-w-3xl text-black/90">
+                                <p>
+                                    <span className="font-bold">Arastu Sharma</span> is the Founder & CEO of Aestr and the Founder of <span className="font-bold">Shodh AI</span>, a deep-tech AI company building <span className="font-bold">India's Sovereign "AI for Science" Foundation Model.</span>
+                                </p>
 
-                    <div className="space-y-8 text-lg md:text-xl lg:text-[20px] font-medium leading-relaxed max-w-4xl text-black/90">
-                        <p>
-                            <span className="font-bold">Arastu Sharma</span> is the Founder & CEO of Aestr and the Founder of <span className="font-bold">Shodh AI</span>, a deep-tech AI company building <span className="font-bold">India's Sovereign "AI for Science" Foundation Model.</span>
-                        </p>
+                                <p>
+                                    Through Shodh AI, Arastu leads national-scale AI systems backed by IndiaAI, with access to <span className="font-bold">1.2M+ GPU hours</span> and partnerships with NVIDIA, Yotta, and Amazon Web Services.
+                                </p>
 
-                        <p>
-                            Through Shodh AI, Arastu leads national-scale AI systems backed by IndiaAI, with access to <span className="font-bold">1.2M+ GPU hours</span> and partnerships with NVIDIA, Yotta, and Amazon Web Services.
-                        </p>
+                                <p>
+                                    He was recently invited to meet <span className="font-bold">Prime Minister Narendra Modi</span> and was highlighted among the key contributors shaping India's AI future.
+                                </p>
 
-                        <p>
-                            He was recently invited to meet <span className="font-bold">Prime Minister Narendra Modi</span> and was highlighted among the key contributors shaping India's AI future.
-                        </p>
-
-                        <p className="pt-4">
-                            B.Tech AI with Shodh AI exists to transfer this real-world AI engineering experience to the next generation of builders.
-                        </p>
-                    </div>
-
-                    {/* Logos Area - Pyramid Layout */}
-                    <div className="pt-16 pb-12 flex flex-col items-center justify-center gap-12 w-full max-w-4xl mx-auto">
-                        <div className="grid grid-cols-2 gap-12 md:gap-24 items-center justify-center">
-                            {/* NVIDIA */}
-                            <div className="relative h-20 md:h-28 w-40 md:w-56 mix-blend-multiply">
-                                <Image src="/b.tech-ai-with/nvidia.svg" alt="NVIDIA" fill className="object-contain" />
-                            </div>
-                            {/* YOTTA */}
-                            <div className="relative h-20 md:h-28 w-40 md:w-56 mix-blend-multiply">
-                                <Image src="/b.tech-ai-with/yotta.svg" alt="YOTTA" fill className="object-contain" />
+                                <p className="pt-2">
+                                    B.Tech AI with Shodh AI exists to transfer this real-world AI engineering experience to the next generation of builders.
+                                </p>
                             </div>
                         </div>
-                        {/* AWS */}
-                        <div className="relative h-24 md:h-32 w-56 md:w-72 mix-blend-multiply flex justify-center">
-                            <Image src="/b.tech-ai-with/aws.svg" alt="AWS" fill className="object-contain" />
+
+                        {/* Right: Logos in pyramid layout */}
+                        <div className="lg:col-span-5 flex flex-col items-center lg:items-center gap-12 lg:gap-14 mt-6 lg:mt-10">
+                            {/* Top row: NVIDIA (left) + YOTTA (right) */}
+                            <div className="flex items-center justify-center gap-12 w-full">
+                                <div className="relative h-24 md:h-28 w-44 md:w-56 mix-blend-multiply">
+                                    <Image src="/b.tech-ai-with/nvidia.svg" alt="NVIDIA" fill className="object-contain" />
+                                </div>
+                                <div className="relative h-24 md:h-28 w-44 md:w-56 mix-blend-multiply">
+                                    <Image src="/b.tech-ai-with/yotta.svg" alt="YOTTA" fill className="object-contain" />
+                                </div>
+                            </div>
+                            {/* Bottom: AWS centered */}
+                            <div className="relative h-24 md:h-28 w-44 md:w-60 mix-blend-multiply flex justify-center">
+                                <Image src="/b.tech-ai-with/aws.svg" alt="AWS" fill className="object-contain" />
+                            </div>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            {/* Reality Check Section */}
+            <section className="py-28 relative overflow-hidden bg-[#D7F601] text-black">
+                <div className="container-boxed relative z-10 flex flex-col items-center text-center max-w-6xl mx-auto space-y-14">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="w-full max-w-5xl"
+                    >
+                        <div className="bg-[#181818] text-white rounded-[1.9rem] p-8 md:p-12 shadow-[0_28px_70px_rgba(0,0,0,0.6)] border border-white/10 overflow-hidden relative">
+                            <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#5B1DD6]/30 blur-3xl rounded-full pointer-events-none"></div>
+                            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-black/40 blur-3xl rounded-full pointer-events-none"></div>
+
+                            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10">
+                                <div className="lg:col-span-8 space-y-5 text-left">
+                                    <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#D7F601] text-black font-orbitron font-black text-[11px] tracking-[0.25em] uppercase">
+                                        Reality Check
+                                    </div>
+
+                                    <p className="text-[18px] md:text-[19px] font-semibold leading-relaxed text-white/90">
+                                        Look at the tech industry today. AI agents are writing production-level code, debugging in seconds, and deploying servers. The "Junior IT Developer" who just types syntax on a keyboard is obsolete. By 2030, standard coding will be fully Automated.
+                                    </p>
+
+                                    <div className="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+
+                                    <p className="text-[15px] md:text-[17px] leading-relaxed text-white/75">
+                                        If your college is teaching you to memorize algorithms on a whiteboard, they are preparing you for a job that vanished in 2024.
+                                    </p>
+                                </div>
+
+                                <div className="lg:col-span-4">
+                                    <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
+                                        <Image
+                                            src="/Other/robot-class.jpg"
+                                            alt="AI building in action"
+                                            fill
+                                            className="object-cover"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
 
                 </div>
             </section>
 
+            <section className="py-24 relative overflow-hidden bg-[#0E0F10] text-white">
+                <div className="container-boxed relative z-10">
+                    <div className="max-w-5xl mx-auto text-center space-y-10">
+                        <p className="text-[#D7F601] font-orbitron font-bold tracking-wide text-xs md:text-sm">
+                            Designed for Today. Relevant for Tomorrow. Built with the Industry.
+                        </p>
+
+                        <h2 className="w-full text-[#EAF0BD] font-orbitron font-bold leading-[120%] text-[40px] md:text-[44px] lg:text-[48px] tracking-tight">
+                            We don’t teach subjects. We
+                            <br />
+                            simulate a workplace.
+                        </h2>
+
+                        <p className="w-full text-[#EAF0BD] font-normal leading-[150%] text-[18px] max-w-3xl mx-auto mt-2">
+                            Aestr Alpha is built like a modern Tech Ashram — structured, immersive, and designed for deep transformation. You check in, lock in, and spend six months building real systems with real accountability.
+                        </p>
+                    </div>
+
+                    <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10 max-w-6xl mx-auto">
+                        <motion.div whileHover={{ y: -6 }} transition={{ duration: 0.3 }} className="text-center space-y-4 cursor-default">
+                            <motion.div whileHover={{ rotate: 2, scale: 1.08 }} transition={{ duration: 0.3 }} className="w-16 h-16 mx-auto flex items-center justify-center">
+                                <Image src="/b.tech-ai-with/Vector1.svg" alt="Real Industry Projects" width={56} height={56} className="object-contain" />
+                            </motion.div>
+                            <h3 className="text-[#D7F601] font-orbitron font-black text-lg md:text-xl">
+                                Real Industry Projects
+                            </h3>
+                            <p className="text-white/70 text-sm md:text-base leading-relaxed max-w-xs mx-auto font-medium">
+                                Work on actual use-cases inspired by real companies and teams.
+                            </p>
+                        </motion.div>
+
+                        <motion.div whileHover={{ y: -6 }} transition={{ duration: 0.3 }} className="text-center space-y-4 cursor-default">
+                            <motion.div whileHover={{ rotate: -2, scale: 1.08 }} transition={{ duration: 0.3 }} className="w-16 h-16 mx-auto flex items-center justify-center">
+                                <Image src="/b.tech-ai-with/Vector2.svg" alt="Mentor-Led Learning" width={56} height={56} className="object-contain" />
+                            </motion.div>
+                            <h3 className="text-[#D7F601] font-orbitron font-black text-lg md:text-xl">
+                                Mentor-Led Learning
+                            </h3>
+                            <p className="text-white/70 text-sm md:text-base leading-relaxed max-w-xs mx-auto font-medium">
+                                Learn from practitioners working in Salesforce, UI/UX, AI, Data, and more.
+                            </p>
+                        </motion.div>
+
+                        <motion.div whileHover={{ y: -6 }} transition={{ duration: 0.3 }} className="text-center space-y-4 cursor-default">
+                            <motion.div whileHover={{ rotate: 2, scale: 1.08 }} transition={{ duration: 0.3 }} className="w-16 h-16 mx-auto flex items-center justify-center">
+                                <Image src="/b.tech-ai-with/Vector3.svg" alt="Career-Driven Outcomes" width={56} height={56} className="object-contain" />
+                            </motion.div>
+                            <h3 className="text-[#D7F601] font-orbitron font-black text-lg md:text-xl">
+                                Career-Driven Outcomes
+                            </h3>
+                            <p className="text-white/70 text-sm md:text-base leading-relaxed max-w-xs mx-auto font-medium">
+                                <span className="block whitespace-nowrap">
+                                    Portfolio, LinkedIn, interviews, and communication
+                                </span>
+                                <span className="block whitespace-nowrap">
+                                    covered as part of the journey.
+                                </span>
+                            </p>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-20 relative overflow-hidden bg-[#5B1DD6] text-black">
+                <div className="container-boxed relative z-10">
+                    <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
+                        <h3 className="w-full text-[#EAF0BD] font-orbitron font-bold leading-[130%] text-[24px] sm:text-[26px] md:text-[28px] tracking-tight">
+                            Portfolio, LinkedIn, interviews, and communication — all covered as part of the journey.
+                        </h3>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 max-w-6xl mx-auto">
+                        {/* Card 1 */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5 }}
+                            className="rounded-[1.75rem] bg-[#D7F601] border-[3px] border-[#5B1DD6] overflow-hidden shadow-[0_18px_40px_rgba(0,0,0,0.6)] flex flex-col"
+                        >
+                            <div className="relative w-full aspect-[4/3] overflow-hidden">
+                                <Image
+                                    src="/b.tech-ai-with/lab.JPG"
+                                    alt="Real Industry Projects"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+                            <div className="p-5 md:p-6 flex flex-col gap-2">
+                                <h4 className="text-[18px] md:text-[20px] font-orbitron font-extrabold text-[#1A1040]">
+                                    No Classrooms.
+                                </h4>
+                                <p className="text-[13px] md:text-[14px] leading-relaxed font-medium text-black/90">
+                                    Office hours apply. Entire
+cohort builds to learn how real
+cross-functional teams ship.
+                                </p>
+                            </div>
+                        </motion.div>
+
+                        {/* Card 2 */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.05 }}
+                            className="rounded-[1.75rem] bg-[#D7F601] border-[3px] border-[#5B1DD6] overflow-hidden shadow-[0_18px_40px_rgba(0,0,0,0.6)] flex flex-col"
+                        >
+                            <div className="relative w-full aspect-[4/3] overflow-hidden">
+                                <Image
+                                    src="/b.tech-ai-with/DSC08261.jpg"
+                                    alt="Mentor-Led Learning"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+                            <div className="p-5 md:p-6 flex flex-col gap-2">
+                                <h4 className="text-[18px] md:text-[20px] font-orbitron font-extrabold text-[#1A1040]">
+                                    No Homework.
+                                </h4>
+                                <p className="text-[13px] md:text-[14px] leading-relaxed font-medium text-black/90">
+                                    You push code, clear Jira tickets,and deploy to AWS/NVIDIA servers.
+                                </p>
+                            </div>
+                        </motion.div>
+
+                        {/* Card 3 */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.1 }}
+                            className="rounded-[1.75rem] bg-[#D7F601] border-[3px] border-[#5B1DD6] overflow-hidden shadow-[0_18px_40px_rgba(0,0,0,0.6)] flex flex-col"
+                        >
+                            <div className="relative w-full aspect-[4/3] overflow-hidden">
+                                <Image
+                                    src="/Other/robot-class.jpg"
+                                    alt="Career-Driven Outcomes"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+                            <div className="p-5 md:p-6 flex flex-col gap-2">
+                                <h4 className="text-[18px] md:text-[20px] font-orbitron font-extrabold text-[#1A1040]">
+                                    No Teachers.
+                                </h4>
+                                <p className="text-[13px] md:text-[14px] leading-relaxed font-medium text-black/90">
+                                    <span className="block whitespace-nowrap">You are mentored by Senior Engineers who have</span>
+                                    <span className="block whitespace-nowrap">built systems at Cambridge and Microsoft Research.</span>
+                                </p>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Selection Process Section */}
+            <section className="py-24 relative overflow-hidden bg-black text-black">
+                <div className="container-boxed relative z-10">
+                    <div className="rounded-[2.25rem] bg-[#D7F601] border-[3px] border-[#10063A] px-6 md:px-10 lg:px-14 py-10 md:py-12 lg:py-14 shadow-[0_22px_60px_rgba(0,0,0,0.55)]">
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+                            {/* Left column: intro text */}
+                            <div className="lg:col-span-4 space-y-4">
+                                <h2 className="text-2xl sm:text-3xl font-orbitron font-black text-[#5B1DD6]">
+                                    The Selection Protocol.
+                                </h2>
+                                <p className="text-[13px] md:text-[14px] leading-relaxed font-medium text-[#10063A]/90">
+                                    We don’t care how well you memorize. We care what you can build. You cannot just pay a fee to get into AESTR. We don’t have an admissions office, we have a Technical Draft.
+                                </p>
+                                <p className="text-[13px] md:text-[14px] leading-relaxed font-medium text-[#10063A]/90">
+                                    Future India will not be built by crammers. It will be built by creators with dirt on their hands and code on their screens.
+                                </p>
+                            </div>
+
+                            {/* Right column: steps row */}
+                            <div className="lg:col-span-8">
+                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-6 lg:gap-8 mb-10">
+                                    {/* Step 1 */}
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.4 }}
+                                        whileHover={{ y: -4 }}
+                                        className="space-y-3 text-left"
+                                    >
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-8 h-8 rounded-full bg-[#5B1DD6] flex items-center justify-center text-white font-orbitron font-bold text-sm">
+                                                1
+                                            </div>
+                                            <h3 className="text-[16px] md:text-[17px] font-orbitron font-extrabold text-[#5B1DD6] flex items-center gap-2">
+                                                Show Us Your "Proof of Work"
+                                                <span className="inline-flex items-center justify-center">
+                                                    <svg
+                                                        className="w-6 h-6 text-[#5B1DD6]"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <ellipse
+                                                            cx="12"
+                                                            cy="12"
+                                                            rx="7"
+                                                            ry="3.5"
+                                                            stroke="currentColor"
+                                                            strokeWidth="1.6"
+                                                            transform="rotate(-15 12 12)"
+                                                        />
+                                                    </svg>
+                                                </span>
+                                            </h3>
+                                        </div>
+                                        <p className="text-[12px] md:text-[13px] leading-relaxed text-[#10063A]/90">
+                                            Have a GitHub link? Wired an Arduino? Launched a website? Drop the link. Give us anything real you’ve done outside an exam hall.
+                                        </p>
+                                    </motion.div>
+
+                                    {/* Step 2 */}
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.4, delay: 0.05 }}
+                                        whileHover={{ y: -4 }}
+                                        className="space-y-3 text-left"
+                                    >
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-8 h-8 rounded-full bg-[#5B1DD6] flex items-center justify-center text-white font-orbitron font-bold text-sm">
+                                                2
+                                            </div>
+                                            <h3 className="text-[16px] md:text-[17px] font-orbitron font-extrabold text-[#5B1DD6] flex items-center gap-2">
+                                                The Peer Interview
+                                                <span className="inline-flex items-center justify-center">
+                                                    <svg
+                                                        className="w-6 h-6 text-[#5B1DD6]"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <circle
+                                                            cx="12"
+                                                            cy="12"
+                                                            r="4.5"
+                                                            stroke="currentColor"
+                                                            strokeWidth="1.6"
+                                                        />
+                                                        <path
+                                                            d="M2 12H6M18 12H22M12 2V6M12 18V22"
+                                                            stroke="currentColor"
+                                                            strokeWidth="1.4"
+                                                            strokeLinecap="round"
+                                                        />
+                                                    </svg>
+                                                </span>
+                                            </h3>
+                                        </div>
+                                        <p className="text-[12px] md:text-[13px] leading-relaxed text-[#10063A]/90">
+                                            Senior student‑engineers will interview you. If you don’t have the grit, logic, and hunger, the team will reject you – no matter how high your JEE score is.
+                                        </p>
+                                    </motion.div>
+
+                                    {/* Step 3 */}
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.4, delay: 0.1 }}
+                                        whileHover={{ y: -4 }}
+                                        className="space-y-3 text-left"
+                                    >
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-8 h-8 rounded-full bg-[#5B1DD6] flex items-center justify-center text-white font-orbitron font-bold text-sm">
+                                                3
+                                            </div>
+                                            <h3 className="text-[16px] md:text-[17px] font-orbitron font-extrabold text-[#5B1DD6]">
+                                                Minimum Baseline
+                                            </h3>
+                                        </div>
+                                        <p className="text-[12px] md:text-[13px] leading-relaxed text-[#10063A]/90">
+                                            75% Boards + 75th Percentile SAT/JEE/CUET. Exceptional builders can bypass the baseline – proof of work matters more than marks.
+                                        </p>
+                                    </motion.div>
+                                </div>
+
+                                {/* Bottom strip */}
+                                <div className="border-t border-[#10063A]/30 pt-6 mt-2 grid grid-cols-1 md:grid-cols-4 gap-6 text-left text-black text-[12px] md:text-[13px] leading-relaxed">
+                                    <div className="font-orbitron font-extrabold text-[14px] md:text-[15px] text-[#5B1DD6]">
+                                        Minimum to Enter:
+                                    </div>
+                                    <div>
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <span className="font-orbitron font-bold text-[#5B1DD6]">Step 1</span>
+                                            <div className="hidden md:block h-px w-10 bg-[#5B1DD6]" />
+                                        </div>
+                                        75% Boards + 75th Percentile SAT/JEE/CUET (exceptional cases may be considered).
+                                    </div>
+                                    <div>
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <span className="font-orbitron font-bold text-[#5B1DD6]">Step 2</span>
+                                            <div className="hidden md:block h-px w-10 bg-[#5B1DD6]" />
+                                        </div>
+                                        Portfolio: code, project, or hardware link.
+                                    </div>
+                                    <div>
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <span className="font-orbitron font-bold text-[#5B1DD6]">Step 3</span>
+                                            <div className="hidden md:block h-px w-10 bg-[#5B1DD6]" />
+                                        </div>
+                                        Peer interview: prove your hunger.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Section 3: Heart of B.Tech AI (Labs) */}
-            <section className="py-24 relative overflow-hidden bg-background text-foreground">
+            <section className="py-24 relative overflow-hidden bg-[#D7F601] text-black">
                 <div className="container-boxed relative z-10">
                     <div className="flex flex-col items-start mb-16 space-y-6">
-                        {/* Numbered Circle - Dark Theme */}
-                        <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-serif italic text-purple shadow-lg border border-purple/30">
-                            3
-                        </div>
                         <div className="space-y-4">
-                            <h2 className="text-h2 text-foreground">
+                            <h2 className="text-h2 text-black">
                                 The Heart Of B.Tech AI With Shodh AI:
                             </h2>
-                            <h3 className="text-h3 text-foreground/80">
+                            <h3 className="text-h3 text-black/80">
                                 Our Innovation Labs, Powered by Shodh AI
                             </h3>
-                            <p className="text-body text-foreground/70 max-w-3xl font-medium">
+                            <p className="text-body text-black/80 max-w-3xl font-medium">
                                 The engine of the B.Tech AI with Shodh AI experience is our state-of-the-art Innovation Labs, run by our industry partner, Shodh AI.
                             </p>
                         </div>
@@ -268,8 +634,10 @@ const BtechAIShodhAIPage = () => {
                                     />
                                 </div>
                                 <div className="space-y-3">
-                                    <h4 className="text-h3 text-foreground">{lab.name}</h4>
-                                    <p className="text-sm text-foreground/60 leading-relaxed font-medium">
+                                    <h4 className="text-h3 text-black">
+                                        {lab.name}
+                                    </h4>
+                                    <p className="text-sm text-black/80 leading-relaxed font-medium">
                                         {lab.description}
                                     </p>
                                 </div>
@@ -308,10 +676,6 @@ const BtechAIShodhAIPage = () => {
             <section className="py-24 relative overflow-hidden bg-background-alt text-foreground">
                 <div className="container-boxed relative z-10">
                     <div className="flex flex-col items-start mb-16 space-y-6">
-                        {/* Numbered Circle - Dark Theme */}
-                        <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-serif italic text-purple shadow-lg border border-purple/30">
-                            4
-                        </div>
                         <div className="space-y-4 max-w-4xl">
                             <h2 className="text-h2 text-foreground">
                                 The Job We're Training You For
@@ -422,7 +786,7 @@ const BtechAIShodhAIPage = () => {
             </section>
 
             {/* Section 5: The Outcome */}
-            <section className="py-24 relative overflow-hidden bg-background text-foreground">
+            <section className="py-24 relative overflow-hidden bg-[#5B1DD6] text-foreground">
                 <div className="container-boxed relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <motion.div
@@ -433,10 +797,6 @@ const BtechAIShodhAIPage = () => {
                             className="space-y-8"
                         >
                             <div className="space-y-6">
-                                {/* Numbered Circle - Dark Theme */}
-                                <div className="w-20 h-20 rounded-full bg-purple/20 backdrop-blur-sm flex items-center justify-center text-4xl font-serif italic text-purple shadow-lg border border-purple/30">
-                                    5
-                                </div>
                                 <h2 className="text-h2 text-foreground">
                                     Graduate As A Senior Engineer
                                 </h2>

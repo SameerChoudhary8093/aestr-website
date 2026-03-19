@@ -11,26 +11,26 @@ const CollaborationsPage = () => {
         <main className="bg-background min-h-screen text-foreground font-orbitron overflow-x-hidden selection:bg-accent selection:text-black">
             
             {/* Hero Section */}
-            <section className="relative pt-48 pb-24 lg:pt-64 lg:pb-32 overflow-hidden px-6 bg-[radial-gradient(circle_at_top,rgba(216,246,2,0.05),transparent_50%)]">
-                <div className="container mx-auto relative z-10">
+            <section className="relative pt-48 pb-24 lg:pt-64 lg:pb-32 overflow-hidden px-6 bg-[#5B1DD6]">
+                <div className="container-boxed relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <div className="w-full lg:w-[55%] space-y-8 animate-in fade-in slide-in-from-left duration-1000">
-                            <h1 className="text-hero font-black leading-tight uppercase tracking-tight">
+                        <div className="w-full lg:w-[55%] space-y-8 animate-in fade-in slide-in-from-left duration-1000 text-left">
+                            <h1 className="text-hero font-black leading-tight uppercase tracking-tight text-white">
                                 Your Global Engineering <br />
                                 <span className="text-accent">Journey Starts Here</span>
                             </h1>
                             <div className="space-y-6">
-                                <h3 className="text-h3 font-bold text-foreground/80 italic font-playfair">
+                                <h3 className="text-h3 font-bold text-white/80 italic font-playfair">
                                     A Partnership Built for Your Future
                                 </h3>
-                                <p className="text-lg text-foreground/60 max-w-2xl leading-relaxed font-outfit">
+                                <p className="text-lg text-white/70 max-w-2xl leading-relaxed font-outfit">
                                     Imagine a world-class engineering education that takes you from India to the USA. That's exactly what the new AESTR x Roosevelt University, USA collaboration offers! We're teaming up to give aspiring engineers like you unparalleled global learning, amazing career opportunities, and exposure to cutting-edge industries.
                                 </p>
                             </div>
                         </div>
                         
                         <div className="w-full lg:w-[45%] relative group animate-in fade-in slide-in-from-right duration-1000">
-                            <div className="aspect-[4/3] bg-black/40 rounded-3xl border border-foreground/10 overflow-hidden relative shadow-[0_0_100px_rgba(0,0,0,0.5)] transition-all duration-700 hover:border-accent/40 group-hover:shadow-[0_0_80px_rgba(216,246,2,0.1)]">
+                            <div className="aspect-[4/3] bg-black/60 rounded-3xl border border-white/20 overflow-hidden relative shadow-[0_32px_80px_rgba(0,0,0,0.8)] transition-all duration-700 hover:border-accent/60 group-hover:shadow-[0_32px_80px_rgba(0,0,0,0.95)]">
                                 <Image 
                                     src="/Other/lab-5.webp" 
                                     alt="Roosevelt University Campus" 
@@ -47,7 +47,7 @@ const CollaborationsPage = () => {
                                 </div>
                             </div>
                             {/* Decorative background blur */}
-                            <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/10 rounded-full blur-[100px] -z-10" />
+                            <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/30 rounded-full blur-[110px] -z-10" />
                         </div>
                     </div>
                 </div>
@@ -265,9 +265,9 @@ const CollaborationsPage = () => {
             </section>
 
             {/* Final CTA Section */}
-            <section className="py-24 px-6 bg-white text-black">
+            <section className="py-24 px-6 bg-[#5B1DD6] text-black">
                 <div className="container mx-auto max-w-6xl">
-                    <div className="bg-[#F3E8FF] p-12 md:p-24 rounded-[4rem] border border-purple-100 flex flex-col items-center justify-center text-center gap-12 relative overflow-hidden group shadow-sm hover:shadow-md transition-shadow">
+                    <div className="bg-white p-12 md:p-24 rounded-[4rem] border border-white/20 flex flex-col items-center justify-center text-center gap-12 relative overflow-hidden group shadow-[0_24px_60px_rgba(0,0,0,0.5)] hover:shadow-[0_28px_70px_rgba(0,0,0,0.7)]">
                         <div className="space-y-6 relative z-10">
                             <h2 className="text-h2 font-black uppercase tracking-tight font-orbitron">
                                 Ready to Take the <br />
@@ -281,6 +281,9 @@ const CollaborationsPage = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Shared Bottom CTA + Footer for consistency */}
+            <BottomCTA />
         </main>
     );
 };

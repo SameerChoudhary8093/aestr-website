@@ -1,15 +1,59 @@
+
 'use client';
 
-import React, { useMemo, useState, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
-import type { Container, Engine, ISourceOptions } from "@tsparticles/engine";
 import Image from "next/image";
 
 const FrontierHub = () => {
+    const videoRef = useRef<HTMLVideoElement | null>(null);
+    const videoContainerRef = useRef<HTMLDivElement | null>(null);
+    const [isPlaying, setIsPlaying] = useState(false);
+    const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
+
+    useEffect(() => {
+        const el = videoContainerRef.current;
+        if (!el) return;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                const entry = entries[0];
+                if (entry?.isIntersecting) {
+                    setShouldLoadVideo(true);
+                    observer.disconnect();
+                }
+            },
+            { root: null, threshold: 0.2 }
+        );
+
+        observer.observe(el);
+        return () => observer.disconnect();
+    }, []);
+
+    const toggleVideoPlayback = () => {
+        const video = videoRef.current;
+        if (!video) return;
+
+        if (video.paused) {
+            void video.play();
+            setIsPlaying(true);
+        } else {
+            video.pause();
+            setIsPlaying(false);
+        }
+    };
+
+    const scrollToNextSection = () => {
+        const el = document.getElementById("about-top-one-percent");
+        el?.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+
+    const openAlphaSite = () => {
+        window.open("https://www.aestralpha.com/", "_blank", "noopener,noreferrer");
+    };
+
     return (
-        <section className="relative min-h-screen py-24 bg-background overflow-hidden">
+        <section className="relative min-h-[calc(100svh-4rem)] py-20 md:py-24 bg-background overflow-hidden">
             {/* Neural Network Background - Keeping the existing particles if needed, but the new design focus is on the branded blocks */}
             <div className="absolute inset-0 z-0 pointer-events-none opacity-20 bg-gradient-to-b from-purple/5 to-transparent" />
 
@@ -32,7 +76,7 @@ const FrontierHub = () => {
                             </h3>
                         </div>
 
-                        <div className="bg-black px-6 py-4 rounded-3xl shadow-lg self-end md:self-auto border-2 border-white/20">
+                        <div className="bg-black px-6 py-4 rounded-3xl shadow-lg self-end md:self-auto border-2 border-white/20 lg:translate-x-4">
                             <div className="w-32 md:w-40 relative h-8 md:h-10">
                                 <Image
                                     src="/Herosection/AESTR.webp"
@@ -44,8 +88,8 @@ const FrontierHub = () => {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-end">
-                        <div className="lg:col-span-7 space-y-12">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+                        <div className="lg:col-span-5 space-y-12">
                             {/* Main Heading */}
                             <h2 className="text-5xl md:text-7xl lg:text-8xl font-orbitron font-black text-black leading-none tracking-tight">
                                 <div className="block">INDIA'S SOVEREIGN</div>
@@ -83,35 +127,44 @@ const FrontierHub = () => {
                         </div>
 
                         {/* Interactive Media Section */}
-                        <div className="lg:col-span-5 relative group">
-                            <div className="relative rounded-[3rem] overflow-hidden border-[12px] border-white/20 shadow-[-30px_30px_60px_rgba(0,0,0,0.4)] bg-purple/10 backdrop-blur-sm">
+                        <div className="lg:col-span-7 relative group">
+                            <div ref={videoContainerRef} className="relative rounded-[3rem] overflow-hidden border-[10px] sm:border-[12px] border-white/20 shadow-[-30px_30px_60px_rgba(0,0,0,0.4)] bg-purple/10 backdrop-blur-sm lg:translate-x-6">
                                 <motion.div
                                     whileHover={{ scale: 1.05 }}
                                     transition={{ duration: 0.8 }}
-                                    className="aspect-[4/5] relative"
+                                    className="aspect-video relative min-h-[220px] sm:min-h-[260px]"
                                 >
-                                    <Image
-                                        src="/modi.jpeg"
-                                        alt="PM Modi with Shodh AI CEO"
-                                        fill
-                                        className="object-cover"
+                                    <video
+                                        ref={videoRef}
+                                        className="absolute inset-0 w-full h-full object-contain bg-black"
+                                        src={shouldLoadVideo ? "/pm-video.mp4" : undefined}
+                                        preload={shouldLoadVideo ? "metadata" : "none"}
+                                        playsInline
+                                        controls
+                                        onPlay={() => setIsPlaying(true)}
+                                        onPause={() => setIsPlaying(false)}
+                                        onEnded={() => setIsPlaying(false)}
                                     />
-
-                                    {/* Shodh AI Banner Overlay */}
-                                    <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-[92%] bg-white py-6 px-8 rounded-xl shadow-2xl flex items-center justify-center border-2 border-black/10">
-                                        <p className="text-black font-orbitron font-black text-[11px] md:text-[13px] text-center leading-tight tracking-wide">
-                                            Shodh AI is an <span className="font-black text-purple">IND<span className="text-red-600">I</span>A<span className="text-purple italic">ai</span></span> mission company
-                                        </p>
-                                    </div>
                                 </motion.div>
                             </div>
 
                             {/* Video Play Button Overlay / Minimal Video Trigger */}
                             <div className="absolute top-6 right-6 z-20">
-                                <button className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform">
-                                    <svg className="w-8 h-8 text-purple fill-current" viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
+                                <button
+                                    type="button"
+                                    aria-label={isPlaying ? "Pause video" : "Play video"}
+                                    onClick={toggleVideoPlayback}
+                                    className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform"
+                                >
+                                    {isPlaying ? (
+                                        <svg className="w-7 h-7 text-purple fill-current" viewBox="0 0 24 24">
+                                            <path d="M6 5h4v14H6V5zm8 0h4v14h-4V5z" />
+                                        </svg>
+                                    ) : (
+                                        <svg className="w-8 h-8 text-purple fill-current" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg>
+                                    )}
                                 </button>
                             </div>
                         </div>
@@ -182,21 +235,10 @@ const FrontierHub = () => {
                                                 <span className="text-black font-orbitron font-bold text-xs">INDIA AI MISSION</span>
                                             </div>
 
-                                            <div className="absolute bottom-4 right-4 bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg border border-white/20">
-                                                <span className="text-white font-orbitron font-semibold text-xs">Founding Partner</span>
-                                            </div>
-
-                                            {/* Play button */}
-                                            <div className="absolute inset-0 flex items-center justify-center">
-                                                <motion.button
-                                                    whileHover={{ scale: 1.1 }}
-                                                    whileTap={{ scale: 0.95 }}
-                                                    className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border-2 border-white/40 hover:bg-white/30 transition-all duration-300"
-                                                >
-                                                    <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                                                        <path d="M8 5v14l11-7z" />
-                                                    </svg>
-                                                </motion.button>
+                                            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[92%] bg-white py-4 md:py-5 px-6 md:px-8 rounded-xl shadow-2xl flex items-center justify-center border-2 border-black/10">
+                                                <p className="text-black font-orbitron font-black text-sm md:text-base lg:text-lg text-center leading-tight tracking-wide">
+                                                    B.Tech AI is the <span className="font-black text-purple">IND<span className="text-red-600">I</span>A<span className="text-purple italic">ai</span></span> company
+                                                </p>
                                             </div>
                                         </div>
 
@@ -224,7 +266,7 @@ const FrontierHub = () => {
                                     <p className="text-foreground/80 leading-relaxed text-lg">
                                         Fast-tracks ambitious graduates into high-paying Enterprise Cloud, Data, and Backend roles at global tech giants.
                                     </p>
-                                    <button className="btn-aestr flex items-center gap-3">
+                                    <button onClick={openAlphaSite} className="btn-aestr flex items-center gap-3">
                                         Apply for Alpha
                                         <span className="text-xl">↗</span>
                                     </button>
@@ -244,9 +286,9 @@ const FrontierHub = () => {
                                     <p className="text-foreground/80 leading-relaxed text-lg">
                                         A hardcore undergraduate incubator forging the deep-tech scientists who will invent the intelligence of tomorrow.
                                     </p>
-                                    <button className="btn-aestr flex items-center gap-3 bg-accent text-black">
+                                    <button onClick={scrollToNextSection} className="btn-aestr flex items-center gap-3 bg-accent text-black">
                                         Explore Residency
-                                        <span className="text-xl">↗</span>
+                                        <span className="text-xl">↓</span>
                                     </button>
                                 </motion.div>
                             </div>
