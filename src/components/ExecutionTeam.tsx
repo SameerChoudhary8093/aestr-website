@@ -136,6 +136,53 @@ const ExecutionTeam = () => {
                         </motion.div>
                     ))}
                 </div>
+            
+                {/* 3+1 Global Edge Strip */}
+                <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="mt-24"
+                >
+                    <div className="relative rounded-[2rem] border-[4px] border-[#5B1DD6] bg-[#D7F601] px-4 py-8 md:px-8 md:py-10 lg:px-10 lg:py-12 shadow-[0_18px_40px_rgba(0,0,0,0.6)] overflow-hidden">
+                        {/* Top-left halo decoration, keeping original smooth corner */}
+                        <div className="pointer-events-none absolute top-3 left-5 w-10 h-10 text-[#5B1DD6]">
+                            <svg viewBox="0 0 40 40" fill="none" className="w-full h-full rotate-12">
+                                <ellipse cx="20" cy="18" rx="12" ry="6" stroke="currentColor" strokeWidth="2.2" />
+                                <path d="M10 18c2 1.2 5.5 2 10 2s8-0.8 10-2" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+                                <rect x="16" y="10" width="2.3" height="2.3" rx="0.4" fill="currentColor" transform="rotate(18 17.15 11.15)" />
+                                <rect x="20" y="8" width="2.3" height="2.3" rx="0.4" fill="currentColor" transform="rotate(18 21.15 9.15)" />
+                                <rect x="24" y="10" width="2.3" height="2.3" rx="0.4" fill="currentColor" transform="rotate(18 25.15 11.15)" />
+                            </svg>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] gap-8 md:gap-12 items-stretch">
+                            {/* Left: Image */}
+                            <div className="relative w-full rounded-2xl overflow-hidden min-h-[240px] md:min-h-[300px] lg:min-h-[340px]">
+                                <Image
+                                    src="/Other/roosevelt-university.jpg"
+                                    alt="Roosevelt University City Campus"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+
+                            {/* Right: Text Content */}
+                            <div className="flex flex-col justify-center space-y-5 md:space-y-6 text-left">
+                                <h3 className="text-3xl md:text-4xl lg:text-[2.6rem] font-orbitron font-extrabold text-[#5B1DD6] leading-snug">
+                                    The 3+1 Global Edge
+                                    <span className="block text-base md:text-lg lg:text-2xl font-orbitron font-bold text-[#1A1040]">
+                                        (Your International Pipeline)
+                                    </span>
+                                </h3>
+                                <p className="text-[17px] md:text-[19px] lg:text-[20px] leading-relaxed font-medium text-black/90 max-w-2xl">
+                                    Don&apos;t just conquer India. Conquer the world. Spend 3 years building your portfolio at the AESTR Jaipur Hub, and 1 year at a premier university in the US, UK, or Europe. We have 25+ global education partners. The top 10% of our residents receive exclusive scholarships for their international year. You get a B.Tech degree, global exposure, and a world-class portfolio.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </motion.div>
             </div>
 
             {/* Background elements */}

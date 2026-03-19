@@ -489,7 +489,7 @@ const CyberSecurityPage = () => {
                         {/* Four boxes */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-16">
                             {[
-                                { title: "Aestr Pro Track", sub: "35LPA+ jobs", color: "bg-[#FFC9E3] border-[#FF99C8]" },
+                                { title: "B.Tech AI With Shodh AI Track", sub: "35LPA+ jobs", color: "bg-[#FFC9E3] border-[#FF99C8]" },
                                 { title: "Global Opportunities", sub: "2+2, 3+1 Programs", color: "bg-[#E3D4FF] border-[#C3AAFF]" },
                                 { title: "Industry Partner Training", sub: "& Direct Placements", color: "bg-[#C9F6FF] border-[#99E8FF]" },
                                 { title: "Nurturing Entrepreneurs", sub: "Silicon Valley of AI", color: "bg-[#FFC9FF] border-[#FF99FF]" }

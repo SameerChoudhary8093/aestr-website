@@ -236,8 +236,18 @@ const FrontierHub = () => {
                                             </div>
 
                                             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[92%] bg-white py-4 md:py-5 px-6 md:px-8 rounded-xl shadow-2xl flex items-center justify-center border-2 border-black/10">
-                                                <p className="text-black font-orbitron font-black text-sm md:text-base lg:text-lg text-center leading-tight tracking-wide">
-                                                    B.Tech AI is the <span className="font-black text-purple">IND<span className="text-red-600">I</span>A<span className="text-purple italic">ai</span></span> company
+                                                <p className="text-black font-orbitron font-black text-sm md:text-base lg:text-lg text-center leading-tight tracking-wide flex items-center justify-center gap-2">
+                                                    <span>B.Tech AI is the</span>
+                                                    <span className="inline-flex items-center justify-center bg-[#5B1DD6] px-3 py-1 rounded-full shadow-sm">
+                                                        <Image
+                                                            src="/Herosection/india-ai-logo-white.png"
+                                                            alt="INDIAai logo"
+                                                            width={120}
+                                                            height={28}
+                                                            className="h-6 md:h-7 w-auto object-contain"
+                                                        />
+                                                    </span>
+                                                    <span>company</span>
                                                 </p>
                                             </div>
                                         </div>

@@ -4,7 +4,6 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import FoundingTeamVideo from '@/components/FoundingTeamVideo';
-import BottomCTA from '@/components/BottomCTA';
 
 
 const comparisons = [
@@ -128,8 +127,6 @@ export default function DayAtAestr() {
             {/* Section 3: Founding Team */}
             <FoundingTeamVideo />
 
-            {/* Section 4: Footer sections in BottomCTA */}
-            <BottomCTA />
         </main>
     );
 }

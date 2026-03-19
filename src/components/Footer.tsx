@@ -14,7 +14,7 @@ const Footer = () => {
                     <div className="lg:w-3/5 space-y-10">
                         <div className="space-y-4">
                             <h2 className="text-4xl md:text-5xl lg:text-7xl font-orbitron font-bold text-foreground leading-tight max-w-2xl">
-                                Only at Aestr you are trained for <br />
+                                Only at Aestr <span className="whitespace-nowrap">you are trained for</span> <br />
                                 <span className="text-accent font-orbitron">future safe professions</span>
                             </h2>
                             <p className="subheading-font text-foreground/60">

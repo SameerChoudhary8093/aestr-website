@@ -20,7 +20,11 @@ const BottomCTA = () => {
                             <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-6 md:space-y-10 text-left">
                                 <div className="space-y-4 md:space-y-6">
                                     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-orbitron font-extrabold text-white leading-[1.15] tracking-tight">
-                                        Only at <span className="text-accent italic">AESTR</span> you are trained for future safe professions
+                                        <span className="block">
+                                            Only at <span className="text-accent italic">AESTR</span>{' '}
+                                            <span className="whitespace-nowrap">you are trained for</span>
+                                        </span>
+                                        <span className="block">future safe professions</span>
                                     </h2>
                                     <p className="text-white/40 font-orbitron text-[10px] md:text-xs font-black uppercase tracking-[0.3em]">
                                         Browse further to know more about our courses

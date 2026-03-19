@@ -3,7 +3,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import BottomCTA from '@/components/BottomCTA';
 
 
 const proTrackFeatures = [
@@ -107,7 +106,7 @@ export default function AestrPathways() {
                         <div className="flex items-center gap-4">
                             <span className="w-12 h-12 rounded-full bg-purple/10 border border-purple/20 flex items-center justify-center text-2xl font-orbitron font-bold text-purple-400">1</span>
                             <h2 className="text-2xl md:text-4xl font-orbitron font-bold uppercase tracking-tight">
-                                AESTR PRO TRACK <span className="italic font-light text-white/60">Elite Global Careers</span> <span className="bg-accent/10 border border-accent/20 text-accent px-4 py-1 rounded-lg text-xl ml-2 font-bold">(₹35 LPA+)</span>
+                                B.Tech AI With Shodh AI TRACK <span className="italic font-light text-white/60">Elite Global Careers</span> <span className="bg-accent/10 border border-accent/20 text-accent px-4 py-1 rounded-lg text-xl ml-2 font-bold">(₹35 LPA+)</span>
                             </h2>
                         </div>
                         <div className="space-y-2">
@@ -380,7 +379,6 @@ export default function AestrPathways() {
                 </div>
             </section>
 
-            <BottomCTA />
         </main>
     );
 }
