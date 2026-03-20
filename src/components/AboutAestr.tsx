@@ -60,11 +60,11 @@ const AboutAestr = () => {
                                         <h4 className="text-[11px] md:text-xs font-orbitron tracking-[0.2em] text-foreground/40 font-bold uppercase">Major specialization</h4>
                                         <div className="flex flex-wrap gap-2 md:gap-3">
                                             {[
-                                                { name: "Software engineering", href: "/software-engineering" },
-                                                { name: "Cloud engineering", href: "/btech-cloud-engineering" },
-                                                { name: "Data science", href: "/data-science" },
-                                                { name: "AI & ML", href: "/ai-ml" },
-                                                { name: "Cyber security", href: "/cyber-security" }
+                                                { name: "AI & Machine Learning", href: "/ai-ml" },
+                                                { name: "Data Engineering", href: "/data-science" },
+                                                { name: "Robotics", href: "/robotics" },
+                                                { name: "Software & Cloud Engineering", href: "/software-cloud-engineering" },
+                                                { name: "Cyber Security", href: "/cyber-security" }
                                             ].map((item) => (
                                                 <Link
                                                     key={item.name}
@@ -80,7 +80,7 @@ const AboutAestr = () => {
                                     <div className="space-y-4 md:space-y-6">
                                         <h4 className="text-[11px] md:text-xs font-orbitron tracking-[0.2em] text-foreground/40 font-bold text-white/40">Minor specialization...</h4>
                                         <div className="flex flex-wrap gap-2 md:gap-3">
-                                            {["Robotics", "Bioinformatics", "Industry & manufacturing", "Design", "Fintech", "Nanotechnology", "Geoinformatics", "Chip & semiconductor", "Smart cities"].map((item) => (
+                                            {["Mechatronics in EV", "Smart Manufacturing", "Nano Technology", "Smart Cities", "Bio-Informatics", "Semiconductor & RISC-V", "Geo-Informatics", "Product Design", "Fintech", "Bio Medical"].map((item) => (
                                                 <span key={item} className="px-4 py-2 text-xs md:text-sm bg-foreground/5 border border-foreground/10 rounded-full text-foreground/70 hover:border-accent/40 hover:text-accent transition-all cursor-default font-bold tracking-tight">
                                                     {item}
                                                 </span>

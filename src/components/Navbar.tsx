@@ -86,13 +86,13 @@ const Navbar = () => {
                 />
 
                 {/* Navbar Content */}
-                <div className="flex items-center justify-between relative z-10 w-full px-3">
+                <div className="flex items-center justify-between relative z-10 w-full">
                     {/* Left: AESTR Logo */}
-                    <div className="flex-1 flex justify-start">
+                    <div className="flex-1 flex justify-start -ml-20">
                         <Link href="/#hero" onClick={handleHomeClick} className="flex items-center group/logo">
-                            <div className="w-[140px] md:w-[200px] relative h-8 md:h-10 transition-all duration-500 group-hover/logo:scale-105">
+                            <div className="w-[300px] md:w-[400px] relative h-16 md:h-20 transition-all duration-500 group-hover/logo:scale-105">
                                 <Image
-                                    src="/Herosection/AESTR.webp"
+                                    src="/Herosection/by gyan vihar 2 neon.png"
                                     alt="Aestr Logo"
                                     fill
                                     className="object-contain brightness-[1.1]"
@@ -146,12 +146,12 @@ const Navbar = () => {
                                         priority
                                     />
                                 </div>
-                                <div className="relative h-16 w-16 transition-all duration-500 hover:scale-110 flex items-center justify-center">
+                                <div className="relative h-24 w-24 transition-all duration-500 hover:scale-110 flex items-center justify-center">
                                     <Image
                                         src="/Herosection/naac white  .png"
                                         alt="NAAC A+"
                                         fill
-                                        sizes="64px"
+                                        sizes="96px"
                                         className="object-contain"
                                         priority
                                     />

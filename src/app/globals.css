@@ -235,7 +235,7 @@ body {
   justify-content: center;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-size: 0.85rem;
+  font-size: 14px;
 }
 
 .btn-aestr:hover {

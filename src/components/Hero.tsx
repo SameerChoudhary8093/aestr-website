@@ -29,17 +29,15 @@ const Hero = () => {
                         className="space-y-6 md:space-y-8 lg:col-span-7"
                     >
                         <div className="space-y-4">
-                            <h1 className="text-5xl md:text-7xl lg:text-8xl font-orbitron font-black tracking-tighter leading-none">
-                                <span className="text-foreground block">The B.Tech</span>
-                                <span className="text-foreground block">is dead</span>
+                            <h1 className="text-[84px] font-orbitron font-black tracking-tighter leading-none whitespace-nowrap">
+                                The B.Tech is dead
                             </h1>
-                            <p className="text-xl md:text-2xl text-foreground font-bold max-w-2xl leading-tight">
+                            <p className="text-[28px] text-foreground font-bold max-w-2xl leading-tight whitespace-nowrap">
                                 The AESTR Solution: <span className="text-accent">The 4-Year Engineering Residency.</span>
                             </p>
-                            <p className="text-lg text-foreground/80 font-medium max-w-xl leading-relaxed">
+                            <p className="text-[16px] text-foreground/80 font-medium max-w-xl leading-relaxed">
                                 The AESTR Solution: The 4-Year Engineering Residency
                                 AESTR by Gyan Vihar is built on a single, uncompromising premise: Stop studying. Start building. We are not a college we are a Silicon Valley-style incubator.
-
                             </p>
                         </div>
 
@@ -77,7 +75,7 @@ const Hero = () => {
                                     >
                                         <div className="relative">
                                             <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-lg blur-md"></div>
-                                            <Image src="/Herosection/University of cambridge.webp" alt="Cambridge" width={180} height={50} className="relative h-8 md:h-11 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300 filter drop-shadow-lg" />
+                                            <Image src="/Herosection/University of cambridge.webp" alt="Cambridge" width={180} height={50} className="relative h-12 md:h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300 filter drop-shadow-lg" />
                                         </div>
                                     </motion.div>
 
@@ -88,7 +86,7 @@ const Hero = () => {
                                     >
                                         <div className="relative">
                                             <div className="absolute inset-0 bg-gradient-to-r from-accent/30 to-purple/30 rounded-lg blur-md animate-pulse"></div>
-                                            <Image src="/Herosection/india-ai-logo-white.png" alt="INDIAai" width={200} height={60} className="relative h-10 md:h-12 w-auto object-contain opacity-95 hover:opacity-100 transition-all duration-300 filter drop-shadow-xl" />
+                                            <Image src="/Herosection/india-ai-logo-white.png" alt="INDIAai" width={200} height={60} className="relative h-14 md:h-16 w-auto object-contain opacity-95 hover:opacity-100 transition-all duration-300 filter drop-shadow-xl" />
                                         </div>
                                     </motion.div>
 
@@ -99,7 +97,7 @@ const Hero = () => {
                                     >
                                         <div className="relative">
                                             <div className="absolute inset-0 bg-gradient-to-r from-orange-400/20 to-red-400/20 rounded-lg blur-md"></div>
-                                            <Image src="/ProgramPartners/Shodh-ai.svg" alt="Shodh AI" width={180} height={45} className="relative h-8 md:h-10 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300 filter drop-shadow-lg" />
+                                            <Image src="/ProgramPartners/Shodh-ai.svg" alt="Shodh AI" width={180} height={45} className="relative h-12 md:h-14 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300 filter drop-shadow-lg" />
                                         </div>
                                     </motion.div>
 
@@ -110,7 +108,7 @@ const Hero = () => {
                                     >
                                         <div className="relative">
                                             <div className="absolute inset-0 bg-gradient-to-r from-red-400/20 to-yellow-400/20 rounded-lg blur-md"></div>
-                                            <Image src="/ProgramPartners/DRDO.webp" alt="DRDO" width={80} height={80} className="relative h-12 md:h-14 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300 filter drop-shadow-lg" />
+                                            <Image src="/ProgramPartners/DRDO.webp" alt="DRDO" width={80} height={80} className="relative h-14 md:h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300 filter drop-shadow-lg" />
                                         </div>
                                     </motion.div>
 
@@ -118,22 +116,6 @@ const Hero = () => {
                                     <div className="absolute inset-0 rounded-[1.5rem] bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                                 </div>
                             </div>
-                        </motion.div>
-
-                        {/* Apply Now Button */}
-                        <motion.div
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: 0.7 }}
-                        >
-                            <button
-                                onClick={scrollToRegistrationForm}
-                                className="btn-aestr flex items-center gap-3 group cursor-pointer !bg-accent !text-black text-lg py-4 px-10"
-                            >
-                                Apply Now
-                                <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">↗</span>
-                            </button>
                         </motion.div>
                     </motion.div>
 

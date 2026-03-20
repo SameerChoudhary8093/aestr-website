@@ -24,8 +24,8 @@ const AboutPointTwo = () => {
                                 <h3 className="text-h2 text-foreground">
                                     Built By <span className="opacity-90 ml-2">AI Engineers</span>
                                 </h3>
-                            <p className="text-body text-foreground/90 font-bold">
-                                Learn from the architects of tomorrow’s AI. AESTR is the brainchild of leading AI engineers dedicated to cultivating the next generation of tech innovators.
+                            <p className="text-[16px] text-foreground/90 font-bold">
+                                Learn from the architects of tomorrow's AI. AESTR is the brainchild of leading AI engineers dedicated to cultivating the next generation of tech innovators.
                             </p>
                         </div>
                     </div>
@@ -39,8 +39,8 @@ const AboutPointTwo = () => {
                             { title: 'Young, Agile, And Connected', accent: 'border-foreground/10', desc: 'We are real engineers, deeply embedded in the industry. We speak your language & are committed to transforming you into our colleague within four years.' }
                         ].map((card) => (
                             <div key={card.title} className={`glass p-8 rounded-2xl border-t-2 ${card.accent} hover:-translate-y-1 transition-transform duration-300 group text-left`}>
-                                <h4 className="text-h3 text-foreground mb-4 leading-tight group-hover:text-accent transition-colors">{card.title}</h4>
-                                <p className="text-body text-foreground/80 font-bold">{card.desc}</p>
+                                <h4 className="text-[28px] text-foreground mb-4 leading-tight group-hover:text-accent transition-colors">{card.title}</h4>
+                                <p className="text-[16px] text-foreground/80 font-normal">{card.desc}</p>
                             </div>
                         ))}
                     </div>

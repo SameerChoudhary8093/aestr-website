@@ -7,7 +7,7 @@ const careerData = [
     {
         title: 'Autonomous Systems Engineer',
         sub: '3x growth expected in deep-tech and climate-focused sectors.',
-        major: 'AI/ML',
+        major: 'AI & Machine Learning',
         minor: 'Robotics',
         lab: 'Embodied Brain lab',
         image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80'
@@ -15,15 +15,15 @@ const careerData = [
     {
         title: 'AI Computer Systems Integrator',
         sub: '3x growth expected in deep-tech and climate-focused sectors',
-        major: 'AI/ML',
-        minor: 'Chip & Semiconductor',
+        major: 'AI & Machine Learning',
+        minor: 'Semiconductor & RISC-V',
         lab: 'RISC V System Lab',
         image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80'
     },
     {
         title: 'Edge AI Engineer ',
         sub: '3x growth expected in deep-tech and climate-focused sectors',
-        major: 'Cloud Engineering',
+        major: 'Software & Cloud Engineering',
         minor: 'Robotics',
         lab: 'Augmented Human Lab',
         image: 'https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=800&q=80'
@@ -31,7 +31,7 @@ const careerData = [
     {
         title: 'Cloud AI Infrastructure Architect',
         sub: '3x growth expected in deep-tech and climate-focused sectors',
-        major: 'Cloud Engineering',
+        major: 'Software & Cloud Engineering',
         minor: 'Robotics',
         lab: 'Soft Brain lab',
         image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80'
@@ -39,7 +39,7 @@ const careerData = [
     {
         title: 'Fintech AI Engineer',
         sub: 'From fraud detection to smart loans—this role is at the heart of India’s $150B fintech revolution.',
-        major: 'Data Science',
+        major: 'Data Engineering',
         minor: 'Fintech',
         lab: 'Foundation Model Lab',
         image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80'
@@ -47,15 +47,15 @@ const careerData = [
     {
         title: 'AI Materials Innovation Engineer',
         sub: 'An AI Materials Innovation Engineer applies AI to discover and optimize new materials faster.',
-        major: 'AI/ML',
-        minor: 'Nanotech',
+        major: 'AI & Machine Learning',
+        minor: 'Nano Technology',
         lab: 'Foundation Model Lab',
         image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80'
     },
     {
         title: 'Multi-Modal AI Model Trainer',
         sub: 'A Multi-Modal AI Model Trainer builds AI models that learn from text, images, and more.',
-        major: 'AI/ML',
+        major: 'AI & Machine Learning',
         minor: 'Robotics',
         lab: 'embodied ‘Brain’ lab, soft “brain” lab',
         image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80'
@@ -63,7 +63,7 @@ const careerData = [
     {
         title: 'Robotics AI Specialist',
         sub: 'A Robotics AI Specialist develops intelligent systems that enable robots to perceive, learn, and act autonomously.',
-        major: 'AI/ML',
+        major: 'AI & Machine Learning',
         minor: 'Robotics',
         lab: 'Embodied Brain Lab',
         image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80'
@@ -71,15 +71,15 @@ const careerData = [
     {
         title: 'Bio-AI Specialist',
         sub: 'A Bio-AI Specialist uses AI to analyze and solve complex problems in biology and healthcare.',
-        major: 'AI/ML',
-        minor: 'bio-informatics',
+        major: 'AI & Machine Learning',
+        minor: 'Bio-Informatics',
         lab: 'Embodied ‘Brain’ lab',
         image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80'
     },
     {
         title: 'AI-Powered Cybersecurity Analyst',
         sub: 'An Ethical AI Engineer ensures AI systems are fair, transparent, and aligned with human values.',
-        major: 'Cybersecurity',
+        major: 'Cyber Security',
         lab: 'Soft Brain Lab',
         image: 'https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&w=800&q=80'
     },

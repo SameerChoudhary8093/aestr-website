@@ -8,7 +8,8 @@ import { motion } from 'framer-motion';
 const Footer = () => {
     return (
         <footer className="w-full">
-            {/* Top CTA Section - Dark Theme */}
+            {/* Top CTA Section - Dark Theme - Temporarily Hidden */}
+            {false && (
             <section className="bg-background-alt py-24 relative overflow-hidden border-t border-white/5">
                 <div className="container-boxed relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
                     <div className="lg:w-3/5 space-y-10">
@@ -46,6 +47,7 @@ const Footer = () => {
                 <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-purple/10 blur-[150px] rounded-full pointer-events-none" />
                 <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
             </section>
+            )}
 
             {/* Bottom Branding Section - Deeper Black */}
             <section className="bg-background text-white py-20 relative overflow-hidden border-t border-white/5">

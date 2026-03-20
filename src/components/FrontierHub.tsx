@@ -77,9 +77,9 @@ const FrontierHub = () => {
                         </div>
 
                         <div className="bg-black px-6 py-4 rounded-3xl shadow-lg self-end md:self-auto border-2 border-white/20 lg:translate-x-4">
-                            <div className="w-32 md:w-40 relative h-8 md:h-10">
+                            <div className="w-48 md:w-64 relative h-12 md:h-16">
                                 <Image
-                                    src="/Herosection/AESTR.webp"
+                                    src="/Herosection/by gyan vihar 2 neon.png"
                                     alt="AESTR Logo"
                                     fill
                                     className="object-contain brightness-150 contrast-125"
@@ -88,17 +88,16 @@ const FrontierHub = () => {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-                        <div className="lg:col-span-5 space-y-12">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-start">
+                        <div className="lg:col-span-5">
                             {/* Main Heading */}
-                            <h2 className="text-5xl md:text-7xl lg:text-8xl font-orbitron font-black text-black leading-none tracking-tight">
-                                <div className="block">INDIA'S SOVEREIGN</div>
-                                <div className="block">AI HUB</div>
+                            <h2 className="text-[48px] font-orbitron font-black text-black leading-none tracking-tight whitespace-nowrap -mt-9">
+                                INDIA'S SOVEREIGN AI HUB
                             </h2>
 
                             {/* B.Tech AI Powered by Shodh AI Card */}
-                            <div className="glass !bg-[#000000] p-8 md:p-10 rounded-[2.5rem] border border-white/5 inline-block max-w-lg shadow-2xl">
-                                <h4 className="text-3xl md:text-4xl font-orbitron font-black text-[#D8F602] mb-1">
+                            <div className="glass !bg-[#000000] p-8 md:p-10 rounded-[2.5rem] border border-white/5 inline-block max-w-lg shadow-2xl mt-16" style={{ height: '440px' }}>
+                                <h4 className="text-[24px] font-orbitron font-black text-[#D8F602] mb-5">
                                     B.Tech AI
                                 </h4>
                                 <div className="flex items-center gap-3 mb-6">
@@ -112,7 +111,7 @@ const FrontierHub = () => {
                                         />
                                     </div>
                                 </div>
-                                <p className="text-white/80 text-[14px] leading-relaxed font-medium">
+                                <p className="text-white/80 text-[16px] leading-relaxed font-medium">
                                     This course is started by Dr. Arastu, CEO of Shodh AI, to
                                     prepare the AI engineers that India needs to lead the world.
                                     The premier Elite 60 program is highly selective and is built
@@ -127,45 +126,25 @@ const FrontierHub = () => {
                         </div>
 
                         {/* Interactive Media Section */}
-                        <div className="lg:col-span-7 relative group">
-                            <div ref={videoContainerRef} className="relative rounded-[3rem] overflow-hidden border-[10px] sm:border-[12px] border-white/20 shadow-[-30px_30px_60px_rgba(0,0,0,0.4)] bg-purple/10 backdrop-blur-sm lg:translate-x-6">
-                                <motion.div
-                                    whileHover={{ scale: 1.05 }}
-                                    transition={{ duration: 0.8 }}
-                                    className="aspect-video relative min-h-[220px] sm:min-h-[260px]"
+                        <div className="lg:col-span-7 relative group flex items-start">
+                            <div ref={videoContainerRef} className="relative rounded-[2.5rem] overflow-hidden border-2 border-gray-300 shadow-lg mt-19">
+                                <div
+                                    className="relative"
+                                    style={{ height: '440px' }}
                                 >
                                     <video
-                                        ref={videoRef}
-                                        className="absolute inset-0 w-full h-full object-contain bg-black"
-                                        src={shouldLoadVideo ? "/pm-video.mp4" : undefined}
-                                        preload={shouldLoadVideo ? "metadata" : "none"}
+                                        className="w-full h-full object-cover"
+                                        style={{ height: '440px' }}
+                                        autoPlay
+                                        muted
+                                        loop
                                         playsInline
                                         controls
-                                        onPlay={() => setIsPlaying(true)}
-                                        onPause={() => setIsPlaying(false)}
-                                        onEnded={() => setIsPlaying(false)}
-                                    />
-                                </motion.div>
-                            </div>
-
-                            {/* Video Play Button Overlay / Minimal Video Trigger */}
-                            <div className="absolute top-6 right-6 z-20">
-                                <button
-                                    type="button"
-                                    aria-label={isPlaying ? "Pause video" : "Play video"}
-                                    onClick={toggleVideoPlayback}
-                                    className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform"
-                                >
-                                    {isPlaying ? (
-                                        <svg className="w-7 h-7 text-purple fill-current" viewBox="0 0 24 24">
-                                            <path d="M6 5h4v14H6V5zm8 0h4v14h-4V5z" />
-                                        </svg>
-                                    ) : (
-                                        <svg className="w-8 h-8 text-purple fill-current" viewBox="0 0 24 24">
-                                            <path d="M8 5v14l11-7z" />
-                                        </svg>
-                                    )}
-                                </button>
+                                    >
+                                        <source src="/pm-video.mp4" type="video/mp4" />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -192,17 +171,17 @@ const FrontierHub = () => {
                                 {/* Left side - Text content */}
                                 <div className="lg:col-span-7 space-y-8">
                                     <div className="relative">
-                                        {/* Quote marks decoration */}
-                                        <div className="absolute -top-4 -left-4 text-6xl text-accent/20 font-serif">"</div>
-
-                                        <p className="text-2xl md:text-3xl font-bold text-white leading-tight mb-8 relative z-10">
-                                            <span className="text-accent">Traditional education is dead.</span> Aestr is a unified tech incubator built for one reason: to train the engineers who will architect AI, rather than be replaced by it.
+                                        <p className="text-[48px] font-orbitron font-black text-white leading-tight mb-8 relative z-10 whitespace-nowrap">
+                                            The B.Tech is dead
+                                        </p>
+                                        <p className="text-[16px] text-white/90 leading-relaxed relative z-10 max-w-3xl">
+                                            The AESTR Solution: The 4-Year Engineering Residency AESTR by Gyan Vihar is built on a single, uncompromising premise: Stop studying. Start building. We are not a college we are a Silicon Valley-style incubator.
                                         </p>
                                     </div>
 
-                                    <div className="relative pl-6 border-l-2 border-accent/30">
-                                        <p className="text-lg md:text-xl text-white/90 leading-relaxed md:leading-loose">
-                                            At the core of this ecosystem is <a href="https://shodh.ai/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 px-4 py-1.5 mx-1 bg-white text-[#5B1DD6] text-sm md:text-base font-orbitron font-extrabold rounded-full hover:bg-accent hover:text-black transition-colors shadow-lg align-middle translate-y-[-2px]">Shodh AI ↗</a>—India's premier frontier AI company. As one of the 12 companies handpicked for the <span className="text-accent font-semibold">INDIA AI Mission</span>, they are building the nation's sovereign foundational models and the world's first large Physics Model to solve massive, future-defining problems.
+                                    <div className="relative">
+                                        <p className="text-[16px] text-white/90 leading-relaxed md:leading-loose">
+                                            At the core of this ecosystem is <a href="https://shodh.ai/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 px-4 py-1.5 mx-1 bg-white text-[#5B1DD6] text-sm md:text-base font-orbitron font-extrabold rounded-full hover:bg-accent hover:text-black transition-colors shadow-lg align-middle translate-y-[-2px]">Shodh AI ↗</a>India's premier frontier AI company. As one of the 12 companies handpicked for the <span className="text-accent font-semibold">INDIA AI Mission</span>, they are building the nation's sovereign foundational models and the world's first large Physics Model to solve massive, future-defining problems.
                                         </p>
                                     </div>
                                 </div>
@@ -235,8 +214,8 @@ const FrontierHub = () => {
                                                 <span className="text-black font-orbitron font-bold text-xs">INDIA AI MISSION</span>
                                             </div>
 
-                                            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[92%] bg-white py-4 md:py-5 px-6 md:px-8 rounded-xl shadow-2xl flex items-center justify-center border-2 border-black/10">
-                                                <p className="text-black font-orbitron font-black text-sm md:text-base lg:text-lg text-center leading-tight tracking-wide flex items-center justify-center gap-2">
+                                            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[92%] bg-white py-1 md:py-2 px-4 md:px-6 rounded-xl shadow-2xl flex items-center justify-center border-2 border-black/10">
+                                                <p className="text-black font-orbitron font-black text-[16px] text-center leading-tight tracking-wide flex items-center justify-center gap-2">
                                                     <span>B.Tech AI is the</span>
                                                     <span className="inline-flex items-center justify-center bg-[#5B1DD6] px-3 py-1 rounded-full shadow-sm">
                                                         <Image
@@ -281,35 +260,6 @@ const FrontierHub = () => {
                                         <span className="text-xl">↗</span>
                                     </button>
                                 </motion.div>
-
-                                {/* AESTR B.TECH */}
-                                <motion.div
-                                    initial={{ opacity: 0, x: 30 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    className="glass p-8 md:p-12 space-y-6 border border-accent/10 hover:border-accent/30 transition-all duration-500 bg-white/5 rounded-[2.5rem]"
-                                >
-                                    <div className="inline-block px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent font-orbitron text-xs font-bold tracking-widest uppercase">
-                                        4-Year Engineering Residency
-                                    </div>
-                                    <h3 className="text-3xl md:text-4xl font-orbitron font-extrabold text-foreground">Aestr B.Tech</h3>
-                                    <p className="text-foreground/80 leading-relaxed text-lg">
-                                        A hardcore undergraduate incubator forging the deep-tech scientists who will invent the intelligence of tomorrow.
-                                    </p>
-                                    <button onClick={scrollToNextSection} className="btn-aestr flex items-center gap-3 bg-accent text-black">
-                                        Explore Residency
-                                        <span className="text-xl">↓</span>
-                                    </button>
-                                </motion.div>
-                            </div>
-
-                            {/* Bottom accent line */}
-                            <div className="mt-8 flex items-center justify-between">
-                                <div className="flex-1 h-0.5 bg-gradient-to-r from-transparent via-purple/20 to-transparent"></div>
-                                <div className="px-4">
-                                    <span className="text-white text-sm font-orbitron">Building Tomorrow's AI Today</span>
-                                </div>
-                                <div className="flex-1 h-0.5 bg-gradient-to-r from-transparent via-purple/20 to-transparent"></div>
                             </div>
                         </div>
                     </div>

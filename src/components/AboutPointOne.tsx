@@ -26,7 +26,7 @@ const AboutPointOne = () => {
                                 CSE 2030: <span className="opacity-90">Computer Science Won't Be Same Ever Again</span>
                             </h2>
                         </div>
-                        <p className="text-body text-black/90 font-bold">
+                        <p className="text-[16px] text-black/90 font-bold">
                             The world of Computer Science is transforming by 2030...
                         </p>
                     </div>
@@ -46,15 +46,14 @@ const AboutPointOne = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                                className="glass !bg-black/85 !border-black/5 p-8 rounded-3xl hover:-translate-y-1 transition-transform duration-500 text-left min-h-[300px] flex flex-col"
+                                className="glass !bg-black/85 !border-black/5 p-8 rounded-3xl hover:-translate-y-1 transition-transform duration-500 text-left min-h-[300px] flex flex-col relative overflow-hidden"
                             >
-                                <h4 className="text-h3 text-[#EAF0BD] mb-6 leading-tight transition-colors">{card.title}</h4>
-                                <p className="text-body text-[#EAF0BD] font-normal">{card.desc}</p>
+                                <h4 className="text-[28px] text-[#EAF0BD] mb-6 leading-tight transition-colors">{card.title}</h4>
+                                <p className="text-[16px] text-[#EAF0BD] font-normal">{card.desc}</p>
                                 
-                                {/* Decor shape like in image */}
-                                <div className="mt-auto pt-4 flex justify-end opacity-20">
-                                    <div className="w-12 h-12 border-b-2 border-r-2 border-accent" />
-                                </div>
+                                {/* Decorative corners */}
+                                <div className="absolute top-2 right-2 w-8 h-8 border-t-2 border-r-2 border-accent rounded-tr-lg"></div>
+                                <div className="absolute bottom-2 left-2 w-8 h-8 border-b-2 border-l-2 border-accent rounded-bl-lg"></div>
                             </motion.div>
                         ))}
                     </div>
@@ -70,23 +69,24 @@ const AboutPointOne = () => {
                             className="glass !bg-black/90 !border-black/5 p-8 md:p-12 rounded-[2.5rem] text-left relative overflow-hidden group"
                         >
                             <div className="relative z-10 space-y-8">
-                                <h4 className="text-h3 text-[#EAF0BD] leading-tight">
+                                <h4 className="text-[28px] text-[#EAF0BD] leading-tight">
                                     Unparalleled Flexibility & <br />
-                                    <span className="italic opacity-80">Cutting-Edge Curriculum:</span>
+                                    Cutting-Edge Curriculum:
                                 </h4>
-                                <ul className="space-y-6">
+                                <div className="space-y-6">
                                     { [
                                         "Choose from 5 industry-focused Majors and 9 specialized Minors to tailor your unique expertise.",
                                         "Dive into 5 revolutionary Innovation Labs, unlike any in the world.",
                                         "Gain exclusive Apple Swift Application Development training directly from Apple.",
                                         "Learn from global master teachers, experts in defense technologies, robotics, computer vision, and engine building."
                                     ].map((point, idx) => (
-                                        <li key={idx} className="flex gap-4">
-                                            <span className="flex-shrink-0 w-3 h-3 bg-[#EAF0BD] rounded-full mt-2" />
-                                            <p className="text-body text-[#EAF0BD] font-normal">{point}</p>
-                                        </li>
-                                    ))} </ul>
+                                        <p key={idx} className="text-[16px] text-[#EAF0BD] font-normal">{point}</p>
+                                    ))} 
+                                </div>
                             </div>
+                            {/* Decorative corners */}
+                            <div className="absolute top-2 right-2 w-8 h-8 border-t-2 border-r-2 border-accent rounded-tr-lg"></div>
+                            <div className="absolute bottom-2 left-2 w-8 h-8 border-b-2 border-l-2 border-accent rounded-bl-lg"></div>
                             <div className="absolute bottom-0 right-0 w-32 h-32 bg-accent/5 blur-2xl rounded-full" />
                         </motion.div>
 
@@ -98,29 +98,37 @@ const AboutPointOne = () => {
                             className="glass !bg-black/90 !border-black/5 p-8 md:p-12 rounded-[2.5rem] text-left relative overflow-hidden group"
                         >
                             <div className="relative z-10 space-y-10">
-                                <h4 className="text-h3 text-[#EAF0BD] leading-tight">
+                                <h4 className="text-[28px] text-[#EAF0BD] leading-tight">
                                     Learn By Doing, <br />
-                                    <span className="opacity-80">Excel By Creating:</span>
+                                    Excel By Creating:
                                 </h4>
                                 <div className="space-y-8">
                                     <div className="space-y-4">
-                                        <p className="text-body text-[#EAF0BD] font-bold">
-                                            <span className="underline decoration-[#EAF0BD]/30 underline-offset-4 tracking-tight">Project-Powered Progress:</span>
+                                        <p className="text-[16px] text-[#EAF0BD] font-bold">
+                                            Project-Powered Progress:
                                         </p>
-                                        <p className="text-body text-[#EAF0BD] font-normal">
+                                        <p className="text-[16px] text-[#EAF0BD] font-normal">
                                             Get graded on your real-world projects and software solutions, not just exams. Solve a problem, build the software, and master the subject.
                                         </p>
                                     </div>
                                     <div className="space-y-4">
-                                        <p className="text-body text-[#EAF0BD] font-bold">
-                                            <span className="underline decoration-[#EAF0BD]/30 underline-offset-4 tracking-tight">The Engineer’s Dream Education:</span>
+                                        <p className="text-[16px] text-[#EAF0BD] font-normal">
+                                            The Engineer's Dream Education:
                                         </p>
-                                        <p className="text-body text-[#EAF0BD] font-normal">
-                                            Our courses are crafted the way seasoned engineers wish they had been taught – practical, innovative, and deeply engaging.
-                                        </p>
+                                        <div className="space-y-4">
+                                            {[
+                                                "Our courses are crafted the way seasoned engineers wish they had been taught – practical, innovative, and deeply engaging.",
+                                                "Our curriculum is designed to help you build a strong foundation in computer science and software engineering."
+                                            ].map((point, idx) => (
+                                                <p key={idx} className="text-[16px] text-[#EAF0BD] font-normal">{point}</p>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            {/* Decorative corners */}
+                            <div className="absolute top-2 right-2 w-8 h-8 border-t-2 border-r-2 border-accent rounded-tr-lg"></div>
+                            <div className="absolute bottom-2 left-2 w-8 h-8 border-b-2 border-l-2 border-accent rounded-bl-lg"></div>
                             <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 blur-2xl rounded-full" />
                         </motion.div>
                     </div>
