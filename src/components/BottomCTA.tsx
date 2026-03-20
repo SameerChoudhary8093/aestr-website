@@ -9,7 +9,7 @@ const BottomCTA = () => {
     return (
         <>
             {/* Hidden Section - Only at Aestr you are trained for future safe professions */}
-            {/*
+            {false && (
             <section className="relative py-24 bg-black overflow-hidden">
                 <div className="container-boxed relative z-20">
 
@@ -58,7 +58,7 @@ const BottomCTA = () => {
                     </div>
                 </div>
             </section>
-            */}
+            )}
 
             {/* SGVU Rankings Section */}
             <section className="bg-black py-4 md:py-6 border-t border-white/5 relative overflow-hidden">
