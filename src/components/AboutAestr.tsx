@@ -61,7 +61,7 @@ const AboutAestr = () => {
                                         <div className="flex flex-wrap gap-2 md:gap-3">
                                             {[
                                                 { name: "AI & Machine Learning", href: "/ai-ml" },
-                                                { name: "Data Engineering", href: "/data-science" },
+                                                { name: "Data Engineering", href: "/data-engineering" },
                                                 { name: "Robotics", href: "/robotics" },
                                                 { name: "Software & Cloud Engineering", href: "/software-cloud-engineering" },
                                                 { name: "Cyber Security", href: "/cyber-security" }
@@ -114,7 +114,7 @@ const AboutAestr = () => {
                     {/* Point 1 */}
                     <div className="space-y-12 mb-20">
                         <div className="flex items-start gap-6">
-                            <div className="flex-shrink-0 w-16 h-16 rounded-full border border-accent/30 flex items-center justify-center text-3xl font-orbitron font-bold text-accent bg-accent/5">
+                            <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-[#D7F601] flex items-center justify-center text-3xl md:text-4xl font-orbitron font-black text-black bg-[#D7F601] shadow-[0_0_20px_rgba(215,246,1,0.5)]">
                                 1
                             </div>
                             <div className="space-y-2">
@@ -218,7 +218,7 @@ const AboutAestr = () => {
                     {/* Point 2 */}
                     <div className="space-y-12">
                         <div className="flex items-start gap-6">
-                            <div className="flex-shrink-0 w-16 h-16 rounded-full border border-accent/30 flex items-center justify-center text-3xl font-orbitron font-bold text-accent bg-accent/5">
+                            <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-[#D7F601] flex items-center justify-center text-3xl md:text-4xl font-orbitron font-black text-black bg-[#D7F601] shadow-[0_0_20px_rgba(215,246,1,0.5)]">
                                 2
                             </div>
                             <div className="space-y-2">

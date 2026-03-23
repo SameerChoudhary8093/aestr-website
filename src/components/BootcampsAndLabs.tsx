@@ -39,7 +39,7 @@ const BootcampsAndLabs = () => {
                                 className="space-y-8"
                             >
                                 <div className="flex items-start gap-6">
-                                    <div className="flex-shrink-0 w-16 h-16 rounded-full border border-accent/30 flex items-center justify-center text-3xl font-orbitron font-bold text-accent bg-accent/5">
+                                    <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-[#D7F601] flex items-center justify-center text-3xl md:text-4xl font-orbitron font-black text-black bg-[#D7F601] shadow-[0_0_20px_rgba(215,246,1,0.5)]">
                                         4
                                     </div>
                                     <div className="space-y-6">
@@ -124,7 +124,7 @@ const BootcampsAndLabs = () => {
                                 transition={{ duration: 0.7 }}
                                 className="flex items-start gap-6"
                             >
-                                <div className="flex-shrink-0 w-16 h-16 rounded-full border border-accent/20 flex items-center justify-center text-3xl font-orbitron font-bold text-accent bg-accent/5">
+                                <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-[#D7F601] flex items-center justify-center text-3xl md:text-4xl font-orbitron font-black text-black bg-[#D7F601] shadow-[0_0_20px_rgba(215,246,1,0.5)]">
                                     5
                                 </div>
                                 <div className="space-y-4">

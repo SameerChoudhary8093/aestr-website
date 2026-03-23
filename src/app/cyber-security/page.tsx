@@ -900,7 +900,7 @@ const CyberSecurityPage = () => {
                                                     Computer Science & Engineering with any one Major Specialization in
                                                 </h4>
                                                 <ul className="grid grid-cols-1 gap-2">
-                                                    {["Cyber Security", "Cloud Engineering", "Software Engineering", "Artificial Intelligence & Machine Learning", "Data Science"].map((item) => (
+                                                    {["Cyber Security", "Cloud Engineering", "Software Engineering", "Artificial Intelligence & Machine Learning", "Data Engineering"].map((item) => (
                                                         <li key={item} className="flex items-center gap-3 text-foreground/70">
                                                             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                                                             {item}

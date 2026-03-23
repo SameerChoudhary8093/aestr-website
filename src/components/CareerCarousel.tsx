@@ -90,14 +90,14 @@ const CareerCarousel = () => {
     const displayData = [...careerData, ...careerData];
 
     return (
-        <section className="relative py-24 bg-background-alt overflow-hidden">
+        <section className="relative pt-8 md:pt-16 pb-24 bg-[#5B1DD6] overflow-hidden">
             <div className="container-boxed mb-16">
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
                     <div className="space-y-4 text-left">
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold text-foreground leading-tight uppercase tracking-tighter">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold text-white leading-tight uppercase tracking-tighter">
                             Future <span className="text-accent italic">Careers</span>
                         </h2>
-                        <p className="text-base md:text-lg text-foreground/50 max-w-2xl leading-relaxed font-semibold">
+                        <p className="text-base md:text-lg text-white/90 max-w-2xl leading-relaxed font-semibold">
                             Engineered for high-impact roles powering the industries of 2030 and beyond.
                         </p>
                     </div>
@@ -125,10 +125,6 @@ const CareerCarousel = () => {
             `}</style>
             
             <div className="relative overflow-hidden group py-10">
-                {/* Gradient Masks */}
-                <div className="absolute inset-y-0 left-0 w-20 md:w-64 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-                <div className="absolute inset-y-0 right-0 w-20 md:w-64 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
-
                 <div className="marquee px-4">
                     {displayData.map((card, idx) => (
                         <div
@@ -144,7 +140,7 @@ const CareerCarousel = () => {
                                     unoptimized
                                     className="object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70 group-hover:opacity-100"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                                 <div className="absolute top-4 right-4 md:top-6 md:right-6 animate-pulse z-10">
                                     <div className="w-2 md:w-2.5 h-2 md:h-2.5 bg-accent rounded-full shadow-[0_0_15px_rgba(216,246,2,0.8)]" />
                                 </div>
@@ -155,13 +151,13 @@ const CareerCarousel = () => {
                                 <h3 className="text-lg md:text-xl font-orbitron font-bold text-white group-hover:text-accent transition-colors duration-300">
                                     {card.title}
                                 </h3>
-                                <p className="text-xs md:text-sm text-foreground/50 leading-relaxed min-h-[50px] md:min-h-[60px] font-medium">
+                                <p className="text-xs md:text-sm text-white/80 leading-relaxed min-h-[50px] md:min-h-[60px] font-medium">
                                     {card.sub}
                                 </p>
 
-                                <div className="space-y-3 md:space-y-4 pt-4 border-t border-foreground/10">
+                                <div className="space-y-3 md:space-y-4 pt-4 border-t border-white/20">
                                     <div className="flex items-center justify-between">
-                                        <span className="text-[8px] md:text-[10px] font-orbitron uppercase tracking-widest text-foreground/20 font-bold">Major</span>
+                                        <span className="text-[8px] md:text-[10px] font-orbitron uppercase tracking-widest text-white/60 font-bold">Major</span>
                                         <span className="bg-accent/10 text-accent border border-accent/20 rounded-full px-2.5 py-1 text-[8px] md:text-[10px] font-black uppercase tracking-widest">
                                             {card.major}
                                         </span>
@@ -169,15 +165,15 @@ const CareerCarousel = () => {
 
                                     {card.minor && (
                                         <div className="flex items-center justify-between">
-                                            <span className="text-[8px] md:text-[10px] font-orbitron uppercase tracking-widest text-foreground/20 font-bold">Minor</span>
-                                            <span className="text-foreground/60 rounded-full px-2.5 py-1 text-[8px] md:text-[10px] font-bold uppercase tracking-wider border border-foreground/10">
+                                            <span className="text-[8px] md:text-[10px] font-orbitron uppercase tracking-widest text-white/60 font-bold">Minor</span>
+                                            <span className="text-white/80 rounded-full px-2.5 py-1 text-[8px] md:text-[10px] font-bold uppercase tracking-wider border border-white/20">
                                                 {card.minor}
                                             </span>
                                         </div>
                                     )}
 
                                     <div className="flex items-center justify-between">
-                                        <span className="text-[8px] md:text-[10px] font-orbitron uppercase tracking-widest text-foreground/20 font-bold">Lab</span>
+                                        <span className="text-[8px] md:text-[10px] font-orbitron uppercase tracking-widest text-white/60 font-bold">Lab</span>
                                         <span className="text-accent/80 text-[8px] md:text-[10px] font-black uppercase tracking-widest">
                                             {card.lab}
                                         </span>

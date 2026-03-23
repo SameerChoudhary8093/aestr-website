@@ -164,12 +164,12 @@ const YouTubePlayer = ({ videoId, title }: { videoId: string; title: string }) =
     }
 
     return (
-        <div 
+        <div
             className="relative w-full h-full cursor-pointer group"
             onClick={() => setIsPlaying(true)}
         >
-            <Image 
-                src="/Other/lab-2.webp" 
+            <Image
+                src="/Other/lab-2.webp"
                 alt={title}
                 fill
                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
@@ -202,7 +202,7 @@ const AIMLSpecializationPage = () => {
 
                 <div className="container-boxed relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
@@ -245,15 +245,15 @@ const AIMLSpecializationPage = () => {
 
                         </motion.div>
 
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, scale: 0.9, x: 30 }}
                             animate={{ opacity: 1, scale: 1, x: 0 }}
                             transition={{ duration: 1, delay: 0.2 }}
                             className="relative"
                         >
                             <div className="aspect-[4/3] w-full rounded-2xl overflow-hidden border border-white/10 shadow-3xl bg-background-alt group">
-                                <YouTubePlayer 
-                                    videoId="mA3Z2VYMNXo" 
+                                <YouTubePlayer
+                                    videoId="mA3Z2VYMNXo"
                                     title="Artificial Intelligence overview"
                                 />
                             </div>
@@ -267,7 +267,7 @@ const AIMLSpecializationPage = () => {
             <section className="py-24 bg-background-alt/50 border-t border-white/5">
                 <div className="container-boxed">
                     <div className="max-w-5xl space-y-12">
-                        <motion.h2 
+                        <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -276,7 +276,7 @@ const AIMLSpecializationPage = () => {
                             What is <span className=" text-accent">Artificial Intelligence?</span>
                         </motion.h2>
 
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -284,7 +284,7 @@ const AIMLSpecializationPage = () => {
                             className="bg-background-alt p-8 md:p-12 rounded-[2rem] border border-white/10 shadow-2xl relative overflow-hidden group"
                         >
                             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
-                            
+
                             <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed font-medium">
                                 <strong className="text-foreground">Artificial Intelligence & Machine Learning</strong> is the science of building intelligent systems that can learn from data, reason about complex problems, and act autonomously. From <span className="text-foreground font-bold">Large Language Models</span> that understand human speech to <span className="text-foreground font-bold">Autonomous Robotics</span> that navigate the physical world, AI is the engine of the next industrial revolution, redefining how we work, live, and create.
                             </p>
@@ -299,7 +299,7 @@ const AIMLSpecializationPage = () => {
             <section className="py-24 bg-[#F8F9FB] relative overflow-hidden">
                 <div className="container-boxed">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
@@ -326,28 +326,28 @@ const AIMLSpecializationPage = () => {
                             </div>
                         </motion.div>
 
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             className="relative"
                         >
                             <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-2xl relative border-4 border-white group bg-gray-200">
-                                <Image 
-                                    src="/ExecutionTeam/Arastu.jpeg" 
+                                <Image
+                                    src="/ExecutionTeam/Arastu.jpeg"
                                     alt="Arastu Sharma, PhD"
                                     fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-1000"
                                 />
                                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-all pointer-events-none" />
-                                
+
                                 <div className="absolute top-6 left-6 z-10 bg-black/60 backdrop-blur-md px-5 py-3 rounded-lg border border-white/20">
                                     <h4 className="text-white font-bold text-xl leading-none">Arastu Sharma, PhD.</h4>
                                     <p className="text-white/70 text-sm mt-1">University of Cambridge</p>
                                 </div>
 
                                 <div className="absolute top-6 right-6 z-10 opacity-80">
-                                    <p className="text-black font-black text-[10px] leading-tight text-right uppercase tracking-tighter">Suresh<br/><span className="text-sm">Gyan Vihar</span><br/>University</p>
+                                    <p className="text-black font-black text-[10px] leading-tight text-right uppercase tracking-tighter">Suresh<br /><span className="text-sm">Gyan Vihar</span><br />University</p>
                                 </div>
 
                                 <div className="absolute inset-0 flex items-center justify-center">
@@ -381,7 +381,7 @@ const AIMLSpecializationPage = () => {
                                 "5. Generative AI & LLMs",
                                 "6. AI Ethics & Governance"
                             ].map((tag, i) => (
-                                <motion.span 
+                                <motion.span
                                     key={tag}
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
@@ -408,11 +408,10 @@ const AIMLSpecializationPage = () => {
                                         <button
                                             key={y.year}
                                             onClick={() => setActiveYear(i)}
-                                            className={`px-6 py-4 rounded-2xl font-orbitron font-bold text-sm transition-all duration-300 whitespace-nowrap text-left border ${
-                                                activeYear === i 
-                                                ? 'bg-accent text-black border-accent' 
+                                            className={`px-6 py-4 rounded-2xl font-orbitron font-bold text-sm transition-all duration-300 whitespace-nowrap text-left border ${activeYear === i
+                                                ? 'bg-accent text-black border-accent'
                                                 : 'bg-background-alt text-foreground/40 border-white/5 hover:border-accent/30'
-                                            }`}
+                                                }`}
                                         >
                                             {y.year}
                                         </button>
@@ -455,7 +454,7 @@ const AIMLSpecializationPage = () => {
             {/* pathways Tree Section (Image 2) */}
             <section className="py-24 bg-white relative overflow-hidden">
                 <div className="container-boxed text-center space-y-16">
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -478,7 +477,7 @@ const AIMLSpecializationPage = () => {
 
                         {/* Horizontal branch */}
                         <div className="absolute top-16 left-[12.5%] right-[12.5%] h-px bg-black hidden lg:block">
-                             <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-black rotate-45" />
+                            <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-black rotate-45" />
                         </div>
 
                         {/* Four boxes */}
@@ -489,7 +488,7 @@ const AIMLSpecializationPage = () => {
                                 { title: "Industry Partner Training", sub: "& Direct Placements", color: "bg-[#C9F6FF] border-[#99E8FF]" },
                                 { title: "Nurturing Entrepreneurs", sub: "Silicon Valley of AI", color: "bg-[#FFC9FF] border-[#FF99FF]" }
                             ].map((item, idx) => (
-                                <motion.div 
+                                <motion.div
                                     key={idx}
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
@@ -501,7 +500,7 @@ const AIMLSpecializationPage = () => {
                                     <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-px h-16 bg-black hidden lg:block">
                                         <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-black rotate-45" />
                                     </div>
-                                    
+
                                     <div className={`${item.color} w-full p-8 rounded-none border-b-[6px] border-black border-r-2 shadow-sm transition-transform hover:-translate-y-2 text-center flex flex-col justify-center min-h-[160px]`}>
                                         <h4 className="text-xl md:text-2xl font-orbitron font-bold text-black leading-tight border-b-2 border-black/10 pb-4 mb-4">
                                             {item.title}
@@ -535,7 +534,7 @@ const AIMLSpecializationPage = () => {
                                 { name: 'RISC-V Lab', tag: "Design Custom AI Chips", image: '/Other/lab-3.webp' },
                                 { name: 'Embodied Brain Lab', tag: 'Deploy AI Into Robots & ROS Systems', image: '/Other/lab-2.webp' }
                             ].map((lab, i) => (
-                                <motion.div 
+                                <motion.div
                                     key={lab.name}
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
@@ -561,7 +560,7 @@ const AIMLSpecializationPage = () => {
             {/* Emerging trends Section (Image 1) */}
             <section className="py-24 bg-white relative overflow-hidden">
                 <div className="container-boxed">
-                    <motion.h2 
+                    <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -589,9 +588,8 @@ const AIMLSpecializationPage = () => {
                                 transition={{ delay: idx * 0.1 }}
                                 className={`${trend.color} p-8 rounded-none border-b-8 border-black flex flex-col gap-6 shadow-sm min-h-[220px] group hover:scale-[1.02] transition-all`}
                             >
-                                <span className={`text-4xl font-playfair  font-bold ${
-                                    idx === 0 ? "text-pink-400" : idx === 1 ? "text-blue-400" : idx === 2 ? "text-purple-400" : idx === 3 ? "text-pink-400" : "text-purple-400"
-                                }`}>
+                                <span className={`text-4xl font-playfair  font-bold ${idx === 0 ? "text-pink-400" : idx === 1 ? "text-blue-400" : idx === 2 ? "text-purple-400" : idx === 3 ? "text-pink-400" : "text-purple-400"
+                                    }`}>
                                     {trend.num}
                                 </span>
                                 <h4 className="text-lg font-bold text-gray-800 leading-tight">
@@ -621,7 +619,7 @@ const AIMLSpecializationPage = () => {
             {/* An overview (Image 3) */}
             <section className="py-24 bg-[#E6A0B0]/40 relative overflow-hidden">
                 <div className="container-boxed">
-                    <motion.h2 
+                    <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -667,7 +665,7 @@ const AIMLSpecializationPage = () => {
             {/* Aestr @advantages (Image 4) */}
             <section className="py-24 bg-white relative overflow-hidden text-black">
                 <div className="container-boxed">
-                    <motion.h2 
+                    <motion.h2
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -752,11 +750,11 @@ const AIMLSpecializationPage = () => {
                             {/* Decorative curved background behind robot */}
                             <div className="absolute bottom-0 right-0 w-full h-[60%] bg-purple/20 rounded-l-[10rem] -z-10 translate-y-10" />
                             <div className="relative aspect-square w-full max-w-[600px] ml-auto">
-                                <Image 
-                                    src="/Other/future-robot.png" 
-                                    alt="Future AI Robotics" 
-                                    fill 
-                                    className="object-contain drop-shadow-[0_20px_50px_rgba(215,246,1,0.2)]" 
+                                <Image
+                                    src="/Other/future-robot.png"
+                                    alt="Future AI Robotics"
+                                    fill
+                                    className="object-contain drop-shadow-[0_20px_50px_rgba(215,246,1,0.2)]"
                                 />
                             </div>
                         </motion.div>
@@ -768,7 +766,7 @@ const AIMLSpecializationPage = () => {
             <section className="py-24 bg-background-alt/30 border-t border-white/5">
                 <div className="container-boxed">
                     <div className="space-y-16">
-                        <motion.h2 
+                        <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -817,21 +815,21 @@ const AIMLSpecializationPage = () => {
                                     className="bg-background border border-white/5 rounded-2xl overflow-hidden hover:border-accent/30 transition-all group flex flex-col"
                                 >
                                     <div className="aspect-[4/3] relative overflow-hidden">
-                                        <Image 
-                                            src={app.image} 
-                                            alt={app.title} 
-                                            fill 
-                                            className="object-cover transition-transform duration-700 group-hover:scale-110" 
+                                        <Image
+                                            src={app.image}
+                                            alt={app.title}
+                                            fill
+                                            className="object-cover transition-transform duration-700 group-hover:scale-110"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </div>
-                                    
+
                                     <div className="p-6 space-y-4 flex-1 flex flex-col">
                                         <h4 className="text-xl subheading-font font-bold text-foreground">{app.title}</h4>
                                         <p className="text-sm text-foreground/60 leading-relaxed line-clamp-3">
                                             {app.desc}
                                         </p>
-                                        
+
                                         <div className="mt-auto pt-6 space-y-3">
                                             <div className="flex items-center justify-between">
                                                 <div className="flex items-center gap-3">
@@ -863,7 +861,7 @@ const AIMLSpecializationPage = () => {
             <section className="py-24 bg-background relative overflow-hidden">
                 <div className="container-boxed relative z-10">
                     <div className="space-y-12">
-                        <motion.h2 
+                        <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -872,7 +870,7 @@ const AIMLSpecializationPage = () => {
                             Fees <span className=" text-foreground/60 ">Structure</span>
                         </motion.h2>
 
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -896,7 +894,7 @@ const AIMLSpecializationPage = () => {
                                                     Computer Science & Engineering with any one Major Specialization in
                                                 </h4>
                                                 <ul className="grid grid-cols-1 gap-2">
-                                                    {["Artificial Intelligence & Machine Learning", "Cloud Engineering", "Software Engineering", "Data Science", "Cyber Security"].map((item) => (
+                                                    {["Artificial Intelligence & Machine Learning", "Cloud Engineering", "Software Engineering", "Data Engineering", "Cyber Security"].map((item) => (
                                                         <li key={item} className="flex items-center gap-3 text-foreground/70">
                                                             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                                                             {item}

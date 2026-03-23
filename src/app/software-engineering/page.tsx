@@ -927,7 +927,7 @@ const SoftwareEngineeringPage = () => {
                                                     Computer Science & Engineering with any one Major Specialization in
                                                 </h4>
                                                 <ul className="grid grid-cols-1 gap-2">
-                                                    {["Software Engineering", "Cloud Engineering", "Artificial Intelligence & Machine Learning", "Data Science", "Cyber Security"].map((item) => (
+                                                    {["Software Engineering", "Cloud Engineering", "Artificial Intelligence & Machine Learning", "Data Engineering", "Cyber Security"].map((item) => (
                                                         <li key={item} className="flex items-center gap-3 text-foreground/70">
                                                             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                                                             {item}

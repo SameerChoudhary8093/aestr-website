@@ -32,7 +32,7 @@ const FutureFaculty = () => {
                         className="space-y-6 md:space-y-8 text-left"
                     >
                         <div className="flex flex-wrap md:flex-nowrap items-start gap-4 md:gap-6">
-                            <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full border border-accent/30 flex items-center justify-center text-2xl md:text-3xl font-orbitron font-bold text-accent bg-accent/5">
+                            <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-[#D7F601] flex items-center justify-center text-3xl md:text-4xl font-orbitron font-black text-black bg-[#D7F601] shadow-[0_0_20px_rgba(215,246,1,0.5)]">
                                 6
                             </div>
                             <div className="space-y-6">

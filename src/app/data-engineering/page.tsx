@@ -67,8 +67,8 @@ const yearData = [
                     "Economics and Social Sciences",
                     "Data Structures and Algorithms",
                     "Principles of Programming Languages",
-                    "Foundations of Data Science: Inferential Statistics",
-                    "Data Science Studio -> Exploratory Data Analysis & Visualization",
+                    "Foundations of Data Engineering: Inferential Statistics",
+                    "Data Engineering Studio -> Exploratory Data Analysis & Visualization",
                     "Data Structures and Algorithms Lab",
                     "Field Project -> Innovation Lab Project I: Data Infrastructure Design",
                     "Digital Systems & Logic Engineering"
@@ -135,7 +135,7 @@ const yearData = [
                     "Proficiency and Co-Curricular Activities-VII",
                     "Data Ethics, Privacy & Governance",
                     "Operating Systems",
-                    "Graph Data Science & Knowledge Graphs",
+                    "Graph Data Engineering & Knowledge Graphs",
                     "Financial Intelligence & Fraud Analytics",
                     "Interactive Storytelling with Data",
                     "Major Project Stage-I -> Innovation Lab Grand Challenge (Data Major)"
@@ -152,7 +152,7 @@ const yearData = [
                     "Distributed Data Systems",
                     "Compiler Construction",
                     "GenAI for Data Engineering",
-                    "High Performance Computing for Data Science",
+                    "High Performance Computing for Data Engineering",
                     "Data Fabric & Mesh Architectures"
                 ],
             },
@@ -202,7 +202,7 @@ const YouTubePlayer = ({ videoId, title }: { videoId: string; title: string }) =
     );
 };
 
-const DataSciencePage = () => {
+const DataEngineeringPage = () => {
     const [activeYear, setActiveYear] = useState(0);
 
     return (
@@ -226,7 +226,7 @@ const DataSciencePage = () => {
                                 </h2>
                                 <h1 className="text-hero font-orbitron text-foreground tracking-tight">
                                     Data <br />
-                                    <span className="text-accent">Science</span>
+                                    <span className="text-accent">Engineering</span>
                                 </h1>
                             </div>
 
@@ -266,7 +266,7 @@ const DataSciencePage = () => {
                             <div className="aspect-[4/3] w-full rounded-2xl overflow-hidden border border-white/10 shadow-3xl bg-background-alt group">
                                 <YouTubePlayer 
                                     videoId="mA3Z2VYMNXo" 
-                                    title="Data Science overview"
+                                    title="Data Engineering overview"
                                 />
                             </div>
                             <div className="absolute -inset-4 border border-white/5 rounded-[2rem] -z-10 pointer-events-none" />
@@ -285,7 +285,7 @@ const DataSciencePage = () => {
                             viewport={{ once: true }}
                             className="text-h2 font-orbitron text-foreground"
                         >
-                            What is <span className=" text-accent">Data Science?</span>
+                            What is <span className=" text-accent">Data Engineering?</span>
                         </motion.h2>
 
                         <motion.div 
@@ -298,7 +298,7 @@ const DataSciencePage = () => {
                             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
                             
                             <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed font-medium">
-                                <strong className="text-foreground">Data Science</strong> is the multidisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from structured and unstructured data. It combines <span className="text-foreground font-bold">statistical modeling</span>, <span className="text-foreground font-bold">domain expertise</span>, and <span className="text-foreground font-bold">machine learning</span> to solve complex problems and drive intelligent decision-making across every modern industry.
+                                <strong className="text-foreground">Data Engineering</strong> is the multidisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from structured and unstructured data. It combines <span className="text-foreground font-bold">statistical modeling</span>, <span className="text-foreground font-bold">domain expertise</span>, and <span className="text-foreground font-bold">machine learning</span> to solve complex problems and drive intelligent decision-making across every modern industry.
                             </p>
 
                             <div className="absolute inset-0 bg-[radial-gradient(#ffffff03_1px,transparent_1px)] bg-[size:30px_30px] opacity-40 pointer-events-none" />
@@ -582,7 +582,7 @@ const DataSciencePage = () => {
                         {[
                             { num: "01", title: "Quantum Machine Learning", color: "bg-pink-50 border-pink-200" },
                             { num: "02", title: "Generative AI for Analytics", color: "bg-blue-50 border-blue-200 shadow-blue-100" },
-                            { num: "03", title: "Graph Data Science Mastery", color: "bg-purple-50 border-purple-200" },
+                            { num: "03", title: "Graph Data Engineering Mastery", color: "bg-purple-50 border-purple-200" },
                             { num: "04", title: "Synthetic Data Foundations", color: "bg-pink-50 border-pink-200" },
                             { num: "05", title: "High-Performance Data Fabric", color: "bg-purple-50 border-purple-300" }
                         ].map((trend, idx) => (
@@ -712,7 +712,7 @@ const DataSciencePage = () => {
                 </div>
             </section>
 
-            {/* Future Scope Of Data Science (Image 5) */}
+            {/* Future Scope Of Data Engineering (Image 5) */}
             <section className="py-24 bg-background relative overflow-hidden">
                 <div className="container-boxed">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -724,10 +724,10 @@ const DataSciencePage = () => {
                         >
                             <div className="space-y-4">
                                 <h2 className="text-h2 font-orbitron text-foreground leading-[1.1]">
-                                    Future Scope Of <span className=" text-foreground/60 ">Data Science</span>
+                                    Future Scope Of <span className=" text-foreground/60 ">Data Engineering</span>
                                 </h2>
                                 <p className="text-lg text-foreground/70 leading-relaxed font-medium">
-                                    Data Science is the core engine of modern intelligence, enabling systems to see patterns, predict outcomes, and automate decision-making.
+                                    Data Engineering is the core engine of modern intelligence, enabling systems to see patterns, predict outcomes, and automate decision-making.
                                 </p>
                             </div>
 
@@ -735,7 +735,7 @@ const DataSciencePage = () => {
                                 <h4 className="text-2xl font-bold font-orbitron text-foreground">Economic Impact</h4>
                                 <ul className="space-y-4">
                                     {[
-                                        "The global data science market size is projected to reach $378 billion by 2030.",
+                                        "The global data engineering market size is projected to reach $378 billion by 2030.",
                                         "Exponential growth in real-time streaming analytics and quantum computing readiness."
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-4 group">
@@ -778,7 +778,7 @@ const DataSciencePage = () => {
                             viewport={{ once: true }}
                             className="text-h2 font-orbitron text-foreground"
                         >
-                            Applications of <span className=" text-accent">Data Science</span>
+                            Applications of <span className=" text-accent">Data Engineering</span>
                         </motion.h2>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -787,28 +787,28 @@ const DataSciencePage = () => {
                                     title: "Predictive Analytics",
                                     desc: "Transforming historical data into future foresight across industries, from retail to manufacturing.",
                                     image: "/Other/lab-1.webp",
-                                    major: "Data Science",
+                                    major: "Data Engineering",
                                     lab: "Prediction Unit"
                                 },
                                 {
                                     title: "Healthcare Diagnostics",
                                     desc: "AI-driven precision medicine and early disease detection systems utilizing genomic datasets.",
                                     image: "/Other/lab-3.webp",
-                                    major: "Data Science",
+                                    major: "Data Engineering",
                                     lab: "Bio-Informatics Lab"
                                 },
                                 {
                                     title: "Financial Intelligence",
                                     desc: "Algorithmic trading and sophisticated fraud detection ecosystems for global banking.",
                                     image: "/Other/lab-4.webp",
-                                    major: "Data Science",
+                                    major: "Data Engineering",
                                     lab: "Fintech Hub"
                                 },
                                 {
                                     title: "Smart Cities",
                                     desc: "Optimizing urban resources and traffic flow através real-time sensor data analytics.",
                                     image: "/Other/lab-2.webp",
-                                    major: "Data Science",
+                                    major: "Data Engineering",
                                     lab: "Urban Analytics Lab"
                                 }
                             ].map((app, idx) => (
@@ -900,7 +900,7 @@ const DataSciencePage = () => {
                                                     Computer Science & Engineering with any one Major Specialization in
                                                 </h4>
                                                 <ul className="grid grid-cols-1 gap-2">
-                                                    {["Data Science", "Cloud Engineering", "Software Engineering", "Artificial Intelligence & Machine Learning", "Cyber Security"].map((item) => (
+                                                    {["Data Engineering", "Cloud Engineering", "Software Engineering", "Artificial Intelligence & Machine Learning", "Cyber Security"].map((item) => (
                                                         <li key={item} className="flex items-center gap-3 text-foreground/70">
                                                             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                                                             {item}
@@ -962,4 +962,4 @@ const DataSciencePage = () => {
     );
 };
 
-export default DataSciencePage;
+export default DataEngineeringPage;

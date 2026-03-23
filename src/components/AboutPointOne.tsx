@@ -17,7 +17,7 @@ const AboutPointOne = () => {
             >
                 {/* Section Header */}
                 <div className="flex flex-col md:flex-row items-start gap-4 md:gap-8 mb-16 md:mb-20">
-                    <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full border border-black/30 flex items-center justify-center text-2xl md:text-3xl font-orbitron font-bold text-black bg-black/5">
+                    <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-black flex items-center justify-center text-3xl md:text-4xl font-orbitron font-black text-[#D7F601] bg-black shadow-xl">
                         1
                     </div>
                     <div className="space-y-6 text-left">

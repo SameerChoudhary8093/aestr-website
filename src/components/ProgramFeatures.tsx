@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 const ProgramFeatures = () => {
     return (
-        <section id="program-features" className="relative py-24 bg-background overflow-hidden">
+        <section id="program-features" className="relative pt-24 pb-8 bg-background overflow-hidden">
             {/* Futuristic Ambient Glows - Neon Green */}
             <div className="absolute top-10 left-10 w-[400px] h-[400px] bg-accent/10 blur-[120px] rounded-full pointer-events-none z-0" />
             <div className="absolute bottom-20 right-20 w-[500px] h-[500px] bg-accent/5 blur-[120px] rounded-full pointer-events-none z-0" />
@@ -154,7 +154,7 @@ const ProgramFeatures = () => {
                         className="space-y-10 order-2 lg:order-1"
                     >
                         <div className="flex items-start gap-8">
-                            <div className="flex-shrink-0 w-16 h-16 rounded-full border border-accent/30 flex items-center justify-center text-3xl font-orbitron font-bold text-accent bg-accent/5">
+                            <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-[#D7F601] flex items-center justify-center text-3xl md:text-4xl font-orbitron font-black text-black bg-[#D7F601] shadow-[0_0_20px_rgba(215,246,1,0.5)]">
                                 3
                             </div>
                             <div className="space-y-4">
@@ -178,22 +178,18 @@ const ProgramFeatures = () => {
                         className="order-1 lg:order-2"
                     >
                         <div className="relative group cursor-pointer w-full max-w-3xl mx-auto">
-                            <div className="aspect-[21/9] bg-black/40 rounded-[2rem] border border-foreground/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/30 group-hover:shadow-[0_0_80px_rgba(216,246,2,0.1)] relative">
-                                <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:15px_15px] opacity-30" />
-                                <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                                {/* Inner Sleek Glow */}
-                                <div className="absolute inset-4 border border-foreground/5 rounded-[1.8rem] pointer-events-none" />
-
-                                <div className="w-24 h-24 bg-accent rounded-full flex items-center justify-center shadow-[0_0_40px_rgba(216,246,2,0.4)] transition-transform duration-700 group-hover:scale-110 z-10 text-black">
-                                    <svg className="w-10 h-10 ml-1.5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                </div>
-
-                                <div className="absolute bottom-10 left-0 w-full text-center z-10">
-                                    <span className="text-[10px] font-orbitron uppercase tracking-[0.5em] text-foreground/30 font-bold">The Future of Education</span>
-                                </div>
+                            <div className="aspect-[16/9] md:aspect-[21/9] bg-black/40 rounded-[2rem] border border-foreground/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/30 group-hover:shadow-[0_0_80px_rgba(216,246,2,0.1)] relative">
+                                <video
+                                    className="w-full h-full object-cover"
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    controls
+                                >
+                                    <source src="/Other/Targeting-In-Demand.mp4" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
                             </div>
                         </div>
                     </motion.div>

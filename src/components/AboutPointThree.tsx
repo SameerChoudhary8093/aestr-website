@@ -54,8 +54,8 @@ const VideoPlayer = ({ src }: { src: string }) => {
 
 const AboutPointThree = () => {
     return (
-        <section className="relative py-24 bg-accent overflow-hidden">
-            <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[400px] h-[400px] bg-white/10 blur-[120px] rounded-full pointer-events-none z-0" />
+        <section className="relative pt-24 pb-8 bg-[#5B1DD6] overflow-hidden">
+            <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[400px] h-[400px] bg-accent/5 blur-[120px] rounded-full pointer-events-none z-0" />
 
             <div className="container-boxed relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 items-center">
@@ -67,16 +67,16 @@ const AboutPointThree = () => {
                         className="space-y-8 md:space-y-10 order-2 lg:order-1 text-left lg:-translate-y-10"
                     >
                         <div className="flex items-start gap-4 md:gap-8">
-                            <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full border border-black/30 flex items-center justify-center text-2xl md:text-3xl font-orbitron font-bold text-black bg-black/5">
+                            <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-[#D7F601] flex items-center justify-center text-3xl md:text-4xl font-orbitron font-black text-black bg-[#D7F601] shadow-[0_0_20px_rgba(215,246,1,0.5)]">
                                 3
                             </div>
                             <div className="space-y-6 text-left">
                                 <div className="space-y-1">
-                                    <h3 className="text-h2 text-black capitalize">
-                                        Targeting <span className="opacity-90">In-Demand Careers Of 2030</span>
+                                    <h3 className="text-h2 text-white capitalize font-black">
+                                        Targeting <span className="opacity-95 text-accent">In-Demand Careers Of 2030</span>
                                     </h3>
                                 </div>
-                                <p className="text-body text-black/90 font-bold">
+                                <p className="text-body text-white/90 font-bold max-w-xl text-[16px] md:text-[18px]">
                                     Train for roles powering the next generation of banking, robotics, healthcare, and more—with real-world impact and future security.
                                 </p>
                             </div>
@@ -84,15 +84,25 @@ const AboutPointThree = () => {
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7 }}
-                        className="order-1 lg:order-2 flex justify-center"
+                        className="order-1 lg:order-2 w-full flex justify-center"
                     >
-                        <div className="relative group max-w-[350px] w-full">
-                            <div className="aspect-[3/4] bg-black rounded-2xl border border-black/10 overflow-hidden transition-all duration-500 shadow-2xl relative">
-                                <VideoPlayer src="AsterAds.mp4" />
+                        <div className="relative group w-full max-w-[280px] sm:max-w-[340px] md:max-w-[420px] lg:max-w-[380px] xl:max-w-[420px] mx-auto shadow-2xl rounded-[2rem] overflow-hidden flex items-center justify-center border-2 border-white/10 bg-black aspect-[9/16]">
+                            <div className="absolute inset-0 w-full h-full flex items-center justify-center">
+                                <video
+                                    className="w-full h-full object-cover"
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    controls
+                                >
+                                    <source src="/Other/Targeting-In-Demand.mp4" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
                             </div>
                         </div>
                     </motion.div>

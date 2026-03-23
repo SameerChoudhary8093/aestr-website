@@ -100,7 +100,7 @@ const AboutTopOnePercent = () => {
                                     <div className="flex flex-wrap gap-2 md:gap-3">
                                         {[
                                             { name: "AI & Machine Learning", href: "/ai-ml" },
-                                            { name: "Data Engineering", href: "/data-science" },
+                                            { name: "Data Engineering", href: "/data-engineering" },
                                             { name: "Robotics", href: "/robotics" },
                                             { name: "Software & Cloud Engineering", href: "/software-cloud-engineering" },
                                             { name: "Cyber Security", href: "/cyber-security" },
