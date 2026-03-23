@@ -11,6 +11,9 @@ const CollaborationsPage = () => {
         <main className="bg-background min-h-screen text-foreground font-orbitron overflow-x-hidden selection:bg-accent selection:text-black">
             <StickyAdmissionsBar />
             
+            {/* Page Temporarily Hidden */}
+            {false && (
+            <>
             {/* Hero Section */}
             <section className="relative pt-48 pb-24 lg:pt-64 lg:pb-32 overflow-hidden px-6 bg-[#5B1DD6]">
                 <div className="container-boxed relative z-10">
@@ -291,6 +294,8 @@ const CollaborationsPage = () => {
                     </div>
                 </div>
             </section>
+            </>
+            )}
 
         </main>
     );

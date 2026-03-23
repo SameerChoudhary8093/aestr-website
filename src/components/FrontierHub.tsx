@@ -92,7 +92,7 @@ const FrontierHub = () => {
                         <div className="lg:col-span-5">
                             {/* Main Heading */}
                             <h2 className="text-[48px] font-orbitron font-black text-black leading-none tracking-tight whitespace-nowrap -mt-9">
-                                INDIA'S SOVEREIGN AI HUB
+                                B.Tech in Artificial Intelligence
                             </h2>
 
                             {/* B.Tech AI Powered by Shodh AI Card */}
@@ -112,15 +112,8 @@ const FrontierHub = () => {
                                     </div>
                                 </div>
                                 <p className="text-white/80 text-[16px] leading-relaxed font-medium">
-                                    This course is started by Dr. Arastu, CEO of Shodh AI, to
-                                    prepare the AI engineers that India needs to lead the world.
-                                    The premier Elite 60 program is highly selective and is built
-                                    for engineers of 2030.
-                                    <br /><br />
-                                    The cohort students will work with senior engineers at
-                                    Shodh, build data pipelines, create model architectures, and
-                                    spend years in the toil and hard work of building the depth of
-                                    mathematics that is required to build the future of AI itself.
+                                    This program is how Shodh AI hires. Designed by Dr. Arastu Sharma, CEO of Shodh AI, this flagship "Elite 60" cohort is brutally selective. It is not for the masses; it is built strictly for the engineers of 2030.
+                                    Here, you don't study AI, YOU BUILD IT. As a resident, you will work directly alongside senior engineers at Shodh AI. You will build massive data pipelines, design sovereign model architectures, and put in the years of deep mathematical toil required to build the future of Artificial Intelligence itself.
                                 </p>
                             </div>
                         </div>
@@ -171,17 +164,17 @@ const FrontierHub = () => {
                                 {/* Left side - Text content */}
                                 <div className="lg:col-span-7 space-y-8">
                                     <div className="relative">
-                                        <p className="text-[48px] font-orbitron font-black text-white leading-tight mb-8 relative z-10 whitespace-nowrap">
-                                            The B.Tech is dead
+                                        <p className="text-[40px] md:text-[48px] font-orbitron font-black text-white leading-tight mb-8 relative z-10">
+                                          Aestr Is INDIA'S SOVEREIGN AI HUB
                                         </p>
-                                        <p className="text-[16px] text-white/90 leading-relaxed relative z-10 max-w-3xl">
-                                            The AESTR Solution: The 4-Year Engineering Residency AESTR by Gyan Vihar is built on a single, uncompromising premise: Stop studying. Start building. We are not a college we are a Silicon Valley-style incubator.
-                                        </p>
+                                        
                                     </div>
 
                                     <div className="relative">
                                         <p className="text-[16px] text-white/90 leading-relaxed md:leading-loose">
-                                            At the core of this ecosystem is <a href="https://shodh.ai/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 px-4 py-1.5 mx-1 bg-white text-[#5B1DD6] text-sm md:text-base font-orbitron font-extrabold rounded-full hover:bg-accent hover:text-black transition-colors shadow-lg align-middle translate-y-[-2px]">Shodh AI ↗</a>India's premier frontier AI company. As one of the 12 companies handpicked for the <span className="text-accent font-semibold">INDIA AI Mission</span>, they are building the nation's sovereign foundational models and the world's first large Physics Model to solve massive, future-defining problems.
+                                            Traditional education is dead. Aestr is a unified tech incubator built for one reason: to train the engineers who will architect AI, rather than be replaced by it.
+                                            At the core of this ecosystem is Shodh AI—India’s premier frontier AI company. As one of the 12 companies handpicked for the INDIA AI Mission, they are building the nation's sovereign foundational models and the world’s first large Physics Model to solve massive, future-defining problems.
+                                            Their aim with this partnership? To forge their own future colleagues and computer scientists from the ground up.
                                         </p>
                                     </div>
                                 </div>
@@ -216,7 +209,7 @@ const FrontierHub = () => {
 
                                             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[92%] bg-white py-1 md:py-2 px-4 md:px-6 rounded-xl shadow-2xl flex items-center justify-center border-2 border-black/10">
                                                 <p className="text-black font-orbitron font-black text-[16px] text-center leading-tight tracking-wide flex items-center justify-center gap-2">
-                                                    <span>B.Tech AI is the</span>
+                                                    <span>Shodh AI is the</span>
                                                     <span className="inline-flex items-center justify-center bg-[#5B1DD6] px-3 py-1 rounded-full shadow-sm">
                                                         <Image
                                                             src="/Herosection/india-ai-logo-white.png"
@@ -241,7 +234,8 @@ const FrontierHub = () => {
 
                             {/* Third Level: Strike Forces */}
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12 mb-8">
-                                {/* AESTR ALPHA */}
+                                {/* AESTR ALPHA - Temporarily Hidden */}
+                                {false && (
                                 <motion.div
                                     initial={{ opacity: 0, x: -30 }}
                                     whileInView={{ opacity: 1, x: 0 }}
@@ -260,6 +254,7 @@ const FrontierHub = () => {
                                         <span className="text-xl">↗</span>
                                     </button>
                                 </motion.div>
+                                )}
                             </div>
                         </div>
                     </div>

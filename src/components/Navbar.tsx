@@ -24,8 +24,8 @@ const Navbar = () => {
 
     const navLinks = [
         { name: 'Home', href: '/#hero' },
-        { name: 'B.tech AI With Shodh AI', href: '/btech-ai-shodh-ai' },
-        { name: 'Collaborations', href: '/collaborations' },
+        { name: 'B.Tech AI', href: '/btech-ai-shodh-ai' },
+        { name: 'Aestr Alpha', href: 'https://aestralpha.com', external: true },
         { name: 'Alumni', href: '/alumni' },
         { name: 'Blogs', href: '/blogs' },
     ];
@@ -109,7 +109,9 @@ const Navbar = () => {
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    onClick={link.name === 'Home' ? handleHomeClick : handlePageLinkClick(link.href)}
+                                    onClick={link.name === 'Home' ? handleHomeClick : link.external ? undefined : handlePageLinkClick(link.href)}
+                                    target={link.external ? '_blank' : undefined}
+                                    rel={link.external ? 'noopener noreferrer' : undefined}
                                     className="relative px-5 py-4 group/btn"
                                 >
                                     <MagneticEffect strength={0.3}>
@@ -207,14 +209,17 @@ const Navbar = () => {
                                 >
                                     <Link
                                         href={link.href}
-                                        onClick={link.name === 'Home' ? handleHomeClick : handlePageLinkClick(link.href)}
-                                        className="text-3xl md:text-4xl font-orbitron font-extrabold text-[#EAF0BD] hover:text-accent transition-all block"
+                                        onClick={link.name === 'Home' ? handleHomeClick : link.external ? undefined : handlePageLinkClick(link.href)}
+                                        target={link.external ? '_blank' : undefined}
+                                        rel={link.external ? 'noopener noreferrer' : undefined}
+                                        className="text-[32px] md:text-[48px] font-orbitron font-extrabold text-foreground hover:text-accent transition-colors duration-300"
                                     >
                                         {link.name}
                                     </Link>
                                 </motion.div>
                             ))}
                         </div>
+
                         <div className="mt-10 pt-10 border-t border-white/10 flex flex-col items-center gap-6">
 
                             <p className="text-[10px] font-orbitron font-medium text-white/30 uppercase tracking-[0.4em]">

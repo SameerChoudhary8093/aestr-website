@@ -36,8 +36,7 @@ const Hero = () => {
                                 The AESTR Solution: <span className="text-accent">The 4-Year Engineering Residency.</span>
                             </p>
                             <p className="text-[16px] text-foreground/80 font-medium max-w-xl leading-relaxed">
-                                The AESTR Solution: The 4-Year Engineering Residency
-                                AESTR by Gyan Vihar is built on a single, uncompromising premise: Stop studying. Start building. We are not a college we are a Silicon Valley-style incubator.
+                            AESTR by Gyan Vihar is built on a single, uncompromising premise: Stop studying. Start building. We are not a college we are a Silicon Valley-style incubator.
                             </p>
                         </div>
 
