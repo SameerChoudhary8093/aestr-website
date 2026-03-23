@@ -18,7 +18,14 @@ const ProgramPartners = () => {
         </svg>
     );
 
-    const partnersData = [
+    const partnersData: Array<{
+        title: React.ReactNode;
+        subtitle: string;
+        logo?: string;
+        logoNode?: React.ReactNode;
+        color: string;
+        borderColor: string;
+    }> = [
         {
             title: (
                 <div className="flex flex-col items-center justify-center">
