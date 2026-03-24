@@ -85,7 +85,7 @@ const BtechAIShodhAIPage = () => {
                         <div className="space-y-2 lg:space-y-4 relative">
                             {/* Decorative graphical element like the brochure circles */}
                             <div className="absolute -left-12 -top-12 lg:-left-20 lg:-top-20 opacity-20 pointer-events-none hidden sm:block">
-                                <svg width="100" height="100" lgWidth="150" lgHeight="150" viewBox="0 0 100 100" fill="none" stroke="#D7F601" strokeWidth="2">
+                                <svg className="w-20 h-20 lg:w-[150px] lg:h-[150px]" viewBox="0 0 100 100" fill="none" stroke="#D7F601" strokeWidth="2">
                                     <circle cx="50" cy="50" r="40" />
                                     <path d="M50 0 V100 M0 50 H100" opacity="0.3" strokeDasharray="4 4" />
                                 </svg>
@@ -204,65 +204,8 @@ const BtechAIShodhAIPage = () => {
 
                 </div>
             </section>
-                                B.Tech AI <br />with Shodh AI
-                            </h3>
-                            <div className="shrink-0 mt-1">
-                                <svg className="w-10 h-10 text-[#5B1DD6]/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                                </svg>
-                            </div>
-                        </div>
-                        <p className="text-black font-bold text-lg leading-snug tracking-tight opacity-90">
-                            Shodh AI leads AI in India. Intern with the elite team. Be ready for the 2030 AI world.
-                        </p>
-                    </div>
 
-                    {/* Card 2 */}
-                    <div className="bg-white rounded-[2rem] p-6 pb-8 flex flex-col gap-6 lg:w-1/3 shadow-2xl hover:-translate-y-2 transition-transform duration-300 border-2 border-black/5">
-                        <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden relative border border-black/10 bg-[#000042] flex items-center justify-center">
-                            <Image src="/b.tech-ai-with/shodh.png" alt="Shodh AI" fill className="object-cover scale-90" />
-                        </div>
-                        <div className="flex justify-between items-start gap-4">
-                            <h3 className="text-3xl lg:text-4xl font-bold font-orbitron text-[#5B1DD6] leading-tight tracking-tight flex-1">
-                                Built With
-                                <div className="flex items-center gap-4 mt-6">
-                                    <Image src="/ProgramPartners/google.webp" alt="Google" width={80} height={26} className="object-contain" />
-                                    <Image src="/placement/nvidia.webp" alt="NVIDIA" width={100} height={32} className="object-contain" />
-                                </div>
-                            </h3>
-                            <div className="shrink-0 mt-1">
-                                <svg className="w-8 h-8 text-[#5B1DD6]" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" />
-                                </svg>
-                            </div>
-                        </div>
-                        <p className="text-black font-bold text-lg leading-snug tracking-tight opacity-90 mt-auto">
-                            Indian Govt mandate to build AI for science. Shodh AI released the world's first Large Physics Model.
-                        </p>
-                    </div>
-
-                    {/* Card 3 */}
-                    <div className="bg-white rounded-[2rem] p-6 pb-8 flex flex-col gap-6 lg:w-1/3 shadow-2xl hover:-translate-y-2 transition-transform duration-300 border-2 border-black/5">
-                        <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden relative border border-black/10">
-                            <Image src="/b.tech-ai-with/lab.JPG" alt="Class" fill className="object-cover" />
-                        </div>
-                        <div className="flex justify-between items-start gap-4">
-                            <h3 className="text-3xl lg:text-4xl font-bold font-orbitron text-[#5B1DD6] leading-tight tracking-tight">
-                                Brutally <br />Selective
-                            </h3>
-                            <div className="shrink-0 mt-1 text-[#5B1DD6]">
-                                <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0L13.5 10.5L24 12L13.5 13.5L12 24L10.5 13.5L0 12L10.5 10.5L12 0Z" />
-                                </svg>
-                            </div>
-                        </div>
-                        <p className="text-black font-bold text-lg leading-snug tracking-tight opacity-90">
-                            Only 60 seats. While others code "Hello World," you fine-tune LLMs on NVIDIA Hopper GPUs.
-                        </p>
-                    </div>
-
-                </div>
-            </section>
+            {/* Labs Section */}
 
 
             {/* New Founder Section */}
