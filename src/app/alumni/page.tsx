@@ -7,20 +7,33 @@ import { Users, GraduationCap, Briefcase, Network, MessageSquare, Award, Present
 import StickyAdmissionsBar from '@/components/StickyAdmissionsBar';
 
 const AlumniPage = () => {
-    const alumniSpotlights = [
-        { name: 'Aditya Verma', role: 'Senior AI Engineer', company: 'Google', batch: '2021', image: '/Alumni/Alumni-1.png' },
-        { name: 'Suhani Sharma', role: 'Robotics Researcher', company: 'NVIDIA', batch: '2020', image: '/Alumni/Alumni-2.png' },
-        { name: 'Rohan Gupta', role: 'Founding Engineer', company: 'Shodh AI', batch: '2022', image: '/Alumni/Alumni-3.png' },
-        { name: 'Ishita Kapoor', role: 'Machine Learning Lead', company: 'Microsoft', batch: '2019', image: '/Alumni/Alumni-4.png' },
-        { name: 'Kabir Singh', role: 'Cloud Architect', company: 'Amazon', batch: '2021', image: '/Alumni/Alumni-5.png' },
-        { name: 'Ananya Roy', role: 'Product Manager', company: 'Tesla', batch: '2020', image: '/Alumni/Alumni-6.png' },
-        { name: 'Vikram Mehta', role: 'Cybersecurity Expert', company: 'CrowdStrike', batch: '2018', image: '/Alumni/Alumni-7.png' },
-        { name: 'Prisha Das', role: 'Data Scientist', company: 'Apple', batch: '2022', image: '/Alumni/Alumni-8.png' },
+    const alumniData = [
+        { name: 'Aditya Verma', role: 'Senior AI Engineer', company: 'Google', batch: 2021 },
+        { name: 'Suhani Sharma', role: 'Robotics Researcher', company: 'NVIDIA', batch: 2020 },
+        { name: 'Rohan Gupta', role: 'Founding Engineer', company: 'Shodh AI', batch: 2022 },
+        { name: 'Ishita Kapoor', role: 'Machine Learning Lead', company: 'Microsoft', batch: 2019 },
+        { name: 'Kabir Singh', role: 'Cloud Architect', company: 'Amazon', batch: 2021 },
+        { name: 'Ananya Roy', role: 'Product Manager', company: 'Tesla', batch: 2020 },
+        { name: 'Vikram Mehta', role: 'Cybersecurity Expert', company: 'CrowdStrike', batch: 2018 },
+        { name: 'Prisha Das', role: 'Data Scientist', company: 'Apple', batch: 2022 },
+        { name: 'Arjun Patel', role: 'AI Research Scientist', company: 'OpenAI', batch: 2021 },
+        { name: 'Kavya Reddy', role: 'Software Engineer', company: 'Meta', batch: 2020 },
+        { name: 'Rahul Kumar', role: 'DevOps Engineer', company: 'Netflix', batch: 2022 },
+        { name: 'Priya Singh', role: 'Data Analyst', company: 'Spotify', batch: 2019 },
+        { name: 'Amit Sharma', role: 'Backend Developer', company: 'Uber', batch: 2021 },
+        { name: 'Neha Gupta', role: 'Frontend Developer', company: 'Airbnb', batch: 2020 },
+        { name: 'Rohit Verma', role: 'Full Stack Developer', company: 'LinkedIn', batch: 2022 },
+        { name: 'Sneha Patel', role: 'ML Engineer', company: 'Twitter', batch: 2021 },
+        { name: 'Vikas Singh', role: 'Cloud Engineer', company: 'Adobe', batch: 2020 },
+        { name: 'Anjali Kumar', role: 'Software Architect', company: 'Salesforce', batch: 2019 },
+        { name: 'Karan Mehta', role: 'Tech Lead', company: 'Microsoft', batch: 2022 },
+        { name: 'Divya Sharma', role: 'Senior Developer', company: 'Google', batch: 2021 },
+        { name: 'Rajat Gupta', role: 'Product Designer', company: 'Apple', batch: 2020 }
     ];
 
     const engagementOpportunities = [
         { 
-            title: 'Mentorship Program', 
+            title: 'Mentorship Program:', 
             icon: <Users className="w-8 h-8 text-accent" />, 
             desc: 'Guide the next generation of engineers by sharing your industry experience and career insights.' 
         },
@@ -46,110 +59,210 @@ const AlumniPage = () => {
             <StickyAdmissionsBar />
             
             {/* Hero Section */}
-            <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-black">
+            <section className="relative min-h-[60vh] lg:min-h-[702px] flex items-center justify-center overflow-hidden mt-16">
                 {/* Background Image with Overlay */}
-                <div className="absolute inset-0 z-0">
+                <div className="absolute inset-0 z-0 w-full">
                     <Image 
-                        src="/Other/future-faculty-2.webp" 
-                        alt="Campus" 
+                        src="/Alumni/Alumni-hero.svg" 
+                        alt="Alumni Hero" 
                         fill 
-                        className="object-cover opacity-20 filter grayscale"
+                        className="object-cover w-full"
+                        style={{ 
+                            background: 'linear-gradient(270deg, rgba(10, 10, 10, 0.3) 0%, #000000 100%)',
+                            backdropFilter: 'blur(0px)'
+                        }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0E0F10] to-[#0E0F10]" />
                 </div>
 
-                <div className="container mx-auto px-6 relative z-10 text-center space-y-10 animate-in fade-in slide-in-from-bottom duration-1000">
-                    <div className="inline-block px-6 py-2 rounded-full bg-accent text-black text-[10px] font-black tracking-[0.3em] uppercase mb-4">
-                        The Global AESTR Network
-                    </div>
-                        <h1 className="text-hero text-white">
-                            Where our students <br />
-                            <span className="opacity-70">are working today</span>
+                <div className="container mx-auto px-4 sm:px-6 relative z-10">
+                    <div className="max-w-2xl lg:max-w-3xl">
+                        <h1 className="text-white font-orbitron font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap mb-6">
+                            Our Alumni, Our Legacy
                         </h1>
-                    <p className="text-body text-white/60 max-w-4xl mx-auto font-bold tracking-tight">
-                        The innovators, leaders, and problem-solvers who have passed through our doors are the true testament to the power of future-safe education.
-                    </p>
+                        <p className="text-body text-white/90 leading-relaxed text-sm sm:text-base lg:text-lg">
+                            Welcome to the heart of AESTR enduring impact – our alumni community. The innovators, leaders, and problem-solvers who have passed through our doors are the true testament to our commitment to shaping the future of AI and technology. Our alumni don't just find jobs; they define industries, build groundbreaking solutions, and drive the technological advancements that are changing the world. Their success is our story, and their contributions are the foundation of our legacy.
+                        </p>
+                    </div>
                 </div>
             </section>
 
-            {/* Alumni Spotlights Grid */}
-            <section className="py-32 relative overflow-hidden px-6 bg-[#D7F601] border-y border-foreground/5">
-                <div className="container mx-auto">
-                    <div className="flex flex-col items-center mb-24 text-center space-y-6">
-                        <span className="text-[10rem] font-black text-black/5 absolute top-0 leading-none select-none">ELITE</span>
-                        <h2 className="text-4xl md:text-7xl font-black text-black uppercase tracking-tighter relative z-10">
-                            Alumni <span className="text-accent italic">Spotlights.</span>
+            {/* Alumni Spotlights Section */}
+            <section className="relative bg-[#5B1DD6] py-12 sm:py-16 lg:py-20 overflow-hidden">
+                <div className="container mx-auto px-4 sm:px-6 relative z-10">
+                    {/* Section Headers */}
+                    <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+                        <h2 className="text-white font-orbitron font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 px-4">
+                            <span className="block lg:inline">Alumni Spotlights:</span> <span className="block lg:inline">Where Innovation Takes Flight</span>
                         </h2>
-                        <div className="h-1.5 w-24 bg-accent rounded-full relative z-10" />
+                        <p className="text-body text-white/80 max-w-4xl mx-auto text-sm sm:text-base lg:text-lg px-4">
+                            Meet some of our exceptional graduates who are making significant strides in diverse fields. Their journeys exemplify the practical knowledge, critical thinking, and innovative spirit fostered at AESTR.
+                        </p>
                     </div>
 
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto relative z-20">
-                        {alumniSpotlights.map((alumni, i) => (
-                            <div 
-                                key={i} 
-                                className="glass p-8 rounded-[2.5rem] bg-black/80 border border-black/60 hover:border-accent/60 hover:bg-black transition-all duration-700 group flex flex-col items-center text-center space-y-6 cursor-default"
-                            >
-                                <div className="relative w-28 h-28 md:w-40 md:h-40 mb-2">
-                                    <div className="absolute inset-0 rounded-full border-4 border-white/10 group-hover:border-accent transition-all duration-700 p-2">
-                                        <div className="w-full h-full rounded-full overflow-hidden bg-background relative">
-                                            <Image 
-                                                src={alumni.image} 
-                                                alt={alumni.name} 
-                                                fill 
-                                                className="object-cover brightness-110 grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
-                                                onError={(e) => {
-                                                    const target = e.target as HTMLImageElement;
-                                                    target.src = `https://ui-avatars.com/api/?name=${alumni.name}&background=111111&color=D8F602&font-size=0.33&bold=true`;
-                                                }}
-                                            />
-                                        </div>
-                                    </div>
+                    {/* Alumni Cards Container - Responsive */}
+                    <div className="relative overflow-hidden">
+                        {/* Mobile: Static Grid */}
+                        <div className="lg:hidden grid grid-cols-2 sm:grid-cols-3 gap-4 px-4">
+                            {alumniData.slice(0, 6).map((alumni, i) => (
+                                <div 
+                                    key={`mobile-${i}`}
+                                    className="relative bg-black/80 border border-white/20 rounded-lg overflow-hidden aspect-[3.4/4]"
+                                >
+                                    <Image 
+                                        src={i < 8 ? `/Alumni/Alumni-${i + 1}.svg` : `/Alumni/Alumni-${i + 1}.jpg`} 
+                                        alt={alumni.name} 
+                                        fill 
+                                        className="object-contain"
+                                    />
                                 </div>
-                                <div className="space-y-2">
-                                    <h3 className="text-h3 text-white">
-                                        {alumni.name}
-                                    </h3>
-                                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-accent/80">{alumni.role}</p>
-                                    <div className="pt-4 mt-4 border-t border-foreground/5 w-full">
-                                        <p className="text-[11px] text-white/50 uppercase tracking-[0.15em] font-black">{alumni.company}</p>
-                                        <p className="text-[9px] text-white/30 uppercase tracking-widest mt-1">Batch of {alumni.batch}</p>
+                            ))}
+                        </div>
+
+                        {/* Desktop: Sliding Cards */}
+                        <div className="hidden lg:block">
+                            {/* Top Row - Moving Left */}
+                            <div className="flex space-x-6 mb-8 animate-slide-left">
+                                {alumniData.slice(0, 10).map((alumni, i) => (
+                                    <div 
+                                        key={`top-${i}`}
+                                        className="relative bg-black/80 border border-white/20 rounded-lg overflow-hidden flex-shrink-0 w-72 h-80 lg:w-80 lg:h-96"
+                                    >
+                                        <Image 
+                                            src={i < 8 ? `/Alumni/Alumni-${i + 1}.svg` : `/Alumni/Alumni-${i + 1}.jpg`} 
+                                            alt={alumni.name} 
+                                            fill 
+                                            className="object-contain"
+                                        />
                                     </div>
-                                </div>
+                                ))}
                             </div>
-                        ))}
+
+                            {/* Bottom Row - Moving Right */}
+                            <div className="flex space-x-6 animate-slide-right">
+                                {alumniData.slice(11, 21).map((alumni, i) => (
+                                    <div 
+                                        key={`bottom-${i}`}
+                                        className="relative bg-black/80 border border-white/20 rounded-lg overflow-hidden flex-shrink-0 w-72 h-80 lg:w-80 lg:h-96"
+                                    >
+                                        <Image 
+                                            src={`/Alumni/Alumni-${i + 12}.jpg`} 
+                                            alt={alumni.name} 
+                                            fill 
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                {/* Animation Styles */}
+                <style jsx>{`
+                    @keyframes slide-left {
+                        0% { transform: translateX(0); }
+                        100% { transform: translateX(-50%); }
+                    }
+                    @keyframes slide-right {
+                        0% { transform: translateX(-50%); }
+                        100% { transform: translateX(0); }
+                    }
+                    .animate-slide-left {
+                        animation: slide-left 20s linear infinite;
+                    }
+                    .animate-slide-right {
+                        animation: slide-right 20s linear infinite;
+                    }
+                `}</style>
             </section>
 
             {/* Alumni Engagement Section */}
-            <section className="py-40 relative bg-[#5B1DD6] px-6 overflow-hidden">
+            <section className="py-16 sm:py-20 lg:py-40 relative bg-[#D7F601] px-4 sm:px-6 overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.12)_1px,transparent_1px)] bg-[size:50px_50px] opacity-[0.2]" />
                 <div className="container mx-auto relative z-10">
-                    <div className="flex flex-col items-center mb-24 text-center space-y-6">
-
-                        <h2 className="text-h2 text-white uppercase tracking-tighter">
-                            Alumni <span className="text-accent italic">Engagement.</span>
+                    <div className="flex flex-col items-center mb-12 sm:mb-16 lg:mb-24 text-center space-y-4 sm:space-y-6 px-4">
+                        <h2 className="text-black font-orbitron font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6">
+                            <span className="block sm:inline">Alumni Engagement:</span> <span className="block sm:inline font-bold">Give Back & Grow</span>
                         </h2>
-                        <p className="text-body text-white/60 font-bold uppercase tracking-[0.3em]">Build the Ecosystem</p>
+                        <p className="text-body text-black/80 max-w-4xl mx-auto text-sm sm:text-base lg:text-lg">
+                            Your journey doesn't end at graduation; it's just the beginning of a lifelong connection with AESTR. We encourage our alumni to stay involved and contribute to the next generation of innovators.
+                        </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-                        {engagementOpportunities.map((opportunity, i) => (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto px-4">
+                        {[
+                            { type: 'mentorship', title: 'Mentorship Program:', desc: 'Share your valuable experience by mentoring current AESTR students. Guide them through their academic and career paths.', image: '/Alumni/Mentorship.jpg' },
+                            { type: 'lectures', title: 'Guest Lectures & Workshops:', desc: 'Return to campus (virtually or in person) to share your industry insights, conduct workshops, or speak about your career journey.', image: '/Alumni/guest.jpg' },
+                            { type: 'placement', title: 'Internship & Placement Opportunities:', desc: 'Help open doors for current AESTR students by offering internships or full-time positions at your organization.', image: '/Alumni/internship.jpg' },
+                            { type: 'projects', title: 'Collaborate on Projects:', desc: 'Explore opportunities to collaborate with AESTR\'s innovation labs or research initiatives.', image: '/Alumni/project-collabration.jpg' }
+                        ].map((item, i) => (
                             <div 
-                                key={i} 
-                                className="glass p-12 rounded-[3rem] bg-black/70 border border-white/10 hover:bg-black hover:border-accent/40 transition-all duration-700 group flex flex-col items-center text-center"
+                                key={i}
+                                className="relative bg-black/90 border border-black/30 rounded-xl overflow-hidden hover:border-accent/60 transition-all duration-300 group w-full max-w-sm mx-auto sm:max-w-none"
                             >
-                                <div className="mb-10 p-5 rounded-2xl bg-accent/5 border border-accent/10 transition-transform duration-700 group-hover:scale-110 shadow-xl group-hover:shadow-accent/20">
-                                    {opportunity.icon}
+                                <div className="w-full h-40 sm:h-48 relative">
+                                    <Image 
+                                        src={item.image} 
+                                        alt={`${item.type} engagement`} 
+                                        fill 
+                                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                    />
                                 </div>
-                                <h3 className="text-2xl font-black text-white mb-6 uppercase tracking-tighter leading-none group-hover:text-accent transition-colors">
-                                    {opportunity.title}
-                                </h3>
-                                    <p className="text-body text-white/75">
-                                        {opportunity.desc}
+                                <div className="p-3 sm:p-4 text-left bg-black/90 flex-1 flex flex-col justify-start">
+                                    <h3 className="text-white font-orbitron font-bold text-xs sm:text-sm mb-2 group-hover:text-accent transition-colors">
+                                        {item.title}
+                                    </h3>
+                                    <p className="text-white/80 text-xs leading-relaxed mb-0 overflow-hidden font-sans">
+                                        {item.desc}
                                     </p>
+                                </div>
                             </div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Ready to Take the Next Step Section */}
+            <section className="relative bg-[#5B1DD6] py-16 sm:py-20 overflow-hidden">
+                <div className="container mx-auto px-4 sm:px-6 relative z-10">
+                    <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+                        {/* Left Content */}
+                        <div className="w-full lg:w-1/2 text-center lg:text-left">
+                            <h2 className="text-white font-orbitron font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6">
+                                Ready to Take the Next Step?
+                            </h2>
+                            <p className="text-body text-white/80 max-w-2xl lg:max-w-none mx-auto lg:mx-0 text-sm sm:text-base lg:text-lg mb-6 whitespace-nowrap">
+                                Want to learn more about eligibility, how to apply, scholarships, or what your career could look like?
+                            </p>
+                            
+                            {/* Small Section with Button */}
+                            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6">
+                                <p className="text-body text-white/90 text-sm sm:text-base text-center lg:text-left">
+                                    Reach out to our International Collaboration Desk today.
+                                </p>
+                                <button 
+                                    className="bg-[#D7F601] text-black px-6 py-3 rounded-lg border border-[#D7F601] hover:bg-transparent hover:text-[#D7F601] transition-all duration-300 text-sm sm:text-base font-medium"
+                                    onClick={() => {
+                                        // Navigate to home page and scroll to registration form
+                                        window.location.href = '/#registration-form';
+                                    }}
+                                >
+                                    Apply Now
+                                </button>
+                            </div>
+                        </div>
+                        
+                        {/* Right Robot Image */}
+                        <div className="w-full lg:w-1/2 flex justify-center lg:justify-end mt-8 lg:mt-0">
+                            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 xl:w-[600px] xl:h-[550px]">
+                                <Image 
+                                    src="/Other/Robo.webp" 
+                                    alt="Robot" 
+                                    fill 
+                                    className="object-contain scale-110"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

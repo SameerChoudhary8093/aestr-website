@@ -9,35 +9,58 @@ import StickyAdmissionsBar from '@/components/StickyAdmissionsBar';
 
 // Reusable Lab Data (Same as home page)
 const labs = [
-    {
-        name: 'Foundation Model Lab',
-        image: '/Other/lab-4.webp',
-        description: 'Master cutting-edge AI by fine-tuning models for material science (with Microsoft\'s MatterGen), drug discovery, and more. Outcome: Become a leading AI Engineer, Foundation Model Engineer, or Data Engineer.',
-        icon: 'nvidia'
+    { 
+        name: 'Apple Ecosystem', 
+        image: '/Other/apple-lab.png', 
+        description: 'Master the art of building world-class applications within the premium Apple environment. From deep dives into Swift and SwiftUI to exploring advanced architectures for macOS, iOS, and the revolutionary VisionOS, you will gain hands-on experience with the tools that power the most elegant user experiences. This lab provides a unique opportunity to understand the synergy between high-end hardware and intuitive software design, preparing you for elite development roles worldwide.', 
+        icon: 'apple' 
     },
-    {
-        name: 'Embodied Brain Lab',
-        image: '/Other/lab-2.webp',
-        description: 'Dive into Robotics, Exoskeletons, and ROS on Nvidia Jetson. Build 3D printed humanoids and leverage our patented multi-agentic \'brain\' system - your key to becoming a top 1% AI engineer.',
-        icon: 'robotics'
+    { 
+        name: 'NVIDIA Pipeline', 
+        image: '/Other/Nvidia-Image.jpeg', 
+        description: 'Harness the massive power of GPU-accelerated computing in our high-performance NVIDIA lab. Master CUDA programming, TensorRT optimization, and the foundational software stacks that drive today\'s generative AI and deep learning breakthroughs. You will build the data-intensive intelligence that moves the modern cloud and data center, positioning yourself at the core of the infrastructure revolution. By bridging the gap between raw compute power and algorithmic excellence, you become an architect of the AI-driven future.', 
+        icon: 'nvidia' 
     },
-    {
-        name: 'RISC-V Systems Lab',
-        image: '/Other/lab-3.webp',
-        description: 'Engineer the future with India\'s pioneering semiconductor technology, building essential systems and chips for tomorrow.',
-        icon: 'chip'
+    { 
+        name: 'RISC-V Lab', 
+        image: '/Other/DSC08333.jpg.jpeg', 
+        description: 'Take your place at the forefront of India\'s semiconductor sovereignty in our pioneering RISC-V hardware lab. Students engage in the complete lifecycle of chip design, from RTL development to physical implementation of custom silicon for AI-specific workloads. By mastering open-source hardware architectures, you will be prepared to engineer the systems that define the next generation of global computing. This hands-on experience with silicon logic ensures you understand the fundamental building blocks of modern digital civilization.', 
+        icon: 'chip' 
     },
-    {
-        name: 'Augmented Human Lab',
-        image: '/Other/lab-5.webp',
-        description: 'Explore the frontiers of Human-AI interaction - from Apple Vision Pro and holography to AI filmmaking, UX design, and future communication.',
-        icon: 'apple'
+    { 
+        name: 'Embodied Brain Lab', 
+        image: '/Other/lab-2.webp', 
+        description: 'Experience the convergence of neural intelligence and physical machines in our robotics and autonomous systems lab. Using the NVIDIA Jetson platform and ROS, you will build robots that can perceive, reason, and react to real-time environments with machine precision. This lab focuses on creating advanced exoskeletons and smart robotics that will redefine the future of healthcare, logistics, and industrial automation. You will learn to breathe life into metal and silicon, mastering the complex interplay of computer vision and mechanical control.', 
+        icon: 'robotics' 
     }
 ];
 
 const BtechAIShodhAIPage = () => {
     const [currentImage, setCurrentImage] = useState(0);
+    const [expandedLabs, setExpandedLabs] = useState<{ [key: string]: boolean }>({});
     const heroImages = ['/b.tech-ai-with/DSC08261.jpg'];
+
+    const toggleLabExpansion = (labName: string) => {
+        setExpandedLabs(prev => ({
+            ...prev,
+            [labName]: !prev[labName]
+        }));
+    };
+
+    const truncateText = (text: string, labName: string, lines: number = 2) => {
+        const words = text.split(' ');
+        const wordsPerLine = 8; // Reduced words per line for shorter initial text
+        const maxWords = lines * wordsPerLine;
+        
+        // Special handling for Embodied Brain Lab
+        if (labName === 'Embodied Brain Lab') {
+            const wordsToShow = 12; // Show fewer words for this lab due to long heading
+            const truncated = words.length > wordsToShow ? words.slice(0, wordsToShow).join(' ') + '...' : text;
+            return truncated.replace('autonomous systems lab...', ''); // Hide the specific phrase
+        }
+        
+        return words.length > maxWords ? words.slice(0, maxWords).join(' ') + '...' : text;
+    };
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -54,39 +77,39 @@ const BtechAIShodhAIPage = () => {
 
 
             {/* Hero Section Redesigned (Brochure Style) */}
-            <section className="relative w-full min-h-[90vh] lg:h-[800px] overflow-hidden flex items-center bg-[#5B1DD6] pt-32 lg:pt-24 pb-20 lg:pb-0">
-                <div className="container-boxed relative z-20 flex flex-col lg:flex-row items-center justify-between h-full gap-12 lg:gap-16">
+            <section className="relative w-full min-h-[80vh] lg:h-[800px] overflow-hidden flex items-center bg-[#5B1DD6] pt-24 sm:pt-28 lg:pt-24 pb-16 lg:pb-0">
+                <div className="container mx-auto px-4 sm:px-6 relative z-20 flex flex-col lg:flex-row items-center justify-between h-full gap-8 lg:gap-16">
                     
                     {/* Left: Text Content */}
-                    <div className="lg:w-[55%] flex flex-col justify-center space-y-8 text-left z-10 w-full pt-10 lg:pt-0">
-                        <div className="space-y-1 relative">
+                    <div className="lg:w-[55%] flex flex-col justify-center space-y-6 lg:space-y-8 text-left z-10 w-full pt-8 lg:pt-0">
+                        <div className="space-y-2 lg:space-y-4 relative">
                             {/* Decorative graphical element like the brochure circles */}
-                            <div className="absolute -left-20 -top-20 opacity-20 pointer-events-none">
-                                <svg width="150" height="150" viewBox="0 0 100 100" fill="none" stroke="#D7F601" strokeWidth="2">
+                            <div className="absolute -left-12 -top-12 lg:-left-20 lg:-top-20 opacity-20 pointer-events-none hidden sm:block">
+                                <svg width="100" height="100" lgWidth="150" lgHeight="150" viewBox="0 0 100 100" fill="none" stroke="#D7F601" strokeWidth="2">
                                     <circle cx="50" cy="50" r="40" />
                                     <path d="M50 0 V100 M0 50 H100" opacity="0.3" strokeDasharray="4 4" />
                                 </svg>
                             </div>
                             
-                            <h1 className="text-[#D7F601] text-[2.5rem] sm:text-[3.2rem] lg:text-[4.1rem] font-orbitron font-black leading-[1.05] tracking-tighter">
+                            <h1 className="text-[#D7F601] text-2xl sm:text-3xl md:text-4xl lg:text-[4.1rem] font-orbitron font-black leading-[1.05] tracking-tighter">
                                 This isn't college.
                             </h1>
-                            <h2 className="text-[#D7F601] text-[1.8rem] sm:text-[2.5rem] lg:text-[3.2rem] font-orbitron font-black leading-[1.05] tracking-tighter">
+                            <h2 className="text-[#D7F601] text-xl sm:text-2xl md:text-3xl lg:text-[3.2rem] font-orbitron font-black leading-[1.05] tracking-tighter">
                                 It's a 4-year internship
                             </h2>
                         </div>
                         
                         <div className="pt-2">
-                            <h3 className="text-white text-[1.4rem] sm:text-[1.8rem] lg:text-[2.2rem] font-orbitron font-extrabold tracking-tight">
+                            <h3 className="text-white text-lg sm:text-xl md:text-2xl lg:text-[2.2rem] font-orbitron font-extrabold tracking-tight">
                                 B.Tech AI With Shodh AI
                             </h3>
                         </div>
 
                         {/* Brochure style context box */}
-                        <div className="bg-[#181818] p-6 lg:p-8 rounded-2xl shadow-2xl max-w-xl border-l-[6px] border-[#D7F601] mt-4 relative overflow-hidden">
+                        <div className="bg-[#181818] p-4 sm:p-6 lg:p-8 rounded-2xl shadow-2xl max-w-lg lg:max-w-xl border-l-[4px] lg:border-l-[6px] border-[#D7F601] mt-4 relative overflow-hidden">
                             {/* subtle internal glow/texture */}
-                            <div className="absolute right-0 top-0 w-32 h-32 bg-[#D7F601]/5 blur-3xl rounded-full"></div>
-                            <p className="text-white text-lg lg:text-[19px] font-medium leading-relaxed relative z-10">
+                            <div className="absolute right-0 top-0 w-24 h-24 lg:w-32 lg:h-32 bg-[#D7F601]/5 blur-3xl rounded-full"></div>
+                            <p className="text-white text-base lg:text-lg lg:text-[19px] font-medium leading-relaxed relative z-10">
                             Every student becomes an intern from day one.
                                 <span className="text-[#D7F601] font-bold tracking-wide mt-2 block">Stop studying. Start building.</span>
                             </p>
@@ -94,9 +117,9 @@ const BtechAIShodhAIPage = () => {
                     </div>
 
                     {/* Right: Image Slider with Chamfered/Angled cut like Brochure */}
-                    <div className="lg:w-[45%] w-full h-[45vh] min-h-[350px] lg:h-[600px] relative">
+                    <div className="lg:w-[45%] w-full h-[40vh] min-h-[300px] sm:h-[45vh] sm:min-h-[350px] lg:h-[600px] relative">
                          {/* Clip-path for the cool tech-y brochure shape */}
-                         <div className="absolute inset-0 z-10 bg-black overflow-hidden shadow-2xl border-[4px] border-[#D7F601]/30" style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%)' }}>
+                         <div className="absolute inset-0 z-10 bg-black overflow-hidden shadow-2xl border-[2px] lg:border-[4px] border-[#D7F601]/30" style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%)' }}>
                             <img 
                                 src="/b.tech-ai-with/DSC08261.jpg"
                                 alt="AESTR Environment"
@@ -107,23 +130,80 @@ const BtechAIShodhAIPage = () => {
                          </div>
                          
                          {/* Decorative Background Offset Box (Solid Lime Green) */}
-                         <div className="absolute -right-4 -bottom-4 lg:-right-6 lg:-bottom-6 w-[95%] h-[95%] z-0 bg-[#D7F601] opacity-60" style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%)' }}/>
+                         <div className="absolute -right-2 -bottom-2 sm:-right-3 sm:-bottom-3 lg:-right-6 lg:-bottom-6 w-[95%] h-[95%] z-0 bg-[#D7F601] opacity-60" style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%)' }}/>
                     </div>
 
                 </div>
             </section>
 
             {/* Purple Cards Section */}
-            <section className="py-20 relative overflow-hidden bg-[#5B1DD6]">
-                <div className="container-boxed relative z-10 flex flex-col lg:flex-row gap-6 lg:gap-8 justify-center items-stretch">
+            <section className="py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-[#5B1DD6]">
+                <div className="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-8 justify-center items-stretch">
 
                     {/* Card 1 */}
-                    <div className="bg-white rounded-[2rem] p-6 pb-8 flex flex-col gap-6 lg:w-1/3 shadow-2xl hover:-translate-y-2 transition-transform duration-300 border-2 border-black/5">
-                        <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden relative border border-black/10">
+                    <div className="bg-white rounded-[1.5rem] sm:rounded-[2rem] p-4 sm:p-6 pb-6 sm:pb-8 flex flex-col gap-4 sm:gap-6 lg:w-1/3 shadow-2xl hover:-translate-y-2 transition-transform duration-300 border-2 border-black/5">
+                        <div className="w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden relative border border-black/10">
                             <Image src="/b.tech-ai-with/robo.jpg" alt="Lab robot" fill className="object-cover" />
                         </div>
-                        <div className="flex justify-between items-start gap-4">
-                            <h3 className="text-3xl lg:text-4xl font-bold font-orbitron text-[#5B1DD6] leading-tight tracking-tight">
+                        <div className="flex justify-between items-start gap-2 sm:gap-4">
+                            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-orbitron text-[#5B1DD6] leading-tight tracking-tight">
+                                No
+                            </h3>
+                            <div className="bg-[#D7F601] rounded-full p-2 sm:p-3">
+                                <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h4 className="text-xl sm:text-2xl font-bold font-orbitron text-black">Teachers</h4>
+                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                            Learn directly from industry veterans and AI researchers who've built products used by millions.
+                        </p>
+                    </div>
+
+                    {/* Card 2 */}
+                    <div className="bg-white rounded-[1.5rem] sm:rounded-[2rem] p-4 sm:p-6 pb-6 sm:pb-8 flex flex-col gap-4 sm:gap-6 lg:w-1/3 shadow-2xl hover:-translate-y-2 transition-transform duration-300 border-2 border-black/5">
+                        <div className="w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden relative border border-black/10">
+                            <Image src="/b.tech-ai-with/books.jpg" alt="Books" fill className="object-cover" />
+                        </div>
+                        <div className="flex justify-between items-start gap-2 sm:gap-4">
+                            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-orbitron text-[#5B1DD6] leading-tight tracking-tight">
+                                No
+                            </h3>
+                            <div className="bg-[#D7F601] rounded-full p-2 sm:p-3">
+                                <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h4 className="text-xl sm:text-2xl font-bold font-orbitron text-black">Homework</h4>
+                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                            No theoretical assignments. Only real-world projects that build your portfolio and solve actual problems.
+                        </p>
+                    </div>
+
+                    {/* Card 3 */}
+                    <div className="bg-white rounded-[1.5rem] sm:rounded-[2rem] p-4 sm:p-6 pb-6 sm:pb-8 flex flex-col gap-4 sm:gap-6 lg:w-1/3 shadow-2xl hover:-translate-y-2 transition-transform duration-300 border-2 border-black/5">
+                        <div className="w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden relative border border-black/10">
+                            <Image src="/b.tech-ai-with/Graduate-as-a-senior.jpg" alt="Graduate" fill className="object-cover" />
+                        </div>
+                        <div className="flex justify-between items-start gap-2 sm:gap-4">
+                            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-orbitron text-[#5B1DD6] leading-tight tracking-tight flex-1">
+                                Graduate As A Senior Engineer
+                            </h3>
+                            <div className="bg-[#D7F601] rounded-full p-2 sm:p-3">
+                                <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                            4 years of continuous project experience = senior-level skills. Start your career where others end.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
                                 B.Tech AI <br />with Shodh AI
                             </h3>
                             <div className="shrink-0 mt-1">
@@ -139,8 +219,8 @@ const BtechAIShodhAIPage = () => {
 
                     {/* Card 2 */}
                     <div className="bg-white rounded-[2rem] p-6 pb-8 flex flex-col gap-6 lg:w-1/3 shadow-2xl hover:-translate-y-2 transition-transform duration-300 border-2 border-black/5">
-                        <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden relative border border-black/10 bg-[#0b0e14] p-8 flex items-center justify-center">
-                            <Image src="/b.tech-ai-with/shodh.png" alt="Shodh AI" fill className="object-contain p-4" />
+                        <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden relative border border-black/10 bg-[#000042] flex items-center justify-center">
+                            <Image src="/b.tech-ai-with/shodh.png" alt="Shodh AI" fill className="object-cover scale-90" />
                         </div>
                         <div className="flex justify-between items-start gap-4">
                             <h3 className="text-3xl lg:text-4xl font-bold font-orbitron text-[#5B1DD6] leading-tight tracking-tight flex-1">
@@ -270,10 +350,10 @@ const BtechAIShodhAIPage = () => {
                                 <div className="lg:col-span-4">
                                     <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
                                         <Image
-                                            src="/Other/robot-class.jpg"
+                                            src="/Other/DSC01997.jpg"
                                             alt="AI building in action"
                                             fill
-                                            className="object-cover"
+                                            className="object-cover scale-125"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                                     </div>
@@ -395,8 +475,8 @@ cross-functional teams ship.
                         >
                             <div className="relative w-full aspect-[4/3] overflow-hidden">
                                 <Image
-                                    src="/b.tech-ai-with/DSC08261.jpg"
-                                    alt="Mentor-Led Learning"
+                                    src="/Other/WhatsApp Image 2026-03-24 at 11.24.53 AM.jpeg"
+                                    alt="No Homework"
                                     fill
                                     className="object-cover"
                                 />
@@ -421,8 +501,8 @@ cross-functional teams ship.
                         >
                             <div className="relative w-full aspect-[4/3] overflow-hidden">
                                 <Image
-                                    src="/Other/robot-class.jpg"
-                                    alt="Career-Driven Outcomes"
+                                    src="/Other/WhatsApp Image 2026-03-24 at 11.24.46 AM.jpeg"
+                                    alt="No Teachers"
                                     fill
                                     className="object-cover"
                                 />
@@ -641,9 +721,19 @@ cross-functional teams ship.
                                     <h4 className="text-h3 text-black">
                                         {lab.name}
                                     </h4>
-                                    <p className="text-sm text-black/80 leading-relaxed font-medium">
-                                        {lab.description}
+                                    <p className="text-sm text-black/80 leading-relaxed font-medium text-left">
+                                        {expandedLabs[lab.name] ? lab.description : truncateText(lab.description, lab.name)}
                                     </p>
+                                    <div className="text-left">
+                                        {lab.description.length > 40 && (
+                                            <button
+                                                onClick={() => toggleLabExpansion(lab.name)}
+                                                className="text-xs text-[#5B1DD6] font-orbitron font-semibold hover:text-black transition-colors underline"
+                                            >
+                                                {expandedLabs[lab.name] ? 'Read Less' : 'Read More'}
+                                            </button>
+                                        )}
+                                    </div>
                                 </div>
                             </motion.div>
                         ))}
@@ -825,12 +915,12 @@ cross-functional teams ship.
                             transition={{ duration: 0.8 }}
                             className="relative group"
                         >
-                            <div className="aspect-[4/3] rounded-sm overflow-hidden border border-black/10 shadow-2xl relative">
+                            <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-black/10 shadow-2xl relative">
                                 <Image
-                                    src="/Other/robot-class.jpg"
+                                    src="/Other/Senior-Engineer.jpg"
                                     alt="Graduate Success"
                                     fill
-                                    className="object-cover"
+                                    className="object-cover scale-125"
                                 />
                             </div>
                             {/* Decorative accent */}

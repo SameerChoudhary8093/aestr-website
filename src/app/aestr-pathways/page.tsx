@@ -77,12 +77,12 @@ export default function AestrPathways() {
 
 
             {/* Header section */}
-            <section className="py-20 px-6 border-b border-white/5">
-                <div className="container-boxed max-w-6xl mx-auto">
+            <section className="py-16 sm:py-20 px-4 sm:px-6 border-b border-white/5">
+                <div className="container mx-auto max-w-6xl">
                     <motion.h1 
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-hero text-foreground mb-4"
+                        className="text-3xl sm:text-4xl md:text-5xl lg:text-hero text-foreground mb-4 font-orbitron font-black"
                     >
                         AESTR <span className="text-accent underline decoration-accent/20">Pathways</span>
                     </motion.h1>
@@ -90,7 +90,7 @@ export default function AestrPathways() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-body text-foreground/80 max-w-3xl font-medium"
+                        className="text-body text-foreground/80 max-w-3xl font-medium text-sm sm:text-base"
                     >
                         At AESTR, a typical day blends hands-on innovation with AI-driven learning.
                     </motion.p>
@@ -98,42 +98,44 @@ export default function AestrPathways() {
             </section>
 
             {/* Pathway 1: Pro Track */}
-            <section className="py-24 px-6 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
+            <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] bg-accent/5 rounded-full blur-[80px] sm:blur-[120px] pointer-events-none" />
                 
-                <div className="container-boxed max-w-6xl mx-auto space-y-16">
-                    <div className="space-y-6">
-                        <div className="flex items-center gap-4">
-                            <span className="w-12 h-12 rounded-full bg-purple/10 border border-purple/20 flex items-center justify-center text-2xl font-orbitron font-bold text-purple-400">1</span>
-                            <h2 className="text-2xl md:text-4xl font-orbitron font-bold uppercase tracking-tight">
-                                B.Tech AI With Shodh AI TRACK <span className="italic font-light text-white/60">Elite Global Careers</span> <span className="bg-accent/10 border border-accent/20 text-accent px-4 py-1 rounded-lg text-xl ml-2 font-bold">(₹35 LPA+)</span>
+                <div className="container mx-auto max-w-6xl space-y-12 sm:space-y-16">
+                    <div className="space-y-4 sm:space-y-6">
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+                            <span className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-purple/10 border border-purple/20 flex items-center justify-center text-lg sm:text-2xl font-orbitron font-bold text-purple-400">1</span>
+                            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-orbitron font-bold uppercase tracking-tight leading-tight">
+                                <span className="block sm:inline">B.Tech AI With Shodh AI TRACK</span>
+                                <span className="block sm:inline italic font-light text-white/60">Elite Global Careers</span>
+                                <span className="block sm:inline bg-accent/10 border border-accent/20 text-accent px-3 py-1 sm:px-4 sm:py-1 rounded-lg text-base sm:text-xl ml-0 sm:ml-2 font-bold mt-2 sm:mt-0">(₹35 LPA+)</span>
                             </h2>
                         </div>
                         <div className="space-y-2">
-                            <p className="font-bold text-foreground">Who is it for?</p>
-                            <p className="text-foreground/70 max-w-2xl">Top 5-10% of high-performing students—those aiming for elite roles in tech.</p>
+                            <p className="font-bold text-foreground text-sm sm:text-base">Who is it for?</p>
+                            <p className="text-foreground/70 max-w-2xl text-sm sm:text-base">Top 5-10% of high-performing students—those aiming for elite roles in tech.</p>
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                        <div className="lg:col-span-6 space-y-8">
-                            <h3 className="text-3xl font-bold">Key Features</h3>
-                            <div className="space-y-6">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                        <div className="lg:col-span-6 space-y-6 sm:space-y-8">
+                            <h3 className="text-2xl sm:text-3xl font-bold">Key Features</h3>
+                            <div className="space-y-4 sm:space-y-6">
                                 {proTrackFeatures.map((item) => (
-                                    <div key={item.num} className="flex gap-6 items-start group">
-                                        <div className="flex-shrink-0 w-12 h-12 rounded-full bg-foreground/5 border border-foreground/10 flex items-center justify-center text-lg font-bold group-hover:bg-accent group-hover:text-black transition-all">
+                                    <div key={item.num} className="flex gap-4 sm:gap-6 items-start group">
+                                        <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-foreground/5 border border-foreground/10 flex items-center justify-center text-sm sm:text-lg font-bold group-hover:bg-accent group-hover:text-black transition-all">
                                             {item.num}
                                         </div>
                                         <div className="space-y-1">
-                                            <p className="font-bold text-lg">{item.title}</p>
-                                            <p className="text-body text-foreground/60">{item.desc}</p>
+                                            <p className="font-bold text-base sm:text-lg">{item.title}</p>
+                                            <p className="text-body text-foreground/60 text-sm sm:text-base">{item.desc}</p>
                                         </div>
                                     </div>
                                 ))}
                             </div>
                         </div>
                         <div className="lg:col-span-6">
-                            <div className="relative aspect-square md:aspect-[4/5] rounded-[3rem] overflow-hidden border border-white/5 shadow-2x-strong group">
+                            <div className="relative aspect-square sm:aspect-[4/5] rounded-[2rem] sm:rounded-[3rem] overflow-hidden border border-white/5 shadow-2x-strong group">
                                 <Image 
                                     src="/pathways/pro-track.png" 
                                     alt="Pro Track"
@@ -141,7 +143,7 @@ export default function AestrPathways() {
                                     className="object-cover group-hover:scale-105 transition-transform duration-1000"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                                <div className="absolute inset-0 border-[0.5px] border-white/10 rounded-[3rem] m-4 pointer-events-none" />
+                                <div className="absolute inset-0 border-[0.5px] border-white/10 rounded-[2rem] sm:rounded-[3rem] m-3 sm:m-4 pointer-events-none" />
                             </div>
                         </div>
                     </div>
