@@ -3,17 +3,19 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import StickyAdmissionsBar from '@/components/StickyAdmissionsBar';
 
 const BlogsPage = () => {
     const blogPosts = [
         {
-            title: "The Rise of Agentic AI: Why it’s the next Frontier",
+            title: "The Rise of Agentic AI: Why it's the next Frontier",
             excerpt: "Understanding how autonomous agents are redefining software engineering and industry workflows.",
             author: "Dr. Arastu Sharma",
             date: "Mar 10, 2026",
             category: "Artificial Intelligence",
-            image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"
+            image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80",
+            categoryColor: "bg-purple-500/10 text-purple-400 border-purple-500/20"
         },
         {
             title: "RISC-V: India's Path to Semiconductor Sovereignty",
@@ -21,7 +23,8 @@ const BlogsPage = () => {
             author: "Kanishk Sharma",
             date: "Feb 28, 2026",
             category: "Hardware",
-            image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+            image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+            categoryColor: "bg-orange-500/10 text-orange-400 border-orange-500/20"
         },
         {
             title: "Embodied Intelligence: Machines that Feel",
@@ -29,7 +32,8 @@ const BlogsPage = () => {
             author: "Team AESTR",
             date: "Feb 15, 2026",
             category: "Robotics",
-            image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80"
+            image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80",
+            categoryColor: "bg-green-500/10 text-green-400 border-green-500/20"
         },
         {
             title: "The Ethical Dilemma of Generative Systems",
@@ -37,131 +41,176 @@ const BlogsPage = () => {
             author: "Prof. MP Poonia",
             date: "Jan 30, 2026",
             category: "Ethics",
-            image: "https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=800&q=80"
+            image: "https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=800&q=80",
+            categoryColor: "bg-blue-500/10 text-blue-400 border-blue-500/20"
         }
     ];
 
     return (
-        <main className="bg-background min-h-screen text-foreground font-orbitron overflow-x-hidden selection:bg-accent selection:text-black">
-            <StickyAdmissionsBar />
+        <>
+            <meta name="description" content="Explore the latest research, tech breakthroughs, and pedagogical shifts from the architects of India's AI future at AESTR's Insights & Intelligence blog." />
             
-            {/* Hero Section */}
-            <section className="relative pt-32 sm:pt-40 pb-16 lg:pt-64 lg:pb-32 overflow-hidden px-4 sm:px-6 bg-[#D7F601]">
-                <div className="container mx-auto relative z-10 text-center">
-                    <div className="inline-block px-4 sm:px-6 py-2 rounded-full bg-black text-[#D7F601] text-[8px] sm:text-[10px] font-black tracking-[0.3em] uppercase mb-6 sm:mb-10">
-                        Insights & Intelligence
-                    </div>
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-hero text-black font-orbitron font-black leading-tight">
-                            Insights from <br />
-                            <span className="opacity-70">industry experts</span>
-                        </h1>
-                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-black/70 max-w-4xl mx-auto leading-relaxed font-bold tracking-tight px-4">
-                        Explore the latest research, tech breakthroughs, and pedagogical shifts from the architects of India's AI future.
-                    </p>
-                </div>
-                {/* Background pulse */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] sm:w-[800px] sm:h-[800px] lg:w-[1200px] lg:h-[1200px] bg-black/10 rounded-full blur-[120px] sm:blur-[180px] pointer-events-none" />
-            </section>
-
-            {/* Featured Post */}
-            <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 relative">
-                <div className="container mx-auto">
-                    <div className="glass rounded-[2rem] sm:rounded-[3rem] lg:rounded-[3.5rem] bg-foreground/5 border border-foreground/5 overflow-hidden flex flex-col lg:flex-row relative group hover:border-accent/40 transition-all duration-700">
-                        <div className="w-full lg:w-3/5 h-[300px] sm:h-[350px] lg:h-auto relative">
-                            <Image 
-                                src={blogPosts[0].image} 
-                                alt="Featured Post" 
-                                fill 
-                                className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 grayscale group-hover:grayscale-0"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent opacity-60" />
-                        </div>
-                        <div className="w-full lg:w-2/5 p-6 sm:p-8 md:p-12 lg:p-20 flex flex-col justify-center space-y-4 sm:space-y-6 lg:space-y-8 relative z-10 bg-background/40 backdrop-blur-3xl">
-                            <div className="flex items-center gap-3 sm:gap-4">
-                                <span className="bg-accent text-black text-[8px] sm:text-[9px] font-black uppercase px-2 sm:px-3 py-1 rounded-full tracking-widest">{blogPosts[0].category}</span>
-                                <span className="text-[8px] sm:text-[10px] text-foreground/30 font-black uppercase tracking-widest">{blogPosts[0].date}</span>
-                            </div>
-                            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-black text-foreground uppercase tracking-tighter leading-none group-hover:text-accent transition-colors">
-                                {blogPosts[0].title}
-                            </h2>
-                            <p className="text-body text-foreground/50 font-semibold text-sm sm:text-base">
-                                {blogPosts[0].excerpt}
+            <main className="bg-background min-h-screen text-foreground font-orbitron overflow-x-hidden selection:bg-accent selection:text-black">
+                <StickyAdmissionsBar />
+                
+                {/* Hero Section - The Hook - Purple Background */}
+                <section className="relative pt-40 pb-0 px-4 bg-[#5B1DD6]">
+                    <div className="container mx-auto max-w-7xl text-center">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6 }}
+                            className="flex flex-col items-center justify-center w-full"
+                        >
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-orbitron font-black text-white mb-4 leading-tight mx-auto">
+                                Insights &amp; Intelligence
+                            </h1>
+                            <p className="text-lg md:text-xl text-white/80 leading-relaxed font-orbitron whitespace-nowrap mx-auto text-center mb-0">
+                                Exploring the latest research, tech breakthroughs, and pedagogical shifts from the architects of India's AI future.
                             </p>
-                            <div className="flex items-center gap-3 sm:gap-4 pt-4 sm:pt-6">
-                                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-accent/10 flex items-center justify-center font-black text-accent text-xs">A</div>
-                                <div>
-                                    <p className="text-xs font-black text-foreground uppercase tracking-widest">{blogPosts[0].author}</p>
-                                    <p className="text-[8px] sm:text-[10px] text-foreground/30 uppercase tracking-widest mt-1">Founding Member</p>
+                        </motion.div>
+                    </div>
+                </section>
+
+                {/* Featured Post - The Spotlight - Purple Background */}
+                <section className="py-16 px-4 bg-[#5B1DD6]">
+                    <div className="container mx-auto max-w-6xl">
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="group cursor-pointer"
+                        >
+                            <div className="bg-black/50 backdrop-blur-sm border border-black/20 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+                                <div className="flex flex-col lg:flex-row">
+                                    <div className="lg:w-1/2 h-64 lg:h-auto relative">
+                                        <Image 
+                                            src={blogPosts[0].image} 
+                                            alt="Featured Post" 
+                                            fill 
+                                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                        />
+                                    </div>
+                                    <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-between">
+                                        <div>
+                                            <div className="flex items-center gap-4 mb-4">
+                                                <span className={`px-3 py-1 rounded-full text-xs font-semibold border ${blogPosts[0].categoryColor}`}>
+                                                    {blogPosts[0].category}
+                                                </span>
+                                                <span className="text-sm text-white/70">{blogPosts[0].date}</span>
+                                            </div>
+                                            <h2 className="text-2xl md:text-3xl font-orbitron font-black text-white mb-4 leading-tight group-hover:text-accent transition-colors">
+                                                {blogPosts[0].title}
+                                            </h2>
+                                            <p className="text-white/80 leading-relaxed mb-6 font-orbitron">
+                                                {blogPosts[0].excerpt}
+                                            </p>
+                                        </div>
+                                        <div className="flex items-center justify-between">
+                                            <div className="flex items-center gap-3">
+                                                <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
+                                                    <span className="text-accent font-semibold text-sm">AS</span>
+                                                </div>
+                                                <div>
+                                                    <p className="text-sm font-semibold text-white font-orbitron">{blogPosts[0].author}</p>
+                                                    <p className="text-xs text-white/70 font-orbitron">Founding Member</p>
+                                                </div>
+                                            </div>
+                                            <span className="text-accent text-xl group-hover:translate-x-2 transition-transform inline-block">
+                                                →
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                        </motion.div>
+                    </div>
+                </section>
+
+                {/* Main Blog Feed - Grid Layout - Neon Background */}
+                <section className="py-16 px-4 bg-[#D7F601]">
+                    <div className="container mx-auto max-w-6xl">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {blogPosts.slice(1).map((post, index) => (
+                                <motion.article
+                                    key={index}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                                    className="group cursor-pointer"
+                                >
+                                    <div className="bg-black/50 backdrop-blur-sm border border-black/20 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
+                                        <div className="h-48 relative">
+                                            <Image 
+                                                src={post.image} 
+                                                alt={post.title} 
+                                                fill 
+                                                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                            />
+                                            <div className="absolute top-4 left-4">
+                                                <span className={`px-3 py-1 rounded-full text-xs font-semibold border ${post.categoryColor}`}>
+                                                    {post.category}
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div className="p-6 flex flex-col flex-grow">
+                                            <div className="text-sm text-white/70 mb-3 font-orbitron">{post.date}</div>
+                                            <h3 className="text-xl font-orbitron font-black text-white mb-3 leading-tight group-hover:text-accent transition-colors">
+                                                {post.title}
+                                            </h3>
+                                            <p className="text-white/60 leading-relaxed mb-6 flex-grow font-orbitron">
+                                                {post.excerpt}
+                                            </p>
+                                            <div className="flex items-center justify-between pt-4 border-t border-black/20">
+                                                <span className="text-sm text-white/70 font-orbitron">{post.author}</span>
+                                                <span className="text-accent text-lg group-hover:translate-x-2 transition-transform inline-block opacity-0 group-hover:opacity-100">
+                                                    →
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </motion.article>
+                            ))}
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            {/* Posts Grid */}
-            <section className="py-20 sm:py-24 lg:py-32 px-4 sm:px-6 bg-background-alt/20 border-y border-foreground/5">
-                <div className="container mx-auto">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
-                        {blogPosts.slice(1).map((post, i) => (
-                            <div key={i} className="glass rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[2.5rem] bg-foreground/5 border border-foreground/5 overflow-hidden group hover:border-accent/40 transition-all duration-700 flex flex-col h-full">
-                                <div className="h-48 sm:h-56 lg:h-64 relative overflow-hidden">
-                                    <Image 
-                                        src={post.image} 
-                                        alt={post.title} 
-                                        fill 
-                                        className="object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition-all duration-1000 grayscale group-hover:grayscale-0"
-                                    />
-                                    <div className="absolute top-4 left-4 sm:top-6 sm:left-6">
-                                        <span className="bg-background-alt/80 backdrop-blur-md text-accent text-[8px] sm:text-[9px] font-black uppercase px-3 sm:px-4 py-1 sm:py-2 rounded-full border border-accent/20 tracking-widest">{post.category}</span>
-                                    </div>
-                                </div>
-                                <div className="p-6 sm:p-8 lg:p-10 flex flex-col flex-grow space-y-4 sm:space-y-6">
-                                    <div className="text-[8px] sm:text-[10px] text-foreground/30 font-black uppercase tracking-widest">{post.date}</div>
-                                    <h3 className="text-lg sm:text-xl md:text-2xl lg:text-h3 text-black font-orbitron font-bold leading-tight">
-                                        {post.title}
-                                    </h3>
-                                    <p className="text-xs sm:text-sm text-foreground/50 leading-relaxed font-bold flex-grow">
-                                        {post.excerpt}
-                                    </p>
-                                    <div className="pt-6 sm:pt-8 border-t border-foreground/5 flex items-center justify-between">
-                                        <p className="text-[8px] sm:text-[10px] font-black text-foreground/40 uppercase tracking-widest">{post.author}</p>
-                                        <span className="text-accent text-lg sm:text-xl opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all">→</span>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
+                {/* Newsletter/Call to Action - The Retention - Continue Neon Theme */}
+                <section className="py-24 px-4 bg-[#D7F601]">
+                    <div className="container mx-auto max-w-4xl text-center">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.6 }}
+                        >
+                            <h2 className="text-3xl md:text-4xl font-orbitron font-black text-black mb-4">
+                                Stay Ahead of the Curve
+                            </h2>
+                            <p className="text-black/70 mb-8 max-w-2xl mx-auto font-orbitron">
+                                Get the latest AI breakthroughs, research insights, and tech trends delivered directly to your inbox.
+                            </p>
+                            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                                <input 
+                                    type="email" 
+                                    placeholder="Enter your email" 
+                                    className="flex-1 px-4 py-3 bg-black/50 border border-black/20 rounded-xl focus:outline-none focus:border-accent/50 transition-colors text-black placeholder-black/50 font-orbitron"
+                                    required
+                                />
+                                <button 
+                                    type="submit"
+                                    className="px-6 py-3 bg-black text-[#D7F601] font-orbitron font-semibold rounded-xl hover:bg-black/90 transition-colors focus:outline-none focus:ring-2 focus:ring-black/50"
+                                >
+                                    Subscribe
+                                </button>
+                            </form>
+                            <p className="text-xs text-black/60 mt-4 font-orbitron">
+                                Join 10,000+ professionals getting weekly AI insights. No spam, ever.
+                            </p>
+                        </motion.div>
                     </div>
-
-                    <div className="mt-16 sm:mt-20 lg:mt-24 flex justify-center">
-                        <button className="btn-aestr !px-8 sm:!px-10 lg:!px-12 !py-4 sm:!py-5 border-white group text-sm sm:text-base">
-                            Load More Intelligence
-                            <span className="ml-2 sm:ml-3 group-hover:rotate-90 transition-transform inline-block text-lg sm:text-xl">⊕</span>
-                        </button>
-                    </div>
-                </div>
-            </section>
-
-            {/* Newsletter Section */}
-            <section className="py-24 sm:py-32 lg:py-40 px-4 sm:px-6 relative overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--accent)_1px,transparent_1px)] bg-[size:40px_40px sm:bg-[size:60px_60px] opacity-[0.03]" />
-                <div className="container mx-auto max-w-4xl relative z-10 text-center space-y-8 sm:space-y-12">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-black text-foreground uppercase tracking-tighter leading-tight">
-                        Stay Ahead <br /><span className="text-accent italic">Of The Curve.</span>
-                    </h2>
-                    <p className="text-base sm:text-lg lg:text-xl text-foreground/50 font-black tracking-tight uppercase px-4">Get the latest AI breakthroughs delivered to your inbox.</p>
-                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-2xl mx-auto">
-                        <input 
-                            type="email" 
-                            placeholder="YOUR@PROFESSIONAL.EMAIL" 
-                            className="flex-1 bg-foreground/5 border border-foreground/10 rounded-xl sm:rounded-2xl px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-5 text-xs sm:text-sm font-black tracking-widest uppercase focus:outline-none focus:border-accent/40 transition-colors"
-                        />
-                        <button className="btn-aestr bg-accent text-black !px-6 sm:!px-8 lg:!px-10 !py-3 sm:!py-4 lg:!py-5 font-black uppercase tracking-[0.2em] text-sm sm:text-base">Subscribe</button>
-                    </div>
-                </div>
-            </section>
-
-        </main>
+                </section>
+            </main>
+        </>
     );
 };
 
