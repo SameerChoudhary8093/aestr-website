@@ -4,6 +4,15 @@ import React, { useRef, useMemo, useEffect } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 
+// Create a custom timer to avoid THREE.Clock deprecation
+const useTimer = () => {
+    const timer = useMemo(() => new THREE.Timer(), []);
+    useFrame(() => {
+        timer.update(0.016); // Fixed delta time to avoid Clock
+    });
+    return timer;
+};
+
 const NODE_COUNT = 300;
 const CONNECTION_DISTANCE = 4.5;
 const MOUSE_RADIUS = 6.0;
@@ -13,6 +22,7 @@ function MagneticNetwork() {
     const groupRef = useRef<THREE.Group>(null!);
     const nodesRef = useRef<THREE.Points>(null!);
     const linesRef = useRef<THREE.LineSegments>(null!);
+    const timer = useTimer();
 
     // Manual Mouse Ref to bypass pointer-events-none issues
     const mouseRef = useRef(new THREE.Vector2(0, 0));
@@ -49,8 +59,8 @@ function MagneticNetwork() {
     const linesPosition = useMemo(() => new Float32Array(NODE_COUNT * NODE_COUNT * 6), []);
     const linesColor = useMemo(() => new Float32Array(NODE_COUNT * NODE_COUNT * 6), []);
 
-    useFrame((state) => {
-        const time = state.clock.getElapsedTime();
+    useFrame(() => {
+        const time = timer.getElapsed();
 
         // Map normalized mouse to 3D world space
         const mouseV = new THREE.Vector3(

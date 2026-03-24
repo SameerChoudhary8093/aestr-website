@@ -57,31 +57,31 @@ const Footer = () => {
                         {/* Left - Logos only */}
                         <div className="flex flex-col items-center lg:items-start gap-4">
                             {/* Gyan Vihar Logos */}
-                            <div className="flex items-center justify-center gap-4 md:gap-6">
-                                <div className="relative h-56 w-56 md:h-60 md:w-60 transition-all duration-500 hover:scale-110 flex items-center justify-center">
+                            <div className="flex items-center justify-center gap-2 md:gap-6">
+                                <div className="relative h-12 w-12 md:h-60 md:w-60 transition-all duration-500 hover:scale-110 flex items-center justify-center">
                                     <Image
                                         src="/Herosection/sgvu-logo.png"
                                         alt="Gyan Vihar"
                                         fill
-                                        sizes="300px"
+                                        sizes="(max-width: 768px) 48px, (max-width: 1024px) 200px, 300px"
                                         className="object-contain brightness-110"
                                     />
                                 </div>
-                                <div className="relative h-24 w-24 md:h-28 md:w-28 transition-all duration-500 hover:scale-110 flex items-center justify-center">
+                                <div className="relative h-8 w-8 md:h-28 md:w-28 transition-all duration-500 hover:scale-110 flex items-center justify-center">
                                     <Image
                                         src="/Herosection/Nirf white.png"
                                         alt="NIRF"
                                         fill
-                                        sizes="140px"
+                                        sizes="(max-width: 768px) 32px, (max-width: 1024px) 100px, 140px"
                                         className="object-contain"
                                     />
                                 </div>
-                                <div className="relative h-28 w-28 md:h-32 md:w-32 transition-all duration-500 hover:scale-110 flex items-center justify-center">
+                                <div className="relative h-10 w-10 md:h-32 md:w-32 transition-all duration-500 hover:scale-110 flex items-center justify-center">
                                     <Image
                                         src="/Herosection/naac white  .png"
                                         alt="NAAC A+"
                                         fill
-                                        sizes="160px"
+                                        sizes="(max-width: 768px) 40px, (max-width: 1024px) 120px, 160px"
                                         className="object-contain"
                                     />
                                 </div>

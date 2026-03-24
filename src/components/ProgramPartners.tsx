@@ -129,6 +129,7 @@ const ProgramPartners = () => {
                                                 alt={item.subtitle}
                                                 fill
                                                 className="object-contain"
+                                                sizes="(max-width: 768px) 128px, (max-width: 1024px) 144px, 160px"
                                             />
                                         ) : (
                                             <div className="w-24 h-24 md:w-28 md:h-28">

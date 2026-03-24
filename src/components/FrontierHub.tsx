@@ -177,6 +177,7 @@ const FrontierHub = () => {
                                     alt="AESTR Logo"
                                     fill
                                     className="object-contain brightness-150 contrast-125"
+                                    sizes="(max-width: 768px) 200px, (max-width: 1024px) 250px, 300px"
                                 />
                             </div>
                         </div>

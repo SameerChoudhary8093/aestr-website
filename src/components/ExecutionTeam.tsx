@@ -105,6 +105,7 @@ const ExecutionTeam = () => {
                                                     alt="Cambridge"
                                                     fill
                                                     className="object-contain brightness-[1.5] group-hover/stat:scale-105 transition-transform"
+                                                    sizes="(max-width: 768px) 150px, (max-width: 1024px) 180px, 200px"
                                                 />
                                             </div>
                                             <span className="text-[10px] md:text-[13px] font-orbitron text-white tracking-widest font-black whitespace-nowrap">PhD Cambridge</span>
@@ -116,6 +117,7 @@ const ExecutionTeam = () => {
                                                     alt="Patents"
                                                     fill
                                                     className="object-contain group-hover/stat:scale-105 transition-transform"
+                                                    sizes="(max-width: 768px) 48px, (max-width: 1024px) 64px, 80px"
                                                 />
                                             </div>
                                             <span className="text-[10px] md:text-[13px] font-orbitron text-accent tracking-widest font-black whitespace-nowrap">75+ Patents in AI</span>

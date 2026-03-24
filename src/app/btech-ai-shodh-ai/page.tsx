@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import StickyAdmissionsBar from '@/components/StickyAdmissionsBar';
 
+// B.Tech AI with Shodh AI Page
+
 
 // Reusable Lab Data (Same as home page)
 const labs = [
@@ -85,7 +87,7 @@ const BtechAIShodhAIPage = () => {
                         <div className="space-y-2 lg:space-y-4 relative">
                             {/* Decorative graphical element like the brochure circles */}
                             <div className="absolute -left-12 -top-12 lg:-left-20 lg:-top-20 opacity-20 pointer-events-none hidden sm:block">
-                                <svg className="w-20 h-20 lg:w-[150px] lg:h-[150px]" viewBox="0 0 100 100" fill="none" stroke="#D7F601" strokeWidth="2">
+                                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" stroke="#D7F601" strokeWidth="2">
                                     <circle cx="50" cy="50" r="40" />
                                     <path d="M50 0 V100 M0 50 H100" opacity="0.3" strokeDasharray="4 4" />
                                 </svg>
@@ -132,7 +134,6 @@ const BtechAIShodhAIPage = () => {
                          {/* Decorative Background Offset Box (Solid Lime Green) */}
                          <div className="absolute -right-2 -bottom-2 sm:-right-3 sm:-bottom-3 lg:-right-6 lg:-bottom-6 w-[95%] h-[95%] z-0 bg-[#D7F601] opacity-60" style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%)' }}/>
                     </div>
-
                 </div>
             </section>
 
@@ -140,122 +141,70 @@ const BtechAIShodhAIPage = () => {
             <section className="py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-[#5B1DD6]">
                 <div className="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-8 justify-center items-stretch">
 
-                    {/* Card 1 */}
+                    {/* Card 1: B.Tech AI with Shodh AI */}
                     <div className="bg-white rounded-[1.5rem] sm:rounded-[2rem] p-4 sm:p-6 pb-6 sm:pb-8 flex flex-col gap-4 sm:gap-6 lg:w-1/3 shadow-2xl hover:-translate-y-2 transition-transform duration-300 border-2 border-black/5">
                         <div className="w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden relative border border-black/10">
-                            <Image src="/b.tech-ai-with/robo.jpg" alt="Lab robot" fill className="object-cover" />
+                            <Image src="/b.tech-ai-with/robo.jpg" alt="B.Tech AI with Shodh AI" fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                         </div>
                         <div className="flex justify-between items-start gap-2 sm:gap-4">
                             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-orbitron text-[#5B1DD6] leading-tight tracking-tight">
-                                No
+                                B.Tech AI <br />with Shodh AI
                             </h3>
-                            <div className="bg-[#D7F601] rounded-full p-2 sm:p-3">
-                                <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                            <div className="shrink-0 mt-1">
+                                <svg className="w-8 h-8 text-[#5B1DD6]/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                                 </svg>
                             </div>
                         </div>
-                        <h4 className="text-xl sm:text-2xl font-bold font-orbitron text-black">Teachers</h4>
-                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                            Learn directly from industry veterans and AI researchers who've built products used by millions.
+                        <p className="text-black font-bold text-lg leading-snug tracking-tight opacity-90">
+                            Shodh AI leads AI in India. Intern with the elite team. Be ready for the 2030 AI world.
                         </p>
                     </div>
 
-                    {/* Card 2 */}
+                    {/* Card 2: Built With */}
                     <div className="bg-white rounded-[1.5rem] sm:rounded-[2rem] p-4 sm:p-6 pb-6 sm:pb-8 flex flex-col gap-4 sm:gap-6 lg:w-1/3 shadow-2xl hover:-translate-y-2 transition-transform duration-300 border-2 border-black/5">
-                        <div className="w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden relative border border-black/10">
-                            <Image src="/b.tech-ai-with/books.jpg" alt="Books" fill className="object-cover" />
+                        <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden relative border border-black/10 bg-[#000042] flex items-center justify-center">
+                            <Image src="/b.tech-ai-with/shodh.png" alt="Built With" fill className="object-cover scale-90" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                         </div>
-                        <div className="flex justify-between items-start gap-2 sm:gap-4">
-                            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-orbitron text-[#5B1DD6] leading-tight tracking-tight">
-                                No
+                        <div className="flex justify-between items-start gap-4">
+                            <h3 className="text-3xl lg:text-4xl font-bold font-orbitron text-[#5B1DD6] leading-tight tracking-tight flex-1">
+                                Built With
+                                <div className="flex items-center gap-4 mt-6">
+                                    <Image src="/ProgramPartners/google.webp" alt="Google" width={80} height={26} className="object-contain" style={{ width: 'auto', height: 'auto' }} />
+                                    <Image src="/placement/nvidia.webp" alt="NVIDIA" width={100} height={32} className="object-contain" style={{ width: 'auto', height: 'auto' }} />
+                                </div>
                             </h3>
-                            <div className="bg-[#D7F601] rounded-full p-2 sm:p-3">
-                                <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                            <div className="shrink-0 mt-1">
+                                <svg className="w-8 h-8 text-[#5B1DD6]" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" />
                                 </svg>
                             </div>
                         </div>
-                        <h4 className="text-xl sm:text-2xl font-bold font-orbitron text-black">Homework</h4>
-                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                            No theoretical assignments. Only real-world projects that build your portfolio and solve actual problems.
+                        <p className="text-black font-bold text-lg leading-snug tracking-tight opacity-90 mt-auto">
+                            Indian Govt mandate to build AI for science. Shodh AI released the world's first Large Physics Model.
                         </p>
                     </div>
 
-                    {/* Card 3 */}
+                    {/* Card 3: Brutally Selective */}
                     <div className="bg-white rounded-[1.5rem] sm:rounded-[2rem] p-4 sm:p-6 pb-6 sm:pb-8 flex flex-col gap-4 sm:gap-6 lg:w-1/3 shadow-2xl hover:-translate-y-2 transition-transform duration-300 border-2 border-black/5">
-                        <div className="w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden relative border border-black/10">
-                            <Image src="/b.tech-ai-with/Graduate-as-a-senior.jpg" alt="Graduate" fill className="object-cover" />
+                        <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden relative border border-black/10">
+                            <Image src="/b.tech-ai-with/lab.JPG" alt="Brutally Selective" fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                         </div>
-                        <div className="flex justify-between items-start gap-2 sm:gap-4">
-                            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-orbitron text-[#5B1DD6] leading-tight tracking-tight flex-1">
-                                Graduate As A Senior Engineer
+                        <div className="flex justify-between items-start gap-4">
+                            <h3 className="text-3xl lg:text-4xl font-bold font-orbitron text-[#5B1DD6] leading-tight tracking-tight">
+                                Brutally <br />Selective
                             </h3>
-                            <div className="bg-[#D7F601] rounded-full p-2 sm:p-3">
-                                <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                            <div className="shrink-0 mt-1 text-[#5B1DD6]">
+                                <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0L13.5 10.5L24 12L13.5 13.5L12 24L10.5 13.5L0 12L10.5 10.5L12 0Z" />
                                 </svg>
                             </div>
                         </div>
-                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                            4 years of continuous project experience = senior-level skills. Start your career where others end.
+                        <p className="text-black font-bold text-lg leading-snug tracking-tight opacity-90">
+                            Only 60 seats. While others code "Hello World," you fine-tune LLMs on NVIDIA Hopper GPUs.
                         </p>
                     </div>
 
-                </div>
-            </section>
-
-            {/* Labs Section */}
-
-
-            {/* New Founder Section */}
-            <section className="py-24 relative overflow-hidden bg-[#D7F601] text-black">
-                <div className="container-boxed relative z-10 max-w-6xl mx-auto">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-                        {/* Left: Heading + Text (left aligned) */}
-                        <div className="lg:col-span-7 space-y-8 text-left">
-                            <h2 className="text-5xl md:text-6xl lg:text-7xl font-orbitron font-black leading-[1.1] tracking-tighter">
-                                From Shodh AI to
-                                <br />
-                                Aestr
-                            </h2>
-
-                            <div className="space-y-6 text-lg md:text-xl lg:text-[20px] font-medium leading-relaxed max-w-3xl text-black/90">
-                                <p>
-                                    <span className="font-bold">Arastu Sharma</span> is the Founder & CEO of Aestr and the Founder of <span className="font-bold">Shodh AI</span>, a deep-tech AI company building <span className="font-bold">India's Sovereign "AI for Science" Foundation Model.</span>
-                                </p>
-
-                                <p>
-                                    Through Shodh AI, Arastu leads national-scale AI systems backed by IndiaAI, with access to <span className="font-bold">1.2M+ GPU hours</span> and partnerships with NVIDIA, Yotta, and Amazon Web Services.
-                                </p>
-
-                                <p>
-                                    He was recently invited to meet <span className="font-bold">Prime Minister Narendra Modi</span> and was highlighted among the key contributors shaping India's AI future.
-                                </p>
-
-                                <p className="pt-2">
-                                    B.Tech AI with Shodh AI exists to transfer this real-world AI engineering experience to the next generation of builders.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Right: Logos in pyramid layout */}
-                        <div className="lg:col-span-5 flex flex-col items-center lg:items-center gap-12 lg:gap-14 mt-6 lg:mt-10">
-                            {/* Top row: NVIDIA (left) + YOTTA (right) */}
-                            <div className="flex items-center justify-center gap-12 w-full">
-                                <div className="relative h-24 md:h-28 w-44 md:w-56 mix-blend-multiply">
-                                    <Image src="/b.tech-ai-with/nvidia.svg" alt="NVIDIA" fill className="object-contain" />
-                                </div>
-                                <div className="relative h-24 md:h-28 w-44 md:w-56 mix-blend-multiply">
-                                    <Image src="/b.tech-ai-with/yotta.svg" alt="YOTTA" fill className="object-contain" />
-                                </div>
-                            </div>
-                            {/* Bottom: AWS centered */}
-                            <div className="relative h-24 md:h-28 w-44 md:w-60 mix-blend-multiply flex justify-center">
-                                <Image src="/b.tech-ai-with/aws.svg" alt="AWS" fill className="object-contain" />
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </section>
 
@@ -329,7 +278,7 @@ const BtechAIShodhAIPage = () => {
                     <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10 max-w-6xl mx-auto">
                         <motion.div whileHover={{ y: -6 }} transition={{ duration: 0.3 }} className="text-center space-y-4 cursor-default">
                             <motion.div whileHover={{ rotate: 2, scale: 1.08 }} transition={{ duration: 0.3 }} className="w-16 h-16 mx-auto flex items-center justify-center">
-                                <Image src="/b.tech-ai-with/Vector1.svg" alt="Real Industry Projects" width={56} height={56} className="object-contain" />
+                                <Image src="/b.tech-ai-with/Vector1.svg" alt="Real Industry Projects" width={56} height={56} className="object-contain" style={{ width: 'auto', height: 'auto' }} />
                             </motion.div>
                             <h3 className="text-[#D7F601] font-orbitron font-black text-lg md:text-xl">
                                 Real Industry Projects
@@ -341,7 +290,7 @@ const BtechAIShodhAIPage = () => {
 
                         <motion.div whileHover={{ y: -6 }} transition={{ duration: 0.3 }} className="text-center space-y-4 cursor-default">
                             <motion.div whileHover={{ rotate: -2, scale: 1.08 }} transition={{ duration: 0.3 }} className="w-16 h-16 mx-auto flex items-center justify-center">
-                                <Image src="/b.tech-ai-with/Vector2.svg" alt="Mentor-Led Learning" width={56} height={56} className="object-contain" />
+                                <Image src="/b.tech-ai-with/Vector2.svg" alt="Mentor-Led Learning" width={56} height={56} className="object-contain" style={{ width: 'auto', height: 'auto' }} />
                             </motion.div>
                             <h3 className="text-[#D7F601] font-orbitron font-black text-lg md:text-xl">
                                 Mentor-Led Learning
@@ -353,7 +302,7 @@ const BtechAIShodhAIPage = () => {
 
                         <motion.div whileHover={{ y: -6 }} transition={{ duration: 0.3 }} className="text-center space-y-4 cursor-default">
                             <motion.div whileHover={{ rotate: 2, scale: 1.08 }} transition={{ duration: 0.3 }} className="w-16 h-16 mx-auto flex items-center justify-center">
-                                <Image src="/b.tech-ai-with/Vector3.svg" alt="Career-Driven Outcomes" width={56} height={56} className="object-contain" />
+                                <Image src="/b.tech-ai-with/Vector3.svg" alt="Career-Driven Outcomes" width={56} height={56} className="object-contain" style={{ width: 'auto', height: 'auto' }} />
                             </motion.div>
                             <h3 className="text-[#D7F601] font-orbitron font-black text-lg md:text-xl">
                                 Career-Driven Outcomes
@@ -455,8 +404,7 @@ cross-functional teams ship.
                                     No Teachers.
                                 </h4>
                                 <p className="text-[13px] md:text-[14px] leading-relaxed font-medium text-black/90">
-                                    <span className="block whitespace-nowrap">You are mentored by Senior Engineers who have</span>
-                                    <span className="block whitespace-nowrap">built systems at Cambridge and Microsoft Research.</span>
+                                    You are mentored by Senior Engineers who have built systems at Cambridge and Microsoft Research.
                                 </p>
                             </div>
                         </motion.div>

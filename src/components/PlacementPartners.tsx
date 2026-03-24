@@ -131,6 +131,7 @@ const PartnerLogo = ({ partner, index, isMarquee = false }: { partner: { name: s
                     alt={partner.name}
                     fill
                     className="object-contain mix-blend-multiply transition-all duration-500 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100px, (max-width: 1024px) 120px, 150px"
                 />
             </div>
             <span className="sr-only">{partner.name}</span>

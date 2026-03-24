@@ -95,6 +95,7 @@ const Navbar = () => {
                                     src="/Herosection/by gyan vihar 2 neon.png"
                                     alt="Aestr Logo"
                                     fill
+                                    sizes="(max-width: 768px) 120px, (max-width: 1024px) 140px, 160px"
                                     className="object-contain brightness-[1.1]"
                                     priority
                                 />
