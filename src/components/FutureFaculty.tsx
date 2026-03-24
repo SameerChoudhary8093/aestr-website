@@ -63,7 +63,7 @@ const FutureFaculty = () => {
                     >
                         <div className="aspect-[16/10] md:aspect-[4/3] bg-black/60 rounded-2xl md:rounded-[2.5rem] border border-foreground/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/40 group-hover:shadow-[0_0_80px_rgba(216,246,2,0.1)] relative">
                             <Image
-                                src="/Other/AI-faculty.png"
+                                src="/Other/image.jpeg"
                                 alt="AI & Robotics Faculty"
                                 fill
                                 sizes="(max-width: 768px) 100vw, 50vw"

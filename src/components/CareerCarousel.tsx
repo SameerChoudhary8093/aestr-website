@@ -21,7 +21,7 @@ const careerData = [
         image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80'
     },
     {
-        title: 'Edge AI Engineer ',
+        title: 'Edge AI Engineer',
         sub: '3x growth expected in deep-tech and climate-focused sectors',
         major: 'Software & Cloud Engineering',
         minor: 'Robotics',
@@ -129,7 +129,7 @@ const CareerCarousel = () => {
                     {displayData.map((card, idx) => (
                         <div
                             key={`${card.title}-${idx}`}
-                            className="w-[300px] md:w-[380px] glass rounded-2xl md:rounded-[2.5rem] overflow-hidden group border-foreground/5 hover:border-accent/40 transition-all duration-700 hover:bg-accent/5 flex-shrink-0"
+                            className="w-[300px] md:w-[380px] glass rounded-2xl md:rounded-[2.5rem] overflow-hidden group border-foreground/5 hover:border-accent/40 transition-all duration-700 hover:bg-accent/5 flex-shrink-0 flex flex-col h-[520px] md:h-[580px]"
                         >
                             {/* Card Image */}
                             <div className="h-48 md:h-56 bg-black/40 relative overflow-hidden flex items-center justify-center">
@@ -147,15 +147,17 @@ const CareerCarousel = () => {
                             </div>
 
                             {/* Card Content */}
-                            <div className="p-6 md:p-8 space-y-4 md:space-y-6 text-left">
-                                <h3 className="text-lg md:text-xl font-orbitron font-bold text-white group-hover:text-accent transition-colors duration-300">
-                                    {card.title}
-                                </h3>
-                                <p className="text-xs md:text-sm text-white/80 leading-relaxed min-h-[50px] md:min-h-[60px] font-medium">
-                                    {card.sub}
-                                </p>
+                            <div className="p-6 md:p-8 flex flex-col flex-grow text-left">
+                                <div className="flex-grow space-y-3 md:space-y-4">
+                                    <h3 className="text-lg md:text-xl font-orbitron font-bold text-white group-hover:text-accent transition-colors duration-300 line-clamp-2">
+                                        {card.title}
+                                    </h3>
+                                    <p className="text-xs md:text-sm text-white/80 leading-relaxed font-medium line-clamp-3">
+                                        {card.sub}
+                                    </p>
+                                </div>
 
-                                <div className="space-y-3 md:space-y-4 pt-4 border-t border-white/20">
+                                <div className="space-y-3 md:space-y-4 pt-4 border-t border-white/20 h-[110px] md:h-[130px]">
                                     <div className="flex items-center justify-between">
                                         <span className="text-[8px] md:text-[10px] font-orbitron uppercase tracking-widest text-white/60 font-bold">Major</span>
                                         <span className="bg-accent/10 text-accent border border-accent/20 rounded-full px-2.5 py-1 text-[8px] md:text-[10px] font-black uppercase tracking-widest">
@@ -174,7 +176,7 @@ const CareerCarousel = () => {
 
                                     <div className="flex items-center justify-between">
                                         <span className="text-[8px] md:text-[10px] font-orbitron uppercase tracking-widest text-white/60 font-bold">Lab</span>
-                                        <span className="text-accent/80 text-[8px] md:text-[10px] font-black uppercase tracking-widest">
+                                        <span className="text-accent/80 text-[8px] md:text-[10px] font-black uppercase tracking-widest text-right max-w-[60%] line-clamp-1">
                                             {card.lab}
                                         </span>
                                     </div>

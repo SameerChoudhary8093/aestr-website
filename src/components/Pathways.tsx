@@ -42,8 +42,8 @@ const Pathways = () => {
 
                     {/* Technical Connector Line Area */}
                     <div className="relative pt-6 w-full flex flex-col items-center">
-                        {/* Vertical line from header - increased height to definitely touch the horizontal line */}
-                        <div className="relative h-48 w-px bg-black">
+                        {/* Vertical line from header - shortened as requested */}
+                        <div className="relative h-24 w-px bg-black">
                             <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-black rotate-45" />
                         </div>
                     </div>

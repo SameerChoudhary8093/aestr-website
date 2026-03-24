@@ -61,7 +61,7 @@ const AboutPointFour = () => {
                         >
                             <div className="aspect-[16/10] bg-black/80 rounded-[2rem] border border-black/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-black/30 group-hover:shadow-[0_0_80px_rgba(0,0,0,0.2)] relative">
                                 <Image
-                                    src="/Other/Bootcamp.webp"
+                                    src="/Other/Bootcamp.jpg"
                                     alt="Engineering Bootcamp"
                                     fill
                                     className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-80"
