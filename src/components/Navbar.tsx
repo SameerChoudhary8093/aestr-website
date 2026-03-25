@@ -126,7 +126,7 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    <div className="flex-1 flex items-center justify-end pr-18 md:pr-32 lg:pr-48">
+                    <div className="flex-1 flex items-center justify-end pr-24 md:pr-48 lg:pr-72">
                         <div className="hidden md:flex items-center gap-4 lg:gap-5">
                             {/* SGVU Primary Logo */}
                             <div className="relative transition-all duration-500 hover:scale-105 shrink-0">
