@@ -1,0 +1,35 @@
+\rhead{MN-FIN-A: Blockchain \& DeFi Architectures}
+\phantomsection
+\section*{Blockchain \& DeFi Architectures (MN-FIN-A)}
+\label{minor:FIN_L2}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 2 (2-0-0)
+
+\subsection*{Course Content}
+\noindent\textbf{Unit 1} \\
+\textit{Cryptographic Foundations of Distributed Trust:} The trust problem in financial systems: why traditional finance requires central intermediaries and the cryptographic primitives that eliminate this requirement; Cryptographic hash functions: SHA-256 and Keccak-256 as collision-resistant, one-way compression functions; their role in data integrity, Merkle trees, and proof-of-work; Digital signatures: ECDSA over the secp256k1 curve as the authentication mechanism for blockchain transactions; public-private key pairs as identity in a trustless system; Merkle trees and Merkle Patricia Tries as the authenticated data structures underpinning Bitcoin's UTXO set and Ethereum's world state; Commitment schemes and zero-knowledge proofs: the intuition behind proving knowledge of a secret without revealing it; The Byzantine Generals Problem as the formal statement of the distributed consensus challenge that blockchain solves.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Consensus Mechanisms and Blockchain Architecture:} The blockchain data structure: linked hash-chained blocks as a tamper-evident append-only log; Nakamoto consensus and Proof-of-Work: the longest-chain rule, the 51\% attack threshold, and the energy cost as an intentional computational barrier; Proof-of-Stake: validator selection by staked collateral, slashing conditions, and the nothing-at-stake problem; Ethereum's Gasper consensus: combining LMD-GHOST fork choice with Casper-FFG finality as a hybrid BFT-Nakamoto protocol; Byzantine Fault Tolerant (BFT) consensus for permissioned chains: PBFT, Tendermint, and HotStuff as the family of protocols tolerating up to $\lfloor (n-1)/3 \rfloor$ faulty nodes; Blockchain trilemma: the fundamental tension between decentralization, security, and scalability as the architectural constraint shaping all design decisions.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Smart Contracts and the Programmable Settlement Layer:} The Ethereum Virtual Machine (EVM) as a quasi-Turing-complete, deterministic, sandboxed state machine replicated across all nodes; Gas as the metering mechanism: opcode pricing, the gas limit as a DoS prevention tool, and the EIP-1559 fee market as a dynamic base fee algorithm; Solidity contract architecture: state variables as persistent storage slots, functions as state transition triggers, events as an indexed log for off-chain consumption; Common smart contract patterns: Ownable, Pausable, Upgradeable Proxy (EIP-1967), and the Factory pattern as reusable building blocks; Smart contract security vulnerabilities: reentrancy (the DAO hack), integer overflow, front-running (MEV), and oracle manipulation as a taxonomy of attack vectors with their mitigation patterns; Formal verification of smart contracts: using model checkers (Certora Prover, Echidna) to prove invariant preservation as a correctness guarantee.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Decentralized Finance Protocols:} DeFi as the re-implementation of financial primitives (exchange, lending, derivatives) as permissionless smart contract systems; Automated Market Makers (AMMs): Uniswap's constant product formula $x \cdot y = k$ as a bonding curve that replaces the order book; concentrated liquidity (Uniswap v3) as a capital efficiency optimization; Decentralized lending protocols: Aave and Compound as over-collateralized lending pools with algorithmic interest rate models (utilization-rate curves); Liquidation mechanisms as on-chain margin calls: health factor computation and the liquidation bonus as an incentive for third-party liquidators; Decentralized stablecoins: MakerDAO's DAI as a CDP (Collateralized Debt Position) system; algorithmic stablecoins and the Terra/UST collapse as a case study in reflexive death spiral dynamics; Yield aggregators and composability: DeFi protocols as Lego blocks composed via standard interfaces (ERC-20, ERC-4626) to construct complex financial strategies.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{Scalability, Interoperability, and the Evolving Architecture:} The scalability bottleneck: Ethereum mainnet throughput ($\sim$15 TPS) vs.\ Visa ($\sim$24,000 TPS) and the architectural solutions to close this gap; Optimistic rollups (Arbitrum, Optimism): executing transactions off-chain, posting compressed calldata on-chain, and the fraud proof challenge window as a security mechanism; ZK-rollups (zkSync, StarkNet): validity proofs via SNARKs and STARKs as cryptographic certificates of correct off-chain execution that require no challenge period; Data availability: EIP-4844 (proto-danksharding) and blob-carrying transactions as the L1 reform enabling cheap rollup data posting; Cross-chain bridges: lock-and-mint and liquidity pool architectures, and bridge hacks as the dominant DeFi attack vector; Maximal Extractable Value (MEV): block proposer reordering, sandwich attacks, and PBS (Proposer-Builder Separation) as the political economy of blockchain transaction ordering.
+
+\newpage
+\rhead{Curriculum Schema}

@@ -1,0 +1,35 @@
+\rhead{MN-SEM-A: SoC Design \& Verification}
+\phantomsection
+\section*{SoC Design \& Verification (MN-SEM-A)}
+\label{minor:SEM_L2}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 2 (2-0-0)
+
+\subsection*{Course Content}
+\noindent\textbf{Unit 1} \\
+\textit{Advanced Processor Microarchitecture:} Superscalar execution: multiple issue slots, instruction dispatch, and the out-of-order execution engine as a hardware scheduler; Tomasulo's algorithm: reservation stations, the common data bus, and register renaming as the solution to WAR and WAW hazards that limit in-order pipelines; Reorder Buffer (ROB) and precise exceptions: maintaining the illusion of sequential execution in a speculatively executing processor; Branch prediction: bimodal, two-level adaptive (gshare), and TAGE predictors as increasingly sophisticated pattern matchers for control flow; Memory hierarchy design: cache associativity, replacement policies (LRU, PLRU), write policies (write-back, write-through), and the inclusion property in multi-level caches; Hardware prefetching: stride prefetchers and stream buffers as latency-hiding mechanisms; NUMA architectures and cache coherence protocols: MSI, MESI, and MOESI state machines as the distributed consensus protocol for shared memory correctness.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{System-on-Chip Architecture and On-Chip Interconnects:} SoC as a heterogeneous integration of processor cores, accelerators, memory controllers, and peripheral IP blocks on a single die; IP-based design methodology: hard IP (fixed layout), soft IP (synthesizable RTL), and firm IP as the three tiers of reusable hardware components; On-chip bus protocols: AMBA AXI4 as the dominant high-performance interconnect standard; AXI channels (AW, W, B, AR, R), handshaking, and outstanding transaction support; AXI4-Lite for low-bandwidth register-mapped peripherals and AXI4-Stream for unidirectional data flow; Network-on-Chip (NoC) architectures: mesh, torus, and fat-tree topologies; wormhole routing, virtual channels, and deadlock avoidance as the packet-switched alternative to shared buses at scale; Memory-mapped I/O and the address map as the software interface to hardware: base address registers, BAR allocation, and device tree descriptions.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Hardware Accelerator Design and RISC-V Extensions:} The case for hardware acceleration: Amdahl's Law and the end of Dennard scaling driving the shift from general-purpose cores to domain-specific architectures; Systolic arrays as the canonical accelerator architecture for matrix multiplication: data flow patterns, PE design, and the connection to TPU and neural network inference engines; RISC-V custom instruction extensions: the X (non-standard extension) space, adding application-specific instructions to the base ISA without breaking compatibility; Tightly-coupled accelerators vs.\ memory-mapped coprocessors: latency, bandwidth, and programming model tradeoffs; Chisel as a hardware construction language embedded in Scala: generators, parameterization, and the Rocket Chip SoC generator as the RISC-V reference implementation; High-Level Synthesis (HLS): compiling C/C++ to RTL with Vitis HLS and understanding the scheduling, binding, and allocation steps that bridge software and hardware.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Functional Verification and Formal Methods:} The verification gap: why simulation alone cannot guarantee correctness and why verification consumes over 70\% of modern chip design effort; SystemVerilog as the verification language: interfaces, clocking blocks, program blocks, and the layered testbench architecture; Universal Verification Methodology (UVM): the component hierarchy (sequencer, driver, monitor, scoreboard, agent), factory pattern for component overriding, and the transaction-level modeling (TLM) abstraction; Constrained-random stimulus generation: SystemVerilog constraints as a declarative specification of the legal input space solved by an SMT-based constraint solver; Functional coverage: covergroups, coverpoints, and cross-coverage as a metric for measuring verification completeness; Formal property verification: writing SVA (SystemVerilog Assertions) properties and using model checkers (JasperGold, SymbiYosys) to prove or disprove them exhaustively over all reachable states.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{Physical Design, Semiconductor Manufacturing, and the Tapeout Flow:} The RTL-to-GDSII flow as the complete compilation pipeline from hardware description to mask data: synthesis $\rightarrow$ floorplanning $\rightarrow$ placement $\rightarrow$ clock tree synthesis $\rightarrow$ routing $\rightarrow$ sign-off; Standard cell libraries: the relationship between process node (28nm, 7nm, 3nm), cell height, drive strength, and the power-performance-area (PPA) tradeoff space; Static Timing Analysis (STA): the graph-based algorithm for computing worst-case path delays, accounting for process-voltage-temperature (PVT) corners; CMOS fabrication fundamentals: photolithography, ion implantation, CVD, CMP, and the metal interconnect stack as the physical realization of the GDSII layout; Design for Manufacturability (DFM): fill insertion, double patterning constraints, and lithography-friendly design rules as the interface between design and process; Open-source EDA and the democratization of chip design: OpenROAD, Magic VLSI, and the SKY130 PDK from Google/SkyWater as a fully open tapeout-capable toolchain enabling academic silicon.
+
+\newpage
+\rhead{Curriculum Schema}

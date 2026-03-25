@@ -1,0 +1,35 @@
+\rhead{MN-MFG: IoT for Industry}
+\phantomsection
+\section*{IoT for Industry (MN-MFG)}
+\label{minor:MFG_L1}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 2 (2-0-0)
+
+\subsection*{Course Content}
+\noindent\textbf{Unit 1} \\
+\textit{The Industrial IoT Stack and Smart Factory Architecture:} Industry 4.0 as the convergence of physical production systems with digital computation: cyber-physical integration, connectivity, and data-driven decision making; The IIoT reference architecture: field devices $\rightarrow$ edge gateways $\rightarrow$ fog layer $\rightarrow$ cloud platform as a layered data pipeline; Operational Technology (OT) vs.\ Information Technology (IT): SCADA systems, PLCs, and DCS as the legacy computational infrastructure of the factory floor; Industrial sensors and actuators: temperature, pressure, vibration, flow, and proximity sensors as the raw data sources of manufacturing processes; Sensor data as time-series streams: sampling rates, resolution, and the tradeoff between data fidelity and transmission cost; Introduction to industrial communication protocols: Modbus, OPC-UA, and PROFINET as the fieldbus standards enabling device interoperability.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Embedded Systems and Edge Computing in Manufacturing:} Microcontrollers vs.\ microprocessors as the hardware dichotomy at the network edge: real-time constraints, determinism, and the role of RTOSes (FreeRTOS); Embedded firmware architecture: interrupt-driven programming, hardware abstraction layers (HAL), and peripheral drivers for ADC, UART, SPI, and I2C; Energy harvesting and power management: duty cycling, sleep modes, and the energy budget of a battery-operated field sensor; Edge computing rationale: latency reduction, bandwidth conservation, and local closed-loop control that cannot tolerate cloud round-trip delays; Edge inference: deploying quantized ML models (TensorFlow Lite, ONNX Runtime) on resource-constrained hardware for on-device anomaly detection; Containerization at the edge: Docker and Kubernetes-based orchestration (K3s) for managing heterogeneous edge device fleets.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Industrial Networking, Protocols, and Data Ingestion:} Wireless technologies for industrial environments: ISA-100.11a, WirelessHART, LoRaWAN, and 5G NR-U as a spectrum of range-bandwidth-latency tradeoffs; Time-Sensitive Networking (TSN): IEEE 802.1 extensions for deterministic Ethernet in motion control and robotics; MQTT as the dominant publish-subscribe messaging protocol for IIoT: broker architecture, QoS levels, and retained messages; AMQP and Kafka for high-throughput industrial event streaming: topics, partitions, and consumer groups as the data ingestion backbone; Data serialization for constrained environments: Protocol Buffers and CBOR as compact binary alternatives to JSON; OPC-UA PubSub as the unified information model enabling semantic interoperability across heterogeneous vendor equipment.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Industrial Data Processing and Condition Monitoring:} Time-series databases for manufacturing data: InfluxDB and TimescaleDB as purpose-built storage engines for high-frequency sensor streams; Stream processing for real-time manufacturing analytics: Apache Flink and Spark Streaming for sliding-window aggregations, threshold alerting, and event detection; Vibration signal analysis for rotating machinery health: FFT-based spectral analysis, envelope detection, and bearing fault frequency identification (BPFO, BPFI); Statistical Process Control (SPC): control charts (X-bar, R-chart) as an online monitoring algorithm for detecting process drift; Remaining Useful Life (RUL) estimation: degradation modeling from run-to-failure datasets as a regression problem; Overall Equipment Effectiveness (OEE) as a KPI computed from availability, performance, and quality data streams.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{Industrial Security, Standards, and the Road to Autonomy:} The expanded attack surface of connected manufacturing: IT/OT convergence risks, Purdue Model segmentation, and the Stuxnet case as a landmark in ICS cybersecurity; IEC 62443 as the industrial cybersecurity standard: security levels, zones, and conduits as a network segmentation framework; Secure boot, firmware signing, and certificate-based device identity as the hardware root of trust for IIoT devices; Predictive maintenance as a business case: comparing reactive, preventive, and predictive maintenance strategies through cost and downtime modeling; Introduction to autonomous manufacturing: closed-loop feedback from sensor data to actuator commands without human intervention; Digital thread concept: the unbroken data linkage from product design through manufacturing to field operation as the informational backbone of smart factories.
+
+\newpage
+\rhead{Curriculum Schema}

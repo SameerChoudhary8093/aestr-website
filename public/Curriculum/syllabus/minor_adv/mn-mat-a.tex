@@ -1,0 +1,35 @@
+\rhead{MN-MAT-A: Material Informatics}
+\phantomsection
+\section*{Material Informatics (MN-MAT-A)}
+\label{minor:MAT_L2}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 2 (2-0-0)
+
+\subsection*{Course Content}
+\noindent\textbf{Unit 1} \\
+\textit{Featurization: Turning Atoms into Numbers:} The central challenge of materials ML: representing a crystal structure or molecule as a fixed-length numerical vector without losing physical symmetries; Symmetry constraints as hard requirements on any valid materials representation: invariance to translation, rotation, reflection, and permutation of identical atoms; Compositional descriptors: Magpie and Matminer feature sets encoding elemental statistics (electronegativity, atomic radius, valence) as tabular features; Structural descriptors: radial distribution functions, Smooth Overlap of Atomic Positions (SOAP), and Many-Body Tensor Representation (MBTR) as rotationally invariant fingerprints of local atomic environments; Graph representation of crystals: atoms as nodes, bonds as edges, and edge attributes encoding interatomic distances and angles; The atomistic simulation database as training data: parsing CIF files and VASP output with Pymatgen and ASE as the data engineering layer.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Machine Learning Interatomic Potentials:} The core motivation: replacing $O(N^3)$ DFT force evaluations with a fast ML surrogate that maintains quantum accuracy at classical MD cost; Behler-Parrinello Neural Network Potentials (NNPs): decomposing total energy into atomic energy contributions, symmetry function inputs, and feedforward network architecture; Gaussian Approximation Potentials (GAP): Gaussian process regression on SOAP descriptors as a probabilistic force field with uncertainty quantification; Message Passing Neural Networks for potentials: the NequIP and MACE architectures using equivariant features that respect $SO(3)$ symmetry exactly; Active learning for potential training: uncertainty-driven selection of new DFT reference calculations to iteratively expand the training set toward completeness; Validation protocols: force, energy, and stress MAE on held-out test sets; phonon dispersion and elastic constants as physics-based sanity checks beyond statistical metrics.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Property Prediction and High-Throughput Screening:} Supervised learning for materials property prediction: formation energy, bandgap, bulk modulus, and ionic conductivity as regression targets from the Materials Project database; Crystal Graph Convolutional Neural Networks (CGCNN) and MatErials Graph Network (MEGNet) as the canonical graph neural network architectures for crystal property prediction; Transfer learning in materials: pre-training on large DFT datasets and fine-tuning on expensive experimental targets with limited labels; Uncertainty quantification for property prediction: conformal prediction and deep ensembles as methods for producing calibrated prediction intervals; The high-throughput screening funnel: using cheap descriptors to filter a large chemical space before applying expensive models, analogous to a multi-stage database query; Pareto-optimal materials discovery: navigating conflicting property objectives (high conductivity, low cost, chemical stability) as a multi-objective optimization problem.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Generative Models for Materials Design:} Inverse materials design as a generative problem: given a target property, synthesize a valid crystal structure that achieves it; Variational Autoencoders (VAEs) for materials: encoding crystal structures into a continuous latent space and decoding latent vectors into new candidate structures; Diffusion models for crystal structure generation: CDVAE and DiffCSP as denoising diffusion frameworks operating on fractional atomic coordinates and lattice parameters; Validity constraints in generative materials design: charge neutrality, electronegativity balance, and coordination number rules as hard physical filters on generated candidates; Reinforcement learning for materials optimization: formulating the atom substitution and structural relaxation sequence as a Markov Decision Process; Synthesizability prediction as a binary classification bottleneck: distinguishing computationally stable from experimentally accessible materials.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{Foundation Models, Experimental Integration, and the Autonomous Lab:} Materials foundation models: GNoME (Google DeepMind), CHGNet, and MACE-MP-0 as universal interatomic potentials trained on tens of millions of DFT calculations; The autonomous materials discovery loop: computational prediction $\rightarrow$ robotic synthesis $\rightarrow$ automated characterization $\rightarrow$ ML model update as a closed-loop active learning system; Self-driving laboratories: integrating liquid handling robots, automated XRD and spectroscopy, and Bayesian optimization into a fully autonomous experimental pipeline; Multi-fidelity learning: combining cheap low-fidelity data (classical MD, GGA-DFT) with expensive high-fidelity data (hybrid DFT, experiment) in a hierarchical model to maximize information per compute dollar; Natural language processing for materials science: extracting structured property data from the unstructured literature using named entity recognition and relation extraction; FAIR data principles (Findable, Accessible, Interoperable, Reusable) applied to materials databases: metadata standards, persistent identifiers, and open APIs as the infrastructure of collaborative materials informatics.
+
+\newpage
+\rhead{Curriculum Schema}

@@ -1,0 +1,119 @@
+\rhead{IX101: Innovation Lab I}
+\phantomsection 
+\section*{Innovation Lab I (IX101)}
+\label{course:IX101}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 6 (0-0-6)
+
+\noindent \textit{Note: Students must select \textbf{one} of the following technical tracks for the duration of the semester.}
+
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+
+\section*{Track A: Web Development (Full Stack)}
+
+\noindent\textbf{Task 1: The Foundations of the Web (DOM and Semantics)} \\
+Focuses on the raw "View" layer of the web. Over three sessions, students will move beyond basic syntax to understand the Document Object Model (DOM) tree. They will hand-code a responsive "Personal Portfolio" landing page using semantic HTML5 and CSS Grid/Flexbox, culminating in writing raw JavaScript to manipulate DOM elements. This establishes the baseline for how the browser renders the View before frameworks abstract it away.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 2: Asynchronous JavaScript and Data Fetching} \\
+Focuses on how the View requests data. Students will master the Event Loop, Promises, and async/await. The deliverable is a "Dynamic Weather Dashboard" that fetches real-time data from a public API. This introduces the concept that the View must interact with external data sources (External Controllers), parsing JSON responses to update the UI without page reloads.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 3: The View Layer: Component Architecture with React} \\
+Focuses strictly on the 'V' (View) in MVC. Students will decompose a complex UI into reusable, isolated pieces using React. They will build an interactive "Product Gallery," focusing strictly on JSX and Props. They will learn that the View’s job is solely to present data provided to it, reinforcing the separation of concerns between presentation and logic.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 4: State Management (Local View Logic)} \\
+Focuses on interactivity within the View. Students will deep-dive into React Hooks (useState, useEffect). They will engineer a "Task/Kanban Board" allowing users to create and filter items. This teaches the difference between "Application State" (Data) and "UI State" (is this menu open?), a critical distinction in MVC architectures.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 5: Next.js and Structural Routing} \\
+Focuses on the framework that holds the MVC structure together. Students will migrate to the Next.js ecosystem. They will build a "Multi-page Blog" utilizing the App Router. They will learn how file-system-based routing acts as the traffic director for the application, mapping URLs to specific Views and Layouts.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 6: Rendering Strategies (SSR as Server-Generated Views)} \\
+Focuses on where the View is constructed. Students will experimentally compare Client-Side Rendering (CSR) against Server-Side Rendering (SSR). They will build a "News Aggregator" that pre-renders HTML on the server. They will learn how the server can act as the primary View generator to improve SEO and performance before the client JavaScript takes over.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 7: The Controller Layer: API Routes and Logic} \\
+Focuses on the 'C' (Controller). Students will learn to write backend logic within Next.js using API Routes (Serverless Functions). They will implement the backend for a "Feedback System," handling HTTP methods (GET, POST). They will learn that the Controller’s job is to receive input, validate it, process business logic, and determine the response, keeping this logic out of the React components.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 8: The Model Layer: Databases and ORM} \\
+Focuses on the 'M' (Model). Students will connect their application to a persistent cloud database (PostgreSQL or MongoDB) using an ORM like Prisma. They will define strict Data Schemas for an "Inventory Management System." This lab emphasizes that the Model represents the data structure and business rules (constraints) independent of how that data is displayed or accessed.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 9: MVC Integration (Connecting M, V, and C)} \\
+Focuses on the complete data flow. Students will refactor their Inventory System into a fully functional CRUD application. They will wire the system so that a user action (View) triggers an API call (Controller), which queries the Database (Model), and returns data to update the UI. This solidifies the "One-Way Data Flow" and separation of duties inherent in MVC.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 10: Authentication and Production Deployment} \\
+Focuses on securing the MVC pipeline. Students will implement secure login flows (NextAuth/Auth.js) to protect their Controllers (API routes) and Views (Private Pages). The final activity involves deploying a "Real-time Chat Interface" to a production environment (Vercel), configuring environment variables, and setting up a CI/CD pipeline to manage their full-stack application.
+
+\newpage
+
+\section*{Track B: iOS Development (Swift)}
+
+\noindent\textbf{Task 1: Swift Fundamentals: Type Safety and Data Modeling} \\
+Focuses on the core logic and unique safety features of the Swift language. Over three sessions, students will move beyond standard OOP to master the distinction between Value Types (Structs) and Reference Types (Classes). They will explore Swift’s rigorous Type System, including Optionals (handling null safety), Enums with Associated Values for state modeling, and Error Handling (do-try-catch). The deliverable is a complex "CLI Logic Engine" (such as a Banking System or RPG Logic) that prevents runtime crashes through compile-time checks, ensuring the data model is robust before any UI is introduced.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 2: The View Layer: UIKit, AutoLayout, and Gestures} \\
+Focuses on the "Imperative" way of building interfaces and handling user interaction, essential for understanding the OS's history. Students will manipulate the View hierarchy using Interface Builder (Storyboards) and AutoLayout Constraints. Crucially, they will implement Event-Driven Programming by attaching UIGestureRecognizer (Tap, Pinch, Swipe, Pan) to views. They will build an "Interactive Profile Card" that responds to physical inputs with animations, understanding how the "View" captures user intent and notifies the code via the Target-Action pattern.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 3: The Controller Layer: Delegation and MVC} \\
+Focuses on the 'C' (Controller) and the specific communication patterns of iOS. Students will master the Delegation Design Pattern (blind communication) by manually implementing a UITableView, the backbone of most iOS applications. They will build a "Contact Management System" where a UIViewController acts as the mediator between the Data Model and the View. This task enforces the strict Model-View-Controller (MVC) separation found in legacy codebases, teaching students how to manage the lifecycle (viewDidLoad) and memory references.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 4: State Management (The Source of Truth)} \\
+Focuses on how data drives the modern UI. Students will deep-dive into the reactivity model of SwiftUI (@State, @Binding, @Environment). They will engineer an "Interactive Order Form" containing toggles, steppers, and inputs where changes in the data model instantly redraw the interface without manual intervention. This teaches the core concept that the UI is a function of its State, training students to abandon the "UpdateUI()" methods used in Task 2.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 5: The Paradigm Shift: Declarative UI with SwiftUI} \\
+Focuses on the modern "View" layer and the shift from Imperative to Declarative programming. Students will transition to SwiftUI, learning how to describe what the UI should look like rather than how to build it. They will recreate a complex "Responsive Dashboard" using Stacks (HStack, VStack, ZStack) and Modifiers. They will analyze how the SwiftUI View Tree handles layout, accessibility, and Dark Mode adaptation automatically, contrasting the reduction in code volume against their previous UIKit work.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 6: The MVVM Architecture (Separating Logic)} \\
+Focuses on the Model-View-ViewModel pattern, the industry standard for modern iOS. Students will learn to decouple Business Logic completely from the UI. They will refactor a "Trivia Quiz Engine" so that all game rules, score calculations, and state transitions reside in an @Observable (or ObservableObject) ViewModel class. The View simply observes this object. This reinforces the separation of concerns: The View handles presentation, while the ViewModel handles the intelligence and testability.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 7: Navigation Structure and Data Injection} \\
+Focuses on scaling the application architecture. Students will learn to structure larger, multi-screen applications using NavigationStack and List (Dynamic Arrays). They will build a "Dynamic Asset Tracker" that passes data (custom Structs) securely from a parent list to a detail view using NavigationLink. This task emphasizes Data Injection—passing dependencies down the View hierarchy—and managing the Heap vs. Stack memory when moving between screens.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 8: Asynchronous Networking and Concurrency} \\
+Focuses on connecting the app to external environments. Students will master Swift’s modern Concurrency model (async/await, Task, Actors) and URLSession. They will build a "Live News Feed" that fetches JSON data from a public API, parses it using the Codable protocol, and handles Loading States (Activity Indicators) and Error States. This lab emphasizes thread safety—performing heavy networking on background threads while safely updating the UI on the Main Actor.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 9: The Model Layer: Persistence with SwiftData} \\
+Focuses on the 'M' (Model) and data durability. Students will implement offline capability using Apple’s native SwiftData framework (a modern abstraction over CoreData). They will build a "Persistent Journal App" that performs full CRUD (Create, Read, Update, Delete) operations. They will define strict Data Models (@Model) that survive app restarts, learning to query using Predicates and sort data locally, effectively turning the device into a database server.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 10: Hardware Integration and Deployment} \\
+Focuses on the "Mobile" advantage and production readiness. Students will interface with device sensors using CoreLocation (GPS) and MapKit. The final activity involves building a "Memory Map" (Geotagging App) where users pin notes to physical locations. The task concludes with the Deployment Pipeline: managing Info.plist permissions, creating App Icons, Archiving the build, and understanding the TestFlight/App Store submission process.
+
+\newpage
+\rhead{Curriculum Schema}

@@ -1,0 +1,77 @@
+\rhead{IX301: Innovation Lab IV}
+\phantomsection 
+\section*{Innovation Lab IV (IX301): Capstone Product Development}
+\label{course:IX301}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 12 (0-0-12) \textit{*Assuming a heavier weight for the final year*}
+
+\noindent \textit{Note: This is an individual, year-long zero-to-one engineering capstone. There is no weekly instructional curriculum. Students must formulate a real-world problem statement and independently engineer a market-ready product. To prevent trivial submissions, projects will strictly be evaluated against enterprise-grade architectural and business requirements.}
+
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+
+\section*{Track A: Web Development (SaaS Product Engineering)}
+\noindent \textit{Aim: The student must architect, build, and deploy a fully functional Software-as-a-Service (SaaS) platform capable of handling real users, transactions, and concurrent traffic.}
+
+\vspace{0.3cm}
+
+\noindent\textbf{Requirement 1: Multi-Tenant Architecture \& Advanced Auth} \\
+The platform cannot be a simple single-user app. It must support multiple isolated organizations or tenants (e.g., a B2B SaaS). It must implement robust Role-Based Access Control (RBAC) with hierarchical permissions (Owner, Admin, Viewer), secure session management, and OAuth2.0 integration (Google/GitHub SSO).
+
+\vspace{0.3cm}
+
+\noindent\textbf{Requirement 2: Complex Business Logic \& Asynchronous Processing} \\
+The system must transcend basic CRUD operations. It must feature a complex core engine (e.g., scheduling algorithms, automated document generation, data aggregation). Heavy computations or third-party API integrations must be decoupled from the main thread using background job queues (e.g., Redis/BullMQ) and Webhooks.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Requirement 3: High-Performance Data \& Caching Layer} \\
+The database architecture must be strictly normalized (PostgreSQL/MySQL) with proper indexing. The platform must implement a caching strategy (Redis or Memcached) to minimize database hits on high-traffic endpoints. Search functionality must be optimized (e.g., using Elasticsearch or vector embeddings).
+
+\vspace{0.3cm}
+
+\noindent\textbf{Requirement 4: Monetization \& External Integrations} \\
+A true SaaS must be able to accept money. The platform must integrate a payment gateway (Stripe, Razorpay, or Paddle) handling complex billing scenarios such as recurring subscriptions, usage-based metering, or tier-based access control, complete with automated invoice generation and webhook event handling.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Requirement 5: Infrastructure, DevOps, \& Observability} \\
+The application must not be manually deployed. Students must configure a fully automated CI/CD pipeline (GitHub Actions) that runs integration tests before containerizing the app via Docker. The production environment must include an SSL certificate, custom domain routing, and telemetry (Logs and Metrics via Prometheus/Grafana or Datadog) to monitor uptime and API latency.
+
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+
+\section*{Track B: iOS Development (App Store Deep-Tech Product)}
+\noindent \textit{Aim: The student must design, engineer, and publish a native, high-performance iOS application that strictly adheres to Apple’s Human Interface Guidelines (HIG) and leverages the unique hardware capabilities of the device.}
+
+\vspace{0.3cm}
+
+\noindent\textbf{Requirement 1: Deep Hardware or OS Ecosystem Integration} \\
+The application cannot simply be a wrapper for a web API. It must rely heavily on native iOS frameworks to solve a problem. This includes significant utilization of at least two of the following: CoreML (On-device AI), ARKit (Spatial Computing), HealthKit, CoreBluetooth (IoT), or background location tracking, making the app uniquely "Mobile-First."
+
+\vspace{0.3cm}
+
+\noindent\textbf{Requirement 2: Offline-First Architecture \& Data Synchronization} \\
+The app must remain fully functional without an internet connection. Students must implement a robust local database (SwiftData or Realm) combined with an intelligent background synchronization engine. Conflict resolution strategies must be implemented for when the device reconnects to the network to ensure data integrity with the cloud backend.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Requirement 3: Modular Codebase \& Reactive State Management} \\
+The codebase must be structurally sound and maintainable. It must be split into independent modules using Swift Package Manager (SPM). The UI layer must strictly decouple from business logic using a modern architectural pattern (MVVM, VIPER, or The Composable Architecture), with completely reactive state management (Combine or Swift Async/Await).
+
+\vspace{0.3cm}
+
+\noindent\textbf{Requirement 4: Memory Optimization \& UI Fluidity} \\
+The application must pass rigorous profiling using Xcode Instruments. It must demonstrate zero memory leaks (resolving all retain cycles) and maintain a consistent 60/120 FPS scrolling performance, even when rendering massive data sets or complex CoreAnimation/Metal graphics.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Requirement 5: App Store Readiness \& Monetization} \\
+The product must be packaged for public consumption. This includes implementing In-App Purchases (IAP) or subscriptions (via StoreKit or RevenueCat), integrating crash reporting tools (Firebase Crashlytics), passing automated UI/Unit tests on a CI/CD pipeline (Fastlane), and culminating in a successful submission to TestFlight and the iOS App Store Review process.
+
+\newpage
+\rhead{Curriculum Schema}

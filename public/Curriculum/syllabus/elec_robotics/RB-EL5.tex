@@ -1,0 +1,88 @@
+\rhead{RB-EL5: Advanced Motion Planning}
+\phantomsection 
+\section*{Advanced Motion Planning (RB-EL5)}
+\label{elec:RB_5}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 4 (3-0-2)
+
+\subsection*{Theory}
+\noindent\textbf{Unit 1} \\
+\textit{Geometric Motion Planning:} Configuration space (C-space obstacles), Workspace vs. C-space, Collision detection (GJK algorithm, bounding volume hierarchies), Sampling-based planners (PRM: probabilistic roadmap, lazy evaluation), RRT family (RRT-Connect, RRT*: asymptotic optimality), Informed sampling (elliptical projections).
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Optimization-Based Planning:} Trajectory optimization (CHOMP, STOMP, TrajOpt), Convex optimization (convex MPC, SOCP), Differential flatness for drones/manipulators, Whole-body planning (centroidal dynamics), Contact-rich manipulation (MuJoCo, QP trajectory optimization), Real-time receding horizon control.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Learning for Motion Planning:} Imitation learning (BC, DAGGER, GAIL), Reinforcement learning planners (AlphaPilot, Dreamer), Neural motion policies (MPNet, MotionPolicy), Scene-aware planning (LEGO, SPN), Foundation models for planning (RT-2, Octo), Fast planning via regression (Latent Planners), Sample efficiency techniques.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Multi-Robot and Human-Aware Planning:} Decentralized planning (conflict-based search CBS), Priority planning, Velocity obstacles (ORCA), Human-robot cohabitation (social costs, reciprocal collision avoidance), Dynamic environments (DWA, TEb), Legible and predictable trajectories for HRI.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{Advanced Topics:} Nonholonomic planning (dubins paths, Reeds-Shepp curves), Underactuated systems (acrobot, pendubot), Legged locomotion (MPC, WBF), Soft robotics planning, Uncertainty-aware planning (POMDPs, belief space), Integrated perception-planning (VPG, PEPLAN), Real-time certification (iCORA, anytime algorithms).
+
+\newpage
+
+\subsection*{Practical}
+\noindent\textbf{Lab 1: Sampling-Based Planners} \\
+Focuses on OMPL implementation (RRT*, PRM), MoveIt! integration.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 2: Optimization Trajectory Generation} \\
+Focuses on TOPP-RA, CHOMP in Drake/MuJoCo.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 3: Manipulation Planning} \\
+Focuses on Panda arm pick-place, collision-free IK.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 4: Quadrotor Motion Planning} \\
+Focuses on minimum-snap trajectories, PX4 SITL.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 5: Multi-Robot Coordination} \\
+Focuses on CBS/ORCA in Gazebo swarm.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 6: Neural Planners} \\
+Focuses on MPNet fine-tuning, scene-conditioned planning.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 7: Human-Aware Navigation} \\
+Focuses on Nav2 social layers, pedestrian datasets.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 8: Legged Robot Locomotion} \\
+Focuses on ANYmal MPC, contact sequence optimization.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 9: Real-Time Hardware Demo} \\
+Focuses on Jetson deployment, latency optimization.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 10: Complete Planning Pipeline} \\
+Focuses on perception-motion-action loop validation.
+
+\vspace{0.2cm}
+
+\newpage
+\rhead{Curriculum Schema}

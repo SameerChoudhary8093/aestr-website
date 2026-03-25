@@ -1,0 +1,35 @@
+\rhead{MN-GEO: Fundamentals of GIS \& Spatial Analysis}
+\phantomsection
+\section*{Fundamentals of GIS \& Spatial Analysis (MN-GEO)}
+\label{minor:GEO_L1}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 2 (2-0-0)
+
+\subsection*{Course Content}
+\noindent\textbf{Unit 1} \\
+\textit{The Earth as a Database: Spatial Data Models and Coordinate Systems:} Geographic Information Systems (GIS) as a computational framework for storing, querying, analyzing, and visualizing spatially referenced data; The Earth's shape problem: geoids, ellipsoids, and datums (WGS84, NAD83) as the reference surfaces underpinning all coordinate systems; Geographic coordinate systems (latitude, longitude) vs.\ projected coordinate systems (UTM, Web Mercator): the cartographic projection problem as a mathematical mapping from a curved surface to a flat plane with unavoidable distortion tradeoffs (area, shape, distance, direction); Vector data model: points, polylines, and polygons as geometric primitives with associated attribute tables — the shapefile and GeoJSON as standard serialization formats; Raster data model: georeferenced grids of cell values as the representation of continuous spatial phenomena (elevation, temperature, land cover); Spatial resolution, extent, and the modifiable areal unit problem (MAUP) as fundamental data quality and scale considerations.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Spatial Data Structures and Efficient Query:} The spatial indexing problem: why standard B-tree indexes fail for two-dimensional range queries; R-trees as the canonical spatial index: minimum bounding rectangles, node splitting strategies, and the query algorithm for range and nearest-neighbor searches; Quadtrees as recursive spatial partitioning: region quadtrees for raster data and point quadtrees for vector data; Geohash and S2 cell hierarchies as space-filling curve encodings that map 2D spatial proximity to 1D string prefixes for use in standard key-value stores; Spatial joins: point-in-polygon, line intersection, and buffer overlap as the fundamental binary spatial predicates; Topological relationships formalized: the DE-9IM (Dimensionally Extended 9-Intersection Model) as the mathematical framework defining contains, intersects, touches, crosses, and disjoint; PostGIS as a spatial extension to PostgreSQL: geometry types, spatial indexes (GiST), and ST\_ function families as a production spatial query engine.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Coordinate Transformations and Map Projections as Linear Algebra:} Affine transformations: translation, rotation, scaling, and shearing as the $3 \times 3$ homogeneous matrix operations applied to georeferencing raster imagery; Georeferencing: establishing the correspondence between pixel coordinates and geographic coordinates using ground control points (GCPs) and least-squares polynomial fitting; Datum transformations: Helmert (7-parameter similarity) transformation for converting between geodetic reference frames; Raster resampling methods: nearest-neighbor, bilinear interpolation, and cubic convolution as tradeoffs between accuracy and computational cost when reprojecting grids; Vector reprojection: applying coordinate transformation functions point-by-point to convert geometries between coordinate reference systems; Error propagation in spatial data: positional accuracy, attribute accuracy, and lineage as the components of data quality metadata standards (ISO 19157).
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Spatial Analysis: Proximity, Networks, and Surface Modeling:} Buffer analysis, Voronoi diagrams, and Delaunay triangulation as the foundational proximity computation primitives; Network analysis on road graphs: shortest path (Dijkstra, A*), service area computation (isochrones), and the traveling salesman problem as spatial optimization; Digital Elevation Models (DEMs): slope, aspect, hillshade, curvature, and viewshed analysis as raster-based terrain derivatives computed via finite-difference kernels; Interpolation of scattered point data to continuous surfaces: IDW (Inverse Distance Weighting), spline interpolation, and Kriging as a geostatistical interpolator that provides uncertainty estimates alongside predictions; Map algebra: local, focal, zonal, and global operations as a raster processing algebra analogous to array broadcasting; Spatial autocorrelation: Moran's I statistic as the formal test of whether nearby locations have more similar values than expected by chance, and its connection to the First Law of Geography.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{Remote Sensing and Satellite Data Processing:} The electromagnetic spectrum as the data source of satellite remote sensing: optical (multispectral, hyperspectral), SAR (synthetic aperture radar), and LiDAR as complementary sensing modalities; Radiometric calibration: converting raw digital numbers to at-sensor radiance and top-of-atmosphere reflectance as the preprocessing pipeline for optical imagery; Spectral indices as engineered features: NDVI (vegetation), NDWI (water), NDBI (built-up area) as normalized band ratios that isolate physical phenomena; Image classification: supervised (maximum likelihood, SVM) and unsupervised (k-means, ISODATA) approaches to assigning land cover labels to image pixels; Accuracy assessment: confusion matrix, overall accuracy, producer's and user's accuracy, and the Kappa coefficient as the validation framework for classified maps; Cloud computing for remote sensing: Google Earth Engine as a planetary-scale geospatial analysis platform where computation moves to the data rather than the data to the computation.
+
+\newpage
+\rhead{Curriculum Schema}

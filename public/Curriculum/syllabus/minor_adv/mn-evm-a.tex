@@ -1,0 +1,35 @@
+\rhead{MN-EVM-A: Autonomous Driving \& Vehicle Intelligence}
+\phantomsection
+\section*{Autonomous Driving \& Vehicle Intelligence (MN-EVM-A)}
+\label{minor:EVM_L2}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 2 (2-0-0)
+
+\subsection*{Course Content}
+\noindent\textbf{Unit 1} \\
+\textit{The Autonomy Stack: Perception, Prediction, Planning, and Control:} SAE Levels 0--5 as a taxonomy of automation capability and the corresponding shift in computational responsibility from driver to system; The modular autonomy stack architecture: perception $\rightarrow$ object detection and tracking $\rightarrow$ prediction $\rightarrow$ planning $\rightarrow$ control as a sequential dataflow pipeline; End-to-end learning as the alternative paradigm: mapping raw sensor inputs directly to steering and throttle commands via a single neural network; tradeoffs in interpretability, safety certification, and data efficiency; Sensor suite for Level 4 autonomy: the redundant multi-modal configuration (camera ring, long-range radar, 360° LiDAR, HD map localization) and the rationale for sensor diversity as a fault-tolerance strategy; Real-time computing platforms: the NVIDIA DRIVE, Qualcomm Snapdragon Ride, and Mobileye EyeQ SoC families as purpose-built inference and sensor processing hardware; The simulation-to-real gap in autonomous driving: photorealistic sensor simulation (CARLA, LGSVL, Waymo's SimAgents) as the primary scalable data source for training and safety validation.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{3D Perception: LiDAR and Multi-Modal Fusion:} Point cloud representation and the challenges of 3D deep learning: sparsity, irregular structure, and the absence of a canonical grid; PointNet and PointNet++ as the foundational architectures for permutation-invariant processing of unordered point sets; Voxel-based 3D object detection: VoxelNet and VoxelNeXt as sparse convolution pipelines that discretize the point cloud into a regular voxel grid for efficient 3D CNN processing; Bird's Eye View (BEV) representation as the unified spatial canvas: projecting LiDAR, radar, and camera features into a common top-down feature map for detection and tracking; BEVFusion and BEVFormer as multi-modal fusion architectures that aggregate camera and LiDAR features in BEV space using deformable attention; 3D multi-object tracking: the tracking-by-detection paradigm, Kalman Filter state estimation for object kinematics, and the Hungarian algorithm for data association as the mathematical backbone of the perception stack.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{HD Maps, Localization, and Scene Understanding:} High-Definition (HD) maps as the prior knowledge layer of autonomous driving: lane geometry, road topology, traffic rules, and semantic annotations at centimeter-level accuracy; Map formats and standards: OpenDRIVE for road geometry, Lanelet2 for semantic lane-level maps, and NDS (Navigation Data Standard) as the industry standard for production map distribution; LiDAR-based localization: Normal Distributions Transform (NDT) and ICP (Iterative Closest Point) as scan-matching algorithms aligning live point clouds to a pre-built HD map; Simultaneous Localization and Mapping (SLAM) for autonomous vehicles: LIO-SAM and LOAM as LiDAR-inertial odometry systems building the map and localizing within it simultaneously; Occupancy grid maps as a probabilistic representation of free, occupied, and unknown space: Bayesian log-odds update rule and the computational tradeoff between resolution and memory; Semantic scene understanding: panoptic segmentation combining instance detection of dynamic objects with semantic labeling of static infrastructure in a single unified output.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Prediction, Motion Planning, and Decision Making:} Agent behavior prediction as the bridge between perception and planning: goal-directed prediction (lane-level intent classification) vs.\ trajectory prediction (continuous future path regression); Transformer-based prediction architectures: MTR and MotionDiffuser modeling the multimodal, uncertain future distribution over agent trajectories as a generative problem; Motion planning problem formulation: finding a collision-free, comfort-optimizing, rule-compliant trajectory through a dynamic environment; Sampling-based planners: RRT* and its kinodynamic extensions for continuous configuration spaces; optimization-based planners: the path-speed decoupled approach (EM Planner, Apollo) using polynomial curves and QP solvers; Frenet frame planning: transforming the planning problem from Cartesian to a road-aligned coordinate system simplifying lateral-longitudinal decoupling; Hierarchical decision making: behavior layer (FSM or MCTS-based maneuver selection) commanding the trajectory planner as the two-level control architecture separating strategic from tactical decisions.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{Safety, Validation, and the Road to Full Autonomy:} The safety argument for autonomous vehicles: why traditional testing (miles driven) is statistically insufficient and the case for formal safety cases; Responsibility Sensitive Safety (RSS) as a formal mathematical model defining safe longitudinal and lateral distance thresholds and the proper response to dangerous situations; Runtime monitoring and anomaly detection: out-of-distribution input detection, epistemic uncertainty estimation (MC Dropout, deep ensembles), and the safe fallback (minimal risk condition) trigger logic; Scenario-based testing: the ASAM OpenSCENARIO format for parameterized test scenario specification and the combinatorial explosion problem of corner case coverage; Federated learning for autonomous driving: training perception and prediction models across vehicle fleets without centralizing raw sensor data; Regulatory landscape and AV deployment models: UNECE WP.29 regulations (R157 ALKS), geofenced ODD (Operational Design Domain) restrictions, and the disengagement report as public accountability mechanisms for AV operators.
+
+\newpage
+\rhead{Curriculum Schema}

@@ -1,0 +1,35 @@
+\rhead{MN-MFG-A: Digital Twins \& Cyber-Physical Systems}
+\phantomsection
+\section*{Digital Twins \& Cyber-Physical Systems (MN-MFG-A)}
+\label{minor:MFG_L2}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 2 (2-0-0)
+
+\subsection*{Course Content}
+\noindent\textbf{Unit 1} \\
+\textit{Cyber-Physical Systems: Formal Foundations:} Cyber-Physical Systems (CPS) defined: the tight coupling of computation, communication, and physical dynamics where software correctness has physical consequences; Hybrid systems as the mathematical model of CPS: continuous ODEs governing physical evolution interrupted by discrete computational events; Hybrid automata: states, invariants, guards, and reset maps as the formal specification language for CPS behavior; Reachability analysis: computing the set of states a hybrid system can reach as a safety verification problem; Timed automata and real-time constraints: modeling and verifying timing guarantees in control loops; Introduction to model-based design: using Simulink/Modelica as executable specification environments where the physical plant and the controller co-evolve before any hardware is built.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Digital Twin Architecture and Synchronization:} Digital twin taxonomy: descriptive (as-built model), predictive (simulation-driven forecast), and prescriptive (optimization-driven recommendation) twins; The synchronization problem: state estimation from noisy, incomplete sensor streams using the Kalman Filter and its nonlinear extensions (EKF, UKF) to keep the virtual model consistent with physical reality; Asset Administration Shell (AAS) as the standardized data model for digital twins in Industry 4.0: submodels, properties, and operations; Ontologies for manufacturing: describing assets, processes, and relationships in a machine-readable knowledge graph (OWL, RDF); Twin composition: federating multiple asset-level twins into a system-level simulation; Versioning and configuration management for twin models: treating simulation code and physical parameters as software artifacts under version control.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Physics-Based Simulation and Surrogate Modeling:} Finite Element Analysis (FEA) as a discretization of continuous physical domains: mesh generation, boundary conditions, and the stiffness matrix as a sparse linear algebra problem; Computational Fluid Dynamics (CFD) for thermal and flow simulation in manufacturing processes: Reynolds-Averaged Navier-Stokes (RANS) equations and their numerical solution; Multibody dynamics simulation for robotic and mechanical systems: rigid body kinematics, contact mechanics, and constraint solving; The surrogate modeling problem: replacing expensive physics simulations with fast data-driven approximations; Gaussian Process Regression as a probabilistic surrogate: posterior mean as prediction and posterior variance as uncertainty quantification; Physics-Informed Neural Networks (PINNs): embedding governing PDEs as soft constraints in the loss function to produce physically consistent surrogates with sparse data.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Closed-Loop Control, Optimization, and Autonomous CPS:} Classical control recap in the CPS context: PID controllers, stability (Lyapunov methods), and the cost of instability in physical systems; Model Predictive Control (MPC) as the canonical optimization-based controller: receding horizon, constraint handling, and the role of the digital twin as the internal prediction model; Reinforcement Learning for CPS control: Sim-to-Real transfer using the digital twin as a safe training environment before deployment on physical hardware; Multi-objective optimization of manufacturing processes: Pareto frontiers over competing objectives (throughput, energy consumption, defect rate) using evolutionary algorithms; Collaborative robotics (cobots): task and motion planning (TAMP) as a combined discrete-continuous search problem; Digital twin-driven process optimization: closed-loop parameter tuning where the twin evaluates candidate settings before they are applied to the physical line.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{Industrial AI, Scalability, and the Future of Manufacturing:} Federated learning for manufacturing: training anomaly detection models across multiple factory sites without centralizing proprietary process data; Large-scale digital twin platforms: AWS IoT TwinMaker, Azure Digital Twins, and NVIDIA Omniverse as cloud-native twin infrastructures and their architectural patterns; Graph Neural Networks for modeling complex manufacturing systems: representing machines, materials, and processes as nodes and their dependencies as edges for holistic system-level inference; Generative design: using diffusion models and topology optimization to synthesize manufacturable part geometries that satisfy structural constraints; Standards and interoperability: RAMI 4.0 as the reference architecture model for Industry 4.0, and its relationship to IEC 61512 (ISA-88) and ISO 23247 (Digital Twin for Manufacturing); Sustainability and energy-aware manufacturing: digital twins as instruments for carbon footprint modeling, energy flow optimization, and lifecycle assessment.
+
+\newpage
+\rhead{Curriculum Schema}

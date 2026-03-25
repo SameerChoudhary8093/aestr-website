@@ -1,0 +1,35 @@
+\rhead{MN-FIN: Algorithmic Financial Engineering}
+\phantomsection
+\section*{Algorithmic Financial Engineering (MN-FIN)}
+\label{minor:FIN_L1}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 2 (2-0-0)
+
+\subsection*{Course Content}
+\noindent\textbf{Unit 1} \\
+\textit{Financial Markets as Computational Systems:} Financial markets as information-processing machines: price as a signal aggregating distributed knowledge; Asset classes and their data representations: equities, bonds, derivatives, and currencies as structured records with tick-by-tick time-series; Market microstructure: the limit order book (LOB) as a priority-queue data structure; bid-ask spread, market depth, and order matching engines as real-time algorithmic systems; OHLCV (Open, High, Low, Close, Volume) as the canonical compressed representation of price history; Financial data formats and sources: FIX protocol for order messaging, Bloomberg and Quandl APIs, and the data engineering challenges of survivorship bias and point-in-time correctness; Return series, log-returns, and volatility as the derived statistical quantities on which all quantitative finance is built.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Stochastic Processes and the Mathematics of Price:} Random walks and the Efficient Market Hypothesis as the null model of price dynamics; Brownian motion as the continuous-time limit of a random walk: the Wiener process and its properties; Geometric Brownian Motion (GBM) as the standard model of equity price evolution: $dS = \mu S\, dt + \sigma S\, dW_t$; Itô's Lemma as the chain rule of stochastic calculus: deriving the dynamics of functions of stochastic processes; The Black-Scholes-Merton (BSM) model: assumptions, the heat equation reduction, and the closed-form option pricing formula; The Greeks ($\Delta$, $\Gamma$, $\Theta$, $\mathcal{V}$, $\rho$) as partial derivatives of option price with respect to market variables: their role in hedging and risk management; Monte Carlo simulation of GBM paths as a numerical pricing engine for path-dependent exotic derivatives.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Algorithmic Trading Strategy Design:} The algorithmic trading pipeline: data ingestion $\rightarrow$ signal generation $\rightarrow$ position sizing $\rightarrow$ order execution $\rightarrow$ risk management as a software architecture; Technical indicators as computable functions of price history: moving averages (SMA, EMA), RSI, MACD, and Bollinger Bands as feature engineering for price signals; Mean reversion strategies: the Ornstein-Uhlenbeck process as the stochastic model for cointegrated asset pairs; statistical arbitrage and pairs trading as a market-neutral strategy; Momentum strategies: cross-sectional and time-series momentum as systematic factor exposures; Backtesting as the empirical validation framework for trading strategies: walk-forward testing, transaction cost modeling, and the multiple comparisons problem (backtest overfitting); Performance metrics: Sharpe ratio, maximum drawdown, Calmar ratio, and the information ratio as the quantitative scorecard of a strategy.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Portfolio Optimization and Risk Modeling:} Modern Portfolio Theory (MPT): the mean-variance optimization problem as a quadratic program over portfolio weights; The efficient frontier and the Capital Market Line; the Sharpe ratio as the objective of tangency portfolio construction; Covariance matrix estimation challenges: the curse of dimensionality, the Ledoit-Wolf shrinkage estimator, and factor models (CAPM, Fama-French) as structured covariance approximations; Risk factor decomposition: attributing portfolio risk to systematic factors vs.\ idiosyncratic residuals; Value at Risk (VaR) and Conditional Value at Risk (CVaR) as tail risk measures: historical simulation, parametric, and Monte Carlo estimation methods; The Black-Litterman model: incorporating analyst views as a Bayesian update to the market equilibrium portfolio.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{High-Frequency Trading and Market Systems Engineering:} The latency arms race: co-location, FPGA-based order routing, and kernel bypass networking (DPDK, RDMA) as systems engineering for microsecond-level execution; Market making as an inventory management problem: the Avellaneda-Stoikov model for optimal bid-ask quote placement under adverse selection risk; Order execution algorithms: TWAP, VWAP, and Implementation Shortfall as strategies for minimizing market impact when liquidating large positions; Regulation and market stability: circuit breakers, kill switches, and the Flash Crash of 2010 as a case study in emergent systemic risk from algorithmic interaction; Alternative data in quantitative finance: satellite imagery, credit card transaction flows, and NLP-derived sentiment scores as non-traditional alpha signals; Regulatory technology (RegTech): transaction monitoring, trade surveillance, and anti-money laundering (AML) detection as classification problems on financial event streams.
+
+\newpage
+\rhead{Curriculum Schema}

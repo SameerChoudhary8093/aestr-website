@@ -1,0 +1,222 @@
+[
+  {
+    "id": "software-cloud",
+    "title": "Software & Cloud Engineering",
+    "description": "Focuses on software architecture, cloud computing, distributed systems, DevOps, and scalable service development.",
+    "type": "major",
+    "requiredCourseCodes": [
+      "SE201",
+      "SE202",
+      "SE301",
+      "SE401",
+      "SE501",
+      "SE601"
+    ],
+    "electiveCourseCodes": [
+      "SE-EL1",
+      "SE-EL2",
+      "SE-EL3",
+      "SE-EL4",
+      "SE-EL5",
+      "SE-EL6"
+    ]
+  },
+  {
+    "id": "artificial-intelligence",
+    "title": "Artificial Intelligence",
+    "description": "Covers machine learning, deep learning, generative AI, natural language processing, computer vision, and intelligent systems.",
+    "type": "major",
+    "requiredCourseCodes": [
+      "ML201",
+      "ML202",
+      "ML301",
+      "ML401",
+      "ML501",
+      "ML601"
+    ],
+    "electiveCourseCodes": [
+      "ML-EL1",
+      "ML-EL2",
+      "ML-EL3",
+      "ML-EL4",
+      "ML-EL5",
+      "ML-EL6"
+    ]
+  },
+  {
+    "id": "data-science",
+    "title": "Data Science",
+    "description": "Focuses on statistics, databases, analytics engineering, big data systems, and predictive modeling.",
+    "type": "major",
+    "requiredCourseCodes": [
+      "DS201",
+      "DS202",
+      "DS301",
+      "DS401",
+      "DS501",
+      "DS601"
+    ],
+    "electiveCourseCodes": [
+      "DS-EL1",
+      "DS-EL2",
+      "DS-EL3",
+      "DS-EL4",
+      "DS-EL5",
+      "DS-EL6"
+    ]
+  },
+  {
+    "id": "cyber-security",
+    "title": "Cyber Security",
+    "description": "Focuses on information security, cryptography, network defense, digital forensics, and secure application engineering.",
+    "type": "major",
+    "requiredCourseCodes": [
+      "CY201",
+      "CY202",
+      "CY301",
+      "CY401",
+      "CY501",
+      "CY601"
+    ],
+    "electiveCourseCodes": [
+      "CY-EL1",
+      "CY-EL2",
+      "CY-EL3",
+      "CY-EL4",
+      "CY-EL5",
+      "CY-EL6"
+    ]
+  },
+  {
+    "id": "robotics",
+    "title": "Robotics",
+    "description": "Focuses on robotics mechanics, embedded systems, perception, control systems, autonomous navigation, and ROS.",
+    "type": "major",
+    "requiredCourseCodes": [
+      "RB201",
+      "RB202",
+      "RB301",
+      "RB401",
+      "RB501",
+      "RB601"
+    ],
+    "electiveCourseCodes": [
+      "RB-EL1",
+      "RB-EL2",
+      "RB-EL3",
+      "RB-EL4",
+      "RB-EL5",
+      "RB-EL6"
+    ]
+  },
+  {
+    "id": "bioinformatics",
+    "title": "Bioinformatics",
+    "description": "Applies computation, algorithms, and data analysis to genomics, biological systems, and molecular data.",
+    "type": "minor",
+    "requiredCourseCodes": [
+      "MN-BIO",
+      "MN-BIO-A"
+    ],
+    "electiveCourseCodes": []
+  },
+  {
+    "id": "biomedical",
+    "title": "Biomedical",
+    "description": "Covers biomedical signals, systems, sensors, and medical image analysis through a computing lens.",
+    "type": "minor",
+    "requiredCourseCodes": [
+      "MN-MED",
+      "MN-MED-A"
+    ],
+    "electiveCourseCodes": []
+  },
+  {
+    "id": "product-design",
+    "title": "Product Design",
+    "description": "Focuses on HCI, spatial computing, immersive experiences, and interaction-centered product development.",
+    "type": "minor",
+    "requiredCourseCodes": [
+      "MN-DES",
+      "MN-DES-A"
+    ],
+    "electiveCourseCodes": []
+  },
+  {
+    "id": "smart-manufacturing",
+    "title": "Smart Manufacturing",
+    "description": "Focuses on industrial IoT, digital twins, automation, and cyber-physical production systems.",
+    "type": "minor",
+    "requiredCourseCodes": [
+      "MN-MFG",
+      "MN-MFG-A"
+    ],
+    "electiveCourseCodes": []
+  },
+  {
+    "id": "nanomaterials",
+    "title": "Nanomaterials",
+    "description": "Connects computational modeling, material science, and data-driven analysis for advanced materials.",
+    "type": "minor",
+    "requiredCourseCodes": [
+      "MN-MAT",
+      "MN-MAT-A"
+    ],
+    "electiveCourseCodes": []
+  },
+  {
+    "id": "fintech",
+    "title": "FinTech",
+    "description": "Covers algorithmic finance, market systems, blockchain, DeFi architectures, and financial computation.",
+    "type": "minor",
+    "requiredCourseCodes": [
+      "MN-FIN",
+      "MN-FIN-A"
+    ],
+    "electiveCourseCodes": []
+  },
+  {
+    "id": "semiconductor-risc-v",
+    "title": "Semiconductor & RISC-V",
+    "description": "Focuses on digital design, SoC architecture, semiconductor systems, verification, and RISC-V platforms.",
+    "type": "minor",
+    "requiredCourseCodes": [
+      "MN-SEM",
+      "MN-SEM-A"
+    ],
+    "electiveCourseCodes": []
+  },
+  {
+    "id": "geoinformatics",
+    "title": "Geoinformatics",
+    "description": "Focuses on GIS, spatial analysis, geospatial data systems, and geospatial AI.",
+    "type": "minor",
+    "requiredCourseCodes": [
+      "MN-GEO",
+      "MN-GEO-A"
+    ],
+    "electiveCourseCodes": []
+  },
+  {
+    "id": "smart-cities",
+    "title": "Smart Cities",
+    "description": "Covers urban informatics, connected infrastructure, sensing systems, and data-driven urban platforms.",
+    "type": "minor",
+    "requiredCourseCodes": [
+      "MN-CIV",
+      "MN-CIV-A"
+    ],
+    "electiveCourseCodes": []
+  },
+  {
+    "id": "mechatronics",
+    "title": "Mechatronics in EV",
+    "description": "Focuses on automotive embedded systems, EV mechatronics, and autonomous vehicle intelligence.",
+    "type": "minor",
+    "requiredCourseCodes": [
+      "MN-EVM",
+      "MN-EVM-A"
+    ],
+    "electiveCourseCodes": []
+  }
+]

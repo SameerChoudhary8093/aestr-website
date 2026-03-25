@@ -1,0 +1,88 @@
+\rhead{RB301: Embedded Systems \& Microcontrollers}
+\phantomsection 
+\section*{Embedded Systems \& Microcontrollers (RB301)}
+\label{major:RB_3}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 3 (2-0-2)
+
+\subsection*{Theory}
+\noindent\textbf{Unit 1} \\
+\textit{Embedded Systems Architecture and Programming:} Embedded system characteristics (real-time constraints, resource limitations), Microcontroller vs microprocessor architectures, ARM Cortex-M series architecture overview, Harvard vs Von Neumann memory architectures, Interrupt handling (NVIC, priority levels), Bare-metal programming vs RTOS, Power management (sleep modes, clock gating, dynamic voltage scaling).
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Arduino Ecosystem and Peripheral Programming:} Arduino architecture (ATmega328P, pin multiplexing), GPIO programming (digital input/output, pull-up/pull-down), Analog-to-digital conversion (ADC channels, reference selection), Pulse Width Modulation (PWM) for motor control, Serial communication (UART, SPI, I2C protocols), Timer/Counter peripherals (overflow, compare match modes), Arduino IDE workflow and bootloader.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Wireless Microcontrollers (ESP32/ESP8266):} ESP32 SoC architecture (dual-core Xtensa LX6, ultra-low power coprocessor), WiFi and Bluetooth stack integration, FreeRTOS port for ESP32, MQTT protocol implementation, Over-The-Air (OTA) firmware updates, Deep sleep and ULP coprocessor for battery-powered applications, GPIO matrix and peripheral routing flexibility.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Edge AI Platforms (NVIDIA Jetson):} Jetson Nano/TX2 architecture (Carver SoC, GPU compute capability), CUDA programming model for embedded GPUs, TensorRT optimization for deep learning inference, NVIDIA container runtime (JetPack SDK), GPIO/I2C/SPI/UART interfacing with robotics peripherals, Camera interface (CSI, MIPI), Power modes and thermal management.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{Real-Time Operating Systems and Robotics Integration:} FreeRTOS fundamentals (tasks, queues, semaphores, mutexes), Task scheduling (preemptive, priority inheritance), ROS2 Micro (micro-ROS) for embedded systems, Device drivers and HAL implementation, Sensor fusion on microcontrollers (Madgwick/Kalman filters), Communication protocols for robotics (CAN bus, ROS topics/services), Hardware abstraction layers for multi-platform development.
+
+\newpage
+
+\subsection*{Practical}
+\noindent\textbf{Lab 1: Arduino GPIO and Digital Interfacing} \\
+Focuses on digital input/output programming, debouncing techniques, LED matrix control, and interrupt-driven button handling.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 2: Arduino Analog and PWM Applications} \\
+Focuses on ADC reading with noise filtering, PWM motor speed control, servo positioning, and analog sensor interfacing.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 3: Arduino Serial Communication Protocols} \\
+Focuses on UART, I2C, SPI master/slave implementations with sensors (MPU6050, BMP280, OLED displays).
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 4: ESP32 WiFi and MQTT Client} \\
+Focuses on WiFi station/AP modes, HTTP/HTTPS clients, MQTT publish/subscribe for IoT data pipelines.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 5: ESP32 FreeRTOS Multitasking} \\
+Focuses on task creation/scheduling, inter-task communication, sensor data processing with WiFi transmission.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 6: Jetson GPIO and Camera Interfacing} \\
+Focuses on GPIO control for robotics peripherals, CSI camera capture, OpenCV processing pipelines.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 7: Jetson TensorRT Inference} \\
+Focuses on converting trained models to TensorRT, real-time inference benchmarking, GPU memory optimization.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 8: FreeRTOS Device Driver Development} \\
+Focuses on implementing sensor drivers with proper error handling and timeout mechanisms.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 9: micro-ROS Embedded Integration} \\
+Focuses on integrating micro-ROS with Arduino/ESP32 for ROS2 communication over serial/WiFi.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 10: Complete Robotics Node Development} \\
+Focuses on building complete sensor-actuator-controller node integrating all platforms and communication protocols.
+
+\vspace{0.2cm}
+
+\newpage
+\rhead{Curriculum Schema}
