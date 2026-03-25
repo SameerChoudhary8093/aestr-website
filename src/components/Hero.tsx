@@ -33,11 +33,11 @@ const Hero = () => {
                                 The B.Tech is dead
                             </h1>
                             <p className="text-[20px] sm:text-[24px] md:text-[28px] text-foreground font-bold max-w-2xl leading-snug lg:leading-tight lg:whitespace-nowrap break-words w-full mt-2">
-                                The AESTR Solution: <br className="lg:hidden" /> <span className="text-accent">The 4-Year Engineering Residency.</span>
+                                The AESTR Solution: <span className="text-accent">The 4-Year Engineering Residency.</span>
                             </p>
-                            <div className="text-[15px] sm:text-[16px] text-foreground/80 font-medium w-full leading-relaxed flex flex-col gap-2 mt-4 max-w-lg lg:max-w-none">
-                                <span className="block">AESTR by Gyan Vihar is built on a single, uncompromising premise:</span>
-                                <span className="block">Stop studying. Start building. We are not a college we are a Silicon Valley-style incubator.</span>
+                            <div className="text-[16px] sm:text-[18px] text-foreground/80 font-medium w-full leading-relaxed flex flex-col gap-2 mt-4 max-w-lg lg:max-w-none">
+                                <span className="block lg:whitespace-nowrap font-bold">AESTR by Gyan Vihar is built on a single, uncompromising premise:</span>
+                                <span className="block font-bold">Stop studying. Start building. We are not a college we are a Silicon Valley-style incubator.</span>
                             </div>
                         </div>
 

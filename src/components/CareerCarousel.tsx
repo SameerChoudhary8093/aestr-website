@@ -9,7 +9,7 @@ const careerData = [
         sub: '3x growth expected in deep-tech and climate-focused sectors.',
         major: 'AI & Machine Learning',
         minor: 'Robotics',
-        lab: 'Embodied Brain lab',
+        lab: 'Apple Ecosystem',
         image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80'
     },
     {
@@ -17,7 +17,7 @@ const careerData = [
         sub: '3x growth expected in deep-tech and climate-focused sectors',
         major: 'AI & Machine Learning',
         minor: 'Semiconductor & RISC-V',
-        lab: 'RISC V System Lab',
+        lab: 'NVIDIA Pipeline',
         image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80'
     },
     {
@@ -25,15 +25,15 @@ const careerData = [
         sub: '3x growth expected in deep-tech and climate-focused sectors',
         major: 'Software & Cloud Engineering',
         minor: 'Robotics',
-        lab: 'Augmented Human Lab',
+        lab: 'RISC-V Lab',
         image: 'https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=800&q=80'
     },
     {
         title: 'Cloud AI Infrastructure Architect',
         sub: '3x growth expected in deep-tech and climate-focused sectors',
         major: 'Software & Cloud Engineering',
-        minor: 'Robotics',
-        lab: 'Soft Brain lab',
+        minor: 'Cloud Architecture',
+        lab: 'Apple Ecosystem',
         image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80'
     },
     {
@@ -41,7 +41,7 @@ const careerData = [
         sub: 'From fraud detection to smart loans—this role is at the heart of India’s $150B fintech revolution.',
         major: 'Data Engineering',
         minor: 'Fintech',
-        lab: 'Foundation Model Lab',
+        lab: 'NVIDIA Pipeline',
         image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80'
     },
     {
@@ -49,7 +49,7 @@ const careerData = [
         sub: 'An AI Materials Innovation Engineer applies AI to discover and optimize new materials faster.',
         major: 'AI & Machine Learning',
         minor: 'Nano Technology',
-        lab: 'Foundation Model Lab',
+        lab: 'NVIDIA Pipeline',
         image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80'
     },
     {
@@ -57,14 +57,14 @@ const careerData = [
         sub: 'A Multi-Modal AI Model Trainer builds AI models that learn from text, images, and more.',
         major: 'AI & Machine Learning',
         minor: 'Robotics',
-        lab: 'embodied ‘Brain’ lab, soft “brain” lab',
+        lab: 'Embodied Brain Lab',
         image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80'
     },
     {
         title: 'Robotics AI Specialist',
         sub: 'A Robotics AI Specialist develops intelligent systems that enable robots to perceive, learn, and act autonomously.',
         major: 'AI & Machine Learning',
-        minor: 'Robotics',
+        minor: 'Computer Vision',
         lab: 'Embodied Brain Lab',
         image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80'
     },
@@ -73,14 +73,15 @@ const careerData = [
         sub: 'A Bio-AI Specialist uses AI to analyze and solve complex problems in biology and healthcare.',
         major: 'AI & Machine Learning',
         minor: 'Bio-Informatics',
-        lab: 'Embodied ‘Brain’ lab',
+        lab: 'NVIDIA Pipeline',
         image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80'
     },
     {
         title: 'AI-Powered Cybersecurity Analyst',
         sub: 'An Ethical AI Engineer ensures AI systems are fair, transparent, and aligned with human values.',
         major: 'Cyber Security',
-        lab: 'Soft Brain Lab',
+        minor: 'AI Ethics',
+        lab: 'Apple Ecosystem',
         image: 'https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&w=800&q=80'
     },
 ];
@@ -147,7 +148,7 @@ const CareerCarousel = () => {
                             </div>
 
                             {/* Card Content */}
-                            <div className="p-6 md:p-8 flex flex-col flex-grow text-left">
+                            <div className="p-6 md:p-8 flex flex-col flex-grow text-left bg-black">
                                 <div className="flex-grow space-y-3 md:space-y-4">
                                     <h3 className="text-lg md:text-xl font-orbitron font-bold text-white group-hover:text-accent transition-colors duration-300 line-clamp-2">
                                         {card.title}
@@ -159,24 +160,24 @@ const CareerCarousel = () => {
 
                                 <div className="space-y-3 md:space-y-4 pt-4 border-t border-white/20 h-[110px] md:h-[130px]">
                                     <div className="flex items-center justify-between">
-                                        <span className="text-[8px] md:text-[10px] font-orbitron uppercase tracking-widest text-white/60 font-bold">Major</span>
-                                        <span className="bg-accent/10 text-accent border border-accent/20 rounded-full px-2.5 py-1 text-[8px] md:text-[10px] font-black uppercase tracking-widest">
+                                        <span className="text-[8px] md:text-[10px] font-orbitron uppercase tracking-widest text-white/90 font-bold">Major</span>
+                                        <span className="bg-accent text-black border border-accent/20 rounded-full px-2.5 py-1 text-[8px] md:text-[10px] font-black uppercase tracking-widest">
                                             {card.major}
                                         </span>
                                     </div>
 
                                     {card.minor && (
                                         <div className="flex items-center justify-between">
-                                            <span className="text-[8px] md:text-[10px] font-orbitron uppercase tracking-widest text-white/60 font-bold">Minor</span>
-                                            <span className="text-white/80 rounded-full px-2.5 py-1 text-[8px] md:text-[10px] font-bold uppercase tracking-wider border border-white/20">
+                                            <span className="text-[8px] md:text-[10px] font-orbitron uppercase tracking-widest text-white/90 font-bold">Minor</span>
+                                            <span className="text-white bg-white/10 rounded-full px-2.5 py-1 text-[8px] md:text-[10px] font-bold uppercase tracking-wider border border-white/20">
                                                 {card.minor}
                                             </span>
                                         </div>
                                     )}
 
                                     <div className="flex items-center justify-between">
-                                        <span className="text-[8px] md:text-[10px] font-orbitron uppercase tracking-widest text-white/60 font-bold">Lab</span>
-                                        <span className="text-accent/80 text-[8px] md:text-[10px] font-black uppercase tracking-widest text-right max-w-[60%] line-clamp-1">
+                                        <span className="text-[8px] md:text-[10px] font-orbitron uppercase tracking-widest text-white/90 font-bold">Lab</span>
+                                        <span className="text-accent text-[8px] md:text-[10px] font-black uppercase tracking-widest text-right max-w-[60%] line-clamp-1">
                                             {card.lab}
                                         </span>
                                     </div>

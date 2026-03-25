@@ -140,11 +140,11 @@ const FrontierHub = () => {
                                 <ul className="space-y-4 pl-2 mt-5 text-[14px] md:text-[15px] lg:text-[15.5px] w-full">
                                     <li className="flex items-start gap-3 md:gap-4 w-full">
                                         <span className="text-[#D8F602] mt-1 text-[12px] tracking-widest shrink-0">■</span>
-                                        <span className="leading-snug lg:leading-none w-full lg:whitespace-nowrap overflow-hidden text-ellipsis"><strong className="text-white">AESTR ALPHA (The 6-Month Residency):</strong> Fast-tracks ambitious graduates into high-paying Enterprise Cloud, Data, and Backend roles at global tech giants.</span>
+                                        <span className="leading-snug lg:leading-none w-full lg:whitespace-nowrap overflow-hidden text-ellipsis"><strong className="text-white">AESTR B.TECH (The 4-Year Residency):</strong> A hardcore undergraduate incubator forging the deep-tech scientists who will invent the intelligence of tomorrow.</span>
                                     </li>
                                     <li className="flex items-start gap-3 md:gap-4 w-full">
                                         <span className="text-[#D8F602] mt-1 text-[12px] tracking-widest shrink-0">■</span>
-                                        <span className="leading-snug lg:leading-none w-full lg:whitespace-nowrap overflow-hidden text-ellipsis"><strong className="text-white">AESTR B.TECH (The 4-Year Residency):</strong> A hardcore undergraduate incubator forging the deep-tech scientists who will invent the intelligence of tomorrow.</span>
+                                        <span className="leading-snug lg:leading-none w-full lg:whitespace-nowrap overflow-hidden text-ellipsis"><strong className="text-white">AESTR ALPHA (The 6-Month Residency):</strong> Fast-tracks ambitious graduates into high-paying Enterprise Cloud, Data, and Backend roles at global tech giants.</span>
                                     </li>
                                 </ul>
                             </div>
