@@ -1,0 +1,88 @@
+\rhead{RB601: Autonomous Navigation}
+\phantomsection 
+\section*{Autonomous Navigation (RB601)}
+\label{major:RB_6}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 3 (2-0-2)
+
+\subsection*{Theory}
+\noindent\textbf{Unit 1} \\
+\textit{Navigation Fundamentals and Localization:} Mobile robot kinematics (differential drive, Ackermann steering), Odometry error accumulation and correction, Monte Carlo Localization (MCL/particle filters), Adaptive Monte Carlo Localization (AMCL), Extended Kalman Filter (EKF) for state estimation, UKF and information filters, Sensor fusion architectures (loose/tight coupling).
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Simultaneous Localization and Mapping (SLAM):} SLAM problem formulation (chicken-egg problem), EKF-SLAM and covariance management, Graph-SLAM (pose graph optimization), FastSLAM (Rao-Blackwellized particle filters), LiDAR-based SLAM (Gmapping, Cartographer, LOAM), Visual SLAM (ORB-SLAM3, DSO), Loop closure detection and bundle adjustment.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Global Path Planning:} Configuration space and environment modeling, Cell decomposition (trapezoidal, Boustrophedon), Potential fields (attractive/repulsive), Sampling-based planners (RRT, RRT*, Informed RRT*), Lattice planners and anytime algorithms, A* and variants (D*, Anytime D*, Field D*), Hybrid A* for non-holonomic constraints.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Local Path Planning and Collision Avoidance:} Dynamic Window Approach (DWA), Velocity Obstacles (VO), Reciprocal Velocity Obstacles (RVO), Timed Elastic Bands (TEB), Model Predictive Control (MPC) for trajectory tracking, Pure pursuit and Stanley controllers, Emergency obstacle avoidance (reactive behaviors), Risk-aware planning and chance constraints.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{ROS Navigation Stack and Multi-Robot:} ROS nav2 stack architecture (Planner Server, Controller Server, BT Navigator), Costmaps (global/local, static/dynamic layers), Nav2 Behavior Trees for mission planning, Multi-robot coordination (CBBA, consensus algorithms), Decentralized planning (conflict-based search, prioritized planning), Fleet management and task allocation.
+
+\newpage
+
+\subsection*{Practical}
+\noindent\textbf{Lab 1: Robot Odometry and AMCL} \\
+Focuses on differential drive odometry, AMCL tuning, and ROS tf integration.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 2: Gmapping SLAM Implementation} \\
+Focuses on real-time mapping with laser scanners, map saving/loading, loop closure tuning.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 3: A* and RRT Path Planning} \\
+Focuses on global planner implementation, occupancy grid navigation, and path smoothing.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 4: DWA Local Planner Tuning} \\
+Focuses on dynamic obstacle avoidance, velocity limiting, and trajectory scoring.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 5: Nav2 Stack Configuration} \\
+Focuses on complete ROS2 nav2 deployment with costmap tuning and recovery behaviors.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 6: Visual SLAM with ORB-SLAM3} \\
+Focuses on monocular/stereo visual odometry and real-time mapping.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 7: MPC Trajectory Tracking} \\
+Focuses on non-linear MPC implementation for smooth trajectory following.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 8: Multi-Robot Path Planning} \\
+Focuses on conflict-based search and prioritized planning for robot fleets.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 9: Risk-Aware Navigation} \\
+Focuses on chance-constrained planning and uncertainty-aware trajectory generation.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 10: Autonomous Navigation Project} \\
+Focuses on complete navigation system integrating SLAM, planning, and control.
+
+\vspace{0.2cm}
+
+\newpage
+\rhead{Curriculum Schema}

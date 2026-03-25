@@ -1,0 +1,35 @@
+\rhead{MN-SEM: Digital System Design}
+\phantomsection
+\section*{Digital System Design (MN-SEM)}
+\label{minor:SEM_L1}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 2 (2-0-0)
+
+\subsection*{Course Content}
+\noindent\textbf{Unit 1} \\
+\textit{Boolean Algebra and the Logic of Computation:} Digital abstraction: the reduction of continuous voltage levels to discrete binary values as the foundational engineering decision of all computing hardware; Boolean algebra as the mathematical system governing binary logic: axioms, theorems (De Morgan's, Shannon's expansion), and duality; Canonical forms: Sum of Products (SOP) and Product of Sums (POS) as normal forms for any Boolean function; Karnaugh maps as a graphical prime implicant grouping algorithm for two-, three-, four-, and five-variable minimization; Quine-McCluskey algorithm as the tabular, automatable generalization of K-map minimization; Hazards in combinational logic: static-1, static-0, and dynamic hazards as timing-dependent glitches and their elimination through consensus terms; Logic families and electrical characteristics: TTL vs.\ CMOS noise margins, fan-out, and propagation delay as the physical constraints on digital abstraction.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Combinational Building Blocks and Arithmetic Circuits:} Standard combinational modules as reusable hardware abstractions: multiplexers, demultiplexers, encoders, decoders, and priority encoders; Binary arithmetic: unsigned and two's complement signed representation, addition, subtraction, and overflow detection; Ripple Carry Adder as the baseline implementation; Carry Lookahead Adder (CLA) as a parallel prefix computation that trades gate area for logarithmic depth; Booth's algorithm for signed multiplication as a recoding scheme reducing partial product count; Array multipliers and Wallace tree reduction as the structural parallelism underlying hardware multipliers; Comparators, barrel shifters, and ALU design as the composition of arithmetic and logic primitives into a general-purpose execution unit; Hazard-free multiplexer trees for implementing arbitrary functions as a universal combinational template.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Sequential Logic and Finite State Machines:} The need for memory: feedback, bistability, and the SR latch as the minimal memory element; Flip-flop types: D, JK, T, and master-slave configurations; setup time, hold time, and clock-to-Q delay as the timing contracts of sequential elements; Registers and shift registers as parallel and serial data storage structures; Finite State Machines (FSMs) as the formal computational model of sequential digital systems: Moore vs.\ Mealy machines, state diagrams, and state tables; FSM synthesis: state encoding (binary, one-hot, Gray code) and its effect on area and timing; Synchronous design discipline: the single-clock domain assumption, metastability, and synchronizer circuits for crossing clock domain boundaries; Counters as specialized FSMs: ripple counters, synchronous binary counters, and Johnson counters.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Hardware Description Languages and FPGA Implementation:} The abstraction gap: from schematic capture to Hardware Description Languages as the software engineering revolution of digital design; VHDL and Verilog/SystemVerilog as parallel, concurrent description languages: the fundamental difference between hardware concurrency and software sequential execution; Synthesizable vs.\ simulation-only constructs: the subset of HDL that maps to physical gates; RTL (Register Transfer Level) design style: always blocks, sensitivity lists, blocking vs.\ non-blocking assignments as the source of the most common HDL bugs; FPGA architecture: configurable logic blocks (CLBs), look-up tables (LUTs), flip-flops, block RAMs, and DSP slices as the physical resources a synthesizer maps RTL onto; The synthesis-place-and-route-bitstream flow as the compilation pipeline from HDL source to configured FPGA hardware; Timing analysis: setup and hold slack, critical path identification, and timing constraints as the hardware analog of performance profiling.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{RISC-V ISA and Processor Microarchitecture:} Instruction Set Architecture as the hardware-software contract: CISC vs.\ RISC design philosophies and the motivations behind RISC-V as an open, modular, royalty-free ISA; RISC-V base integer ISA (RV32I/RV64I): register file, instruction encoding formats (R, I, S, B, U, J), and the minimal but complete instruction set; Single-cycle processor datapath: instruction fetch, decode, execute, memory access, and writeback as a pipeline of combinational logic and register state; Control unit design: generating datapath control signals from opcode and funct fields as a ROM-based or logic-based decoder; The performance equation: $\text{CPU time} = \text{Instruction Count} \times \text{CPI} \times \text{Clock Period}$ and how microarchitectural choices trade these three factors; Introduction to pipelining: the five-stage RISC-V pipeline, structural hazards, data hazards (forwarding and stalling), and control hazards (branch prediction) as the fundamental challenges of instruction-level parallelism.
+
+\newpage
+\rhead{Curriculum Schema}

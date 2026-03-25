@@ -1,0 +1,88 @@
+\rhead{DS202: Advanced SQL \& NoSQL Databases}
+\phantomsection 
+\section*{Advanced SQL \& NoSQL Databases (DS202)}
+\label{major:DS_2}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 3 (2-0-2)
+
+\subsection*{Theory}
+\noindent\textbf{Unit 1} \\
+\textit{Advanced SQL: Window Functions and Analytics:} Window functions fundamentals (ROW\_NUMBER, RANK, DENSE\_RANK, NTILE), Aggregate window functions (SUM, AVG, COUNT over partitions), Framing clauses and sliding windows, LAG/LEAD functions for time-series analysis, FIRST\_VALUE/LAST\_VALUE and running totals, Common Table Expressions (CTEs) with recursive queries, Advanced JOIN patterns (self-joins, lateral joins).
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Advanced SQL: Optimization and Performance:} Query execution plans and cost estimation, Index types (B-tree, bitmap, hash, full-text), Composite indexes and covering indexes, Index maintenance and fragmentation, Query optimization strategies (rewrite rules, materialized views), EXPLAIN/ANALYZE usage, Partitioning strategies (range, list, hash partitioning), Statistics gathering and histogram usage.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Document Databases and NoSQL Fundamentals:} NoSQL categories (document, key-value, column-family, graph), Document database model (MongoDB, CouchDB), Schema design for document stores (embedding vs. referencing), Query languages (MongoDB query language, JSONPath), Indexing strategies (compound, geospatial, text indexes), Aggregation pipelines and map-reduce in document stores.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Key-Value, Column-Family, and Wide-Column Stores:} Key-value stores (Redis, DynamoDB) use cases and patterns (caching, sessions, leaderboards), Column-family databases (Cassandra, HBase), Wide-column model and denormalization strategies, CQL (Cassandra Query Language) vs. traditional SQL, Data modeling for high write throughput (partition keys, clustering columns), CAP theorem and consistency models.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{Polyglot Persistence and Database Selection:} Polyglot persistence strategies matching database types to workload patterns, SQL vs NoSQL selection criteria (ACID vs BASE, schema evolution), Hybrid architectures (SQL master + NoSQL cache/offload), NewSQL databases (CockroachDB, Yugabyte), Graph databases fundamentals (property graphs, Cypher query language), Time-series databases (InfluxDB, TimescaleDB).
+
+\newpage
+
+\subsection*{Practical}
+\noindent\textbf{Lab 1: Window Functions Analytics} \\
+Focuses on implementing running totals, ranking, and sliding window calculations using window functions across multiple datasets.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 2: Recursive CTEs and Hierarchical Data} \\
+Focuses on solving hierarchical data problems (employee-manager trees, bill-of-materials) using recursive CTEs and path enumeration.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 3: Query Optimization Analysis} \\
+Focuses on analyzing execution plans, creating strategic indexes, and measuring performance improvements using EXPLAIN ANALYZE.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 4: Index Strategy Design} \\
+Focuses on designing composite indexes for complex queries, measuring covering index benefits, and analyzing fragmentation patterns.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 5: MongoDB Document Modeling} \\
+Focuses on designing document schemas for application use cases, implementing embedding vs. referencing strategies with performance comparison.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 6: MongoDB Aggregation Pipelines} \\
+Focuses on building complex aggregation pipelines with $lookup, $unwind, $group, and $facet stages for advanced analytics.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 7: Cassandra Data Modeling} \\
+Focuses on designing partition/clustering keys for high-throughput workloads, implementing CQL queries matching the data model.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 8: Redis Caching Patterns} \\
+Focuses on implementing cache-aside, write-through, and pub-sub patterns using Redis data structures and expiration policies.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 9: Polyglot Persistence Integration} \\
+Focuses on building hybrid applications using SQL primary store + NoSQL cache/offload, measuring consistency/performance trade-offs.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 10: Database Selection Case Study} \\
+Focuses on evaluating database technologies against workload requirements, creating polyglot persistence recommendations with cost analysis.
+
+\vspace{0.2cm}
+
+\newpage
+\rhead{Curriculum Schema}

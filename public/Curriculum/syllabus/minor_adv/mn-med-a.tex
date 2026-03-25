@@ -1,0 +1,35 @@
+\rhead{MN-MED-A: Medical Image Analysis}
+\phantomsection
+\section*{Medical Image Analysis (MN-MED-A)}
+\label{minor:MED_L2}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 2 (2-0-0)
+
+\subsection*{Course Content}
+\noindent\textbf{Unit 1} \\
+\textit{Medical Imaging Modalities and Data Representation:} Physics and clinical purpose of major imaging modalities: X-ray (attenuation contrast), CT (Hounsfield units and volumetric reconstruction), MRI (spin relaxation and tissue contrast), Ultrasound (acoustic impedance), and PET (metabolic activity via radiotracer decay); DICOM as the universal standard: file structure, metadata tags, pixel data encoding, and series/study/patient hierarchy as a relational schema; 2D images, 3D volumes, and 4D time series as tensors: voxel spacing, orientation matrices, and coordinate systems (patient, scanner, world); Intensity histograms, windowing, and level adjustment as the first-order data exploration tools; Challenges specific to medical image data: class imbalance (rare pathologies), annotation scarcity, and inter-rater variability as dataset construction problems.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Classical Image Processing for Medical Contexts:} Image enhancement: histogram equalization, CLAHE for local contrast improvement in low-dose CT and mammography; Edge detection: Sobel, Canny, and Laplacian of Gaussian (LoG) operators applied to boundary delineation; Mathematical morphology: erosion, dilation, opening, and closing for noise removal and shape refinement in binary masks; Region growing and watershed segmentation as classical unsupervised partitioning methods; Geometric transformations: rigid (translation, rotation) and deformable registration as the problem of aligning two images of the same patient across time or modality; Mutual information as a modality-independent similarity metric for multi-modal registration (CT-MRI fusion).
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Deep Learning Architectures for Medical Image Segmentation:} The segmentation task formalized: pixel-wise (2D) or voxel-wise (3D) classification as a dense prediction problem; U-Net architecture: encoder-decoder structure with skip connections as the dominant paradigm for biomedical segmentation; Loss functions for imbalanced segmentation: Dice loss, focal loss, and their combination; 3D U-Net and V-Net for volumetric CT and MRI segmentation; Patch-based training strategies to handle GPU memory constraints with large 3D volumes; nnU-Net as an automated self-configuring segmentation framework: dataset fingerprinting and hyperparameter selection without manual tuning; Evaluation metrics: Dice Similarity Coefficient (DSC), Hausdorff Distance, and volumetric overlap.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Computer-Aided Detection and Diagnostic Classification:} CAD systems as a second-reader paradigm: screening mammography, lung nodule detection (LUNA16), and diabetic retinopathy grading; Transfer learning from ImageNet to medical imaging: domain shift challenges and fine-tuning strategies; Vision Transformers (ViT) and hybrid CNN-Transformer architectures for global context modeling in histopathology; Multiple Instance Learning (MIL) for weakly supervised classification from slide-level labels in whole-slide imaging (WSI); Uncertainty quantification: Monte Carlo Dropout and deep ensembles for communicating prediction confidence in clinical settings; Grad-CAM and attention rollout for explainability: generating heatmaps that localize the image regions driving a diagnosis.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{Clinical Deployment, Federated Learning, and Emerging Directions:} The gap between research accuracy and clinical deployment: distribution shift, site-specific variation, and continuous monitoring post-deployment; Federated learning as the canonical solution to multi-site medical AI: the FedAvg algorithm, communication efficiency, and the non-IID data problem across hospital cohorts; Differential privacy in federated medical imaging: noise mechanisms and the privacy-utility tradeoff; Synthetic data generation with Diffusion Models and GANs for data augmentation and rare disease simulation; Foundation models in medical imaging: SAM (Segment Anything Model) adaptation, MedSAM, and universal segmentation; Regulatory pathway for AI-based medical devices: FDA 510(k) clearance, algorithm change protocols, and post-market surveillance requirements.
+
+\newpage
+\rhead{Curriculum Schema}

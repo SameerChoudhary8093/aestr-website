@@ -1,0 +1,35 @@
+\rhead{MN-MAT: Computational Materials Science}
+\phantomsection
+\section*{Computational Materials Science (MN-MAT)}
+\label{minor:MAT_L1}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 2 (2-0-0)
+
+\subsection*{Course Content}
+\noindent\textbf{Unit 1} \\
+\textit{Matter as Data: Representing Materials Computationally:} The materials science length scale hierarchy: electrons $\rightarrow$ atoms $\rightarrow$ microstructure $\rightarrow$ macroscopic properties as a multiscale computational challenge; Crystal structures as periodic data structures: lattice vectors, basis atoms, unit cells, and the Bravais lattice classification; Crystallographic information files (CIF) as the standard schema for storing atomic structure data; Reciprocal space and the Brillouin zone as the Fourier dual of the crystal lattice: intuition for why periodicity enables tractable computation; Point defects, dislocations, and grain boundaries as structural irregularities that dominate material behavior: representing them as perturbations to a reference periodic system; Introduction to open materials databases: the Materials Project, AFLOW, and OQMD as large-scale, queryable repositories of computed material properties.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Atomistic Simulation: Molecular Dynamics and Monte Carlo:} Classical Molecular Dynamics (MD) as a numerical ODE integration problem: the Verlet and velocity-Verlet algorithms for propagating Newton's equations of motion; Interatomic potentials as the force-field approximation: Lennard-Jones, embedded atom method (EAM), and Tersoff potentials as parameterized energy functions replacing quantum mechanics; Periodic boundary conditions as the computational trick that simulates bulk material with a finite simulation box; Thermostats and barostats: the Nosé-Hoover and Parrinello-Rahman algorithms for sampling the NVT and NPT ensembles; Monte Carlo methods for equilibrium sampling: the Metropolis-Hastings algorithm applied to atomic configuration space; Structural analysis of MD trajectories: radial distribution functions, mean squared displacement, and Voronoi tessellation as the post-processing toolkit.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Quantum Mechanical Simulation and Density Functional Theory:} The quantum mechanical many-body problem: the electronic Schrödinger equation and why it is computationally intractable for systems beyond a few electrons; The Hohenberg-Kohn theorems as the theoretical foundation of DFT: ground-state energy as a functional of electron density; The Kohn-Sham equations: mapping the interacting many-electron problem onto a tractable non-interacting system with an exchange-correlation functional; Plane-wave basis sets and pseudopotentials as the computational representation enabling periodic DFT calculations; The self-consistent field (SCF) iteration as a fixed-point algorithm for solving the Kohn-Sham equations; Outputs of a DFT calculation: total energy, atomic forces, electronic band structure, and density of states as the primary computed quantities linked to observable material properties.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Microstructure Modeling and Continuum Methods:} The microstructure as the mesoscale link between atomic structure and macroscopic performance: grain size, phase distribution, porosity, and their effect on mechanical and transport properties; Phase-field method as a continuum PDE framework for simulating microstructure evolution: order parameters, free energy functionals, and the Cahn-Hilliard and Allen-Cahn equations; Finite Difference and Finite Element discretization of the phase-field equations: stability, convergence, and the computational cost of 3D microstructure simulations; Voxel-based microstructure representation: 3D arrays as the discrete data structure for storing phase, orientation, and composition fields; CALPHAD (CALculation of PHAse Diagrams) as a thermodynamic database approach to predicting equilibrium phase stability; Synthetic microstructure generation: random grain growth algorithms and their use as training data for downstream ML models.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{High-Performance Computing for Materials Simulations:} The computational cost landscape: DFT scales as $O(N^3)$, classical MD as $O(N \log N)$ with neighbor lists, and phase-field as $O(N_{\text{grid}})$; Parallelization strategies for materials codes: domain decomposition in MD (spatial decomposition of the simulation box), k-point parallelism in DFT, and OpenMP threading for shared-memory acceleration; GPU acceleration for MD: neighbor list construction and force evaluation as massively parallel operations; VASP, Quantum ESPRESSO, LAMMPS, and MOOSE as the canonical open-source codes for DFT, MD, and FEM respectively: their input file formats as domain-specific configuration languages; Workflow automation for high-throughput computation: FireWorks and AiiDA as job management frameworks for running thousands of DFT calculations programmatically; Data provenance and reproducibility: tracking simulation inputs, software versions, and pseudopotential choices as a scientific software engineering discipline.
+
+\newpage
+\rhead{Curriculum Schema}

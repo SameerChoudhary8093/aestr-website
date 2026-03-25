@@ -1,0 +1,35 @@
+\rhead{MN-DES-A: Spatial Computing \& AR/VR}
+\phantomsection
+\section*{Spatial Computing \& AR/VR (MN-DES-A)}
+\label{minor:DES_L2}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 2 (2-0-0)
+
+\subsection*{Course Content}
+\noindent\textbf{Unit 1} \\
+\textit{The Geometry of Virtual Worlds:} Spatial computing defined: the shift from 2D screen-based interaction to 3D world-anchored computation; Coordinate systems and transformations: local, world, and camera spaces; the model-view-projection (MVP) matrix pipeline as the mathematical engine of all 3D rendering; Homogeneous coordinates and the role of the $4 \times 4$ transformation matrix for unified translation, rotation, and scaling; Quaternions as a rotation representation: advantages over Euler angles (gimbal lock avoidance) and interpolation via SLERP; Scene graphs as hierarchical tree data structures for managing spatial relationships between objects; Frustum culling and spatial partitioning (octrees, BVH) as algorithmic optimizations for real-time rendering performance.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Rendering Pipelines and Real-Time Graphics:} The GPU rendering pipeline: vertex shading, rasterization, fragment shading, and output merging as a massively parallel dataflow architecture; Physically Based Rendering (PBR): the Cook-Torrance BRDF model, metallic-roughness workflow, and image-based lighting (IBL) as the standard for photorealistic real-time materials; Shadow mapping and screen-space ambient occlusion (SSAO) as depth-buffer-based approximation techniques; Level of Detail (LoD) systems and mesh simplification as adaptive quality-performance tradeoff mechanisms; Foveated rendering: exploiting the human eye's non-uniform acuity to concentrate GPU budget at the gaze center, critical for VR headset performance; The VR rendering constraints: $>$90 Hz refresh rate, sub-20ms motion-to-photon latency, and stereoscopic rendering as hard real-time requirements.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Tracking, Sensing, and World Understanding:} Inside-out tracking: Simultaneous Localization and Mapping (SLAM) as the core algorithm enabling headsets to understand their position without external infrastructure; Visual-Inertial Odometry (VIO): fusing camera frames with IMU data via an Extended Kalman Filter for robust 6-DoF pose estimation; Plane detection and scene reconstruction: fitting geometric primitives to depth sensor point clouds; Hand and body tracking: MediaPipe and skeletal model fitting as a graph-based pose estimation problem; Eye tracking: Purkinje image-based gaze estimation and its dual role in interaction (gaze-as-input) and rendering optimization (foveated rendering); Spatial anchors as persistent coordinate system attachments: storing and retrieving AR content relative to physical landmarks across sessions.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Spatial Interaction Design and User Experience in 3D:} The interaction design vocabulary of spatial computing: gaze, pinch, voice, ray casting, and direct hand manipulation as input modalities; Degrees of freedom (DoF): 3-DoF (orientation only) vs.\ 6-DoF (full position and orientation) as a fundamental UX constraint; Comfort and presence: vergence-accommodation conflict as the optical basis of VR-induced discomfort; Locomotion paradigms: teleportation, arm-swinging, and continuous movement as tradeoffs between immersion and simulator sickness; Spatial audio: HRTF (Head-Related Transfer Function) convolution as the signal processing technique for 3D positional sound; Designing for shared AR spaces: multi-user session synchronization, conflict resolution for overlapping virtual objects, and social proxemics in mixed reality.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{Computer Vision and AI for Spatial Intelligence:} Object detection and instance segmentation in AR: YOLO and Mask R-CNN as real-time scene understanding backends; Neural Radiance Fields (NeRF): volumetric scene representation learned from posed images as a photorealistic 3D reconstruction technique; 3D Gaussian Splatting as a faster, rasterizable alternative to NeRF for real-time novel view synthesis; Semantic scene understanding: assigning object-class labels to point cloud regions as a 3D classification problem; Foundation models for spatial AI: SAM 2 for video object segmentation and its integration into AR object persistence; Digital twins in spatial computing: synchronizing a real-time physical environment with its virtual counterpart using sensor fusion, SLAM, and simulation for industrial and architectural applications.
+
+\newpage
+\rhead{Curriculum Schema}

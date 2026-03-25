@@ -28,6 +28,7 @@ const Navbar = () => {
         { name: 'Aestr Alpha', href: 'https://aestralpha.com', external: true },
         { name: 'Alumni', href: '/alumni' },
         { name: 'Blogs', href: '/blogs' },
+        { name: 'Curriculum', href: '/curriculum' },
     ];
 
     const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {

@@ -1,0 +1,35 @@
+\rhead{MN-BIO-A: Genomic Data Science}
+\phantomsection
+\section*{Genomic Data Science (MN-BIO-A)}
+\label{minor:BIO_L2}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 2 (2-0-0)
+
+\subsection*{Course Content}
+\noindent\textbf{Unit 1} \\
+\textit{High-Throughput Sequencing and the Genomics Data Pipeline:} Next-Generation Sequencing (NGS) technologies and the scale of modern genomic data: millions of short reads, terabytes per experiment; The NGS analysis pipeline as a software engineering problem: quality control (FastQC), trimming, alignment (BWA, STAR), and variant calling (GATK); SAM/BAM file formats as compressed, indexed data structures for aligned reads; The VCF (Variant Call Format) as a standardized schema for genomic variants; Scalability challenges: processing whole-genome sequencing cohorts with thousands of samples; Introduction to workflow management systems (Snakemake, Nextflow) for reproducible pipelines.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Statistical Genomics and Variant Analysis:} Single Nucleotide Polymorphisms (SNPs) and structural variants as the raw signal of genomic studies; Genome-Wide Association Studies (GWAS): the linear regression model linking genotype to phenotype at millions of loci simultaneously; The multiple testing problem and Bonferroni correction in the genomic context; Linkage disequilibrium and haplotype blocks as a dimensionality reduction phenomenon; Population stratification as a confounding factor and Principal Component Analysis (PCA) as its computational solution; Polygenic risk scores as a predictive modeling application.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Transcriptomics and Differential Expression Analysis:} RNA-Seq as a quantitative measurement of gene activity: reads as a proxy for transcript abundance; The count matrix as the central data object: genes $\times$ samples; Normalization strategies: RPKM, FPKM, TPM, and DESeq2's size-factor normalization to remove technical bias; Differential expression analysis as a statistical hypothesis testing problem (negative binomial model); Multiple testing correction (Benjamini-Hochberg FDR); Downstream interpretation: Gene Ontology (GO) enrichment and pathway analysis (KEGG) as knowledge-graph queries on expression results.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Machine Learning on Genomic Data:} Feature engineering for genomic data: encoding sequences as one-hot vectors, k-mer frequency spectra, and embeddings; Supervised learning for genomic tasks: splice site prediction, promoter classification, and variant effect prediction; Deep learning architectures tailored to sequences: 1D Convolutional Neural Networks for motif detection, recurrent models for long-range dependencies; The challenge of interpretability: attention mechanisms and saliency maps for discovering learned biological motifs; Transfer learning with pre-trained genomic language models (DNABERT, Nucleotide Transformer); Class imbalance and data leakage as critical pitfalls specific to genomic classification.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{Single-Cell Genomics and Emerging Frontiers:} Single-cell RNA sequencing (scRNA-seq): motivation, library preparation, and the cell $\times$ gene count matrix as a sparse, high-dimensional data object; Dimensionality reduction for single-cell data: PCA, t-SNE, and UMAP as visualization and clustering tools; Cell type annotation as an unsupervised clustering problem (Louvain, Leiden algorithms); Trajectory inference: modeling differentiation paths as a graph problem on the cell manifold; Introduction to multi-omics data integration: combining genomics, transcriptomics, and epigenomics as a multi-view learning problem; Ethical and privacy considerations in genomic data sharing: re-identification risks and federated learning as a privacy-preserving solution.
+
+\newpage
+\rhead{Curriculum Schema}

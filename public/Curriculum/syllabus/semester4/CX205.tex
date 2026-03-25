@@ -1,0 +1,62 @@
+\rhead{CX205: Operating Systems Lab}
+\phantomsection 
+\section*{Operating Systems Lab (CX205)}
+\label{course:CX205}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 2 (0-0-2)
+
+\subsection*{Course Content}
+\noindent\textbf{Lab 1: Exploring System Calls and Processes} \\
+Focuses on writing simple programs to invoke basic OS services (file operations, process creation), observing user-mode vs. kernel-mode transitions using tools like \texttt{strace} or equivalent, and inspecting process attributes via proc-like interfaces. \\
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 2: Process Creation, Hierarchies, and Scheduling} \\
+Focuses on creating process trees using \texttt{fork}/\texttt{exec}-style patterns, measuring execution time under different loads, and empirically observing the impact of scheduling policies and priorities exposed by the underlying OS. \\
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 3: Thread Programming Basics} \\
+Focuses on implementing concurrent tasks using threads (e.g., \texttt{pthread} or language-level threads), sharing data structures between threads, and comparing process-based vs. thread-based designs for a simple workload such as parallel computation. \\
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 4: CPU-Bound vs. I/O-Bound Workloads} \\
+Focuses on designing CPU-bound and I/O-bound test programs, running them under different concurrency patterns, and empirically characterizing how the scheduler and blocking I/O behavior influence throughput and responsiveness. \\
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 5: Mutual Exclusion and Race Conditions} \\
+Focuses on constructing intentional race conditions on shared variables, then resolving them using mutexes and atomic operations, and analyzing incorrect vs. correct behavior with timing diagrams and logs. \\
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 6: Classical Synchronization Problems} \\
+Focuses on implementing canonical synchronization patterns (producer–consumer, readers–writers) using semaphores or condition variables, exploring buffer sizes and scheduling to understand starvation and fairness trade-offs. \\
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 7: Deadlocks in Practice} \\
+Focuses on building small programs that deliberately cause deadlocks (lock ordering, resource allocation), detecting and reproducing them reliably, and then modifying the design to eliminate deadlock using ordering or timeout strategies. \\
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 8: Memory Management and Paging Simulation} \\
+Focuses on simulating page replacement algorithms (FIFO, Optimal, LRU) over reference strings, computing page-fault statistics, and interpreting how locality affects the behavior of each algorithm in realistic workloads. \\
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 9: File System Operations and Caching Effects} \\
+Focuses on implementing file-intensive programs (sequential vs. random access patterns), measuring performance under varying access patterns, and reasoning about the role of buffering and OS-level caching in the observed behavior. \\
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 10: Mini Shell / Process Manager Capstone} \\
+Focuses on integrating process, thread, and I/O concepts by implementing a mini shell or process manager that can spawn and monitor processes, support basic job control features, and demonstrate handling of signals or termination conditions.
+
+\vspace{0.2cm}
+
+\newpage
+\rhead{Curriculum Schema}

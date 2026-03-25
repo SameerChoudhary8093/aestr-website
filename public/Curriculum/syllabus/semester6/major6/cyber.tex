@@ -1,0 +1,88 @@
+\rhead{CY601: Web \& Application Security}
+\phantomsection 
+\section*{Web \& Application Security (CY601)}
+\label{major:CS_6}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 3 (2-0-2)
+
+\subsection*{Theory}
+\noindent\textbf{Unit 1} \\
+\textit{Web Security Fundamentals and Threat Modeling:} OWASP Top 10 methodology and risk rating, Threat modeling (STRIDE, DREAD, PASTA), Authentication flaws (weak passwords, credential stuffing, broken session management), Authorization bypass techniques (IDOR, missing access control), Security misconfiguration patterns, Sensitive data exposure risks, HTTP security headers (CSP, HSTS, X-Frame-Options).
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Injection Attacks and Secure Input Handling:} SQL injection attack vectors (in-band, blind, time-based, error-based), Prepared statements and parameterized queries, ORM injection prevention, NoSQL injection (MongoDB, CouchDB), Command injection and OS command execution, LDAP injection, XML External Entity (XXE) attacks, Input validation and sanitization strategies, Web Application Firewall (WAF) rules.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Cross-Site Scripting and CSRF Protection:} XSS attack types (reflected, stored/persistent, DOM-based), XSS payloads and filtering evasion techniques, Content Security Policy (CSP) implementation, HttpOnly/Secure cookies, CSRF attack mechanics and token-based mitigation, SameSite cookie attribute, Double-submit cookie pattern, CSRF Guard frameworks and synchronizer token pattern.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Business Logic and API Security:} Business logic flaws (race conditions, logic bypass, workflow manipulation), API security (broken object level authorization - BOLA, excessive data exposure), Rate limiting and throttling strategies, JWT security (alg confusion, none algorithm, kid header injection), OAuth 2.0 pitfalls (redirect URI manipulation, insufficient scope validation), GraphQL security (deep recursion, batching attacks).
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{Application Security Testing and Secure SDLC:} Static Application Security Testing (SAST), Dynamic Application Security Testing (DAST), Interactive Application Security Testing (IAST), Software Composition Analysis (SCA), Security requirements in Agile, Threat modeling in sprints, Secure code review checklist, Container security (Dockerfile best practices, image scanning), CI/CD security (secrets management, pipeline scanning), RASP and runtime protection.
+
+\newpage
+
+\subsection*{Practical}
+\noindent\textbf{Lab 1: Web Vulnerability Scanning} \\
+Focuses on OWASP ZAP/Burp Suite scanning, identifying common misconfigurations and security headers.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 2: SQL Injection Exploitation} \\
+Focuses on discovering SQLi vectors, blind/time-based exploitation, bypassing WAF filters.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 3: XSS Attack and Defense} \\
+Focuses on reflected/stored/DOM XSS payloads, CSP bypass techniques, secure output encoding.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 4: CSRF Exploitation and Mitigation} \\
+Focuses on CSRF token analysis, SameSite cookie testing, double-submit cookie implementation.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 5: Authentication Bypass Attacks} \\
+Focuses on session fixation, weak password policies, OAuth misconfigurations.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 6: API Security Testing} \\
+Focuses on BOLA, broken authentication, rate limiting bypass, GraphQL introspection attacks.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 7: Business Logic Flaws} \\
+Focuses on race conditions, price manipulation, workflow bypass vulnerabilities.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 8: JWT and Session Security} \\
+Focuses on JWT alg confusion, session hijacking, secure token implementation.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 9: Secure Coding Workshop} \\
+Focuses on input validation, parameterized queries, CSP configuration, secure headers.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 10: Complete Web App Pentest} \\
+Focuses on full application penetration test with executive/technical reporting.
+
+\vspace{0.2cm}
+
+\newpage
+\rhead{Curriculum Schema}
