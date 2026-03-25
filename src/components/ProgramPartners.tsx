@@ -121,18 +121,19 @@ const ProgramPartners = () => {
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-[80px] group-hover:bg-white/10 transition-colors pointer-events-none" />
 
                                 {/* Logo Presentation exactly as requested (enlarged significantly) */}
-                                <div className="w-full flex items-center justify-center relative z-10 py-6 h-[180px] shrink-0">
-                                    <div className="w-32 h-32 md:w-36 md:h-36 relative flex items-center justify-center transform group-hover:scale-110 group-hover:drop-shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-700 ease-out">
+                                <div className="mb-8 relative flex items-center justify-center overflow-hidden">
+                                    <div className="relative flex items-center justify-center transform group-hover:scale-110 group-hover:drop-shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-700 ease-out">
                                         {item.logo ? (
                                             <Image
                                                 src={item.logo}
                                                 alt={item.subtitle}
-                                                fill
-                                                className="object-contain"
-                                                sizes="(max-width: 768px) 128px, (max-width: 1024px) 144px, 160px"
+                                                width={180}
+                                                height={180}
+                                                className="w-auto h-12 md:h-16 lg:h-20 max-w-full object-contain"
+                                                priority
                                             />
                                         ) : (
-                                            <div className="w-24 h-24 md:w-28 md:h-28">
+                                            <div className="w-auto h-12 md:h-16 lg:h-20 max-w-full flex items-center justify-center">
                                                 {item.logoNode}
                                             </div>
                                         )}

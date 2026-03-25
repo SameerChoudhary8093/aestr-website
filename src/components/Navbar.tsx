@@ -75,7 +75,7 @@ const Navbar = () => {
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className={`w-full max-w-[1600px] mx-auto pointer-events-auto transition-all duration-500 rounded-2xl border border-white/10 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.8)] backdrop-blur-md relative overflow-hidden group/nav ${scrolled ? 'py-1 bg-black/80 scale-[0.98]' : 'py-2 bg-black/40'
+                className={`w-[92%] max-w-[1500px] mx-auto pointer-events-auto transition-all duration-500 rounded-2xl border border-white/10 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.8)] backdrop-blur-md relative overflow-hidden group/nav ${scrolled ? 'py-1 bg-black/80 scale-[0.98]' : 'py-2 bg-black/40'
                     }`}
             >
                 {/* Futuristic Scanning Line Overlay */}
@@ -87,24 +87,24 @@ const Navbar = () => {
 
                 {/* Navbar Content */}
                 <div className="flex items-center justify-between relative z-10 w-full">
-                    {/* Left: AESTR Logo */}
-                    <div className="flex-1 flex justify-start -ml-20">
+                    {/* Left: AESTR Logo - Super Zoomed */}
+                    <div className="flex-1 flex justify-start pl-3 md:pl-6 lg:pl-8">
                         <Link href="/#hero" onClick={handleHomeClick} className="flex items-center group/logo">
-                            <div className="w-[300px] md:w-[400px] relative h-16 md:h-20 transition-all duration-500 group-hover/logo:scale-105">
+                            <div className="relative flex items-center transition-all duration-500 group-hover/logo:scale-105">
                                 <Image
                                     src="/Herosection/by gyan vihar 2 neon.png"
                                     alt="Aestr Logo"
-                                    fill
-                                    sizes="(max-width: 768px) 120px, (max-width: 1024px) 140px, 160px"
-                                    className="object-contain brightness-[1.1]"
+                                    width={500}
+                                    height={120}
+                                    className="w-auto h-16 md:h-20 lg:h-24 xl:h-28 max-w-full object-contain brightness-[1.1]"
                                     priority
                                 />
                             </div>
                         </Link>
                     </div>
 
-                    {/* Center: Nav Links with Magnetic Effect */}
-                    <div className="hidden lg:flex flex-[2] justify-center">
+                    {/* Center: Nav Links with Magnetic Effect - Shifted Left */}
+                    <div className="hidden lg:flex flex-[2] justify-start pl-12 md:pl-20">
                         <div className="flex items-center space-x-1">
                             {navLinks.map((link) => (
                                 <Link
@@ -126,36 +126,41 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    <div className="flex-1 flex items-center justify-end">
-                        <div className="hidden xl:flex items-center gap-4">
-                            <div className="relative h-12 w-48 transition-all duration-500 hover:scale-105">
+                    <div className="flex-1 flex items-center justify-end pr-18 md:pr-32 lg:pr-48">
+                        <div className="hidden md:flex items-center gap-4 lg:gap-5">
+                            {/* SGVU Primary Logo */}
+                            <div className="relative transition-all duration-500 hover:scale-105 shrink-0">
                                 <Image
                                     src="/Herosection/Container.svg"
-                                    alt="SGVU Logo"
-                                    fill
-                                    sizes="192px"
-                                    className="object-contain brightness-0 invert"
+                                    alt="Gyan Vihar"
+                                    width={220}
+                                    height={60}
+                                    className="w-auto h-8 md:h-10 lg:h-13 max-w-full object-contain brightness-0 invert"
                                     priority
                                 />
                             </div>
-                            <div className="flex items-center gap-3 border-l border-white/10 pl-4">
-                                <div className="relative h-16 w-16 transition-all duration-500 hover:scale-110 flex items-center justify-center">
+
+                            <div className="flex items-center gap-2 md:gap-3 lg:gap-4 border-l border-white/10 pl-4 md:pl-6">
+                                {/* NIRF Logo */}
+                                <div className="relative transition-all duration-500 hover:scale-110 flex items-center justify-center shrink-0">
                                     <Image
                                         src="/Herosection/Nirf white.png"
                                         alt="NIRF"
-                                        fill
-                                        sizes="64px"
-                                        className="object-contain"
+                                        width={80}
+                                        height={80}
+                                        className="w-auto h-12 md:h-16 lg:h-20 max-w-full object-contain"
                                         priority
                                     />
                                 </div>
-                                <div className="relative h-24 w-24 transition-all duration-500 hover:scale-110 flex items-center justify-center">
+
+                                {/* NAAC Logo */}
+                                <div className="relative transition-all duration-500 hover:scale-110 flex items-center justify-center shrink-0">
                                     <Image
                                         src="/Herosection/naac white  .png"
                                         alt="NAAC A+"
-                                        fill
-                                        sizes="96px"
-                                        className="object-contain"
+                                        width={100}
+                                        height={100}
+                                        className="w-auto h-15 md:h-20 lg:h-24 max-w-full object-contain"
                                         priority
                                     />
                                 </div>
@@ -163,7 +168,7 @@ const Navbar = () => {
                         </div>
 
                         {/* Mobile menu button */}
-                        <div className="lg:hidden">
+                        <div className="lg:hidden ml-4">
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 className="p-3 text-accent hover:bg-white/5 rounded-xl transition-all focus:outline-none border border-white/5"

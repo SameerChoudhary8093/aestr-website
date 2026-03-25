@@ -66,12 +66,13 @@ const BottomCTA = () => {
                 <div className="container-boxed relative z-10">
                     <div className="flex flex-col items-center text-center space-y-8 py-12">
                         {/* SGVU Logo */}
-                        <div className="relative w-64 h-16 transition-all duration-500 hover:scale-105 mb-4">
+                        <div className="relative transition-all duration-500 hover:scale-105 mb-4 px-4 flex items-center justify-center">
                             <Image
                                 src="/Herosection/sgvu-logo.png"
-                                alt="SGVU Logo"
-                                fill
-                                className="object-contain brightness-0 invert"
+                                alt="SGVU Academy"
+                                width={256}
+                                height={64}
+                                className="w-auto h-12 md:h-16 lg:h-20 max-w-full object-contain"
                             />
                         </div>
 

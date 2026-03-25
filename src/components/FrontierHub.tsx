@@ -64,7 +64,7 @@ const FrontierHub = () => {
 
                         <div className="relative bg-[#5B1DD6] backdrop-blur-xl rounded-3xl p-8 lg:p-12 border border-white/10 shadow-2xl">
                             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-                                
+
                                 {/* Left side - Text content */}
                                 <div className="lg:col-span-7 space-y-6">
                                     <div className="relative">
@@ -77,7 +77,7 @@ const FrontierHub = () => {
                                         <div className="text-[16px] text-white/90 leading-relaxed md:leading-loose space-y-6">
                                             <p>
                                                 Traditional education is dead. Aestr is a unified tech incubator built for one reason: to train the engineers who will architect AI, rather than be replaced by it.
-                                                At the core of this ecosystem is <a href="https://shodh.ai" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-4 py-1.5 text-black bg-[#D8F602] hover:bg-white rounded-full font-bold transition-colors shadow-lg cursor-pointer mx-1 align-baseline text-[15px] gap-1">Shodh AI <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></a>—India’s premier frontier AI company. As one of the 12 companies handpicked for the INDIA AI Mission, they are building the nation's sovereign foundational models and the world’s first large Physics Model to solve massive, future-defining problems.
+                                                At the core of this ecosystem is <a href="https://shodh.ai" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-4 py-1.5 text-black bg-[#D8F602] hover:bg-white rounded-full font-bold transition-colors shadow-lg cursor-pointer mx-1 align-baseline text-[15px] gap-1">Shodh AI <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg></a>—India’s premier frontier AI company. As one of the 12 companies handpicked for the INDIA AI Mission, they are building the nation's sovereign foundational models and the world’s first large Physics Model to solve massive, future-defining problems.
                                                 Their aim with this partnership? To forge their own future colleagues and computer scientists from the ground up.
                                             </p>
                                         </div>
@@ -131,7 +131,7 @@ const FrontierHub = () => {
 
                                 </div>
                             </div>
-                            
+
                             {/* Full-width Strike forces moved out of the side column */}
                             <div className="bg-white/10 rounded-2xl p-6 md:p-8 border border-white/20 shadow-[0_0_30px_rgba(0,0,0,0.2)] mt-10 md:mt-12 w-full">
                                 <p className="font-bold text-[#D8F602] mb-5 text-[16px] md:text-xl border-b border-white/10 pb-4 leading-snug">
@@ -170,14 +170,15 @@ const FrontierHub = () => {
                             </h3>
                         </div>
 
-                        <div className="bg-black px-2 py-1.5 md:px-2 md:py-2 rounded-xl shadow-lg inline-flex items-center justify-center self-end md:self-auto border-2 border-white/20 lg:translate-x-4 shrink-0">
-                            <div className="w-32 md:w-40 relative h-8 md:h-10">
+                        <div className="bg-black px-5 py-2.5 md:px-7 md:py-3.5 rounded-2xl shadow-xl inline-flex items-center justify-center self-end md:self-auto border-2 border-white/20 lg:translate-x-4 shrink-0 w-fit">
+                            <div className="w-auto h-12 md:h-18 lg:h-24 xl:h-28 relative">
                                 <Image
                                     src="/Herosection/by gyan vihar 2 neon.png"
                                     alt="AESTR Logo"
-                                    fill
-                                    className="object-contain brightness-150 contrast-125"
-                                    sizes="(max-width: 768px) 200px, (max-width: 1024px) 250px, 300px"
+                                    width={500}
+                                    height={120}
+                                    className="w-auto h-full object-contain brightness-[1.1]"
+                                    priority
                                 />
                             </div>
                         </div>
