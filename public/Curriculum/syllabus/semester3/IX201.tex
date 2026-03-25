@@ -1,0 +1,119 @@
+\rhead{IX201: Innovation Lab II}
+\phantomsection 
+\section*{Innovation Lab II (IX201)}
+\label{course:IX201}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 6 (0-0-6)
+
+\noindent \textit{Note: Students continue in their selected track from Innovation Lab I. The focus shifts from building basic functional applications to engineering robust, performant, and industry-standard architectures. Technology is treated purely as a vehicle to understand underlying computer science and system design principles.}
+
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+
+\section*{Track A: Web Development (Full Stack Architecture)}
+
+\noindent\textbf{Task 1: Global State \& Distributed UI Management} \\
+Focuses on managing complex data structures across a decoupled interface. Students move beyond local component state to handle global "Application State." They will implement a robust state manager (like Redux Toolkit or Zustand) to build a "Complex E-commerce Cart." They will learn the concepts of immutability, pure functions (reducers), and the pub/sub pattern, understanding how state changes propagate through a large component tree efficiently.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 2: Middleware \& The Request Pipeline} \\
+Focuses on intercepting and processing HTTP requests before they reach the Controller. Students will explore the middleware pattern. They will build a "Role-Based Access Control (RBAC) System" (Admin vs. User vs. Guest) for an organization portal. They will learn how request parsing, header inspection, and token verification operate in the middle-tier to enforce security and logic globally without polluting individual endpoints.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 3: Caching Strategies \& System Performance} \\
+Focuses on reducing computational overhead and database load. Students will understand the trade-offs of storing data in memory versus persistent storage. Using Redis or Next.js advanced caching, they will engineer a "High-Traffic Leaderboard." They will learn concepts like Cache Invalidation, Time-to-Live (TTL), and Write-Through caching, observing the dramatic latency reduction in their API response times.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 4: Relational Data Modeling \& Query Optimization} \\
+Focuses on structuring complex data entities. Students will dive deep into PostgreSQL, moving beyond basic ORM usage. They will build the backend for a "Social Media Feed" requiring multi-table Joins (Users, Posts, Comments, Likes). They will learn about database normalization, foreign key constraints, indexing for performance, and the N+1 query problem, optimizing raw SQL execution plans.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 5: API Design: Pagination \& Cursor Strategies} \\
+Focuses on efficient data transfer and RESTful best practices. Students will learn how to handle massive datasets being requested by the View. They will build an "Infinite Scroll Data Grid" for a large inventory system. They will contrast Offset-based Pagination with Cursor-based Pagination, understanding the performance implications of deep database offsets and how to design APIs that scale linearly.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 6: Background Processing \& Task Queues} \\
+Focuses on decoupling heavy computations from the HTTP request-response cycle. Students will learn that not all tasks can be processed synchronously. Using task queues (like BullMQ or Vercel Inngest), they will build an "Automated Report Generator" that compiles large PDFs and emails them. They will understand the concept of Worker processes, job retries, and asynchronous eventual consistency.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 7: Web Security Fundamentals (OWASP)} \\
+Focuses on offensive and defensive security practices. Students will intentionally exploit vulnerabilities in a provided sandbox and then patch them. They will secure a "Financial Vault App," implementing mitigations against Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF), and SQL Injection. They will learn about Content Security Policies (CSP), HTTP-only cookies, and data sanitization boundaries.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 8: Automated Testing (TDD \& E2E)} \\
+Focuses on software reliability and the CI/CD mindset. Students will adopt Test-Driven Development (TDD) using Jest and Cypress/Playwright. They will write tests *before* code to implement a strict "Payment Processing Logic Layer." They will learn the distinct roles of Unit, Integration, and End-to-End (E2E) testing, understanding how code coverage metrics dictate production readiness.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 9: Containerization \& Ephemeral Environments} \\
+Focuses on environment parity and the "works on my machine" problem. Students will learn operating system virtualization concepts using Docker. They will containerize a multi-tier application (Node.js API + PostgreSQL + Redis) using Docker Compose. They will understand image layering, container networking, and volumes, ensuring consistent execution across development and production servers.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 10: Infrastructure as Code (IaC) \& CI/CD Pipelines} \\
+Focuses on automation and modern DevOps practices. Students will use GitHub Actions to automate their workflow. They will configure a pipeline that lints, tests, builds, and deploys a "Production Release Candidate." They will understand the concept of continuous integration/continuous delivery, immutable deployments, and semantic versioning, wrapping up the semester with an automated, zero-downtime deployment.
+
+\newpage
+
+\section*{Track B: iOS Development (Advanced Swift \& System Design)}
+
+\noindent\textbf{Task 1: Advanced Composition \& Custom Layouts} \\
+Focuses on the mathematics and geometry of the View layer. Students will move beyond standard stacks to implement custom rendering logic. They will utilize the SwiftUI Layout Protocol and GeometryReader to construct a "Complex Data Visualization Dashboard" (e.g., dynamic bar charts and radial graphs). They will learn how view trees negotiate size constraints and coordinate spaces during the layout pass.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 2: Reactive Programming \& Data Streams} \\
+Focuses on handling continuous flows of data over time. Students will learn the reactive programming paradigm using Combine and Swift AsyncSequence. They will build a "Live Stock Market Ticker." They will master operators (map, filter, debounce, combineLatest) to process asynchronous events, transforming chaotic data streams into clean, thread-safe updates for the UI layer.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 3: Local File System \& Resource Caching} \\
+Focuses on data locality and network optimization. Students will interact directly with the iOS Sandbox architecture. They will build an "Offline-First Media Player" that downloads, caches, and manages large audio/image files using FileManager and NSCache. They will learn memory eviction policies, cache hits/misses, and the lifecycle constraints of temporary versus document directories.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 4: Relational Persistence \& Migrations} \\
+Focuses on complex data evolution inside a mobile client. Students will deepen their SwiftData/CoreData knowledge to handle relationships (One-to-Many, Many-to-Many). They will build a "Relational Budget Tracker." Crucially, they will execute Schema Migrations, learning how to alter database structures without corrupting or losing existing user data across app updates.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 5: Background Execution \& Operating System Limits} \\
+Focuses on app lifecycles when not in the foreground. Students will interface with the OS scheduler to perform tasks efficiently without draining the battery. They will build a "Silent News Sync" using BackgroundTasks and APNs (Silent Push Notifications). They will learn the strict resource limits imposed by mobile operating systems and how to yield execution context gracefully.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 6: Deep Linking \& App Navigation State} \\
+Focuses on routing and external application entry points. Students will learn how an app interacts with the broader OS ecosystem via Universal Links and URL Schemes. They will build an "E-commerce App" that can be opened from a web browser directly to a specific product screen. They will learn how to parse incoming URLs and pragmatically rebuild the application's navigation state from a cold start.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 7: Cryptography \& Secure Storage} \\
+Focuses on protecting sensitive user data. Students will bypass standard UserDefaults to master the iOS Security Framework. They will build a "Password Vault" utilizing the Keychain and Biometric Authentication (FaceID/TouchID) via LocalAuthentication. They will learn concepts of encryption at rest, secure enclaves, and symmetric vs. asymmetric keys.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 8: Automated Testing (Unit \& UI)} \\
+Focuses on ensuring correctness and preventing regressions. Students will integrate XCTest into their workflow. They will write unit tests for a complex "Math/Tax Calculation Engine" and UI tests that use accessibility identifiers to tap through an application. They will learn how to mock network dependencies, inject test data, and automate the validation of critical user journeys.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 9: Memory Management \& Instruments} \\
+Focuses on performance profiling and deep system diagnostics. Students will dive into Automatic Reference Counting (ARC) mechanics (strong, weak, unowned references). They will be given a purposely flawed app and will use Xcode Instruments (Leaks, Time Profiler) to identify and fix Retain Cycles and UI frame drops. They will learn how memory leaks occur and how to engineer deterministic deallocation.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 10: Fastlane \& Automated App Distribution} \\
+Focuses on mobile DevOps and the release pipeline. Students will automate the tedious process of app signing and deployment using Fastlane and GitHub Actions. They will configure a pipeline that increments build numbers, runs test suites, manages provisioning profiles, and pushes a build to TestFlight. They will learn the concept of CI/CD specifically tailored for the Apple ecosystem's strict code-signing requirements.
+
+\newpage
+\rhead{Curriculum Schema}

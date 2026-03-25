@@ -1,0 +1,35 @@
+\rhead{CS205: Operating Systems}
+\phantomsection 
+\section*{Operating Systems (CS205)}
+\label{course:CS205}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 3 (3-0-0)
+
+\subsection*{Course Content}
+\noindent\textbf{Unit 1} \\
+\textit{Overview of Operating Systems and System Calls:} Role of an Operating System as resource manager and abstraction layer, OS services and components (process management, memory, storage, I/O), System structures (monolithic, layered, microkernel), User mode vs. kernel mode and protection boundary, System call interface and OS APIs, Introduction to context switching and mode switch, Basic case studies of UNIX/Linux and modern desktop/server OSes from a programmer’s perspective.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Processes, Threads, and CPU Scheduling:} Process concept and process states, Process control block (PCB) and context switch, Operations on processes (creation, termination, fork/exec model), Threads vs. processes, user-level vs. kernel-level threads, Multithreading models and typical threading issues, CPU scheduling goals and criteria, Classic scheduling algorithms (FCFS, SJF/SRTF, Priority, Round Robin, Multilevel queues), Starvation and aging, Interview-oriented reasoning about scheduler behavior and time complexity.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Synchronization, Concurrency, and Deadlocks:} Race conditions and the critical section problem, Requirements for a correct synchronization solution (mutual exclusion, progress, bounded waiting), Software approaches (Peterson’s algorithm, bakery algorithm), Hardware support for synchronization (test-and-set, compare-and-swap), Synchronization primitives (mutexes, semaphores, condition variables, monitors), Classical IPC problems (producer–consumer, readers–writers, dining philosophers), Deadlock characterization and necessary conditions, Deadlock prevention, avoidance (Banker’s algorithm), detection, and recovery strategies, Typical interview problems around concurrency bugs.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Memory Management and Virtual Memory:} Address spaces and memory allocation goals (relocation, protection, sharing), Contiguous allocation, fragmentation (internal vs. external), Paging and address translation, page tables and TLBs, Segmentation and segment-based protection, Demand paging and page faults, Page replacement algorithms (FIFO, Optimal, LRU and approximations), Thrashing and working set ideas, High-level view of how modern OSes manage process address spaces, stacks, heaps, and memory-mapped files.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{File Systems, I/O, and Practical OS Perspectives:} File concept, access methods, and directory structures, File system mounting, journaling, and basic consistency mechanisms, Space allocation methods (contiguous, linked, indexed), Free-space management (bitmaps, free lists), Overview of common file systems (e.g., ext-family, NTFS) from a developer’s viewpoint, I/O subsystem organization, buffering, caching, and spooling, Disk scheduling algorithms (FCFS, SSTF, SCAN, C-SCAN, LOOK family), Introduction to virtualization and containers as OS-level abstractions, Mapping OS concepts to typical software engineering and interview problems (e.g., process vs. thread design, debugging deadlocks, performance tuning).
+
+\newpage
+\rhead{Curriculum Schema}

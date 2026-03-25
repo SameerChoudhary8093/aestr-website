@@ -1,0 +1,88 @@
+\rhead{CY-EL2: Cloud Security Architecture}
+\phantomsection 
+\section*{Cloud Security Architecture (CY-EL2)}
+\label{elec:CY_2}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 4 (3-0-2)
+
+\subsection*{Theory}
+\noindent\textbf{Unit 1} \\
+\textit{Cloud Computing and Security Fundamentals:} Cloud service models (IaaS, PaaS, SaaS) and deployment models (public, private, hybrid, multi-cloud), Shared responsibility model across providers (AWS, Azure, GCP), Cloud security principles (CIA triad extension, defense-in-depth), Cloud Security Alliance (CSA) Cloud Controls Matrix (CCM), NIST SP 800-53 cloud controls, Threat landscape (misconfiguration, IAM abuse, data exfiltration).
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Identity and Access Management (IAM) in Cloud:} Identity federation (SAML, OIDC, SCIM), Multi-factor authentication (MFA) enforcement, Role-Based Access Control (RBAC) and Attribute-Based Access Control (ABAC), AWS IAM policies/service control policies, Azure AD/Entra ID PIM, GCP IAM/service accounts, Least privilege principle, Break-glass accounts and privileged access workstations, Cloud Access Security Brokers (CASB).
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Network Security Architecture:} Virtual Private Clouds (VPCs) and subnet segmentation, Hub-and-spoke/landing zone architectures, Network Access Control Lists (NACLs) and Security Groups, AWS Transit Gateway/VPC peering, Azure Virtual WAN/Hub-Spoke, GCP Shared VPC/VPC Peering, Web Application Firewalls (WAF), DDoS protection services, Zero Trust Network Access (ZTNA), Micro-segmentation strategies.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Data Protection and Encryption:} Data classification and labeling, Encryption at rest (server-side, client-side), Key Management Services (AWS KMS, Azure Key Vault, GCP KMS), Envelope encryption and customer-managed keys, Data Loss Prevention (DLP) policies, Secure object storage (S3 bucket policies, private endpoints), Database encryption (TDE, column-level), Data residency and sovereignty compliance.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{Cloud Operations, Monitoring, and Compliance:} Cloud Security Posture Management (CSPM), Infrastructure as Code (IaC) security (Terraform Sentinel, CloudFormation Guard), Logging and monitoring (CloudWatch, Azure Monitor, Cloud Logging), SIEM integration and centralized aggregation, Continuous compliance auditing (AWS Config, Azure Policy, GCP Organization Policies), DevSecOps integration (shift-left security), Incident response in cloud environments.
+
+\newpage
+
+\subsection*{Practical}
+\noindent\textbf{Lab 1: Cloud IAM Configuration} \\
+Focuses on policy creation, RBAC testing, federation setup across AWS/Azure/GCP.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 2: VPC Networking Architecture} \\
+Focuses on hub-spoke deployment, NACL/SG rules, private endpoint configuration.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 3: Encryption and KMS Management} \\
+Focuses on key policies, envelope encryption, cross-account key access.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 4: Threat Modeling Workshop} \\
+Focuses on STRIDE modeling for cloud workloads, risk prioritization.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 5: IaC Security Scanning} \\
+Focuses on Checkov/Terraform validate, policy-as-code enforcement.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 6: Monitoring and Alerting} \\
+Focuses on CloudWatch dashboards, GuardDuty integration, anomaly detection.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 7: WAF and DDoS Protection} \\
+Focuses on rule configuration, rate limiting, bot mitigation.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 8: Compliance Auditing} \\
+Focuses on Config rules, policy compliance reports, remediation workflows.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 9: Multi-Cloud Federation} \\
+Focuses on cross-cloud IAM, resource sharing, centralized logging.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 10: Secure Architecture Design} \\
+Focuses on complete landing zone deployment with security controls.
+
+\vspace{0.2cm}
+
+\newpage
+\rhead{Curriculum Schema}

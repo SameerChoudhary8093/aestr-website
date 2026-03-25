@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-03-25T08:55:28.346Z",
+  "courseCount": 118,
+  "trackCount": 15,
+  "semesterCount": 8,
+  "coursesByType": {
+    "Core": 22,
+    "Lab": 10,
+    "Innovation Lab": 4,
+    "Major": 30,
+    "Minor": 20,
+    "Elective": 30,
+    "Seminar": 1,
+    "Project": 1
+  }
+}

@@ -1,0 +1,608 @@
+{
+  "semesters": [
+    {
+      "semester": 1,
+      "title": "Semester 1",
+      "description": "Foundations in mathematics, sciences, programming, communication, and the first innovation lab.",
+      "totalCredits": "25",
+      "items": [
+        {
+          "code": "MA101",
+          "title": "Calculus",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "course",
+          "courseId": "ma101",
+          "courseType": "Core"
+        },
+        {
+          "code": "PH101",
+          "title": "Physics",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "course",
+          "courseId": "ph101",
+          "courseType": "Core"
+        },
+        {
+          "code": "PX101",
+          "title": "Physics Lab",
+          "credits": "2",
+          "ltp": "0-0-2",
+          "itemType": "course",
+          "courseId": "px101",
+          "courseType": "Lab"
+        },
+        {
+          "code": "CS101",
+          "title": "Introduction to Programming",
+          "credits": "4",
+          "ltp": "4-0-0",
+          "itemType": "course",
+          "courseId": "cs101",
+          "courseType": "Core"
+        },
+        {
+          "code": "CX101",
+          "title": "Introduction to Programming Lab",
+          "credits": "2",
+          "ltp": "0-0-2",
+          "itemType": "course",
+          "courseId": "cx101",
+          "courseType": "Lab"
+        },
+        {
+          "code": "HS101",
+          "title": "English Communication",
+          "credits": "3",
+          "ltp": "0-3-0",
+          "itemType": "course",
+          "courseId": "hs101",
+          "courseType": "Core"
+        },
+        {
+          "code": "IX101",
+          "title": "Innovation Lab I",
+          "credits": "6",
+          "ltp": "0-0-6",
+          "itemType": "course",
+          "courseId": "ix101",
+          "courseType": "Innovation Lab"
+        },
+        {
+          "code": "UC1004",
+          "title": "Yoga Education & Practices",
+          "credits": "2",
+          "ltp": "0-0-2",
+          "itemType": "course",
+          "courseId": "uc1004",
+          "courseType": "Core"
+        }
+      ]
+    },
+    {
+      "semester": 2,
+      "title": "Semester 2",
+      "description": "Core engineering foundations with data structures, communication, environmental studies, and labs.",
+      "totalCredits": "25",
+      "items": [
+        {
+          "code": "MA102",
+          "title": "Probability & Statistics",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "course",
+          "courseId": "ma102",
+          "courseType": "Core"
+        },
+        {
+          "code": "EE101",
+          "title": "EE Fundamentals",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "course",
+          "courseId": "ee101",
+          "courseType": "Core"
+        },
+        {
+          "code": "EX101",
+          "title": "EE Fundamentals Lab",
+          "credits": "2",
+          "ltp": "0-0-2",
+          "itemType": "course",
+          "courseId": "ex101",
+          "courseType": "Lab"
+        },
+        {
+          "code": "CS102",
+          "title": "Data Structures",
+          "credits": "4",
+          "ltp": "4-0-0",
+          "itemType": "course",
+          "courseId": "cs102",
+          "courseType": "Core"
+        },
+        {
+          "code": "CX102",
+          "title": "Data Structures Lab",
+          "credits": "2",
+          "ltp": "0-0-2",
+          "itemType": "course",
+          "courseId": "cx102",
+          "courseType": "Lab"
+        },
+        {
+          "code": "HS102",
+          "title": "Professional Communication",
+          "credits": "3",
+          "ltp": "0-3-0",
+          "itemType": "course",
+          "courseId": "hs102",
+          "courseType": "Core"
+        },
+        {
+          "code": "IX101",
+          "title": "Innovation Lab I",
+          "credits": "6",
+          "ltp": "0-0-6",
+          "itemType": "course",
+          "courseId": "ix101",
+          "courseType": "Innovation Lab"
+        },
+        {
+          "code": "UC2004",
+          "title": "Environment Studies",
+          "credits": "2",
+          "ltp": "2-0-0",
+          "itemType": "course",
+          "courseId": "uc2004",
+          "courseType": "Core"
+        }
+      ]
+    },
+    {
+      "semester": 3,
+      "title": "Semester 3",
+      "description": "Transition into core computer science with the first major and exploratory minor choices.",
+      "totalCredits": "25",
+      "items": [
+        {
+          "code": "MA201",
+          "title": "Discrete Mathematical Structures",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "course",
+          "courseId": "ma201",
+          "courseType": "Core"
+        },
+        {
+          "code": "CS201",
+          "title": "Digital Logic Design",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "course",
+          "courseId": "cs201",
+          "courseType": "Core"
+        },
+        {
+          "code": "CX201",
+          "title": "Digital Logic Design Lab",
+          "credits": "2",
+          "ltp": "0-0-2",
+          "itemType": "course",
+          "courseId": "cx201",
+          "courseType": "Lab"
+        },
+        {
+          "code": "CS202",
+          "title": "Design & Analysis of Algorithms",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "course",
+          "courseId": "cs202",
+          "courseType": "Core"
+        },
+        {
+          "code": "CX202",
+          "title": "Design & Analysis of Algo. Lab",
+          "credits": "2",
+          "ltp": "0-0-2",
+          "itemType": "course",
+          "courseId": "cx202",
+          "courseType": "Lab"
+        },
+        {
+          "code": "CS203",
+          "title": "Theory of Computation",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "course",
+          "courseId": "cs203",
+          "courseType": "Core"
+        },
+        {
+          "code": "MJ301",
+          "title": "Major Specialization I",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "major_requirement",
+          "courseId": null,
+          "courseType": null
+        },
+        {
+          "code": "MN301",
+          "title": "Exploratory Minor",
+          "credits": "2",
+          "ltp": "2-0-0",
+          "itemType": "minor_requirement",
+          "courseId": null,
+          "courseType": null
+        },
+        {
+          "code": "IX201",
+          "title": "Innovation Lab II",
+          "credits": "4",
+          "ltp": "0-0-4",
+          "itemType": "course",
+          "courseId": "ix201",
+          "courseType": "Innovation Lab"
+        }
+      ]
+    },
+    {
+      "semester": 4,
+      "title": "Semester 4",
+      "description": "Systems, methodology, and continued specialization across majors and exploratory minors.",
+      "totalCredits": "25",
+      "items": [
+        {
+          "code": "MA202",
+          "title": "Linear Algebra & Optimization",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "course",
+          "courseId": "ma202",
+          "courseType": "Core"
+        },
+        {
+          "code": "CS204",
+          "title": "Computer Organization & Architecture",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "course",
+          "courseId": "cs204",
+          "courseType": "Core"
+        },
+        {
+          "code": "CS205",
+          "title": "Operating Systems",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "course",
+          "courseId": "cs205",
+          "courseType": "Core"
+        },
+        {
+          "code": "CX205",
+          "title": "Operating Systems Lab",
+          "credits": "2",
+          "ltp": "0-0-2",
+          "itemType": "course",
+          "courseId": "cx205",
+          "courseType": "Lab"
+        },
+        {
+          "code": "CS206",
+          "title": "Programming Methodology",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "course",
+          "courseId": "cs206",
+          "courseType": "Core"
+        },
+        {
+          "code": "CX206",
+          "title": "Programming Methodology Lab",
+          "credits": "2",
+          "ltp": "0-0-2",
+          "itemType": "course",
+          "courseId": "cx206",
+          "courseType": "Lab"
+        },
+        {
+          "code": "MJ401",
+          "title": "Major Specialization II",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "major_requirement",
+          "courseId": null,
+          "courseType": null
+        },
+        {
+          "code": "MN401",
+          "title": "Exploratory Minor",
+          "credits": "2",
+          "ltp": "2-0-0",
+          "itemType": "minor_requirement",
+          "courseId": null,
+          "courseType": null
+        },
+        {
+          "code": "IX202",
+          "title": "Innovation Lab III",
+          "credits": "4",
+          "ltp": "0-0-4",
+          "itemType": "course",
+          "courseId": "ix202",
+          "courseType": "Innovation Lab"
+        }
+      ]
+    },
+    {
+      "semester": 5,
+      "title": "Semester 5",
+      "description": "Networks, compilers, innovation lab work, and deeper specialization through major and minor pathways.",
+      "totalCredits": "20",
+      "items": [
+        {
+          "code": "CS301",
+          "title": "Computer Networks",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "course",
+          "courseId": "cs301",
+          "courseType": "Core"
+        },
+        {
+          "code": "CX301",
+          "title": "Computer Networks Lab",
+          "credits": "2",
+          "ltp": "0-0-2",
+          "itemType": "course",
+          "courseId": "cx301",
+          "courseType": "Lab"
+        },
+        {
+          "code": "CS302",
+          "title": "Compiler Design",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "course",
+          "courseId": "cs302",
+          "courseType": "Core"
+        },
+        {
+          "code": "MJ501",
+          "title": "Major Specialization III",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "major_requirement",
+          "courseId": null,
+          "courseType": null
+        },
+        {
+          "code": "MJ502",
+          "title": "Major Specialization IV",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "major_requirement",
+          "courseId": null,
+          "courseType": null
+        },
+        {
+          "code": "MN501",
+          "title": "Exploratory Minor",
+          "credits": "2",
+          "ltp": "2-0-0",
+          "itemType": "minor_requirement",
+          "courseId": null,
+          "courseType": null
+        },
+        {
+          "code": "IX301",
+          "title": "Innovation Lab IV",
+          "credits": "4",
+          "ltp": "0-0-4",
+          "itemType": "course",
+          "courseId": "ix301",
+          "courseType": "Innovation Lab"
+        }
+      ]
+    },
+    {
+      "semester": 6,
+      "title": "Semester 6",
+      "description": "Software engineering, data systems, and the final common specialization stages before advanced electives.",
+      "totalCredits": "20",
+      "items": [
+        {
+          "code": "CS303",
+          "title": "Software Engineering",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "course",
+          "courseId": "cs303",
+          "courseType": "Core"
+        },
+        {
+          "code": "CS304",
+          "title": "Database Management Systems",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "course",
+          "courseId": "cs304",
+          "courseType": "Core"
+        },
+        {
+          "code": "CX304",
+          "title": "Database Management Systems Lab",
+          "credits": "2",
+          "ltp": "0-0-2",
+          "itemType": "course",
+          "courseId": "cx304",
+          "courseType": "Lab"
+        },
+        {
+          "code": "MJ601",
+          "title": "Major Specialization V",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "major_requirement",
+          "courseId": null,
+          "courseType": null
+        },
+        {
+          "code": "MJ602",
+          "title": "Major Specialization VI",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "major_requirement",
+          "courseId": null,
+          "courseType": null
+        },
+        {
+          "code": "MN601",
+          "title": "Exploratory Minor",
+          "credits": "2",
+          "ltp": "2-0-0",
+          "itemType": "minor_requirement",
+          "courseId": null,
+          "courseType": null
+        },
+        {
+          "code": "IX301",
+          "title": "Innovation Lab IV",
+          "credits": "4",
+          "ltp": "0-0-4",
+          "itemType": "course",
+          "courseId": "ix301",
+          "courseType": "Innovation Lab"
+        }
+      ]
+    },
+    {
+      "semester": 7,
+      "title": "Semester 7",
+      "description": "Advanced electives, advanced minor selections, open electives, and technical seminar work.",
+      "totalCredits": "17",
+      "items": [
+        {
+          "code": "MJ701",
+          "title": "Advance Elective I",
+          "credits": "4",
+          "ltp": "4-0-0",
+          "itemType": "major_requirement",
+          "courseId": null,
+          "courseType": null
+        },
+        {
+          "code": "MJ702",
+          "title": "Advance Elective II",
+          "credits": "4",
+          "ltp": "4-0-0",
+          "itemType": "major_requirement",
+          "courseId": null,
+          "courseType": null
+        },
+        {
+          "code": "MN701",
+          "title": "Advanced Minor",
+          "credits": "2",
+          "ltp": "2-0-0",
+          "itemType": "minor_requirement",
+          "courseId": null,
+          "courseType": null
+        },
+        {
+          "code": "OE701",
+          "title": "Open Elective I",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "open_elective",
+          "courseId": null,
+          "courseType": null
+        },
+        {
+          "code": "OE702",
+          "title": "Open Elective II",
+          "credits": "2",
+          "ltp": "2-0-0",
+          "itemType": "open_elective",
+          "courseId": null,
+          "courseType": null
+        },
+        {
+          "code": "SM401",
+          "title": "Technical Seminar",
+          "credits": "2",
+          "ltp": "0-2-0",
+          "itemType": "course",
+          "courseId": "sm401",
+          "courseType": "Seminar"
+        }
+      ]
+    },
+    {
+      "semester": 8,
+      "title": "Semester 8",
+      "description": "Capstone completion with advanced electives, advanced minors, open electives, and the major project.",
+      "totalCredits": "23",
+      "items": [
+        {
+          "code": "MJ801",
+          "title": "Advance Elective III",
+          "credits": "4",
+          "ltp": "4-0-0",
+          "itemType": "major_requirement",
+          "courseId": null,
+          "courseType": null
+        },
+        {
+          "code": "MJ802",
+          "title": "Advance Elective IV",
+          "credits": "4",
+          "ltp": "4-0-0",
+          "itemType": "major_requirement",
+          "courseId": null,
+          "courseType": null
+        },
+        {
+          "code": "MN801",
+          "title": "Advanced Minor",
+          "credits": "2",
+          "ltp": "2-0-0",
+          "itemType": "minor_requirement",
+          "courseId": null,
+          "courseType": null
+        },
+        {
+          "code": "OE801",
+          "title": "Open Elective III",
+          "credits": "3",
+          "ltp": "3-0-0",
+          "itemType": "open_elective",
+          "courseId": null,
+          "courseType": null
+        },
+        {
+          "code": "OE802",
+          "title": "Open Elective IV",
+          "credits": "2",
+          "ltp": "2-0-0",
+          "itemType": "open_elective",
+          "courseId": null,
+          "courseType": null
+        },
+        {
+          "code": "PR402",
+          "title": "Major Project",
+          "credits": "8",
+          "ltp": "0-0-8",
+          "itemType": "course",
+          "courseId": "pr402",
+          "courseType": "Project"
+        }
+      ]
+    }
+  ]
+}

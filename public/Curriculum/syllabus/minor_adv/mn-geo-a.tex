@@ -1,0 +1,35 @@
+\rhead{MN-GEO-A: Geospatial Data Science \& AI}
+\phantomsection
+\section*{Geospatial Data Science \& AI (MN-GEO-A)}
+\label{minor:GEO_L2}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 2 (2-0-0)
+
+\subsection*{Course Content}
+\noindent\textbf{Unit 1} \\
+\textit{Large-Scale Geospatial Data Engineering:} The volume problem in modern geospatial data: terabyte-scale satellite archives (Sentinel, Landsat, Planet), billion-point LiDAR datasets, and continuous GPS trajectory streams as the data engineering challenge; Cloud-Optimized GeoTIFF (COG) and Zarr as chunked, indexed raster formats enabling range-request-based partial reads from object storage without full file download; SpatioTemporal Asset Catalogs (STAC) as the RESTful metadata standard for discovering and querying geospatial datasets across providers; Apache Sedona (formerly GeoSpark) and Dask-GeoPandas as distributed spatial dataframe frameworks for parallelizing vector analysis across clusters; Point cloud formats: LAS/LAZ and the Open Point Cloud (OPC) format; spatial tiling schemes (COPC) enabling streaming access to massive LiDAR archives; Data cube architectures: Open Data Cube and xcube as multidimensional array frameworks organizing satellite time series as $(\text{time} \times \text{band} \times \text{row} \times \text{col})$ tensors for efficient temporal analysis.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Spatial Statistics and Geostatistical Modeling:} Geostatistics as the branch of spatial statistics dealing with continuous spatial phenomena modeled as realizations of random fields; The variogram as the fundamental tool of geostatistics: empirical variogram computation, theoretical model fitting (spherical, exponential, Gaussian), and the nugget-sill-range parameterization; Kriging as a Best Linear Unbiased Predictor (BLUP): ordinary, universal, and co-kriging variants; the kriging system as a linear algebra problem whose solution weights nearby observations by their spatial covariance structure; Spatial regression models: the spatial lag model and spatial error model as extensions of OLS that account for spatial autocorrelation in the residuals; Geographically Weighted Regression (GWR) as a locally adaptive regression where coefficients vary continuously across space; Point process models: Poisson, Thomas cluster, and Matérn inhibition processes as stochastic models of spatial event locations with applications in crime mapping, ecology, and epidemiology.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Deep Learning for Earth Observation:} The computer vision pipeline applied to satellite imagery: the unique challenges of multi-spectral inputs (beyond RGB), large tile sizes, and extreme class imbalance (rare features in vast backgrounds); Semantic segmentation of satellite imagery: U-Net variants with multi-scale feature fusion for land cover mapping, flood extent delineation, and building footprint extraction; Object detection in aerial imagery: rotated bounding box detection (oriented R-CNN) for vehicles, ships, and infrastructure as a rotation-equivariance challenge; Change detection as a spatio-temporal comparison problem: Siamese networks and difference-image classification for detecting deforestation, urban expansion, and disaster damage; Self-supervised pre-training for satellite imagery: masked autoencoders (SatMAE) and contrastive learning on unlabeled image archives to overcome labeled data scarcity; Foundation models for Earth observation: Prithvi (NASA/IBM), Scale-MAE, and GFM as geospatial vision transformers pre-trained on multi-temporal, multi-spectral global archives.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Trajectory Analysis and Movement Data Mining:} GPS trajectories as the canonical mobility data type: raw track compression (Douglas-Peucker algorithm), stay-point detection, and semantic enrichment with map-matching; Map matching: the Hidden Markov Model formulation of snapping noisy GPS points to a road network graph using Viterbi decoding; Mobility pattern mining: frequent route extraction, origin-destination matrix construction, and the DBSCAN-based trajectory clustering algorithm; Urban mobility modeling: gravity models and radiation models as spatial interaction frameworks predicting flow volumes between locations; Activity recognition from trajectory data: inferring transport mode (walking, driving, cycling) from speed, acceleration, and heading features as a time-series classification problem; Privacy in mobility data: the re-identification risk of trajectory datasets, $k$-anonymity via spatial generalization, and differential privacy mechanisms for publishing aggregate mobility statistics.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{Spatial AI for Urban and Environmental Intelligence:} Urban sensing as a data fusion problem: integrating satellite imagery, street-level imagery (Mapillary, GSV), social media check-ins, and administrative records into a unified urban analytics platform; Graph Neural Networks for spatial prediction: encoding the city as a graph where nodes are regions and edges encode adjacency or functional similarity for traffic speed forecasting, crime prediction, and real estate valuation; Spatio-temporal forecasting architectures: DCRNN and STGCN as graph-convolutional recurrent models for traffic flow; diffusion convolutional signal propagation on road network graphs; Environmental monitoring with AI: downscaling coarse climate model outputs to fine spatial resolution using super-resolution CNNs; estimating air quality at unmonitored locations via spatial interpolation with satellite covariates; Digital Earth and the Metaverse of infrastructure: CityGML and 3D Tiles as the data standards for city-scale digital twin representations used in urban planning, disaster simulation, and autonomous vehicle HD map construction.
+
+\newpage
+\rhead{Curriculum Schema}

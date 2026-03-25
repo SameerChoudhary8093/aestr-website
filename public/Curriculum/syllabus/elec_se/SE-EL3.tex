@@ -1,0 +1,88 @@
+\rhead{SE-EL3: Serverless Architecture}
+\phantomsection 
+\section*{Serverless Architecture (SE-EL3)}
+\label{elec:SE_3}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 4 (3-0-2)
+
+\subsection*{Theory}
+\noindent\textbf{Unit 1} \\
+\textit{Serverless Fundamentals and FaaS:} Serverless definition and characteristics (no server management, auto-scaling, pay-per-use), Function-as-a-Service (FaaS) architecture, Cold start problem and mitigation strategies, Event-driven execution model, AWS Lambda vs. Azure Functions vs. Google Cloud Functions comparison, Stateless function design principles, Execution environment lifecycle.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Serverless Event Sources and Integration:} Event triggers (HTTP API Gateway, S3 events, DynamoDB streams, Kinesis, SQS), Asynchronous invocation patterns (event sources, polling), Synchronous vs. asynchronous execution modes, Dead Letter Queues (DLQ) and retry policies, Destination configurations, Provisioned concurrency, Function versioning and aliases.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Serverless Data Services:} DynamoDB design patterns (single-table design, GSI/GSI2, LSI), DAX caching layer, Step Functions workflow orchestration (state machines, choice states, parallel), EventBridge event bus (rules, targets, schema registry), AppSync GraphQL APIs (resolvers, data sources), BaaS services integration patterns.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Advanced Serverless Patterns:} Backend-for-Frontend (BFF) pattern, Multi-tenancy strategies, CQRS/Event Sourcing in serverless, Fan-out/fan-in patterns, Saga pattern for distributed transactions, State machines for long-running workflows, Cross-account resource sharing, VPC integration and private endpoints.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{Serverless Observability, Security, and Cost:} CloudWatch Insights and X-Ray tracing for serverless, Lambda Power Tuning, Distributed tracing across FaaS + BaaS, IAM roles and least privilege for functions, Secrets management integration, WAF and DDoS protection, Cost optimization (provisioned concurrency vs. reserved, architectural patterns), Vendor lock-in mitigation strategies.
+
+\newpage
+
+\subsection*{Practical}
+\noindent\textbf{Lab 1: FaaS Event-Driven Applications} \\
+Focuses on Lambda/API Gateway/S3 event triggers, cold start analysis, and timeout handling.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 2: DynamoDB Single-Table Design} \\
+Focuses on GSI patterns, access patterns mapping, and performance benchmarking.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 3: Step Functions Workflow Orchestration} \\
+Focuses on complex state machines, error handling, and long-running business processes.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 4: Serverless GraphQL APIs} \\
+Focuses on AppSync resolvers, data source integration, and real-time subscriptions.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 5: Event-Driven Microservices} \\
+Focuses on EventBridge patterns, fan-out architectures, and cross-service communication.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 6: Serverless BFF Implementation} \\
+Focuses on mobile/web backend optimization and client-specific API layers.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 7: Distributed Tracing Analysis} \\
+Focuses on X-Ray integration, performance bottleneck identification, and optimization.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 8: Serverless Security Hardening} \\
+Focuses on IAM fine-grained policies, VPC endpoints, and secrets management.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 9: Cost Optimization Workshop} \\
+Focuses on Lambda Power Tuning, architectural refactoring for cost efficiency.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 10: Complete Serverless Application} \\
+Focuses on production-grade serverless system with CI/CD, monitoring, and multi-region deployment.
+
+\vspace{0.2cm}
+
+\newpage
+\rhead{Curriculum Schema}

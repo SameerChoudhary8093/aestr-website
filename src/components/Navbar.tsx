@@ -28,6 +28,7 @@ const Navbar = () => {
         { name: 'Aestr Alpha', href: 'https://aestralpha.com', external: true },
         { name: 'Alumni', href: '/alumni' },
         { name: 'Blogs', href: '/blogs' },
+        { name: 'Curriculum', href: '/curriculum' },
     ];
 
     const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -126,7 +127,7 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    <div className="flex-1 flex items-center justify-end pr-24 md:pr-48 lg:pr-72">
+                    <div className="flex-1 flex items-center justify-end pr-28 md:pr-56 lg:pr-84">
                         <div className="hidden md:flex items-center gap-4 lg:gap-5">
                             {/* SGVU Primary Logo */}
                             <div className="relative transition-all duration-500 hover:scale-105 shrink-0">

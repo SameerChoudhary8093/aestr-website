@@ -1,0 +1,88 @@
+\rhead{DS-EL5: Real-Time Analytics \& Stream Processing}
+\phantomsection 
+\section*{Real-Time Analytics \& Stream Processing (DS-EL5)}
+\label{elec:DS_5}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 4 (3-0-2)
+
+\subsection*{Theory}
+\noindent\textbf{Unit 1} \\
+\textit{Stream Processing Fundamentals:} Data stream characteristics (infinite, unbounded, out-of-order), Lambda vs. Kappa architectures, Time concepts (event time, processing time, ingestion time, watermarks), Windowing strategies (tumbling, hopping, sliding, session), Late data handling and allowed lateness, Exactly-once vs. at-least-once semantics, Fault tolerance in streaming systems.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Apache Kafka Ecosystem:} Kafka architecture (topics, partitions, leaders/followers), Producer/consumer APIs and configurations, Kafka Streams DSL vs. Processor API, KSQL for stream processing SQL, Kafka Connect for data integration, MirrorMaker and cluster federation, Schema Registry and Avro/Protobuf serialization, Exactly-once guarantees with transactions.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Apache Flink Deep Dive:} Flink execution model (DataStream/DataSet APIs), Stateful stream processing and keyed state, Checkpointing and savepoints, Event-time processing with watermarks, Complex Event Processing (CEP), Table/SQL API for unified batch/streaming, FlinkML and Gelly for streaming ML, Side outputs and dynamic scaling.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Stream Processing Patterns and Analytics:} Pattern detection (match\_recognize, CEP patterns), Sessionization and funnel analysis, Real-time aggregations and materialized views, Join strategies (stream-stream, stream-table), Time-windowed joins and interval joins, Anomaly detection (isolation forests, statistical methods), Real-time dashboards (Grafana + Prometheus).
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{Advanced Topics and Production Systems:} Stream-table duality and changelog semantics, Upserts and primary key handling, Change Data Capture (CDC) with Debezium, Streaming ETL/ELT pipelines, Backpressure handling and resource management, Multi-tenancy and resource isolation, Monitoring and observability (metrics, tracing), Deployment strategies (Kubernetes operators).
+
+\newpage
+
+\subsection*{Practical}
+\noindent\textbf{Lab 1: Kafka Fundamentals} \\
+Focuses on multi-partition topics, producers/consumers, exactly-once transactions.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 2: Kafka Streams Applications} \\
+Focuses on windowed aggregations, joins, stateful processing, KSQL queries.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 3: Flink Event-Time Processing} \\
+Focuses on watermarks, late data, tumbling/sliding windows, event-time joins.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 4: Flink State and Checkpointing} \\
+Focuses on keyed state, operator state, savepoints, fault recovery.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 5: Complex Event Processing} \\
+Focuses on Flink CEP patterns, sequence detection, anomaly patterns.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 6: Streaming SQL and Tables} \\
+Focuses on Flink Table API, dynamic tables, changelog processing.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 7: CDC and Streaming ETL} \\
+Focuses on Debezium + Kafka Connect, Flink CDC connectors.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 8: Real-Time ML Pipelines} \\
+Focuses on FlinkML feature extraction, model serving, prediction.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 9: Production Monitoring} \\
+Focuses on Prometheus/Grafana dashboards, alerting rules.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 10: Complete Streaming Pipeline} \\
+Focuses on end-to-end IoT/telemetry/real-time analytics solution.
+
+\vspace{0.2cm}
+
+\newpage
+\rhead{Curriculum Schema}

@@ -1,0 +1,88 @@
+\rhead{SE601: Building Scalable Cloud Services}
+\phantomsection 
+\section*{Building Scalable Cloud Services (SE601)}
+\label{major:SE_6}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 3 (2-0-2)
+
+\subsection*{Theory}
+\noindent\textbf{Unit 1} \\
+\textit{Scalability Patterns and Load Balancing:} Scalability types (vertical, horizontal, diagonal), Stateless vs. stateful services, Load balancing algorithms (round-robin, least connections, IP hash), Layer 4 vs. Layer 7 load balancing, Health checks and graceful degradation, Auto-scaling policies (CPU/memory utilization, custom metrics, predictive scaling), Capacity planning and right-sizing.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Container Orchestration and Service Mesh:} Docker containerization best practices, Kubernetes architecture (control plane, worker nodes, etcd), Pod lifecycle and controllers (Deployment, StatefulSet, DaemonSet), Kubernetes Services (ClusterIP, NodePort, LoadBalancer, ExternalName), Ingress controllers and API gateways, Service mesh patterns (Istio virtual services, traffic management, observability).
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Event-Driven and Asynchronous Architectures:} Message brokers (Kafka, RabbitMQ, SQS), Pub-sub patterns and fan-out/fan-in, Event sourcing and CQRS principles, Apache Kafka (topics, partitions, consumer groups, exactly-once semantics), Stream processing (Kafka Streams, KSQL), Serverless event sources (Lambda triggers, Cloud Functions events), Saga pattern for distributed transactions.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Distributed Caching and Data Stores:} Caching patterns (cache-aside, write-through, read-through), Redis cluster architecture and data sharding, Memcached consistent hashing, CDN integration for static assets, NoSQL selection criteria (DynamoDB, Cassandra, MongoDB Atlas), Relational database scaling (read replicas, sharding), Multi-region database replication.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{Observability, Chaos Engineering, and Cost Optimization:} The three pillars (metrics, logs, traces), Prometheus/Grafana monitoring stacks, OpenTelemetry instrumentation, Distributed tracing analysis, Chaos engineering (Chaos Monkey, Gremlin), SLO/SLI/SLA definition and error budgets, FinOps practices, Reserved/spot instances, Cost allocation tagging, Multi-cloud cost comparison.
+
+\newpage
+
+\subsection*{Practical}
+\noindent\textbf{Lab 1: Load Balancer and Auto Scaling} \\
+Focuses on configuring ALB/NLB, auto scaling groups, and blue-green deployments.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 2: Kubernetes Cluster Deployment} \\
+Focuses on minikube setup, deployments, services, ingress, and Helm chart packaging.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 3: Kafka Event Streaming Pipeline} \\
+Focuses on multi-partition topics, consumer groups, stream processing applications.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 4: Service Mesh Traffic Management} \\
+Focuses on Istio installation, virtual services, canary deployments, circuit breakers.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 5: Distributed Caching Patterns} \\
+Focuses on Redis cluster setup, cache invalidation strategies, CDN integration.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 6: Microservices Communication} \\
+Focuses on gRPC services, API gateway routing, service discovery patterns.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 7: Monitoring and Alerting Stack} \\
+Focuses on Prometheus/Grafana dashboards, alerting rules, SLO calculation.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 8: Chaos Engineering Experiments} \\
+Focuses on Chaos Mesh experiments, fault injection, resilience testing.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 9: Cost Optimization Analysis} \\
+Focuses on cost explorer analysis, rightsizing recommendations, FinOps workflows.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 10: Production Microservices Platform} \\
+Focuses on complete scalable cloud service deployment with full observability.
+
+\vspace{0.2cm}
+
+\newpage
+\rhead{Curriculum Schema}

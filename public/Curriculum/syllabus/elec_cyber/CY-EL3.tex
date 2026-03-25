@@ -1,0 +1,88 @@
+\rhead{CY-EL3: Malware Analysis \& Reverse Engineering}
+\phantomsection 
+\section*{Malware Analysis \& Reverse Engineering (CY-EL3)}
+\label{elec:CY_3}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 4 (3-0-2)
+
+\subsection*{Theory}
+\noindent\textbf{Unit 1} \\
+\textit{Malware Fundamentals and Lifecycle:} Malware types classification (viruses, worms, trojans, ransomware, APTs), Infection vectors (phishing, drive-by, supply chain), Malware evolution (polymorphic, metamorphic, fileless), Kill chain models (Cyber Kill Chain, MITRE ATT\&CK), Indicators of Compromise (IOCs), Malware triage methodologies, Dynamic vs. static vs. behavioral analysis.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Static Analysis Techniques:} PE/ELF file format dissection (headers, sections, imports/exports), Packers and crypters detection (UPX, custom), Strings analysis and YARA rules, Hashing and fuzzy hashing (SSDEEP, imphash), Resource extraction (icons, embedded files), Static disassemblers (Ghidra, IDA Free), Control flow graphs and function identification.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Dynamic Analysis and Sandboxing:} Safe execution environments (VMware snapshots, Cuckoo Sandbox), API monitoring (APIMonitor, ProcMon), Behavioral analysis (network, filesystem, registry), Dynamic instrumentation (Pin, DynamoRIO), Memory forensics integration, Anti-analysis evasion detection (timing checks, debugger detection, VM artifacts), Sandbox escape techniques.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Reverse Engineering Core Concepts:} Assembly language essentials (x86/x64, ARM), Disassembly and decompilation, Calling conventions (stdcall, fastcall, thiscall), Function prologue/epilogue patterns, Data flow vs. control flow analysis, Symbolic execution fundamentals, Binary patching and code caves, Obfuscation reversal (control flow flattening, opaque predicates).
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{Advanced Malware Techniques:} Rootkit analysis (SSDT hooking, DKOM), Kernel-mode malware, Anti-forensics (timestomping, log wiping), C2 communication protocols (HTTP, DNS tunneling, custom), Ransomware (crypto APIs, payment portals), APT persistence mechanisms, Firmware/BIOS malware, Mobile malware (APK analysis, Frida scripting).
+
+\newpage
+
+\subsection*{Practical}
+\noindent\textbf{Lab 1: Malware Triage and Sandbox Setup} \\
+Focuses on Cuckoo deployment, sample submission, behavioral reports.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 2: Static Analysis Workshop} \\
+Focuses on PEStudio, strings/YARA, import reconstruction.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 3: Dynamic Behavioral Analysis} \\
+Focuses on ProcMon/RegShot, network capture, API hooking.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 4: x86 Assembly and Disassembly} \\
+Focuses on debuggers (x64dbg, OllyDbg), breakpoint strategies.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 5: Ghidra Reverse Engineering} \\
+Focuses on decompiler usage, script automation, function renaming.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 6: Unpacking and Deobfuscation} \\
+Focuses on manual unpacking, debugger tricks, entropy analysis.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 7: Rootkit Detection and Analysis} \\
+Focuses on GMER/RootkitRevealer, kernel debugging (WinDbg).
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 8: Network Malware Analysis} \\
+Focuses on Wireshark dissect, C2 emulation, protocol decoding.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 9: Advanced Evasion Reversal} \\
+Focuses on anti-VM bypass, packer identification, script malware.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Lab 10: Complete Malware Report} \\
+Focuses on IOC extraction, MITRE mapping, remediation recommendations.
+
+\vspace{0.2cm}
+
+\newpage
+\rhead{Curriculum Schema}

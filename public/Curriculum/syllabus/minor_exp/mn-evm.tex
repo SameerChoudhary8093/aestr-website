@@ -1,0 +1,35 @@
+\rhead{MN-EVM: Fundamentals of Automotive Embedded Systems}
+\phantomsection
+\section*{Fundamentals of Automotive Embedded Systems (MN-EVM)}
+\label{minor:EVM_L1}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 2 (2-0-0)
+
+\subsection*{Course Content}
+\noindent\textbf{Unit 1} \\
+\textit{The Vehicle as a Networked Embedded System:} Modern vehicles as distributed embedded computers: the evolution from mechanical linkages to software-defined functions and the role of Electronic Control Units (ECUs) as the computational nodes of the vehicle; ECU architecture: microcontroller selection criteria (real-time capability, flash/RAM, peripheral set), the hardware abstraction layer (HAL), and the separation of application software from hardware drivers; The automotive software stack: AUTOSAR (AUTomotive Open System ARchitecture) Classic and Adaptive as the standardized layered middleware enabling ECU software portability across hardware platforms; In-vehicle network topology evolution: point-to-point wiring $\rightarrow$ shared bus (CAN) $\rightarrow$ domain architecture $\rightarrow$ zonal Ethernet architecture as the progression driven by bandwidth and latency demands; Key automotive data formats: DBC files as the schema defining CAN message IDs, signal names, bit positions, scaling factors, and units; UDS (Unified Diagnostic Services, ISO 14229) as the diagnostic communication protocol for ECU flashing and fault code reading.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 2} \\
+\textit{Automotive Communication Protocols:} CAN (Controller Area Network) as the foundational automotive bus: frame structure (arbitration ID, DLC, data, CRC, ACK), non-destructive bitwise arbitration via CSMA/CR, error detection mechanisms, and the bus-off recovery state machine; CAN FD (Flexible Data Rate) as the evolution addressing bandwidth limitations: variable data phase bit rate up to 8 Mbps and 64-byte payload; LIN (Local Interconnect Network) as a low-cost single-wire sub-bus for body electronics: master-slave scheduling, break field synchronization, and checksum variants; FlexRay as the deterministic, fault-tolerant protocol for safety-critical chassis applications: static and dynamic segments, cycle structure, and the clock synchronization algorithm; Automotive Ethernet (100BASE-T1, 1000BASE-T1) and the SOME/IP service-oriented middleware as the backbone of high-bandwidth ADAS sensor data transport; CAN matrix analysis: decoding raw hex CAN logs using DBC definitions as a data engineering task fundamental to vehicle software development and testing.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 3} \\
+\textit{Electric Powertrain: Computation and Control:} Electric vehicle powertrain architecture: battery pack, power electronics (inverter, DC-DC converter, OBC), electric motor, and the thermal management system as the four subsystems governed by embedded software; Battery electrochemistry from a systems perspective: cell voltage characteristics, State of Charge (SoC) as a hidden state variable, and State of Health (SoH) as a degradation metric; Battery Management System (BMS) algorithms: coulomb counting and open-circuit voltage lookup as SoC estimation baselines; cell balancing topologies (passive vs.\ active) and their firmware implementations; Field-Oriented Control (FOC) of permanent magnet synchronous motors (PMSM): the Clarke and Park transforms as coordinate system rotations that decouple torque and flux control into two independent DC current controllers; Space Vector PWM (SVPWM) as the modulation strategy converting voltage references to inverter switch timing; Regenerative braking: the torque blending algorithm coordinating hydraulic and electric braking to maximize energy recovery within ABS and stability control constraints.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 4} \\
+\textit{Real-Time Operating Systems and Functional Safety:} Hard real-time constraints in automotive embedded systems: the consequence of missed deadlines in brake-by-wire, steer-by-wire, and motor control as safety-critical failures; RTOS concepts: task scheduling (rate-monotonic, earliest-deadline-first), priority inversion, the priority inheritance protocol, and inter-task communication via queues and semaphores; AUTOSAR OS as the automotive RTOS standard: tasks, alarms, schedule tables, and the distinction between basic and extended tasks; ISO 26262 (Road Vehicles — Functional Safety) as the automotive safety standard: the safety lifecycle, Automotive Safety Integrity Levels (ASIL A–D) as risk classification, and the hardware and software requirements imposed at each level; Diagnostic Trouble Codes (DTCs) and fault management: the permanent fault, pending fault, and confirmed fault state machine as the embedded software pattern for robust fault detection and reporting; Watchdog timers, redundant computation, and voting logic as the hardware mechanisms for achieving ASIL-D fault tolerance in safety-critical ECUs.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Unit 5} \\
+\textit{ADAS Sensing Fundamentals and the Software-Defined Vehicle:} Advanced Driver Assistance Systems (ADAS) as the sensing and actuation stack beneath full autonomy: ACC, AEB, LKA, BSD, and surround-view as the Level 1--2 automation building blocks; Sensor modalities for ADAS: cameras (monocular, stereo, fisheye), radar (77 GHz FMCW), ultrasonic, and LiDAR — their operating principles, range-resolution-angular resolution tradeoffs, and failure modes in adverse weather; Sensor time synchronization: hardware timestamps, PPS (Pulse Per Second) signals, and PTP (IEEE 1588 Precision Time Protocol) as the mechanisms ensuring multi-sensor data fusion is temporally coherent; Over-the-Air (OTA) software updates: the A/B partition scheme, rollback safety mechanisms, and delta patching as the software deployment infrastructure of the software-defined vehicle; Cybersecurity in automotive systems: the TARA (Threat Analysis and Risk Assessment) methodology under ISO/SAE 21434, attack surfaces (OBD port, telematics unit, V2X radio), and the SecOC (Secure Onboard Communication) protocol for authenticating CAN messages.
+
+\newpage
+\rhead{Curriculum Schema}

@@ -1,0 +1,119 @@
+\rhead{IX202: Innovation Lab III}
+\phantomsection 
+\section*{Innovation Lab III (IX202)}
+\label{course:IX202}
+
+\noindent \small{\hyperref[main:scheme]{$\leftarrow$ Back to Scheme}} \vspace{0.5cm}
+
+\noindent \textbf{Credits:} 6 (0-0-6)
+
+\noindent \textit{Note: Students continue in their selected track. This course focuses on enterprise-grade architecture, highly available distributed systems, and deep integration with operating systems/cloud infrastructure. The goal is to prepare students to design systems that handle massive scale and complex domain requirements, acting as a precursor to their final year Capstone Project.}
+
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+
+\section*{Track A: Web Development (Distributed Systems \& Cloud Architecture)}
+
+\noindent\textbf{Task 1: Real-Time Protocols \& Bidirectional Communication} \\
+Focuses on moving beyond the stateless HTTP request-response cycle. Students will use WebSockets and Server-Sent Events (SSE) to build a "Live Collaborative Whiteboard" (similar to Miro/Figma). They will learn the concepts of persistent TCP connections, broadcast mechanisms, socket rooms, and handling connection drops in real-time environments.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 2: Graph-Based API Design (GraphQL)} \\
+Focuses on declarative data fetching and solving REST bottlenecks. Students will transition from REST to GraphQL to build a "Customizable Analytics Dashboard." They will learn to mitigate Over-fetching and Under-fetching, write Resolvers, and understand the Abstract Syntax Tree (AST) of a query, allowing the View to dictate exactly what data the Controller should return.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 3: Event-Driven Architecture \& Message Brokers} \\
+Focuses on decoupling backend services for scalability. Students will implement a message broker (RabbitMQ or Apache Kafka) to engineer an "Asynchronous Order Processing Pipeline." They will learn the Publisher/Subscriber pattern, event streaming, message durability, and how to prevent system failure by buffering sudden spikes in traffic through queues.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 4: Microservices \& API Gateways} \\
+Focuses on breaking down monolithic architectures. Students will split a backend into separate, independent services (e.g., Auth Service, Inventory Service). They will configure an API Gateway (like NGINX or Kong) to act as a reverse proxy for a "Modular E-Commerce Backend." They will learn about service discovery, request routing, and cross-origin resource sharing (CORS) across multiple domains.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 5: High-Performance Binary Protocols (gRPC)} \\
+Focuses on efficient inter-service communication. Students will replace JSON payloads with Protocol Buffers (Protobuf). They will engineer a "High-Throughput Logging Service" where microservices communicate via gRPC. They will learn about payload serialization, strong typing in network contracts, and why binary transmission outperforms text-based JSON in microservice clusters.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 6: Object Storage \& Content Delivery Networks (CDNs)} \\
+Focuses on handling massive media assets globally. Students will integrate AWS S3 (or equivalent) to build a "Video Hosting Platform." They will implement Multipart Uploads for large files, generate Pre-signed URLs for secure direct-to-cloud uploads, and configure a CDN (CloudFront) to cache assets at edge locations, drastically reducing latency for global users.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 7: Serverless Compute \& Edge Functions} \\
+Focuses on dynamic execution without server management. Students will deploy code to AWS Lambda or Cloudflare Workers. They will build a "Dynamic Image Resizer" that intercepts image requests and resizes them on the fly at the Edge. They will learn the concepts of "Cold Starts," stateless execution environments, and cost-optimization in serverless architectures.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 8: Distributed Search Engines} \\
+Focuses on rapid retrieval of unstructured data. Students will integrate a full-text search engine (Elasticsearch, Algolia, or Meilisearch). They will build a "Faceted Search Interface" capable of typo-tolerance and complex filtering. They will learn about inverted indexes, tokenization, and how search databases differ fundamentally from relational databases.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 9: System Observability \& Telemetry} \\
+Focuses on understanding system health in a distributed environment. Students will instrument their microservices using OpenTelemetry. They will build a "System Health Dashboard" integrating Prometheus (for metrics) and Grafana (for visualization). They will learn the three pillars of observability: Logs, Metrics, and Distributed Tracing (tracking a single request across multiple microservices).
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 10: Infrastructure as Code (IaC)} \\
+Focuses on automating cloud environments. Students will use Terraform or AWS CDK to programmatically define their entire infrastructure. They will deploy an "Automated Cloud Provisioning" script that spins up databases, VPCs, load balancers, and compute instances. They will learn the philosophy of Immutable Infrastructure, treating servers as "cattle, not pets," readying them for enterprise DevOps roles.
+
+\newpage
+
+\section*{Track B: iOS Development (Deep Ecosystem \& Enterprise Mobile)}
+
+\noindent\textbf{Task 1: Real-Time Sockets \& Background Keep-Alives} \\
+Focuses on maintaining persistent network connections on a mobile device. Students will use URLSessionWebSocketTask to build a "Live Multiplayer Trivia Client." They will learn how to handle WebSocket frames, manage background thread execution, and deal with the OS dropping connections when the app enters the background state.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 2: Advanced Media \& HTTP Live Streaming (HLS)} \\
+Focuses on handling heavy continuous data streams. Students will utilize AVFoundation to build a "Custom HLS Video Player." They will learn how mobile devices handle m3u8 playlists, adaptive bitrate streaming (shifting video quality based on network strength), buffer management, and integrating Picture-in-Picture (PiP).
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 3: On-Device Machine Learning (CoreML)} \\
+Focuses on leveraging the iPhone’s Neural Engine. Students will integrate a pre-trained machine learning model using CoreML and the Vision framework. They will build a "Real-Time Object Detector" utilizing the device camera. They will learn about model quantization, running inference on the edge without internet connectivity, and processing CVPixelBuffers efficiently.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 4: Spatial Computing \& Augmented Reality (ARKit)} \\
+Focuses on interacting with the physical world. Students will use ARKit and RealityKit to build an "Interactive Furniture Placer." They will learn the mathematics of Visual Inertial Odometry (VIO), plane detection, ray casting, and the rendering loop required to lock 3D assets to physical real-world coordinates.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 5: System Extensions \& App Groups (WidgetKit)} \\
+Focuses on breaking out of the main application sandbox. Students will engineer a "Live Activity \& Home Screen Widget" for an ongoing sports match. They will learn about Timeline Providers, strict memory-constrained environments, and establishing App Groups to share UserDefaults and database files securely between the main app and its extensions.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 6: Hardware Connectivity \& IoT (CoreBluetooth)} \\
+Focuses on interfacing with external physical devices. Students will act as a Central Manager to build an "IoT Heart Rate Monitor" interface. They will learn the Bluetooth Low Energy (BLE) protocol, discovering peripherals, connecting, and subscribing to specific Characteristics and Services to read live sensor data.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 7: Graph Data on Mobile (Apollo Client)} \\
+Focuses on handling modern declarative APIs. Students will integrate Apollo iOS to connect to a GraphQL backend. They will build a "Deeply Nested Social Client." They will learn how to write `.graphql` files, generate strongly-typed Swift models automatically, and utilize Apollo's normalized local caching to drastically reduce network requests.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 8: Low-Level Interoperability (C/C++ in Swift)} \\
+Focuses on utilizing legacy code and maximizing performance. Students will learn how Swift interacts with lower-level languages. They will build a "High-Performance Audio Synthesizer" by bridging a C++ digital signal processing library into Swift. They will learn about bridging headers, unsafe memory pointers, and memory layout compatibility.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 9: App Thinning \& On-Demand Resources (ODR)} \\
+Focuses on optimizing the application footprint. Students will learn how to reduce initial download sizes to improve user acquisition. They will build an "Asset-Heavy Mobile Game Interface" that dynamically downloads levels and high-res textures only when the user reaches them. They will learn about App Slicing, asset catalogs, and managing ODR storage limits.
+
+\vspace{0.3cm}
+
+\noindent\textbf{Task 10: Enterprise Architecture \& Modularization (SPM)} \\
+Focuses on scaling codebases for large engineering teams. Students will break down a monolithic iOS app into smaller, isolated frameworks using Swift Package Manager (SPM). They will build a "Multi-Module Super App." They will learn the difference between static and dynamic libraries, managing compilation boundaries, and designing internal APIs, preparing them for Enterprise iOS roles.
+
+\newpage
+\rhead{Curriculum Schema}
