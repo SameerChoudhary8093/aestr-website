@@ -63,13 +63,14 @@ const Hero = () => {
                                         </p>
                                     </div>
 
-                                    {/* Responsive Logo Grid */}
-                                    <div className="flex items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12">
+                                    {/* Responsive Logo Grid: Exactly 5 Logos */}
+                                    <div className="flex items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10">
                                         {[
-                                            { src: '/Herosection/University of cambridge.webp', alt: 'Cambridge', width: 140 },
-                                            { src: '/Herosection/india-ai-logo-white.png', alt: 'INDIAai', width: 160 },
-                                            { src: '/ProgramPartners/Shodh-ai.svg', alt: 'Shodh AI', width: 140 },
-                                            { src: '/ProgramPartners/DRDO.webp', alt: 'DRDO', width: 50 }
+                                            { src: '/Herosection/University of cambridge.webp', alt: 'Cambridge', width: 120 },
+                                            { src: '/Herosection/india-ai-logo-white.png', alt: 'INDIAai', width: 140 },
+                                            { src: '/Herosection/Microsoft.webp', alt: 'Microsoft', width: 120 },
+                                            { src: '/ProgramPartners/Shodh-ai.svg', alt: 'Shodh AI', width: 120 },
+                                            { src: '/ProgramPartners/DRDO.webp', alt: 'DRDO', width: 40 }
                                         ].map((logo, idx) => (
                                             <motion.div
                                                 key={logo.alt}
@@ -80,8 +81,8 @@ const Hero = () => {
                                                     src={logo.src}
                                                     alt={logo.alt}
                                                     width={logo.width}
-                                                    height={60}
-                                                    className="w-auto h-8 md:h-10 lg:h-12 max-w-full object-contain opacity-90 hover:opacity-100 transition-opacity"
+                                                    height={50}
+                                                    className="w-auto h-6 md:h-8 lg:h-9 max-w-full object-contain opacity-90 hover:opacity-100 transition-opacity"
                                                 />
                                             </motion.div>
                                         ))}
