@@ -66,11 +66,11 @@ const Hero = () => {
                                     {/* Responsive Logo Grid: Exactly 5 Logos */}
                                     <div className="flex items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10">
                                         {[
-                                            { src: '/Herosection/University of cambridge.webp', alt: 'Cambridge', width: 120 },
-                                            { src: '/Herosection/india-ai-logo-white.png', alt: 'INDIAai', width: 140 },
-                                            { src: '/Herosection/Microsoft.webp', alt: 'Microsoft', width: 120 },
-                                            { src: '/ProgramPartners/Shodh-ai.svg', alt: 'Shodh AI', width: 120 },
-                                            { src: '/ProgramPartners/DRDO.webp', alt: 'DRDO', width: 40 }
+                                            { src: '/Herosection/University of cambridge.webp', alt: 'Cambridge', width: 140 },
+                                            { src: '/Herosection/india-ai-logo-white.png', alt: 'INDIAai', width: 160 },
+                                            { src: '/Herosection/Microsoft.webp', alt: 'Microsoft', width: 140 },
+                                            { src: '/ProgramPartners/Shodh-ai.svg', alt: 'Shodh AI', width: 140 },
+                                            { src: '/ProgramPartners/DRDO.webp', alt: 'DRDO', width: 100 }
                                         ].map((logo, idx) => (
                                             <motion.div
                                                 key={logo.alt}
@@ -81,8 +81,11 @@ const Hero = () => {
                                                     src={logo.src}
                                                     alt={logo.alt}
                                                     width={logo.width}
-                                                    height={50}
-                                                    className="w-auto h-6 md:h-8 lg:h-9 max-w-full object-contain opacity-90 hover:opacity-100 transition-opacity"
+                                                    height={100}
+                                                    className={`w-auto max-w-full object-contain opacity-90 hover:opacity-100 transition-opacity ${logo.alt === 'DRDO'
+                                                        ? 'h-14 md:h-20 lg:h-24 translate-y-1'
+                                                        : 'h-10 md:h-14 lg:h-18'
+                                                        }`}
                                                 />
                                             </motion.div>
                                         ))}

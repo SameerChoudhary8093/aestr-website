@@ -196,8 +196,8 @@ const AIMLSpecializationPage = () => {
 
     return (
         <main className="bg-background-alt min-h-screen text-foreground selection:bg-accent selection:text-black">
-            {/* Hero Section - Software Engineering Focus */}
-            <section className="pt-44 pb-16 bg-[#5B1DD6] relative overflow-hidden">
+            {/* Hero Section - AI & ML Focus */}
+            <section className="pt-44 pb-20 bg-[#5B1DD6] relative overflow-hidden">
                 {/* Ambient Background Glows - Neon accents */}
                 <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px] pointer-events-none z-0" />
                 <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[100px] pointer-events-none z-0" />
@@ -209,21 +209,21 @@ const AIMLSpecializationPage = () => {
                             initial={{ opacity: 0, x: -30 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
-                            className="space-y-6"
+                            className="space-y-8"
                         >
-                            <div className="space-y-2">
-                                <h2 className="text-sm md:text-base font-normal text-white/90 font-bold">
+                            <div className="space-y-4">
+                                <h2 className="text-sm md:text-base font-orbitron font-bold text-white/90 tracking-[0.2em] uppercase">
                                     B.Tech Computer Science & Engineering with
                                 </h2>
-                                <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight">
-                                    AI & <span className="text-accent font-serif">Machine Learning</span>
+                                <h1 className="text-4xl md:text-5xl lg:text-7xl font-orbitron font-black text-white leading-tight">
+                                    AI & <span className="text-accent italic">Machine Learning</span>
                                 </h1>
                             </div>
 
                             <div className="space-y-4">
                                 {/* Info Row 1 - Eligibility */}
                                 <div className="flex items-center gap-3">
-                                    <div className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center text-black border border-accent/30">
+                                    <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-accent border border-white/20">
                                         <BookOpen className="w-5 h-5" />
                                     </div>
                                     <p className="text-sm md:text-base font-medium text-white/90">
@@ -233,7 +233,7 @@ const AIMLSpecializationPage = () => {
 
                                 {/* Info Row 2 - Duration */}
                                 <div className="flex items-center gap-3">
-                                    <div className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center text-black border border-accent/30">
+                                    <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-accent border border-white/20">
                                         <Clock className="w-5 h-5" />
                                     </div>
                                     <p className="text-sm md:text-base font-medium text-white/90">
@@ -242,39 +242,41 @@ const AIMLSpecializationPage = () => {
                                 </div>
                             </div>
 
-                            {/* Apply Now Button */}
-                            <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-black border border-accent/20 rounded-lg shadow-lg hover:shadow-[0_0_20px_rgba(216,246,2,0.4)] transition-all duration-300 font-black uppercase tracking-tight"
-                            >
-                                Apply Now
-                                <ArrowRight className="w-4 h-4" />
-                            </motion.button>
+                            {/* Apply Now Button - Directs to Home Hero Form */}
+                            <Link href="/#hero">
+                                <motion.button
+                                    whileHover={{ scale: 1.02 }}
+                                    whileTap={{ scale: 0.98 }}
+                                    className="mt-6 inline-flex items-center gap-3 px-8 py-4 bg-accent text-black rounded-xl shadow-[0_0_30px_rgba(216,246,2,0.3)] hover:shadow-[0_0_40px_rgba(216,246,2,0.5)] transition-all duration-300 font-orbitron font-black uppercase tracking-wider text-sm"
+                                >
+                                    Apply Now
+                                    <ArrowRight className="w-4 h-4" />
+                                </motion.button>
+                            </Link>
                         </motion.div>
 
-                        {/* Right Column - Video Thumbnail */}
+                        {/* Right Column - Video Thumbnail - Pushed Down */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9, x: 30 }}
                             animate={{ opacity: 1, scale: 1, x: 0 }}
                             transition={{ duration: 1, delay: 0.2 }}
-                            className="relative"
+                            className="relative mt-12 lg:mt-24"
                         >
-                            <div className="aspect-[16/9] w-full rounded-2xl overflow-hidden shadow-xl border border-white/20 bg-white/10">
+                            <div className="aspect-[16/9] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/20 bg-black/40 backdrop-blur-md">
                                 <Image
                                     src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
                                     alt="AI & Machine Learning"
                                     fill
-                                    className="object-cover"
+                                    className="object-cover opacity-80"
                                 />
                                 {/* Play Button Overlay */}
-                                <div className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-all duration-300 cursor-pointer group">
-                                    <div className="w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                <div className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/40 transition-all duration-300 cursor-pointer group">
+                                    <div className="w-20 h-20 bg-white/10 backdrop-blur-xl border border-white/30 rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-500">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 24 24"
                                             fill="currentColor"
-                                            className="w-6 h-6 text-gray-800 ml-1"
+                                            className="w-8 h-8 text-white ml-1"
                                         >
                                             <path d="M8 5v14l11-7-11-7z" />
                                         </svg>
@@ -286,18 +288,17 @@ const AIMLSpecializationPage = () => {
                 </div>
             </section>
 
-            {/* What Is Section - PURPLE */}
-            <section className="py-16 relative overflow-hidden" style={{backgroundColor: '#5B1DD6'}}>
-                
-                <div className="container-boxed w-full max-w-[1224px] mx-auto relative z-10">
-                    <div className="max-w-5xl space-y-8">
+            {/* What Is Section - Centered */}
+            <section className="py-24 relative overflow-hidden" style={{backgroundColor: '#571AD0'}}>
+                <div className="container-boxed w-full max-w-[1224px] mx-auto relative z-10 text-center flex flex-col items-center">
+                    <div className="max-w-4xl space-y-10">
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="text-2xl md:text-3xl lg:text-4xl font-bold text-white"
+                            className="text-3xl md:text-5xl font-orbitron font-black text-white"
                         >
-                            What is <span className="text-white font-serif">AI & Machine Learning</span>?
+                            What is <span className="text-accent italic">AI & Machine Learning</span>?
                         </motion.h2>
 
                         <motion.div
@@ -305,10 +306,10 @@ const AIMLSpecializationPage = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
-                            className="glass p-8 md:p-12 rounded-3xl border border-white/10 shadow-sm backdrop-blur-xl"
+                            className="bg-black/20 p-8 md:p-14 rounded-[2.5rem] border border-white/10 shadow-2xl backdrop-blur-xl"
                         >
-                            <p className="text-lg md:text-xl text-white/90 leading-relaxed font-medium">
-                                AI & Machine Learning is the systematic application of <strong className="text-accent font-bold">computer science</strong>, <strong className="text-accent font-bold">mathematics</strong>, and <strong className="text-accent font-bold">statistical principles</strong> to create intelligent systems that can learn from data, make predictions, and automate decision-making processes. It encompasses machine learning algorithms, neural networks, deep learning architectures, and data processing techniques that enable computers to perform tasks that typically require human intelligence, from image recognition and natural language processing to autonomous decision-making and predictive analytics.
+                            <p className="text-lg md:text-2xl text-white/90 leading-[1.6] font-medium text-center">
+                                AI & Machine Learning is the systematic application of <strong className="text-accent font-orbitron font-bold">computer science</strong>, <strong className="text-accent font-orbitron font-bold">mathematics</strong>, and <strong className="text-accent font-orbitron font-bold">statistical principles</strong> to create intelligent systems that can learn from data, make predictions, and automate decision-making processes. It encompasses machine learning algorithms, neural networks, deep learning architectures, and data processing techniques that enable computers to perform tasks that typically require human intelligence, from image recognition and natural language processing to autonomous decision-making and predictive analytics.
                             </p>
                         </motion.div>
                     </div>
@@ -324,11 +325,11 @@ const AIMLSpecializationPage = () => {
                 <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto">
                     <div className="space-y-16">
                         <div className="space-y-4">
-                            <h2 className="text-h2 font-bold text-foreground tracking-tight">Curriculum</h2>
-                            <h3 className="text-3xl text-foreground/60 font-bold">Curriculum Highlights</h3>
+                            <h2 className="text-4xl md:text-6xl font-orbitron font-black text-foreground tracking-tight">Curriculum</h2>
+                            <h3 className="text-2xl text-foreground/60 font-orbitron font-bold">Curriculum Highlights</h3>
                         </div>
 
-                        <div className="flex flex-wrap gap-3 md:gap-4">
+                        <div className="flex flex-nowrap gap-2 overflow-x-auto pb-4 no-scrollbar">
                             {[
                                 "1. Neural Networks & Deep Learning",
                                 "2. Computer Vision & NLP",
@@ -343,7 +344,7 @@ const AIMLSpecializationPage = () => {
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.05 }}
-                                    className="px-6 py-3 rounded-xl glass border border-white/5 text-foreground/70 font-semibold hover:border-accent/30 hover:text-accent transition-all cursor-default text-sm md:text-base shadow-lg"
+                                    className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-foreground/70 font-orbitron font-bold hover:border-accent/30 hover:text-accent transition-all cursor-default text-[10px] uppercase tracking-wider whitespace-nowrap shadow-sm"
                                 >
                                     {tag}
                                 </motion.span>
@@ -352,21 +353,21 @@ const AIMLSpecializationPage = () => {
 
                         <div className="h-px w-full bg-white/5" />
 
-                        <div className="space-y-12">
-                            <h3 className="text-4xl md:text-5xl font-bold text-foreground tracking-tight">
-                                Programme <br />
-                                <span className=" text-accent ">Curriculum</span>
+                        <div className="space-y-12 p-12 lg:p-16 rounded-[3rem]" style={{ backgroundColor: '#D8F602' }}>
+                            <h3 className="text-5xl md:text-7xl font-orbitron font-black text-black tracking-tighter">
+                                Programme <span className="opacity-40">&</span> <br />
+                                <span className="text-accent italic drop-shadow-sm brightness-50">Curriculum</span>
                             </h3>
 
                             <div className="flex flex-col lg:flex-row gap-12">
-                                <div className="flex lg:flex-col gap-3 overflow-x-auto pb-4 lg:pb-0 lg:w-48 shrink-0">
+                                <div className="flex lg:flex-col gap-3 overflow-x-auto pb-4 lg:pb-0 lg:w-48 shrink-0 no-scrollbar">
                                     {yearData.map((y, i) => (
                                         <button
                                             key={y.year}
                                             onClick={() => setActiveYear(i)}
-                                            className={`px-6 py-4 rounded-2xl font-bold text-sm transition-all duration-300 whitespace-nowrap text-left border ${activeYear === i
-                                                ? 'bg-accent text-black border-accent'
-                                                : 'bg-background-alt text-foreground/40 border-white/5 hover:border-accent/30'
+                                            className={`px-6 py-4 rounded-xl font-orbitron font-black text-xs uppercase tracking-widest transition-all duration-300 whitespace-nowrap text-left border ${activeYear === i
+                                                ? 'bg-black text-accent border-black'
+                                                : 'bg-black/5 text-black/50 border-black/10 hover:border-black/30'
                                                 }`}
                                         >
                                             {y.year}
@@ -407,49 +408,51 @@ const AIMLSpecializationPage = () => {
                 </div>
             </section>
 
-            {/* Applications Section - NEON */}
-            <section className="py-24 relative overflow-hidden" style={{backgroundColor: '#D8F602'}}>
-                
+            {/* Applications Section - PURPLE */}
+            <section className="py-24 relative overflow-hidden" style={{backgroundColor: '#571AD0'}}>
                 <div className="container-boxed w-full max-w-[1224px] mx-auto relative z-10">
-                    <div className="space-y-16">
-                        <motion.h2
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="text-4xl md:text-5xl lg:text-6xl font-bold text-black"
-                        >
-                            Applications of <span className=" text-black">AI & ML</span>
-                        </motion.h2>
+                    <div className="space-y-20">
+                        <div className="text-center space-y-4">
+                            <motion.h2
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="text-4xl md:text-6xl lg:text-8xl font-orbitron font-black text-white tracking-tighter"
+                            >
+                                Career <span className="text-accent italic">Impact</span>
+                            </motion.h2>
+                            <p className="text-white/60 font-orbitron text-lg tracking-[0.2em] uppercase">Applications of AI & ML</p>
+                        </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             {[
                                 {
-                                    title: "Machine Learning Engineer",
-                                    desc: "Developing algorithms that allow computers to learn and make decisions from complex data.",
-                                    image: "/Other/app-cloud.jpg",
-                                    major: "AI & ML",
+                                    title: "ML Ops Engineer",
+                                    desc: "Architecting the infrastructure that scales AI models from local experiments to global production environments.",
+                                    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+                                    major: "Neural Systems",
                                     lab: "NVIDIA Pipeline"
                                 },
                                 {
-                                    title: "Robotics Scientist",
-                                    desc: "Designing intelligent systems that enable robots to interact naturally with the human world.",
-                                    image: "/Other/app-devops.jpg",
-                                    major: "AI & ML",
+                                    title: "Deep Learning Researcher",
+                                    desc: "Pushing the boundaries of neural architectures to solve complex reasoning and perception challenges.",
+                                    image: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&w=800&q=80",
+                                    major: "Core Intelligence",
+                                    lab: "Shodh AI Research"
+                                },
+                                {
+                                    title: "Computer Vision Lead",
+                                    desc: "Developing next-gen perception systems for autonomous vehicles, medical imaging, and smart surveillance.",
+                                    image: "https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=800&q=80",
+                                    major: "Visual Intelligence",
                                     lab: "Embodied Brain Lab"
                                 },
                                 {
-                                    title: "Computer Vision Expert",
-                                    desc: "Building systems that can perceive and interpret visual information like the human eye.",
-                                    image: "/Other/app-security.jpg",
-                                    major: "AI & ML",
-                                    lab: "Augmented Human Lab"
-                                },
-                                {
-                                    title: "Autonomous Systems Lead",
-                                    desc: "Architecting self-driving cars, drones, and automated industrial ecosystems.",
-                                    image: "/Other/app-architect.jpg",
-                                    major: "AI & ML",
-                                    lab: "Shodh AI Research"
+                                    title: "AI Ethics Architect",
+                                    desc: "Designing governance frameworks ensuring transparency, safety, and unbiased performance in AI systems.",
+                                    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
+                                    major: "System Governance",
+                                    lab: "Policy Hub"
                                 }
                             ].map((app, idx) => (
                                 <motion.div
@@ -458,41 +461,33 @@ const AIMLSpecializationPage = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: idx * 0.1 }}
-                                    className="glass border border-white/5 rounded-2xl overflow-hidden hover:border-accent/30 transition-all group flex flex-col"
+                                    className="bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-accent/40 transition-all group flex flex-col shadow-2xl"
                                 >
-                                    <div className="aspect-[4/3] relative overflow-hidden">
+                                    <div className="aspect-[4/5] relative overflow-hidden">
                                         <Image
                                             src={app.image}
                                             alt={app.title}
                                             fill
-                                            className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                            className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
                                     </div>
 
-                                    <div className="p-6 space-y-4 flex-1 flex flex-col">
-                                        <h4 className="text-xl font-bold text-black">{app.title}</h4>
-                                        <p className="text-sm text-black/70 leading-relaxed line-clamp-3">
+                                    <div className="p-8 space-y-5 flex-1 flex flex-col -mt-20 relative z-10 bg-black/60 backdrop-blur-md">
+                                        <h4 className="text-2xl font-orbitron font-black text-accent leading-tight">{app.title}</h4>
+                                        <p className="text-sm text-white/70 leading-relaxed font-medium line-clamp-4">
                                             {app.desc}
                                         </p>
 
-                                        <div className="mt-auto pt-6 space-y-3">
+                                        <div className="mt-auto pt-6 space-y-3 border-t border-white/10">
                                             <div className="flex items-center justify-between">
-                                                <div className="flex items-center gap-3">
-                                                    <span className="text-[10px] font-bold text-black/40 uppercase tracking-widest">Major</span>
-                                                    <span className="px-3 py-1 bg-purple/10 border border-purple/20 text-purple text-[10px] font-bold rounded-md uppercase">
-                                                        {app.major}
-                                                    </span>
-                                                </div>
+                                                <span className="text-[10px] font-orbitron font-bold text-white/40 uppercase tracking-widest">Major Segment</span>
+                                                <span className="text-accent text-[10px] font-black uppercase tracking-wider">{app.major}</span>
                                             </div>
 
                                             <div className="flex items-center justify-between">
-                                                <div className="flex items-center gap-3">
-                                                    <span className="text-[10px] font-bold text-black/40 uppercase tracking-widest">Lab</span>
-                                                    <span className="px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-[10px] font-bold rounded-md uppercase">
-                                                        {app.lab}
-                                                    </span>
-                                                </div>
+                                                <span className="text-[10px] font-orbitron font-bold text-white/40 uppercase tracking-widest">Strategic Lab</span>
+                                                <span className="text-white text-[10px] font-black uppercase tracking-wider">{app.lab}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -503,61 +498,56 @@ const AIMLSpecializationPage = () => {
                 </div>
             </section>
 
-            {/* Fees Structure Section - BLACK */}
-            <section className="py-24 bg-black text-white relative overflow-hidden">
-                
+            {/* Fees Structure Section - NEON */}
+            <section className="py-32 relative overflow-hidden" style={{backgroundColor: '#D8F602'}}>
                 <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto">
-                    <div className="space-y-12">
-                        <motion.h2
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white"
-                        >
-                            Fees <span className=" text-white/60 ">Structure</span>
-                        </motion.h2>
+                    <div className="space-y-16">
+                        <div className="space-y-4">
+                            <motion.h2
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="text-5xl md:text-8xl font-orbitron font-black text-black tracking-tighter"
+                            >
+                                Fees <span className="opacity-30">Structure</span>
+                            </motion.h2>
+                        </div>
 
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="overflow-x-auto rounded-[2rem] glass border border-white/5 shadow-2xl"
+                            className="overflow-x-auto rounded-[3rem] bg-black shadow-[0_40px_100px_rgba(0,0,0,0.3)] border border-black/5"
                         >
                             <table className="w-full text-left border-collapse min-w-[1000px]">
                                 <thead>
-                                    <tr className="bg-purple/10">
-                                        <th className="p-8 text-lg font-bold text-white border-r border-white/5 w-1/3 text-center">Program Name</th>
-                                        <th className="p-8 text-lg font-bold text-white border-r border-white/5 w-1/12 text-center">Duration</th>
-                                        <th className="p-8 text-lg font-bold text-white border-r border-white/5 w-1/6 text-center">Annual Fee (INR)</th>
-                                        <th className="p-8 text-lg font-bold text-white w-1/3 text-center">Qualification</th>
+                                    <tr className="bg-white/5">
+                                        <th className="p-10 text-xs font-orbitron font-black text-accent uppercase tracking-[0.2em] border-r border-white/5 w-1/3 text-center">Specialization Architecture</th>
+                                        <th className="p-10 text-xs font-orbitron font-black text-accent uppercase tracking-[0.2em] border-r border-white/5 w-1/12 text-center">Duration</th>
+                                        <th className="p-10 text-xs font-orbitron font-black text-accent uppercase tracking-[0.2em] border-r border-white/5 w-1/6 text-center">Annual Investment</th>
+                                        <th className="p-10 text-xs font-orbitron font-black text-accent uppercase tracking-[0.2em] w-1/3 text-center">Entry Threshold</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr className="glass/30 group">
-                                        <td className="p-10 border-r border-white/5 align-top space-y-8">
-                                            <div className="space-y-4">
-                                                <p className="text-white/60 font-medium">B.Tech. (with one Major & one Minor Specialization pattern)</p>
-                                                <h4 className="text-xl font-bold text-white leading-snug">
-                                                    Computer Science & Engineering with any one Major Specialization in
+                                    <tr className="group">
+                                        <td className="p-12 border-r border-white/5 align-top space-y-10">
+                                            <div className="space-y-6">
+                                                <p className="text-white/40 font-orbitron text-[10px] uppercase tracking-widest">Major Specialization</p>
+                                                <h4 className="text-2xl font-orbitron font-black text-white leading-tight">
+                                                    Artificial Intelligence & <br/>
+                                                    <span className="text-accent italic">Machine Learning</span>
                                                 </h4>
-                                                <ul className="grid grid-cols-1 gap-2">
-                                                    {["Artificial Intelligence & Machine Learning", "Cloud Engineering", "Software Engineering", "Data Engineering", "Cyber Security"].map((item) => (
-                                                        <li key={item} className="flex items-center gap-3 text-white/70">
-                                                            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                                                            {item}
-                                                        </li>
-                                                    ))}
-                                                </ul>
+                                                <div className="inline-block px-4 py-2 bg-accent/10 border border-accent/20 rounded-lg">
+                                                    <span className="text-accent font-bold text-xs uppercase tracking-wider">Primary Track: AI Research & Engineering</span>
+                                                </div>
                                             </div>
 
-                                            <div className="space-y-4 pt-4">
-                                                <h4 className="text-xl font-bold text-white leading-snug">
-                                                    Minor Specialization (Choose any one Minor):
-                                                </h4>
-                                                <ul className="grid grid-cols-2 gap-x-6 gap-y-2">
-                                                    {["Robotics", "Bioinformatics", "Industry & Manufacturing", "Nanotechnology", "Geoinformatics", "Chip & Semiconductor", "Smart Cities", "Design", "Fintech"].map((item) => (
-                                                        <li key={item} className="flex items-center gap-3 text-white/70">
-                                                            <span className="w-1 h-1 rounded-full bg-purple" />
+                                            <div className="space-y-6 pt-6 border-t border-white/5">
+                                                <p className="text-white/40 font-orbitron text-[10px] uppercase tracking-widest">Minor Specializations (Select One)</p>
+                                                <ul className="grid grid-cols-2 gap-x-8 gap-y-4">
+                                                    {["Robotics & Automation", "Cloud Intelligence", "Cyber Security", "Data Science", "Blockchain Tech", "UX/UI Design", "Digital Marketing", "Business Analytics", "Edge Computing"].map((item) => (
+                                                        <li key={item} className="flex items-center gap-3 text-white/70 text-sm font-medium">
+                                                            <span className="w-1.5 h-1.5 rounded-full bg-accent/40" />
                                                             {item}
                                                         </li>
                                                     ))}
@@ -565,28 +555,29 @@ const AIMLSpecializationPage = () => {
                                             </div>
                                         </td>
 
-                                        <td className="p-10 border-r border-white/5 text-center align-middle">
-                                            <span className="text-2xl font-bold text-white">4 Years</span>
+                                        <td className="p-12 border-r border-white/5 text-center align-middle">
+                                            <span className="text-4xl font-orbitron font-black text-white">04</span>
+                                            <p className="text-[10px] font-orbitron font-bold text-white/30 uppercase mt-2">Years</p>
                                         </td>
 
-                                        <td className="p-10 border-r border-white/5 text-center align-middle">
-                                            <div className="space-y-1">
-                                                <span className="text-3xl font-bold text-accent">₹ 2,00,000</span>
-                                                <p className="text-[10px] text-white/40 font-bold uppercase tracking-widest leading-none">Per Annum</p>
+                                        <td className="p-12 border-r border-white/5 text-center align-middle">
+                                            <div className="space-y-2">
+                                                <span className="text-4xl font-orbitron font-black text-accent">₹2.0L</span>
+                                                <p className="text-[10px] text-white/40 font-bold uppercase tracking-widest">(Per Annum)</p>
                                             </div>
                                         </td>
 
-                                        <td className="p-10 align-top">
-                                            <div className="space-y-6 text-white/70 leading-relaxed font-medium">
-                                                <p>
-                                                    Passed 10+2 from any government recognized board with <span className="text-white font-bold">Physics and Mathematics</span> as compulsory subjects,
-                                                </p>
-                                                <p className="">along with one of the following:</p>
-                                                <div className="glass p-6 rounded-2xl border border-purple/20">
-                                                    <p className="text-white font-bold">
-                                                        Chemistry / Biotechnology / Computer Science / Biology
+                                        <td className="p-12 align-top">
+                                            <div className="space-y-10 text-white/70 leading-relaxed">
+                                                <div className="space-y-4">
+                                                    <p className="text-white/40 font-orbitron text-[10px] uppercase tracking-widest">Eligibility Criteria</p>
+                                                    <p className="text-lg font-medium leading-normal">
+                                                        10+2 with <span className="text-white font-bold">Physics & Math</span> (Compulsory) + Chem/CS/Bio.
                                                     </p>
-                                                    <p className="mt-2">with at least <span className="text-accent font-black text-xl">70%.</span></p>
+                                                </div>
+                                                <div className="bg-white/5 p-8 rounded-3xl border border-white/10 shadow-inner">
+                                                    <p className="text-accent font-orbitron font-black text-4xl">70%</p>
+                                                    <p className="text-xs font-bold text-white/50 uppercase tracking-widest mt-2">Aggregrate Minimum</p>
                                                 </div>
                                             </div>
                                         </td>
@@ -597,323 +588,95 @@ const AIMLSpecializationPage = () => {
                     </div>
                 </div>
             </section>
-
-            {/* Career Prospects Section - PURPLE */}
-            <section className="py-16 relative overflow-hidden" style={{backgroundColor: '#5B1DD6'}}>
-                
-                <div className="container-boxed relative z-10">
-                    <div className="max-w-6xl mx-auto">
-                        {/* Heading */}
-                        <motion.h2
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="text-3xl font-bold text-white mb-8"
-                        >
-                            Top Engineering{" "}
-                            <span className="text-white font-serif">
-                                Career Prospects
-                            </span>
-                        </motion.h2>
-
-                        {/* Main Container with Ellipse and Snake-like Curved Line */}
-                        <div className="relative mx-auto" style={{ width: '1230px', maxWidth: '100%' }}>
-                            {/* Ellipse Background */}
-                            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-accent/20 rounded-full" style={{ top: '36.93px' }}></div>
-                            
-                            {/* Snake-like Curved Path SVG */}
-                            <svg 
-                                className="absolute inset-0 w-full h-full pointer-events-none"
-                                style={{ height: '250px', top: '60px' }}
-                                viewBox="0 0 1230 250"
-                                preserveAspectRatio="none"
-                            >
-                                {/* Snake-like curved path */}
-                                <path
-                                    d="M 50 50 
-                                       Q 200 30, 350 50 
-                                       T 650 50
-                                       Q 800 70, 950 50
-                                       T 1150 50
-                                       L 1150 200
-                                       Q 1000 220, 850 200
-                                       T 550 200
-                                       Q 400 180, 250 200
-                                       T 50 200
-                                       Z"
-                                    fill="none"
-                                    stroke="url(#gradient)"
-                                    strokeWidth="8"
-                                    strokeDasharray="48 12"
-                                    strokeLinecap="round"
-                                    opacity="0.5"
-                                />
-                                
-                                {/* Gradient definition */}
-                                <defs>
-                                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                        <stop offset="7.31%" stopColor="#D8F602" stopOpacity="0.3" />
-                                        <stop offset="96.42%" stopColor="#D8F602" stopOpacity="0.1" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-
-                            {/* Content Container */}
-                            <div className="relative pt-16 pb-8 px-4">
-                                {/* Top Row - 4 Cards */}
-                                <div className="grid grid-cols-4 gap-8 mb-8">
-                                    {[
-                                        { id: "01", title: "AI Engineer" },
-                                        { id: "02", title: "Full Stack Developer" },
-                                        { id: "03", title: "Front-end Developer" },
-                                        { id: "04", title: "DevOps Engineer" }
-                                    ].map((item, index) => (
-                                        <motion.div
-                                            key={item.id}
-                                            initial={{ opacity: 0, y: 30 }}
-                                            whileInView={{ opacity: 1, y: 0 }}
-                                            viewport={{ once: true }}
-                                            transition={{ delay: index * 0.1 }}
-                                            className="relative glass rounded-lg shadow-sm border border-white/10 hover:border-accent/30 transition-all"
-                                            style={{ height: '92px' }}
-                                        >
-                                            <div className="flex items-center gap-4 p-4" style={{ gap: '17px' }}>
-                                                {/* Number */}
-                                                <span 
-                                                    className="text-accent font-semibold"
-                                                    style={{ 
-                                                        width: '25px',
-                                                        height: '30px',
-                                                        fontFamily: 'Outfit',
-                                                        fontWeight: '500',
-                                                        fontSize: '24px',
-                                                        lineHeight: '100%',
-                                                        letterSpacing: '1%'
-                                                    }}
-                                                >
-                                                    {item.id}
-                                                </span>
-
-                                                {/* Text */}
-                                                <p className="text-white font-medium leading-snug">
-                                                    {item.title}
-                                                </p>
-                                            </div>
-                                        </motion.div>
-                                    ))}
-                                </div>
-
-                                {/* Bottom Row - 4 Cards */}
-                                <div className="grid grid-cols-4 gap-8">
-                                    {[
-                                        { id: "05", title: "Machine Learning Engineer" },
-                                        { id: "06", title: "Quality Assurance Engineer" },
-                                        { id: "07", title: "Mobile App Developer" },
-                                        { id: "08", title: "Cybersecurity Analyst" }
-                                    ].map((item, index) => (
-                                        <motion.div
-                                            key={item.id}
-                                            initial={{ opacity: 0, y: 30 }}
-                                            whileInView={{ opacity: 1, y: 0 }}
-                                            viewport={{ once: true }}
-                                            transition={{ delay: (index + 4) * 0.1 }}
-                                            className="relative bg-white rounded-lg shadow-sm border border-gray-100"
-                                            style={{ height: '92px' }}
-                                        >
-                                            <div className="flex items-center gap-4 p-4" style={{ gap: '17px' }}>
-                                                {/* Number */}
-                                                <span 
-                                                    className="text-purple font-semibold"
-                                                    style={{ 
-                                                        width: '25px',
-                                                        height: '30px',
-                                                        fontFamily: 'Outfit',
-                                                        fontWeight: '500',
-                                                        fontSize: '24px',
-                                                        lineHeight: '100%',
-                                                        letterSpacing: '1%'
-                                                    }}
-                                                >
-                                                    {item.id}
-                                                </span>
-
-                                                {/* Text */}
-                                                <p className="text-white font-medium leading-snug">
-                                                    {item.title}
-                                                </p>
-                                            </div>
-                                        </motion.div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
+            
             {/* Emerging Trends Section - NEON */}
             <section className="py-24 relative overflow-hidden" style={{backgroundColor: '#D8F602'}}>
-                
-                <div className="container-boxed relative z-10">
-                    <div className="max-w-[1224px] mx-auto relative">
-                        {/* Main Container */}
-                        <div className="glass flex flex-col border border-white/10 rounded-3xl shadow-2xl">
-                            {/* Heading Area */}
-                            <div className="px-8 pt-8 pb-8">
-                                <motion.h2
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    className="text-[32px] font-bold text-black tracking-tight"
-                                >
-                                    Emerging <span className="text-black font-serif">Trends</span>
-                                </motion.h2>
-                            </div>
+                <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto">
+                    <div className="space-y-16">
+                        <div className="space-y-4">
+                            <motion.h2
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="text-4xl md:text-7xl font-orbitron font-black text-black tracking-tighter"
+                            >
+                                Emerging <span className="opacity-30">Trends</span>
+                            </motion.h2>
+                            <p className="text-black/40 font-orbitron text-xs uppercase tracking-[0.3em]">The Horizon of AI</p>
+                        </div>
 
-                            {/* 5 Cards Row - Flex container filling full width */}
-                            <div className="flex w-full mt-auto">
-                                {[
-                                    {
-                                        id: "01",
-                                        title: "Software\nEngineering for AI\nSystems",
-                                        bg: "bg-purple/10",
-                                        numColor: "text-accent"
-                                    },
-                                    {
-                                        id: "02",
-                                        title: "DevOps and\nContinuous\nEverything",
-                                        bg: "bg-accent/10",
-                                        numColor: "text-purple"
-                                    },
-                                    {
-                                        id: "03",
-                                        title: "Quantum\nSoftware\nEngineering",
-                                        bg: "bg-purple/5",
-                                        numColor: "text-accent"
-                                    },
-                                    {
-                                        id: "04",
-                                        title: "AI-Driven\nSoftware\nEngineering",
-                                        bg: "bg-accent/5",
-                                        numColor: "text-purple"
-                                    },
-                                    {
-                                        id: "05",
-                                        title: "Full Stack\nDevelopment",
-                                        bg: "bg-purple/10",
-                                        numColor: "text-accent"
-                                    }
-                                ].map((item, index) => (
-                                    <motion.div
-                                        key={item.id}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ delay: index * 0.1 }}
-                                        className={`flex-1 ${item.bg} p-6 min-h-[160px] flex flex-col gap-4 border-t-[1px] border-black/5`}
-                                    >
-                                        <span className={`text-[24px] font-medium ${item.numColor}`}>
-                                            {item.id}
-                                        </span>
-                                        <p className="text-[15px] leading-snug font-medium text-black whitespace-pre-line">
-                                            {item.title}
-                                        </p>
-                                    </motion.div>
-                                ))}
-                            </div>
+                        <div className="grid grid-cols-1 md:grid-cols-5 bg-black rounded-[2.5rem] overflow-hidden shadow-2xl border border-black/5">
+                            {[
+                                { id: "01", title: "Neuro-\nSymbolic AI" },
+                                { id: "02", title: "Embodied\nSystems" },
+                                { id: "03", title: "Liquid\nNeural Nets" },
+                                { id: "04", title: "Diffusion\nArchitectures" },
+                                { id: "05", title: "Edge\nIntelligence" }
+                            ].map((item, index) => (
+                                <motion.div
+                                    key={item.id}
+                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.1 }}
+                                    className="p-10 min-h-[220px] flex flex-col justify-between border-r border-white/5 last:border-r-0 hover:bg-white/20 transition-all group"
+                                >
+                                    <span className="text-2xl font-orbitron font-black text-accent opacity-40 group-hover:opacity-100 transition-opacity">
+                                        {item.id}
+                                    </span>
+                                    <p className="text-lg leading-tight font-orbitron font-black text-white whitespace-pre-line group-hover:scale-105 transition-transform origin-left">
+                                        {item.title}
+                                    </p>
+                                </motion.div>
+                            ))}
                         </div>
                     </div>
                 </div>
-            </section>
-            {/* Prospective Placement Partners Section - BLACK */}
-            <section className="bg-black py-16 text-white relative overflow-hidden">
-                
-                <div className="container-boxed text-center relative z-10">
-                    <div className="max-w-[1224px] mx-auto">
+            </section>            {/* Prospective Placement Partners Section - BLACK */}
+            <section className="bg-black py-24 text-white relative overflow-hidden">
+                <div className="container-boxed text-center relative z-10 w-full max-w-[1300px] mx-auto">
+                    <div className="space-y-16">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="mb-16 relative inline-block"
+                            className="space-y-4"
                         >
-                            <h2 className="text-[40px] font-bold text-white tracking-tight">
-                                Prospective Placement <span className="text-white font-serif">Partners</span>
+                            <h2 className="text-4xl md:text-6xl font-orbitron font-black text-white tracking-widest uppercase">
+                                Global <span className="text-accent italic">Networks</span>
                             </h2>
-                            {/* Simple purple underline curve under 'Partners' */}
-                            <svg className="absolute -bottom-4 right-0 w-[200px] h-[12px] text-accent/30" viewBox="0 0 200 12" fill="none">
-                                <path d="M2 10C50 4 150 2 198 8" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
-                            </svg>
+                            <p className="text-white/30 font-orbitron text-xs uppercase tracking-[0.4em]">Placement Partners</p>
                         </motion.div>
 
-                        {/* Top row of logos */}
-                        <div className="flex justify-center gap-6 mb-6 flex-wrap">
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 px-4">
                             {[
-                                { name: "Google", src: "/ProgramPartners/google.webp", width: "w-[180px]" },
-                                { name: "Microsoft", src: "/ProgramPartners/micro.webp", width: "w-[200px]" },
-                                { name: "Amazon", src: "/Other/amazon.png", fallback: "amazon", width: "w-[180px]" },
-                                { name: "Meta", src: "/Other/meta.png", fallback: "meta", width: "w-[180px]" },
-                                { name: "Infosys", src: "/Other/infosys.png", fallback: "infosys", width: "w-[180px]" },
-                                { name: "TCS", src: "/Other/tcs.png", fallback: "tcs", width: "w-[160px]" }
+                                { name: "Google", src: "/ProgramPartners/google.webp" },
+                                { name: "Microsoft", src: "/ProgramPartners/micro.webp" },
+                                { name: "Amazon", src: "/Other/amazon.png" },
+                                { name: "Meta", src: "/Other/meta.png" },
+                                { name: "Infosys", src: "/Other/infosys.png" },
+                                { name: "TCS", src: "/Other/tcs.png" },
+                                { name: "Wipro", src: "/Other/wipro.png" },
+                                { name: "Accenture", src: "/Other/accenture.png" },
+                                { name: "Zerodha", src: "/Other/zerodha.png" },
+                                { name: "CRED", src: "/Other/cred.png" },
+                                { name: "Swiggy", src: "/Other/swiggy.png" },
+                                { name: "Adobe", src: "/Other/adobe.png" }
                             ].map((partner, idx) => (
                                 <motion.div
-                                    key={`top-${idx}`}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
+                                    key={partner.name}
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
                                     viewport={{ once: true }}
-                                    transition={{ delay: idx * 0.1 }}
-                                    className={`glass h-[90px] ${partner.width} flex items-center justify-center p-6 shadow-lg hover:shadow-xl hover:border-accent/30 transition-all border border-white/10`}
+                                    transition={{ delay: idx * 0.05 }}
+                                    className="bg-white/5 h-[140px] rounded-2xl flex items-center justify-center p-8 border border-white/10 hover:bg-white/10 hover:border-accent/30 transition-all group"
                                 >
                                     <div className="relative w-full h-full flex items-center justify-center">
                                         <Image
                                             src={partner.src}
                                             alt={partner.name}
                                             fill
-                                            className="object-contain"
-                                            onError={(e) => {
-                                                // Fallback to text if image not found during dev
-                                                e.currentTarget.style.display = 'none';
-                                                e.currentTarget.parentElement?.classList.add('text-2xl', 'font-bold', 'text-gray-400');
-                                                if (e.currentTarget.parentElement) {
-                                                    e.currentTarget.parentElement.innerText = partner.name;
-                                                }
-                                            }}
-                                        />
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-
-                        {/* Bottom row of logos */}
-                        <div className="flex justify-center gap-6 flex-wrap">
-                            {[
-                                { name: "Wipro", src: "/Other/wipro.png", fallback: "wipro", width: "w-[180px]" },
-                                { name: "Accenture", src: "/Other/accenture.png", fallback: "accenture", width: "w-[200px]" },
-                                { name: "Zerodha", src: "/Other/zerodha.png", fallback: "zerodha", width: "w-[180px]" },
-                                { name: "CRED", src: "/Other/cred.png", fallback: "cred", width: "w-[160px]" },
-                                { name: "Swiggy", src: "/Other/swiggy.png", fallback: "swiggy", width: "w-[180px]" }
-                            ].map((partner, idx) => (
-                                <motion.div
-                                    key={`bottom-${idx}`}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: (idx + 6) * 0.1 }}
-                                    className={`glass h-[90px] ${partner.width} flex items-center justify-center p-6 shadow-lg hover:shadow-xl hover:border-accent/30 transition-all border border-white/10`}
-                                >
-                                    <div className="relative w-full h-full flex items-center justify-center">
-                                        <Image
-                                            src={partner.src}
-                                            alt={partner.name}
-                                            fill
-                                            className="object-contain"
-                                            onError={(e) => {
-                                                // Fallback to text if image not found during dev
-                                                e.currentTarget.style.display = 'none';
-                                                e.currentTarget.parentElement?.classList.add('text-2xl', 'font-bold', 'text-gray-400');
-                                                if (e.currentTarget.parentElement) {
-                                                    e.currentTarget.parentElement.innerText = partner.name;
-                                                }
-                                            }}
+                                            className="object-contain grayscale contrast-125 group-hover:grayscale-0 group-hover:scale-125 transition-all duration-500"
                                         />
                                     </div>
                                 </motion.div>
@@ -922,31 +685,32 @@ const AIMLSpecializationPage = () => {
                     </div>
                 </div>
             </section>
-
             {/* An Overview Section - PURPLE */}
-            <section className="py-20 relative overflow-hidden" style={{backgroundColor: '#5B1DD6'}}>
-                
-                <div className="container-boxed relative z-10">
-                    <div className="max-w-[1224px] mx-auto">
-                        <motion.h2
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="text-[40px] font-bold text-white tracking-tight mb-12"
-                        >
-                            An <span className="text-white font-serif">Overview</span>
-                        </motion.h2>
+            <section className="py-24 relative overflow-hidden bg-[#571AD0]">
+                <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto">
+                    <div className="space-y-20">
+                        <div className="text-center space-y-4">
+                            <motion.h2
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="text-4xl md:text-7xl font-orbitron font-black text-white tracking-widest uppercase"
+                            >
+                                Institutional <span className="text-accent italic">Edge</span>
+                            </motion.h2>
+                            <p className="text-white/40 font-orbitron text-xs uppercase tracking-[0.4em]">An Overview</p>
+                        </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             {[
-                                { value: "10,000+", label: "Current students in various\ncourses" },
-                                { value: "125 +", label: "Industry tie-ups for skill\ndevelopment" },
-                                { value: "40 K", label: "Alumni working worldwide in\nMNCs" },
-                                { value: "340+", label: "Placement offers in\nBatch-2024" },
-                                { value: "42 LPA", label: "Highest package offered in\n2024" },
-                                { value: "4.1 LPA", label: "Average package in\nbatch-2022" },
-                                { value: "45 Acre", label: "Lush green campus with\nhostel" },
-                                { value: "10,000", label: "Sq. ft. Innovation lab for\nprojects" }
+                                { value: "10,000+", label: "Academic Minds" },
+                                { value: "125+", label: "Industry Alliances" },
+                                { value: "40K+", label: "Global Alumni Network" },
+                                { value: "340+", label: "Strategic Placements" },
+                                { value: "42 LPA", label: "Peak Opportunity" },
+                                { value: "4.1 LPA", label: "Mean Trajectory" },
+                                { value: "45 Acre", label: "Smart Infrastructure" },
+                                { value: "10,000", label: "Innovation Lab (Sq Ft)" }
                             ].map((stat, idx) => (
                                 <motion.div
                                     key={`stat-${idx}`}
@@ -954,14 +718,14 @@ const AIMLSpecializationPage = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: idx * 0.1 }}
-                                    className="glass p-8 flex flex-col justify-start border border-white/10 hover:border-accent/30 transition-all"
+                                    className="bg-black/40 backdrop-blur-xl p-10 flex flex-col justify-start border border-white/10 hover:border-accent/40 transition-all rounded-[2rem] shadow-2xl group"
                                 >
-                                    <div className="border-b-[1.5px] border-accent/20 pb-4 mb-4">
-                                        <h3 className="text-[28px] font-bold text-white">
+                                    <div className="border-b-[1.5px] border-white/5 pb-6 mb-6">
+                                        <h3 className="text-4xl font-orbitron font-black text-accent group-hover:scale-110 transition-transform origin-left">
                                             {stat.value}
                                         </h3>
                                     </div>
-                                    <p className="text-[14px] leading-relaxed text-white/80 font-medium whitespace-pre-line">
+                                    <p className="text-xs leading-relaxed text-white/60 font-orbitron font-bold uppercase tracking-widest">
                                         {stat.label}
                                     </p>
                                 </motion.div>
@@ -970,41 +734,26 @@ const AIMLSpecializationPage = () => {
                     </div>
                 </div>
             </section>
-
             {/* AESTR @Advantages Section - NEON */}
-            <section className="py-20 relative overflow-hidden" style={{backgroundColor: '#D8F602'}}>
-                
-                <div className="container-boxed relative z-10">
-                    <div className="max-w-[1224px] mx-auto">
-                        <div className="mb-12">
-                            <motion.div
+            <section className="py-24 relative overflow-hidden" style={{backgroundColor: '#D8F602'}}>
+                <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto">
+                    <div className="space-y-16">
+                        <div className="space-y-4">
+                            <motion.h2
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="relative inline-block mb-4"
+                                className="text-4xl md:text-7xl font-orbitron font-black text-black tracking-tighter"
                             >
-                                <h2 className="text-[40px] font-bold text-black tracking-tight">
-                                    AESTR <span className="text-black font-serif">@Advantages</span>
-                                </h2>
-                                {/* Simple purple underline curve under '@Advantages' */}
-                                <svg className="absolute -bottom-2 right-0 w-[240px] h-[12px] text-accent/30" viewBox="0 0 240 12" fill="none">
-                                    <path d="M2 10C60 4 180 2 238 8" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
-                                </svg>
-                            </motion.div>
-                            
-                            <motion.p
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.1 }}
-                                className="text-[18px] text-black/80 font-medium mt-6 max-w-4xl"
-                            >
+                                AESTR <span className="opacity-30">@Advantages</span>
+                            </motion.h2>
+                            <p className="text-black/60 font-orbitron text-sm max-w-4xl font-bold uppercase tracking-[0.2em] leading-relaxed">
                                 Train for roles powering the next generation of banking, robotics, healthcare, and more—with real-world impact and future security.
-                            </motion.p>
+                            </p>
                         </div>
 
                         {/* Top Row - 3 Cards */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
                                 { num: "1", text: "Student awarded as First\nGoogle Ambassador." },
                                 { num: "2", text: "Recipient of I.GAUGE E-\nLEAD CERTIFICATE" },
@@ -1016,21 +765,14 @@ const AIMLSpecializationPage = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: idx * 0.1 }}
-                                    className="glass p-8 flex items-center gap-6 relative overflow-hidden border border-white/10 hover:border-accent/30 transition-all"
+                                    className="bg-black p-10 flex flex-col gap-8 rounded-[3rem] shadow-2xl group hover:scale-[1.02] transition-transform"
                                 >
-                                    {/* Large background A */}
-                                    <div className="absolute left-4 top-1/2 -translate-y-1/2 text-[120px] font-black text-purple/20 opacity-50 select-none pointer-events-none z-0">
-                                        A
-                                    </div>
-                                    
-                                    <div className="relative z-10 flex items-center gap-6 w-full">
-                                        <span className="text-[48px] font-medium text-foreground">
-                                            {card.num}
-                                        </span>
-                                        <p className="text-[16px] leading-snug text-foreground/80 font-medium whitespace-pre-line">
-                                            {card.text}
-                                        </p>
-                                    </div>
+                                    <span className="text-7xl font-orbitron font-black text-accent drop-shadow-[0_0_10px_rgba(216,246,2,0.3)]">
+                                        {card.num}
+                                    </span>
+                                    <p className="text-lg leading-snug text-white/80 font-orbitron font-bold whitespace-pre-line">
+                                        {card.text}
+                                    </p>
                                 </motion.div>
                             ))}
                         </div>
@@ -1041,272 +783,119 @@ const AIMLSpecializationPage = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.3 }}
-                            className="glass p-10 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden border border-white/10"
+                            className="bg-black p-12 flex flex-col md:flex-row items-center justify-between gap-10 rounded-[3rem] shadow-2xl"
                         >
-                            <p className="text-[24px] md:text-[28px] leading-snug font-medium text-foreground max-w-4xl relative z-10">
-                                Student chapters of Professional Bodies IEEE, CSI, NPTEL, ICT, IETE, SAE, IAESTE, etc.
+                            <p className="text-2xl md:text-3xl font-orbitron font-black text-white max-w-4xl leading-tight">
+                                Student chapters of Professional Bodies <span className="text-accent underline underline-offset-8">IEEE, CSI, NPTEL, ICT, IETE, SAE, IAESTE, etc.</span>
                             </p>
                             
-                            <button className="bg-accent text-black px-8 py-4 flex items-center gap-3 hover:bg-accent/90 transition-colors relative z-10 whitespace-nowrap font-black uppercase tracking-tight">
-                                <span className="text-[14px] font-medium">Apply Now</span>
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M5 12h14"></path>
-                                    <path d="m12 5 7 7-7 7"></path>
-                                </svg>
-                            </button>
+                            <Link href="/#hero">
+                                <motion.button
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    className="bg-accent text-black px-12 py-5 rounded-2xl flex items-center gap-4 hover:shadow-[0_0_50px_rgba(216,246,2,0.4)] transition-all font-orbitron font-black uppercase tracking-widest text-sm"
+                                >
+                                    Apply Now
+                                    <ArrowRight className="w-5 h-5" />
+                                </motion.button>
+                            </Link>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>            {/* Future Scope Section - PURPLE */}
+            <section className="py-24 bg-[#571AD0] text-white relative overflow-hidden">
+                <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="space-y-10"
+                        >
+                            <div className="space-y-4">
+                                <h2 className="text-4xl md:text-6xl font-orbitron font-black text-white leading-tight">
+                                    Future Scope of <br/>
+                                    <span className="text-accent italic">AI Engineering</span>
+                                </h2>
+                                <p className="text-white/40 font-orbitron text-xs uppercase tracking-[0.3em]">Next-Gen Intelligence</p>
+                            </div>
+
+                            <div className="space-y-6 text-lg text-white/80 leading-relaxed font-medium">
+                                <p>The shift towards Artificial Intelligence and Machine Learning represents the most significant transformation in human history. As every industry—from medicine to finance—integrates intelligent agents, the demand for specialized engineers is projected to grow by <span className="text-accent font-bold">45% YoY</span>.</p>
+                                <p>Specializing in AI/ML at AESTR equips you with the fundamental architectures and ethical frameworks needed to shape the future of <span className="text-white font-bold">Autonomous Systems, Generative Models, and Cognitive Computing</span>.</p>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9, x: 50 }}
+                            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="relative lg:absolute lg:right-0 lg:w-1/2 h-[500px]"
+                        >
+                            <div className="relative w-full h-full rounded-l-[5rem] overflow-hidden border-4 border-white/10 shadow-3xl">
+                                <Image
+                                    src="https://images.unsplash.com/photo-1579546683335-5e8c11bd221b?auto=format&fit=crop&w=1200&q=80"
+                                    alt="Future Scope"
+                                    fill
+                                    className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                                />
+                            </div>
                         </motion.div>
                     </div>
                 </div>
             </section>
 
-            {/* Future Scope Section - BLACK */}
-            <section className="py-20 bg-black text-white relative overflow-hidden">
-                
-                <div className="container-boxed relative z-10">
-                    <div className="max-w-[1224px] mx-auto glass rounded-lg shadow-2xl overflow-hidden flex flex-col md:flex-row relative min-h-[400px] border border-white/10">
-                        {/* Left Content Side */}
-                        <div className="p-12 md:p-16 flex-1 z-10 relative">
-                            <motion.div
-                                initial={{ opacity: 0, x: -30 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+            {/* Innovation Labs of 2030 Section - BLACK */}
+            <section className="py-32 relative overflow-hidden bg-black">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-purple/5 pointer-events-none" />
+                <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto">
+                    <div className="space-y-20">
+                        <div className="text-center space-y-4">
+                            <motion.h2
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
+                                className="text-4xl md:text-7xl font-orbitron font-black text-white tracking-widest"
                             >
-                                <h2 className="text-[40px] leading-tight font-bold text-white mb-8">
-                                    Future Scope of<br />
-                                    <span className="text-white">Software Engineering</span>
-                                </h2>
-
-                                <h3 className="text-[20px] font-bold text-white mb-6">
-                                    Growing Demand
-                                </h3>
-
-                                <ul className="space-y-4">
-                                    <li className="flex items-start gap-3">
-                                        <span className="w-[6px] h-[6px] rounded-full bg-white mt-2 flex-shrink-0"></span>
-                                        <p className="text-[16px] leading-relaxed text-white/80 font-medium">
-                                            Every industry now runs on software: healthcare, finance, education, logistics, etc.
-                                        </p>
-                                    </li>
-                                    <li className="flex items-start gap-3">
-                                        <span className="w-[6px] h-[6px] rounded-full bg-white mt-2 flex-shrink-0"></span>
-                                        <p className="text-[16px] leading-relaxed text-white/80 font-medium">
-                                            Startups and global tech companies are hiring aggressively.
-                                        </p>
-                                    </li>
-                                </ul>
-                            </motion.div>
+                                Innovation <span className="text-accent italic">Labs</span>
+                            </motion.h2>
+                            <p className="text-white/30 font-orbitron text-xs uppercase tracking-[0.4em]">The 2030 Roadmap</p>
                         </div>
 
-                        {/* Right Image Side */}
-                        <div className="flex-1 relative min-h-[300px] md:min-h-full">
-                            {/* Purple Background Shape */}
-                            <div className="absolute right-0 bottom-0 w-full h-[60%] bg-purple/20 rounded-tl-[100px] z-0"></div>
-                            
-                            {/* Robot Image */}
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.9, x: 30 }}
-                                whileInView={{ opacity: 1, scale: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.2 }}
-                                className="absolute right-0 bottom-0 w-full h-[120%] z-10 flex items-end justify-end translate-y-8"
-                            >
-                                <div className="relative w-[120%] h-full">
-                                    <Image
-                                        src="/Other/cloud-robot.png"
-                                        alt="Future of Software Engineering Robot"
-                                        fill
-                                        className="object-contain object-bottom"
-                                        onError={(e) => {
-                                            // Fallback if cloud-robot.png doesn't exist
-                                            e.currentTarget.src = "/Other/future-robot.png";
-                                        }}
-                                    />
-                                </div>
-                            </motion.div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Innovation Labs of 2030 Section */}
-            <section className="relative py-24 bg-black overflow-hidden text-foreground">
-                {/* Ambient Background Glows */}
-                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent/10 rounded-full blur-[200px] pointer-events-none" />
-                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple/20 rounded-full blur-[150px] pointer-events-none" />
-                <div className="container-boxed relative z-10">
-                    <div className="space-y-24 max-w-[1224px] mx-auto">
-                        <div className="space-y-12">
-                            <motion.div
-                                initial={{ opacity: 0, x: -30 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.7 }}
-                                className="flex items-start gap-6"
-                            >
-                                <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-[#D7F601] flex items-center justify-center text-3xl md:text-4xl font-black text-black bg-[#D7F601] shadow-[0_0_20px_rgba(215,246,1,0.5)]">
-                                    5
-                                </div>
-                                <div className="space-y-4">
-                                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white flex flex-wrap items-center gap-4">
-                                        Innovation labs <span className="text-[#D7F601] italic">of 2030</span>
-                                    </h2>
-                                    <p className="text-lg text-white/70 max-w-3xl leading-relaxed">
-                                        Learn from the architects of tomorrow's AI. AESTR is the brainchild of leading AI engineers dedicated to cultivating the next generation of tech innovators.
-                                    </p>
-                                </div>
-                            </motion.div>
-
-                            {/* Features Grid */}
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                                {[
-                                    { title: 'Exclusive designs', desc: 'Co-created with insights from our work with DRDO, Silicon Valley startups, and our US-based company, Shodh AI (a top 1% AI startup).' },
-                                    { title: 'Become a domain champion', desc: 'Engage with at least three labs or achieve PhD-level expertise by dedicating your four years to a single lab.' },
-                                    { title: 'Expert-guided product development', desc: 'Each lab has dedicated experts to help you transform your innovative ideas into real-world products.' }
-                                ].map((card, i) => (
-                                    <motion.div
-                                        key={card.title}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 0.5, delay: i * 0.1 }}
-                                        className="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 group hover:bg-[#D7F601]/5 hover:border-[#D7F601]/30 transition-all duration-300"
-                                    >
-                                        <h4 className="text-base font-bold text-[#D7F601] mb-4 leading-tight uppercase tracking-widest">{card.title}</h4>
-                                        <p className="text-sm text-white/70 leading-relaxed font-semibold">{card.desc}</p>
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Labs Alternating Grid */}
-                        <div className="space-y-32">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             {[
-                                { 
-                                    name: 'Apple Ecosystem', 
-                                    image: '/Other/apple-lab.png', 
-                                    description: 'Master the art of building world-class applications within the premium Apple environment. From deep dives into Swift and SwiftUI to exploring advanced architectures for macOS, iOS, and the revolutionary VisionOS, you will gain hands-on experience with the tools that power the most elegant user experiences. This lab provides a unique opportunity to understand the synergy between high-end hardware and intuitive software design, preparing you for elite development roles worldwide.'
+                                {
+                                    id: "01",
+                                    title: "Neural Pipeline Lab",
+                                    desc: "Focus on industrial-scale model training and deployment architectures."
                                 },
-                                { 
-                                    name: 'NVIDIA Pipeline', 
-                                    image: '/Other/Nvidia-Image.jpeg', 
-                                    description: 'Harness the massive power of GPU-accelerated computing in our high-performance NVIDIA lab. Master CUDA programming, TensorRT optimization, and the foundational software stacks that drive today\'s generative AI and deep learning breakthroughs. You will build the data-intensive intelligence that moves the modern cloud and data center, positioning yourself at the core of the infrastructure revolution. By bridging the gap between raw compute power and algorithmic excellence, you become an architect of the AI-driven future.'
+                                {
+                                    id: "02",
+                                    title: "Vision Systems HQ",
+                                    desc: "Developing next-gen perception for autonomous mobility and healthcare."
                                 },
-                                { 
-                                    name: 'RISC-V Lab', 
-                                    image: '/Other/DSC08333.jpg.jpeg', 
-                                    description: 'Take your place at the forefront of India\'s semiconductor sovereignty in our pioneering RISC-V hardware lab. Students engage in the complete lifecycle of chip design, from RTL development to physical implementation of custom silicon for AI-specific workloads. By mastering open-source hardware architectures, you will be prepared to engineer the systems that define the next generation of global computing. This hands-on experience with silicon logic ensures you understand the fundamental building blocks of modern digital civilization.'
+                                {
+                                    id: "03",
+                                    title: "LLM Research Centre",
+                                    desc: "Pushing the boundaries of natural language reasoning and safety."
                                 },
-                                { 
-                                    name: 'Embodied Brain Lab', 
-                                    image: '/Other/lab-2.webp', 
-                                    description: 'Experience the convergence of neural intelligence and physical machines in our robotics and autonomous systems lab. Using the NVIDIA Jetson platform and ROS, you will build robots that can perceive, reason, and react to real-time environments with machine precision. This lab focuses on creating advanced exoskeletons and smart robotics that will redefine the future of healthcare, logistics, and industrial automation. You will learn to breathe life into metal and silicon, mastering the complex interplay of computer vision and mechanical control.'
+                                {
+                                    id: "04",
+                                    title: "Robotics Forge",
+                                    desc: "Bridging digital intelligence with physical world interaction and kinetic AI."
                                 }
                             ].map((lab, idx) => (
                                 <motion.div
-                                    key={lab.name}
-                                    initial={{ opacity: 0, y: 50 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true, margin: "-100px" }}
-                                    transition={{ duration: 0.8 }}
-                                    className={`flex flex-col md:items-center gap-12 lg:gap-20 ${idx % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'}`}
-                                >
-                                    {/* Image Side */}
-                                    <div className="flex-1 relative group cursor-pointer w-full">
-                                        <div className="aspect-[16/9] w-full bg-black/40 rounded-[2.5rem] border border-white/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-[#D7F601]/30 group-hover:shadow-[0_0_80px_rgba(216,246,2,0.1)] relative">
-                                            <Image
-                                                src={lab.image}
-                                                alt={lab.name}
-                                                fill
-                                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                            />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                                            <div className="absolute top-6 right-6 z-10 opacity-0 group-hover:opacity-100 transition-all duration-500 -translate-y-4 group-hover:translate-y-0">
-                                                <span className="text-[10px] uppercase tracking-[0.4em] font-black text-black bg-[#D7F601] px-5 py-2.5 rounded-full shadow-xl">System 0{idx + 1}</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Content Side */}
-                                    <div className="flex-1 space-y-8">
-                                        <div className="space-y-4">
-                                            <h3 className="text-3xl lg:text-4xl font-bold text-white group-hover:text-[#D7F601] transition-colors">
-                                                {lab.name}
-                                            </h3>
-                                            <p className="text-xl text-white/70 leading-relaxed font-medium">
-                                                {lab.description}
-                                            </p>
-                                        </div>
-                                        <button className="flex items-center gap-3 group text-[#D7F601] uppercase tracking-[0.25em] text-[10px] font-black hover:text-white transition-all duration-300 py-2">
-                                            <span>View More</span>
-                                            <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
-                                        </button>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Aestr Quality Assurance Pathways Section - PURPLE */}
-            <section className="py-24 relative overflow-hidden" style={{backgroundColor: '#5B1DD6'}}>
-                
-                <div className="container-boxed text-center space-y-16 relative z-10">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="space-y-4"
-                    >
-                                <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
-                            Aestr Quality Assurance <span className="text-white">pathways</span>
-                        </h2>
-                        <p className="text-lg md:text-xl text-white/60 font-medium">
-                            We provide clear, ambitious pathways to ensure your career takes off.
-                        </p>
-                    </motion.div>
-
-                    {/* The Tree Diagram */}
-                    <div className="relative pt-12 pb-20 max-w-[1224px] mx-auto">
-                        {/* Central vertical stem */}
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0.5 h-16 bg-white hidden lg:block">
-                            <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-white rotate-45" />
-                        </div>
-
-                        {/* Horizontal branch */}
-                        <div className="absolute top-16 left-[12.5%] right-[12.5%] h-px bg-white hidden lg:block">
-                            <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-white rotate-45" />
-                        </div>
-
-                        {/* Four boxes */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-16">
-                            {[
-                                { title: "B.Tech AI With Shodh AI Track", sub: "35LPA+ jobs", color: "bg-accent/10 border-accent/30" },
-                                { title: "Global Opportunities", sub: "2+2, 3+1 Programs", color: "bg-purple/10 border-purple/30" },
-                                { title: "Industry Partner Training", sub: "& Direct Placements", color: "bg-accent/5 border-accent/20" },
-                                { title: "Nurturing Entrepreneurs", sub: "Silicon Valley of AI", color: "bg-purple/5 border-purple/20" }
-                            ].map((item, idx) => (
-                                <motion.div
-                                    key={idx}
-                                    initial={{ opacity: 0, y: 20 }}
+                                    key={lab.id}
+                                    initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: idx * 0.1 }}
-                                    className="relative flex flex-col items-center"
+                                    className="p-10 bg-white/5 border border-white/10 rounded-[3rem] space-y-6 hover:bg-accent/5 hover:border-accent/40 transition-all group shadow-2xl"
                                 >
-                                    {/* Vertical branch to box */}
-                                    <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-px h-16 bg-black hidden lg:block">
-                                        <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-black rotate-45" />
-                                    </div>
-
-                                    <div className={`${item.color} w-full p-8 rounded-none border-b-[6px] border-black border-r-2 shadow-sm transition-transform hover:-translate-y-2 text-center flex flex-col justify-center min-h-[160px]`}>
-                                        <h4 className="text-xl md:text-2xl font-bold text-black leading-tight border-b-2 border-black/10 pb-4 mb-4">
-                                            {item.title}
-                                        </h4>
-                                        <p className="text-black font-bold tracking-tight text-sm md:text-lg">
-                                            {item.sub}
-                                        </p>
-                                    </div>
+                                    <span className="text-6xl font-orbitron font-black text-white/5 group-hover:text-accent/20 transition-colors">{lab.id}</span>
+                                    <h4 className="text-2xl font-orbitron font-black text-white">{lab.title}</h4>
+                                    <p className="text-white/60 leading-relaxed font-medium">{lab.desc}</p>
                                 </motion.div>
                             ))}
                         </div>
@@ -1314,69 +903,105 @@ const AIMLSpecializationPage = () => {
                 </div>
             </section>
 
-            {/* Future Safe Professions CTA Section - NEON */}
-            <section className="py-16 relative overflow-hidden" style={{backgroundColor: '#D8F602'}}>
-                
-                <div className="container-boxed relative z-10">
-                    <div className="max-w-[1224px] mx-auto flex flex-col md:flex-row items-center justify-between relative min-h-[400px]">
-                        
-                        {/* Left Content Area */}
-                        <div className="max-w-[800px] z-10 space-y-12 relative pb-10">
-                            <motion.div
+            {/* Aestr Quality Assurance Pathways - BLACK */}
+            <section className="py-24 relative overflow-hidden bg-black border-t border-white/5">
+                <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto">
+                    <div className="space-y-16">
+                        <div className="space-y-4">
+                            <motion.h2
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="space-y-6"
+                                className="text-4xl md:text-6xl font-orbitron font-black text-white tracking-tighter"
                             >
-                                <h2 className="text-[40px] md:text-[54px] leading-[1.1] font-bold text-black">
-                                    Only at AESTR you are trained for<br/>
-                                    <span className="text-black font-serif">future safe professions</span>
-                                </h2>
-                                <p className="text-[20px] text-black/80 font-medium tracking-wide">
-                                    Browse further to know more about our courses
-                                </p>
-                            </motion.div>
-
-                            {/* CTA Banner Box */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.2 }}
-                                className="glass py-6 px-8 flex flex-col sm:flex-row items-center justify-between gap-8 max-w-[700px] border border-white/10"
-                            >
-                                <p className="text-[18px] text-black/80 font-medium">
-                                    Don't be shy. We enjoy connecting with students and parents.
-                                </p>
-                                <button className="bg-accent text-black px-8 py-4 flex items-center gap-3 hover:bg-accent/90 transition-colors whitespace-nowrap font-black uppercase tracking-tight">
-                                    <span className="text-[14px] font-medium">Apply Now</span>
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M5 12h14"></path>
-                                        <path d="m12 5 7 7-7 7"></path>
-                                    </svg>
-                                </button>
-                            </motion.div>
+                                Quality <span className="text-accent italic">Assurance</span>
+                            </motion.h2>
+                            <p className="text-white/40 font-orbitron text-xs uppercase tracking-[0.3em]">Your Pathway to Success</p>
                         </div>
 
-                        {/* Right Robot Image */}
+                        <div className="bg-white/5 rounded-[3rem] overflow-hidden border border-white/10 shadow-3xl">
+                            {[
+                                { step: "Pathway 01", title: "Core Competency Mapping", desc: "Individual skill auditing to align academic path with personal strengths." },
+                                { step: "Pathway 02", title: "Project Incubation", desc: "Venture-grade project development under mentorship of Shodh AI researchers." },
+                                { step: "Pathway 03", title: "Professional Readiness", desc: "Intensive training in technical communication and global workplace dynamics." }
+                            ].map((row, idx) => (
+                                <div key={idx} className="p-12 border-b border-white/5 last:border-0 flex flex-col md:flex-row gap-8 items-start hover:bg-white/[0.02] transition-colors">
+                                    <span className="shrink-0 font-orbitron font-black text-accent text-xs uppercase tracking-widest pt-2">{row.step}</span>
+                                    <div className="space-y-2">
+                                        <h4 className="text-2xl font-orbitron font-black text-white">{row.title}</h4>
+                                        <p className="text-white/60 text-lg font-medium">{row.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Final CTA Section */}
+            <section className="py-24 relative overflow-hidden bg-white">
+                <div className="absolute top-0 w-full overflow-hidden bg-black py-4 border-y border-white/10">
+                    <div className="flex whitespace-nowrap animate-infinite-scroll">
+                        {[...Array(10)].map((_, i) => (
+                            <span key={i} className="text-accent font-orbitron font-black text-xs uppercase tracking-[0.5em] px-10">
+                                ADMISSIONS OPEN FOR 2026-30 • APPLY NOW • FUTURE READY ENGINEERING •
+                            </span>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto pt-20">
+                    <div className="flex flex-col lg:flex-row items-center gap-20">
+                        <div className="flex-1 space-y-10">
+                            <motion.h2
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="text-5xl md:text-7xl font-orbitron font-black text-black leading-tight"
+                            >
+                                Don't be shy, <br/>
+                                <span className="text-purple italic">Take the First Step.</span>
+                            </motion.h2>
+
+                            <Link href="/#hero">
+                                <motion.button
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    className="bg-black text-white px-12 py-5 rounded-2xl flex items-center gap-4 hover:shadow-2xl transition-all font-orbitron font-black uppercase tracking-widest text-lg"
+                                >
+                                    Apply Now
+                                    <ArrowRight className="w-6 h-6" />
+                                </motion.button>
+                            </Link>
+
+                            <div className="pt-10 border-t border-black/10">
+                                <p className="text-black/40 font-orbitron font-bold text-sm tracking-widest uppercase">
+                                    ONLY AT <span className="text-black">AESTR</span> • SHAPING THE TOP 1%
+                                </p>
+                            </div>
+                        </div>
+
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.9, x: 30 }}
-                            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            transition={{ delay: 0.3 }}
-                            className="absolute right-0 bottom-0 md:-bottom-24 w-[500px] md:w-[700px] h-[600px] md:h-[800px] pointer-events-none z-0"
+                            className="relative w-full max-w-[500px] aspect-square"
                         >
-                            <Image
-                                src="/Other/future-robot.png"
-                                alt="AESTR AI Robot"
-                                fill
-                                className="object-contain object-bottom translate-x-20"
-                            />
+                            <div className="relative w-full h-full rounded-[3rem] overflow-hidden border-[12px] border-black/5">
+                                <Image
+                                    src="/b.tech-ai-with/robo.jpg"
+                                    alt="Robo Assistant"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+                            <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-accent rounded-full flex items-center justify-center p-8 text-center rotate-12 shadow-2xl">
+                                <p className="text-black font-orbitron font-black text-sm uppercase leading-tight">Join the Elite 1%</p>
+                            </div>
                         </motion.div>
                     </div>
                 </div>
             </section>
-
         </main>
     );
 };
