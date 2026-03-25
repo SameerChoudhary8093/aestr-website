@@ -106,7 +106,7 @@ const Footer = () => {
                     </div>
 
                     {/* Copyright - Bottom with Social Media */}
-                    <div className="flex flex-col lg:flex-row items-center justify-center gap-4 text-foreground/60 text-sm mt-10 md:mt-16 border-t border-white/5 pt-8">
+                    <div className="flex flex-col lg:flex-row items-center justify-center gap-4 text-foreground/60 text-sm mt-6 md:mt-8 border-t border-white/5 pt-5">
                         <span>©Copyright 2026, Aestr. All Rights Reserved</span>
 
                         {/* Social Media Links */}

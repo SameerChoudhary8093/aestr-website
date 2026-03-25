@@ -32,42 +32,42 @@ const AlumniPage = () => {
     ];
 
     const engagementOpportunities = [
-        { 
-            title: 'Mentorship Program:', 
-            icon: <Users className="w-8 h-8 text-accent" />, 
-            desc: 'Guide the next generation of engineers by sharing your industry experience and career insights.' 
+        {
+            title: 'Mentorship Program:',
+            icon: <Users className="w-8 h-8 text-accent" />,
+            desc: 'Guide the next generation of engineers by sharing your industry experience and career insights.'
         },
-        { 
-            title: 'Guest Lectures & Workshops', 
-            icon: <Presentation className="w-8 h-8 text-accent" />, 
-            desc: 'Host specialized sessions to help students bridge the gap between academia and professional life.' 
+        {
+            title: 'Guest Lectures & Workshops',
+            icon: <Presentation className="w-8 h-8 text-accent" />,
+            desc: 'Host specialized sessions to help students bridge the gap between academia and professional life.'
         },
-        { 
-            title: 'Placement Opportunities', 
-            icon: <Briefcase className="w-8 h-8 text-accent" />, 
-            desc: 'Support fellow Aesta-ians by providing referrals/internships within your organization.' 
+        {
+            title: 'Placement Opportunities',
+            icon: <Briefcase className="w-8 h-8 text-accent" />,
+            desc: 'Support fellow Aesta-ians by providing referrals/internships within your organization.'
         },
-        { 
-            title: 'Collaborate on Projects', 
-            icon: <Network className="w-8 h-8 text-accent" />, 
-            desc: 'Work together with current students and labs on cutting-edge research and product development.' 
+        {
+            title: 'Collaborate on Projects',
+            icon: <Network className="w-8 h-8 text-accent" />,
+            desc: 'Work together with current students and labs on cutting-edge research and product development.'
         },
     ];
 
     return (
         <main className="bg-background min-h-screen text-foreground font-orbitron overflow-x-hidden selection:bg-accent selection:text-black">
             <StickyAdmissionsBar />
-            
+
             {/* Hero Section */}
             <section className="relative min-h-[60vh] lg:min-h-[702px] flex items-center justify-center overflow-hidden mt-16">
                 {/* Background Image with Overlay */}
                 <div className="absolute inset-0 z-0 w-full">
-                    <Image 
-                        src="/Alumni/Alumni-hero.svg" 
-                        alt="Alumni Hero" 
-                        fill 
+                    <Image
+                        src="/Alumni/Alumni-hero.svg"
+                        alt="Alumni Hero"
+                        fill
                         className="object-cover w-full"
-                        style={{ 
+                        style={{
                             background: 'linear-gradient(270deg, rgba(10, 10, 10, 0.3) 0%, #000000 100%)',
                             backdropFilter: 'blur(0px)'
                         }}
@@ -80,7 +80,11 @@ const AlumniPage = () => {
                             Our Alumni, Our Legacy
                         </h1>
                         <p className="text-body text-white/90 leading-relaxed text-sm sm:text-base lg:text-lg">
-                            Welcome to the heart of AESTR enduring impact – our alumni community. The innovators, leaders, and problem-solvers who have passed through our doors are the true testament to our commitment to shaping the future of AI and technology. Our alumni don't just find jobs; they define industries, build groundbreaking solutions, and drive the technological advancements that are changing the world. Their success is our story, and their contributions are the foundation of our legacy.
+                            Welcome to the heart of AESTR’s enduring impact – Our Alumni Community.
+
+                            This section features accomplished students from Suresh Gyan Vihar University (SGVU), particularly from GVSET, who have secured placements at reputed organizations. These individuals represent a strong academic foundation and industry readiness.
+
+                            They are innovators, leaders, and problem-solvers who reflect the potential and excellence we aim to foster. Their journeys highlight real-world success and inspire the next generation of learners.
                         </p>
                     </div>
                 </div>
@@ -104,14 +108,14 @@ const AlumniPage = () => {
                         {/* Mobile: Static Grid */}
                         <div className="lg:hidden grid grid-cols-2 sm:grid-cols-3 gap-4 px-4">
                             {alumniData.slice(0, 6).map((alumni, i) => (
-                                <div 
+                                <div
                                     key={`mobile-${i}`}
                                     className="relative bg-black/80 border border-white/20 rounded-lg overflow-hidden aspect-[3.4/4]"
                                 >
-                                    <Image 
-                                        src={i < 8 ? `/Alumni/Alumni-${i + 1}.svg` : `/Alumni/Alumni-${i + 1}.jpg`} 
-                                        alt={alumni.name} 
-                                        fill 
+                                    <Image
+                                        src={i < 8 ? `/Alumni/Alumni-${i + 1}.svg` : `/Alumni/Alumni-${i + 1}.jpg`}
+                                        alt={alumni.name}
+                                        fill
                                         className="object-contain"
                                     />
                                 </div>
@@ -123,14 +127,14 @@ const AlumniPage = () => {
                             {/* Top Row - Moving Left */}
                             <div className="flex space-x-6 mb-8 animate-slide-left">
                                 {alumniData.slice(0, 10).map((alumni, i) => (
-                                    <div 
+                                    <div
                                         key={`top-${i}`}
                                         className="relative bg-black/80 border border-white/20 rounded-lg overflow-hidden flex-shrink-0 w-72 h-80 lg:w-80 lg:h-96"
                                     >
-                                        <Image 
-                                            src={i < 8 ? `/Alumni/Alumni-${i + 1}.svg` : `/Alumni/Alumni-${i + 1}.jpg`} 
-                                            alt={alumni.name} 
-                                            fill 
+                                        <Image
+                                            src={i < 8 ? `/Alumni/Alumni-${i + 1}.svg` : `/Alumni/Alumni-${i + 1}.jpg`}
+                                            alt={alumni.name}
+                                            fill
                                             className="object-contain"
                                         />
                                     </div>
@@ -140,14 +144,14 @@ const AlumniPage = () => {
                             {/* Bottom Row - Moving Right */}
                             <div className="flex space-x-6 animate-slide-right">
                                 {alumniData.slice(11, 21).map((alumni, i) => (
-                                    <div 
+                                    <div
                                         key={`bottom-${i}`}
                                         className="relative bg-black/80 border border-white/20 rounded-lg overflow-hidden flex-shrink-0 w-72 h-80 lg:w-80 lg:h-96"
                                     >
-                                        <Image 
-                                            src={`/Alumni/Alumni-${i + 12}.jpg`} 
-                                            alt={alumni.name} 
-                                            fill 
+                                        <Image
+                                            src={`/Alumni/Alumni-${i + 12}.jpg`}
+                                            alt={alumni.name}
+                                            fill
                                             className="object-contain"
                                         />
                                     </div>
@@ -196,15 +200,15 @@ const AlumniPage = () => {
                             { type: 'placement', title: 'Internship & Placement Opportunities:', desc: 'Help open doors for current AESTR students by offering internships or full-time positions at your organization.', image: '/Alumni/internship.jpg' },
                             { type: 'projects', title: 'Collaborate on Projects:', desc: 'Explore opportunities to collaborate with AESTR\'s innovation labs or research initiatives.', image: '/Alumni/project-collabration.jpg' }
                         ].map((item, i) => (
-                            <div 
+                            <div
                                 key={i}
                                 className="relative bg-black/90 border border-black/30 rounded-xl overflow-hidden hover:border-accent/60 transition-all duration-300 group w-full max-w-sm mx-auto sm:max-w-none"
                             >
                                 <div className="w-full h-40 sm:h-48 relative">
-                                    <Image 
-                                        src={item.image} 
-                                        alt={`${item.type} engagement`} 
-                                        fill 
+                                    <Image
+                                        src={item.image}
+                                        alt={`${item.type} engagement`}
+                                        fill
                                         className="object-cover group-hover:scale-105 transition-transform duration-300"
                                     />
                                 </div>
@@ -234,13 +238,13 @@ const AlumniPage = () => {
                             <p className="text-body text-white/80 max-w-2xl lg:max-w-none mx-auto lg:mx-0 text-sm sm:text-base lg:text-lg mb-6 whitespace-nowrap">
                                 Want to learn more about eligibility, how to apply, scholarships, or what your career could look like?
                             </p>
-                            
+
                             {/* Small Section with Button */}
                             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6">
                                 <p className="text-body text-white/90 text-sm sm:text-base text-center lg:text-left">
                                     Reach out to our International Collaboration Desk today.
                                 </p>
-                                <button 
+                                <button
                                     className="bg-[#D7F601] text-black px-6 py-3 rounded-lg border border-[#D7F601] hover:bg-transparent hover:text-[#D7F601] transition-all duration-300 text-sm sm:text-base font-medium"
                                     onClick={() => {
                                         // Navigate to home page and scroll to registration form
@@ -251,14 +255,14 @@ const AlumniPage = () => {
                                 </button>
                             </div>
                         </div>
-                        
+
                         {/* Right Robot Image */}
                         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end mt-8 lg:mt-0">
                             <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 xl:w-[600px] xl:h-[550px]">
-                                <Image 
-                                    src="/Other/Robo.webp" 
-                                    alt="Robot" 
-                                    fill 
+                                <Image
+                                    src="/Other/Robo.webp"
+                                    alt="Robot"
+                                    fill
                                     className="object-contain scale-110"
                                 />
                             </div>
