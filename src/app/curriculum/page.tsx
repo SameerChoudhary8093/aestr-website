@@ -4,7 +4,7 @@ import TracksSection from './components/TracksSection';
 import InnovationLabsSection from './components/InnovationLabsSection';
 import SemestersSection from './components/SemestersSection';
 import CurriculumSearch from './components/CurriculumSearch';
-import { Download, BookOpen, Layers3, Search, ArrowRight } from 'lucide-react';
+import { Download, BookOpen, Layers3, Search } from 'lucide-react';
 import { coursesData, curriculumStructure, tracksData } from '@/lib/curriculum';
 
 export const metadata: Metadata = {
@@ -34,21 +34,21 @@ const curriculumSchema = {
 
 const overviewCards = [
   {
-    title: 'Full semester map',
+    title: 'Intensive Semesters',
     value: `${curriculumStructure.semesters.length}`,
-    description: 'Eight structured semesters with the official scheme, credits, and progression.',
+    description: 'A carefully sequenced progression from foundational computing to advanced engineering systems.',
     icon: BookOpen,
   },
   {
-    title: 'Track architecture',
+    title: 'Specialization Pathways',
     value: `${tracksData.length}`,
-    description: 'Major and minor pathways derived from the syllabus and linked to course detail pages.',
+    description: 'Choose 1 Major and up to 4 Minors to build a highly specialized, cross-disciplinary degree.',
     icon: Layers3,
   },
   {
-    title: 'Course index',
-    value: `${coursesData.length}`,
-    description: 'Theory courses, labs, innovation labs, electives, minors, seminar, and project pages.',
+    title: 'Deep-Tech Courses',
+    value: `${coursesData.length}+`,
+    description: 'Covering everything from Quantum Mechanics to LLMs, Web3, and Autonomous Robotics.',
     icon: Search,
   },
 ];
@@ -60,57 +60,52 @@ export default function CurriculumPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(curriculumSchema) }}
       />
+      
+      <div className="fixed bottom-8 right-8 z-50 flex flex-col gap-3">
+        <a 
+          href="/Curriculum.pdf" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="btn-aestr shadow-[0_16px_40px_rgba(215,246,1,0.22)]"
+        >
+          <Download className="w-5 h-5" />
+          <span>Download PDF</span>
+        </a>
+        <a 
+          href="/Curriculum-main.zip" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="glass border border-accent/20 bg-accent/10 px-4 py-3 text-sm font-orbitron uppercase tracking-[0.14em] text-accent transition-all hover:bg-accent/20"
+        >
+          <Download className="w-4 h-4 inline mr-2" />
+          LaTeX Source
+        </a>
+      </div>
 
       <div className="min-h-screen bg-background text-foreground pt-32 pb-16 overflow-hidden">
         <div className="container-boxed relative">
           <div className="absolute top-10 left-1/2 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-accent/8 blur-[120px] pointer-events-none" />
-          <div className="absolute top-20 right-0 h-[320px] w-[320px] rounded-full bg-purple/12 blur-[120px] pointer-events-none" />
 
           <div className="relative z-10 space-y-10">
-            <section className="grid gap-6 lg:grid-cols-[1.35fr_0.85fr] lg:items-start">
-              <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium uppercase tracking-[0.16em] text-accent">
+            <section className="grid gap-8 lg:grid-cols-[1.25fr_0.95fr] lg:items-end">
+              <div className="space-y-5">
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-orbitron uppercase tracking-[0.2em] text-accent">
                   Official curriculum system
                 </div>
                 <h1 className="text-hero max-w-4xl text-foreground">
                   The <span className="text-accent italic">Curriculum</span>
                 </h1>
                 <p className="text-body max-w-3xl text-foreground/75">
-                  This hub now reads from the official LaTeX syllabus source. Browse the semester plan, search the full course index, open every course page, and explore major and minor pathways through a simpler, readable interface.
+                  A radical departure from traditional engineering. Our curriculum is a living ecosystem of deep-tech courses, hands-on innovation labs, and customizable tracks. Explore the 8-semester roadmap and build a degree as unique as your ambitions.
                 </p>
-
-                <div className="flex flex-wrap gap-3">
-                  <a
-                    href="/Curriculum_2.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/10 px-5 py-3 text-sm font-medium text-accent transition-colors hover:bg-accent/15"
-                  >
-                    <Download className="h-4 w-4" />
-                    <span>Download full PDF</span>
-                  </a>
-                  <div className="inline-flex items-center gap-2 rounded-full border border-purple/25 bg-purple/10 px-5 py-3 text-sm font-medium text-foreground/80">
-                    <span className="h-2 w-2 rounded-full bg-purple" />
-                    LaTeX-synced dataset
-                  </div>
-                </div>
               </div>
 
-              <div className="glass p-6 md:p-7">
-                <p className="text-sm font-semibold uppercase tracking-[0.14em] text-purple">How to use this hub</p>
-                <div className="mt-4 space-y-3 text-sm leading-relaxed text-foreground/72">
-                  <div className="flex items-start gap-3">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
-                    <p>Use search to jump to any course, code, or concept.</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-purple" />
-                    <p>Open a semester to see the official scheme, credits, labs, major requirements, minor requirements, and electives.</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
-                    <p>Use track pages to understand required major courses, advanced electives, and minor progression.</p>
-                  </div>
+              <div className="glass p-6 md:p-8 space-y-4">
+                <p className="font-orbitron text-sm uppercase tracking-[0.18em] text-accent">Degree Architecture</p>
+                <div className="space-y-3 text-sm text-foreground/75">
+                  <p><span className="font-bold text-accent">Progressive Mastery:</span> Start with foundations, scale to advanced systems through a carefully sequenced 8-semester progression.</p>
+                  <p><span className="font-bold text-accent">Unprecedented Customization:</span> Choose 1 Major + up to 4 Minors to build a highly specialized, cross-disciplinary degree.</p>
+                  <p><span className="font-bold text-accent">Build from Day One:</span> Innovation Labs begin in Semester 1, with real-world projects and studio-style execution.</p>
                 </div>
               </div>
             </section>
@@ -121,13 +116,10 @@ export default function CurriculumPage() {
                 return (
                   <div key={card.title} className="glass p-6 space-y-3">
                     <div className="flex items-center justify-between">
-                      <p className="text-xs font-medium uppercase tracking-[0.14em] text-foreground/55">{card.title}</p>
-                      <Icon className={`h-5 w-5 ${card.title === 'Track architecture' ? 'text-purple' : 'text-accent'}`} />
+                      <p className="font-orbitron text-xs uppercase tracking-[0.18em] text-foreground/55">{card.title}</p>
+                      <Icon className="h-5 w-5 text-accent" />
                     </div>
-                    <div className="flex items-end justify-between gap-3">
-                      <p className="text-4xl font-semibold text-foreground">{card.value}</p>
-                      <ArrowRight className={`h-4 w-4 ${card.title === 'Track architecture' ? 'text-purple/70' : 'text-accent/70'}`} />
-                    </div>
+                    <p className="text-4xl font-orbitron font-bold text-foreground">{card.value}</p>
                     <p className="text-sm leading-relaxed text-foreground/65">{card.description}</p>
                   </div>
                 );
