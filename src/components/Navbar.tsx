@@ -128,7 +128,7 @@ const Navbar = () => {
                     </div>
 
                     <div className="flex-1 flex items-center justify-end pr-28 md:pr-56 lg:pr-84">
-                        <div className="hidden md:flex items-center gap-4 lg:gap-5">
+                        <div className="hidden md:flex items-center gap-2 md:gap-3 lg:gap-3">
                             {/* SGVU Primary Logo */}
                             <div className="relative transition-all duration-500 hover:scale-105 shrink-0">
                                 <Image
@@ -141,7 +141,7 @@ const Navbar = () => {
                                 />
                             </div>
 
-                            <div className="flex items-center gap-2 md:gap-3 lg:gap-4 border-l border-white/10 pl-4 md:pl-6">
+                            <div className="flex items-center gap-2 md:gap-3 lg:gap-3 border-l border-white/10 pl-2 md:pl-3">
                                 {/* NIRF Logo */}
                                 <div className="relative transition-all duration-500 hover:scale-110 flex items-center justify-center shrink-0">
                                     <Image

@@ -5,6 +5,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BookOpen, Clock, ArrowRight } from 'lucide-react';
+import StickyAdmissionsBar from '@/components/StickyAdmissionsBar';
+import { scrollToRegistrationForm } from '@/utils/navigation';
 
 
 const yearData = [
@@ -196,6 +198,7 @@ const AIMLSpecializationPage = () => {
 
     return (
         <main className="bg-background-alt min-h-screen text-foreground selection:bg-accent selection:text-black">
+            <StickyAdmissionsBar />
             {/* Hero Section - AI & ML Focus */}
             <section className="pt-44 pb-20 bg-[#5B1DD6] relative overflow-hidden">
                 {/* Ambient Background Glows - Neon accents */}
@@ -429,28 +432,28 @@ const AIMLSpecializationPage = () => {
                                 {
                                     title: "ML Ops Engineer",
                                     desc: "Architecting the infrastructure that scales AI models from local experiments to global production environments.",
-                                    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+                                    image: "/Other/_DSC0612.jpg",
                                     major: "Neural Systems",
                                     lab: "NVIDIA Pipeline"
                                 },
                                 {
                                     title: "Deep Learning Researcher",
                                     desc: "Pushing the boundaries of neural architectures to solve complex reasoning and perception challenges.",
-                                    image: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&w=800&q=80",
+                                    image: "/Other/DSC01997.jpg",
                                     major: "Core Intelligence",
                                     lab: "Shodh AI Research"
                                 },
                                 {
                                     title: "Computer Vision Lead",
                                     desc: "Developing next-gen perception systems for autonomous vehicles, medical imaging, and smart surveillance.",
-                                    image: "https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=800&q=80",
+                                    image: "/Other/DSC08333.jpg.jpeg",
                                     major: "Visual Intelligence",
                                     lab: "Embodied Brain Lab"
                                 },
                                 {
                                     title: "AI Ethics Architect",
                                     desc: "Designing governance frameworks ensuring transparency, safety, and unbiased performance in AI systems.",
-                                    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
+                                    image: "/Other/image.jpeg",
                                     major: "System Governance",
                                     lab: "Policy Hub"
                                 }
@@ -545,7 +548,7 @@ const AIMLSpecializationPage = () => {
                                             <div className="space-y-6 pt-6 border-t border-white/5">
                                                 <p className="text-white/40 font-orbitron text-[10px] uppercase tracking-widest">Minor Specializations (Select One)</p>
                                                 <ul className="grid grid-cols-2 gap-x-8 gap-y-4">
-                                                    {["Robotics & Automation", "Cloud Intelligence", "Cyber Security", "Data Science", "Blockchain Tech", "UX/UI Design", "Digital Marketing", "Business Analytics", "Edge Computing"].map((item) => (
+                                                    {["Robotics", "Semiconductor & RISC-V", "Cloud Architecture", "Fintech", "Nano Technology", "Computer Vision", "Bio-Informatics", "AI Ethics"].map((item) => (
                                                         <li key={item} className="flex items-center gap-3 text-white/70 text-sm font-medium">
                                                             <span className="w-1.5 h-1.5 rounded-full bg-accent/40" />
                                                             {item}
@@ -676,7 +679,7 @@ const AIMLSpecializationPage = () => {
                                             src={partner.src}
                                             alt={partner.name}
                                             fill
-                                            className="object-contain grayscale contrast-125 group-hover:grayscale-0 group-hover:scale-125 transition-all duration-500"
+                                            className="object-contain transition-all duration-500 group-hover:scale-125"
                                         />
                                     </div>
                                 </motion.div>
@@ -939,46 +942,53 @@ const AIMLSpecializationPage = () => {
             </section>
 
             {/* Final CTA Section */}
-            <section className="py-24 relative overflow-hidden bg-white">
-                <div className="absolute top-0 w-full overflow-hidden bg-black py-4 border-y border-white/10">
-                    <div className="flex whitespace-nowrap animate-infinite-scroll">
-                        {[...Array(10)].map((_, i) => (
-                            <span key={i} className="text-accent font-orbitron font-black text-xs uppercase tracking-[0.5em] px-10">
-                                ADMISSIONS OPEN FOR 2026-30 • APPLY NOW • FUTURE READY ENGINEERING •
-                            </span>
-                        ))}
+            <section className="py-32 relative overflow-hidden bg-[#0A0A0A] border-t border-white/5">
+                {/* Background Accents */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple/10 rounded-full blur-[140px] pointer-events-none" />
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
+
+                <div className="absolute top-0 w-full px-4 pt-10">
+                    <div className="container-boxed mx-auto">
+                        <div className="glass border-white/10 bg-black/60 backdrop-blur-xl rounded-full px-8 py-3.5 flex items-center justify-between shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                            <div className="flex items-center gap-4">
+                                <span className="relative flex h-3 w-3">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-accent"></span>
+                                </span>
+                                <p className="text-white font-orbitron font-bold text-sm tracking-tight uppercase">
+                                    Admissions Open at <span className="text-accent underline underline-offset-4 decoration-accent/30 italic">SGVU</span> for 2026-2027
+                                </p>
+                            </div>
+                            <Link href="/#hero" className="px-10 py-2.5 bg-accent text-black font-orbitron font-black text-xs uppercase rounded-full hover:scale-110 active:scale-95 transition-all shadow-[0_0_30px_rgba(216,246,2,0.4)]">
+                                Apply Now ↗
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
-                <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto pt-20">
+                <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto pt-24">
                     <div className="flex flex-col lg:flex-row items-center gap-20">
                         <div className="flex-1 space-y-10">
                             <motion.h2
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="text-5xl md:text-7xl font-orbitron font-black text-black leading-tight"
+                                className="text-5xl md:text-7xl font-orbitron font-black text-white leading-tight"
                             >
                                 Don't be shy, <br/>
-                                <span className="text-purple italic">Take the First Step.</span>
+                                <span className="text-accent italic drop-shadow-[0_0_15px_rgba(216,246,2,0.2)]">Take the First Step.</span>
                             </motion.h2>
 
                             <Link href="/#hero">
                                 <motion.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="bg-black text-white px-12 py-5 rounded-2xl flex items-center gap-4 hover:shadow-2xl transition-all font-orbitron font-black uppercase tracking-widest text-lg"
+                                    className="bg-accent text-black px-12 py-5 rounded-2xl flex items-center gap-4 hover:shadow-[0_0_40px_rgba(216,246,2,0.4)] transition-all font-orbitron font-black uppercase tracking-widest text-lg"
                                 >
                                     Apply Now
                                     <ArrowRight className="w-6 h-6" />
                                 </motion.button>
                             </Link>
-
-                            <div className="pt-10 border-t border-black/10">
-                                <p className="text-black/40 font-orbitron font-bold text-sm tracking-widest uppercase">
-                                    ONLY AT <span className="text-black">AESTR</span> • SHAPING THE TOP 1%
-                                </p>
-                            </div>
                         </div>
 
                         <motion.div
@@ -987,16 +997,17 @@ const AIMLSpecializationPage = () => {
                             viewport={{ once: true }}
                             className="relative w-full max-w-[500px] aspect-square"
                         >
-                            <div className="relative w-full h-full rounded-[3rem] overflow-hidden border-[12px] border-black/5">
+                            <div className="relative w-full h-full rounded-[3.5rem] overflow-hidden border-[15px] border-white/5 shadow-3xl bg-black">
                                 <Image
                                     src="/b.tech-ai-with/robo.jpg"
                                     alt="Robo Assistant"
                                     fill
-                                    className="object-cover"
+                                    className="object-cover opacity-90 group-hover:opacity-100 transition-opacity"
                                 />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40" />
                             </div>
-                            <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-accent rounded-full flex items-center justify-center p-8 text-center rotate-12 shadow-2xl">
-                                <p className="text-black font-orbitron font-black text-sm uppercase leading-tight">Join the Elite 1%</p>
+                            <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-purple rounded-full flex items-center justify-center p-8 text-center rotate-12 shadow-[0_20px_50px_rgba(87,26,208,0.4)] border-4 border-white/10">
+                                <p className="text-white font-orbitron font-black text-sm uppercase leading-tight">Join the Elite 1%</p>
                             </div>
                         </motion.div>
                     </div>

@@ -54,7 +54,7 @@ const Hero = () => {
                                 <div className="absolute inset-0 bg-gradient-to-r from-purple/20 via-blue/20 to-accent/20 rounded-[1.5rem] blur-xl group-hover:blur-2xl transition-all duration-700 opacity-60"></div>
 
                                 {/* Main container - Flexible and clean */}
-                                <div className="relative flex flex-col items-start gap-6 p-6 sm:p-8 rounded-[1.5rem] bg-black/40 backdrop-blur-xl border border-white/30 shadow-[0_10px_40px_rgba(0,0,0,0.5)] transition-all duration-500 w-full">
+                                <div className="relative flex flex-col items-start gap-3 px-6 py-4 sm:px-8 sm:py-1 rounded-[1.5rem] bg-black/40 backdrop-blur-xl border border-white/30 shadow-[0_10px_40px_rgba(0,0,0,0.5)] transition-all duration-500 w-full">
 
                                     <div className="flex items-center gap-3">
                                         <span className="w-6 sm:w-8 h-[2px] bg-accent rounded-full shrink-0"></span>
@@ -67,10 +67,10 @@ const Hero = () => {
                                     <div className="flex items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10">
                                         {[
                                             { src: '/Herosection/University of cambridge.webp', alt: 'Cambridge', width: 140 },
-                                            { src: '/Herosection/india-ai-logo-white.png', alt: 'INDIAai', width: 160 },
+                                            { src: '/Herosection/India-ai.png', alt: 'INDIAai', width: 160 },
                                             { src: '/Herosection/Microsoft.webp', alt: 'Microsoft', width: 140 },
                                             { src: '/ProgramPartners/Shodh-ai.svg', alt: 'Shodh AI', width: 140 },
-                                            { src: '/ProgramPartners/DRDO.webp', alt: 'DRDO', width: 100 }
+                                            { src: '/Herosection/DRDO.png', alt: 'DRDO', width: 100 }
                                         ].map((logo, idx) => (
                                             <motion.div
                                                 key={logo.alt}
@@ -83,8 +83,8 @@ const Hero = () => {
                                                     width={logo.width}
                                                     height={100}
                                                     className={`w-auto max-w-full object-contain opacity-90 hover:opacity-100 transition-opacity ${logo.alt === 'DRDO'
-                                                        ? 'h-14 md:h-20 lg:h-24 translate-y-1'
-                                                        : 'h-10 md:h-14 lg:h-18'
+                                                        ? 'h-16 md:h-24 lg:h-28 translate-y-1'
+                                                        : 'h-11 md:h-16 lg:h-22'
                                                         }`}
                                                 />
                                             </motion.div>
