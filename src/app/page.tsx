@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import StickyAdmissionsBar from "@/components/StickyAdmissionsBar";
 import FrontierHub from "@/components/FrontierHub";
 import AboutTopOnePercent from "@/components/AboutTopOnePercent";
+import CourseraPartnership from "@/components/CourseraPartnership";
 import AboutPointOne from "@/components/AboutPointOne";
 import AboutPointTwo from "@/components/AboutPointTwo";
 import FoundingTeamVideo from "@/components/FoundingTeamVideo";
@@ -23,6 +24,7 @@ export default function Home() {
       <Hero />
       <FrontierHub />
       <AboutTopOnePercent />
+      <CourseraPartnership />
       <AboutPointOne />
       <AboutPointTwo />
       <FoundingTeamVideo />

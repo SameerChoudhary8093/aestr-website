@@ -642,7 +642,19 @@ const BtechCloudEngineering = () => {
                         Prospective Placement <span className=" text-black ">Partners</span>
                     </motion.h2>
 
-                    <div className="space-y-6">
+                    <motion.div 
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-50px" }}
+                        variants={{
+                            hidden: { opacity: 0 },
+                            visible: {
+                                opacity: 1,
+                                transition: { staggerChildren: 0.1 }
+                            }
+                        }}
+                        className="space-y-6"
+                    >
                         <div className="flex flex-wrap items-center justify-center gap-6">
                             {[
                                 { name: "AWS", logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" },
@@ -652,9 +664,16 @@ const BtechCloudEngineering = () => {
                                 { name: "Oracle", logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" },
                                 { name: "VMware", logo: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Vmware.svg" }
                             ].map((partner) => (
-                                <div key={partner.name} className="bg-white p-6 h-24 w-48 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                                <motion.div 
+                                    variants={{
+                                        hidden: { opacity: 0, y: 30 },
+                                        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+                                    }}
+                                    key={partner.name} 
+                                    className="bg-white p-6 h-24 w-48 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
+                                >
                                     <Image src={partner.logo} alt={partner.name} width={120} height={40} className="max-h-12 w-auto object-contain" />
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
                         <div className="flex flex-wrap items-center justify-center gap-6">
@@ -665,12 +684,19 @@ const BtechCloudEngineering = () => {
                                 { name: "Deloitte", logo: "https://upload.wikimedia.org/wikipedia/commons/5/56/Deloitte.svg" },
                                 { name: "TCS", logo: "https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg" }
                             ].map((partner) => (
-                                <div key={partner.name} className="bg-white p-6 h-24 w-48 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                                <motion.div 
+                                    variants={{
+                                        hidden: { opacity: 0, y: 30 },
+                                        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+                                    }}
+                                    key={partner.name} 
+                                    className="bg-white p-6 h-24 w-48 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
+                                >
                                     <Image src={partner.logo} alt={partner.name} width={120} height={40} className="max-h-12 w-auto object-contain" />
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 

@@ -38,24 +38,42 @@ const AboutPointFive = () => {
                 <div className="space-y-16 md:space-y-24">
                     <div className="space-y-12">
                         <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.7 }}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, margin: "-50px" }}
+                            variants={{
+                                hidden: { opacity: 0 },
+                                visible: {
+                                    opacity: 1,
+                                    transition: { staggerChildren: 0.15 }
+                                }
+                            }}
                         >
                            <div className="flex flex-col md:flex-row items-start gap-4 md:gap-8">
                             <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-[#D7F601] flex items-center justify-center text-3xl md:text-4xl font-orbitron font-black text-black bg-[#D7F601] shadow-[0_0_20px_rgba(215,246,1,0.5)]">
                                 5
                             </div>
                             <div className="space-y-6 text-left">
-                                <div className="space-y-1">
+                                <motion.div 
+                                    variants={{
+                                        hidden: { opacity: 0, y: 30 },
+                                        visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                                    }}
+                                    className="space-y-1"
+                                >
                                     <h2 className="text-h2 text-white capitalize">
                                         Innovation labs <span className="opacity-90">of 2030</span>
                                     </h2>
-                                </div>
-                                <p className="text-body text-white/90 font-bold">
+                                </motion.div>
+                                <motion.p 
+                                    variants={{
+                                        hidden: { opacity: 0, y: 30 },
+                                        visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                                    }}
+                                    className="text-body text-white/90 font-bold"
+                                >
                                     Learn from the architects of tomorrow's AI. AESTR is the brainchild of leading AI engineers dedicated to cultivating the next generation of tech innovators.
-                                </p>
+                                </motion.p>
                             </div>
                         </div></motion.div>
 
@@ -126,10 +144,10 @@ const AboutPointFive = () => {
                                         </p>
                                     </div>
 
-                                    <button className="flex items-center gap-4 group text-accent font-orbitron tracking-[0.3em] text-[10px] md:text-xs font-black transition-all duration-300 py-3 md:py-4 px-6 md:px-8 border border-accent/20 rounded-xl bg-accent/5 hover:bg-accent hover:text-black hover:border-accent">
+                                    {/* <button className="flex items-center gap-4 group text-accent font-orbitron tracking-[0.3em] text-[10px] md:text-xs font-black transition-all duration-300 py-3 md:py-4 px-6 md:px-8 border border-accent/20 rounded-xl bg-accent/5 hover:bg-accent hover:text-black hover:border-accent">
                                         <span>View More</span>
                                         <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
-                                    </button>
+                                    </button> */}
                                 </div>
                             </motion.div>
                         ))}

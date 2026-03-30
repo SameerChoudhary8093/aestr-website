@@ -5,8 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BookOpen, Clock, ArrowRight } from 'lucide-react';
-import StickyAdmissionsBar from '@/components/StickyAdmissionsBar';
-import { scrollToRegistrationForm } from '@/utils/navigation';
 
 
 const yearData = [
@@ -198,7 +196,6 @@ const AIMLSpecializationPage = () => {
 
     return (
         <main className="bg-background-alt min-h-screen text-foreground selection:bg-accent selection:text-black">
-            <StickyAdmissionsBar />
             {/* Hero Section - AI & ML Focus */}
             <section className="pt-44 pb-20 bg-[#5B1DD6] relative overflow-hidden">
                 {/* Ambient Background Glows - Neon accents */}
@@ -292,9 +289,9 @@ const AIMLSpecializationPage = () => {
             </section>
 
             {/* What Is Section - Centered */}
-            <section className="py-24 relative overflow-hidden" style={{backgroundColor: '#571AD0'}}>
+            <section className="py-12 relative overflow-hidden" style={{backgroundColor: '#571AD0'}}>
                 <div className="container-boxed w-full max-w-[1224px] mx-auto relative z-10 text-center flex flex-col items-center">
-                    <div className="max-w-4xl space-y-10">
+                    <div className="max-w-6xl space-y-8">
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -309,11 +306,20 @@ const AIMLSpecializationPage = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
-                            className="bg-black/20 p-8 md:p-14 rounded-[2.5rem] border border-white/10 shadow-2xl backdrop-blur-xl"
+                            className="bg-black/20 p-6 md:p-10 rounded-[2.5rem] border border-white/10 shadow-2xl backdrop-blur-xl"
                         >
-                            <p className="text-lg md:text-2xl text-white/90 leading-[1.6] font-medium text-center">
-                                AI & Machine Learning is the systematic application of <strong className="text-accent font-orbitron font-bold">computer science</strong>, <strong className="text-accent font-orbitron font-bold">mathematics</strong>, and <strong className="text-accent font-orbitron font-bold">statistical principles</strong> to create intelligent systems that can learn from data, make predictions, and automate decision-making processes. It encompasses machine learning algorithms, neural networks, deep learning architectures, and data processing techniques that enable computers to perform tasks that typically require human intelligence, from image recognition and natural language processing to autonomous decision-making and predictive analytics.
-                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                                <div className="space-y-4">
+                                    <p className="text-lg md:text-xl text-white/90 leading-[1.5] font-medium">
+                                        AI & Machine Learning is the systematic application of <strong className="text-accent font-orbitron font-bold">computer science</strong>, <strong className="text-accent font-orbitron font-bold">mathematics</strong>, and <strong className="text-accent font-orbitron font-bold">statistical principles</strong> to create intelligent systems that can learn from data, make predictions, and automate decision-making processes.
+                                    </p>
+                                </div>
+                                <div className="space-y-4">
+                                    <p className="text-lg md:text-xl text-white/90 leading-[1.5] font-medium">
+                                        It encompasses machine learning algorithms, neural networks, deep learning architectures, and data processing techniques that enable computers to perform tasks that typically require human intelligence, from image recognition and natural language processing to autonomous decision-making and predictive analytics.
+                                    </p>
+                                </div>
+                            </div>
                         </motion.div>
                     </div>
                 </div>
@@ -520,7 +526,7 @@ const AIMLSpecializationPage = () => {
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="overflow-x-auto rounded-[3rem] bg-black shadow-[0_40px_100px_rgba(0,0,0,0.3)] border border-black/5"
+                            className="overflow-x-auto rounded-[3rem] shadow-[0_40px_100px_rgba(0,0,0,0.3)] border border-white/5" style={{backgroundColor: '#571AD0'}}
                         >
                             <table className="w-full text-left border-collapse min-w-[1000px]">
                                 <thead>
@@ -548,7 +554,7 @@ const AIMLSpecializationPage = () => {
                                             <div className="space-y-6 pt-6 border-t border-white/5">
                                                 <p className="text-white/40 font-orbitron text-[10px] uppercase tracking-widest">Minor Specializations (Select One)</p>
                                                 <ul className="grid grid-cols-2 gap-x-8 gap-y-4">
-                                                    {["Robotics", "Semiconductor & RISC-V", "Cloud Architecture", "Fintech", "Nano Technology", "Computer Vision", "Bio-Informatics", "AI Ethics"].map((item) => (
+                                                    {["Robotics & Automation", "Cloud Intelligence", "Cyber Security", "Data Science", "Blockchain Tech", "UX/UI Design", "Digital Marketing", "Business Analytics", "Edge Computing"].map((item) => (
                                                         <li key={item} className="flex items-center gap-3 text-white/70 text-sm font-medium">
                                                             <span className="w-1.5 h-1.5 rounded-full bg-accent/40" />
                                                             {item}
@@ -608,7 +614,7 @@ const AIMLSpecializationPage = () => {
                             <p className="text-black/40 font-orbitron text-xs uppercase tracking-[0.3em]">The Horizon of AI</p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-5 bg-black rounded-[2.5rem] overflow-hidden shadow-2xl border border-black/5">
+                        <div className="grid grid-cols-1 md:grid-cols-5 rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/5" style={{backgroundColor: '#571AD0'}}>
                             {[
                                 { id: "01", title: "Neuro-\nSymbolic AI" },
                                 { id: "02", title: "Embodied\nSystems" },
@@ -622,7 +628,7 @@ const AIMLSpecializationPage = () => {
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: index * 0.1 }}
-                                    className="p-10 min-h-[220px] flex flex-col justify-between border-r border-white/5 last:border-r-0 hover:bg-white/20 transition-all group"
+                                    className="p-10 min-h-[220px] flex flex-col justify-between border-r border-white/10 last:border-r-0 hover:bg-white/20 transition-all group"
                                 >
                                     <span className="text-2xl font-orbitron font-black text-accent opacity-40 group-hover:opacity-100 transition-opacity">
                                         {item.id}
@@ -655,16 +661,16 @@ const AIMLSpecializationPage = () => {
                             {[
                                 { name: "Google", src: "/ProgramPartners/google.webp" },
                                 { name: "Microsoft", src: "/ProgramPartners/micro.webp" },
-                                { name: "Amazon", src: "/Other/amazon.png" },
-                                { name: "Meta", src: "/Other/meta.png" },
-                                { name: "Infosys", src: "/Other/infosys.png" },
-                                { name: "TCS", src: "/Other/tcs.png" },
-                                { name: "Wipro", src: "/Other/wipro.png" },
-                                { name: "Accenture", src: "/Other/accenture.png" },
-                                { name: "Zerodha", src: "/Other/zerodha.png" },
-                                { name: "CRED", src: "/Other/cred.png" },
-                                { name: "Swiggy", src: "/Other/swiggy.png" },
-                                { name: "Adobe", src: "/Other/adobe.png" }
+                                { name: "Amazon", src: "/placement/amazon.webp" },
+                                { name: "Meta", src: "/placement/observe.webp" },
+                                { name: "Infosys", src: "/placement/mindtree.webp" },
+                                { name: "TCS", src: "/placement/cognizant.webp" },
+                                { name: "Wipro", src: "/placement/hcl.webp" },
+                                { name: "Accenture", src: "/placement/accenture.webp" },
+                                { name: "Zerodha", src: "/placement/jio.webp" },
+                                { name: "CRED", src: "/placement/delhivery.webp" },
+                                { name: "Swiggy", src: "/placement/globallogic.webp" },
+                                { name: "Adobe", src: "/placement/capgemini.webp" }
                             ].map((partner, idx) => (
                                 <motion.div
                                     key={partner.name}
@@ -672,14 +678,14 @@ const AIMLSpecializationPage = () => {
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: idx * 0.05 }}
-                                    className="bg-white/5 h-[140px] rounded-2xl flex items-center justify-center p-8 border border-white/10 hover:bg-white/10 hover:border-accent/30 transition-all group"
+                                    className="bg-white/5 h-[140px] rounded-2xl flex items-center justify-center p-4 border border-white/10 hover:bg-white/10 hover:border-accent/30 transition-all group"
                                 >
                                     <div className="relative w-full h-full flex items-center justify-center">
                                         <Image
                                             src={partner.src}
                                             alt={partner.name}
                                             fill
-                                            className="object-contain transition-all duration-500 group-hover:scale-125"
+                                            className="object-contain p-2 grayscale contrast-125 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500 mix-blend-screen"
                                         />
                                     </div>
                                 </motion.div>
@@ -837,7 +843,7 @@ const AIMLSpecializationPage = () => {
                         >
                             <div className="relative w-full h-full rounded-l-[5rem] overflow-hidden border-4 border-white/10 shadow-3xl">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1579546683335-5e8c11bd221b?auto=format&fit=crop&w=1200&q=80"
+                                    src="/Other/lab-2.webp"
                                     alt="Future Scope"
                                     fill
                                     className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
@@ -869,23 +875,27 @@ const AIMLSpecializationPage = () => {
                             {[
                                 {
                                     id: "01",
-                                    title: "Neural Pipeline Lab",
-                                    desc: "Focus on industrial-scale model training and deployment architectures."
+                                    title: "Apple Ecosystem",
+                                    desc: "Dive deep into Apple's ecosystem - from iOS development to machine learning integration with Core ML and Swift.",
+                                    image: "/Other/apple-lab.png"
                                 },
                                 {
                                     id: "02",
-                                    title: "Vision Systems HQ",
-                                    desc: "Developing next-gen perception for autonomous mobility and healthcare."
+                                    title: "NVIDIA Pipeline",
+                                    desc: "Master GPU computing and CUDA programming for high-performance AI model training and deployment.",
+                                    image: "/Other/Nvidia-Image.jpeg"
                                 },
                                 {
                                     id: "03",
-                                    title: "LLM Research Centre",
-                                    desc: "Pushing the boundaries of natural language reasoning and safety."
+                                    title: "RISC-V Lab",
+                                    desc: "Explore open-source processor architecture and design custom silicon for specialized AI workloads.",
+                                    image: "/Other/lab-3.webp"
                                 },
                                 {
                                     id: "04",
-                                    title: "Robotics Forge",
-                                    desc: "Bridging digital intelligence with physical world interaction and kinetic AI."
+                                    title: "Embodied Brain Lab",
+                                    desc: "Bridge the gap between digital intelligence and physical robotics with embodied AI systems.",
+                                    image: "/Other/lab-1.webp"
                                 }
                             ].map((lab, idx) => (
                                 <motion.div
@@ -894,11 +904,22 @@ const AIMLSpecializationPage = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: idx * 0.1 }}
-                                    className="p-10 bg-white/5 border border-white/10 rounded-[3rem] space-y-6 hover:bg-accent/5 hover:border-accent/40 transition-all group shadow-2xl"
+                                    className="bg-white/5 border border-white/10 rounded-[3rem] overflow-hidden hover:bg-accent/5 hover:border-accent/40 transition-all group shadow-2xl"
                                 >
-                                    <span className="text-6xl font-orbitron font-black text-white/5 group-hover:text-accent/20 transition-colors">{lab.id}</span>
-                                    <h4 className="text-2xl font-orbitron font-black text-white">{lab.title}</h4>
-                                    <p className="text-white/60 leading-relaxed font-medium">{lab.desc}</p>
+                                    <div className="aspect-[4/3] relative overflow-hidden">
+                                        <Image
+                                            src={lab.image}
+                                            alt={lab.title}
+                                            fill
+                                            className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                                    </div>
+                                    <div className="p-8 space-y-4">
+                                        <span className="text-6xl font-orbitron font-black text-white/5 group-hover:text-accent/20 transition-colors">{lab.id}</span>
+                                        <h4 className="text-2xl font-orbitron font-black text-white">{lab.title}</h4>
+                                        <p className="text-white/60 leading-relaxed font-medium">{lab.desc}</p>
+                                    </div>
                                 </motion.div>
                             ))}
                         </div>
@@ -906,8 +927,8 @@ const AIMLSpecializationPage = () => {
                 </div>
             </section>
 
-            {/* Aestr Quality Assurance Pathways - BLACK */}
-            <section className="py-24 relative overflow-hidden bg-black border-t border-white/5">
+            {/* Aestr Quality Assurance Pathways - NEON */}
+            <section className="py-24 relative overflow-hidden" style={{backgroundColor: '#D8F602'}}>
                 <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto">
                     <div className="space-y-16">
                         <div className="space-y-4">
@@ -915,24 +936,24 @@ const AIMLSpecializationPage = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="text-4xl md:text-6xl font-orbitron font-black text-white tracking-tighter"
+                                className="text-4xl md:text-6xl font-orbitron font-black text-black tracking-tighter"
                             >
-                                Quality <span className="text-accent italic">Assurance</span>
+                                Quality <span className="text-black italic">Assurance</span>
                             </motion.h2>
-                            <p className="text-white/40 font-orbitron text-xs uppercase tracking-[0.3em]">Your Pathway to Success</p>
+                            <p className="text-black/60 font-orbitron text-xs uppercase tracking-[0.3em]">Your Pathway to Success</p>
                         </div>
 
-                        <div className="bg-white/5 rounded-[3rem] overflow-hidden border border-white/10 shadow-3xl">
+                        <div className="bg-black/10 rounded-[3rem] overflow-hidden border border-black/20 shadow-3xl">
                             {[
                                 { step: "Pathway 01", title: "Core Competency Mapping", desc: "Individual skill auditing to align academic path with personal strengths." },
                                 { step: "Pathway 02", title: "Project Incubation", desc: "Venture-grade project development under mentorship of Shodh AI researchers." },
                                 { step: "Pathway 03", title: "Professional Readiness", desc: "Intensive training in technical communication and global workplace dynamics." }
                             ].map((row, idx) => (
-                                <div key={idx} className="p-12 border-b border-white/5 last:border-0 flex flex-col md:flex-row gap-8 items-start hover:bg-white/[0.02] transition-colors">
-                                    <span className="shrink-0 font-orbitron font-black text-accent text-xs uppercase tracking-widest pt-2">{row.step}</span>
+                                <div key={idx} className="p-12 border-b border-black/10 last:border-0 flex flex-col md:flex-row gap-8 items-start hover:bg-black/5 transition-colors">
+                                    <span className="shrink-0 font-orbitron font-black text-black text-xs uppercase tracking-widest pt-2">{row.step}</span>
                                     <div className="space-y-2">
-                                        <h4 className="text-2xl font-orbitron font-black text-white">{row.title}</h4>
-                                        <p className="text-white/60 text-lg font-medium">{row.desc}</p>
+                                        <h4 className="text-2xl font-orbitron font-black text-black">{row.title}</h4>
+                                        <p className="text-black/70 text-lg font-medium">{row.desc}</p>
                                     </div>
                                 </div>
                             ))}
@@ -946,25 +967,6 @@ const AIMLSpecializationPage = () => {
                 {/* Background Accents */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple/10 rounded-full blur-[140px] pointer-events-none" />
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
-
-                <div className="absolute top-0 w-full px-4 pt-10">
-                    <div className="container-boxed mx-auto">
-                        <div className="glass border-white/10 bg-black/60 backdrop-blur-xl rounded-full px-8 py-3.5 flex items-center justify-between shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-                            <div className="flex items-center gap-4">
-                                <span className="relative flex h-3 w-3">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-accent"></span>
-                                </span>
-                                <p className="text-white font-orbitron font-bold text-sm tracking-tight uppercase">
-                                    Admissions Open at <span className="text-accent underline underline-offset-4 decoration-accent/30 italic">SGVU</span> for 2026-2027
-                                </p>
-                            </div>
-                            <Link href="/#hero" className="px-10 py-2.5 bg-accent text-black font-orbitron font-black text-xs uppercase rounded-full hover:scale-110 active:scale-95 transition-all shadow-[0_0_30px_rgba(216,246,2,0.4)]">
-                                Apply Now ↗
-                            </Link>
-                        </div>
-                    </div>
-                </div>
 
                 <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto pt-24">
                     <div className="flex flex-col lg:flex-row items-center gap-20">

@@ -83,43 +83,89 @@ const BtechAIShodhAIPage = () => {
                 <div className="container mx-auto px-4 sm:px-6 relative z-20 flex flex-col lg:flex-row items-center justify-between h-full gap-8 lg:gap-16">
                     
                     {/* Left: Text Content */}
-                    <div className="lg:w-[55%] flex flex-col justify-center space-y-6 lg:space-y-8 text-left z-10 w-full pt-8 lg:pt-0">
+                    <motion.div 
+                        initial="hidden"
+                        animate="visible"
+                        variants={{
+                            hidden: { opacity: 0 },
+                            visible: {
+                                opacity: 1,
+                                transition: { staggerChildren: 0.15 }
+                            }
+                        }}
+                        className="lg:w-[55%] flex flex-col justify-center space-y-6 lg:space-y-8 text-left z-10 w-full pt-8 lg:pt-0"
+                    >
                         <div className="space-y-2 lg:space-y-4 relative">
                             {/* Decorative graphical element like the brochure circles */}
-                            <div className="absolute -left-12 -top-12 lg:-left-20 lg:-top-20 opacity-20 pointer-events-none hidden sm:block">
+                            <motion.div 
+                                variants={{
+                                    hidden: { opacity: 0, scale: 0.8 },
+                                    visible: { opacity: 0.2, scale: 1, transition: { duration: 1, ease: "easeOut" } }
+                                }}
+                                className="absolute -left-12 -top-12 lg:-left-20 lg:-top-20 pointer-events-none hidden sm:block"
+                            >
                                 <svg width="100" height="100" viewBox="0 0 100 100" fill="none" stroke="#D7F601" strokeWidth="2">
                                     <circle cx="50" cy="50" r="40" />
                                     <path d="M50 0 V100 M0 50 H100" opacity="0.3" strokeDasharray="4 4" />
                                 </svg>
-                            </div>
+                            </motion.div>
                             
-                            <h1 className="text-[#D7F601] text-2xl sm:text-3xl md:text-4xl lg:text-[4.1rem] font-orbitron font-black leading-[1.05] tracking-tighter">
+                            <motion.h1 
+                                variants={{
+                                    hidden: { opacity: 0, y: 30 },
+                                    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                                }}
+                                className="text-[#D7F601] text-2xl sm:text-3xl md:text-4xl lg:text-[4.1rem] font-orbitron font-black leading-[1.05] tracking-tighter"
+                            >
                                 This isn't college.
-                            </h1>
-                            <h2 className="text-[#D7F601] text-xl sm:text-2xl md:text-3xl lg:text-[3.2rem] font-orbitron font-black leading-[1.05] tracking-tighter">
+                            </motion.h1>
+                            <motion.h2 
+                                variants={{
+                                    hidden: { opacity: 0, y: 30 },
+                                    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                                }}
+                                className="text-[#D7F601] text-xl sm:text-2xl md:text-3xl lg:text-[3.2rem] font-orbitron font-black leading-[1.05] tracking-tighter"
+                            >
                                 It's a 4-year internship
-                            </h2>
+                            </motion.h2>
                         </div>
                         
-                        <div className="pt-2">
+                        <motion.div 
+                            variants={{
+                                hidden: { opacity: 0, y: 30 },
+                                visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                            }}
+                            className="pt-2"
+                        >
                             <h3 className="text-white text-lg sm:text-xl md:text-2xl lg:text-[2.2rem] font-orbitron font-extrabold tracking-tight">
                                 B.Tech AI With Shodh AI
                             </h3>
-                        </div>
+                        </motion.div>
 
                         {/* Brochure style context box */}
-                        <div className="bg-[#181818] p-4 sm:p-6 lg:p-8 rounded-2xl shadow-2xl max-w-lg lg:max-w-xl border-l-[4px] lg:border-l-[6px] border-[#D7F601] mt-4 relative overflow-hidden">
+                        <motion.div 
+                            variants={{
+                                hidden: { opacity: 0, y: 30 },
+                                visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                            }}
+                            className="bg-[#181818] p-4 sm:p-6 lg:p-8 rounded-2xl shadow-2xl max-w-lg lg:max-w-xl border-l-[4px] lg:border-l-[6px] border-[#D7F601] mt-4 relative overflow-hidden"
+                        >
                             {/* subtle internal glow/texture */}
                             <div className="absolute right-0 top-0 w-24 h-24 lg:w-32 lg:h-32 bg-[#D7F601]/5 blur-3xl rounded-full"></div>
                             <p className="text-white text-base lg:text-lg lg:text-[19px] font-medium leading-relaxed relative z-10">
                             Every student becomes an intern from day one.
                                 <span className="text-[#D7F601] font-bold tracking-wide mt-2 block">Stop studying. Start building.</span>
                             </p>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
 
                     {/* Right: Image Slider with Chamfered/Angled cut like Brochure */}
-                    <div className="lg:w-[45%] w-full h-[40vh] min-h-[300px] sm:h-[45vh] sm:min-h-[350px] lg:h-[600px] relative">
+                    <motion.div 
+                        initial={{ opacity: 0, x: 30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1, ease: "easeOut" }}
+                        className="lg:w-[45%] w-full h-[40vh] min-h-[300px] sm:h-[45vh] sm:min-h-[350px] lg:h-[600px] relative"
+                    >
                          {/* Clip-path for the cool tech-y brochure shape */}
                          <div className="absolute inset-0 z-10 bg-black overflow-hidden shadow-2xl border-[2px] lg:border-[4px] border-[#D7F601]/30" style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%)' }}>
                             <img 
@@ -133,16 +179,34 @@ const BtechAIShodhAIPage = () => {
                          
                          {/* Decorative Background Offset Box (Solid Lime Green) */}
                          <div className="absolute -right-2 -bottom-2 sm:-right-3 sm:-bottom-3 lg:-right-6 lg:-bottom-6 w-[95%] h-[95%] z-0 bg-[#D7F601] opacity-60" style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%)' }}/>
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 
             {/* Purple Cards Section */}
             <section className="py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-[#5B1DD6]">
-                <div className="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-8 justify-center items-stretch">
+                <motion.div 
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-50px" }}
+                    variants={{
+                        hidden: { opacity: 0 },
+                        visible: {
+                            opacity: 1,
+                            transition: { staggerChildren: 0.15 }
+                        }
+                    }}
+                    className="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-8 justify-center items-stretch"
+                >
 
                     {/* Card 1: B.Tech AI with Shodh AI */}
-                    <div className="bg-white rounded-[1.5rem] sm:rounded-[2rem] p-4 sm:p-6 pb-6 sm:pb-8 flex flex-col gap-4 sm:gap-6 lg:w-1/3 shadow-2xl hover:-translate-y-2 transition-transform duration-300 border-2 border-black/5">
+                    <motion.div 
+                        variants={{
+                            hidden: { opacity: 0, y: 30 },
+                            visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                        }}
+                        className="bg-white rounded-[1.5rem] sm:rounded-[2rem] p-4 sm:p-6 pb-6 sm:pb-8 flex flex-col gap-4 sm:gap-6 lg:w-1/3 shadow-2xl hover:-translate-y-2 transition-transform duration-300 border-2 border-black/5"
+                    >
                         <div className="w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden relative border border-black/10">
                             <Image src="/b.tech-ai-with/robo.jpg" alt="B.Tech AI with Shodh AI" fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                         </div>
@@ -159,10 +223,16 @@ const BtechAIShodhAIPage = () => {
                         <p className="text-black font-bold text-lg leading-snug tracking-tight opacity-90">
                             Shodh AI leads AI in India. Intern with the elite team. Be ready for the 2030 AI world.
                         </p>
-                    </div>
+                    </motion.div>
 
                     {/* Card 2: Built With */}
-                    <div className="bg-white rounded-[1.5rem] sm:rounded-[2rem] p-4 sm:p-6 pb-6 sm:pb-8 flex flex-col gap-4 sm:gap-6 lg:w-1/3 shadow-2xl hover:-translate-y-2 transition-transform duration-300 border-2 border-black/5">
+                    <motion.div 
+                        variants={{
+                            hidden: { opacity: 0, y: 30 },
+                            visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                        }}
+                        className="bg-white rounded-[1.5rem] sm:rounded-[2rem] p-4 sm:p-6 pb-6 sm:pb-8 flex flex-col gap-4 sm:gap-6 lg:w-1/3 shadow-2xl hover:-translate-y-2 transition-transform duration-300 border-2 border-black/5"
+                    >
                         <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden relative border border-black/10 bg-[#000042] flex items-center justify-center">
                             <Image src="/b.tech-ai-with/shodh.png" alt="Built With" fill className="object-cover scale-90" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                         </div>
@@ -183,10 +253,16 @@ const BtechAIShodhAIPage = () => {
                         <p className="text-black font-bold text-lg leading-snug tracking-tight opacity-90 mt-auto">
                             Indian Govt mandate to build AI for science. Shodh AI released the world's first Large Physics Model.
                         </p>
-                    </div>
+                    </motion.div>
 
                     {/* Card 3: Brutally Selective */}
-                    <div className="bg-white rounded-[1.5rem] sm:rounded-[2rem] p-4 sm:p-6 pb-6 sm:pb-8 flex flex-col gap-4 sm:gap-6 lg:w-1/3 shadow-2xl hover:-translate-y-2 transition-transform duration-300 border-2 border-black/5">
+                    <motion.div 
+                        variants={{
+                            hidden: { opacity: 0, y: 30 },
+                            visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                        }}
+                        className="bg-white rounded-[1.5rem] sm:rounded-[2rem] p-4 sm:p-6 pb-6 sm:pb-8 flex flex-col gap-4 sm:gap-6 lg:w-1/3 shadow-2xl hover:-translate-y-2 transition-transform duration-300 border-2 border-black/5"
+                    >
                         <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden relative border border-black/10">
                             <Image src="/b.tech-ai-with/lab.JPG" alt="Brutally Selective" fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                         </div>
@@ -203,9 +279,8 @@ const BtechAIShodhAIPage = () => {
                         <p className="text-black font-bold text-lg leading-snug tracking-tight opacity-90">
                             Only 60 seats. While others code "Hello World," you fine-tune LLMs on NVIDIA Hopper GPUs.
                         </p>
-                    </div>
-
-                </div>
+                    </motion.div>
+                </motion.div>
             </section>
 
             {/* Reality Check Section */}

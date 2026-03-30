@@ -121,7 +121,7 @@ const ProgramPartners = () => {
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-[80px] group-hover:bg-white/10 transition-colors pointer-events-none" />
 
                                 {/* Logo Presentation exactly as requested (enlarged significantly) */}
-                                <div className="mb-8 relative flex items-center justify-center overflow-hidden">
+                                <div className="mb-8 p-2 relative flex items-center justify-center">
                                     <div className="relative flex items-center justify-center transform group-hover:scale-110 group-hover:drop-shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-700 ease-out">
                                         {item.logo ? (
                                             <Image

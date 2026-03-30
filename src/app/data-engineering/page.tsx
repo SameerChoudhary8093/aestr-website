@@ -4,19 +4,8 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import { BookOpen, Clock, ArrowRight } from 'lucide-react';
 
-
-// ─── Data ────────────────────────────────────────────────────────────────────
-
-const curriculumHighlights = [
-    "Machine Learning & Pattern Recognition",
-    "Deep Learning & Artificial Neural Networks",
-    "Big Data Architecture & Real-time Analytics",
-    "Statistical Inference & Probabilistic Modeling",
-    "Interactive Data Visualization & Storytelling",
-    "Natural Language Processing & Generative AI",
-    "Predictive Analytics & Forecasting Systems"
-];
 
 const yearData = [
     {
@@ -50,8 +39,8 @@ const yearData = [
                     "Applied Physics & Experimental Design Lab II",
                     "Innovation Catalyst II: Foundational Skills & Lab Project Prototyping",
                     "Cloud Systems & Infrastructure Essentials",
-                    "Statistical Modeling & Probability foundations",
-                    "Data Wrangling & Processing Studio"
+                    "AI & ML Foundations: Statistics & Search Algorithms",
+                    "Python for AI Programming Studio"
                 ],
             },
         ],
@@ -67,10 +56,10 @@ const yearData = [
                     "Economics and Social Sciences",
                     "Data Structures and Algorithms",
                     "Principles of Programming Languages",
-                    "Foundations of Data Engineering: Inferential Statistics",
-                    "Data Engineering Studio -> Exploratory Data Analysis & Visualization",
+                    "Machine Learning Foundations: Supervised Learning",
+                    "Machine Learning Studio -> Building Predictive Models",
                     "Data Structures and Algorithms Lab",
-                    "Field Project -> Innovation Lab Project I: Data Infrastructure Design",
+                    "Field Project/Field Visit-3 -> Innovation Lab Project I: AI System Design",
                     "Digital Systems & Logic Engineering"
                 ],
             },
@@ -79,13 +68,13 @@ const yearData = [
                 subjects: [
                     "Employability Skills-II",
                     "Proficiency and Co-Curricular Activities-IV",
-                    "Software Engineering",
+                    "AI & Machine Learning",
                     "Discrete Mathematics and Graph Theory",
                     "Core Java",
                     "Industrial oriented Core Java Project Lab",
                     "Design Practice with UML Lab",
-                    "Predictive Analytics: Linear & Logistic Regression",
-                    "Predictive Modeling Studio -> Building Forecasting Systems",
+                    "Neural Networks & Deep Learning: Foundational Architectures",
+                    "Deep Learning Studio -> Training Multi-layer Perceptrons & CNNs",
                     "Internship/Project-4 -> Innovation Lab Project II"
                 ],
             },
@@ -101,10 +90,10 @@ const yearData = [
                     "Proficiency and Co-Curricular Activities-V",
                     "Database Management System",
                     "Logical & Functional Programming",
-                    "Big Data Engineering: Hadoop & Spark Ecosystems",
-                    "Big Data Studio -> Processing peta-byte scale datasets",
-                    "Data Visualization: Advanced D3.js & BI Tools",
-                    "Innovation Lab Project III: Real-world Data Product Deployment",
+                    "Computer Architectures for AI",
+                    "Natural Language Processing: Text Analytics & Modeling",
+                    "NLP Studio -> Building Chatbots & Language Models",
+                    "Innovation Lab Project III: Real-world AI Deployment",
                     "Advanced Data Structures",
                     "Minor Specialization Capstone Project Design"
                 ],
@@ -117,9 +106,9 @@ const yearData = [
                     "Design & Analysis of Algorithms",
                     "Theory of Computation",
                     "Computer Network",
-                    "Feature Engineering & Model Selection Strategies",
-                    "Model Deployment Studio -> Scaling Models for Production",
-                    "Innovation Lab Project IV: Impact Analysis & Optimization",
+                    "Reinforcement Learning: Sequential Decision Making",
+                    "RL Studio -> Training Autonomous Agents",
+                    "Innovation Lab Project IV: AI Product Realization",
                     "Minor Specialization Mastery"
                 ],
             },
@@ -133,12 +122,12 @@ const yearData = [
                 subjects: [
                     "Group Discussion, Aptitude & Reasoning-I",
                     "Proficiency and Co-Curricular Activities-VII",
-                    "Data Ethics, Privacy & Governance",
+                    "AI Ethics, Policy & Governance",
                     "Operating Systems",
-                    "Graph Data Engineering & Knowledge Graphs",
-                    "Financial Intelligence & Fraud Analytics",
-                    "Interactive Storytelling with Data",
-                    "Major Project Stage-I -> Innovation Lab Grand Challenge (Data Major)"
+                    "Computer Vision: Image Processing & Object Detection",
+                    "Generative AI & LLM Architectures",
+                    "Generative AI Studio -> Fine-tuning Foundational Models",
+                    "Major Project Stage-I -> Innovation Lab Grand Challenge Seminar I (AI Major)"
                 ],
             },
             {
@@ -147,13 +136,13 @@ const yearData = [
                     "Group Discussion, Aptitude & Reasoning-II",
                     "Intellectual Property Rights",
                     "Seminar",
-                    "Major Project-II -> Innovation Lab Grand Challenge Showcase (Data Major)",
-                    "Real Time Streaming Analytics",
-                    "Distributed Data Systems",
+                    "Major Project-II -> Innovation Lab Grand Challenge Showcase (AI Major)",
+                    "Real Time AI Systems",
+                    "Distributed AI Systems",
                     "Compiler Construction",
-                    "GenAI for Data Engineering",
-                    "High Performance Computing for Data Engineering",
-                    "Data Fabric & Mesh Architectures"
+                    "Robotics & Embodied AI Lab",
+                    "AI in Edge Devices",
+                    "Advance Computer Architectures for ML"
                 ],
             },
         ],
@@ -176,12 +165,12 @@ const YouTubePlayer = ({ videoId, title }: { videoId: string; title: string }) =
     }
 
     return (
-        <div 
+        <div
             className="relative w-full h-full cursor-pointer group"
             onClick={() => setIsPlaying(true)}
         >
-            <Image 
-                src="/Other/lab-2.webp" 
+            <Image
+                src="/Other/lab-2.webp"
                 alt={title}
                 fill
                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
@@ -202,172 +191,133 @@ const YouTubePlayer = ({ videoId, title }: { videoId: string; title: string }) =
     );
 };
 
-const DataEngineeringPage = () => {
+const DataEngineeringSpecializationPage = () => {
     const [activeYear, setActiveYear] = useState(0);
 
     return (
-        <main className="bg-background min-h-screen text-foreground selection:bg-accent selection:text-black">
-            {/* Hero / Header Section */}
-            <section className="pt-32 pb-24 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple/10 rounded-full blur-[150px] -translate-y-1/2 translate-x-1/2" />
-                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[120px] translate-y-1/4 -translate-x-1/4" />
-
-                <div className="container-boxed relative z-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <motion.div 
+        <main className="bg-background-alt min-h-screen text-foreground selection:bg-accent selection:text-black">
+            {/* Hero Section - AI & ML Focus */}
+            <section className="pt-44 pb-20 bg-[#5B1DD6] relative overflow-hidden">
+                {/* Ambient Background Glows - Neon accents */}
+                <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px] pointer-events-none z-0" />
+                <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[100px] pointer-events-none z-0" />
+                
+                <div className="container-boxed w-full max-w-[1224px] mx-auto relative z-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        {/* Left Column - Text Content */}
+                        <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
-                            className="space-y-10"
+                            className="space-y-8"
                         >
-                            <div className="space-y-6">
-                                <h2 className="subheading-font font-medium text-foreground/80 tracking-wide">
+                            <div className="space-y-4">
+                                <h2 className="text-sm md:text-base font-orbitron font-bold text-white/90 tracking-[0.2em] uppercase">
                                     B.Tech Computer Science & Engineering with
                                 </h2>
-                                <h1 className="text-hero font-orbitron text-foreground tracking-tight">
-                                    Data <br />
-                                    <span className="text-accent">Engineering</span>
+                                <h1 className="text-4xl md:text-5xl lg:text-7xl font-orbitron font-black text-white leading-tight">
+                                    Data <span className="text-accent italic">Engineering</span>
                                 </h1>
                             </div>
 
                             <div className="space-y-4">
-                                <div className="flex items-center gap-4 group">
-                                    <div className="w-10 h-10 rounded-lg bg-purple/20 flex items-center justify-center text-purple border border-purple/30 group-hover:bg-purple/30 transition-colors">
-                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                        </svg>
+                                {/* Info Row 1 - Eligibility */}
+                                <div className="flex items-center gap-3">
+                                    <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-accent border border-white/20">
+                                        <BookOpen className="w-5 h-5" />
                                     </div>
-                                    <p className="subheading-font font-semibold text-foreground/90">
-                                        Eligibility: <span className="underline decoration-purple/50 decoration-2 underline-offset-4 decoration-dashed group-hover:decoration-solid transition-all cursor-help">SGVUEEE/JEE/CUET UG</span>
+                                    <p className="text-sm md:text-base font-medium text-white/90">
+                                        Eligibility: SGVUEEE/JEE/CUET UG
                                     </p>
                                 </div>
 
-                                <div className="flex items-center gap-4 group">
-                                    <div className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center text-accent border border-accent/20 group-hover:bg-accent/30 transition-colors">
-                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                        </svg>
+                                {/* Info Row 2 - Duration */}
+                                <div className="flex items-center gap-3">
+                                    <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-accent border border-white/20">
+                                        <Clock className="w-5 h-5" />
                                     </div>
-                                    <p className="subheading-font font-semibold text-foreground/90">
+                                    <p className="text-sm md:text-base font-medium text-white/90">
                                         Duration: 4 Years (8 Semesters)
                                     </p>
                                 </div>
                             </div>
 
-
+                            {/* Apply Now Button - Directs to Home Hero Form */}
+                            <Link href="/#hero">
+                                <motion.button
+                                    whileHover={{ scale: 1.02 }}
+                                    whileTap={{ scale: 0.98 }}
+                                    className="mt-6 inline-flex items-center gap-3 px-8 py-4 bg-accent text-black rounded-xl shadow-[0_0_30px_rgba(216,246,2,0.3)] hover:shadow-[0_0_40px_rgba(216,246,2,0.5)] transition-all duration-300 font-orbitron font-black uppercase tracking-wider text-sm"
+                                >
+                                    Apply Now
+                                    <ArrowRight className="w-4 h-4" />
+                                </motion.button>
+                            </Link>
                         </motion.div>
 
-                        <motion.div 
+                        {/* Right Column - Video Thumbnail - Pushed Down */}
+                        <motion.div
                             initial={{ opacity: 0, scale: 0.9, x: 30 }}
                             animate={{ opacity: 1, scale: 1, x: 0 }}
                             transition={{ duration: 1, delay: 0.2 }}
-                            className="relative"
+                            className="relative mt-12 lg:mt-24"
                         >
-                            <div className="aspect-[4/3] w-full rounded-2xl overflow-hidden border border-white/10 shadow-3xl bg-background-alt group">
-                                <YouTubePlayer 
-                                    videoId="mA3Z2VYMNXo" 
-                                    title="Data Engineering overview"
+                            <div className="aspect-[16/9] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/20 bg-black/40 backdrop-blur-md">
+                                <Image
+                                    src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
+                                    alt="AI & Machine Learning"
+                                    fill
+                                    className="object-cover opacity-80"
                                 />
+                                {/* Play Button Overlay */}
+                                <div className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/40 transition-all duration-300 cursor-pointer group">
+                                    <div className="w-20 h-20 bg-white/10 backdrop-blur-xl border border-white/30 rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-500">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            className="w-8 h-8 text-white ml-1"
+                                        >
+                                            <path d="M8 5v14l11-7-11-7z" />
+                                        </svg>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="absolute -inset-4 border border-white/5 rounded-[2rem] -z-10 pointer-events-none" />
                         </motion.div>
                     </div>
                 </div>
             </section>
 
-            {/* What is Section */}
-            <section className="py-24 bg-background-alt/50 border-t border-white/5">
-                <div className="container-boxed">
-                    <div className="max-w-5xl space-y-12">
-                        <motion.h2 
+            {/* What Is Section - Centered */}
+            <section className="py-12 relative overflow-hidden" style={{backgroundColor: '#571AD0'}}>
+                <div className="container-boxed w-full max-w-[1224px] mx-auto relative z-10 text-center flex flex-col items-center">
+                    <div className="max-w-6xl space-y-8">
+                        <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="text-h2 font-orbitron text-foreground"
+                            className="text-3xl md:text-5xl font-orbitron font-black text-white"
                         >
-                            What is <span className=" text-accent">Data Engineering?</span>
+                            What is <span className="text-accent italic">Data Engineering</span>?
                         </motion.h2>
 
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
-                            className="bg-background-alt p-8 md:p-12 rounded-[2rem] border border-white/10 shadow-2xl relative overflow-hidden group"
+                            className="bg-black/20 p-6 md:p-10 rounded-[2.5rem] border border-white/10 shadow-2xl backdrop-blur-xl"
                         >
-                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
-                            
-                            <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed font-medium">
-                                <strong className="text-foreground">Data Engineering</strong> is the multidisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from structured and unstructured data. It combines <span className="text-foreground font-bold">statistical modeling</span>, <span className="text-foreground font-bold">domain expertise</span>, and <span className="text-foreground font-bold">machine learning</span> to solve complex problems and drive intelligent decision-making across every modern industry.
-                            </p>
-
-                            <div className="absolute inset-0 bg-[radial-gradient(#ffffff03_1px,transparent_1px)] bg-[size:30px_30px] opacity-40 pointer-events-none" />
-                        </motion.div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Why Aestr Section */}
-            <section className="py-24 bg-[#F8F9FB] relative overflow-hidden">
-                <div className="container-boxed">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <motion.div 
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="space-y-10"
-                        >
-                            <div className="space-y-6">
-                                <h2 className="text-h2 font-orbitron text-black">
-                                    Why Aestr ?
-                                </h2>
-                                <p className="text-xl md:text-2xl subheading-font text-black/70 leading-relaxed font-medium">
-                                    Transform raw data into strategic intelligence.
-                                </p>
-                            </div>
-
-                            <div className="space-y-6 pt-4">
-                                <div className="space-y-2">
-                                    <h3 className="text-h3 font-outfit text-black">
-                                        Data-First Curriculum
-                                    </h3>
-                                    <p className="text-lg text-black/60 font-medium leading-relaxed max-w-xl">
-                                        Our labs are powered by high-performance clusters, giving you the computation power to train models on real-world datasets with billions of parameters.
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                                <div className="space-y-4">
+                                    <p className="text-lg md:text-xl text-white/90 leading-[1.5] font-medium">
+                                        Data Engineering is the systematic application of <strong className="text-accent font-orbitron font-bold">software engineering</strong>, <strong className="text-accent font-orbitron font-bold">database systems</strong>, and <strong className="text-accent font-orbitron font-bold">distributed computing</strong> to create robust data pipelines and infrastructure.
                                     </p>
                                 </div>
-                            </div>
-                        </motion.div>
-
-                        <motion.div 
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            className="relative"
-                        >
-                            <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-2xl relative border-4 border-white group bg-gray-200">
-                                <Image 
-                                    src="/ExecutionTeam/Arastu.jpeg" 
-                                    alt="Arastu Sharma, PhD"
-                                    fill
-                                    className="object-cover group-hover:scale-105 transition-transform duration-1000"
-                                />
-                                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-all pointer-events-none" />
-                                
-                                <div className="absolute top-6 left-6 z-10 bg-black/60 backdrop-blur-md px-5 py-3 rounded-lg border border-white/20">
-                                    <h4 className="text-white font-bold text-xl leading-none">Arastu Sharma, PhD.</h4>
-                                    <p className="text-white/70 text-sm mt-1">University of Cambridge</p>
-                                </div>
-
-                                <div className="absolute top-6 right-6 z-10 opacity-80">
-                                    <p className="text-black font-black text-[10px] leading-tight text-right uppercase tracking-tighter">Suresh<br/><span className="text-sm">Gyan Vihar</span><br/>University</p>
-                                </div>
-
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/40 shadow-xl group-hover:scale-110 transition-transform">
-                                        <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M8 5v14l11-7z" />
-                                        </svg>
-                                    </div>
+                                <div className="space-y-4">
+                                    <p className="text-lg md:text-xl text-white/90 leading-[1.5] font-medium">
+                                        It encompasses data architecture, ETL processes, real-time streaming, and data warehousing techniques that enable organizations to collect, process, and analyze massive volumes of data efficiently and reliably.
+                                    </p>
                                 </div>
                             </div>
                         </motion.div>
@@ -376,23 +326,34 @@ const DataEngineeringPage = () => {
             </section>
 
             {/* Curriculum Section */}
-            <section className="py-24 bg-background relative overflow-hidden">
-                <div className="container-boxed relative z-10">
+            <section className="py-24 bg-background-alt relative overflow-hidden">
+                {/* Ambient Background Glows */}
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 blur-[150px] rounded-full pointer-events-none z-0" />
+                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple/10 blur-[150px] rounded-full pointer-events-none z-0" />
+                
+                <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto">
                     <div className="space-y-16">
                         <div className="space-y-4">
-                            <h2 className="text-h2 font-orbitron text-foreground tracking-tight">Curriculum</h2>
-                            <h3 className=" text-3xl text-foreground/60 ">Curriculum Highlights</h3>
+                            <h2 className="text-4xl md:text-6xl font-orbitron font-black text-foreground tracking-tight">Curriculum</h2>
+                            <h3 className="text-2xl text-foreground/60 font-orbitron font-bold">Curriculum Highlights</h3>
                         </div>
 
-                        <div className="flex flex-wrap gap-3 md:gap-4">
-                            {curriculumHighlights.map((tag, i) => (
-                                <motion.span 
+                        <div className="flex flex-nowrap gap-2 overflow-x-auto pb-4 no-scrollbar">
+                            {[
+                                "1. Big Data Architecture",
+                                "2. Cloud Data Engineering",
+                                "3. Real-time Stream Processing",
+                                "4. Data Warehousing & Lakes",
+                                "5. Machine Learning Pipelines",
+                                "6. Data Governance & Security"
+                            ].map((tag, i) => (
+                                <motion.span
                                     key={tag}
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.05 }}
-                                    className="px-6 py-3 rounded-xl bg-background-alt border border-white/5 text-foreground/70 font-semibold hover:border-accent/30 hover:text-accent transition-all cursor-default text-sm md:text-base shadow-lg"
+                                    className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-foreground/70 font-orbitron font-bold hover:border-accent/30 hover:text-accent transition-all cursor-default text-[10px] uppercase tracking-wider whitespace-nowrap shadow-sm"
                                 >
                                     {tag}
                                 </motion.span>
@@ -401,23 +362,22 @@ const DataEngineeringPage = () => {
 
                         <div className="h-px w-full bg-white/5" />
 
-                        <div className="space-y-12">
-                            <h3 className="text-h2 font-orbitron text-foreground tracking-tight">
-                                Programme <br />
-                                <span className=" text-accent ">Curriculum</span>
+                        <div className="space-y-12 p-12 lg:p-16 rounded-[3rem]" style={{ backgroundColor: '#D8F602' }}>
+                            <h3 className="text-5xl md:text-7xl font-orbitron font-black text-black tracking-tighter">
+                                Programme <span className="opacity-40">&</span> <br />
+                                <span className="text-accent italic drop-shadow-sm brightness-50">Curriculum</span>
                             </h3>
 
                             <div className="flex flex-col lg:flex-row gap-12">
-                                <div className="flex lg:flex-col gap-3 overflow-x-auto pb-4 lg:pb-0 lg:w-48 shrink-0">
+                                <div className="flex lg:flex-col gap-3 overflow-x-auto pb-4 lg:pb-0 lg:w-48 shrink-0 no-scrollbar">
                                     {yearData.map((y, i) => (
                                         <button
                                             key={y.year}
                                             onClick={() => setActiveYear(i)}
-                                            className={`px-6 py-4 rounded-2xl font-orbitron font-bold text-sm transition-all duration-300 whitespace-nowrap text-left border ${
-                                                activeYear === i 
-                                                ? 'bg-accent text-black border-accent' 
-                                                : 'bg-background-alt text-foreground/40 border-white/5 hover:border-accent/30'
-                                            }`}
+                                            className={`px-6 py-4 rounded-xl font-orbitron font-black text-xs uppercase tracking-widest transition-all duration-300 whitespace-nowrap text-left border ${activeYear === i
+                                                ? 'bg-black text-accent border-black'
+                                                : 'bg-black/5 text-black/50 border-black/10 hover:border-black/30'
+                                                }`}
                                         >
                                             {y.year}
                                         </button>
@@ -437,7 +397,7 @@ const DataEngineeringPage = () => {
                                             <div key={sem.name} className="bg-background-alt p-8 rounded-3xl border border-white/5 shadow-2xl space-y-6 group hover:border-accent/20 transition-all">
                                                 <div className="flex items-center gap-4">
                                                     <div className="w-1 h-8 bg-accent rounded-full" />
-                                                    <h4 className="text-2xl font-orbitron font-bold text-foreground">{sem.name}</h4>
+                                                    <h4 className="text-2xl font-bold text-foreground">{sem.name}</h4>
                                                 </div>
                                                 <ul className="space-y-3">
                                                     {sem.subjects.map((s, idx) => (
@@ -457,359 +417,51 @@ const DataEngineeringPage = () => {
                 </div>
             </section>
 
-            {/* pathways Tree Section (Image 2) */}
-            <section className="py-24 bg-white relative overflow-hidden">
-                <div className="container-boxed text-center space-y-16">
-                    <motion.div 
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="space-y-4"
-                    >
-                        <h2 className="text-h2 font-orbitron text-black tracking-tight">
-                            Aestr Quality Assurance <span className=" text-black ">pathways</span>
-                        </h2>
-                        <p className="text-lg md:text-xl text-black/60 font-medium subheading-font">
-                            We provide clear, ambitious pathways to ensure your career takes off.
-                        </p>
-                    </motion.div>
-
-                    {/* The Tree Diagram */}
-                    <div className="relative pt-12 pb-20">
-                        {/* Central vertical stem */}
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0.5 h-16 bg-black hidden lg:block">
-                            <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-black rotate-45" />
-                        </div>
-
-                        {/* Horizontal branch */}
-                        <div className="absolute top-16 left-[12.5%] right-[12.5%] h-px bg-black hidden lg:block">
-                             <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-black rotate-45" />
-                        </div>
-
-                        {/* Four boxes */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-16">
-                            {[
-                                { title: "B.Tech AI With Shodh AI Track", sub: "35LPA+ jobs", color: "bg-[#FFC9E3] border-[#FF99C8]" },
-                                { title: "Global Opportunities", sub: "2+2, 3+1 Programs", color: "bg-[#E3D4FF] border-[#C3AAFF]" },
-                                { title: "Industry Partner Training", sub: "& Direct Placements", color: "bg-[#C9F6FF] border-[#99E8FF]" },
-                                { title: "Nurturing Entrepreneurs", sub: "Silicon Valley of AI", color: "bg-[#FFC9FF] border-[#FF99FF]" }
-                            ].map((item, idx) => (
-                                <motion.div 
-                                    key={idx}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: idx * 0.1 }}
-                                    className="relative flex flex-col items-center"
-                                >
-                                    {/* Vertical branch to box */}
-                                    <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-px h-16 bg-black hidden lg:block">
-                                        <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-black rotate-45" />
-                                    </div>
-                                    
-                                    <div className={`${item.color} w-full p-8 rounded-none border-b-[6px] border-black border-r-2 shadow-sm transition-transform hover:-translate-y-2 text-center flex flex-col justify-center min-h-[160px]`}>
-                                        <h4 className="text-h3 font-orbitron text-black leading-tight border-b-2 border-black/10 pb-4 mb-4">
-                                            {item.title}
-                                        </h4>
-                                        <p className="text-black font-bold tracking-tight text-sm md:text-lg">
-                                            {item.sub}
-                                        </p>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Labs Section */}
-            <section className="py-24 bg-background-alt">
-                <div className="container-boxed">
-                    <div className="space-y-16">
-                        <div className="space-y-6">
-                            <h2 className="text-h2 font-orbitron text-foreground">Innovation Labs</h2>
-                            <p className="text-xl text-foreground/60 max-w-2xl leading-relaxed">
-                                Our industry-standard labs are where data comes to life.
-                            </p>
+            {/* Applications Section - PURPLE */}
+            <section className="py-24 relative overflow-hidden" style={{backgroundColor: '#571AD0'}}>
+                <div className="container-boxed w-full max-w-[1224px] mx-auto relative z-10">
+                    <div className="space-y-20">
+                        <div className="text-center space-y-4">
+                            <motion.h2
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="text-4xl md:text-6xl lg:text-8xl font-orbitron font-black text-white tracking-tighter"
+                            >
+                                Career <span className="text-accent italic">Impact</span>
+                            </motion.h2>
+                            <p className="text-white/60 font-orbitron text-lg tracking-[0.2em] uppercase">Applications of Data Engineering</p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             {[
-                                { name: 'Foundation Model Lab', tag: "Generative AI & LLM Engineering", image: '/Other/lab-1.webp' },
-                                { name: 'Big Data Processing Unit', tag: 'High-Performance Infrastructure', image: '/Other/lab-4.webp' },
-                                { name: 'Visualization Studio', tag: "Interactive Analytics & Discovery", image: '/Other/lab-2.webp' },
-                                { name: 'Embodied Brain Lab', tag: 'Deploying AI into physical systems', image: '/Other/lab-3.webp' }
-                            ].map((lab, i) => (
-                                <motion.div 
-                                    key={lab.name}
-                                    initial={{ opacity: 0, y: 30 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: i * 0.1 }}
-                                    className="group space-y-6"
-                                >
-                                    <div className="aspect-square relative rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
-                                        <Image src={lab.image} alt={lab.name} fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    </div>
-                                    <div className="space-y-2">
-                                        <h3 className="text-2xl font-orbitron font-bold text-foreground">{lab.name}</h3>
-                                        <p className="text-sm text-accent subheading-font font-semibold uppercase tracking-wider">{lab.tag}</p>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Emerging trends Section (Image 1) */}
-            <section className="py-24 bg-white relative overflow-hidden">
-                <div className="container-boxed">
-                    <motion.h2 
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-h2 font-orbitron text-black mb-16"
-                    >
-                        Emerging <span className=" text-black ">trends</span>
-                        <div className="h-1 w-24 bg-purple/20 mt-2 relative">
-                            <div className="absolute inset-0 bg-purple/10 skew-x-12 translate-y-2 opacity-50" />
-                        </div>
-                    </motion.h2>
-
-                    <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-                        {[
-                            { num: "01", title: "Quantum Machine Learning", color: "bg-pink-50 border-pink-200" },
-                            { num: "02", title: "Generative AI for Analytics", color: "bg-blue-50 border-blue-200 shadow-blue-100" },
-                            { num: "03", title: "Graph Data Engineering Mastery", color: "bg-purple-50 border-purple-200" },
-                            { num: "04", title: "Synthetic Data Foundations", color: "bg-pink-50 border-pink-200" },
-                            { num: "05", title: "High-Performance Data Fabric", color: "bg-purple-50 border-purple-300" }
-                        ].map((trend, idx) => (
-                            <motion.div
-                                key={idx}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: idx * 0.1 }}
-                                className={`${trend.color} p-8 rounded-none border-b-8 border-black flex flex-col gap-6 shadow-sm min-h-[220px] group hover:scale-[1.02] transition-all`}
-                            >
-                                <span className={`text-4xl font-playfair  font-bold ${
-                                    idx === 0 ? "text-pink-400" : idx === 1 ? "text-blue-400" : idx === 2 ? "text-purple-400" : idx === 3 ? "text-pink-400" : "text-purple-400"
-                                }`}>
-                                    {trend.num}
-                                </span>
-                                <h4 className="text-lg font-bold text-gray-800 leading-tight">
-                                    {trend.title}
-                                </h4>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Partners Section */}
-            <section className="py-24 bg-background-alt border-y border-white/5">
-                <div className="container-boxed">
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 grayscale opacity-50">
-                        <div className="h-10 flex items-center justify-center font-orbitron font-bold text-foreground/40 text-center uppercase">GOOGLE</div>
-                        <div className="h-10 flex items-center justify-center font-orbitron font-bold text-foreground/40 text-center uppercase">AWS</div>
-                        <div className="h-10 flex items-center justify-center font-orbitron font-bold text-foreground/40 text-center uppercase">MICROSOFT</div>
-                        <div className="h-10 flex items-center justify-center font-orbitron font-bold text-foreground/40 text-center uppercase">IBM</div>
-                        <div className="h-10 flex items-center justify-center font-orbitron font-bold text-foreground/40 text-center uppercase">NVIDIA</div>
-                        <div className="h-10 flex items-center justify-center font-orbitron font-bold text-foreground/40 text-center uppercase">INTEL</div>
-                    </div>
-                </div>
-            </section>
-
-            {/* An overview (Image 3) */}
-            <section className="py-24 bg-[#E6A0B0]/40 relative overflow-hidden">
-                <div className="container-boxed">
-                    <motion.h2 
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-h2 font-orbitron text-black mb-16"
-                    >
-                        An <span className=" text-black ">overview</span>
-                    </motion.h2>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {[
-                            { label: "Current students in various courses", value: "10,000 +" },
-                            { label: "Industry tie-ups for skill development", value: "125 +" },
-                            { label: "Alumni working worldwide in MNCs", value: "40 K" },
-                            { label: "Placement offers in Batch-2024", value: "340 +" },
-                            { label: "Highest package offered in 2024", value: "42 LPA" },
-                            { label: "Average package in batch-2022", value: "4.1 LPA" },
-                            { label: "Lush green campus with hostel", value: "45 Acre" },
-                            { label: "Sq. ft. Innovation lab for projects", value: "10,000" }
-                        ].map((stat, idx) => (
-                            <motion.div
-                                key={idx}
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: idx * 0.05 }}
-                                className="bg-pink-50/60 p-10 rounded-none shadow-sm space-y-4 border border-pink-100 hover:bg-pink-100/80 transition-all group"
-                            >
-                                <div className="space-y-1">
-                                    <span className="text-4xl font-bold text-black group-hover:scale-110 transition-transform block">
-                                        {stat.value}
-                                    </span>
-                                    <div className="w-16 h-1 bg-black/5 group-hover:w-full transition-all duration-500" />
-                                </div>
-                                <p className="text-sm font-medium text-gray-600 leading-snug">
-                                    {stat.label}
-                                </p>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Aestr @advantages (Image 4) */}
-            <section className="py-24 bg-white relative overflow-hidden text-black">
-                <div className="container-boxed">
-                    <motion.h2 
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="text-h2 font-orbitron text-black mb-6"
-                    >
-                        Aestr <span className=" text-black ">@advantages</span>
-                    </motion.h2>
-                    <p className="max-w-3xl text-lg font-medium text-gray-700 mb-16 leading-relaxed">
-                        Train for roles powering the next generation of banking, robotics, healthcare, and more—with real-world impact and future security.
-                    </p>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative mb-16">
-                        {[
-                            { num: "1", text: "Student Awarded As First Google Ambassador." },
-                            { num: "2", text: "Recipient Of I.GAUGE E-LEAD CERTIFICATE" },
-                            { num: "3", text: "Benefit From Credit Transfer-Degree Programmes" }
-                        ].map((item, i) => (
-                            <div key={i} className="flex items-center gap-6 relative group">
-                                <span className="text-7xl font-orbitron font-black text-gray-100 group-hover:text-purple/5 transition-colors absolute -left-4 -top-4 -z-10">
-                                    A
-                                </span>
-                                <span className="text-6xl font-playfair  font-bold text-black">
-                                    {item.num}
-                                </span>
-                                <p className="text-xl font-bold leading-tight">
-                                    {item.text}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="mt-20 flex flex-col md:flex-row items-center gap-8 bg-[#E8E2FF]/40 p-1 md:p-12 rounded-none">
-                        <div className="flex-1 text-2xl font-bold leading-relaxed px-4 md:px-0">
-                            Student chapters of Professional Bodies IEEE, CSI, NPTEL, ICT, IETE, SAE, IAESTE, etc.
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            {/* Future Scope Of Data Engineering (Image 5) */}
-            <section className="py-24 bg-background relative overflow-hidden">
-                <div className="container-boxed">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="space-y-12"
-                        >
-                            <div className="space-y-4">
-                                <h2 className="text-h2 font-orbitron text-foreground leading-[1.1]">
-                                    Future Scope Of <span className=" text-foreground/60 ">Data Engineering</span>
-                                </h2>
-                                <p className="text-lg text-foreground/70 leading-relaxed font-medium">
-                                    Data Engineering is the core engine of modern intelligence, enabling systems to see patterns, predict outcomes, and automate decision-making.
-                                </p>
-                            </div>
-
-                            <div className="space-y-6">
-                                <h4 className="text-2xl font-bold font-orbitron text-foreground">Economic Impact</h4>
-                                <ul className="space-y-4">
-                                    {[
-                                        "The global data engineering market size is projected to reach $378 billion by 2030.",
-                                        "Exponential growth in real-time streaming analytics and quantum computing readiness."
-                                    ].map((item, i) => (
-                                        <li key={i} className="flex items-start gap-4 group">
-                                            <span className="w-2 h-2 rounded-full bg-accent mt-2 group-hover:scale-150 transition-transform shrink-0" />
-                                            <p className="text-lg text-foreground/80 font-medium leading-snug">{item}</p>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9, x: 50 }}
-                            whileInView={{ opacity: 1, scale: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="relative"
-                        >
-                            {/* Decorative curved background behind robot */}
-                            <div className="absolute bottom-0 right-0 w-full h-[60%] bg-purple/20 rounded-l-[10rem] -z-10 translate-y-10" />
-                            <div className="relative aspect-square w-full max-w-[600px] ml-auto">
-                                <Image 
-                                    src="/Other/future-robot.png" 
-                                    alt="Future Data Systems" 
-                                    fill 
-                                    className="object-contain drop-shadow-[0_20px_50px_rgba(215,246,1,0.2)]" 
-                                />
-                            </div>
-                        </motion.div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Applications Section */}
-            <section className="py-24 bg-background-alt/30 border-t border-white/5">
-                <div className="container-boxed">
-                    <div className="space-y-16">
-                        <motion.h2 
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="text-h2 font-orbitron text-foreground"
-                        >
-                            Applications of <span className=" text-accent">Data Engineering</span>
-                        </motion.h2>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            {[
                                 {
-                                    title: "Predictive Analytics",
-                                    desc: "Transforming historical data into future foresight across industries, from retail to manufacturing.",
-                                    image: "/Other/lab-1.webp",
-                                    major: "Data Engineering",
-                                    lab: "Prediction Unit"
+                                    title: "Data Architect",
+                                    desc: "Designing scalable data infrastructure and architecture for enterprise-level data processing and analytics.",
+                                    image: "/Other/_DSC0612.jpg",
+                                    major: "Data Architecture",
+                                    lab: "NVIDIA Pipeline"
                                 },
                                 {
-                                    title: "Healthcare Diagnostics",
-                                    desc: "AI-driven precision medicine and early disease detection systems utilizing genomic datasets.",
-                                    image: "/Other/lab-3.webp",
-                                    major: "Data Engineering",
-                                    lab: "Bio-Informatics Lab"
+                                    title: "Big Data Engineer",
+                                    desc: "Building distributed data processing systems to handle massive volumes of structured and unstructured data.",
+                                    image: "/Other/DSC01997.jpg",
+                                    major: "Big Data Systems",
+                                    lab: "Shodh AI Research"
                                 },
                                 {
-                                    title: "Financial Intelligence",
-                                    desc: "Algorithmic trading and sophisticated fraud detection ecosystems for global banking.",
-                                    image: "/Other/lab-4.webp",
-                                    major: "Data Engineering",
-                                    lab: "Fintech Hub"
+                                    title: "Cloud Data Engineer",
+                                    desc: "Implementing cloud-native data solutions using AWS, Azure, and GCP for scalable data operations.",
+                                    image: "/Other/DSC08333.jpg.jpeg",
+                                    major: "Cloud Computing",
+                                    lab: "Embodied Brain Lab"
                                 },
                                 {
-                                    title: "Smart Cities",
-                                    desc: "Optimizing urban resources and traffic flow através real-time sensor data analytics.",
-                                    image: "/Other/lab-2.webp",
-                                    major: "Data Engineering",
-                                    lab: "Urban Analytics Lab"
+                                    title: "ML Operations Engineer",
+                                    desc: "Deploying and maintaining machine learning models in production with robust data pipelines.",
+                                    image: "/Other/image.jpeg",
+                                    major: "MLOps Systems",
+                                    lab: "Policy Hub"
                                 }
                             ].map((app, idx) => (
                                 <motion.div
@@ -818,41 +470,33 @@ const DataEngineeringPage = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: idx * 0.1 }}
-                                    className="bg-background border border-white/5 rounded-2xl overflow-hidden hover:border-accent/30 transition-all group flex flex-col"
+                                    className="bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-accent/40 transition-all group flex flex-col shadow-2xl"
                                 >
-                                    <div className="aspect-[4/3] relative overflow-hidden">
-                                        <Image 
-                                            src={app.image} 
-                                            alt={app.title} 
-                                            fill 
-                                            className="object-cover transition-transform duration-700 group-hover:scale-110" 
+                                    <div className="aspect-[4/5] relative overflow-hidden">
+                                        <Image
+                                            src={app.image}
+                                            alt={app.title}
+                                            fill
+                                            className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
                                     </div>
-                                    
-                                    <div className="p-6 space-y-4 flex-1 flex flex-col">
-                                        <h4 className="text-xl subheading-font font-bold text-foreground">{app.title}</h4>
-                                        <p className="text-sm text-foreground/60 leading-relaxed line-clamp-3">
+
+                                    <div className="p-8 space-y-5 flex-1 flex flex-col -mt-20 relative z-10 bg-black/60 backdrop-blur-md">
+                                        <h4 className="text-2xl font-orbitron font-black text-accent leading-tight">{app.title}</h4>
+                                        <p className="text-sm text-white/70 leading-relaxed font-medium line-clamp-4">
                                             {app.desc}
                                         </p>
-                                        
-                                        <div className="mt-auto pt-6 space-y-3">
+
+                                        <div className="mt-auto pt-6 space-y-3 border-t border-white/10">
                                             <div className="flex items-center justify-between">
-                                                <div className="flex items-center gap-3">
-                                                    <span className="text-[10px] font-bold text-foreground/40 uppercase tracking-widest">Major</span>
-                                                    <span className="px-3 py-1 bg-purple/10 border border-purple/20 text-purple text-[10px] font-bold rounded-md uppercase">
-                                                        {app.major}
-                                                    </span>
-                                                </div>
+                                                <span className="text-[10px] font-orbitron font-bold text-white/40 uppercase tracking-widest">Major Segment</span>
+                                                <span className="text-accent text-[10px] font-black uppercase tracking-wider">{app.major}</span>
                                             </div>
 
                                             <div className="flex items-center justify-between">
-                                                <div className="flex items-center gap-3">
-                                                    <span className="text-[10px] font-bold text-foreground/40 uppercase tracking-widest">Lab</span>
-                                                    <span className="px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-[10px] font-bold rounded-md uppercase">
-                                                        {app.lab}
-                                                    </span>
-                                                </div>
+                                                <span className="text-[10px] font-orbitron font-bold text-white/40 uppercase tracking-widest">Strategic Lab</span>
+                                                <span className="text-white text-[10px] font-black uppercase tracking-wider">{app.lab}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -863,60 +507,56 @@ const DataEngineeringPage = () => {
                 </div>
             </section>
 
-            {/* Fees Structure Section */}
-            <section className="py-24 bg-background relative overflow-hidden">
-                <div className="container-boxed relative z-10">
-                    <div className="space-y-12">
-                        <motion.h2 
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold text-foreground"
-                        >
-                            Fees <span className=" text-foreground/60 ">Structure</span>
-                        </motion.h2>
+            {/* Fees Structure Section - NEON */}
+            <section className="py-32 relative overflow-hidden" style={{backgroundColor: '#D8F602'}}>
+                <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto">
+                    <div className="space-y-16">
+                        <div className="space-y-4">
+                            <motion.h2
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="text-5xl md:text-8xl font-orbitron font-black text-black tracking-tighter"
+                            >
+                                Fees <span className="opacity-30">Structure</span>
+                            </motion.h2>
+                        </div>
 
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="overflow-x-auto rounded-[2rem] border border-white/5 shadow-2xl"
+                            className="overflow-x-auto rounded-[3rem] shadow-[0_40px_100px_rgba(0,0,0,0.3)] border border-white/5" style={{backgroundColor: '#571AD0'}}
                         >
                             <table className="w-full text-left border-collapse min-w-[1000px]">
                                 <thead>
-                                    <tr className="bg-purple/10">
-                                        <th className="p-8 text-lg subheading-font font-bold text-foreground border-r border-white/5 w-1/3 text-center">Program Name</th>
-                                        <th className="p-8 text-lg subheading-font font-bold text-foreground border-r border-white/5 w-1/12 text-center">Duration</th>
-                                        <th className="p-8 text-lg subheading-font font-bold text-foreground border-r border-white/5 w-1/6 text-center">Annual Fee (INR)</th>
-                                        <th className="p-8 text-lg subheading-font font-bold text-foreground w-1/3 text-center">Qualification</th>
+                                    <tr className="bg-white/5">
+                                        <th className="p-10 text-xs font-orbitron font-black text-accent uppercase tracking-[0.2em] border-r border-white/5 w-1/3 text-center">Specialization Architecture</th>
+                                        <th className="p-10 text-xs font-orbitron font-black text-accent uppercase tracking-[0.2em] border-r border-white/5 w-1/12 text-center">Duration</th>
+                                        <th className="p-10 text-xs font-orbitron font-black text-accent uppercase tracking-[0.2em] border-r border-white/5 w-1/6 text-center">Annual Investment</th>
+                                        <th className="p-10 text-xs font-orbitron font-black text-accent uppercase tracking-[0.2em] w-1/3 text-center">Entry Threshold</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr className="bg-background-alt/30 group">
-                                        <td className="p-10 border-r border-white/5 align-top space-y-8">
-                                            <div className="space-y-4">
-                                                <p className="text-foreground/60 font-medium">B.Tech. (with one Major & one Minor Specialization pattern)</p>
-                                                <h4 className="text-xl subheading-font font-bold text-foreground leading-snug">
-                                                    Computer Science & Engineering with any one Major Specialization in
+                                    <tr className="group">
+                                        <td className="p-12 border-r border-white/5 align-top space-y-10">
+                                            <div className="space-y-6">
+                                                <p className="text-white/40 font-orbitron text-[10px] uppercase tracking-widest">Major Specialization</p>
+                                                <h4 className="text-2xl font-orbitron font-black text-white leading-tight">
+                                                    Data <br/>
+                                                    <span className="text-accent italic">Engineering</span>
                                                 </h4>
-                                                <ul className="grid grid-cols-1 gap-2">
-                                                    {["Data Engineering", "Cloud Engineering", "Software Engineering", "Artificial Intelligence & Machine Learning", "Cyber Security"].map((item) => (
-                                                        <li key={item} className="flex items-center gap-3 text-foreground/70">
-                                                            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                                                            {item}
-                                                        </li>
-                                                    ))}
-                                                </ul>
+                                                <div className="inline-block px-4 py-2 bg-accent/10 border border-accent/20 rounded-lg">
+                                                    <span className="text-accent font-bold text-xs uppercase tracking-wider">Primary Track: Data Architecture & Systems</span>
+                                                </div>
                                             </div>
 
-                                            <div className="space-y-4 pt-4">
-                                                <h4 className="text-xl subheading-font font-bold text-foreground leading-snug">
-                                                    Minor Specialization (Choose any one Minor):
-                                                </h4>
-                                                <ul className="grid grid-cols-2 gap-x-6 gap-y-2">
-                                                    {["Robotics", "Bioinformatics", "Industry & Manufacturing", "Nanotechnology", "Geoinformatics", "Chip & Semiconductor", "Smart Cities", "Design", "Fintech"].map((item) => (
-                                                        <li key={item} className="flex items-center gap-3 text-foreground/70">
-                                                            <span className="w-1 h-1 rounded-full bg-purple" />
+                                            <div className="space-y-6 pt-6 border-t border-white/5">
+                                                <p className="text-white/40 font-orbitron text-[10px] uppercase tracking-widest">Minor Specializations (Select One)</p>
+                                                <ul className="grid grid-cols-2 gap-x-8 gap-y-4">
+                                                    {["Robotics & Automation", "Cloud Intelligence", "Cyber Security", "Data Science", "Blockchain Tech", "UX/UI Design", "Digital Marketing", "Business Analytics", "Edge Computing"].map((item) => (
+                                                        <li key={item} className="flex items-center gap-3 text-white/70 text-sm font-medium">
+                                                            <span className="w-1.5 h-1.5 rounded-full bg-accent/40" />
                                                             {item}
                                                         </li>
                                                     ))}
@@ -924,28 +564,29 @@ const DataEngineeringPage = () => {
                                             </div>
                                         </td>
 
-                                        <td className="p-10 border-r border-white/5 text-center align-middle">
-                                            <span className="text-2xl subheading-font font-bold text-foreground">4 Years</span>
+                                        <td className="p-12 border-r border-white/5 text-center align-middle">
+                                            <span className="text-4xl font-orbitron font-black text-white">04</span>
+                                            <p className="text-[10px] font-orbitron font-bold text-white/30 uppercase mt-2">Years</p>
                                         </td>
 
-                                        <td className="p-10 border-r border-white/5 text-center align-middle">
-                                            <div className="space-y-1">
-                                                <span className="text-3xl subheading-font font-bold text-accent">₹ 2,00,000</span>
-                                                <p className="text-[10px] text-foreground/40 font-bold uppercase tracking-widest leading-none">Per Annum</p>
+                                        <td className="p-12 border-r border-white/5 text-center align-middle">
+                                            <div className="space-y-2">
+                                                <span className="text-4xl font-orbitron font-black text-accent">₹2.0L</span>
+                                                <p className="text-[10px] text-white/40 font-bold uppercase tracking-widest">(Per Annum)</p>
                                             </div>
                                         </td>
 
-                                        <td className="p-10 align-top">
-                                            <div className="space-y-6 text-foreground/70 leading-relaxed font-medium">
-                                                <p>
-                                                    Passed 10+2 from any government recognized board with <span className="text-foreground font-bold">Physics and Mathematics</span> as compulsory subjects,
-                                                </p>
-                                                <p className="">along with one of the following:</p>
-                                                <div className="bg-purple/10 p-6 rounded-2xl border border-purple/20">
-                                                    <p className="text-foreground font-bold">
-                                                        Chemistry / Biotechnology / Computer Science / Biology
+                                        <td className="p-12 align-top">
+                                            <div className="space-y-10 text-white/70 leading-relaxed">
+                                                <div className="space-y-4">
+                                                    <p className="text-white/40 font-orbitron text-[10px] uppercase tracking-widest">Eligibility Criteria</p>
+                                                    <p className="text-lg font-medium leading-normal">
+                                                        10+2 with <span className="text-white font-bold">Physics & Math</span> (Compulsory) + Chem/CS/Bio.
                                                     </p>
-                                                    <p className="mt-2">with at least <span className="text-accent font-black text-xl">70%.</span></p>
+                                                </div>
+                                                <div className="bg-white/5 p-8 rounded-3xl border border-white/10 shadow-inner">
+                                                    <p className="text-accent font-orbitron font-black text-4xl">70%</p>
+                                                    <p className="text-xs font-bold text-white/50 uppercase tracking-widest mt-2">Aggregrate Minimum</p>
                                                 </div>
                                             </div>
                                         </td>
@@ -956,10 +597,426 @@ const DataEngineeringPage = () => {
                     </div>
                 </div>
             </section>
+            
+            {/* Emerging Trends Section - NEON */}
+            <section className="py-24 relative overflow-hidden" style={{backgroundColor: '#D8F602'}}>
+                <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto">
+                    <div className="space-y-16">
+                        <div className="space-y-4">
+                            <motion.h2
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="text-4xl md:text-7xl font-orbitron font-black text-black tracking-tighter"
+                            >
+                                Emerging <span className="opacity-30">Trends</span>
+                            </motion.h2>
+                            <p className="text-black/40 font-orbitron text-xs uppercase tracking-[0.3em]">The Horizon of Data Engineering</p>
+                        </div>
 
+                        <div className="grid grid-cols-1 md:grid-cols-5 rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/5" style={{backgroundColor: '#571AD0'}}>
+                            {[
+                                { id: "01", title: "Real-time\nAnalytics" },
+                                { id: "02", title: "Data\nMesh" },
+                                { id: "03", title: "Serverless\nData" },
+                                { id: "04", title: "AI-driven\nPipelines" },
+                                { id: "05", title: "Edge\nData" }
+                            ].map((item, index) => (
+                                <motion.div
+                                    key={item.id}
+                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.1 }}
+                                    className="p-10 min-h-[220px] flex flex-col justify-between border-r border-white/10 last:border-r-0 hover:bg-white/20 transition-all group"
+                                >
+                                    <span className="text-2xl font-orbitron font-black text-accent opacity-40 group-hover:opacity-100 transition-opacity">
+                                        {item.id}
+                                    </span>
+                                    <p className="text-lg leading-tight font-orbitron font-black text-white whitespace-pre-line group-hover:scale-105 transition-transform origin-left">
+                                        {item.title}
+                                    </p>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>            {/* Prospective Placement Partners Section - BLACK */}
+            <section className="bg-black py-24 text-white relative overflow-hidden">
+                <div className="container-boxed text-center relative z-10 w-full max-w-[1300px] mx-auto">
+                    <div className="space-y-16">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="space-y-4"
+                        >
+                            <h2 className="text-4xl md:text-6xl font-orbitron font-black text-white tracking-widest uppercase">
+                                Global <span className="text-accent italic">Networks</span>
+                            </h2>
+                            <p className="text-white/30 font-orbitron text-xs uppercase tracking-[0.4em]">Placement Partners</p>
+                        </motion.div>
 
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 px-4">
+                            {[
+                                { name: "Google", src: "/ProgramPartners/google.webp" },
+                                { name: "Microsoft", src: "/ProgramPartners/micro.webp" },
+                                { name: "Amazon", src: "/placement/amazon.webp" },
+                                { name: "Meta", src: "/placement/observe.webp" },
+                                { name: "Infosys", src: "/placement/mindtree.webp" },
+                                { name: "TCS", src: "/placement/cognizant.webp" },
+                                { name: "Wipro", src: "/placement/hcl.webp" },
+                                { name: "Accenture", src: "/placement/accenture.webp" },
+                                { name: "Zerodha", src: "/placement/jio.webp" },
+                                { name: "CRED", src: "/placement/delhivery.webp" },
+                                { name: "Swiggy", src: "/placement/globallogic.webp" },
+                                { name: "Adobe", src: "/placement/capgemini.webp" }
+                            ].map((partner, idx) => (
+                                <motion.div
+                                    key={partner.name}
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: idx * 0.05 }}
+                                    className="bg-white/5 h-[140px] rounded-2xl flex items-center justify-center p-4 border border-white/10 hover:bg-white/10 hover:border-accent/30 transition-all group"
+                                >
+                                    <div className="relative w-full h-full flex items-center justify-center">
+                                        <Image
+                                            src={partner.src}
+                                            alt={partner.name}
+                                            fill
+                                            className="object-contain p-2 grayscale contrast-125 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500 mix-blend-screen"
+                                        />
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {/* An Overview Section - PURPLE */}
+            <section className="py-24 relative overflow-hidden bg-[#571AD0]">
+                <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto">
+                    <div className="space-y-20">
+                        <div className="text-center space-y-4">
+                            <motion.h2
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="text-4xl md:text-7xl font-orbitron font-black text-white tracking-widest uppercase"
+                            >
+                                Institutional <span className="text-accent italic">Edge</span>
+                            </motion.h2>
+                            <p className="text-white/40 font-orbitron text-xs uppercase tracking-[0.4em]">An Overview</p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {[
+                                { value: "10,000+", label: "Academic Minds" },
+                                { value: "125+", label: "Industry Alliances" },
+                                { value: "40K+", label: "Global Alumni Network" },
+                                { value: "340+", label: "Strategic Placements" },
+                                { value: "42 LPA", label: "Peak Opportunity" },
+                                { value: "4.1 LPA", label: "Mean Trajectory" },
+                                { value: "45 Acre", label: "Smart Infrastructure" },
+                                { value: "10,000", label: "Innovation Lab (Sq Ft)" }
+                            ].map((stat, idx) => (
+                                <motion.div
+                                    key={`stat-${idx}`}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: idx * 0.1 }}
+                                    className="bg-black/40 backdrop-blur-xl p-10 flex flex-col justify-start border border-white/10 hover:border-accent/40 transition-all rounded-[2rem] shadow-2xl group"
+                                >
+                                    <div className="border-b-[1.5px] border-white/5 pb-6 mb-6">
+                                        <h3 className="text-4xl font-orbitron font-black text-accent group-hover:scale-110 transition-transform origin-left">
+                                            {stat.value}
+                                        </h3>
+                                    </div>
+                                    <p className="text-xs leading-relaxed text-white/60 font-orbitron font-bold uppercase tracking-widest">
+                                        {stat.label}
+                                    </p>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {/* AESTR @Advantages Section - NEON */}
+            <section className="py-24 relative overflow-hidden" style={{backgroundColor: '#D8F602'}}>
+                <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto">
+                    <div className="space-y-16">
+                        <div className="space-y-4">
+                            <motion.h2
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="text-4xl md:text-7xl font-orbitron font-black text-black tracking-tighter"
+                            >
+                                AESTR <span className="opacity-30">@Advantages</span>
+                            </motion.h2>
+                            <p className="text-black/60 font-orbitron text-sm max-w-4xl font-bold uppercase tracking-[0.2em] leading-relaxed">
+                                Train for roles powering the next generation of banking, robotics, healthcare, and more—with real-world impact and future security.
+                            </p>
+                        </div>
+
+                        {/* Top Row - 3 Cards */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {[
+                                { num: "1", text: "Student awarded as First\nGoogle Ambassador." },
+                                { num: "2", text: "Recipient of I.GAUGE E-\nLEAD CERTIFICATE" },
+                                { num: "3", text: "Benefit from credit transfer-\ndegree programmes" }
+                            ].map((card, idx) => (
+                                <motion.div
+                                    key={`adv-${idx}`}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: idx * 0.1 }}
+                                    className="bg-black p-10 flex flex-col gap-8 rounded-[3rem] shadow-2xl group hover:scale-[1.02] transition-transform"
+                                >
+                                    <span className="text-7xl font-orbitron font-black text-accent drop-shadow-[0_0_10px_rgba(216,246,2,0.3)]">
+                                        {card.num}
+                                    </span>
+                                    <p className="text-lg leading-snug text-white/80 font-orbitron font-bold whitespace-pre-line">
+                                        {card.text}
+                                    </p>
+                                </motion.div>
+                            ))}
+                        </div>
+
+                        {/* Bottom Full Width Card */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3 }}
+                            className="bg-black p-12 flex flex-col md:flex-row items-center justify-between gap-10 rounded-[3rem] shadow-2xl"
+                        >
+                            <p className="text-2xl md:text-3xl font-orbitron font-black text-white max-w-4xl leading-tight">
+                                Student chapters of Professional Bodies <span className="text-accent underline underline-offset-8">IEEE, CSI, NPTEL, ICT, IETE, SAE, IAESTE, etc.</span>
+                            </p>
+                            
+                            <Link href="/#hero">
+                                <motion.button
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    className="bg-accent text-black px-12 py-5 rounded-2xl flex items-center gap-4 hover:shadow-[0_0_50px_rgba(216,246,2,0.4)] transition-all font-orbitron font-black uppercase tracking-widest text-sm"
+                                >
+                                    Apply Now
+                                    <ArrowRight className="w-5 h-5" />
+                                </motion.button>
+                            </Link>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>            {/* Future Scope Section - PURPLE */}
+            <section className="py-24 bg-[#571AD0] text-white relative overflow-hidden">
+                <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="space-y-10"
+                        >
+                            <div className="space-y-4">
+                                <h2 className="text-4xl md:text-6xl font-orbitron font-black text-white leading-tight">
+                                    Future Scope of <br/>
+                                    <span className="text-accent italic">Data Engineering</span>
+                                </h2>
+                                <p className="text-white/40 font-orbitron text-xs uppercase tracking-[0.3em]">Next-Gen Infrastructure</p>
+                            </div>
+
+                            <div className="space-y-6 text-lg text-white/80 leading-relaxed font-medium">
+                                <p>The data explosion represents the biggest technological revolution of our time. As every industry generates exponential amounts of data, the demand for skilled data engineers is projected to grow by <span className="text-accent font-bold">40% YoY</span>.</p>
+                                <p>Specializing in Data Engineering at AESTR equips you with cutting-edge skills in <span className="text-white font-bold">distributed systems, cloud architecture, and real-time processing</span> that power the world's most innovative companies.</p>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9, x: 50 }}
+                            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="relative lg:absolute lg:right-0 lg:w-1/2 h-[500px]"
+                        >
+                            <div className="relative w-full h-full rounded-l-[5rem] overflow-hidden border-4 border-white/10 shadow-3xl">
+                                <Image
+                                    src="/Other/lab-2.webp"
+                                    alt="Future Scope"
+                                    fill
+                                    className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                                />
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Innovation Labs of 2030 Section - BLACK */}
+            <section className="py-32 relative overflow-hidden bg-black">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-purple/5 pointer-events-none" />
+                <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto">
+                    <div className="space-y-20">
+                        <div className="text-center space-y-4">
+                            <motion.h2
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="text-4xl md:text-7xl font-orbitron font-black text-white tracking-widest"
+                            >
+                                Innovation <span className="text-accent italic">Labs</span>
+                            </motion.h2>
+                            <p className="text-white/30 font-orbitron text-xs uppercase tracking-[0.4em]">The 2030 Roadmap</p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {[
+                                {
+                                    id: "01",
+                                    title: "Apple Ecosystem",
+                                    desc: "Dive deep into Apple's ecosystem - from iOS development to machine learning integration with Core ML and Swift.",
+                                    image: "/Other/apple-lab.png"
+                                },
+                                {
+                                    id: "02",
+                                    title: "NVIDIA Pipeline",
+                                    desc: "Master GPU computing and CUDA programming for high-performance AI model training and deployment.",
+                                    image: "/Other/Nvidia-Image.jpeg"
+                                },
+                                {
+                                    id: "03",
+                                    title: "RISC-V Lab",
+                                    desc: "Explore open-source processor architecture and design custom silicon for specialized AI workloads.",
+                                    image: "/Other/lab-3.webp"
+                                },
+                                {
+                                    id: "04",
+                                    title: "Embodied Brain Lab",
+                                    desc: "Bridge the gap between digital intelligence and physical robotics with embodied AI systems.",
+                                    image: "/Other/lab-1.webp"
+                                }
+                            ].map((lab, idx) => (
+                                <motion.div
+                                    key={lab.id}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: idx * 0.1 }}
+                                    className="bg-white/5 border border-white/10 rounded-[3rem] overflow-hidden hover:bg-accent/5 hover:border-accent/40 transition-all group shadow-2xl"
+                                >
+                                    <div className="aspect-[4/3] relative overflow-hidden">
+                                        <Image
+                                            src={lab.image}
+                                            alt={lab.title}
+                                            fill
+                                            className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                                    </div>
+                                    <div className="p-8 space-y-4">
+                                        <span className="text-6xl font-orbitron font-black text-white/5 group-hover:text-accent/20 transition-colors">{lab.id}</span>
+                                        <h4 className="text-2xl font-orbitron font-black text-white">{lab.title}</h4>
+                                        <p className="text-white/60 leading-relaxed font-medium">{lab.desc}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Aestr Quality Assurance Pathways - NEON */}
+            <section className="py-24 relative overflow-hidden" style={{backgroundColor: '#D8F602'}}>
+                <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto">
+                    <div className="space-y-16">
+                        <div className="space-y-4">
+                            <motion.h2
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="text-4xl md:text-6xl font-orbitron font-black text-black tracking-tighter"
+                            >
+                                Quality <span className="text-black italic">Assurance</span>
+                            </motion.h2>
+                            <p className="text-black/60 font-orbitron text-xs uppercase tracking-[0.3em]">Your Pathway to Success</p>
+                        </div>
+
+                        <div className="bg-black/10 rounded-[3rem] overflow-hidden border border-black/20 shadow-3xl">
+                            {[
+                                { step: "Pathway 01", title: "Core Competency Mapping", desc: "Individual skill auditing to align academic path with personal strengths." },
+                                { step: "Pathway 02", title: "Project Incubation", desc: "Venture-grade project development under mentorship of Shodh AI researchers." },
+                                { step: "Pathway 03", title: "Professional Readiness", desc: "Intensive training in technical communication and global workplace dynamics." }
+                            ].map((row, idx) => (
+                                <div key={idx} className="p-12 border-b border-black/10 last:border-0 flex flex-col md:flex-row gap-8 items-start hover:bg-black/5 transition-colors">
+                                    <span className="shrink-0 font-orbitron font-black text-black text-xs uppercase tracking-widest pt-2">{row.step}</span>
+                                    <div className="space-y-2">
+                                        <h4 className="text-2xl font-orbitron font-black text-black">{row.title}</h4>
+                                        <p className="text-black/70 text-lg font-medium">{row.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Final CTA Section */}
+            <section className="py-32 relative overflow-hidden bg-[#0A0A0A] border-t border-white/5">
+                {/* Background Accents */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple/10 rounded-full blur-[140px] pointer-events-none" />
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
+
+                <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto pt-24">
+                    <div className="flex flex-col lg:flex-row items-center gap-20">
+                        <div className="flex-1 space-y-10">
+                            <motion.h2
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="text-5xl md:text-7xl font-orbitron font-black text-white leading-tight"
+                            >
+                                Don't be shy, <br/>
+                                <span className="text-accent italic drop-shadow-[0_0_15px_rgba(216,246,2,0.2)]">Take the First Step.</span>
+                            </motion.h2>
+
+                            <Link href="/#hero">
+                                <motion.button
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    className="bg-accent text-black px-12 py-5 rounded-2xl flex items-center gap-4 hover:shadow-[0_0_40px_rgba(216,246,2,0.4)] transition-all font-orbitron font-black uppercase tracking-widest text-lg"
+                                >
+                                    Apply Now
+                                    <ArrowRight className="w-6 h-6" />
+                                </motion.button>
+                            </Link>
+                        </div>
+
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            className="relative w-full max-w-[500px] aspect-square"
+                        >
+                            <div className="relative w-full h-full rounded-[3.5rem] overflow-hidden border-[15px] border-white/5 shadow-3xl bg-black">
+                                <Image
+                                    src="/b.tech-ai-with/robo.jpg"
+                                    alt="Robo Assistant"
+                                    fill
+                                    className="object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40" />
+                            </div>
+                            <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-purple rounded-full flex items-center justify-center p-8 text-center rotate-12 shadow-[0_20px_50px_rgba(87,26,208,0.4)] border-4 border-white/10">
+                                <p className="text-white font-orbitron font-black text-sm uppercase leading-tight">Join the Elite 1%</p>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
         </main>
     );
 };
 
-export default DataEngineeringPage;
+export default DataEngineeringSpecializationPage;

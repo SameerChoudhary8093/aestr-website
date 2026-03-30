@@ -87,26 +87,22 @@ const Navbar = () => {
                 />
 
                 {/* Navbar Content */}
-                <div className="flex items-center justify-between relative z-10 w-full">
-                    {/* Left: AESTR Logo - Super Zoomed */}
-                    <div className="flex-1 flex justify-start pl-3 md:pl-6 lg:pl-8">
-                        <Link href="/#hero" onClick={handleHomeClick} className="flex items-center group/logo">
-                            <div className="relative flex items-center transition-all duration-500 group-hover/logo:scale-105">
-                                <Image
-                                    src="/Herosection/by gyan vihar 2 neon.png"
-                                    alt="Aestr Logo"
-                                    width={500}
-                                    height={120}
-                                    className="w-auto h-16 md:h-20 lg:h-24 xl:h-28 max-w-full object-contain brightness-[1.1]"
-                                    priority
-                                />
-                            </div>
-                        </Link>
-                    </div>
+                <div className="flex items-center justify-between w-full h-[70px] lg:h-[90px] px-4 lg:px-6">
+                    {/* Left: AESTR Logo */}
+                    <Link href="/#hero" onClick={handleHomeClick} className="flex-none h-[75%] lg:h-[90%]">
+                        <Image
+                            src="/Herosection/by gyan vihar 2 neon.png"
+                            alt="Aestr Logo"
+                            width={350}
+                            height={110}
+                            className="w-auto h-full object-contain brightness-[1.1] scale-[1.15] lg:scale-[1.25] origin-left"
+                            priority
+                        />
+                    </Link>
 
-                    {/* Center: Nav Links with Magnetic Effect - Shifted Left */}
-                    <div className="hidden lg:flex flex-[2] justify-start pl-12 md:pl-20">
-                        <div className="flex items-center space-x-1">
+                    {/* Center: Nav Links */}
+                    <div className="hidden lg:flex flex-1 justify-start pl-12 xl:pl-20">
+                        <div className="flex items-center gap-1 xl:gap-3">
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.name}
@@ -114,57 +110,50 @@ const Navbar = () => {
                                     onClick={link.name === 'Home' ? handleHomeClick : link.external ? undefined : handlePageLinkClick(link.href)}
                                     target={link.external ? '_blank' : undefined}
                                     rel={link.external ? 'noopener noreferrer' : undefined}
-                                    className="relative px-5 py-4 group/btn"
+                                    className="relative px-3 py-2 group/btn"
                                 >
                                     <MagneticEffect strength={0.3}>
-                                        <span className="text-[14px] xl:text-[16px] font-orbitron font-extrabold text-[#EAF0BD]/80 tracking-wider group-hover/btn:text-accent transition-colors whitespace-nowrap">
+                                        <span className="text-[13px] xl:text-[14px] font-orbitron font-extrabold text-[#EAF0BD]/80 tracking-widest group-hover/btn:text-accent transition-colors whitespace-nowrap">
                                             {link.name}
                                         </span>
                                     </MagneticEffect>
-                                    <span className="absolute bottom-3 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-accent transition-all duration-300 group-hover/btn:w-1/3 shadow-[0_0_8px_#D7F601]" />
+                                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-accent transition-all duration-300 group-hover/btn:w-1/3 shadow-[0_0_8px_#D7F601]" />
                                 </Link>
                             ))}
                         </div>
                     </div>
 
-                    <div className="flex-1 flex items-center justify-end pr-28 md:pr-56 lg:pr-84">
-                        <div className="hidden md:flex items-center gap-2 md:gap-3 lg:gap-3">
-                            {/* SGVU Primary Logo */}
-                            <div className="relative transition-all duration-500 hover:scale-105 shrink-0">
+                    {/* Right: Partner Logos & Mobile Menu */}
+                    <div className="flex items-center justify-end h-[50%] lg:h-[60%] flex-none shrink-0">
+                        
+                        <div className="hidden lg:flex items-center h-full gap-2 xl:gap-3">
+                            <Image
+                                src="/Herosection/Container.svg"
+                                alt="Gyan Vihar"
+                                width={240}
+                                height={75}
+                                className="w-auto h-full object-contain brightness-0 invert"
+                                priority
+                            />
+
+                            <div className="flex items-center h-full gap-2 xl:gap-3 border-l border-white/10 pl-2 xl:pl-3">
                                 <Image
-                                    src="/Herosection/Container.svg"
-                                    alt="Gyan Vihar"
-                                    width={220}
-                                    height={60}
-                                    className="w-auto h-8 md:h-10 lg:h-13 max-w-full object-contain brightness-0 invert"
+                                    src="/Herosection/Nirf white.png"
+                                    alt="NIRF"
+                                    width={140}
+                                    height={90}
+                                    className="w-auto h-[140%] object-contain"
                                     priority
                                 />
-                            </div>
 
-                            <div className="flex items-center gap-2 md:gap-3 lg:gap-3 border-l border-white/10 pl-2 md:pl-3">
-                                {/* NIRF Logo */}
-                                <div className="relative transition-all duration-500 hover:scale-110 flex items-center justify-center shrink-0">
-                                    <Image
-                                        src="/Herosection/Nirf white.png"
-                                        alt="NIRF"
-                                        width={80}
-                                        height={80}
-                                        className="w-auto h-12 md:h-16 lg:h-20 max-w-full object-contain"
-                                        priority
-                                    />
-                                </div>
-
-                                {/* NAAC Logo */}
-                                <div className="relative transition-all duration-500 hover:scale-110 flex items-center justify-center shrink-0">
-                                    <Image
-                                        src="/Herosection/naac white  .png"
-                                        alt="NAAC A+"
-                                        width={100}
-                                        height={100}
-                                        className="w-auto h-15 md:h-20 lg:h-24 max-w-full object-contain"
-                                        priority
-                                    />
-                                </div>
+                                <Image
+                                    src="/Herosection/naac white  .png"
+                                    alt="NAAC A+"
+                                    width={160}
+                                    height={100}
+                                    className="w-auto h-[160%] object-contain"
+                                    priority
+                                />
                             </div>
                         </div>
 

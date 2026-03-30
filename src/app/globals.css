@@ -104,12 +104,11 @@ html, body {
   background-color: var(--background);
   color: var(--foreground);
   overflow-x: hidden;
-  scroll-behavior: smooth;
+  scroll-behavior: auto !important;
 }
 
 body {
   background-image: radial-gradient(circle at top right, #181818 0%, #111111 100%);
-  background-attachment: fixed;
   font-family: var(--font-arial);
   font-size: 16px; /* Slightly smaller base for mobile */
   -webkit-font-smoothing: antialiased;

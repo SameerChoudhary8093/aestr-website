@@ -60,10 +60,16 @@ const AboutPointThree = () => {
             <div className="container-boxed relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 items-center">
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.7 }}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-50px" }}
+                        variants={{
+                            hidden: { opacity: 0 },
+                            visible: {
+                                opacity: 1,
+                                transition: { staggerChildren: 0.15 }
+                            }
+                        }}
                         className="space-y-8 md:space-y-10 order-2 lg:order-1 text-left lg:-translate-y-10"
                     >
                         <div className="flex items-start gap-4 md:gap-8">
@@ -71,14 +77,26 @@ const AboutPointThree = () => {
                                 3
                             </div>
                             <div className="space-y-6 text-left">
-                                <div className="space-y-1">
+                                <motion.div 
+                                    variants={{
+                                        hidden: { opacity: 0, y: 30 },
+                                        visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                                    }}
+                                    className="space-y-1"
+                                >
                                     <h3 className="text-h2 text-white capitalize font-black">
                                         Targeting <span className="opacity-95 text-accent">In-Demand Careers Of 2030</span>
                                     </h3>
-                                </div>
-                                <p className="text-body text-white/90 font-bold max-w-xl text-[16px] md:text-[18px]">
+                                </motion.div>
+                                <motion.p 
+                                    variants={{
+                                        hidden: { opacity: 0, y: 30 },
+                                        visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                                    }}
+                                    className="text-body text-white/90 font-bold max-w-xl text-[16px] md:text-[18px]"
+                                >
                                     Train for roles powering the next generation of banking, robotics, healthcare, and more—with real-world impact and future security.
-                                </p>
+                                </motion.p>
                             </div>
                         </div>
                     </motion.div>

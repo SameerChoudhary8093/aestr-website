@@ -9,10 +9,16 @@ const AboutPointOne = () => {
             <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-white/10 rounded-full blur-[120px] pointer-events-none" />
 
             <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial="hidden"
+                whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8 }}
+                variants={{
+                    hidden: { opacity: 0 },
+                    visible: {
+                        opacity: 1,
+                        transition: { staggerChildren: 0.15 }
+                    }
+                }}
                 className="container-boxed relative z-10"
             >
                 {/* Section Header */}
@@ -21,14 +27,26 @@ const AboutPointOne = () => {
                         1
                     </div>
                     <div className="space-y-6 text-left">
-                        <div className="space-y-1">
+                        <motion.div 
+                            variants={{
+                                hidden: { opacity: 0, y: 30 },
+                                visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                            }}
+                            className="space-y-1"
+                        >
                             <h2 className="text-h2 text-black">
                                 CSE 2030: <span className="opacity-90">Computer Science Won't Be Same Ever Again</span>
                             </h2>
-                        </div>
-                        <p className="text-[16px] text-black/90 font-bold">
+                        </motion.div>
+                        <motion.p 
+                            variants={{
+                                hidden: { opacity: 0, y: 30 },
+                                visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                            }}
+                            className="text-[16px] text-black/90 font-bold"
+                        >
                             The world of Computer Science is transforming by 2030...
-                        </p>
+                        </motion.p>
                     </div>
                 </div>
 

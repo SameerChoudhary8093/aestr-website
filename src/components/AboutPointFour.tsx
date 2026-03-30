@@ -23,10 +23,16 @@ const AboutPointFour = () => {
                 >
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
                         <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.7 }}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, margin: "-50px" }}
+                            variants={{
+                                hidden: { opacity: 0 },
+                                visible: {
+                                    opacity: 1,
+                                    transition: { staggerChildren: 0.15 }
+                                }
+                            }}
                             className="space-y-6 md:space-y-8 text-left"
                         >
                             <div className="flex items-start gap-4 md:gap-6">
@@ -34,20 +40,41 @@ const AboutPointFour = () => {
                                     4
                                 </div>
                                 <div className="space-y-8 text-left">
-                                    <div className="space-y-1">
-                                        <h2 className="text-h2 text-black">
-                                            Bootcamp, Bootcamp, <span className="opacity-90">Bootcamp.</span>
+                                    <motion.div 
+                                        variants={{
+                                            hidden: { opacity: 0, y: 30 },
+                                            visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                                        }}
+                                        className="space-y-1"
+                                    >
+                                        <h2 className="text-h2 text-black flex flex-col">
+                                            <span>Bootcamp, Bootcamp,</span>
+                                            <span className="opacity-90">Bootcamp.</span>
                                         </h2>
-                                    </div>
-                                    <p className="text-body text-black/90 font-bold">
+                                    </motion.div>
+                                    <motion.p 
+                                        variants={{
+                                            hidden: { opacity: 0, y: 30 },
+                                            visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                                        }}
+                                        className="text-body text-black/90 font-bold"
+                                    >
                                         At AESTR, theory is just the beginning. We believe the best way to learn engineering is by building real things. That’s why every semester includes immersive AI bootcamps, right on campus — fully integrated into your curriculum.
-                                    </p>
-                                    <Link href="/day-at-aestr" className="inline-block pt-4">
-                                        <button className="px-10 py-4 bg-black text-accent font-orbitron font-black text-sm rounded-lg hover:scale-105 transition-all flex items-center gap-2 group">
-                                            Read more
-                                            <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform ml-2">↗</span>
-                                        </button>
-                                    </Link>
+                                    </motion.p>
+                                    <motion.div 
+                                        variants={{
+                                            hidden: { opacity: 0, y: 30 },
+                                            visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                                        }}
+                                        className="inline-block pt-4"
+                                    >
+                                        <Link href="/day-at-aestr">
+                                            <button className="px-10 py-4 bg-black text-accent font-orbitron font-black text-sm rounded-lg hover:scale-105 transition-all flex items-center gap-2 group">
+                                                Read more
+                                                <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform ml-2">↗</span>
+                                            </button>
+                                        </Link>
+                                    </motion.div>
                                 </div>
                             </div>
                         </motion.div>

@@ -53,9 +53,16 @@ const FrontierHub = () => {
             <div className="container-boxed relative z-10">
                 {/* 1) SOVEREIGN AI HUB SECTION (Now On Top) */}
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-50px" }}
+                    variants={{
+                        hidden: { opacity: 0 },
+                        visible: {
+                            opacity: 1,
+                            transition: { staggerChildren: 0.2 }
+                        }
+                    }}
                     className="max-w-15xl px-4 mx-auto"
                 >
                     <div className="relative">
@@ -68,18 +75,29 @@ const FrontierHub = () => {
                                 {/* Left side - Text content */}
                                 <div className="lg:col-span-7 space-y-6">
                                     <div className="relative">
-                                        <p className="text-[40px] md:text-[48px] font-orbitron font-black text-white leading-tight mb-8 relative z-10">
+                                        <motion.p 
+                                            variants={{
+                                                hidden: { opacity: 0, y: 30 },
+                                                visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                                            }}
+                                            className="text-[40px] md:text-[48px] font-orbitron font-black text-white leading-tight mb-8 relative z-10"
+                                        >
                                             Aestr Is INDIA'S SOVEREIGN AI HUB
-                                        </p>
+                                        </motion.p>
                                     </div>
 
                                     <div className="relative">
                                         <div className="text-[16px] text-white/90 leading-relaxed md:leading-loose space-y-6">
-                                            <p>
+                                            <motion.p
+                                                variants={{
+                                                    hidden: { opacity: 0, y: 30 },
+                                                    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                                                }}
+                                            >
                                                 Traditional education is dead. Aestr is a unified tech incubator built for one reason: to train the engineers who will architect AI, rather than be replaced by it.
                                                 At the core of this ecosystem is <a href="https://shodh.ai" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-4 py-1.5 text-black bg-[#D8F602] hover:bg-white rounded-full font-bold transition-colors shadow-lg cursor-pointer mx-1 align-baseline text-[15px] gap-1">Shodh AI <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg></a>—India’s premier frontier AI company. As one of the 12 companies handpicked for the INDIA AI Mission, they are building the nation's sovereign foundational models and the world’s first large Physics Model to solve massive, future-defining problems.
                                                 Their aim with this partnership? To forge their own future colleagues and computer scientists from the ground up.
-                                            </p>
+                                            </motion.p>
                                         </div>
                                     </div>
                                 </div>

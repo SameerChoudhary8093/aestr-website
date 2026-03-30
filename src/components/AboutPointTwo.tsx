@@ -9,10 +9,16 @@ const AboutPointTwo = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[150px] pointer-events-none" />
 
             <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial="hidden"
+                whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8 }}
+                variants={{
+                    hidden: { opacity: 0 },
+                    visible: {
+                        opacity: 1,
+                        transition: { staggerChildren: 0.15 }
+                    }
+                }}
                 className="container-boxed relative z-10"
             >
                 <div className="space-y-12">
@@ -21,12 +27,24 @@ const AboutPointTwo = () => {
                             2
                         </div>
                         <div className="space-y-6 text-left">
-                                <h3 className="text-h2 text-foreground">
+                                <motion.h3 
+                                    variants={{
+                                        hidden: { opacity: 0, y: 30 },
+                                        visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                                    }}
+                                    className="text-h2 text-foreground"
+                                >
                                     Built By <span className="opacity-90 ml-2">AI Engineers</span>
-                                </h3>
-                            <p className="text-[16px] text-foreground/90 font-bold">
+                                </motion.h3>
+                            <motion.p 
+                                variants={{
+                                    hidden: { opacity: 0, y: 30 },
+                                    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                                }}
+                                className="text-[16px] text-foreground/90 font-bold"
+                            >
                                 Learn from the architects of tomorrow's AI. AESTR is the brainchild of leading AI engineers dedicated to cultivating the next generation of tech innovators.
-                            </p>
+                            </motion.p>
                         </div>
                     </div>
 
@@ -38,10 +56,17 @@ const AboutPointTwo = () => {
                             { title: 'Learn From The Best:', accent: 'border-accent/20', desc: 'Gain insights from Apple trainers, Google Cloud experts, and professionals from other tech giants.' },
                             { title: 'Young, Agile, And Connected', accent: 'border-foreground/10', desc: 'We are real engineers, deeply embedded in the industry. We speak your language & are committed to transforming you into our colleague within four years.' }
                         ].map((card) => (
-                            <div key={card.title} className={`glass p-8 rounded-2xl border-t-2 ${card.accent} hover:-translate-y-1 transition-transform duration-300 group text-left`}>
+                            <motion.div 
+                                variants={{
+                                    hidden: { opacity: 0, y: 30 },
+                                    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                                }}
+                                key={card.title} 
+                                className={`glass p-8 rounded-2xl border-t-2 ${card.accent} hover:-translate-y-1 transition-transform duration-300 group text-left`}
+                            >
                                 <h4 className="text-[28px] text-foreground mb-4 leading-tight group-hover:text-accent transition-colors">{card.title}</h4>
                                 <p className="text-[16px] text-foreground/80 font-normal">{card.desc}</p>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>

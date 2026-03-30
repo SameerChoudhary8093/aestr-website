@@ -54,18 +54,36 @@ const PlacementPartners = () => {
 
                 {/* Header Area */}
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-50px" }}
+                    variants={{
+                        hidden: { opacity: 0 },
+                        visible: {
+                            opacity: 1,
+                            transition: { staggerChildren: 0.2 }
+                        }
+                    }}
                     className="text-center mb-12 md:mb-16 space-y-4"
                 >
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-orbitron font-bold text-foreground leading-tight tracking-tight">
+                    <motion.h2 
+                        variants={{
+                            hidden: { opacity: 0, y: 30 },
+                            visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                        }}
+                        className="text-3xl sm:text-4xl lg:text-5xl font-orbitron font-bold text-foreground leading-tight tracking-tight"
+                    >
                         Prospective placement <span className="text-accent italic">partners</span>
-                    </h2>
-                    <p className="text-base md:text-lg text-foreground/50 max-w-2xl mx-auto leading-relaxed font-semibold">
+                    </motion.h2>
+                    <motion.p 
+                        variants={{
+                            hidden: { opacity: 0, y: 30 },
+                            visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                        }}
+                        className="text-base md:text-lg text-foreground/50 max-w-2xl mx-auto leading-relaxed font-semibold"
+                    >
                         Join the ranks of elite engineers hired by top global technology firms.
-                    </p>
+                    </motion.p>
                 </motion.div>
 
                 {/* Desktop View: Static Grid */}

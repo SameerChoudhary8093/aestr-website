@@ -59,29 +59,56 @@ const AboutTopOnePercent = () => {
 
             <div className="container-boxed relative z-10">
                 <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial="hidden"
+                    whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.8 }}
+                    variants={{
+                        hidden: { opacity: 0 },
+                        visible: {
+                            opacity: 1,
+                            transition: { staggerChildren: 0.2 }
+                        }
+                    }}
                     className="space-y-12"
                 >
                     <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-                        <div className="space-y-4 text-left">
+                        <motion.div 
+                            variants={{
+                                hidden: { opacity: 0, y: 30 },
+                                visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                            }}
+                            className="space-y-4 text-left"
+                        >
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-orbitron font-bold leading-tight flex flex-wrap items-center gap-2 md:gap-3 text-foreground">
                                 B.Tech for <span className="text-accent">the top 1%</span>
                             </h2>
                             <p className="text-[16px] text-foreground/80 max-w-2xl leading-relaxed whitespace-nowrap">
                                 Blend of deep CS knowledge with expertise in healthcare, nanotech, robotics, and material science.
                             </p>
-                        </div>
-                        <Link href="/btech-ai-shodh-ai" className="btn-aestr group whitespace-nowrap self-start">
-                            Btech AI with Shodh AI
-                            <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform ml-2">↗</span>
-                        </Link>
+                        </motion.div>
+                        
+                        <motion.div
+                            variants={{
+                                hidden: { opacity: 0, y: 30 },
+                                visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                            }}
+                            className="self-start"
+                        >
+                            <Link href="/btech-ai-shodh-ai" className="btn-aestr group whitespace-nowrap">
+                                Btech AI with Shodh AI
+                                <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform ml-2">↗</span>
+                            </Link>
+                        </motion.div>
                     </div>
 
                     {/* Specialization Card */}
-                    <div className="glass p-5 md:p-8 rounded-2xl md:rounded-3xl grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 items-center overflow-hidden">
+                    <motion.div 
+                        variants={{
+                            hidden: { opacity: 0, y: 30 },
+                            visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                        }}
+                        className="glass p-5 md:p-8 rounded-2xl md:rounded-3xl grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 items-center overflow-hidden"
+                    >
                         {/* Left: Video Embed */}
                         <div className="aspect-video w-full rounded-xl md:rounded-2xl border border-white/10 overflow-hidden shadow-2xl relative group bg-black">
                             <YouTubePlayer
@@ -128,7 +155,7 @@ const AboutTopOnePercent = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </motion.div>
             </div>
         </section>

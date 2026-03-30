@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const careerData = [
     {
@@ -92,18 +93,42 @@ const CareerCarousel = () => {
 
     return (
         <section className="relative pt-8 md:pt-16 pb-24 bg-[#5B1DD6] overflow-hidden">
-            <div className="container-boxed mb-16">
+            <motion.div 
+                className="container-boxed mb-16"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={{
+                    hidden: { opacity: 0 },
+                    visible: {
+                        opacity: 1,
+                        transition: { staggerChildren: 0.2 }
+                    }
+                }}
+            >
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
                     <div className="space-y-4 text-left">
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold text-white leading-tight uppercase tracking-tighter">
+                        <motion.h2 
+                            variants={{
+                                hidden: { opacity: 0, y: 30 },
+                                visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                            }}
+                            className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-bold text-white leading-tight uppercase tracking-tighter"
+                        >
                             Future <span className="text-accent italic">Careers</span>
-                        </h2>
-                        <p className="text-base md:text-lg text-white/90 max-w-2xl leading-relaxed font-semibold">
+                        </motion.h2>
+                        <motion.p 
+                            variants={{
+                                hidden: { opacity: 0, y: 30 },
+                                visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                            }}
+                            className="text-base md:text-lg text-white/90 max-w-2xl leading-relaxed font-semibold"
+                        >
                             Engineered for high-impact roles powering the industries of 2030 and beyond.
-                        </p>
+                        </motion.p>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
             <style jsx>{`
                 @keyframes marquee {
@@ -125,7 +150,13 @@ const CareerCarousel = () => {
                 }
             `}</style>
             
-            <div className="relative overflow-hidden group py-10">
+            <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="relative overflow-hidden group py-10"
+            >
                 <div className="marquee px-4">
                     {displayData.map((card, idx) => (
                         <div
@@ -186,7 +217,7 @@ const CareerCarousel = () => {
                         </div>
                     ))}
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 };

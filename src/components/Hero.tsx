@@ -22,23 +22,47 @@ const Hero = () => {
 
                     {/* Left Column: Text & CTA */}
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        initial="hidden"
+                        whileInView="visible"
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        variants={{
+                            hidden: { opacity: 0 },
+                            visible: {
+                                opacity: 1,
+                                transition: { staggerChildren: 0.15 }
+                            }
+                        }}
                         className="space-y-6 md:space-y-8 lg:col-span-7"
                     >
                         <div className="space-y-4 md:space-y-5 text-left">
-                            <h1 className="text-[42px] sm:text-[56px] md:text-[64px] lg:text-[84px] font-orbitron font-black tracking-tighter leading-[1.05] lg:leading-none lg:whitespace-nowrap break-words w-full">
+                            <motion.h1 
+                                variants={{
+                                    hidden: { opacity: 0, y: 30 },
+                                    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                                }}
+                                className="text-[42px] sm:text-[56px] md:text-[64px] lg:text-[84px] font-orbitron font-black tracking-tighter leading-[1.05] lg:leading-none lg:whitespace-nowrap break-words w-full"
+                            >
                                 The B.Tech is dead
-                            </h1>
-                            <p className="text-[21px] sm:text-[24px] lg:text-[32.8px] text-foreground font-bold leading-snug lg:leading-tight lg:whitespace-nowrap tracking-tight lg:tracking-[-0.04em] w-fit mt-2 border-b-0">
+                            </motion.h1>
+                            <motion.p 
+                                variants={{
+                                    hidden: { opacity: 0, y: 30 },
+                                    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                                }}
+                                className="text-[21px] sm:text-[24px] lg:text-[32.8px] text-foreground font-bold leading-snug lg:leading-tight lg:whitespace-nowrap tracking-tight lg:tracking-[-0.04em] w-fit mt-2 border-b-0"
+                            >
                                 The AESTR Solution: <span className="text-accent">The 4-Year Engineering Residency.</span>
-                            </p>
-                            <div className="text-[16px] sm:text-[18px] text-foreground/80 font-medium w-full leading-relaxed flex flex-col gap-2 mt-4 max-w-lg lg:max-w-none">
+                            </motion.p>
+                            <motion.div 
+                                variants={{
+                                    hidden: { opacity: 0, y: 30 },
+                                    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                                }}
+                                className="text-[16px] sm:text-[18px] text-foreground/80 font-medium w-full leading-relaxed flex flex-col gap-2 mt-4 max-w-lg lg:max-w-none"
+                            >
                                 <span className="block lg:whitespace-nowrap font-bold">AESTR by Gyan Vihar is built on a single, uncompromising premise:</span>
                                 <span className="block lg:whitespace-nowrap font-bold">Stop studying. Start building. We are not a college we are a Silicon Valley-style incubator.</span>
-                            </div>
+                            </motion.div>
                         </div>
 
                         {/* Logo Section */}
@@ -47,49 +71,60 @@ const Hero = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.5 }}
-                            className="flex justify-start w-full pt-4 md:pt-6"
+                            className="flex justify-start w-full pt-4 md:pt-6 -ml-6 sm:-ml-8"
                         >
-                            <div className="relative group origin-left max-w-full lg:max-w-max w-full">
+                            <div className="relative group origin-left w-max max-w-[100vw]">
                                 {/* Animated background gradient */}
                                 <div className="absolute inset-0 bg-gradient-to-r from-purple/20 via-blue/20 to-accent/20 rounded-[1.5rem] blur-xl group-hover:blur-2xl transition-all duration-700 opacity-60"></div>
 
                                 {/* Main container - Flexible and clean */}
-                                <div className="relative flex flex-col items-start gap-3 px-6 py-4 sm:px-8 sm:py-1 rounded-[1.5rem] bg-black/40 backdrop-blur-xl border border-white/30 shadow-[0_10px_40px_rgba(0,0,0,0.5)] transition-all duration-500 w-full">
+                                <div className="relative flex flex-col items-start gap-3 pl-6 pr-4 sm:pl-8 sm:pr-8 lg:pr-10 py-5 sm:py-3 lg:py-4 rounded-[1.5rem] bg-black/40 backdrop-blur-xl border border-white/30 shadow-[0_10px_40px_rgba(0,0,0,0.5)] transition-all duration-500 w-max">
 
-                                    <div className="flex items-center gap-3">
+                                    <div className="flex items-center gap-3 pt-2">
                                         <span className="w-6 sm:w-8 h-[2px] bg-accent rounded-full shrink-0"></span>
                                         <p className="text-white/80 font-orbitron font-bold tracking-[0.15em] uppercase text-xs sm:text-sm whitespace-nowrap">
                                             Founders From:
                                         </p>
                                     </div>
 
-                                    {/* Responsive Logo Grid: Exactly 5 Logos */}
-                                    <div className="flex items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10">
+                                    <motion.div 
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true, margin: "-50px" }}
+                                        variants={{
+                                            hidden: { opacity: 0 },
+                                            visible: {
+                                                opacity: 1,
+                                                transition: { staggerChildren: 0.15, delayChildren: 0.4 }
+                                            }
+                                        }}
+                                        className="flex items-center justify-start gap-4 sm:gap-6 md:gap-8 lg:gap-12 h-11 md:h-[52px] lg:h-[60px] w-full mb-1"
+                                    >
                                         {[
-                                            { src: '/Herosection/University of cambridge.webp', alt: 'Cambridge', width: 140 },
-                                            { src: '/Herosection/India-ai.png', alt: 'INDIAai', width: 160 },
-                                            { src: '/Herosection/Microsoft.webp', alt: 'Microsoft', width: 140 },
-                                            { src: '/ProgramPartners/Shodh-ai.svg', alt: 'Shodh AI', width: 140 },
-                                            { src: '/Herosection/DRDO.png', alt: 'DRDO', width: 100 }
-                                        ].map((logo, idx) => (
+                                            { src: '/Herosection/University of cambridge.webp', alt: 'Cambridge' },
+                                            { src: '/Herosection/India-ai.png', alt: 'INDIAai' },
+                                            { src: '/Herosection/Microsoft.webp', alt: 'Microsoft' },
+                                            { src: '/ProgramPartners/Shodh-ai.svg', alt: 'Shodh AI' },
+                                            { src: '/Herosection/DRDO.png', alt: 'DRDO' }
+                                        ].map((logo) => (
                                             <motion.div
+                                                variants={{
+                                                    hidden: { opacity: 0, scale: 0.8 },
+                                                    visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: "easeOut" } }
+                                                }}
                                                 key={logo.alt}
-                                                whileHover={{ scale: 1.05 }}
-                                                className="relative flex items-center justify-center"
+                                                className="relative h-full flex items-center justify-center shrink-0 w-auto"
                                             >
                                                 <Image
                                                     src={logo.src}
                                                     alt={logo.alt}
-                                                    width={logo.width}
-                                                    height={100}
-                                                    className={`w-auto max-w-full object-contain opacity-90 hover:opacity-100 transition-opacity ${logo.alt === 'DRDO'
-                                                        ? 'h-16 md:h-24 lg:h-28 translate-y-1'
-                                                        : 'h-11 md:h-16 lg:h-22'
-                                                        }`}
+                                                    width={150}
+                                                    height={70}
+                                                    className="max-h-full w-auto max-w-[90px] md:max-w-[125px] lg:max-w-[155px] object-contain transition-opacity duration-300"
                                                 />
                                             </motion.div>
                                         ))}
-                                    </div>
+                                    </motion.div>
                                 </div>
                             </div>
                         </motion.div>

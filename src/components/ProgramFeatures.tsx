@@ -24,21 +24,39 @@ const ProgramFeatures = () => {
                 {/* Part 1: Founding Team & Video */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center mb-24 md:mb-32">
                     <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.7 }}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-50px" }}
+                        variants={{
+                            hidden: { opacity: 0 },
+                            visible: {
+                                opacity: 1,
+                                transition: { staggerChildren: 0.2 }
+                            }
+                        }}
                         className="space-y-8"
                     >
                         <div className="space-y-4">
-                            <p className="text-xl text-foreground/80 leading-relaxed flex items-start gap-3">
+                            <motion.p 
+                                variants={{
+                                    hidden: { opacity: 0, y: 30 },
+                                    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                                }}
+                                className="text-xl text-foreground/80 leading-relaxed flex items-start gap-3"
+                            >
                                 Our founding team includes engineers from Shodh AI (USA) and other global tech leaders. Here, you won’t be taught by disconnected faculty, you’ll learn from full-time software developers, AI practitioners, and system architects who are shaping the real world.
-                            </p>
-                            <div className="glass p-8 rounded-2xl border-l-4 border-accent shadow-[0_8px_32px_rgba(0,0,0,0.3)] bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:20px_20px] w-full">
+                            </motion.p>
+                            <motion.div 
+                                variants={{
+                                    hidden: { opacity: 0, y: 30 },
+                                    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                                }}
+                                className="glass p-8 rounded-2xl border-l-4 border-accent shadow-[0_8px_32px_rgba(0,0,0,0.3)] bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] bg-[size:20px_20px] w-full"
+                            >
                                 <p className="text-xl md:text-2xl font-bold text-foreground leading-tight">
                                     "We believe only those who build the future can truly teach it."
                                 </p>
-                            </div>
+                            </motion.div>
                         </div>
                     </motion.div>
 
