@@ -189,7 +189,7 @@ const AlumniPage = () => {
                             <span className="block sm:inline">Alumni Engagement:</span> <span className="block sm:inline font-bold">Give Back & Grow</span>
                         </h2>
                         <p className="text-body text-black/80 max-w-4xl mx-auto text-sm sm:text-base lg:text-lg">
-                            Your journey doesn't end at graduation; it's just the beginning of a lifelong connection with AESTR. We encourage our alumni to stay involved and contribute to the next generation of innovators.
+                            Your journey doesn't end at graduation it's just the beginning of a lifelong connection with AESTR. We encourage our alumni to stay involved and contribute to the next generation of innovators.
                         </p>
                     </div>
 

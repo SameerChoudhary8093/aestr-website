@@ -9,6 +9,7 @@ const teamData = [
         name: 'Kanishk Sharma',
         role: 'Director SGVU',
         image: '/ExecutionTeam/Kanishk.webp',
+        linkedin: 'https://www.linkedin.com/in/kanishk-sharma-195aa2178/',
         desc: 'Kanishk Sharma is a leading socio-entrepreneur and educationist of the country. From building institutions from the ground up he is responsible for leadership of leading large ed-tech platforms with over 100,000 students. His vision and strategic direction have been instrumental in shaping AESTR mission and approach.',
         quote: 'AI education is not just about technology, it\'s about creating responsible innovators for tomorrow'
     },
@@ -16,14 +17,16 @@ const teamData = [
         name: 'Dr. Arastu Sharma',
         role: 'CEO AESTR',
         image: '/ExecutionTeam/Arastu.jpeg',
-        desc: 'Dr. Arastu Sharma’s journey spans Cambridge, Columbia, Microsoft Research, and entrepreneurship with multiple AI companies. His pioneering healthcare patent was acquired by global pharmaceutical giant GSK. Today, as CEO of Shodh AI and AESTR, he embodies innovation and industry expertise.',
+        linkedin: 'https://www.linkedin.com/in/drarastu/',
+        desc: "Dr. Arastu Sharma's journey spans Cambridge, Columbia, Microsoft Research, and entrepreneurship with multiple AI companies. His pioneering healthcare patent was acquired by global pharmaceutical giant GSK. Today, as CEO of Shodh AI and AESTR, he embodies innovation and industry expertise.",
         specialStats: true,
-        quote: 'AI education is not just about technology, it’s about creating responsible innovators for tomorrow.'
+        quote: "AI education is not just about technology, it's about creating responsible innovators for tomorrow."
     },
     {
         name: 'Prof. MP Poonia',
         role: 'Ex-Vice Chairman, AICTE',
         image: '/ExecutionTeam/Poonia.webp',
+        linkedin: 'https://www.linkedin.com/in/dr-mp-poonia-75108861/',
         desc: 'Professor MP Poonia is the Vice Chairman of AICTE (All India Council for Technical Education) and a leading academician in the country. His extensive experience in engineering education policy and implementation has been vital in aligning AESTR programs with national education standards and future industry needs.',
         quote: 'The future of India\'s technological advancement depends on how we educate and prepare our engineering talent today.'
     },
@@ -84,9 +87,23 @@ const ExecutionTeam = () => {
                             {/* Content Side */}
                             <div className="w-full lg:w-7/12 flex flex-col justify-center space-y-6 text-left">
                                 <div className="space-y-2">
-                                    <h3 className="text-h3 text-white tracking-tight">
-                                        {member.name}
-                                    </h3>
+                                    <div className="flex items-center gap-3">
+                                        <h3 className="text-h3 text-white tracking-tight">
+                                            {member.name}
+                                        </h3>
+                                        {member.linkedin && (
+                                            <a 
+                                                href={member.linkedin}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-white/60 hover:text-accent transition-colors duration-300"
+                                            >
+                                                <svg className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                                </svg>
+                                            </a>
+                                        )}
+                                    </div>
                                     <p className="text-[10px] md:text-sm font-orbitron uppercase tracking-[0.2em] md:tracking-[0.3em] text-accent font-black">
                                         {member.role}
                                     </p>

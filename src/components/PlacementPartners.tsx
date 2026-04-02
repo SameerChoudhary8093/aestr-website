@@ -132,13 +132,25 @@ const PlacementPartners = () => {
 };
 
 const PartnerLogo = ({ partner, index, isMarquee = false }: { partner: { name: string, logo: string }, index: number, isMarquee?: boolean }) => {
+    // Check if this is one of the specific companies to make larger
+    const isLarger = [
+        'Bank of America',
+        'Wipro', 
+        'Apollo Systech',
+        'Systech',
+        'PwC',
+        'Observe.ai'
+    ].includes(partner.name);
+    
     return (
         <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: (index % 10) * 0.05 }}
-            className={`h-24 md:h-28 bg-white rounded-xl md:rounded-2xl flex items-center justify-center transition-all duration-500 hover:scale-105 shadow-[0_10px_30px_rgba(0,0,0,0.1)] group relative overflow-hidden p-1 md:p-1.5 ${isMarquee ? 'w-40 flex-shrink-0' : 'w-full'}`}
+            className={`h-24 md:h-28 bg-white rounded-xl md:rounded-2xl flex items-center justify-center transition-all duration-500 hover:scale-105 shadow-[0_10px_30px_rgba(0,0,0,0.1)] group relative overflow-hidden p-1 md:p-1.5 ${
+                isMarquee ? 'w-40 flex-shrink-0' : 'w-full'
+            }`}
         >
             {/* Soft inner glow for premium feel */}
             <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent pointer-events-none" />
@@ -148,7 +160,9 @@ const PartnerLogo = ({ partner, index, isMarquee = false }: { partner: { name: s
                     src={partner.logo}
                     alt={partner.name}
                     fill
-                    className="object-contain mix-blend-multiply transition-all duration-500 group-hover:scale-110"
+                    className={`object-contain mix-blend-multiply transition-all duration-500 group-hover:scale-110 ${
+                        isLarger ? 'scale-130' : 'scale-100'
+                    }`}
                     sizes="(max-width: 768px) 100px, (max-width: 1024px) 120px, 150px"
                 />
             </div>

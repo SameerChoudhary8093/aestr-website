@@ -641,58 +641,6 @@ const RoboticsSpecializationPage = () => {
                         </div>
                     </div>
                 </div>
-            </section>            {/* Prospective Placement Partners Section - BLACK */}
-            <section className="bg-black py-24 text-white relative overflow-hidden">
-                <div className="container-boxed text-center relative z-10 w-full max-w-[1300px] mx-auto">
-                    <div className="space-y-16">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="space-y-4"
-                        >
-                            <h2 className="text-4xl md:text-6xl font-orbitron font-black text-white tracking-widest uppercase">
-                                Global <span className="text-accent italic">Networks</span>
-                            </h2>
-                            <p className="text-white/30 font-orbitron text-xs uppercase tracking-[0.4em]">Placement Partners</p>
-                        </motion.div>
-
-                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 px-4">
-                            {[
-                                { name: "Google", src: "/ProgramPartners/google.webp" },
-                                { name: "Microsoft", src: "/ProgramPartners/micro.webp" },
-                                { name: "Amazon", src: "/placement/amazon.webp" },
-                                { name: "Meta", src: "/placement/observe.webp" },
-                                { name: "Infosys", src: "/placement/mindtree.webp" },
-                                { name: "TCS", src: "/placement/cognizant.webp" },
-                                { name: "Wipro", src: "/placement/hcl.webp" },
-                                { name: "Accenture", src: "/placement/accenture.webp" },
-                                { name: "Zerodha", src: "/placement/jio.webp" },
-                                { name: "CRED", src: "/placement/delhivery.webp" },
-                                { name: "Swiggy", src: "/placement/globallogic.webp" },
-                                { name: "Adobe", src: "/placement/capgemini.webp" }
-                            ].map((partner, idx) => (
-                                <motion.div
-                                    key={partner.name}
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: idx * 0.05 }}
-                                    className="bg-white/5 h-[140px] rounded-2xl flex items-center justify-center p-4 border border-white/10 hover:bg-white/10 hover:border-accent/30 transition-all group"
-                                >
-                                    <div className="relative w-full h-full flex items-center justify-center">
-                                        <Image
-                                            src={partner.src}
-                                            alt={partner.name}
-                                            fill
-                                            className="object-contain p-2 grayscale contrast-125 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500 mix-blend-screen"
-                                        />
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
             </section>
             {/* An Overview Section - PURPLE */}
             <section className="py-24 relative overflow-hidden bg-[#571AD0]">

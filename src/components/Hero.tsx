@@ -78,7 +78,7 @@ const Hero = () => {
                                 <div className="absolute inset-0 bg-gradient-to-r from-purple/20 via-blue/20 to-accent/20 rounded-[1.5rem] blur-xl group-hover:blur-2xl transition-all duration-700 opacity-60"></div>
 
                                 {/* Main container - Flexible and clean */}
-                                <div className="relative flex flex-col items-start gap-3 pl-6 pr-4 sm:pl-8 sm:pr-8 lg:pr-10 py-5 sm:py-3 lg:py-4 rounded-[1.5rem] bg-black/40 backdrop-blur-xl border border-white/30 shadow-[0_10px_40px_rgba(0,0,0,0.5)] transition-all duration-500 w-max">
+                                <div className="relative flex flex-col items-start gap-3 pl-6 pr-4 sm:pl-8 sm:pr-8 lg:pr-10 py-5 sm:py-3 lg:py-4 rounded-[1.5rem] bg-black/40 backdrop-blur-xl border border-white/30 shadow-[0_10px_40px_rgba(0,0,0,0.5)] transition-all duration-500 w-max z-20">
 
                                     <div className="flex items-center gap-3 pt-2">
                                         <span className="w-6 sm:w-8 h-[2px] bg-accent rounded-full shrink-0"></span>
@@ -95,7 +95,7 @@ const Hero = () => {
                                             hidden: { opacity: 0 },
                                             visible: {
                                                 opacity: 1,
-                                                transition: { staggerChildren: 0.15, delayChildren: 0.4 }
+                                                transition: { staggerChildren: 0.15 }
                                             }
                                         }}
                                         className="flex items-center justify-start gap-4 sm:gap-6 md:gap-8 lg:gap-12 h-11 md:h-[52px] lg:h-[60px] w-full mb-1"

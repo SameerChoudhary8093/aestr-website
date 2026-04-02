@@ -88,7 +88,7 @@ const FutureFaculty = () => {
                         <div className="relative z-10">
                             <h4 className="text-h3 text-foreground mb-4 md:mb-6 flex items-center gap-3 group-hover:text-accent transition-colors">
                                  <span className="w-2 h-2 rounded-full bg-accent" />
-                                 Ai teachers
+                                 AI teachers
                             </h4>
                             <p className="text-body text-foreground/90 font-bold">
                                 Trained on the world’s best textbooks, industry manuals, open research, and real-world case studies, our AI teachers can explain complex topics in simple language — tailored to your pace, level, and interests.

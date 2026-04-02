@@ -139,7 +139,7 @@ const Footer = () => {
                                 </svg>
                             </a>
                             <a
-                                href="https://www.youtube.com/"
+                                href="https://www.youtube.com/@AestrbyGyanVihar"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="relative w-6 h-6 transition-all duration-300 hover:scale-110 hover:text-accent"
