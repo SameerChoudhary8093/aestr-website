@@ -68,7 +68,7 @@ export default async function CoursePage({ params }: { params: Promise<{ courseI
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="min-h-screen bg-background text-foreground pt-32 pb-24 relative overflow-hidden">
+      <div className="min-h-screen bg-background text-foreground pt-48 pb-24 relative overflow-hidden">
         <div className="absolute top-16 left-1/2 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-accent/8 blur-[120px] pointer-events-none" />
 
         <div className="container-boxed relative z-10 max-w-6xl">
@@ -80,73 +80,73 @@ export default async function CoursePage({ params }: { params: Promise<{ courseI
             Back to Full Curriculum
           </Link>
 
-          <div className="glass mb-10 p-8 md:p-10">
+          <div className="bg-[#5B1DD6] rounded-3xl p-8 md:p-10">
             <div className="mb-6 flex flex-wrap items-center gap-3">
               {metaPills.map((pill) => (
-                <span key={pill} className="rounded-full border border-white/10 bg-black/20 px-4 py-2 text-xs font-orbitron uppercase tracking-[0.16em] text-foreground/65">
+                <span key={pill} className="rounded-full border border-white/30 bg-white/20 px-4 py-2 text-xs font-orbitron uppercase tracking-[0.18em] text-white">
                   {pill}
                 </span>
               ))}
             </div>
 
-            <h1 className="text-hero max-w-4xl leading-[1.08] text-foreground">
+            <h1 className="text-hero max-w-4xl leading-[1.08] text-white">
               {course.title}
             </h1>
             
-            <p className="mt-5 max-w-4xl text-body text-foreground/75">
+            <p className="mt-5 max-w-4xl text-body text-white/90">
               {course.description}
             </p>
           </div>
 
           <div className="grid gap-8 lg:grid-cols-[1.5fr_0.95fr]">
-            <section className="space-y-6">
+            <section className="space-y-6 mt-8">
               <div className="flex items-center gap-3">
-                <BookOpen className="h-5 w-5 text-accent" />
-                <h2 className="text-h3 text-foreground">Syllabus</h2>
+                <BookOpen className="h-5 w-5 text-black" />
+                <h2 className="text-h3 text-black font-bold">Syllabus</h2>
               </div>
 
-              <div className="space-y-4">
+              <div className="bg-[#D7F601] rounded-3xl p-6 space-y-4">
                 {course.units.length > 0 ? (
                   course.units.map((unit, index) => (
-                    <div key={unit.title} className="glass p-6">
+                    <div key={unit.title} className="bg-black/90 backdrop-blur p-6 rounded-xl border border-white/20">
                       <div className="mb-3 flex items-start gap-3">
-                        <span className="text-sm font-orbitron text-accent">{String(index + 1).padStart(2, '0')}</span>
-                        <h3 className="text-lg font-orbitron font-bold text-foreground">{unit.title}</h3>
+                        <span className="text-sm font-orbitron text-white">{String(index + 1).padStart(2, '0')}</span>
+                        <h3 className="text-lg font-orbitron font-bold text-white">{unit.title}</h3>
                       </div>
-                      <p className="pl-8 text-sm leading-relaxed text-foreground/68">
+                      <p className="pl-8 text-sm leading-relaxed text-white/80">
                         {unit.content}
                       </p>
                     </div>
                   ))
                 ) : (
-                  <div className="glass p-6 text-sm leading-relaxed text-foreground/60">
+                  <div className="bg-black/90 backdrop-blur p-6 rounded-xl border border-white/20 text-sm leading-relaxed text-white/80">
                     This course does not define theory units separately in the imported syllabus.
                   </div>
                 )}
               </div>
             </section>
 
-            <aside className="space-y-6">
-              <div className="glass p-6">
+            <aside className="space-y-6 mt-12">
+              <div className="bg-[#D7F601] rounded-3xl p-6">
                 <div className="mb-4 flex items-center gap-3">
-                  <Award className="h-5 w-5 text-accent" />
-                  <h2 className="text-xl font-orbitron font-bold text-foreground">Skills</h2>
+                  <Award className="h-5 w-5 text-black" />
+                  <h2 className="text-xl font-orbitron font-bold text-black">Skills</h2>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {course.skills.map((skill) => (
-                    <span key={skill} className="rounded-full border border-accent/20 bg-accent/10 px-3 py-1 text-xs text-accent">
+                    <span key={skill} className="rounded-full border border-black/30 bg-black/20 px-3 py-1 text-xs text-black">
                       {skill}
                     </span>
                   ))}
                 </div>
               </div>
 
-              <div className="glass p-6">
+              <div className="bg-[#D7F601] rounded-3xl p-6">
                 <div className="mb-4 flex items-center gap-3">
-                  <Clock className="h-5 w-5 text-accent" />
-                  <h2 className="text-xl font-orbitron font-bold text-foreground">Structure</h2>
+                  <Clock className="h-5 w-5 text-black" />
+                  <h2 className="text-xl font-orbitron font-bold text-black">Structure</h2>
                 </div>
-                <div className="space-y-3 text-sm text-foreground/65">
+                <div className="space-y-3 text-sm text-black/80">
                   <p>Semester: {course.semester}</p>
                   <p>Credits: {course.credits}</p>
                   <p>Category: {course.type}</p>
@@ -154,14 +154,14 @@ export default async function CoursePage({ params }: { params: Promise<{ courseI
               </div>
 
               {course.labs.length > 0 && (
-                <div className="glass p-6">
+                <div className="bg-[#D7F601] rounded-3xl p-6">
                   <div className="mb-4 flex items-center gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-accent" />
-                    <h2 className="text-xl font-orbitron font-bold text-foreground">Practicals</h2>
+                    <CheckCircle2 className="h-5 w-5 text-black" />
+                    <h2 className="text-xl font-orbitron font-bold text-black">Practicals</h2>
                   </div>
                   <ul className="space-y-3">
                     {course.labs.map((lab) => (
-                      <li key={lab} className="rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3 text-sm leading-relaxed text-foreground/68">
+                      <li key={lab} className="bg-black/90 backdrop-blur rounded-xl border border-white/20 px-4 py-3 text-sm leading-relaxed text-white/80">
                         {lab}
                       </li>
                     ))}

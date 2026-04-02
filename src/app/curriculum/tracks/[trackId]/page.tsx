@@ -98,7 +98,7 @@ export default async function TrackPage({ params }: { params: Promise<{ trackId:
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="min-h-screen bg-background text-foreground pt-32 pb-24 relative overflow-hidden">
+      <div className="min-h-screen bg-background text-foreground pt-48 pb-24 relative overflow-hidden">
         <div className="absolute top-16 left-1/2 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-accent/8 blur-[120px] pointer-events-none" />
 
         <div className="container-boxed relative z-10">
@@ -110,24 +110,24 @@ export default async function TrackPage({ params }: { params: Promise<{ trackId:
             Back to Curriculum
           </Link>
 
-          <div className="glass mb-10 p-8 md:p-10">
+          <div className="bg-[#5B1DD6] rounded-3xl p-8 md:p-10">
             <div className="mb-5 flex flex-wrap items-center gap-3">
-              <span className="rounded-full border border-accent/20 bg-accent/10 px-4 py-2 text-xs font-orbitron uppercase tracking-[0.18em] text-accent">
+              <span className="rounded-full border border-white/30 bg-white/20 px-4 py-2 text-xs font-orbitron uppercase tracking-[0.18em] text-white">
                 {track.type} track
               </span>
-              <span className="rounded-full border border-white/10 bg-black/20 px-4 py-2 text-xs font-orbitron uppercase tracking-[0.18em] text-foreground/60">
+              <span className="rounded-full border border-white/30 bg-white/20 px-4 py-2 text-xs font-orbitron uppercase tracking-[0.18em] text-white">
                 {relatedCourses.length} mapped courses
               </span>
-              <span className="rounded-full border border-white/10 bg-black/20 px-4 py-2 text-xs font-orbitron uppercase tracking-[0.18em] text-foreground/60">
+              <span className="rounded-full border border-white/30 bg-white/20 px-4 py-2 text-xs font-orbitron uppercase tracking-[0.18em] text-white">
                 {semestersCovered.length > 0 ? `Semesters ${semestersCovered.join(', ')}` : 'More mapping coming soon'}
               </span>
             </div>
 
-            <h1 className="text-hero max-w-4xl leading-[1.08] text-foreground">
+            <h1 className="text-hero max-w-4xl leading-[1.08] text-white">
               {track.title}
             </h1>
 
-            <p className="mt-5 max-w-4xl text-body text-foreground/75">
+            <p className="mt-5 max-w-4xl text-body text-white/90">
               {track.description}
             </p>
           </div>
@@ -135,16 +135,16 @@ export default async function TrackPage({ params }: { params: Promise<{ trackId:
           <div className="grid gap-8 lg:grid-cols-[1.55fr_0.95fr]">
             <section>
               <div className="mb-6 flex items-center gap-3">
-                <Layers3 className="h-5 w-5 text-accent" />
-                <h2 className="text-h3 text-foreground">Track structure</h2>
+                <Layers3 className="h-5 w-5 text-black" />
+                <h2 className="text-h3 text-black">Track structure</h2>
               </div>
 
-              <div className="space-y-8">
+              <div className="bg-[#D7F601] rounded-3xl p-6 space-y-8">
                 {sections.map((section) => (
                   <div key={section.key} className="space-y-4">
                     <div>
-                      <h3 className="text-xl font-orbitron font-bold text-foreground">{section.title}</h3>
-                      <p className="mt-2 text-sm text-foreground/65">{section.description}</p>
+                      <h3 className="text-xl font-orbitron font-bold text-black">{section.title}</h3>
+                      <p className="mt-2 text-sm text-black/80">{section.description}</p>
                     </div>
 
                     <div className="space-y-4">
@@ -152,42 +152,42 @@ export default async function TrackPage({ params }: { params: Promise<{ trackId:
                         <Link
                           key={course.id}
                           href={`/curriculum/courses/${course.id}`}
-                          className="glass group block p-6 transition-all duration-300 hover:border-accent/25 hover:bg-white/[0.05]"
+                          className="bg-black/90 backdrop-blur group block p-6 rounded-xl border border-white/20"
                         >
                           <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                             <div className="flex-1">
                               <div className="mb-3 flex flex-wrap items-center gap-3">
-                                <span className="rounded-full border border-accent/20 bg-accent/10 px-3 py-1 text-xs font-orbitron uppercase tracking-[0.16em] text-accent">
+                                <span className="rounded-full border border-white/30 bg-white/20 px-3 py-1 text-xs font-orbitron uppercase tracking-[0.16em] text-white">
                                   {course.code}
                                 </span>
-                                <span className="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs font-orbitron uppercase tracking-[0.16em] text-foreground/60">
+                                <span className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-orbitron uppercase tracking-[0.16em] text-white/70">
                                   {course.availabilitySemesters.length > 1
                                     ? `Semesters ${course.availabilitySemesters.join(', ')}`
                                     : `Semester ${course.semester}`}
                                 </span>
-                                <span className="text-sm text-foreground/50">{course.credits}</span>
+                                <span className="text-sm text-white/60">{course.credits}</span>
                               </div>
 
-                              <h4 className="text-xl font-orbitron font-bold text-foreground transition-colors group-hover:text-accent">
+                              <h4 className="text-xl font-orbitron font-bold text-white">
                                 {course.title}
                               </h4>
 
-                              <p className="mt-3 text-sm leading-relaxed text-foreground/65">
+                              <p className="mt-3 text-sm leading-relaxed text-white/80">
                                 {course.description}
                               </p>
 
                               <div className="mt-4 flex flex-wrap gap-2">
                                 {course.skills.slice(0, 5).map((skill) => (
-                                  <span key={skill} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-foreground/60">
+                                  <span key={skill} className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs text-white/60">
                                     {skill}
                                   </span>
                                 ))}
                               </div>
                             </div>
 
-                            <div className="inline-flex items-center gap-2 text-sm font-orbitron uppercase tracking-[0.14em] text-accent">
+                            <div className="inline-flex items-center gap-2 text-sm font-orbitron uppercase tracking-[0.14em] text-white">
                               View course
-                              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                              <ArrowRight className="h-4 w-4" />
                             </div>
                           </div>
                         </Link>
@@ -198,7 +198,7 @@ export default async function TrackPage({ params }: { params: Promise<{ trackId:
               </div>
             </section>
 
-            <aside className="space-y-6">
+            <aside className="space-y-6 mt-16">
               <div className="glass p-6">
                 <div className="mb-4 flex items-center gap-3">
                   <Sparkles className="h-5 w-5 text-accent" />
