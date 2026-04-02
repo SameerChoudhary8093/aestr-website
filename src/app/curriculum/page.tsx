@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import TracksSection from './components/TracksSection';
 import InnovationLabsSection from './components/InnovationLabsSection';
 import SemestersSection from './components/SemestersSection';
-import CurriculumSearch from './components/CurriculumSearch';
-import { Download, BookOpen, Layers3, Search } from 'lucide-react';
+import ExpandableSearch from '@/components/ui/ExpandableSearch';
+import { Download, BookOpen, Layers3, GraduationCap } from 'lucide-react';
 import { coursesData, curriculumStructure, tracksData } from '@/lib/curriculum';
 
 export const metadata: Metadata = {
@@ -49,7 +49,7 @@ const overviewCards = [
     title: 'Deep-Tech Courses',
     value: `${coursesData.length}+`,
     description: 'Covering everything from Quantum Mechanics to LLMs, Web3, and Autonomous Robotics.',
-    icon: Search,
+    icon: GraduationCap,
   },
 ];
 
@@ -61,7 +61,7 @@ export default function CurriculumPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(curriculumSchema) }}
       />
       
-      <div className="fixed bottom-8 right-8 z-50 flex flex-col gap-3">
+      <div className="fixed bottom-8 right-8 z-50">
         <a 
           href="/Curriculum.pdf" 
           target="_blank" 
@@ -71,23 +71,17 @@ export default function CurriculumPage() {
           <Download className="w-5 h-5" />
           <span>Download PDF</span>
         </a>
-        <a 
-          href="/Curriculum-main.zip" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="glass border border-accent/20 bg-accent/10 px-4 py-3 text-sm font-orbitron uppercase tracking-[0.14em] text-accent transition-all hover:bg-accent/20"
-        >
-          <Download className="w-4 h-4 inline mr-2" />
-          LaTeX Source
-        </a>
       </div>
 
-      <div className="min-h-screen bg-background text-foreground pt-32 pb-16 overflow-hidden">
+      <div className="min-h-screen bg-background text-foreground pt-48 pb-16 overflow-hidden">
         <div className="container-boxed relative">
           <div className="absolute top-10 left-1/2 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-accent/8 blur-[120px] pointer-events-none" />
 
           <div className="relative z-10 space-y-10">
-            <section className="grid gap-8 lg:grid-cols-[1.25fr_0.95fr] lg:items-end">
+            <div className="bg-[#5B1DD6] rounded-3xl p-8 md:p-12 space-y-10">
+              <ExpandableSearch />
+              
+              <section className="grid gap-8 lg:grid-cols-[1.25fr_0.95fr] lg:items-end">
               <div className="space-y-5">
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-orbitron uppercase tracking-[0.2em] text-accent">
                   Official curriculum system
@@ -110,7 +104,7 @@ export default function CurriculumPage() {
               </div>
             </section>
 
-            <section className="grid gap-4 md:grid-cols-3">
+            <section className="grid gap-4 md:grid-cols-3 lg:grid-cols-3">
               {overviewCards.map((card) => {
                 const Icon = card.icon;
                 return (
@@ -125,8 +119,7 @@ export default function CurriculumPage() {
                 );
               })}
             </section>
-
-            <CurriculumSearch />
+            </div>
 
             <TracksSection />
           

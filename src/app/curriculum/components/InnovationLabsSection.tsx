@@ -16,14 +16,14 @@ export default function InnovationLabsSection() {
           Innovation labs
         </div>
         <h2 className="text-h2 text-foreground">
-          Build from <span className="text-accent italic">day one</span>
+          Build from <span className="text-accent font-bold">day one</span>
         </h2>
         <p className="mx-auto max-w-3xl text-body text-foreground/70">
           These studio-style labs are a defining part of the curriculum. Each one blends guided tasks, build-heavy execution, and modern engineering tools from the official syllabus.
         </p>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="grid gap-6 lg:grid-cols-2">
         {labs.map((lab) => (
           <div key={lab.id} className="glass flex h-full flex-col p-6">
             <div className="mb-4 flex items-center justify-between gap-3">
@@ -57,7 +57,7 @@ export default function InnovationLabsSection() {
 
             <Link
               href={`/curriculum/courses/${lab.id}`}
-              className="mt-6 inline-flex items-center gap-2 text-sm font-orbitron uppercase tracking-[0.14em] text-accent"
+              className="mt-auto pt-6 inline-flex items-center gap-2 text-sm font-orbitron uppercase tracking-[0.14em] text-accent"
             >
               Open lab page <ArrowRight className="h-4 w-4" />
             </Link>

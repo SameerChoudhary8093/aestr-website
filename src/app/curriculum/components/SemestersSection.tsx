@@ -36,12 +36,13 @@ function getItemPillClasses(itemType: string, courseType: string | null) {
 
 export default function SemestersSection() {
   return (
-    <section className="py-20" id="semesters">
+    <section className="py-20 bg-[#D7F601] rounded-3xl" id="semesters">
+      <div className="px-8 md:px-12">
       <div className="mb-12 space-y-4 text-center">
-        <h2 className="text-h2 text-foreground">
-          Semester <span className="text-accent italic">scheme</span>
+        <h2 className="text-h2 text-black">
+          Semester <span className="text-black font-bold">scheme</span>
         </h2>
-        <p className="mx-auto max-w-3xl text-body text-foreground/70">
+        <p className="mx-auto max-w-3xl text-body text-black/80">
           Every row below comes from the official semester scheme. Expand a semester to see course pages, labs, major requirements, minor requirements, and elective placeholders in one readable view.
         </p>
       </div>
@@ -52,7 +53,7 @@ export default function SemestersSection() {
             <Accordion.Item
               key={sem.semester}
               value={`item-${sem.semester}`}
-              className="glass overflow-hidden"
+              className="bg-black overflow-hidden rounded-xl border border-black/20"
             >
               <Accordion.Header>
                 <Accordion.Trigger className="group flex w-full items-center justify-between gap-4 p-6 text-left transition-colors hover:bg-white/[0.03]">
@@ -61,16 +62,16 @@ export default function SemestersSection() {
                       {sem.semester}
                     </div>
                     <div>
-                      <div className="font-orbitron text-xl font-bold text-foreground">{sem.title}</div>
-                      <div className="mt-1 text-sm text-foreground/60">{sem.description}</div>
+                      <div className="font-orbitron text-xl font-bold text-white">{sem.title}</div>
+                      <div className="mt-1 text-sm text-white/70">{sem.description}</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="hidden text-right md:block">
-                      <div className="text-xs font-orbitron uppercase tracking-[0.18em] text-foreground/45">Total credits</div>
-                      <div className="mt-1 text-lg font-orbitron text-foreground">{sem.totalCredits}</div>
+                      <div className="text-xs font-orbitron uppercase tracking-[0.18em] text-white/50">Total credits</div>
+                      <div className="mt-1 text-lg font-orbitron text-white">{sem.totalCredits}</div>
                     </div>
-                    <ChevronDown className="h-5 w-5 text-foreground/45 transition-transform duration-300 group-data-[state=open]:rotate-180" />
+                    <ChevronDown className="h-5 w-5 text-white/50 transition-transform duration-300 group-data-[state=open]:rotate-180" />
                   </div>
                 </Accordion.Trigger>
               </Accordion.Header>
@@ -80,7 +81,7 @@ export default function SemestersSection() {
                   <div className="overflow-x-auto">
                     <table className="min-w-[760px] w-full border-collapse text-left">
                       <thead>
-                        <tr className="border-b border-white/8 text-xs font-orbitron uppercase tracking-[0.16em] text-foreground/45">
+                        <tr className="border-b border-white/8 text-xs font-orbitron uppercase tracking-[0.16em] text-white/60">
                           <th className="py-4 px-4">Code</th>
                           <th className="py-4 px-4">Title</th>
                           <th className="py-4 px-4">Category</th>
@@ -137,6 +138,7 @@ export default function SemestersSection() {
           ))}
         </Accordion.Root>
       </div>
+    </div>
     </section>
   );
 }
