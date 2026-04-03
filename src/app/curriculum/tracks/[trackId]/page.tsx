@@ -133,10 +133,10 @@ export default async function TrackPage({ params }: { params: Promise<{ trackId:
           </div>
 
           <div className="grid gap-8 lg:grid-cols-[1.55fr_0.95fr]">
-            <section>
+            <section className="mt-8">
               <div className="mb-6 flex items-center gap-3">
-                <Layers3 className="h-5 w-5 text-black" />
-                <h2 className="text-h3 text-black">Track structure</h2>
+                <Layers3 className="h-5 w-5 text-white" />
+                <h2 className="text-h3 text-white font-bold">Track structure</h2>
               </div>
 
               <div className="bg-[#D7F601] rounded-3xl p-6 space-y-8">
