@@ -118,7 +118,7 @@ const AboutPointThree = () => {
                                     playsInline
                                     controls
                                 >
-                                    <source src="/Other/Reel.mp4" type="video/mp4" />
+                                    <source src="/Other/Reels.mp4" type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>
                             </div>

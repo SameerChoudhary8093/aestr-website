@@ -47,7 +47,7 @@ const overviewCards = [
   },
   {
     title: 'Deep-Tech Courses',
-    value: `${coursesData.length}+`,
+    value: '100+',
     description: 'Covering everything from Quantum Mechanics to LLMs, Web3, and Autonomous Robotics.',
     icon: GraduationCap,
   },

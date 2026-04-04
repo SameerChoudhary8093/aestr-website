@@ -28,7 +28,7 @@ export default function InnovationLabsSection() {
           <div key={lab.id} className="glass flex h-full flex-col p-6">
             <div className="mb-4 flex items-center justify-between gap-3">
               <span className="rounded-full border border-accent/20 bg-accent/10 px-3 py-1 text-xs font-orbitron uppercase tracking-[0.16em] text-accent">
-                Semester {lab.semester}
+                Semester {lab.semester === 1 ? '1,2' : lab.semester === 5 ? '5,6' : lab.semester}
               </span>
               <span className="text-sm font-orbitron text-foreground/50">{lab.code}</span>
             </div>

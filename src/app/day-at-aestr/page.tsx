@@ -39,94 +39,155 @@ const comparisons = [
 
 export default function DayAtAestr() {
     return (
-        <main className="pt-32 pb-0 bg-background overflow-hidden">
+        <main className="bg-black overflow-hidden font-sans">
+            {/* Purple Section: Hero Title/Subtitle center-aligned single line */}
+            <div className="bg-[#5B1DD6] pt-64 pb-24 relative overflow-hidden">
+                {/* Decorative Elements */}
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/10 blur-[150px] -translate-y-1/2 translate-x-1/4 rounded-full pointer-events-none" />
+                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-black/20 blur-[120px] translate-y-1/2 -translate-x-1/4 rounded-full pointer-events-none" />
 
-            {/* Section 1: Day of AESTR Student */}
-            <section className="relative py-20 px-6">
-                <div className="container-boxed max-w-6xl mx-auto space-y-16">
-                    <div className="space-y-4">
-                        <h1 className="text-hero text-foreground">
-                            Day of <span className="text-accent underline decoration-accent/20">AESTR Student</span>
-                        </h1>
-                        <p className="text-body text-white/80 max-w-2xl mx-auto">
+                <div className="container-boxed max-w-7xl mx-auto px-6 relative z-10 text-center">
+                    <div className="space-y-8 flex flex-col items-center">
+                        <motion.h1 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="text-h1 lg:text-[5.5rem] leading-[1] text-white font-black font-orbitron whitespace-nowrap"
+                        >
+                            Day of <span className="text-accent">AESTR Student</span>
+                        </motion.h1>
+                        <motion.p 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="text-xl md:text-2xl text-white/90 font-medium whitespace-nowrap"
+                        >
                             Experience the intense, focused, and rewarding life of an AI engineering student at India's most innovative institution.
-                        </p>
+                        </motion.p>
                     </div>
+                </div>
+            </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center">
-                        <div className="lg:col-span-6 space-y-6">
-                            <p className="text-base md:text-lg text-foreground/90 leading-relaxed font-bold">
+            {/* Black Section: Description + Main Image + Grid */}
+            <div className="bg-black py-24 relative overflow-hidden">
+                <div className="container-boxed max-w-7xl mx-auto px-6 relative z-10 space-y-20">
+                    {/* Content Section */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <motion.div 
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="space-y-8"
+                        >
+                            <p className="text-lg md:text-xl text-white leading-relaxed font-normal font-sans text-center lg:text-left">
                                 At AESTR, a typical day blends hands-on innovation with AI-driven learning. By 9 AM, students dive into immersive bootcamps like “How to Build a Humanoid Robot,” where theory meets real-world creation. In labs, they design, code, and train robots not rote exams, just functional prototypes as proof of learning. Over lunch, conversations revolve around sensors, models, and routes not marks. By afternoon, feedback sessions turn into mentoring moments, refining both tech and thinking. By 4 PM, robots deliver across campus, showcasing not just knowledge but industry-ready execution. At AESTR, students don’t just study, they build, test, and launch.
                             </p>
-                        </div>
-                        <div className="lg:col-span-6">
-                            <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl group">
-                                <Image
-                                    src="/Other/AI-faculty.png"
-                                    alt="AESTR Student Life"
-                                    fill
-                                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                            </div>
-                        </div>
+                        </motion.div>
+
+                        <motion.div 
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            className="relative aspect-[4/3] rounded-[2.5rem] overflow-hidden border-4 border-white/20 shadow-[0_32px_64px_-12px_rgba(0,0,0,0.4)]"
+                        >
+                            <Image
+                                src="/Other/AI-faculty.png"
+                                alt="AESTR Student Life"
+                                fill
+                                className="object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                        </motion.div>
                     </div>
 
-                    {/* Small Images Grid */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-                        {[1, 2, 3, 4].map((i) => (
-                            <div key={i} className="relative aspect-square rounded-2xl overflow-hidden border border-white/10 group shadow-lg">
+                    {/* 4-Image Grid */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                        {[1, 2, 3, 4].map((i, index) => (
+                            <motion.div 
+                                key={i}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                className="relative aspect-square rounded-3xl overflow-hidden border-2 border-white/10 shadow-xl group cursor-pointer"
+                            >
                                 <Image
                                     src={`/Other/lab-${i}.webp`}
-                                    alt={`AESTR Lab ${i}`}
+                                    alt={`AESTR Student Work ${i}`}
                                     fill
                                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                                 />
-                            </div>
+                                <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            {/* Purple Comparison Section */}
+            <section className="bg-[#1a0b3b] py-24 md:py-32 overflow-hidden relative">
+                {/* Background Pattern */}
+                <div className="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#5B1DD6] via-transparent to-transparent" />
+                
+                <div className="container-boxed max-w-7xl mx-auto px-6 space-y-24 relative z-10">
+                    <motion.div 
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-center space-y-4"
+                    >
+                        <h2 className="text-h2 md:text-[5rem] text-white font-black uppercase tracking-tighter font-orbitron">
+                            TRADITIONAL <span className="text-accent underline decoration-accent/30 underline-offset-8">vs</span> AESTR
+                        </h2>
+                    </motion.div>
+
+                    <div className="space-y-8">
+                        {comparisons.map((row, idx) => (
+                            <motion.div 
+                                key={idx}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: idx * 0.05 }}
+                                className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                            >
+                                {/* Traditional Side */}
+                                <div className="bg-[#2d1266]/40 backdrop-blur-md p-8 md:p-10 lg:p-12 flex flex-col justify-center relative overflow-hidden rounded-[2.5rem] border border-white/10 hover:bg-[#2d1266]/60 transition-all shadow-xl">
+                                    <div className="space-y-4 relative z-10 w-full">
+                                        <span className="inline-block px-3 py-1 bg-white/5 rounded-full text-[0.6rem] uppercase tracking-[0.2em] text-white/50 font-bold font-orbitron border border-white/10">
+                                            Traditional Engineering
+                                        </span>
+                                        <p className="text-xl md:text-2xl text-white/70 font-medium leading-relaxed">
+                                            {row.traditional}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* AESTR Side */}
+                                <div className="bg-[#2d1266] p-8 md:p-10 lg:p-12 flex flex-col justify-center relative overflow-hidden rounded-[2.5rem] border border-accent/20 hover:bg-[#3d1a85] transition-all shadow-[0_32px_64px_-16px_rgba(0,0,0,0.5)]">
+                                    {/* Subtle Glow */}
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 blur-[60px] -translate-y-1/2 translate-x-1/2 rounded-full pointer-events-none" />
+                                    
+                                    <div className="space-y-4 relative z-10 w-full">
+                                        <span className="inline-block px-3 py-1 bg-accent/20 rounded-full text-[0.6rem] uppercase tracking-[0.2em] text-accent font-bold font-orbitron border border-accent/20 shadow-sm">
+                                            The AESTR Way
+                                        </span>
+                                        <p className="text-xl md:text-2xl text-white font-black leading-snug">
+                                            {row.aestr}
+                                        </p>
+                                    </div>
+                                </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Section 2: TRADITIONAL vs AESTR */}
-            <section className="relative py-24 bg-background-alt">
-                <div className="container-boxed max-w-6xl mx-auto space-y-16">
-                    <h2 className="text-h2 text-center text-foreground uppercase">
-                        TRADITIONAL <span className="text-accent italic">vs</span> AESTR
-                    </h2>
-
-                    <div className="overflow-x-auto">
-                        <table className="w-full border-collapse rounded-2xl overflow-hidden shadow-2xl border border-white/5">
-                            <thead>
-                                <tr className="bg-purple/10">
-                                    <th className="p-6 md:p-10 text-lg md:text-2xl font-orbitron font-bold text-white border-b border-white/5 w-1/2">
-                                        Traditional Engineering
-                                    </th>
-                                    <th className="p-6 md:p-10 text-lg md:text-2xl font-orbitron font-bold text-accent border-b border-white/5 w-1/2">
-                                        AESTR Model
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {comparisons.map((row, idx) => (
-                                    <tr key={idx} className="group hover:bg-white/5 transition-colors">
-                                        <td className="p-6 md:p-8 text-sm md:text-base text-white/60 font-medium border-b border-white/5 border-r border-white/5">
-                                            {row.traditional}
-                                        </td>
-                                        <td className="p-6 md:p-8 text-sm md:text-base text-[#EAF0BD] font-bold border-b border-white/5">
-                                            {row.aestr}
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
-
-            {/* Section 3: Founding Team */}
-            <FoundingTeamVideo />
-
+            {/* Founding Team Section */}
+            <div className="bg-black">
+                <FoundingTeamVideo />
+            </div>
         </main>
     );
 }
