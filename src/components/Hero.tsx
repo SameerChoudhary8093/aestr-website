@@ -35,7 +35,7 @@ const Hero = () => {
                         className="space-y-6 md:space-y-8 lg:col-span-7"
                     >
                         <div className="space-y-4 md:space-y-5 text-left">
-                            <motion.h1 
+                            <motion.h1
                                 variants={{
                                     hidden: { opacity: 0, y: 30 },
                                     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
@@ -44,7 +44,7 @@ const Hero = () => {
                             >
                                 The B.Tech is dead
                             </motion.h1>
-                            <motion.p 
+                            <motion.p
                                 variants={{
                                     hidden: { opacity: 0, y: 30 },
                                     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
@@ -53,7 +53,7 @@ const Hero = () => {
                             >
                                 The AESTR Solution: <span className="text-accent">The 4-Year Engineering Residency.</span>
                             </motion.p>
-                            <motion.div 
+                            <motion.div
                                 variants={{
                                     hidden: { opacity: 0, y: 30 },
                                     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
@@ -71,14 +71,14 @@ const Hero = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.5 }}
-                            className="flex justify-start w-full pt-4 md:pt-6 -ml-6 sm:-ml-8"
+                            className="flex justify-start w-full pt-4 md:pt-6 ml-0 sm:-ml-8"
                         >
-                            <div className="relative group origin-left w-max max-w-[100vw]">
+                            <div className="relative group origin-left w-full sm:w-max max-w-full">
                                 {/* Animated background gradient */}
                                 <div className="absolute inset-0 bg-gradient-to-r from-purple/20 via-blue/20 to-accent/20 rounded-[1.5rem] blur-xl group-hover:blur-2xl transition-all duration-700 opacity-60"></div>
 
                                 {/* Main container - Flexible and clean */}
-                                <div className="relative flex flex-col items-start gap-3 pl-6 pr-4 sm:pl-8 sm:pr-8 lg:pr-10 py-5 sm:py-3 lg:py-4 rounded-[1.5rem] bg-black/40 backdrop-blur-xl border border-white/30 shadow-[0_10px_40px_rgba(0,0,0,0.5)] transition-all duration-500 w-max z-20">
+                                <div className="relative flex flex-col items-start gap-3 px-5 sm:pl-8 sm:pr-8 lg:pr-10 py-5 sm:py-3 lg:py-4 rounded-[1.5rem] bg-black/40 backdrop-blur-xl border border-white/30 shadow-[0_10px_40px_rgba(0,0,0,0.5)] transition-all duration-500 w-full max-w-[calc(100vw-2.5rem)] sm:w-max z-20">
 
                                     <div className="flex items-center gap-3 pt-2">
                                         <span className="w-6 sm:w-8 h-[2px] bg-accent rounded-full shrink-0"></span>
@@ -87,7 +87,7 @@ const Hero = () => {
                                         </p>
                                     </div>
 
-                                    <motion.div 
+                                    <motion.div
                                         initial="hidden"
                                         whileInView="visible"
                                         viewport={{ once: true, margin: "-50px" }}
@@ -98,7 +98,7 @@ const Hero = () => {
                                                 transition: { staggerChildren: 0.15 }
                                             }
                                         }}
-                                        className="flex items-center justify-start gap-4 sm:gap-6 md:gap-8 lg:gap-12 h-11 md:h-[52px] lg:h-[60px] w-full mb-1"
+                                        className="flex flex-row flex-nowrap items-center justify-start gap-6 sm:gap-6 md:gap-8 lg:gap-12 w-full overflow-x-auto hide-scrollbar mb-1"
                                     >
                                         {[
                                             { src: '/Herosection/University of cambridge.webp', alt: 'Cambridge' },
@@ -113,14 +113,14 @@ const Hero = () => {
                                                     visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: "easeOut" } }
                                                 }}
                                                 key={logo.alt}
-                                                className="relative h-full flex items-center justify-center shrink-0 w-auto"
+                                                className="relative h-[21px] sm:h-9 md:h-11 lg:h-14 flex items-center justify-start shrink-0"
                                             >
                                                 <Image
                                                     src={logo.src}
                                                     alt={logo.alt}
                                                     width={150}
                                                     height={70}
-                                                    className="max-h-full w-auto max-w-[90px] md:max-w-[125px] lg:max-w-[155px] object-contain transition-opacity duration-300"
+                                                    className="max-h-full w-auto max-w-[64px] sm:max-w-[125px] lg:max-w-[155px] object-contain transition-opacity duration-300"
                                                 />
                                             </motion.div>
                                         ))}
