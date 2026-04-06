@@ -98,7 +98,7 @@ const Hero = () => {
                                                 transition: { staggerChildren: 0.15 }
                                             }
                                         }}
-                                        className="flex flex-row flex-nowrap items-center justify-start gap-6 sm:gap-6 md:gap-8 lg:gap-12 w-full overflow-x-auto hide-scrollbar mb-1"
+                                        className="flex flex-row flex-nowrap items-center justify-between sm:justify-start gap-2 sm:gap-6 md:gap-8 lg:gap-12 w-full mb-1"
                                     >
                                         {[
                                             { src: '/Herosection/University of cambridge.webp', alt: 'Cambridge' },
@@ -113,7 +113,7 @@ const Hero = () => {
                                                     visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: "easeOut" } }
                                                 }}
                                                 key={logo.alt}
-                                                className="relative h-[21px] sm:h-9 md:h-11 lg:h-14 flex items-center justify-start shrink-0"
+                                                className="relative h-[22px] sm:h-9 md:h-11 lg:h-14 flex items-center justify-start shrink sm:shrink-0"
                                             >
                                                 <Image
                                                     src={logo.src}
