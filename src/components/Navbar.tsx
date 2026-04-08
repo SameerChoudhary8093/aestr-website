@@ -26,6 +26,7 @@ const Navbar = () => {
         { name: 'Home', href: '/#hero' },
         { name: 'B.Tech AI', href: '/btech-ai-shodh-ai' },
         { name: 'Aestr Alpha', href: 'https://aestralpha.com', external: true },
+        { name: 'Sovereign AI', href: '/sovereign-ai-initiative' },
         { name: 'Alumni', href: '/alumni' },
         { name: 'Blogs', href: '/blogs' },
         { name: 'Curriculum', href: '/curriculum' },
