@@ -82,7 +82,7 @@ const AboutTopOnePercent = () => {
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-orbitron font-bold leading-tight flex flex-wrap items-center gap-2 md:gap-3 text-foreground">
                                 B.Tech for <span className="text-accent">the top 1%</span>
                             </h2>
-                            <p className="text-[16px] text-foreground/80 max-w-2xl leading-relaxed whitespace-nowrap">
+                            <p className="text-[16px] text-foreground/80 max-w-2xl leading-relaxed whitespace-normal">
                                 Blend of deep CS knowledge with expertise in healthcare, nanotech, robotics, and material science.
                             </p>
                         </motion.div>

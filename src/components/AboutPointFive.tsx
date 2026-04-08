@@ -99,20 +99,21 @@ const AboutPointFive = () => {
                     </div>
 
                     {/* Innovation Labs Grid - Styled EXACTLY as Team Cards */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 w-full max-w-[1400px] mx-auto px-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8 w-full max-w-[1400px] mx-auto px-4 pb-12 items-stretch">
                         {labs.map((lab, idx) => (
                             <motion.div
                                 key={lab.name}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true, margin: "-50px" }}
                                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                                className="w-full h-full"
+                                className="w-full flex"
                             >
-                                <div className="glass !bg-black/40 !border-white/10 p-6 md:p-8 rounded-[2.5rem] h-full flex flex-col group/lab hover:!bg-black/60 hover:border-accent/30 transition-all duration-500 relative shadow-2xl border border-white/5">
+                                <div className="w-full glass !bg-black/40 border-white/10 p-6 md:p-8 rounded-[2.5rem] flex flex-col group/lab hover:!bg-black/60 hover:border-accent/30 transition-all duration-500 shadow-2xl relative">
                                     
-                                    {/* Top Image (Full Width of Card) */}
-                                    <div className="relative aspect-[1/1] w-full bg-black/40 rounded-[1.5rem] overflow-hidden mb-8 border border-white/5 group-hover/lab:border-accent/40 transition-all duration-700">
+                                {/* Top Image (Full Width of Card) */}
+                                <div className="w-full relative group mb-6">
+                                    <div className="relative aspect-[4/3] w-full bg-black/40 rounded-[1.5rem] overflow-hidden border border-white/5 group-hover/lab:border-accent/40 transition-all duration-700">
                                         <Image
                                             src={lab.image}
                                             alt={lab.name}
@@ -122,23 +123,26 @@ const AboutPointFive = () => {
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
                                     </div>
+                                </div>
 
-                                    {/* Content Section */}
-                                    <div className="flex-grow space-y-6">
-                                        <div className="space-y-3">
-                                            <h4 className="text-[1.25rem] md:text-[1.5rem] text-white font-black leading-tight font-orbitron uppercase tracking-normal min-h-[3.5rem] flex items-start">
-                                                {lab.name}
-                                            </h4>
-                                            <div className="flex items-center gap-2">
-                                                <div className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
-                                                <span className="text-[9px] md:text-[10px] font-orbitron font-black text-accent tracking-[0.2em] uppercase">LAB {String(idx + 1).padStart(2, '0')} IN-CHARGE</span>
-                                            </div>
+                                {/* Content Section */}
+                                <div className="flex-grow space-y-6">
+                                    <div className="space-y-3">
+                                        <h4 className="text-[1.25rem] md:text-[1.4rem] text-white font-black leading-tight font-orbitron uppercase tracking-normal min-h-[3.5rem] flex items-start">
+                                            {lab.name}
+                                        </h4>
+                                        <div className="flex items-center gap-2">
+                                            <div className="w-1.5 h-1.5 bg-accent rounded-[1px] animate-pulse" />
+                                            <span className="text-[9px] md:text-[10px] font-orbitron font-black text-accent tracking-[0.2em] uppercase">LAB {String(idx + 1).padStart(2, '0')} IN-CHARGE</span>
                                         </div>
+                                    </div>
 
-                                        <p className="text-[11px] md:text-xs text-white/70 font-medium leading-[1.8] min-h-[160px]">
+                                    <div className="min-h-[160px] flex-grow">
+                                        <p className="text-[11px] md:text-[12.5px] text-white/70 font-medium leading-[1.8]">
                                             {lab.description}
                                         </p>
                                     </div>
+                                </div>
 
                                 </div>
                             </motion.div>

@@ -202,7 +202,7 @@ const FrontierHub = () => {
                         </div>
                     </div>
 
-                    <h2 className="text-[26px] sm:text-[34px] md:text-[40px] xl:text-[48px] font-orbitron font-black text-black leading-tight tracking-tight whitespace-nowrap mb-6 lg:mb-10 w-full overflow-hidden text-ellipsis">
+                    <h2 className="text-[26px] sm:text-[34px] md:text-[40px] xl:text-[48px] font-orbitron font-black text-black leading-tight tracking-tight mb-6 lg:mb-10 w-full">
                         B.Tech in Artificial Intelligence
                     </h2>
 

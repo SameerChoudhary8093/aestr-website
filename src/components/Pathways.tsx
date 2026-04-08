@@ -39,21 +39,22 @@ const Pathways = () => {
 
                     {/* Technical Connector Line Area */}
                     <div className="relative pt-6 w-full flex flex-col items-center">
-                        {/* Vertical line from header - shortened as requested */}
-                        <div className="relative h-24 w-px bg-black">
+                        {/* Vertical line from header - adjusted height for mobile connection */}
+                        <div className="relative h-32 md:h-24 w-px bg-black">
                             <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-black rotate-45" />
+                            <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-black rotate-45" />
                         </div>
                     </div>
                 </motion.div>
 
                 {/* Flowchart/Grid Section */}
-                <div className="relative mb-20 px-4 -mt-px pt-24 lg:pt-0">
+                <div className="relative mb-20 px-4 -mt-px pt-8 lg:pt-0">
                     {/* Horizontal Connecting Line with Diamond in center */}
                     <div className="absolute top-0 left-[12.5%] right-[12.5%] h-px bg-black hidden lg:block">
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-black rotate-45" />
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 items-stretch pt-12">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 items-stretch pt-0 lg:pt-12">
                         {pathwaysData.map((item, idx) => (
                             <motion.div
                                 key={idx}

@@ -11,7 +11,7 @@ const teamData = [
         image: '/ExecutionTeam/Kanishk.webp',
         linkedin: 'https://www.linkedin.com/in/kanishk-sharma-195aa2178/',
         desc: 'Kanishk Sharma is a leading socio-entrepreneur and educationist in India. He has built massive institutions from the ground up and leads tech-driven education platforms with over 100,000 students. His strategic vision has been the driving force behind AESTR’s mission to modernize engineering studies with real-world impact.',
-        quote: 'AI education is not just about technology, it\'s about creating responsible innovators for tomorrow'
+        quote: 'Big things are built with grit and courage. Engineers of India need to be instilled with a mindset of innovation and resilience to create transformative change.'
     },
     {
         name: 'Dr. Arastu Sharma',
@@ -59,8 +59,8 @@ const ExecutionTeam = () => {
                     </p>
                 </motion.div>
 
-                {/* Horizontal Slider Area */}
-                <div className="relative -mx-4 px-4 overflow-x-auto pb-12 scrollbar-hide snap-x flex justify-center gap-6 md:gap-8 no-scrollbar scroll-smooth">
+                {/* 4-Column Grid for Desktop, Vertical for Mobile */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8 w-full max-w-[1400px] mx-auto px-4 pb-12 items-stretch">
                     {teamData.map((member, idx) => (
                         <motion.div
                             key={member.name}
@@ -68,75 +68,77 @@ const ExecutionTeam = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.6, delay: idx * 0.1 }}
-                            className="flex-shrink-0 w-[280px] md:w-[320px] snap-center glass !bg-black/30 border-white/5 p-6 rounded-3xl flex flex-col space-y-6 group hover:!bg-black/50 transition-all duration-500 overflow-hidden"
+                            className="w-full flex"
                         >
-                            {/* Image Side - Smaller, Centered */}
-                            <div className="w-full relative group">
-                                <div className="aspect-[1/1] w-full bg-black/40 rounded-2xl border border-white/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/30 group-hover:shadow-[0_0_30px_rgba(216,246,2,0.1)] relative">
-                                    <Image
-                                        src={member.image}
-                                        alt={member.name}
-                                        fill
-                                        sizes="300px"
-                                        className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                                </div>
-                            </div>
-
-                            {/* Content Side - More Compact & Aligned */}
-                            <div className="flex flex-col flex-grow space-y-4 text-left">
-                                <div className="space-y-1">
-                                    <div className="flex items-center gap-2 min-h-[3rem] md:min-h-[3.5rem] items-start">
-                                        <h3 className="text-lg md:text-xl font-orbitron font-bold text-white tracking-tight leading-tight">
-                                            {member.name}
-                                        </h3>
-                                        {member.linkedin && (
-                                            <a
-                                                href={member.linkedin}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-white/60 hover:text-accent transition-colors duration-300 mt-1 flex-shrink-0"
-                                            >
-                                                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                                </svg>
-                                            </a>
-                                        )}
+                            <div className="w-full glass !bg-black/30 border-white/5 p-6 rounded-3xl flex flex-col group hover:!bg-black/50 transition-all duration-500 overflow-hidden">
+                                {/* Image Side - Adjusted Aspect Ratio */}
+                                <div className="w-full relative group mb-6">
+                                    <div className="aspect-square w-full bg-black/40 rounded-2xl border border-white/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/30 group-hover:shadow-[0_0_30px_rgba(216,246,2,0.1)] relative">
+                                        <Image
+                                            src={member.image}
+                                            alt={member.name}
+                                            fill
+                                            sizes="300px"
+                                            className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
                                     </div>
-                                    <div className="min-h-[2.5rem] md:min-h-[2.5rem] flex flex-wrap items-center gap-2">
-                                        <p className="text-[10px] md:text-xs font-orbitron uppercase tracking-widest text-accent font-black">
-                                            {member.role}
-                                        </p>
-                                        {member.specialStats && (
-                                            <div className="flex items-center gap-2 bg-white/5 px-2 py-1 rounded-full border border-white/10">
-                                                <div className="relative w-16 h-3 md:w-20 md:h-4">
-                                                    <Image
-                                                        src="/Herosection/University of cambridge.webp"
-                                                        alt="Cambridge"
-                                                        fill
-                                                        className="object-contain brightness-[1.5]"
-                                                        sizes="100px"
-                                                    />
+                                </div>
+
+                                {/* Content Side - More Compact & Aligned */}
+                                <div className="flex flex-col flex-grow space-y-4 text-left">
+                                    <div className="space-y-1">
+                                        <div className="flex items-center gap-2 min-h-[3rem] md:min-h-[3.5rem] items-start">
+                                            <h3 className="text-lg md:text-xl font-orbitron font-bold text-white tracking-tight leading-tight">
+                                                {member.name}
+                                            </h3>
+                                            {member.linkedin && (
+                                                <a
+                                                    href={member.linkedin}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-white/60 hover:text-accent transition-colors duration-300 mt-1 flex-shrink-0"
+                                                >
+                                                    <svg className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="currentColor">
+                                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                                    </svg>
+                                                </a>
+                                            )}
+                                        </div>
+                                        <div className="min-h-[2.5rem] md:min-h-[2.5rem] flex flex-wrap items-center gap-2">
+                                            <p className="text-[10px] md:text-xs font-orbitron uppercase tracking-widest text-accent font-black">
+                                                {member.role}
+                                            </p>
+                                            {member.specialStats && (
+                                                <div className="flex items-center gap-2 bg-white/5 px-2 py-1 rounded-full border border-white/10">
+                                                    <div className="relative w-16 h-3 md:w-20 md:h-4">
+                                                        <Image
+                                                            src="/Herosection/University of cambridge.webp"
+                                                            alt="Cambridge"
+                                                            fill
+                                                            className="object-contain brightness-[1.5]"
+                                                            sizes="100px"
+                                                        />
+                                                    </div>
+                                                    {/* <span className="text-[7px] md:text-[8px] font-orbitron text-white tracking-widest font-black uppercase"></span> */}
                                                 </div>
-                                                <span className="text-[7px] md:text-[8px] font-orbitron text-white tracking-widest font-black uppercase">PhD Cambridge</span>
-                                            </div>
-                                        )}
+                                            )}
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div className="min-h-[120px] md:min-h-[140px]">
-                                    <p className="text-[11px] md:text-xs text-white/70 font-medium leading-relaxed">
-                                        {member.desc}
-                                    </p>
-                                </div>
-
-                                {/* Compact Quote Box - Pushed to bottom */}
-                                <div className="mt-auto pt-4">
-                                    <div className="relative glass bg-black/30 border-l-2 border-accent p-3 rounded-r-xl min-h-[4.5rem] flex items-center">
-                                        <p className="text-[10px] md:text-[11px] text-white/80 font-medium italic leading-relaxed">
-                                            "{member.quote}"
+                                    <div className="min-h-[120px] md:min-h-[140px]">
+                                        <p className="text-[11px] md:text-xs text-white/70 font-medium leading-relaxed">
+                                            {member.desc}
                                         </p>
+                                    </div>
+
+                                    {/* Compact Quote Box - Pushed to bottom */}
+                                    <div className="mt-auto pt-4">
+                                        <div className="relative glass bg-black/30 border-l-2 border-accent p-3 rounded-r-xl min-h-[4.5rem] flex items-center">
+                                            <p className="text-[10px] md:text-[11px] text-white/80 font-medium italic leading-relaxed">
+                                                "{member.quote}"
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -152,9 +154,9 @@ const ExecutionTeam = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="mt-24"
                 >
-                    <div className="relative rounded-[2rem] border-[4px] border-[#5B1DD6] bg-[#D7F601] px-4 py-8 md:px-8 md:py-10 lg:px-10 lg:py-12 shadow-[0_18px_40px_rgba(0,0,0,0.6)] overflow-hidden">
-                        {/* Top-left halo decoration, keeping original smooth corner */}
-                        <div className="pointer-events-none absolute top-3 left-5 w-10 h-10 text-[#5B1DD6]">
+                    <div className="relative rounded-[2rem] border-[4px] border-[#5B1DD6] bg-[#D7F601] px-4 py-8 md:px-8 md:py-10 lg:px-10 lg:py-12 shadow-[0_18px_40px_rgba(0,0,0,0.6)] overflow-visible">
+                        {/* Top-left halo decoration */}
+                        <div className="pointer-events-none absolute -top-4 -left-2 md:top-3 md:left-5 w-12 h-12 text-[#5B1DD6]">
                             <svg viewBox="0 0 40 40" fill="none" className="w-full h-full rotate-12">
                                 <ellipse cx="20" cy="18" rx="12" ry="6" stroke="currentColor" strokeWidth="2.2" />
                                 <path d="M10 18c2 1.2 5.5 2 10 2s8-0.8 10-2" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />

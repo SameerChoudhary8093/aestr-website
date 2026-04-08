@@ -179,48 +179,48 @@ const BootcampsAndLabs = () => {
                             </div>
                         </div>
 
-                        {/* Labs Alternating Grid */}
-                        <div className="space-y-32">
+                        {/* Labs Vertical Cards Slider */}
+                        <div className="relative flex flex-col items-center md:flex-row md:justify-center md:flex-nowrap md:overflow-x-auto pb-12 gap-6 lg:gap-8 no-scrollbar scroll-smooth w-full pt-8 px-4 snap-x">
                             {labs.map((lab, idx) => (
                                 <motion.div
                                     key={lab.name}
-                                    initial={{ opacity: 0, y: 50 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true, margin: "-100px" }}
-                                    transition={{ duration: 0.8 }}
-                                    className={`flex flex-col md:items-center gap-12 lg:gap-20 ${idx % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'}`}
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true, margin: "-50px" }}
+                                    transition={{ duration: 0.6, delay: idx * 0.1 }}
+                                    className="flex-shrink-0 w-full max-w-[360px] md:w-[360px] snap-center glass !bg-black/30 border-white/5 p-6 rounded-3xl flex flex-col space-y-6 group hover:!bg-black/50 transition-all duration-500 overflow-hidden"
                                 >
-                                    {/* Image Side */}
-                                    <div className="flex-1 relative group cursor-pointer w-full">
-                                        <div className="aspect-[16/9] w-full bg-black/40 rounded-[2.5rem] border border-foreground/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/30 group-hover:shadow-[0_0_80px_rgba(216,246,2,0.1)] relative">
+                                    {/* Image Top */}
+                                    <div className="w-full relative group">
+                                        <div className="aspect-[4/3] w-full bg-black/40 rounded-2xl border border-white/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/30 group-hover:shadow-[0_0_30px_rgba(216,246,2,0.1)] relative">
                                             <Image
                                                 src={lab.image}
                                                 alt={lab.name}
                                                 fill
                                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                                             />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                                            <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                                            <div className="absolute top-6 right-6 z-10 opacity-0 group-hover:opacity-100 transition-all duration-500 -translate-y-4 group-hover:translate-y-0">
-                                                <span className="text-[10px] font-orbitron uppercase tracking-[0.4em] font-black text-black bg-accent px-5 py-2.5 rounded-full shadow-xl">System 0{idx + 1}</span>
-                                            </div>
                                         </div>
                                     </div>
-
-                                    {/* Content Side */}
-                                    <div className="flex-1 space-y-8">
-                                        <div className="space-y-4">
-                                            <h3 className="text-3xl lg:text-4xl font-orbitron font-bold text-foreground group-hover:text-accent transition-colors">
+                                    
+                                    {/* Content Bottom */}
+                                    <div className="flex flex-col flex-grow space-y-4 text-left">
+                                        <div className="space-y-3">
+                                            <h3 className="text-[1.3rem] lg:text-2xl font-orbitron font-bold text-white uppercase tracking-wider leading-tight min-h-[3.5rem] flex items-start group-hover:text-accent transition-colors duration-300">
                                                 {lab.name}
                                             </h3>
-                                            <p className="text-xl text-foreground/50 leading-relaxed font-medium">
+                                            <div className="flex items-center gap-2">
+                                                <span className="w-1.5 h-1.5 bg-accent/80 rounded-[1px]" />
+                                                <p className="text-[10px] md:text-xs font-orbitron uppercase tracking-widest text-accent font-black">
+                                                    LAB 0{idx + 1} IN-CHARGE
+                                                </p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div className="h-auto">
+                                            <p className="text-[12px] md:text-[13px] text-white/70 font-medium leading-[1.7] transition-all duration-300">
                                                 {lab.description}
                                             </p>
                                         </div>
-                                        <button className="flex items-center gap-3 group text-accent font-orbitron uppercase tracking-[0.25em] text-[10px] font-black hover:text-foreground transition-all duration-300 py-2">
-                                            <span>View More</span>
-                                            <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
-                                        </button>
                                     </div>
                                 </motion.div>
                             ))}

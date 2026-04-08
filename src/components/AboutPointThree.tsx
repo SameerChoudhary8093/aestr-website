@@ -44,7 +44,7 @@ const AboutPointThree = () => {
                                     alt="Future Technology"
                                     fill
                                     sizes="(max-width: 1280px) 100vw, 800px"
-                                    className="object-contain p-2 md:p-4"
+                                    className="object-cover"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 pointer-events-none" />
                             </div>
@@ -60,7 +60,7 @@ const AboutPointThree = () => {
                         >
                             <div className="h-[300px] md:h-[450px] lg:h-[550px] w-full bg-black/80 rounded-[3rem] border-2 border-white/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/40 group-hover:shadow-[0_0_100px_rgba(216,246,2,0.1)] relative">
                                 <video
-                                    className="w-full h-full object-contain p-2 md:p-4"
+                                    className="w-full h-full object-cover"
                                     loop
                                     playsInline
                                     controls
