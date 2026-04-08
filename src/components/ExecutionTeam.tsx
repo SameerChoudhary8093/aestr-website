@@ -10,7 +10,7 @@ const teamData = [
         role: 'Director SGVU',
         image: '/ExecutionTeam/Kanishk.webp',
         linkedin: 'https://www.linkedin.com/in/kanishk-sharma-195aa2178/',
-        desc: 'Kanishk Sharma is a leading socio-entrepreneur and educationist of the country. From building institutions from the ground up he is responsible for leadership of leading large ed-tech platforms with over 100,000 students. His vision and strategic direction have been instrumental in shaping AESTR mission and approach.',
+        desc: 'Kanishk Sharma is a leading socio-entrepreneur and educationist in India. He has built massive institutions from the ground up and leads tech-driven education platforms with over 100,000 students. His strategic vision has been the driving force behind AESTR’s mission to modernize engineering studies with real-world impact.',
         quote: 'AI education is not just about technology, it\'s about creating responsible innovators for tomorrow'
     },
     {
@@ -18,7 +18,7 @@ const teamData = [
         role: 'CEO AESTR',
         image: '/ExecutionTeam/Arastu.jpeg',
         linkedin: 'https://www.linkedin.com/in/drarastu/',
-        desc: "Dr. Arastu Sharma's journey spans Cambridge, Columbia, Microsoft Research, and entrepreneurship with multiple AI companies. His pioneering healthcare patent was acquired by global pharmaceutical giant GSK. Today, as CEO of Shodh AI and AESTR, he embodies innovation and industry expertise.",
+        desc: "Dr. Arastu Sharma's journey spans Cambridge, Columbia, and Microsoft Research. As a serial AI entrepreneur, his pioneering healthcare patent was acquired by the global giant GSK. Today, as CEO of Shodh AI and AESTR, he leverages his deep industry expertise to mentor the next generation of top-tier software and AI engineers.",
         specialStats: true,
         quote: "AI education is not just about technology, it's about creating responsible innovators for tomorrow."
     },
@@ -27,14 +27,14 @@ const teamData = [
         role: 'Ex-Vice Chairman, AICTE',
         image: '/ExecutionTeam/Poonia.webp',
         linkedin: 'https://www.linkedin.com/in/dr-mp-poonia-75108861/',
-        desc: 'Professor MP Poonia is the Vice Chairman of AICTE (All India Council for Technical Education) and a leading academician in the country. His extensive experience in engineering education policy and implementation has been vital in aligning AESTR programs with national education standards and future industry needs.',
+        desc: 'Professor MP Poonia is the Ex-Vice Chairman of AICTE and a foremost academic leader in India. His vast background in national education policy and its implementation ensures that AESTR’s technical programs are perfectly aligned with both national standards and the rapidly evolving demands of the global technology industry.',
         quote: 'The future of India\'s technological advancement depends on how we educate and prepare our engineering talent today.'
     },
     {
         name: 'Dr. Amogh Mahadevagowda',
         role: 'Lecturer, University of Cambridge',
         image: '/ExecutionTeam/Amogh.webp',
-        desc: 'Dr. Amogh Mahadevagowda is a leading material science scientist of the world and an entrepreneur in battery technologies. His groundbreaking research in materials science has opened new frontiers in energy storage solutions.',
+        desc: 'Dr. Amogh Mahadevagowda is a distinguished scientist at the University of Cambridge and a leader in advanced battery technologies. His pioneering research and global academic expertise help AESTR integrate world-class scientific standards into its curriculum, ensuring that students develop globally recognized skillsets for 2030.',
         quote: 'We\'re building technology that will redefine how AI engineering is taught and practiced.'
     }
 ];
@@ -59,103 +59,91 @@ const ExecutionTeam = () => {
                     </p>
                 </motion.div>
 
-                {/* Team Members List */}
-                <div className="space-y-16 md:space-y-24">
+                {/* Horizontal Slider Area */}
+                <div className="relative -mx-4 px-4 overflow-x-auto pb-12 scrollbar-hide snap-x flex justify-center gap-6 md:gap-8 no-scrollbar scroll-smooth">
                     {teamData.map((member, idx) => (
                         <motion.div
                             key={member.name}
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
-                            transition={{ duration: 0.8, delay: idx * 0.1 }}
-                            className={`flex flex-col md:items-center gap-8 md:gap-12 lg:gap-16 ${idx % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'}`}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.6, delay: idx * 0.1 }}
+                            className="flex-shrink-0 w-[280px] md:w-[320px] snap-center glass !bg-black/30 border-white/5 p-6 rounded-3xl flex flex-col space-y-6 group hover:!bg-black/50 transition-all duration-500 overflow-hidden"
                         >
-                            {/* Image Side */}
-                            <div className="w-full md:w-5/12 relative group">
-                                <div className="aspect-[4/5] w-full bg-black/40 rounded-2xl md:rounded-[2rem] border border-white/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/30 group-hover:shadow-[0_0_50px_rgba(216,246,2,0.1)] relative">
+                            {/* Image Side - Smaller, Centered */}
+                            <div className="w-full relative group">
+                                <div className="aspect-[1/1] w-full bg-black/40 rounded-2xl border border-white/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/30 group-hover:shadow-[0_0_30px_rgba(216,246,2,0.1)] relative">
                                     <Image
                                         src={member.image}
                                         alt={member.name}
                                         fill
-                                        sizes="(max-width: 768px) 100vw, 40vw"
+                                        sizes="300px"
                                         className="object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
                                 </div>
                             </div>
 
-                            {/* Content Side */}
-                            <div className="w-full lg:w-7/12 flex flex-col justify-center space-y-6 text-left">
-                                <div className="space-y-2">
-                                    <div className="flex items-center gap-3">
-                                        <h3 className="text-h3 text-white tracking-tight">
+                            {/* Content Side - More Compact & Aligned */}
+                            <div className="flex flex-col flex-grow space-y-4 text-left">
+                                <div className="space-y-1">
+                                    <div className="flex items-center gap-2 min-h-[3rem] md:min-h-[3.5rem] items-start">
+                                        <h3 className="text-lg md:text-xl font-orbitron font-bold text-white tracking-tight leading-tight">
                                             {member.name}
                                         </h3>
                                         {member.linkedin && (
-                                            <a 
+                                            <a
                                                 href={member.linkedin}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-white/60 hover:text-accent transition-colors duration-300"
+                                                className="text-white/60 hover:text-accent transition-colors duration-300 mt-1 flex-shrink-0"
                                             >
-                                                <svg className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="currentColor">
-                                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                                                 </svg>
                                             </a>
                                         )}
                                     </div>
-                                    <p className="text-[10px] md:text-sm font-orbitron uppercase tracking-[0.2em] md:tracking-[0.3em] text-accent font-black">
-                                        {member.role}
+                                    <div className="min-h-[2.5rem] md:min-h-[2.5rem] flex flex-wrap items-center gap-2">
+                                        <p className="text-[10px] md:text-xs font-orbitron uppercase tracking-widest text-accent font-black">
+                                            {member.role}
+                                        </p>
+                                        {member.specialStats && (
+                                            <div className="flex items-center gap-2 bg-white/5 px-2 py-1 rounded-full border border-white/10">
+                                                <div className="relative w-16 h-3 md:w-20 md:h-4">
+                                                    <Image
+                                                        src="/Herosection/University of cambridge.webp"
+                                                        alt="Cambridge"
+                                                        fill
+                                                        className="object-contain brightness-[1.5]"
+                                                        sizes="100px"
+                                                    />
+                                                </div>
+                                                <span className="text-[7px] md:text-[8px] font-orbitron text-white tracking-widest font-black uppercase">PhD Cambridge</span>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+
+                                <div className="min-h-[120px] md:min-h-[140px]">
+                                    <p className="text-[11px] md:text-xs text-white/70 font-medium leading-relaxed">
+                                        {member.desc}
                                     </p>
                                 </div>
 
-                                <p className="text-body text-white/70 font-medium">
-                                    {member.desc}
-                                </p>
-
-                                {member.specialStats && (
-                                    <div className="flex flex-wrap items-center gap-10 md:gap-14 pt-4">
-                                        <div className="flex flex-col items-start gap-3 group/stat transition-all">
-                                            <div className="relative w-32 h-12 md:w-40 md:h-16 flex-shrink-0">
-                                                <Image
-                                                    src="/Herosection/University of cambridge.webp"
-                                                    alt="Cambridge"
-                                                    fill
-                                                    className="object-contain brightness-[1.5] group-hover/stat:scale-105 transition-transform"
-                                                    sizes="(max-width: 768px) 150px, (max-width: 1024px) 180px, 200px"
-                                                />
-                                            </div>
-                                            <span className="text-[10px] md:text-[13px] font-orbitron text-white tracking-widest font-black whitespace-nowrap">PhD Cambridge</span>
-                                        </div>
-                                        <div className="flex flex-col items-start gap-3 group/stat transition-all">
-                                            <div className="relative w-12 h-12 md:w-16 md:h-16 flex-shrink-0">
-                                                <Image
-                                                    src="/Other/patent-ai.png"
-                                                    alt="Patents"
-                                                    fill
-                                                    className="object-contain group-hover/stat:scale-105 transition-transform"
-                                                    sizes="(max-width: 768px) 48px, (max-width: 1024px) 64px, 80px"
-                                                />
-                                            </div>
-                                            <span className="text-[10px] md:text-[13px] font-orbitron text-accent tracking-widest font-black whitespace-nowrap">75+ Patents in AI</span>
-                                        </div>
+                                {/* Compact Quote Box - Pushed to bottom */}
+                                <div className="mt-auto pt-4">
+                                    <div className="relative glass bg-black/30 border-l-2 border-accent p-3 rounded-r-xl min-h-[4.5rem] flex items-center">
+                                        <p className="text-[10px] md:text-[11px] text-white/80 font-medium italic leading-relaxed">
+                                            "{member.quote}"
+                                        </p>
                                     </div>
-                                )}
-
-                                {/* Quote Box - NOT ITALIC */}
-                                <div className="relative glass bg-black/30 border-l-4 border-accent p-6 md:p-8 rounded-r-2xl mt-4 group">
-                                    <div className="absolute -top-4 -left-2 text-white/5 font-serif text-[60px] md:text-[100px] leading-none select-none pointer-events-none group-hover:text-accent/5 transition-colors">
-                                        "
-                                    </div>
-                                    <p className="relative z-10 text-body text-white/80 font-semibold">
-                                        "{member.quote}"
-                                    </p>
                                 </div>
                             </div>
                         </motion.div>
                     ))}
                 </div>
-            
+
                 {/* 3+1 Global Edge Strip */}
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
@@ -196,7 +184,7 @@ const ExecutionTeam = () => {
                                     </span>
                                 </h3>
                                 <p className="text-[17px] md:text-[19px] lg:text-[20px] leading-relaxed font-medium text-black/90 max-w-2xl">
-                                    Don&apos;t just conquer India. Conquer the world. Spend 3 years building your portfolio at the AESTR Jaipur Hub, and 1 year at a premier university in the US, UK, or Europe. We have 25+ global education partners. The top 10% of our residents receive exclusive scholarships for their international year. You get a B.Tech degree, global exposure, and a world-class portfolio.
+                                    Don&apos;t just conquer India. Conquer the world. Spend 3 years building your portfolio at the AESTR Jaipur Hub, and 1 year at a premier university in the US, UK, or Europe. We have 25+ global education partners. You get a B.Tech degree, global exposure, and a world-class portfolio.
                                 </p>
                             </div>
                         </div>

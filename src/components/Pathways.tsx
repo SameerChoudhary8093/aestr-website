@@ -26,10 +26,7 @@ const Pathways = () => {
                     transition={{ duration: 0.8 }}
                     className="flex flex-col items-center text-center space-y-8"
                 >
-                    {/* Number Circle - Styled to match others */}
-                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-black/30 flex items-center justify-center bg-black/5">
-                        <span className="text-3xl md:text-5xl font-orbitron font-bold text-black">7</span>
-                    </div>
+                    {/* Number badge removed as requested */}
 
                     <div className="space-y-4">
                         <h2 className="text-h2 text-black">

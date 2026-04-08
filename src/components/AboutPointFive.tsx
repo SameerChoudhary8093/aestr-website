@@ -50,9 +50,7 @@ const AboutPointFive = () => {
                             }}
                         >
                            <div className="flex flex-col md:flex-row items-start gap-4 md:gap-8">
-                            <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-[#D7F601] flex items-center justify-center text-3xl md:text-4xl font-orbitron font-black text-black bg-[#D7F601] shadow-[0_0_20px_rgba(215,246,1,0.5)]">
-                                5
-                            </div>
+                                {/* Number badge removed as requested */}
                             <div className="space-y-6 text-left">
                                 <motion.div 
                                     variants={{
@@ -77,7 +75,7 @@ const AboutPointFive = () => {
                             </div>
                         </div></motion.div>
 
-                        {/* Features Grid */}
+                        {/* Features Grid - Commented out as requested
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                             {[
                                 { title: 'Exclusive Designs', desc: 'Co-created with insights from our work with DRDO, Silicon Valley startups, and our US-based company, Shodh AI (a top 1% AI startup).' },
@@ -97,57 +95,51 @@ const AboutPointFive = () => {
                                 </motion.div>
                             ))}
                         </div>
+                        */}
                     </div>
 
-                    {/* Labs Alternating Grid - Refactored for more Depth */}
-                    <div className="space-y-12">
+                    {/* Innovation Labs Grid - Styled EXACTLY as Team Cards */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 w-full max-w-[1400px] mx-auto px-4">
                         {labs.map((lab, idx) => (
                             <motion.div
                                 key={lab.name}
-                                initial={{ opacity: 0, y: 40 }}
+                                initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: "-100px" }}
-                                transition={{ duration: 0.8 }}
-                                className={`glass !bg-black/40 !border-white/5 p-8 md:p-12 lg:p-16 rounded-[2.5rem] md:rounded-[4rem] flex flex-col gap-10 md:gap-16 lg:gap-20 items-center ${idx % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} group/lab hover:!bg-black/50 transition-all duration-500`}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                                className="w-full h-full"
                             >
-                                {/* Image Side with Enhanced Glow */}
-                                <div className="flex-1 relative group w-full">
-                                    <div className="absolute -inset-4 bg-accent/5 rounded-[3rem] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                                    <div className="relative aspect-[16/10] w-full bg-black/40 rounded-3xl md:rounded-[2.5rem] border border-white/10 flex items-center justify-center overflow-hidden transition-all duration-700 group-hover:border-accent/40 group-hover:shadow-[0_0_100px_rgba(216,246,2,0.05)]">
+                                <div className="glass !bg-black/40 !border-white/10 p-6 md:p-8 rounded-[2.5rem] h-full flex flex-col group/lab hover:!bg-black/60 hover:border-accent/30 transition-all duration-500 relative shadow-2xl border border-white/5">
+                                    
+                                    {/* Top Image (Full Width of Card) */}
+                                    <div className="relative aspect-[1/1] w-full bg-black/40 rounded-[1.5rem] overflow-hidden mb-8 border border-white/5 group-hover/lab:border-accent/40 transition-all duration-700">
                                         <Image
                                             src={lab.image}
                                             alt={lab.name}
                                             fill
-                                            className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                                            className="object-cover transition-transform duration-1000 group-hover/lab:scale-110"
+                                            sizes="(max-width: 768px) 100vw, 400px"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
-                                        
-                                        {/* Futuristic Overlay Elements */}
-                                        <div className="absolute inset-0 border-[0.5px] border-white/5 rounded-[2.5rem] pointer-events-none" />
-                                        <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 z-10">
-                                            <div className="bg-black/80 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 flex items-center gap-3">
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
+                                    </div>
+
+                                    {/* Content Section */}
+                                    <div className="flex-grow space-y-6">
+                                        <div className="space-y-3">
+                                            <h4 className="text-[1.25rem] md:text-[1.5rem] text-white font-black leading-tight font-orbitron uppercase tracking-normal min-h-[3.5rem] flex items-start">
+                                                {lab.name}
+                                            </h4>
+                                            <div className="flex items-center gap-2">
                                                 <div className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
-                                                <span className="text-[10px] font-orbitron font-black text-white/70 tracking-widest">Lab {String(idx + 1).padStart(2, '0')}</span>
+                                                <span className="text-[9px] md:text-[10px] font-orbitron font-black text-accent tracking-[0.2em] uppercase">LAB {String(idx + 1).padStart(2, '0')} IN-CHARGE</span>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
 
-                                {/* Content Side */}
-                                <div className="flex-1 space-y-6 md:space-y-8 text-left">
-                                    <div className="space-y-6">
-                                        <h3 className="text-h2 text-white capitalize">
-                                            {lab.name}
-                                        </h3>
-                                        <p className="text-body text-[#EAF0BD] font-normal">
+                                        <p className="text-[11px] md:text-xs text-white/70 font-medium leading-[1.8] min-h-[160px]">
                                             {lab.description}
                                         </p>
                                     </div>
 
-                                    {/* <button className="flex items-center gap-4 group text-accent font-orbitron tracking-[0.3em] text-[10px] md:text-xs font-black transition-all duration-300 py-3 md:py-4 px-6 md:px-8 border border-accent/20 rounded-xl bg-accent/5 hover:bg-accent hover:text-black hover:border-accent">
-                                        <span>View More</span>
-                                        <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
-                                    </button> */}
                                 </div>
                             </motion.div>
                         ))}

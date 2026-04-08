@@ -288,6 +288,15 @@ body {
   color: #ffffff;
 }
 
+/* Utility to hide scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* SVG and Image structure */
 svg, img {
   display: block;

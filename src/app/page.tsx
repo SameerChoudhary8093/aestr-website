@@ -22,21 +22,21 @@ export default function Home() {
     <main className="relative">
       <StickyAdmissionsBar />
       <Hero />
-      <FrontierHub />
       <AboutTopOnePercent />
-      <CourseraPartnership />
-      <AboutPointOne />
-      <AboutPointTwo />
-      <FoundingTeamVideo />
+      <FrontierHub />
+      {/* <AboutPointOne /> */}
+      {/* <AboutPointTwo /> */}
+      {/* <FoundingTeamVideo /> */}
       <ProgramPartners />
       <AboutPointThree />
       <CareerCarousel />
       <AboutPointFour />
       <AboutPointFive />
-      <FutureFaculty />
+      {/* <FutureFaculty /> */}
       <Pathways />
       <PlacementPartners />
       <ExecutionTeam />
+      <CourseraPartnership />
     </main>
   );
 }
