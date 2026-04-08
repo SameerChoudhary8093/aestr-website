@@ -63,14 +63,13 @@ export default function TracksSection() {
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {minorTracks.map((track) => (
               <Link href={`/curriculum/tracks/${track.id}`} key={track.id} className="bg-black/90 backdrop-blur group block p-5 transition-all duration-300 hover:border-yellow-400/60 hover:shadow-2xl hover:shadow-black/30 hover:scale-105 hover:-translate-y-1 rounded-xl border border-white/20 transform-gpu">
-                <div className="flex items-start justify-between gap-4">
-                  <div className="space-y-2 flex-1">
+                <div className="flex h-full flex-col gap-4">
+                  <div className="space-y-2">
                     <h4 className="text-lg font-orbitron font-bold text-[#EAF0BD]">{track.title}</h4>
                     <p className="text-sm leading-relaxed text-white/80">{track.description}</p>
                   </div>
-                  <div className="flex flex-col items-end gap-2">
-                    <ArrowRight className="h-4 w-4 shrink-0 text-[#EAF0BD]" />
-                    <span className="text-xs text-[#EAF0BD] font-medium whitespace-nowrap">View pathway</span>
+                  <div className="mt-auto inline-flex items-center gap-2 text-sm font-orbitron uppercase tracking-[0.14em] text-[#EAF0BD] font-semibold">
+                    View pathway <ArrowRight className="h-4 w-4" />
                   </div>
                 </div>
               </Link>
