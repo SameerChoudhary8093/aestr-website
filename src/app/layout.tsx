@@ -1,12 +1,11 @@
-
-import { Analytics } from "@vercel/analytics/next"import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Orbitron, Outfit, Playfair_Display } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NetworkBackground from "@/components/NetworkBackground";
 import SmoothScroll from "@/components/SmoothScroll";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
-
 
 
 const orbitron = Orbitron({
@@ -48,14 +47,8 @@ export default function RootLayout({
           {children}
           <Footer />
         </SmoothScroll>
-        export default function RootLayout({children}) {
-  return (
-        <html lang="en">
-          <body>
-            {children}
-          </body>
-
-        </html>
-        );
+        <Analytics />
+      </body>
+    </html>
+  );
 }
-
