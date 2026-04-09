@@ -5,7 +5,7 @@ export default function TechnicalTrainingPage() {
     return (
         <main className="min-h-screen bg-black relative flex flex-col font-sans selection:bg-accent selection:text-black">
             <Navbar />
-            
+
             {/* Header Section (Black) */}
             <section className="pt-40 lg:pt-52 pb-24 px-6 md:px-12 lg:px-24 bg-black">
                 <div className="max-w-[1400px] mx-auto w-full">
@@ -63,7 +63,7 @@ export default function TechnicalTrainingPage() {
                     <h2 className="font-orbitron font-black text-3xl lg:text-5xl uppercase tracking-widest mb-16 border-b-4 border-black pb-6">
                         3. Salesforce Administration
                     </h2>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                         {[
                             { title: "3.1 Data Modeling", text: "Apps, Tabs, Objects, Fields, Page Layouts, Record Types", icons: ["Apps", "Tabs", "Objects", "Fields"] },
@@ -185,7 +185,7 @@ export default function TechnicalTrainingPage() {
                                     "Solid foundation for real-world implementations"
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex gap-6 border-b border-white/10 pb-4 group">
-                                        <span className="text-accent font-black text-2xl group-hover:translate-x-2 transition-transform italic">#0{idx+1}</span>
+                                        <span className="text-accent font-black text-2xl group-hover:translate-x-2 transition-transform italic">#0{idx + 1}</span>
                                         <p className="text-white font-bold text-sm md:text-base uppercase leading-tight mt-1">{item}</p>
                                     </div>
                                 ))}
@@ -207,9 +207,7 @@ export default function TechnicalTrainingPage() {
                 </div>
             </section>
 
-            <footer className="bg-black py-12 text-center border-t border-white/10">
-                <p className="text-white/30 font-orbitron text-[10px] tracking-widest uppercase">© 2026 Skill Horizon / Salesforce Cohort Report</p>
-            </footer>
+
         </main>
     );
 }

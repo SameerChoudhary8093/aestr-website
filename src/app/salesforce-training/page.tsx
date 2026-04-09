@@ -116,10 +116,10 @@ export default function SalesforceTrainingPage() {
                         {/* Bottom Two Images */}
                         <div className="grid grid-cols-2 gap-4">
                             <div className="w-full aspect-[4/3] bg-white/10 rounded-md relative overflow-hidden hidden lg:flex items-center justify-center shadow-md group">
-                                <img src="/saleforce-training/Image-22.jpeg" alt="Classroom Presentation" className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
+                                <img src="/saleforce-training/image-22.jpeg" alt="Classroom Presentation" className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
                             </div>
                             <div className="w-full aspect-[4/3] bg-white/10 rounded-md relative overflow-hidden flex items-center justify-center shadow-md group">
-                                <img src="/saleforce-training/Image-24.jpeg" alt="Student Group Photo" className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
+                                <img src="/saleforce-training/image-24.jpeg" alt="Student Group Photo" className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
                             </div>
                         </div>
                     </div>

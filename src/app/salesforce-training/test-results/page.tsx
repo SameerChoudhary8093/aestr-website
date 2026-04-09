@@ -5,7 +5,7 @@ export default function TestResultsPage() {
     return (
         <main className="min-h-screen bg-black relative flex flex-col font-sans selection:bg-accent selection:text-black">
             <Navbar />
-            
+
             {/* Header Section (Black) */}
             <section className="pt-40 lg:pt-52 pb-24 px-6 md:px-12 lg:px-24 bg-black">
                 <div className="max-w-[1400px] mx-auto w-full">
@@ -53,7 +53,7 @@ export default function TestResultsPage() {
             <section className="bg-purple text-white py-24 px-6 md:px-12 lg:px-24">
                 <div className="max-w-[1200px] mx-auto w-full">
                     <h2 className="font-orbitron font-black text-3xl lg:text-5xl uppercase tracking-widest mb-16 text-center text-accent">Performance Metrics</h2>
-                    
+
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                         <div className="bg-black/30 border-t-8 border-accent p-12 flex flex-col justify-center">
                             <p className="text-accent font-orbitron font-bold text-xs uppercase tracking-[0.3em] mb-4">Batch Average</p>
@@ -62,7 +62,7 @@ export default function TestResultsPage() {
                                 <div className="absolute top-0 left-0 h-full bg-accent" style={{ width: '87.21%' }}></div>
                             </div>
                         </div>
-                        
+
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 leading-none">
                             <div className="bg-black/40 border border-white/10 p-8 flex flex-col items-center justify-center text-center">
                                 <p className="text-accent font-black text-5xl mb-2">98.0%</p>
@@ -119,9 +119,9 @@ export default function TestResultsPage() {
                         <div className="relative z-10">
                             <h2 className="font-orbitron font-black text-4xl lg:text-6xl uppercase tracking-tighter mb-10 text-accent italic">The Benchmark</h2>
                             <p className="text-white font-bold text-lg md:text-xl leading-relaxed mb-12 uppercase tracking-wide opacity-90">
-                                The test results indicate that the training program has successfully built a solid foundation in Salesforce fundamentals among the participants. 
+                                The test results indicate that the training program has successfully built a solid foundation in Salesforce fundamentals among the participants.
                             </p>
-                            
+
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-white/10 pt-12">
                                 <div>
                                     <h4 className="text-accent font-orbitron font-black text-sm uppercase tracking-widest mb-4">Core Strengths</h4>
@@ -148,9 +148,7 @@ export default function TestResultsPage() {
                 </div>
             </section>
 
-            <footer className="bg-black py-12 text-center border-t border-white/10">
-                <p className="text-white/30 font-orbitron text-[10px] tracking-widest uppercase">© 2026 Skill Horizon / Final Batch Assessment</p>
-            </footer>
+
         </main>
     );
 }

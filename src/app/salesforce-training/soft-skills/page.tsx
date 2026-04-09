@@ -5,7 +5,7 @@ export default function SoftSkillsPage() {
     return (
         <main className="min-h-screen bg-black relative flex flex-col font-sans selection:bg-accent selection:text-black">
             <Navbar />
-            
+
             {/* Header Section (Black) */}
             <section className="pt-40 lg:pt-52 pb-24 px-6 md:px-12 lg:px-24 bg-black">
                 <div className="max-w-[1400px] mx-auto w-full">
@@ -62,7 +62,7 @@ export default function SoftSkillsPage() {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 gap-8">
                         {[
                             { title: "Foundation", desc: "Mastering the Process & Types of Communication; Effective Articulation and Active Listening." },
@@ -104,7 +104,7 @@ export default function SoftSkillsPage() {
             <section className="bg-purple text-white py-24 px-6 md:px-12 lg:px-24">
                 <div className="max-w-[1200px] mx-auto w-full">
                     <h2 className="font-orbitron font-black text-3xl lg:text-4xl uppercase tracking-widest mb-12 drop-shadow-md">3. Student Improvements</h2>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
                         {[
                             { label: "Structured Narrative", text: "Students transitioned from rambling answers to concise, STAR-based responses." },
@@ -137,7 +137,7 @@ export default function SoftSkillsPage() {
                     <p className="text-black font-black text-xl md:text-2xl uppercase tracking-widest leading-none mb-12">
                         The program successfully prepared a cohort of students who are now <span className="bg-black text-accent px-4 py-1 inline-block rotate-1">"Industry Ready"</span>
                     </p>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {[
                             { val: "95%", lab: "Pitch Success" },
@@ -153,9 +153,7 @@ export default function SoftSkillsPage() {
                 </div>
             </section>
 
-            <footer className="bg-black py-12 text-center border-t border-white/10">
-                <p className="text-white/30 font-orbitron text-[10px] tracking-widest uppercase">© 2026 Skill Horizon / Soft Skills Portfolio</p>
-            </footer>
+
         </main>
     );
 }

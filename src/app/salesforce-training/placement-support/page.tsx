@@ -5,7 +5,7 @@ export default function PlacementSupportPage() {
     return (
         <main className="min-h-screen bg-black relative flex flex-col font-sans selection:bg-accent selection:text-black">
             <Navbar />
-            
+
             {/* Header Section (Black) */}
             <section className="pt-40 lg:pt-52 pb-24 px-6 md:px-12 lg:px-24 bg-black">
                 <div className="max-w-[1400px] mx-auto w-full">
@@ -43,41 +43,41 @@ export default function PlacementSupportPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
                         {[
-                            { 
-                                name: "Softshala, Jaipur", 
-                                logo: "/saleforce-training/softshalaBlackLogo.png", 
+                            {
+                                name: "Softshala, Jaipur",
+                                logo: "/saleforce-training/softshalaBlackLogo.png",
                                 stats: ["Students Applied: 15", "Shortlisted: 11", "Selections: Pending"],
                                 color: "bg-white",
                                 invert: false
                             },
-                            { 
-                                name: "FEXLE Services, Jaipur", 
-                                logo: "/saleforce-training/fexle-services.webp", 
+                            {
+                                name: "FEXLE Services, Jaipur",
+                                logo: "/saleforce-training/fexle-services.webp",
                                 stats: ["Applied: 10", "F2F Interview: 05", "Selections: 02"],
                                 color: "bg-white",
                                 invert: false
                             },
-                            { 
-                                name: "UntangleIT, Noida", 
-                                logo: "/saleforce-training/untangleit-logo.png", 
+                            {
+                                name: "UntangleIT, Noida",
+                                logo: "/saleforce-training/untangleit-logo.png",
                                 stats: ["Applied: 08", "Shortlisted: 01", "Final Result: Nil"],
                                 color: "bg-white",
                                 invert: false
                             },
-                            { 
-                                name: "Binario Software, Jaipur", 
-                                logo: "/saleforce-training/Binario-Logo.webp", 
+                            {
+                                name: "Binario Software, Jaipur",
+                                logo: "/saleforce-training/Binario-Logo.webp",
                                 stats: ["Applied: 04", "Shortlisted: 04", "Cleared VA: 00"],
                                 color: "bg-white",
                                 invert: false
                             }
                         ].map((partner, i) => (
-                            <div key={i} className="bg-black/40 border border-white/10 p-8 flex flex-col items-center hover:bg-black/60 transition-all rounded-3xl">
-                                <div className={`${partner.color} p-6 rounded-2xl w-48 aspect-video flex items-center justify-center mb-8 border-4 border-accent`}>
-                                    <img src={partner.logo} alt={partner.name} className={`w-full h-full object-contain ${partner.invert ? 'invert' : ''}`} />
+                            <div key={i} className="bg-black/40 border border-white/10 p-8 flex flex-col items-center hover:bg-black/60 transition-all rounded-3xl h-full">
+                                <div className={`${partner.color} p-4 rounded-2xl w-full max-w-[220px] aspect-video flex items-center justify-center mb-8 border-4 border-accent relative overflow-hidden`}>
+                                    <img src={partner.logo} alt={partner.name} className={`w-full h-full object-contain ${partner.invert ? 'invert' : ''} p-2`} />
                                 </div>
-                                <h3 className="font-orbitron font-black text-lg text-white mb-6 uppercase tracking-widest text-center">{partner.name}</h3>
-                                <div className="w-full space-y-3">
+                                <h3 className="font-orbitron font-black text-lg text-white mb-6 uppercase tracking-widest text-center min-h-[3.5rem] flex items-center justify-center">{partner.name}</h3>
+                                <div className="w-full space-y-3 mt-auto">
                                     {partner.stats.map((stat, j) => (
                                         <div key={j} className="flex justify-between border-b border-white/5 pb-2">
                                             <span className="text-[10px] uppercase font-black tracking-widest text-white/40">{stat.split(': ')[0]}</span>
@@ -135,7 +135,7 @@ export default function PlacementSupportPage() {
                             <div className="w-full lg:w-2/3">
                                 <h2 className="font-orbitron font-black text-4xl lg:text-5xl uppercase tracking-tighter mb-8 text-accent">Conclusion</h2>
                                 <p className="text-white/80 font-bold text-lg leading-relaxed uppercase mb-10">
-                                    The placement initiatives conducted by Skill Horizon provided students with valuable opportunities to participate in recruitment drives with multiple organizations.
+                                    The placement initiatives conducted by SGVU provided students with valuable opportunities to participate in recruitment drives with multiple organizations.
                                 </p>
                                 <ul className="space-y-6">
                                     {["Multiple Drives Organized", "Real-time Hiring Exposure", "Industry-Oriented Preparation"].map((item, i) => (
@@ -161,9 +161,7 @@ export default function PlacementSupportPage() {
                 </div>
             </section>
 
-            <footer className="bg-black py-12 text-center border-t border-white/10">
-                <p className="text-white/30 font-orbitron text-[10px] tracking-widest uppercase">© 2026 Skill Horizon / Placement Report</p>
-            </footer>
+
         </main>
     );
 }
