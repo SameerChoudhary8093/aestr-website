@@ -3,194 +3,213 @@ import Navbar from '@/components/Navbar';
 
 export default function TechnicalTrainingPage() {
     return (
-        <main className="min-h-screen bg-black relative flex flex-col font-sans selection:bg-accent selection:text-black pb-24">
+        <main className="min-h-screen bg-black relative flex flex-col font-sans selection:bg-accent selection:text-black">
             <Navbar />
             
-            {/* Header Section */}
-            <section className="pt-40 lg:pt-52 pb-24 px-6 md:px-12 lg:px-24">
-                <div className="max-w-[1000px] mx-auto w-full">
+            {/* Header Section (Black) */}
+            <section className="pt-40 lg:pt-52 pb-24 px-6 md:px-12 lg:px-24 bg-black">
+                <div className="max-w-[1400px] mx-auto w-full">
                     <p className="text-accent font-orbitron text-[10px] font-bold tracking-[0.3em] uppercase mb-4 sm:mb-6">Section 1</p>
-                    <h1 className="font-orbitron font-black text-4xl sm:text-6xl lg:text-7xl xl:text-[90px] leading-[0.95] capitalize tracking-[-0.02em] flex flex-col gap-1 lg:gap-2 mb-16">
+                    <h1 className="font-orbitron font-black text-4xl sm:text-6xl lg:text-7xl xl:text-[90px] leading-[0.95] capitalize tracking-[-0.02em] flex flex-col gap-1 lg:gap-2">
                         <span className="text-white">Technical</span>
                         <span className="text-accent drop-shadow-[0_0_20px_rgba(216,246,2,0.3)]">Training</span>
                     </h1>
+                </div>
+            </section>
 
-                    <div className="space-y-16">
-                        
-                        {/* 1. Introduction */}
-                        <div className="bg-[#111] border border-white/10 p-8 md:p-12">
-                            <h2 className="font-orbitron font-black text-2xl lg:text-3xl uppercase tracking-widest text-white mb-6">1. Introduction</h2>
-                            <p className="text-white/70 text-sm md:text-base leading-relaxed">
+            {/* 1. Introduction (Neon) */}
+            <section className="bg-accent text-black py-24 px-6 md:px-12 lg:px-24">
+                <div className="max-w-[1200px] mx-auto w-full">
+                    <div className="flex flex-col lg:flex-row gap-12 items-center">
+                        <div className="w-full lg:w-3/5">
+                            <h2 className="font-orbitron font-black text-3xl lg:text-4xl uppercase tracking-widest mb-6 border-b-2 border-black pb-4 inline-block">1. Introduction</h2>
+                            <p className="text-black/80 font-semibold text-sm md:text-base leading-relaxed">
                                 This report summarizes the topics covered during the Salesforce training program conducted for freshers. The training was designed to provide a strong foundation in both Salesforce Administration and Salesforce Development, enabling participants to understand platform capabilities, configure business processes, and build custom solutions.
                             </p>
                         </div>
+                        <div className="w-full lg:w-2/5 aspect-[4/3] rounded-2xl overflow-hidden border-4 border-black shadow-[10px_10px_0px_#000]">
+                            <img src="/saleforce-training/image-31.jpeg" alt="Training Introduction" className="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                        {/* 2. Training Objective */}
-                        <div className="bg-purple border-l-4 border-accent p-8 md:p-12">
-                            <h2 className="font-orbitron font-black text-2xl lg:text-3xl uppercase tracking-widest text-white mb-6 drop-shadow-md">2. Training Objective</h2>
-                            <p className="text-white/80 text-sm md:text-base leading-relaxed mb-6">The primary objectives of this training were:</p>
-                            <ul className="space-y-4">
+            {/* 2. Training Objective (Purple) */}
+            <section className="bg-purple text-white py-24 px-6 md:px-12 lg:px-24">
+                <div className="max-w-[1200px] mx-auto w-full">
+                    <div className="border border-white/20 p-8 md:p-12 bg-black/20 backdrop-blur-sm">
+                        <h2 className="font-orbitron font-black text-3xl lg:text-4xl uppercase tracking-widest mb-8 drop-shadow-md">2. Training Objective</h2>
+                        <p className="text-white/80 text-sm md:text-base leading-relaxed mb-8">The primary objectives of this training were:</p>
+                        <ul className="space-y-6">
+                            {[
+                                "To introduce core Salesforce platform concepts",
+                                "To build hands-on skills in configuration and customization",
+                                "To provide foundational knowledge of Apex and Lightning Web Components",
+                                "To prepare participants for real-world project scenarios"
+                            ].map((item, idx) => (
+                                <li key={idx} className="flex gap-5 items-start">
+                                    <span className="text-accent font-orbitron font-black text-xl">→</span>
+                                    <span className="text-white font-black uppercase text-xs md:text-sm tracking-widest">{item}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            {/* 3. Salesforce Administration Topics (Neon) */}
+            <section className="bg-accent text-black py-24 px-6 md:px-12 lg:px-24">
+                <div className="max-w-[1200px] mx-auto w-full">
+                    <h2 className="font-orbitron font-black text-3xl lg:text-5xl uppercase tracking-widest mb-16 border-b-4 border-black pb-6">
+                        3. Salesforce Administration
+                    </h2>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        {[
+                            { title: "3.1 Data Modeling", text: "Apps, Tabs, Objects, Fields, Page Layouts, Record Types", icons: ["Apps", "Tabs", "Objects", "Fields"] },
+                            { title: "3.2 Data Security", text: "Comprehensive coverage of Org, Object, Field, and Record-Level security.", icons: ["OWD", "Sharing", "Profiles", "Roles"] },
+                            { title: "3.3 Data Analytics", text: "Tabular, Summary, Matrix, and Joined reports along with visual Dashboards.", icons: ["Reports", "Dashboards"] },
+                            { title: "3.4 Admin Features", text: "Validation Rules, Formula Fields, List Views, Activities, and Duplicate Rules.", icons: ["Logic", "Rules"] }
+                        ].map((box, i) => (
+                            <div key={i} className="border-2 border-black p-8 bg-white/5 shadow-[8px_8px_0px_#000]">
+                                <h3 className="font-orbitron font-black text-xl mb-4">{box.title}</h3>
+                                <p className="text-black/70 text-sm font-bold leading-relaxed mb-6">{box.text}</p>
+                                <div className="flex flex-wrap gap-2">
+                                    {box.icons.map((tag, j) => (
+                                        <span key={j} className="bg-black text-accent px-3 py-1 text-[10px] font-black uppercase tracking-tighter">{tag}</span>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="mt-16 bg-black text-accent p-10 border-4 border-black shadow-[12px_12px_0px_rgba(0,0,0,0.2)]">
+                        <h3 className="font-orbitron font-black text-2xl mb-4">3.5 Automation Using Flows</h3>
+                        <p className="text-accent/70 text-sm leading-relaxed mb-8 font-bold">
+                            Advanced declarative automation including Record-Triggered, Screen, and Scheduled Flows.
+                        </p>
+                        <div className="flex flex-wrap gap-4">
+                            {["Record-Triggered", "Screen", "Scheduled"].map((flow, i) => (
+                                <span key={i} className="bg-accent text-black px-5 py-2 text-xs uppercase tracking-[0.2em] font-black border-2 border-accent">
+                                    {flow}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 4. Salesforce Development Topics (Purple) */}
+            <section className="bg-purple text-white py-24 px-6 md:px-12 lg:px-24">
+                <div className="max-w-[1200px] mx-auto w-full">
+                    <h2 className="font-orbitron font-black text-3xl lg:text-5xl uppercase tracking-widest mb-16 text-center border-accent border-b-2 pb-6 inline-block w-full">
+                        4. Salesforce Development
+                    </h2>
+
+                    {/* Mid-Curriculum Banner */}
+                    <div className="mb-16 w-full h-[400px] rounded-2xl overflow-hidden border-4 border-accent relative group">
+                        <img src="/saleforce-training/image-21.jpeg" alt="Technical Workshop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                        <div className="absolute inset-x-0 bottom-0 bg-black/80 p-8 border-t-2 border-accent">
+                            <p className="text-accent font-orbitron font-black text-xs uppercase tracking-[0.3em]">Module 04 TRANSITION</p>
+                            <h3 className="text-white font-orbitron font-black text-2xl uppercase tracking-widest">Configuration to Development</h3>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div className="bg-black/30 border-t-4 border-accent p-8">
+                            <h3 className="font-orbitron font-black text-2xl text-accent mb-8 uppercase tracking-widest">Core Apex</h3>
+                            <div className="space-y-6">
+                                {["Apex Basics", "Triggers", "Asynchronous Apex", "Test Classes"].map((item, idx) => (
+                                    <div key={idx} className="flex items-center gap-4 group">
+                                        <div className="w-10 h-1 bg-accent group-hover:w-16 transition-all duration-300"></div>
+                                        <span className="text-white font-black text-sm md:text-base uppercase tracking-widest">{item}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="bg-black/30 border-t-4 border-accent p-8">
+                            <h3 className="font-orbitron font-black text-2xl text-accent mb-8 uppercase tracking-widest">LWC (Components)</h3>
+                            <ul className="grid grid-cols-1 gap-4">
                                 {[
-                                    "To introduce core Salesforce platform concepts",
-                                    "To build hands-on skills in configuration and customization",
-                                    "To provide foundational knowledge of Apex and Lightning Web Components",
-                                    "To prepare participants for real-world project scenarios"
+                                    "Component Basics & Event Handling",
+                                    "Reactivity & Rendering",
+                                    "Lightning Data Service (LDS)",
+                                    "Apex Integration & CRUD",
+                                    "Advanced Lifecycle Hooks"
                                 ].map((item, idx) => (
-                                    <li key={idx} className="flex gap-4 items-start">
-                                        <span className="text-accent font-orbitron font-black mt-1">→</span>
-                                        <span className="text-white font-medium text-sm md:text-base">{item}</span>
+                                    <li key={idx} className="flex gap-4 items-center">
+                                        <span className="text-accent font-black text-xs">[0{idx + 1}]</span>
+                                        <span className="text-white/80 font-bold text-xs uppercase tracking-widest">{item}</span>
                                     </li>
                                 ))}
                             </ul>
                         </div>
-
-                        {/* 3. Salesforce Administration Topics Covered */}
-                        <div>
-                            <h2 className="font-orbitron font-black text-3xl lg:text-4xl uppercase tracking-widest text-accent mb-10 pb-4 border-b border-white/20">
-                                3. Salesforce Administration Topics Covered
-                            </h2>
-                            
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 pl-0 md:pl-6">
-                                
-                                <div className="space-y-4">
-                                    <h3 className="font-orbitron font-black text-xl text-white tracking-widest">3.1 Data Modeling</h3>
-                                    <p className="text-white/60 text-xs uppercase tracking-wider mb-4 border-b border-white/10 pb-4">Participants were introduced to the core building blocks of Salesforce data architecture:</p>
-                                    <div className="flex flex-wrap gap-2 pt-2">
-                                        {["Applications (Apps)", "Tabs", "Objects", "Fields", "Page Layouts", "Lightning Pages", "Record Types"].map((pill, i) => (
-                                            <span key={i} className="bg-white/5 border border-white/10 text-white/80 px-3 py-1.5 text-[10px] uppercase tracking-widest font-bold">
-                                                {pill}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
-
-                                <div className="space-y-4">
-                                    <h3 className="font-orbitron font-black text-xl text-white tracking-widest">3.2 Data Security</h3>
-                                    <p className="text-white/60 text-xs uppercase tracking-wider mb-4 border-b border-white/10 pb-4">Comprehensive coverage of Salesforce's security model:</p>
-                                    <div className="flex flex-wrap gap-2 pt-2">
-                                        {["Organization-Level Security", "Object-Level Security", "Field-Level Security", "Record-Level Security"].map((pill, i) => (
-                                            <span key={i} className="bg-white/5 border border-white/10 text-white/80 px-3 py-1.5 text-[10px] uppercase tracking-widest font-bold">
-                                                {pill}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
-
-                                <div className="space-y-4">
-                                    <h3 className="font-orbitron font-black text-xl text-white tracking-widest">3.3 Data Analytics</h3>
-                                    <p className="text-white/60 text-xs uppercase tracking-wider mb-4 border-b border-white/10 pb-4">Participants learned how to analyze and visualize data:</p>
-                                    <ul className="space-y-3">
-                                        <li className="flex gap-3 text-sm text-white/80"><span className="text-accent px-2 bg-accent/10 font-bold border border-accent/20">Reports</span> Tabular, Summary, Matrix, Joined reports</li>
-                                        <li className="flex gap-3 text-sm text-white/80"><span className="text-accent px-2 bg-accent/10 font-bold border border-accent/20">Dashboards</span> Visual representation of reports, Components like charts, metrics, and tables</li>
-                                    </ul>
-                                </div>
-
-                                <div className="space-y-4">
-                                    <h3 className="font-orbitron font-black text-xl text-white tracking-widest">3.4 Admin Features</h3>
-                                    <p className="text-white/60 text-xs uppercase tracking-wider mb-4 border-b border-white/10 pb-4">Key features:</p>
-                                    <div className="flex flex-wrap gap-2 pt-2">
-                                        {["Validation Rules", "Formula Fields", "List Views", "Feed Tracking", "Field History Tracking", "Duplicate and Matching Rule", "Activities"].map((pill, i) => (
-                                            <span key={i} className="bg-white/5 border border-white/10 text-white/80 px-3 py-1.5 text-[10px] uppercase tracking-widest font-bold">
-                                                {pill}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div className="mt-12 bg-[#181818] p-8 md:p-10 border border-white/10">
-                                <h3 className="font-orbitron font-black text-xl text-white tracking-widest mb-4">3.5 Automation Using Flows</h3>
-                                <p className="text-white/70 text-sm leading-relaxed mb-6">
-                                    Participants were introduced to Salesforce Flow, a powerful declarative automation tool used to streamline business processes without writing code. The following types of flows were covered:
-                                </p>
-                                <div className="flex flex-wrap gap-4">
-                                    {["Record-Triggered Flows", "Screen Flows", "Scheduled Flows"].map((flow, i) => (
-                                        <span key={i} className="bg-accent text-black px-4 py-2 text-xs uppercase tracking-widest font-black shadow-[4px_4px_0_#fff]">
-                                            {flow}
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* 4. Salesforce Development Topics Covered */}
-                        <div>
-                            <h2 className="font-orbitron font-black text-3xl lg:text-4xl uppercase tracking-widest text-accent mb-10 pb-4 border-b border-white/20">
-                                4. Salesforce Development Topics Covered
-                            </h2>
-
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 pl-0 md:pl-6">
-                                <div className="bg-white/5 border border-white/10 p-6 md:p-8">
-                                    <h3 className="font-orbitron font-black text-lg text-white tracking-widest mb-6">Core Apex</h3>
-                                    <ul className="space-y-4">
-                                        {["Apex Basics", "Triggers", "Asynchronous Apex", "Test Classes"].map((item, idx) => (
-                                            <li key={idx} className="flex gap-4 items-center">
-                                                <div className="w-2 h-2 bg-accent rounded-full shadow-[0_0_8px_rgba(216,246,2,0.8)]"></div>
-                                                <span className="text-white/80 font-medium text-sm md:text-base uppercase tracking-wider">{item}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-
-                                <div className="bg-white/5 border border-white/10 p-6 md:p-8">
-                                    <h3 className="font-orbitron font-black text-lg text-white tracking-widest mb-6 flex flex-col">
-                                        <span>Lightning Web</span>
-                                        <span className="text-accent text-xs mt-1">Components (LWC)</span>
-                                    </h3>
-                                    <ul className="space-y-3">
-                                        {[
-                                            "Component Basics and Event Handling",
-                                            "Interactive Components and Business Logic",
-                                            "Reactivity and Rendering",
-                                            "Component Communication",
-                                            "Lightning Data Service (LDS)",
-                                            "CRUD Operations and Apex Integration",
-                                            "UI Design and Data Presentation",
-                                            "Lifecycle Hooks and Advanced Features",
-                                            "Practice, Debugging, and Doubt Resolution"
-                                        ].map((item, idx) => (
-                                            <li key={idx} className="flex gap-3 items-start">
-                                                <span className="text-white/30 text-[10px] font-orbitron mt-1">{(idx + 1).toString().padStart(2, '0')}</span>
-                                                <span className="text-white/70 font-medium text-xs md:text-sm">{item}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* 5. Key Learning Outcomes & Conclusion */}
-                        <div className="bg-accent text-black p-8 md:p-12 relative overflow-hidden">
-                            <div className="relative z-10">
-                                <h2 className="font-orbitron font-black text-2xl lg:text-3xl uppercase tracking-widest mb-8">5. Key Learning Outcomes</h2>
-                                <ul className="space-y-5 mb-12 border-l-4 border-black pl-6">
-                                    {[
-                                        "Understand Salesforce data architecture and security model",
-                                        "Configure applications and automate business processes",
-                                        "Create reports and dashboards for data insights",
-                                        "Write basic Apex code and triggers",
-                                        "Develop interactive UI using Lightning Web Components",
-                                        "Understand best practices for scalable and secure development"
-                                    ].map((item, idx) => (
-                                        <li key={idx} className="flex gap-4 items-start">
-                                            <span className="font-black text-xs md:text-sm uppercase tracking-wider text-black w-full">{item}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-
-                                <div className="pt-8 border-t-[3px] border-black border-dashed">
-                                    <h2 className="font-orbitron font-black text-2xl lg:text-3xl uppercase tracking-widest mb-6">Conclusion</h2>
-                                    <p className="text-black font-semibold text-sm md:text-base leading-relaxed max-w-3xl">
-                                        The training successfully covered essential Salesforce Administration and Development concepts required for beginners. Participants now have a solid foundation to work on real-world Salesforce implementations and further enhance their expertise in advanced topics.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </section>
+
+            {/* Training Glimpse (Neon) */}
+            <section className="bg-accent text-black py-24 px-6 md:px-12 lg:px-24">
+                <div className="max-w-[1200px] mx-auto w-full">
+                    <div className="flex items-center gap-4 mb-16">
+                        <h2 className="font-orbitron font-black text-3xl lg:text-5xl uppercase tracking-widest">Training Glimpse</h2>
+                        <div className="flex-grow h-2 bg-black"></div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {[
+                            { src: "image-34.jpeg", alt: "Lab session 1" },
+                            { src: "image-33.jpeg", alt: "Coding lab 2" },
+                            { src: "image-25.jpeg", alt: "Workshop 3" }
+                        ].map((img, i) => (
+                            <div key={i} className="aspect-[4/3] bg-black border-4 border-black rounded-2xl overflow-hidden group shadow-[15px_15px_0px_#000]">
+                                <img src={`/saleforce-training/${img.src}`} alt={img.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 hover:rotate-2" />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* 5. Key Learning Outcomes & Conclusion (Purple) */}
+            <section className="bg-purple text-white py-24 px-6 md:px-12 lg:px-24">
+                <div className="max-w-[1200px] mx-auto w-full">
+                    <div className="flex flex-col lg:flex-row gap-16 items-start mb-20">
+                        <div className="w-full lg:w-1/2">
+                            <h2 className="font-orbitron font-black text-3xl lg:text-4xl uppercase tracking-widest mb-10 text-accent">5. Key Learning Outcomes</h2>
+                            <div className="space-y-6">
+                                {[
+                                    "Full comprehension of Salesforce Data & Security",
+                                    "Automation Mastery using Screen & Record Flows",
+                                    "Robust APEX coding and Trigger implementations",
+                                    "Advanced UI development with LWC",
+                                    "Solid foundation for real-world implementations"
+                                ].map((item, idx) => (
+                                    <div key={idx} className="flex gap-6 border-b border-white/10 pb-4 group">
+                                        <span className="text-accent font-black text-2xl group-hover:translate-x-2 transition-transform italic">#0{idx+1}</span>
+                                        <p className="text-white font-bold text-sm md:text-base uppercase leading-tight mt-1">{item}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="w-full lg:w-1/2 aspect-square rounded-3xl overflow-hidden border-8 border-accent shadow-[20px_20px_0px_rgba(216,246,2,0.1)]">
+                            <img src="/saleforce-training/image-25.jpeg" alt="Outcomes Visual" className="w-full h-full object-cover" />
+                        </div>
+                    </div>
+
+                    <div className="pt-16 border-t-[8px] border-accent border-dotted">
+                        <div className="max-w-3xl">
+                            <h2 className="font-orbitron font-black text-4xl lg:text-5xl uppercase tracking-tighter mb-8 italic">Conclusion</h2>
+                            <p className="text-white font-semibold text-lg md:text-xl leading-relaxed">
+                                The training successfully covered essential Salesforce Administration and Development concepts. Participants now have a solid foundation to work on real-world implementations and further enhance their expertise in advanced topics.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer className="bg-black py-12 text-center border-t border-white/10">
+                <p className="text-white/30 font-orbitron text-[10px] tracking-widest uppercase">© 2026 Skill Horizon / Salesforce Cohort Report</p>
+            </footer>
         </main>
     );
 }

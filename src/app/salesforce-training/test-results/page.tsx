@@ -1,220 +1,156 @@
-"use client";
-
-import React, { useState } from 'react';
+import React from 'react';
 import Navbar from '@/components/Navbar';
 
 export default function TestResultsPage() {
-    const [showAllTrainees, setShowAllTrainees] = useState(false);
     return (
-        <main className="min-h-screen bg-black relative flex flex-col font-sans selection:bg-accent selection:text-black pb-24">
+        <main className="min-h-screen bg-black relative flex flex-col font-sans selection:bg-accent selection:text-black">
             <Navbar />
             
-            {/* Header Section */}
-            <section className="pt-40 lg:pt-52 pb-24 px-6 md:px-12 lg:px-24">
+            {/* Header Section (Black) */}
+            <section className="pt-40 lg:pt-52 pb-24 px-6 md:px-12 lg:px-24 bg-black">
                 <div className="max-w-[1400px] mx-auto w-full">
                     <p className="text-accent font-orbitron text-[10px] font-bold tracking-[0.3em] uppercase mb-4 sm:mb-6">Section 4</p>
-                    <h1 className="font-orbitron font-black text-4xl sm:text-6xl lg:text-7xl xl:text-[90px] leading-[0.95] capitalize tracking-[-0.02em] flex flex-col gap-1 lg:gap-2 mb-16">
-                        <span className="text-white">Test Result</span>
-                        <span className="text-accent drop-shadow-[0_0_20px_rgba(216,246,2,0.3)]">Summary</span>
-                    </h1>
-
-                    <div className="space-y-16">
-                        
-                        {/* Intro grid: Coverage & Insights & Stats */}
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 pl-0">
-                            
-                            <div className="space-y-8">
-                                {/* Test Coverage */}
-                                <div className="bg-[#111] border border-white/10 p-8">
-                                    <h2 className="font-orbitron font-black text-xl lg:text-2xl uppercase tracking-widest text-white mb-6">Test Coverage</h2>
-                                    <ul className="text-white/70 text-sm leading-relaxed space-y-3">
-                                        <li><span className="text-accent font-black mr-2">/</span> Salesforce Administration (Data Modeling, Security, Automation)</li>
-                                        <li><span className="text-accent font-black mr-2">/</span> Apex Programming Fundamentals</li>
-                                        <li><span className="text-accent font-black mr-2">/</span> Lightning Web Components (LWC)</li>
-                                        <li><span className="text-accent font-black mr-2">/</span> Scenario-based and problem-solving questions</li>
-                                    </ul>
-                                </div>
-
-                                {/* Performance Insights */}
-                                <div className="bg-purple border-l-4 border-accent p-8">
-                                    <h2 className="font-orbitron font-black text-xl lg:text-2xl uppercase tracking-widest text-white mb-6">Performance Insights</h2>
-                                    <ul className="text-white/80 text-sm leading-relaxed space-y-4">
-                                        <li className="flex gap-3"><span className="text-accent mt-0.5">●</span> Students demonstrated strong understanding of core Salesforce Administration concepts such as data modeling, security, and automation.</li>
-                                        <li className="flex gap-3"><span className="text-accent mt-0.5">●</span> Moderate performance was observed in development areas, particularly in Apex and Lightning Web Components.</li>
-                                        <li className="flex gap-3"><span className="text-accent mt-0.5">●</span> Some students faced challenges in scenario-based questions and real-time problem-solving.</li>
-                                        <li className="flex gap-3"><span className="text-accent mt-0.5">●</span> A gap was identified in applying theoretical knowledge to practical use cases.</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            {/* Overall Performance Stats */}
-                            <div className="bg-accent text-black p-8 md:p-12 flex flex-col justify-center">
-                                <h2 className="font-orbitron font-black text-2xl lg:text-3xl uppercase tracking-widest mb-10 border-b-2 border-black pb-4">Overall Performance</h2>
-                                
-                                <div className="grid grid-cols-2 gap-x-6 gap-y-10">
-                                    <div>
-                                        <p className="text-[10px] uppercase font-bold tracking-widest text-black/60 mb-1">Enrolled</p>
-                                        <p className="font-orbitron font-black text-5xl">31</p>
-                                    </div>
-                                    <div>
-                                        <p className="text-[10px] uppercase font-bold tracking-widest text-black/60 mb-1">Appeared / Qualified</p>
-                                        <p className="font-orbitron font-black text-5xl">28</p>
-                                    </div>
-                                    <div className="col-span-2 mt-4 pt-4 border-t border-black/10">
-                                        <div className="flex flex-col md:flex-row gap-10">
-                                            <div>
-                                                <p className="text-[10px] uppercase font-bold tracking-widest text-black/60 mb-1">Average Score</p>
-                                                <div className="flex items-baseline gap-1">
-                                                    <p className="font-orbitron font-black text-7xl md:text-[80px] leading-none tracking-tighter">87.21</p>
-                                                    <span className="font-orbitron font-black text-2xl">%</span>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <p className="text-[10px] uppercase font-bold tracking-widest text-black/60 mb-1">Highest Score</p>
-                                                <div className="flex items-baseline gap-1">
-                                                    <p className="font-orbitron font-black text-4xl leading-none tracking-tighter text-black/40">98.00</p>
-                                                    <span className="font-orbitron font-black text-xl text-black/40">%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
+                    <div className="flex flex-col lg:flex-row gap-12 items-end justify-between">
+                        <h1 className="font-orbitron font-black text-4xl sm:text-6xl lg:text-7xl xl:text-[90px] leading-[0.95] capitalize tracking-[-0.02em] flex flex-col gap-1 lg:gap-2">
+                            <span className="text-white">Batch</span>
+                            <span className="text-accent drop-shadow-[0_0_20px_rgba(216,246,2,0.3)]">Performance</span>
+                        </h1>
+                        <div className="bg-white/5 border border-white/10 p-6 md:p-8 rounded-2xl backdrop-blur-sm max-w-[400px]">
+                            <p className="text-white font-bold text-sm leading-relaxed opacity-70 italic">"The true measure of a developer isn't just their logic, but their consistency."</p>
                         </div>
-
-                        {/* Detailed Table Matrix */}
-                        <div className="pt-10">
-                            <h2 className="font-orbitron font-black text-3xl lg:text-4xl uppercase tracking-widest text-accent mb-10 pb-4 border-b border-white/20">
-                                Students' One-to-One Mapping
-                            </h2>
-                            
-                            <div className="w-full border-2 border-black rounded-lg overflow-x-auto shadow-[10px_10px_0px_rgba(216,246,2,0.1)]">
-                                <div className="min-w-[1000px] bg-white">
-                                    {/* Table Header */}
-                                    <div className="grid grid-cols-12 bg-[#111] text-accent p-6 border-b border-white/10 text-[10px] md:text-[11px] font-black tracking-widest uppercase items-center">
-                                        <div className="col-span-1 border-r border-white/10">Sr.</div>
-                                        <div className="col-span-2 pl-4 border-r border-white/10">Student Name</div>
-                                        <div className="col-span-1 text-center border-r border-white/10">Marks</div>
-                                        <div className="col-span-5 pl-4 border-r border-white/10">Strengths</div>
-                                        <div className="col-span-3 pl-4">Areas of Improvement</div>
-                                    </div>
-
-                                    {/* Table Rows DYNAMIC */}
-                                    {(showAllTrainees ? [
-                                        { id: '1', name: 'Aditya Kumar Mishra', marks: '94', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers and Test Classes' },
-                                        { id: '2', name: 'ADITYA MISHRA', marks: '96', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers and Test Classes' },
-                                        { id: '3', name: 'Aditya singh', marks: '94', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers and Test Classes' },
-                                        { id: '4', name: 'Anish Ali', marks: '78', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Advanced Admin Features, Triggers, Test Classes, Advanced LWC Concepts' },
-                                        { id: '5', name: 'Ankit kumar', marks: '84', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers, Test Classes and Advanced LWC Concepts' },
-                                        { id: '6', name: 'Ashutosh Kumar jha', marks: '94', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers and Test Classes' },
-                                        { id: '7', name: 'Badre Alam', marks: '98', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers and Test Classes' },
-                                        { id: '8', name: 'Govind kumar', marks: '78', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Advanced Admin Features, Triggers, Test Classes, Advanced LWC Concepts' },
-                                        { id: '9', name: 'Jitu Kumar', marks: '94', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers and Test Classes' },
-                                        { id: '10', name: 'Ketan Bhaskar', marks: '76', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Advanced Admin Features, Triggers, Test Classes, Advanced LWC Concepts' },
-                                        { id: '11', name: 'kundan kumar tiwari', marks: '82', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers, Test Classes and Advanced LWC Concepts' },
-                                        { id: '12', name: 'Madhu kumari', marks: '96', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers and Test Classes' },
-                                        { id: '13', name: 'Md Mustufa Ansari', marks: '90', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers and Test Classes' },
-                                        { id: '14', name: 'Nikhil Kumar', marks: '86', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers, Test Classes and Advanced LWC Concepts' },
-                                        { id: '15', name: 'Nikita', marks: '94', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers and Test Classes' },
-                                        { id: '16', name: 'Preety Kumari', marks: '94', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers and Test Classes' },
-                                        { id: '17', name: 'Priyanka Kumari', marks: '78', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Advanced Admin Features, Triggers, Test Classes, Advanced LWC Concepts' },
-                                        { id: '18', name: 'Sahil Raja', marks: '82', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers, Test Classes and Advanced LWC Concepts' },
-                                        { id: '19', name: 'Samir Srinath', marks: '94', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers and Test Classes' },
-                                        { id: '20', name: 'Sanjeet Kumar', marks: '80', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers, Test Classes and Advanced LWC Concepts' },
-                                        { id: '21', name: 'Satyam kumar', marks: '82', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers, Test Classes and Advanced LWC Concepts' },
-                                        { id: '22', name: 'Shivam Kumar Singh', marks: '74', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Advanced Admin Features, Triggers, Test Classes, Advanced LWC Concepts' },
-                                        { id: '23', name: 'Shivani Sharma', marks: '88', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers, Test Classes and Advanced LWC Concepts' },
-                                        { id: '24', name: 'Sulman khan', marks: '88', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers, Test Classes and Advanced LWC Concepts' },
-                                        { id: '25', name: 'Uma Shankar Pandey', marks: '76', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Advanced Admin Features, Triggers, Test Classes, Advanced LWC Concepts' },
-                                        { id: '26', name: 'Wasim Khan', marks: '98', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers and Test Classes' },
-                                        { id: '27', name: 'Youraj Kumar', marks: '94', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers and Test Classes' },
-                                        { id: '28', name: 'yuvraj Kumar Yadav', marks: '80', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Advanced Admin Features, Triggers, Test Classes, Advanced LWC Concepts' },
-                                        { id: '29', name: 'Vikash Kumar', marks: 'N/A', s: 'Not Appeared', i: 'N/A' },
-                                        { id: '30', name: 'Shubham Kumar', marks: 'N/A', s: 'Not Appeared', i: 'N/A' },
-                                        { id: '31', name: 'Utsav Raj', marks: 'N/A', s: 'Not Appeared', i: 'N/A' }
-                                    ] : [
-                                        { id: '1', name: 'Aditya Kumar Mishra', marks: '94', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers and Test Classes' },
-                                        { id: '2', name: 'ADITYA MISHRA', marks: '96', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers and Test Classes' },
-                                        { id: '3', name: 'Aditya singh', marks: '94', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers and Test Classes' },
-                                        { id: '4', name: 'Anish Ali', marks: '78', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Advanced Admin Features, Triggers, Test Classes, Advanced LWC Concepts' },
-                                        { id: '5', name: 'Ankit kumar', marks: '84', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers, Test Classes and Advanced LWC Concepts' },
-                                        { id: '6', name: 'Ashutosh Kumar jha', marks: '94', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers and Test Classes' },
-                                        { id: '7', name: 'Badre Alam', marks: '98', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers and Test Classes' },
-                                        { id: '8', name: 'Govind kumar', marks: '78', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Advanced Admin Features, Triggers, Test Classes, Advanced LWC Concepts' },
-                                        { id: '9', name: 'Jitu Kumar', marks: '94', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers and Test Classes' },
-                                        { id: '10', name: 'Ketan Bhaskar', marks: '76', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Advanced Admin Features, Triggers, Test Classes, Advanced LWC Concepts' },
-                                        { id: '11', name: 'kundan kumar tiwari', marks: '82', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers, Test Classes and Advanced LWC Concepts' },
-                                        { id: '12', name: 'Madhu kumari', marks: '96', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers and Test Classes' },
-                                        { id: '13', name: 'Md Mustufa Ansari', marks: '90', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers and Test Classes' },
-                                        { id: '14', name: 'Nikhil Kumar', marks: '86', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers, Test Classes and Advanced LWC Concepts' },
-                                        { id: '15', name: 'Nikita', marks: '94', s: 'Admin Fundamentals, Apex Fundamentals, Asynchronous Apex, Lightning Web Components', i: 'Triggers and Test Classes' }
-                                    ]).map((student, idx) => (
-                                        <div key={idx} className="grid grid-cols-12 bg-white hover:bg-black/5 p-4 md:p-5 border-b border-black/10 transition-colors items-center text-[10px] md:text-xs font-black uppercase tracking-widest text-[#222]">
-                                            <div className="col-span-1 text-black/50 pr-4">{student.id}</div>
-                                            <div className="col-span-2 text-black pr-4">{student.name}</div>
-                                            
-                                            <div className="col-span-1 text-center font-orbitron font-black text-sm md:text-base border-x border-black/10 mx-2">
-                                                {student.marks === 'N/A' ? <span className="text-black/30">N/A</span> : student.marks}
-                                            </div>
-                                            
-                                            <div className="col-span-5 px-4">
-                                                {student.marks !== 'N/A' ? (
-                                                    <div className="flex flex-wrap gap-1.5">
-                                                        {student.s.split(', ').map((pill, pIdx) => (
-                                                            <span key={pIdx} className="bg-black text-white px-2 py-1 text-[8px] leading-tight tracking-wider">{pill}</span>
-                                                        ))}
-                                                    </div>
-                                                ) : <span className="text-black/30 bg-black/5 px-2 py-1 text-[8px]">{student.s}</span>}
-                                            </div>
-                                            
-                                            <div className="col-span-3 px-4 text-accent mix-blend-difference font-bold text-[9px] md:text-[10px] leading-relaxed">
-                                                {student.i}
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-
-                            {!showAllTrainees ? (
-                                <div className="mt-10 flex justify-center w-full">
-                                    <button onClick={() => setShowAllTrainees(true)} className="group flex items-center gap-3 text-accent font-orbitron font-black text-sm uppercase tracking-widest cursor-pointer hover:scale-105 transition-transform duration-300 outline-none">
-                                        View Full Mapping Details
-                                        <div className="w-8 h-8 rounded-full border-2 border-accent flex items-center justify-center group-hover:bg-accent group-hover:text-black transition-colors">
-                                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
-                                            </svg>
-                                        </div>
-                                    </button>
-                                </div>
-                            ) : (
-                                <div className="mt-10 flex justify-center w-full">
-                                    <button onClick={() => setShowAllTrainees(false)} className="group flex items-center gap-3 text-accent font-orbitron font-black text-sm uppercase tracking-widest cursor-pointer hover:scale-105 transition-transform duration-300 outline-none">
-                                        View Less Mapping Details
-                                        <div className="w-8 h-8 rounded-full border-2 border-accent flex items-center justify-center group-hover:bg-accent group-hover:text-black transition-colors">
-                                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 15l7-7 7 7" />
-                                            </svg>
-                                        </div>
-                                    </button>
-                                </div>
-                            )}
-                        </div>
-
-                        {/* Conclusion */}
-                        <div className="bg-[#111] border border-white/10 p-8 md:p-12">
-                            <h2 className="font-orbitron font-black text-2xl lg:text-3xl uppercase tracking-widest text-white mb-6">Conclusion</h2>
-                            <p className="text-white/70 text-sm md:text-base leading-relaxed mb-6">
-                                The test results indicate that the training program has successfully built a solid foundation in Salesforce fundamentals among the participants. At the same time, the assessment highlighted key areas for improvement, especially in advanced development and practical implementation skills.
-                            </p>
-                            <p className="text-white/70 text-sm md:text-base leading-relaxed">
-                                These insights will help in refining future training strategies, with increased focus on hands-on practice, real-time scenarios, and technical depth. Overall, the results serve as a valuable benchmark for student readiness and will support better preparation for upcoming placement opportunities.
-                            </p>
-                        </div>
-
                     </div>
                 </div>
             </section>
+
+            {/* 1. Assessment Metrics (Neon) */}
+            <section className="bg-accent text-black py-24 px-6 md:px-12 lg:px-24">
+                <div className="max-w-[1200px] mx-auto w-full">
+                    <div className="flex flex-col lg:flex-row gap-16 items-center">
+                        <div className="w-full lg:w-1/2">
+                            <h2 className="font-orbitron font-black text-3xl lg:text-4xl uppercase tracking-widest mb-6 border-b-2 border-black pb-4 inline-block">Report Introduction</h2>
+                            <p className="text-black font-semibold text-sm md:text-base leading-relaxed mb-10">
+                                This assessment was conducted to evaluate each trainee's grasp of Salesforce Administration, Development (Apex), and LWC concepts. The results reflect both theoretical knowledge and practical debugging capabilities.
+                            </p>
+                            <div className="grid grid-cols-2 gap-6">
+                                <div className="bg-black p-6 border-2 border-black">
+                                    <p className="text-accent font-black text-4xl mb-1">31/31</p>
+                                    <p className="text-white font-orbitron text-[8px] uppercase tracking-widest font-bold">Appearances</p>
+                                </div>
+                                <div className="bg-black p-6 border-2 border-black">
+                                    <p className="text-accent font-black text-4xl mb-1">100%</p>
+                                    <p className="text-white font-orbitron text-[8px] uppercase tracking-widest font-bold">Completion Rate</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="w-full lg:w-1/2 aspect-video rounded-3xl overflow-hidden border-8 border-black shadow-[20px_20px_0px_#222] group">
+                            <img src="/saleforce-training/image-8.jpg" alt="Achievement Group" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 2. Score Summary (Purple) */}
+            <section className="bg-purple text-white py-24 px-6 md:px-12 lg:px-24">
+                <div className="max-w-[1200px] mx-auto w-full">
+                    <h2 className="font-orbitron font-black text-3xl lg:text-5xl uppercase tracking-widest mb-16 text-center text-accent">Performance Metrics</h2>
+                    
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                        <div className="bg-black/30 border-t-8 border-accent p-12 flex flex-col justify-center">
+                            <p className="text-accent font-orbitron font-bold text-xs uppercase tracking-[0.3em] mb-4">Batch Average</p>
+                            <h3 className="font-black text-8xl md:text-9xl leading-none tracking-tighter mb-4 italic">87.21%</h3>
+                            <div className="w-full h-4 bg-white/10 relative overflow-hidden">
+                                <div className="absolute top-0 left-0 h-full bg-accent" style={{ width: '87.21%' }}></div>
+                            </div>
+                        </div>
+                        
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 leading-none">
+                            <div className="bg-black/40 border border-white/10 p-8 flex flex-col items-center justify-center text-center">
+                                <p className="text-accent font-black text-5xl mb-2">98.0%</p>
+                                <p className="text-white/40 font-orbitron text-[9px] uppercase tracking-widest">Highest Score</p>
+                            </div>
+                            <div className="bg-black/40 border border-white/10 p-8 flex flex-col items-center justify-center text-center">
+                                <p className="text-accent font-black text-5xl mb-2">74.0%</p>
+                                <p className="text-white/40 font-orbitron text-[9px] uppercase tracking-widest">Entry Benchmark</p>
+                            </div>
+                            <div className="bg-black/40 border border-white/10 p-8 col-span-1 sm:col-span-2 text-center">
+                                <h4 className="font-orbitron font-black text-accent text-sm mb-4 uppercase tracking-widest">Graduation Stats</h4>
+                                <div className="flex justify-around items-center">
+                                    <div>
+                                        <p className="text-white font-black text-3xl mb-1">28</p>
+                                        <p className="text-white/30 text-[8px] uppercase tracking-widest">Passed Final</p>
+                                    </div>
+                                    <div className="h-10 w-[1px] bg-white/10"></div>
+                                    <div>
+                                        <p className="text-white font-black text-3xl mb-1">03</p>
+                                        <p className="text-white/30 text-[8px] uppercase tracking-widest">Conditional</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Certification Glimpse (Neon) */}
+            <section className="bg-accent text-black py-24 px-6 md:px-12 lg:px-24">
+                <div className="max-w-[1200px] mx-auto w-full">
+                    <div className="flex items-center gap-4 mb-16">
+                        <h2 className="font-orbitron font-black text-3xl lg:text-5xl uppercase tracking-widest">Certification Glimpse</h2>
+                        <div className="flex-grow h-2 bg-black"></div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {[
+                            { src: "image-4.jpg", alt: "Ceremony 1" },
+                            { src: "image-5.jpg", alt: "Achievement 2" },
+                            { src: "image-6.jpg", alt: "Graduation 3" }
+                        ].map((img, i) => (
+                            <div key={i} className="aspect-[4/3] bg-black border-4 border-black rounded-2xl overflow-hidden group shadow-[15px_15px_0px_#000]">
+                                <img src={`/saleforce-training/${img.src}`} alt={img.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Conclusion (Purple) */}
+            <section className="bg-purple text-white py-24 px-6 md:px-12 lg:px-24">
+                <div className="max-w-[1200px] mx-auto w-full">
+                    <div className="bg-black/40 border border-white/10 p-12 md:p-20 relative overflow-hidden rounded-[3rem] shadow-2xl">
+                        <div className="relative z-10">
+                            <h2 className="font-orbitron font-black text-4xl lg:text-6xl uppercase tracking-tighter mb-10 text-accent italic">The Benchmark</h2>
+                            <p className="text-white font-bold text-lg md:text-xl leading-relaxed mb-12 uppercase tracking-wide opacity-90">
+                                The test results indicate that the training program has successfully built a solid foundation in Salesforce fundamentals among the participants. 
+                            </p>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-white/10 pt-12">
+                                <div>
+                                    <h4 className="text-accent font-orbitron font-black text-sm uppercase tracking-widest mb-4">Core Strengths</h4>
+                                    <ul className="space-y-4">
+                                        {["Admin Basics Mastery", "Object Security Logic", "Workflow Configuration"].map((item, i) => (
+                                            <li key={i} className="flex items-center gap-4 font-black text-xs md:text-sm uppercase">{item}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 className="text-accent font-orbitron font-black text-sm uppercase tracking-widest mb-4">Focus Areas</h4>
+                                    <ul className="space-y-4">
+                                        {["Complex Apex Triggers", "LWC Event Propagation", "Asynchronous Logic"].map((item, i) => (
+                                            <li key={i} className="flex items-center gap-4 font-black text-xs md:text-sm uppercase text-white/60 line-through decoration-accent/50">{item}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="absolute top-0 right-0 p-4">
+                            <div className="w-32 h-32 border-4 border-accent border-dashed rounded-full animate-spin-slow opacity-20"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer className="bg-black py-12 text-center border-t border-white/10">
+                <p className="text-white/30 font-orbitron text-[10px] tracking-widest uppercase">© 2026 Skill Horizon / Final Batch Assessment</p>
+            </footer>
         </main>
     );
 }
