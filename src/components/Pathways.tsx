@@ -107,8 +107,8 @@ const Pathways = () => {
             </div>
 
             {/* Background Decorative Globs */}
-            <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-black/5 rounded-full blur-[140px] pointer-events-none" />
-            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-black/5 rounded-full blur-[140px] pointer-events-none" />
+            <div className="absolute top-1/2 left-0 -translate-y-1/2 w-full max-w-[500px] aspect-square bg-black/5 rounded-full blur-[140px] pointer-events-none" />
+            <div className="absolute bottom-0 right-0 w-full max-w-[500px] aspect-square bg-black/5 rounded-full blur-[140px] pointer-events-none" />
         </section>
     );
 };

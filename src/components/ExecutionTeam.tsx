@@ -195,8 +195,8 @@ const ExecutionTeam = () => {
             </div>
 
             {/* Background elements */}
-            <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[140px] pointer-events-none z-0" />
-            <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[140px] pointer-events-none z-0" />
+            <div className="absolute top-1/4 left-0 w-full max-w-[500px] aspect-square bg-accent/5 rounded-full blur-[140px] pointer-events-none z-0" />
+            <div className="absolute bottom-1/4 right-0 w-full max-w-[500px] aspect-square bg-accent/5 rounded-full blur-[140px] pointer-events-none z-0" />
         </section>
     );
 };

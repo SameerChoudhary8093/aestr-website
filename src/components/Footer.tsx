@@ -44,8 +44,8 @@ const Footer = () => {
                     </div>
 
                     {/* Decorative glow */}
-                    <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-purple/10 blur-[150px] rounded-full pointer-events-none" />
-                    <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
+                    <div className="absolute top-1/2 left-0 -translate-y-1/2 w-full max-w-[500px] aspect-square bg-purple/10 blur-[150px] rounded-full pointer-events-none" />
+                    <div className="absolute bottom-0 right-0 w-full max-w-[400px] aspect-square bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
                 </section>
             )}
 

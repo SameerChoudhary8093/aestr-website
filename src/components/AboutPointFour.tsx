@@ -9,8 +9,8 @@ const AboutPointFour = () => {
     return (
         <section className="relative py-24 bg-accent overflow-hidden">
             {/* Ambient Background Glows */}
-            <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-white/20 rounded-full blur-[100px] pointer-events-none" />
-            <div className="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-[120px] pointer-events-none" />
+            <div className="absolute top-1/4 right-0 w-full max-w-[400px] aspect-square bg-white/20 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute bottom-1/4 left-0 w-full max-w-[500px] aspect-square bg-white/10 rounded-full blur-[120px] pointer-events-none" />
 
 
             <div className="container-boxed relative z-10">

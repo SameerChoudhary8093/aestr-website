@@ -8,7 +8,7 @@ import Image from 'next/image';
 const AboutPointThree = () => {
     return (
         <section className="relative py-24 bg-[#5B1DD6] overflow-hidden">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 blur-[120px] rounded-full pointer-events-none z-0" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[600px] aspect-square bg-accent/5 blur-[120px] rounded-full pointer-events-none z-0" />
 
             <div className="container-boxed relative z-10">
                 <div className="flex flex-col items-center space-y-16">

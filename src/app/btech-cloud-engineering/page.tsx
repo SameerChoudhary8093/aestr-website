@@ -199,8 +199,8 @@ const BtechCloudEngineering = () => {
             {/* Hero / Header Section */}
             <section className="pt-32 pb-24 relative overflow-hidden">
                 {/* Decorative background effects */}
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple/10 rounded-full blur-[150px] -translate-y-1/2 translate-x-1/2" />
-                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[120px] translate-y-1/4 -translate-x-1/4" />
+                <div className="absolute top-0 right-0 w-full max-w-[500px] aspect-square bg-purple/10 rounded-full blur-[150px] -translate-y-1/2 translate-x-1/2" />
+                <div className="absolute bottom-0 left-0 w-full max-w-[400px] aspect-square bg-accent/5 rounded-full blur-[120px] translate-y-1/4 -translate-x-1/4" />
 
                 <div className="container-boxed relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -473,7 +473,7 @@ const BtechCloudEngineering = () => {
                 </div>
                 
                 {/* Visual decoration */}
-                <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[150px] pointer-events-none" />
+                <div className="absolute top-1/2 right-0 w-full max-w-[500px] aspect-square bg-accent/5 rounded-full blur-[150px] pointer-events-none" />
             </section>
 
             {/* pathways Tree Section (Image 2) */}

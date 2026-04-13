@@ -103,8 +103,8 @@ const PlacementPartners = () => {
             </div>
 
             {/* Ambient Background Glows */}
-            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[140px] pointer-events-none" />
-            <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[140px] pointer-events-none" />
+            <div className="absolute top-0 left-1/4 w-full max-w-[500px] aspect-square bg-accent/5 rounded-full blur-[140px] pointer-events-none" />
+            <div className="absolute bottom-0 right-1/4 w-full max-w-[500px] aspect-square bg-accent/5 rounded-full blur-[140px] pointer-events-none" />
 
             <style jsx global>{`
                 @keyframes marquee-left {

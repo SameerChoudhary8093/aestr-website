@@ -38,8 +38,8 @@ const BootcampsAndLabs = () => {
             {/* Section 4: Bootcamp, Bootcamp, Bootcamp */}
             <section className="relative py-24 bg-background-alt overflow-hidden">
                 {/* Ambient Background Glows */}
-                <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[100px] pointer-events-none" />
-                <div className="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
+                <div className="absolute top-1/4 right-0 w-full max-w-[400px] aspect-square bg-accent/10 rounded-full blur-[100px] pointer-events-none" />
+                <div className="absolute bottom-1/4 left-0 w-full max-w-[500px] aspect-square bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
 
 
                 <div className="container-boxed relative z-10">

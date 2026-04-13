@@ -99,7 +99,7 @@ export default async function TrackPage({ params }: { params: Promise<{ trackId:
       />
 
       <div className="min-h-screen bg-background text-foreground pt-48 pb-24 relative overflow-hidden">
-        <div className="absolute top-16 left-1/2 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-accent/8 blur-[120px] pointer-events-none" />
+        <div className="absolute top-16 left-1/2 w-full max-w-[420px] aspect-square -translate-x-1/2 rounded-full bg-accent/8 blur-[120px] pointer-events-none" />
 
         <div className="container-boxed relative z-10">
           <Link

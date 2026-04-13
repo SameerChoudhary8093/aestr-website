@@ -66,8 +66,8 @@ const FrontierHub = () => {
                     className="max-w-15xl px-4 mx-auto"
                 >
                     <div className="relative">
-                        <div className="absolute top-0 left-0 w-32 h-32 bg-accent/20 rounded-full blur-3xl"></div>
-                        <div className="absolute bottom-0 right-0 w-48 h-48 bg-purple/20 rounded-full blur-3xl"></div>
+                        <div className="absolute top-0 left-0 w-full max-w-[128px] aspect-square bg-accent/20 rounded-full blur-3xl"></div>
+                        <div className="absolute bottom-0 right-0 w-full max-w-[192px] aspect-square bg-purple/20 rounded-full blur-3xl"></div>
 
                         <div className="relative bg-[#5B1DD6] backdrop-blur-xl rounded-3xl p-8 lg:p-12 border border-white/10 shadow-2xl">
                             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">

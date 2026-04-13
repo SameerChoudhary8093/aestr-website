@@ -10,8 +10,8 @@ const FutureFaculty = () => {
         <section className="relative py-24 bg-background-alt overflow-hidden">
             {/* Ambient subtle shapes - Neon Green accents */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none z-0">
-                <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[140px]" />
-                <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[140px]" />
+                <div className="absolute top-1/4 left-1/4 w-full max-w-[500px] aspect-square bg-accent/10 rounded-full blur-[140px]" />
+                <div className="absolute bottom-1/4 right-1/4 w-full max-w-[500px] aspect-square bg-accent/5 rounded-full blur-[140px]" />
             </div>
 
             <motion.div 

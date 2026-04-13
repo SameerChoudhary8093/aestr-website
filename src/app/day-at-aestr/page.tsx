@@ -43,8 +43,8 @@ export default function DayAtAestr() {
             {/* Purple Section: Hero Title/Subtitle center-aligned single line */}
             <div className="bg-[#5B1DD6] pt-64 pb-24 relative overflow-hidden">
                 {/* Decorative Elements */}
-                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/10 blur-[150px] -translate-y-1/2 translate-x-1/4 rounded-full pointer-events-none" />
-                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-black/20 blur-[120px] translate-y-1/2 -translate-x-1/4 rounded-full pointer-events-none" />
+                <div className="absolute top-0 right-0 w-full max-w-[600px] aspect-square bg-accent/10 blur-[150px] -translate-y-1/2 translate-x-1/4 rounded-full pointer-events-none" />
+                <div className="absolute bottom-0 left-0 w-full max-w-[400px] aspect-square bg-black/20 blur-[120px] translate-y-1/2 -translate-x-1/4 rounded-full pointer-events-none" />
 
                 <div className="container-boxed max-w-7xl mx-auto px-6 relative z-10 text-center">
                     <div className="space-y-8 flex flex-col items-center">

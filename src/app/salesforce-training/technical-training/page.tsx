@@ -207,7 +207,9 @@ export default function TechnicalTrainingPage() {
                 </div>
             </section>
 
-
+            <footer className="bg-black py-12 text-center border-t border-white/10">
+                {/* <p className="text-white/30 font-orbitron text-[10px] tracking-widest uppercase">© 2026 SGVU / Salesforce Cohort Report</p> */}
+            </footer>
         </main>
     );
 }

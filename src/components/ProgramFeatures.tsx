@@ -9,8 +9,8 @@ const ProgramFeatures = () => {
     return (
         <section id="program-features" className="relative pt-24 pb-8 bg-background overflow-hidden">
             {/* Futuristic Ambient Glows - Neon Green */}
-            <div className="absolute top-10 left-10 w-[400px] h-[400px] bg-accent/10 blur-[120px] rounded-full pointer-events-none z-0" />
-            <div className="absolute bottom-20 right-20 w-[500px] h-[500px] bg-accent/5 blur-[120px] rounded-full pointer-events-none z-0" />
+            <div className="absolute top-10 left-10 w-full max-w-[400px] aspect-square bg-accent/10 blur-[120px] rounded-full pointer-events-none z-0" />
+            <div className="absolute bottom-20 right-20 w-full max-w-[500px] aspect-square bg-accent/5 blur-[120px] rounded-full pointer-events-none z-0" />
 
 
             <motion.div
@@ -37,7 +37,7 @@ const ProgramFeatures = () => {
                         className="space-y-8"
                     >
                         <div className="space-y-4">
-                            <motion.p 
+                            <motion.p
                                 variants={{
                                     hidden: { opacity: 0, y: 30 },
                                     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
@@ -46,7 +46,7 @@ const ProgramFeatures = () => {
                             >
                                 Our founding team includes engineers from Shodh AI (USA) and other global tech leaders. Here, you won’t be taught by disconnected faculty, you’ll learn from full-time software developers, AI practitioners, and system architects who are shaping the real world.
                             </motion.p>
-                            <motion.div 
+                            <motion.div
                                 variants={{
                                     hidden: { opacity: 0, y: 30 },
                                     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
@@ -198,7 +198,7 @@ const ProgramFeatures = () => {
                         <div className="relative group cursor-pointer w-full max-w-3xl mx-auto">
                             <div className="aspect-[16/9] md:aspect-[21/9] bg-black/40 rounded-[2rem] border border-foreground/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/30 group-hover:shadow-[0_0_80px_rgba(216,246,2,0.1)] relative">
                                 <iframe
-                                    src="https://www.youtube.com/embed/gGh2HYhMSy8?rel=0&modestbranding=1&autoplay=1&mute=1&vq=hd1080&start=2"
+                                    src="https://www.youtube.com/embed/gGh2HYhMSy8?rel=0&modestbranding=1&autoplay=1&mute=1&vq=hd1080"
                                     title="In-Demand Careers of 2030"
                                     className="w-full h-full"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

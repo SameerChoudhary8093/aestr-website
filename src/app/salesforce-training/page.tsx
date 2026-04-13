@@ -73,7 +73,7 @@ export default function SalesforceTrainingPage() {
                         <div className="bg-accent rounded-2xl p-6 lg:p-8 relative group hover:-translate-y-1 transition-transform shadow-[0_0_20px_rgba(216,246,2,0.2)] flex flex-col justify-center">
                             <p className="text-black/60 text-[9px] font-orbitron uppercase tracking-widest mb-4 font-black">Program Timeline</p>
                             <h3 className="text-black font-orbitron font-black text-lg lg:text-xl uppercase mb-1.5">Jan—March 2026</h3>
-                            <p className="text-black/80 text-[10px] lg:text-xs font-bold">Conducted by Skill Horizon</p>
+                            <p className="text-black/80 text-[10px] lg:text-xs font-bold">Conducted by SGVU</p>
                         </div>
                     </div>
                 </div>
@@ -88,7 +88,7 @@ export default function SalesforceTrainingPage() {
                         <div>
                             <h2 className="text-2xl md:text-3xl font-bold mb-4 font-sans tracking-tight">1. Introduction</h2>
                             <p className="text-[15px] md:text-base leading-[1.8] text-white/90 font-medium">
-                                This report presents a comprehensive overview of the Salesforce Training Program conducted by Skill Horizon for students of Suresh Gyan Vihar University. The program was designed to bridge the gap between academic learning and industry requirements by integrating technical expertise, soft skills development, and placement readiness.
+                                This report presents a comprehensive overview of the Salesforce Training Program conducted by SGVU for students of Suresh Gyan Vihar University. The program was designed to bridge the gap between academic learning and industry requirements by integrating technical expertise, soft skills development, and placement readiness.
                             </p>
                         </div>
 

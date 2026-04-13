@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const AboutPointOne = () => {
     return (
         <section className="relative py-24 bg-accent overflow-hidden">
-            <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-white/10 rounded-full blur-[120px] pointer-events-none" />
+            <div className="absolute top-1/4 right-1/4 w-full max-w-[500px] aspect-square bg-white/10 rounded-full blur-[120px] pointer-events-none" />
 
             <motion.div
                 initial="hidden"

@@ -167,7 +167,7 @@ export default function SoftwareCloudSpecializationPage() {
 
             {/* Hero Section */}
             <section className="pt-44 pb-20 bg-[#5B1DD6] relative overflow-hidden">
-                <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px] pointer-events-none z-0" />
+                <div className="absolute top-1/4 left-1/4 w-full max-w-[500px] aspect-square bg-accent/10 rounded-full blur-[120px] pointer-events-none z-0" />
                 <div className="container-boxed w-full max-w-[1224px] mx-auto relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <motion.div

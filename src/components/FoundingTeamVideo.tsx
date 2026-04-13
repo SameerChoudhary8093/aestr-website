@@ -51,7 +51,7 @@ const YouTubePlayer = ({ videoId, title }: { videoId: string; title: string }) =
 const FoundingTeamVideo = () => {
     return (
         <section className="relative py-24 bg-accent overflow-hidden">
-            <div className="absolute top-10 left-10 w-[400px] h-[400px] bg-white/20 blur-[120px] rounded-full pointer-events-none z-0" />
+            <div className="absolute top-10 left-10 w-full max-w-[400px] aspect-square bg-white/20 blur-[120px] rounded-full pointer-events-none z-0" />
 
             <motion.div
                 initial={{ opacity: 0 }}

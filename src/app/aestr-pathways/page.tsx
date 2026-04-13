@@ -99,7 +99,7 @@ export default function AestrPathways() {
 
             {/* Pathway 1: Pro Track */}
             <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-[#D7F601] relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] bg-black/5 rounded-full blur-[80px] sm:blur-[120px] pointer-events-none" />
+                <div className="absolute top-0 right-0 w-full max-w-[500px] aspect-square bg-black/5 rounded-full blur-[80px] sm:blur-[120px] pointer-events-none" />
                 
                 <div className="container mx-auto max-w-6xl space-y-12 sm:space-y-16">
                     <div className="space-y-4 sm:space-y-6">
@@ -152,7 +152,7 @@ export default function AestrPathways() {
 
             {/* Pathway 2: Global Opportunities */}
             <section className="py-24 px-4 sm:px-6 bg-[#181818] relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/5 rounded-full blur-[140px] pointer-events-none" />
+                <div className="absolute top-0 right-0 w-full max-w-[600px] aspect-square bg-white/5 rounded-full blur-[140px] pointer-events-none" />
                 
                 <div className="container mx-auto max-w-6xl space-y-16">
                     <div className="space-y-6">

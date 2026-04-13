@@ -151,7 +151,7 @@ const BtechAIShodhAIPage = () => {
                             className="bg-[#181818] p-4 sm:p-6 lg:p-8 rounded-2xl shadow-2xl max-w-lg lg:max-w-xl border-l-[4px] lg:border-l-[6px] border-[#D7F601] mt-4 relative overflow-hidden"
                         >
                             {/* subtle internal glow/texture */}
-                            <div className="absolute right-0 top-0 w-24 h-24 lg:w-32 lg:h-32 bg-[#D7F601]/5 blur-3xl rounded-full"></div>
+                            <div className="absolute right-0 top-0 w-full max-w-[128px] aspect-square bg-[#D7F601]/5 blur-3xl rounded-full"></div>
                             <p className="text-white text-base lg:text-lg lg:text-[19px] font-medium leading-relaxed relative z-10">
                             Every student becomes an intern from day one.
                                 <span className="text-[#D7F601] font-bold tracking-wide mt-2 block">Stop studying. Start building.</span>
@@ -294,8 +294,8 @@ const BtechAIShodhAIPage = () => {
                         className="w-full max-w-5xl"
                     >
                         <div className="bg-[#181818] text-white rounded-[1.9rem] p-8 md:p-12 shadow-[0_28px_70px_rgba(0,0,0,0.6)] border border-white/10 overflow-hidden relative">
-                            <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#5B1DD6]/30 blur-3xl rounded-full pointer-events-none"></div>
-                            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-black/40 blur-3xl rounded-full pointer-events-none"></div>
+                            <div className="absolute -top-24 -right-24 w-full max-w-[256px] aspect-square bg-[#5B1DD6]/30 blur-3xl rounded-full pointer-events-none"></div>
+                            <div className="absolute -bottom-24 -left-24 w-full max-w-[256px] aspect-square bg-black/40 blur-3xl rounded-full pointer-events-none"></div>
 
                             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10">
                                 <div className="lg:col-span-8 space-y-5 text-left">

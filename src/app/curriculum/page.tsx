@@ -75,7 +75,7 @@ export default function CurriculumPage() {
 
       <div className="min-h-screen bg-background text-foreground pt-48 pb-16 overflow-hidden">
         <div className="container-boxed relative">
-          <div className="absolute top-10 left-1/2 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-accent/8 blur-[120px] pointer-events-none" />
+          <div className="absolute top-10 left-1/2 w-full max-w-[420px] aspect-square -translate-x-1/2 rounded-full bg-accent/8 blur-[120px] pointer-events-none" />
 
           <div className="relative z-10 space-y-10">
             <div className="bg-[#5B1DD6] rounded-3xl p-8 md:p-12 space-y-10">

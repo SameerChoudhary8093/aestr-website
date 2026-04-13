@@ -13,8 +13,8 @@ export default function SovereignAIInitiative() {
       
       <section className="relative min-h-screen py-20 overflow-hidden">
         {/* Glowing Orbs */}
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px] pointer-events-none z-0" />
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-purple/10 rounded-full blur-[100px] pointer-events-none z-0" />
+        <div className="absolute top-1/4 left-1/4 w-full max-w-[500px] aspect-square bg-accent/10 rounded-full blur-[120px] pointer-events-none z-0" />
+        <div className="absolute bottom-1/4 right-1/4 w-full max-w-[400px] aspect-square bg-purple/10 rounded-full blur-[100px] pointer-events-none z-0" />
 
         <div className="container-boxed relative z-10 w-full py-12 md:py-20">
           {/* Hero Section */}
