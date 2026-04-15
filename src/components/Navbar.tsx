@@ -88,9 +88,9 @@ const Navbar = () => {
                 />
 
                 {/* Navbar Content */}
-                <div className="flex items-center justify-between w-full h-[70px] 2xl:h-[90px] px-4 lg:px-6">
+                <div className="flex items-center justify-between w-full h-[65px] lg:h-[72px] xl:h-[80px] 2xl:h-[90px] px-4 lg:px-5 xl:px-6">
                     {/* Left: AESTR Logo */}
-                    <Link href="/#hero" onClick={handleHomeClick} className="flex-none h-[75%] 2xl:h-[90%]">
+                    <Link href="/#hero" onClick={handleHomeClick} className="flex-none h-[70%] lg:h-[75%] xl:h-[80%] 2xl:h-[90%]">
                         <Image
                             src="/Herosection/by gyan vihar 2 neon.png"
                             alt="Aestr Logo"
@@ -102,8 +102,8 @@ const Navbar = () => {
                     </Link>
 
                     {/* Center: Nav Links */}
-                    <div className="hidden 2xl:flex flex-1 justify-start pl-12 2xl:pl-20">
-                        <div className="flex items-center gap-2 2xl:gap-3">
+                    <div className="hidden lg:flex flex-1 justify-start pl-4 lg:pl-6 xl:pl-10 2xl:pl-20">
+                        <div className="flex items-center gap-0 lg:gap-1 xl:gap-2 2xl:gap-3">
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.name}
@@ -111,10 +111,10 @@ const Navbar = () => {
                                     onClick={link.name === 'Home' ? handleHomeClick : link.external ? undefined : handlePageLinkClick(link.href)}
                                     target={link.external ? '_blank' : undefined}
                                     rel={link.external ? 'noopener noreferrer' : undefined}
-                                    className="relative px-3 py-2 group/btn"
+                                    className="relative px-1.5 lg:px-2 xl:px-3 py-2 group/btn"
                                 >
                                     <MagneticEffect strength={0.3}>
-                                        <span className="text-[14px] font-orbitron font-extrabold text-[#EAF0BD]/80 tracking-widest group-hover/btn:text-accent transition-colors whitespace-nowrap">
+                                        <span className="text-[10px] lg:text-[11px] xl:text-[13px] 2xl:text-[14px] font-orbitron font-extrabold text-[#EAF0BD]/80 tracking-wide lg:tracking-wider xl:tracking-widest group-hover/btn:text-accent transition-colors whitespace-nowrap">
                                             {link.name}
                                         </span>
                                     </MagneticEffect>
@@ -125,25 +125,25 @@ const Navbar = () => {
                     </div>
 
                     {/* Right: Partner Logos & Mobile Menu */}
-                    <div className="flex items-center justify-end h-[50%] 2xl:h-[60%] flex-none shrink-0">
+                    <div className="flex items-center justify-end h-[50%] lg:h-[52%] xl:h-[55%] 2xl:h-[60%] flex-none shrink-0">
                         
-                        <div className="hidden 2xl:flex items-center h-full gap-2 2xl:gap-3">
+                        <div className="hidden lg:flex items-center h-full gap-1 lg:gap-2 2xl:gap-3">
                             <Image
                                 src="/Herosection/Container.svg"
                                 alt="Gyan Vihar"
                                 width={240}
                                 height={75}
-                                className="w-auto h-full object-contain brightness-0 invert"
+                                className="w-auto h-[80%] lg:h-[85%] xl:h-full object-contain brightness-0 invert"
                                 priority
                             />
 
-                            <div className="flex items-center h-full gap-2 2xl:gap-3 border-l border-white/10 pl-3 2xl:pl-3">
+                            <div className="flex items-center h-full gap-1 xl:gap-2 2xl:gap-3 border-l border-white/10 pl-1 lg:pl-2 xl:pl-3">
                                 <Image
                                     src="/Herosection/Nirf white.png"
                                     alt="NIRF"
                                     width={140}
                                     height={90}
-                                    className="w-auto h-[140%] object-contain px-0.5"
+                                    className="w-auto h-[110%] lg:h-[120%] xl:h-[140%] object-contain px-0.5"
                                     priority
                                 />
 
@@ -152,14 +152,14 @@ const Navbar = () => {
                                     alt="NAAC A+"
                                     width={160}
                                     height={100}
-                                    className="w-auto h-[160%] object-contain px-0.5"
+                                    className="w-auto h-[130%] lg:h-[140%] xl:h-[160%] object-contain px-0.5"
                                     priority
                                 />
                             </div>
                         </div>
 
                         {/* Mobile menu button */}
-                        <div className="2xl:hidden ml-4">
+                        <div className="lg:hidden ml-4">
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 className="p-3 text-accent hover:bg-white/5 rounded-xl transition-all focus:outline-none border border-white/5"
@@ -182,7 +182,7 @@ const Navbar = () => {
                         initial={{ opacity: 0, backdropFilter: 'blur(0px)' }}
                         animate={{ opacity: 1, backdropFilter: 'blur(10px)' }}
                         exit={{ opacity: 0, backdropFilter: 'blur(0px)' }}
-                        className="fixed inset-0 bg-background/95 z-[100] p-6 2xl:hidden pointer-events-auto flex flex-col overflow-y-auto overflow-x-hidden scrollbar-hide pt-10 pb-20"
+                        className="fixed inset-0 bg-background/95 z-[100] p-6 lg:hidden pointer-events-auto flex flex-col overflow-y-auto overflow-x-hidden scrollbar-hide pt-10 pb-20"
                     >
                         <div className="flex justify-between items-center mb-12">
                             <Link href="/#hero" onClick={handleHomeClick} className="w-[130px] relative h-8">
