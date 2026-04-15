@@ -40,7 +40,7 @@ const Hero = () => {
                                     hidden: { opacity: 0, y: 30 },
                                     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
                                 }}
-                                className="text-[40px] sm:text-[52px] md:text-[56px] lg:text-[32px] xl:text-[56px] 2xl:text-[84px] font-orbitron font-black tracking-tighter leading-[1.05] w-full lg:whitespace-nowrap"
+                                className="text-[40px] sm:text-[52px] md:text-[56px] lg:text-[38px] xl:text-[52px] 2xl:text-[72px] font-orbitron font-black tracking-tighter leading-[1.05] w-full lg:whitespace-nowrap"
                             >
                                 The B.Tech is dead
                             </motion.h1>
@@ -49,7 +49,7 @@ const Hero = () => {
                                     hidden: { opacity: 0, y: 30 },
                                     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
                                 }}
-                                className="text-[16px] sm:text-[18px] lg:text-[13px] xl:text-[20px] 2xl:text-[32.8px] text-foreground font-bold leading-snug tracking-tight w-fit mt-2 border-b-0 lg:whitespace-nowrap"
+                                className="text-[16px] sm:text-[18px] lg:text-[14px] xl:text-[18px] 2xl:text-[28px] text-foreground font-bold leading-snug tracking-tight w-fit mt-2 border-b-0 lg:whitespace-nowrap"
                             >
                                 The AESTR Solution: <span className="text-accent">The 4-Year Engineering Residency.</span>
                             </motion.p>
@@ -58,10 +58,10 @@ const Hero = () => {
                                     hidden: { opacity: 0, y: 30 },
                                     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
                                 }}
-                                className="text-[14px] sm:text-[16px] text-foreground/80 font-medium w-full leading-relaxed flex flex-col gap-2 mt-4 max-w-lg xl:max-w-none"
+                                className="text-[14px] sm:text-[15px] lg:text-[12px] xl:text-[13px] text-foreground/80 font-medium w-full leading-relaxed flex flex-col gap-2 mt-4"
                             >
-                                <span className="block font-bold">AESTR by Gyan Vihar is built on a single, uncompromising premise:</span>
-                                <span className="block font-bold">Stop studying. Start building. We are not a college we are a Silicon Valley-style incubator.</span>
+                                <span className="block font-bold xl:whitespace-nowrap">AESTR by Gyan Vihar is built on a single, uncompromising premise:</span>
+                                <span className="block font-bold xl:whitespace-nowrap">Stop studying. Start building. We are not a college we are a Silicon Valley-style incubator.</span>
                             </motion.div>
                         </div>
 
