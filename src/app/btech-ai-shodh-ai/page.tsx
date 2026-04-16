@@ -168,10 +168,12 @@ const BtechAIShodhAIPage = () => {
                     >
                          {/* Clip-path for the cool tech-y brochure shape */}
                          <div className="absolute inset-0 z-10 bg-black overflow-hidden shadow-2xl border-[2px] lg:border-[4px] border-[#D7F601]/30" style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%)' }}>
-                            <img 
+                            <Image 
                                 src="/b.tech-ai-with/DSC08261.jpg"
                                 alt="AESTR Environment"
-                                className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                                fill
+                                priority
+                                className="object-cover hover:scale-105 transition-transform duration-700"
                             />
                             {/* subtle overlay to ensure content feels integrated */}
                             <div className="absolute inset-0 bg-purple/10 pointer-events-none"></div>

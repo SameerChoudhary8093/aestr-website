@@ -1,9 +1,9 @@
 'use client';
-
-import React from 'react';
+ 
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
-
+import { motion, useAnimation } from 'framer-motion';
+ 
 const careerData = [
     {
         title: 'Autonomous Systems Engineer',
@@ -86,11 +86,30 @@ const careerData = [
         image: 'https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&w=800&q=80'
     },
 ];
-
+ 
 const CareerCarousel = () => {
     // Duplicate the data to create a seamless loop
-    const displayData = [...careerData, ...careerData];
-
+    const displayData = [...careerData, ...careerData, ...careerData]; // Triple for smoother drag range
+    
+    const controls = useAnimation();
+    const [isPaused, setIsPaused] = useState(false);
+    
+    // Animation logic
+    useEffect(() => {
+        if (!isPaused) {
+            controls.start({
+                x: [0, -4200], // 10 items * 420px (380+40)
+                transition: {
+                    duration: 60,
+                    ease: "linear",
+                    repeat: Infinity,
+                }
+            });
+        } else {
+            controls.stop();
+        }
+    }, [isPaused, controls]);
+ 
     return (
         <section className="relative pt-8 md:pt-16 pb-24 bg-[#5B1DD6] overflow-hidden">
             <motion.div 
@@ -129,39 +148,27 @@ const CareerCarousel = () => {
                     </div>
                 </div>
             </motion.div>
-
-            <style jsx>{`
-                @keyframes marquee {
-                    0% { transform: translateX(0); }
-                    100% { transform: translateX(calc(-50% - 20px)); }
-                }
-                .marquee {
-                    display: flex;
-                    width: max-content;
-                    animation: marquee 60s linear infinite;
-                    gap: 40px;
-                }
-                /* Mobile optimization */
-                @media (max-width: 768px) {
-                    .marquee {
-                        animation-duration: 40s;
-                        gap: 24px;
-                    }
-                }
-            `}</style>
-            
-            <motion.div 
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="relative overflow-hidden group py-10"
-            >
-                <div className="marquee px-4">
+ 
+            <div className="relative overflow-hidden py-10 group">
+                {/* Drag and Auto-scroll Container */}
+                <motion.div
+                    drag="x"
+                    dragConstraints={{ left: -8400, right: 0 }}
+                    animate={controls}
+                    onHoverStart={() => setIsPaused(true)}
+                    onHoverEnd={() => setIsPaused(false)}
+                    style={{
+                        display: 'flex',
+                        gap: '40px',
+                        width: 'max-content',
+                        cursor: 'grab',
+                    }}
+                    className="active:cursor-grabbing"
+                >
                     {displayData.map((card, idx) => (
                         <div
                             key={`${card.title}-${idx}`}
-                            className="w-[300px] md:w-[380px] glass rounded-2xl md:rounded-[2.5rem] overflow-hidden group border-foreground/5 hover:border-accent/40 transition-all duration-700 hover:bg-accent/5 flex-shrink-0 flex flex-col h-[520px] md:h-[580px]"
+                            className="w-[300px] md:w-[380px] glass rounded-2xl md:rounded-[2.5rem] overflow-hidden group/card border-foreground/5 hover:border-accent/40 transition-all duration-700 hover:bg-accent/5 flex-shrink-0 flex flex-col h-[520px] md:h-[580px]"
                         >
                             {/* Card Image */}
                             <div className="h-48 md:h-56 bg-black/40 relative overflow-hidden flex items-center justify-center">
@@ -170,25 +177,25 @@ const CareerCarousel = () => {
                                     alt={card.title}
                                     fill
                                     unoptimized
-                                    className="object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                                    className="object-cover transition-transform duration-1000 group-hover/card:scale-110 opacity-70 group-hover/card:opacity-100"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                                 <div className="absolute top-4 right-4 md:top-6 md:right-6 animate-pulse z-10">
                                     <div className="w-2 md:w-2.5 h-2 md:h-2.5 bg-accent rounded-full shadow-[0_0_15px_rgba(216,246,2,0.8)]" />
                                 </div>
                             </div>
-
+ 
                             {/* Card Content */}
                             <div className="p-6 md:p-8 flex flex-col flex-grow text-left bg-black">
                                 <div className="flex-grow space-y-3 md:space-y-4">
-                                    <h3 className="text-lg md:text-xl font-orbitron font-bold text-white group-hover:text-accent transition-colors duration-300 line-clamp-2">
+                                    <h3 className="text-lg md:text-xl font-orbitron font-bold text-white group-hover/card:text-accent transition-colors duration-300 line-clamp-2">
                                         {card.title}
                                     </h3>
                                     <p className="text-xs md:text-sm text-white/80 leading-relaxed font-medium line-clamp-3">
                                         {card.sub}
                                     </p>
                                 </div>
-
+ 
                                 <div className="space-y-3 md:space-y-4 pt-4 border-t border-white/20 h-[110px] md:h-[130px]">
                                     <div className="flex items-center justify-between">
                                         <span className="text-[8px] md:text-[10px] font-orbitron uppercase tracking-widest text-white/90 font-bold">Major</span>
@@ -196,7 +203,7 @@ const CareerCarousel = () => {
                                             {card.major}
                                         </span>
                                     </div>
-
+ 
                                     {card.minor && (
                                         <div className="flex items-center justify-between">
                                             <span className="text-[8px] md:text-[10px] font-orbitron uppercase tracking-widest text-white/90 font-bold">Minor</span>
@@ -205,7 +212,7 @@ const CareerCarousel = () => {
                                             </span>
                                         </div>
                                     )}
-
+ 
                                     <div className="flex items-center justify-between">
                                         <span className="text-[8px] md:text-[10px] font-orbitron uppercase tracking-widest text-white/90 font-bold">Lab</span>
                                         <span className="text-accent text-[8px] md:text-[10px] font-black uppercase tracking-widest text-right max-w-[60%] line-clamp-1">
@@ -216,10 +223,10 @@ const CareerCarousel = () => {
                             </div>
                         </div>
                     ))}
-                </div>
-            </motion.div>
+                </motion.div>
+            </div>
         </section>
     );
 };
-
+ 
 export default CareerCarousel;

@@ -36,6 +36,14 @@ const teamData = [
         image: '/ExecutionTeam/Amogh.webp',
         desc: 'Dr. Amogh Mahadevagowda is a distinguished scientist at the University of Cambridge and a leader in advanced battery technologies. His pioneering research and global academic expertise help AESTR integrate world-class scientific standards into its curriculum, ensuring that students develop globally recognized skillsets for 2030.',
         quote: 'We\'re building technology that will redefine how AI engineering is taught and practiced.'
+    },
+    {
+        name: 'Prof.(Dr.) Sohit Agarwal',
+        role: 'Principal AESTR (School of Computer Science)',
+        image: '/ExecutionTeam/sohit.jpeg',
+        linkedin: 'https://www.linkedin.com/in/sohit-agarwal-04385b254/',
+        desc: 'Prof. (Dr.) Sohit Agarwal is a distinguished academic leader with deep expertise in Computer Science and Engineering. As the Principal of AESTR’s School of Computer Science, he leads the integration of cutting-edge AI, Machine Learning, and Cloud technologies into the academic framework, ensuring students are industry-ready for the 2030 tech landscape.',
+        quote: 'Education at AESTR is about fostering a product-first mindset. We don\'t just teach code; we build the architects of the future digital economy.'
     }
 ];
 
@@ -59,8 +67,8 @@ const ExecutionTeam = () => {
                     </p>
                 </motion.div>
 
-                {/* 4-Column Grid for Desktop, Vertical for Mobile */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8 w-full max-w-[1400px] mx-auto px-4 pb-12 items-stretch">
+                {/* 5-Member Grid - Balanced layout */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 xl:gap-8 w-full max-w-[1400px] mx-auto px-4 pb-12 items-stretch justify-center">
                     {teamData.map((member, idx) => (
                         <motion.div
                             key={member.name}
@@ -126,15 +134,15 @@ const ExecutionTeam = () => {
                                         </div>
                                     </div>
 
-                                    <div className="min-h-[120px] md:min-h-[140px]">
+                                    <div className="min-h-[160px] md:min-h-[180px] lg:min-h-[200px]">
                                         <p className="text-[11px] md:text-xs text-white/70 font-medium leading-relaxed">
                                             {member.desc}
                                         </p>
                                     </div>
 
                                     {/* Compact Quote Box - Pushed to bottom */}
-                                    <div className="mt-auto pt-4">
-                                        <div className="relative glass bg-black/30 border-l-2 border-accent p-3 rounded-r-xl min-h-[4.5rem] flex items-center">
+                                    <div className="mt-auto pt-6">
+                                        <div className="relative bg-black/40 border-l-2 border-accent p-4 rounded-r-2xl min-h-[110px] md:min-h-[130px] flex items-center shadow-inner">
                                             <p className="text-[10px] md:text-[11px] text-white/80 font-medium italic leading-relaxed">
                                                 "{member.quote}"
                                             </p>

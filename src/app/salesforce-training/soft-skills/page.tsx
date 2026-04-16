@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 
 export default function SoftSkillsPage() {
@@ -27,8 +28,8 @@ export default function SoftSkillsPage() {
                                 The Gyan Vihar training module was an immersive professional development program designed to bridge the gap between academic theory and corporate reality. The mission was to transform students into high-impact candidates through rigorous practice, psychological conditioning, and refined communication strategies.
                             </p>
                         </div>
-                        <div className="w-full lg:w-2/5 aspect-[16/10] rounded-2xl overflow-hidden border-4 border-black shadow-[10px_10px_0px_#000] group">
-                            <img src="/saleforce-training/image-19.jpeg" alt="Soft Skills Workshop" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                        <div className="w-full lg:w-2/5 aspect-[16/10] rounded-2xl overflow-hidden border-4 border-black shadow-[10px_10px_0px_#000] group relative">
+                            <Image src="/saleforce-training/image-19.jpeg" alt="Soft Skills Workshop" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
                         </div>
                     </div>
                 </div>
@@ -46,7 +47,7 @@ export default function SoftSkillsPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
                         <div className="aspect-video rounded-2xl overflow-hidden border-2 border-accent group relative">
-                            <img src="/saleforce-training/image-20.jpeg" alt="Strategic Thinking" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                            <Image src="/saleforce-training/image-20.jpeg" alt="Strategic Thinking" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
                             <div className="absolute bottom-6 left-6 right-6 bg-black/80 backdrop-blur-md p-6 border-l-4 border-accent">
                                 <p className="text-accent font-orbitron font-black text-[10px] uppercase tracking-widest mb-1">Pillar 01</p>
@@ -54,7 +55,7 @@ export default function SoftSkillsPage() {
                             </div>
                         </div>
                         <div className="aspect-video rounded-2xl overflow-hidden border-2 border-accent group relative">
-                            <img src="/saleforce-training/image-22.jpeg" alt="Psychological Prep" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                            <Image src="/saleforce-training/image-22.jpeg" alt="Psychological Prep" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
                             <div className="absolute bottom-6 left-6 right-6 bg-black/80 backdrop-blur-md p-6 border-l-4 border-accent">
                                 <p className="text-accent font-orbitron font-black text-[10px] uppercase tracking-widest mb-1">Pillar 02</p>
@@ -92,8 +93,8 @@ export default function SoftSkillsPage() {
                             { src: "image-20.jpeg", alt: "Glimpse 2" },
                             { src: "image-22.jpeg", alt: "Glimpse 3" }
                         ].map((img, i) => (
-                            <div key={i} className="aspect-[4/5] bg-black border-4 border-black rounded-2xl overflow-hidden group shadow-[15px_15px_0px_#000]">
-                                <img src={`/saleforce-training/${img.src}`} alt={img.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                            <div key={i} className="aspect-[4/5] bg-black border-4 border-black rounded-2xl overflow-hidden group shadow-[15px_15px_0px_#000] relative">
+                                <Image src={`/saleforce-training/${img.src}`} alt={img.alt} fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
                             </div>
                         ))}
                     </div>
@@ -120,11 +121,11 @@ export default function SoftSkillsPage() {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                        <div className="h-[300px] rounded-2xl overflow-hidden border-4 border-accent shadow-[15px_15px_0px_rgba(216,246,2,0.1)]">
-                            <img src="/saleforce-training/image-30.jpeg" alt="Student Progress" className="w-full h-full object-cover" />
+                        <div className="h-[300px] rounded-2xl overflow-hidden border-4 border-accent shadow-[15px_15px_0px_rgba(216,246,2,0.1)] relative">
+                            <Image src="/saleforce-training/image-30.jpeg" alt="Student Progress" fill className="object-cover" />
                         </div>
-                        <div className="h-[300px] rounded-2xl overflow-hidden border-4 border-accent shadow-[15px_15px_0px_rgba(216,246,2,0.1)]">
-                            <img src="/saleforce-training/image-28.jpeg" alt="Presentation Workshop" className="w-full h-full object-cover" />
+                        <div className="h-[300px] rounded-2xl overflow-hidden border-4 border-accent shadow-[15px_15px_0px_rgba(216,246,2,0.1)] relative">
+                            <Image src="/saleforce-training/image-28.jpeg" alt="Presentation Workshop" fill className="object-cover" />
                         </div>
                     </div>
                 </div>

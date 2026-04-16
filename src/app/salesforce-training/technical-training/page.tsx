@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 
 export default function TechnicalTrainingPage() {
@@ -27,8 +28,8 @@ export default function TechnicalTrainingPage() {
                                 This report summarizes the topics covered during the Salesforce training program conducted for freshers. The training was designed to provide a strong foundation in both Salesforce Administration and Salesforce Development, enabling participants to understand platform capabilities, configure business processes, and build custom solutions.
                             </p>
                         </div>
-                        <div className="w-full lg:w-2/5 aspect-[4/3] rounded-2xl overflow-hidden border-4 border-black shadow-[10px_10px_0px_#000]">
-                            <img src="/saleforce-training/image-31.jpeg" alt="Training Introduction" className="w-full h-full object-cover" />
+                        <div className="w-full lg:w-2/5 aspect-[4/3] rounded-2xl overflow-hidden border-4 border-black shadow-[10px_10px_0px_#000] relative">
+                            <Image src="/saleforce-training/image-31.jpeg" alt="Training Introduction" fill className="object-cover" />
                         </div>
                     </div>
                 </div>
@@ -108,7 +109,7 @@ export default function TechnicalTrainingPage() {
 
                     {/* Mid-Curriculum Banner */}
                     <div className="mb-16 w-full h-[400px] rounded-2xl overflow-hidden border-4 border-accent relative group">
-                        <img src="/saleforce-training/image-21.jpeg" alt="Technical Workshop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                        <Image src="/saleforce-training/image-21.jpeg" alt="Technical Workshop" fill className="object-cover group-hover:scale-105 transition-transform duration-1000" />
                         <div className="absolute inset-x-0 bottom-0 bg-black/80 p-8 border-t-2 border-accent">
                             <p className="text-accent font-orbitron font-black text-xs uppercase tracking-[0.3em]">Module 04 TRANSITION</p>
                             <h3 className="text-white font-orbitron font-black text-2xl uppercase tracking-widest">Configuration to Development</h3>
@@ -162,8 +163,8 @@ export default function TechnicalTrainingPage() {
                             { src: "image-33.jpeg", alt: "Coding lab 2" },
                             { src: "image-25.jpeg", alt: "Workshop 3" }
                         ].map((img, i) => (
-                            <div key={i} className="aspect-[4/3] bg-black border-4 border-black rounded-2xl overflow-hidden group shadow-[15px_15px_0px_#000]">
-                                <img src={`/saleforce-training/${img.src}`} alt={img.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 hover:rotate-2" />
+                            <div key={i} className="aspect-[4/3] bg-black border-4 border-black rounded-2xl overflow-hidden group shadow-[15px_15px_0px_#000] relative">
+                                <Image src={`/saleforce-training/${img.src}`} alt={img.alt} fill className="object-cover group-hover:scale-110 transition-transform duration-700 hover:rotate-2" />
                             </div>
                         ))}
                     </div>
@@ -191,8 +192,8 @@ export default function TechnicalTrainingPage() {
                                 ))}
                             </div>
                         </div>
-                        <div className="w-full lg:w-1/2 aspect-square rounded-3xl overflow-hidden border-8 border-accent shadow-[20px_20px_0px_rgba(216,246,2,0.1)]">
-                            <img src="/saleforce-training/image-25.jpeg" alt="Outcomes Visual" className="w-full h-full object-cover" />
+                        <div className="w-full lg:w-1/2 aspect-square rounded-3xl overflow-hidden border-8 border-accent shadow-[20px_20px_0px_rgba(216,246,2,0.1)] relative">
+                            <Image src="/saleforce-training/image-25.jpeg" alt="Outcomes Visual" fill className="object-cover" />
                         </div>
                     </div>
 

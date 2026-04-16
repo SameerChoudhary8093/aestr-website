@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 
 export default function TestResultsPage() {
@@ -42,8 +43,8 @@ export default function TestResultsPage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-full lg:w-1/2 aspect-video rounded-3xl overflow-hidden border-8 border-black shadow-[20px_20px_0px_#222] group">
-                            <img src="/saleforce-training/image-8.jpg" alt="Achievement Group" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                        <div className="w-full lg:w-1/2 aspect-video rounded-3xl overflow-hidden border-8 border-black shadow-[20px_20px_0px_#222] group relative">
+                            <Image src="/saleforce-training/image-8.jpg" alt="Achievement Group" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                         </div>
                     </div>
                 </div>
@@ -104,8 +105,8 @@ export default function TestResultsPage() {
                             { src: "image-5.jpg", alt: "Achievement 2" },
                             { src: "image-6.jpg", alt: "Graduation 3" }
                         ].map((img, i) => (
-                            <div key={i} className="aspect-[4/3] bg-black border-4 border-black rounded-2xl overflow-hidden group shadow-[15px_15px_0px_#000]">
-                                <img src={`/saleforce-training/${img.src}`} alt={img.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                            <div key={i} className="aspect-[4/3] bg-black border-4 border-black rounded-2xl overflow-hidden group shadow-[15px_15px_0px_#000] relative">
+                                <Image src={`/saleforce-training/${img.src}`} alt={img.alt} fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
                             </div>
                         ))}
                     </div>

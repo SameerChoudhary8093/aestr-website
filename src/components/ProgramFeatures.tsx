@@ -195,10 +195,11 @@ const ProgramFeatures = () => {
                         transition={{ duration: 0.7 }}
                         className="order-1 lg:order-2"
                     >
-                        <div className="relative group cursor-pointer w-full max-w-3xl mx-auto">
-                            <div className="aspect-[16/9] md:aspect-[21/9] bg-black/40 rounded-[2rem] border border-foreground/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/30 group-hover:shadow-[0_0_80px_rgba(216,246,2,0.1)] relative">
+                        <div className="relative group w-full max-w-3xl mx-auto">
+                            {/* Unified Premium Frame: Matches Founders Video & Image Cards */}
+                            <div className="aspect-video glass rounded-3xl border border-white/10 overflow-hidden shadow-2xl transition-all duration-500 group-hover:border-accent/30 group-hover:shadow-[0_0_80px_rgba(216,246,2,0.15)] relative">
                                 <iframe
-                                    src="https://www.youtube.com/embed/gGh2HYhMSy8?rel=0&modestbranding=1&autoplay=1&mute=1&vq=hd1080"
+                                    src="https://www.youtube.com/embed/gGh2HYhMSy8?rel=0&modestbranding=1&start=2"
                                     title="In-Demand Careers of 2030"
                                     className="w-full h-full"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

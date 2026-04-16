@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 
 export default function PlacementSupportPage() {
@@ -27,8 +28,8 @@ export default function PlacementSupportPage() {
                                 Our placement support program connects high-performing students with leading Salesforce partner companies. Through targeted drives and rigorous screening, we ensure that every trainee is matched with an environment where their technical skills can thrive.
                             </p>
                         </div>
-                        <div className="w-full lg:w-2/5 aspect-[16/9] rounded-2xl overflow-hidden border-4 border-black shadow-[12px_12px_0px_#000]">
-                            <img src="/saleforce-training/image-9.jpg" alt="Corporate Readiness" className="w-full h-full object-cover" />
+                        <div className="w-full lg:w-2/5 aspect-[16/9] rounded-2xl overflow-hidden border-4 border-black shadow-[12px_12px_0px_#000] relative">
+                            <Image src="/saleforce-training/image-9.jpg" alt="Corporate Readiness" fill className="object-cover" />
                         </div>
                     </div>
                 </div>
@@ -74,7 +75,7 @@ export default function PlacementSupportPage() {
                         ].map((partner, i) => (
                             <div key={i} className="bg-black/40 border border-white/10 p-8 flex flex-col items-center hover:bg-black/60 transition-all rounded-3xl h-full">
                                 <div className={`${partner.color} p-4 rounded-2xl w-full max-w-[220px] aspect-video flex items-center justify-center mb-8 border-4 border-accent relative overflow-hidden`}>
-                                    <img src={partner.logo} alt={partner.name} className={`w-full h-full object-contain ${partner.invert ? 'invert' : ''} p-2`} />
+                                    <Image src={partner.logo} alt={partner.name} fill className={`object-contain ${partner.invert ? 'invert' : ''} p-2`} />
                                 </div>
                                 <h3 className="font-orbitron font-black text-lg text-white mb-6 uppercase tracking-widest text-center min-h-[3.5rem] flex items-center justify-center">{partner.name}</h3>
                                 <div className="w-full space-y-3 mt-auto">
@@ -118,8 +119,8 @@ export default function PlacementSupportPage() {
                             { src: "image-7.jpg", alt: "Corporate team" },
                             { src: "image-2.jpg", alt: "Office visit" }
                         ].map((img, i) => (
-                            <div key={i} className="aspect-[4/3] bg-black border-4 border-black rounded-2xl overflow-hidden group shadow-[15px_15px_0px_#000]">
-                                <img src={`/saleforce-training/${img.src}`} alt={img.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                            <div key={i} className="aspect-[4/3] bg-black border-4 border-black rounded-2xl overflow-hidden group shadow-[15px_15px_0px_#000] relative">
+                                <Image src={`/saleforce-training/${img.src}`} alt={img.alt} fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
                             </div>
                         ))}
                     </div>
@@ -146,8 +147,8 @@ export default function PlacementSupportPage() {
                                     ))}
                                 </ul>
                             </div>
-                            <div className="w-full lg:w-1/3 aspect-square rounded-full overflow-hidden border-8 border-accent flex-shrink-0">
-                                <img src="/saleforce-training/image-1.jpg" alt="Team Success" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" />
+                            <div className="w-full lg:w-1/3 aspect-square rounded-full overflow-hidden border-8 border-accent flex-shrink-0 relative">
+                                <Image src="/saleforce-training/image-1.jpg" alt="Team Success" fill className="object-cover grayscale hover:grayscale-0 transition-all duration-1000" />
                             </div>
                         </div>
                     </div>

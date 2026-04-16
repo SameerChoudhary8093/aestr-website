@@ -137,23 +137,12 @@ const YouTubePlayer = ({ videoId, title }: { videoId: string; title: string }) =
             onClick={() => setIsPlaying(true)}
         >
             <Image
-                src="/Other/lab-2.webp"
+                src="/Other/Data.png"
                 alt={title}
                 fill
                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
             />
-            <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-all duration-500">
-                <div className="w-20 h-20 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full flex items-center justify-center shadow-2xl transform transition-all duration-500 group-hover:scale-110 group-hover:bg-white/20">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        className="w-10 h-10 text-white ml-1"
-                    >
-                        <path d="M8 5.14v14l11-7-11-7z" />
-                    </svg>
-                </div>
-            </div>
+
         </div>
     );
 };
@@ -430,8 +419,8 @@ export default function DataEngineeringSpecializationPage() {
                             {[
                                 { title: "Apple Ecosystem", image: "/Other/apple-lab.png" },
                                 { title: "NVIDIA Pipeline", image: "/Other/Nvidia-Image.jpeg" },
-                                { title: "RISC-V Architectures", image: "/Other/DSC08333.jpg.jpeg" },
-                                { title: "Shodh AI", image: "/Other/DSC01997.jpg" }
+                                { title: "RISC-V Lab", image: "/Other/DSC08333.jpg.jpeg" },
+                                { title: "Embodied Brain Lab", image: "/Other/DSC01997.jpg" }
                             ].map((lab, idx) => (
                                 <motion.div key={idx} className="bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-accent transition-all group">
                                     <div className="aspect-video relative overflow-hidden">

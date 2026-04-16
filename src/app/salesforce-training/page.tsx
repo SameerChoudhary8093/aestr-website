@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 
 export default function SalesforceTrainingPage() {
@@ -24,7 +25,7 @@ export default function SalesforceTrainingPage() {
                             </h1>
                         </div>
                         <div className="w-full lg:w-1/2 relative aspect-[4/3] lg:aspect-video bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center shadow-2xl overflow-hidden group">
-                            <img src="/saleforce-training/image-22.jpeg" alt="Salesforce Developer Training Hero" className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
+                            <Image src="/saleforce-training/image-22.jpeg" alt="Salesforce Developer Training Hero" fill priority className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
                         </div>
                     </div>
 
@@ -111,15 +112,15 @@ export default function SalesforceTrainingPage() {
 
                         {/* Top Large Image */}
                         <div className="w-full aspect-[16/9] bg-white/10 rounded-md relative overflow-hidden flex items-center justify-center shadow-md group">
-                            <img src="/saleforce-training/image-34.jpeg" alt="Laptop Screen Focus" className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
+                            <Image src="/saleforce-training/image-34.jpeg" alt="Laptop Screen Focus" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
                         </div>
                         {/* Bottom Two Images */}
                         <div className="grid grid-cols-2 gap-4">
                             <div className="w-full aspect-[4/3] bg-white/10 rounded-md relative overflow-hidden hidden lg:flex items-center justify-center shadow-md group">
-                                <img src="/saleforce-training/image-22.jpeg" alt="Classroom Presentation" className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
+                                <Image src="/saleforce-training/image-22.jpeg" alt="Classroom Presentation" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
                             </div>
                             <div className="w-full aspect-[4/3] bg-white/10 rounded-md relative overflow-hidden flex items-center justify-center shadow-md group">
-                                <img src="/saleforce-training/image-24.jpeg" alt="Student Group Photo" className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
+                                <Image src="/saleforce-training/image-24.jpeg" alt="Student Group Photo" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
                             </div>
                         </div>
                     </div>
@@ -146,7 +147,7 @@ export default function SalesforceTrainingPage() {
                             <div className="absolute inset-0 bg-gradient-to-t from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             <div className="w-full aspect-[10/10] bg-white/5 rounded-2xl mb-8 flex items-center justify-center overflow-hidden border border-white/5 group-hover:border-accent/30 transition-colors duration-500 relative z-10">
                                 <div className="absolute inset-0 bg-accent/20 scale-0 group-hover:scale-100 transition-transform duration-700 ease-out rounded-full blur-3xl z-10 pointer-events-none" />
-                                <img src="/saleforce-training/image-33.jpeg" alt="Technical Training" className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
+                                <Image src="/saleforce-training/image-33.jpeg" alt="Technical Training" fill className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
                             </div>
                             <div className="relative z-10 flex flex-col gap-4">
                                 <div>
@@ -166,7 +167,7 @@ export default function SalesforceTrainingPage() {
                             <div className="absolute inset-0 bg-gradient-to-t from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             <div className="w-full aspect-[10/10] bg-white/5 rounded-2xl mb-8 flex items-center justify-center overflow-hidden border border-white/5 group-hover:border-accent/30 transition-colors duration-500 relative z-10">
                                 <div className="absolute inset-0 bg-accent/20 scale-0 group-hover:scale-100 transition-transform duration-700 ease-out rounded-full blur-3xl z-10 pointer-events-none" />
-                                <img src="/saleforce-training/image-1.jpg" alt="Soft Skill" className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
+                                <Image src="/saleforce-training/image-1.jpg" alt="Soft Skill" fill className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
                             </div>
                             <div className="relative z-10 flex flex-col gap-4">
                                 <div>
@@ -186,7 +187,7 @@ export default function SalesforceTrainingPage() {
                             <div className="absolute inset-0 bg-gradient-to-t from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             <div className="w-full aspect-[10/10] bg-white/5 rounded-2xl mb-8 flex items-center justify-center overflow-hidden border border-white/5 group-hover:border-accent/30 transition-colors duration-500 relative z-10">
                                 <div className="absolute inset-0 bg-accent/20 scale-0 group-hover:scale-100 transition-transform duration-700 ease-out rounded-full blur-3xl z-10 pointer-events-none" />
-                                <img src="/saleforce-training/image-2.jpg" alt="Placement Training" className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
+                                <Image src="/saleforce-training/image-2.jpg" alt="Placement Training" fill className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
                             </div>
                             <div className="relative z-10 flex flex-col gap-4">
                                 <div>
@@ -206,7 +207,7 @@ export default function SalesforceTrainingPage() {
                             <div className="absolute inset-0 bg-gradient-to-t from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             <div className="w-full aspect-[10/10] bg-white/5 rounded-2xl mb-8 flex items-center justify-center overflow-hidden border border-white/5 group-hover:border-accent/30 transition-colors duration-500 relative z-10">
                                 <div className="absolute inset-0 bg-accent/20 scale-0 group-hover:scale-100 transition-transform duration-700 ease-out rounded-full blur-3xl z-10 pointer-events-none" />
-                                <img src="/saleforce-training/image-4.jpg" alt="Test Result" className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
+                                <Image src="/saleforce-training/image-4.jpg" alt="Test Result" fill className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
                             </div>
                             <div className="relative z-10 flex flex-col gap-4">
                                 <div>
@@ -367,7 +368,7 @@ export default function SalesforceTrainingPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6 h-full items-stretch">
                         <div className="border-[3px] border-black bg-black p-8 lg:p-12 flex flex-col min-h-[350px] transition-transform group">
                             <div className="w-full aspect-[10/10] bg-white/5 rounded-2xl mb-8 flex items-center justify-center overflow-hidden border border-white/5 group-hover:border-accent/30 transition-colors duration-500 relative z-10">
-                                <img src="/saleforce-training/image-19.jpeg" alt="Articulation" className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
+                                <Image src="/saleforce-training/image-19.jpeg" alt="Articulation" fill className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
                             </div>
                             <h3 className="font-orbitron font-black text-2xl lg:text-3xl leading-tight lg:leading-[1.1] mb-auto text-white">Articulation <br /> & presence</h3>
                             <p className="text-[9px] md:text-[10px] font-black uppercase mt-16 leading-relaxed tracking-widest text-[#ccc]">Mastering the art of vocal clarity and technical explanation during stakeholder meetings.</p>
@@ -375,7 +376,7 @@ export default function SalesforceTrainingPage() {
 
                         <div className="border-[3px] border-black bg-black p-8 lg:p-12 flex flex-col min-h-[350px] transition-transform group">
                             <div className="w-full aspect-[10/10] bg-white/5 rounded-2xl mb-8 flex items-center justify-center overflow-hidden border border-white/5 group-hover:border-accent/30 transition-colors duration-500 relative z-10">
-                                <img src="/saleforce-training/image-29.jpeg" alt="Corporate Strategy" className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
+                                <Image src="/saleforce-training/image-29.jpeg" alt="Corporate Strategy" fill className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
                             </div>
                             <h3 className="font-orbitron font-black text-2xl lg:text-3xl leading-tight lg:leading-[1.1] mb-auto text-accent">Corporate <br /> strategy</h3>
                             <p className="text-[9px] md:text-[10px] font-black uppercase mt-16 leading-relaxed tracking-widest text-accent">Understanding enterprise workflows and long-term product roadmapping.</p>
@@ -383,7 +384,7 @@ export default function SalesforceTrainingPage() {
 
                         <div className="border-[3px] border-black bg-black p-8 lg:p-12 flex flex-col min-h-[350px] transition-transform group">
                             <div className="w-full aspect-[10/10] bg-white/5 rounded-2xl mb-8 flex items-center justify-center overflow-hidden border border-white/5 group-hover:border-accent/30 transition-colors duration-500 relative z-10">
-                                <img src="/saleforce-training/image-32.jpeg" alt="Behavioral Psychology" className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
+                                <Image src="/saleforce-training/image-32.jpeg" alt="Behavioral Psychology" fill className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
                             </div>
                             <h3 className="font-orbitron font-black text-2xl lg:text-3xl leading-tight lg:leading-[1.1] mb-auto text-white">Behavioral <br /> psychology</h3>
                             <p className="text-[9px] md:text-[10px] font-black uppercase mt-16 leading-relaxed tracking-widest text-[#ccc]">Advanced interview techniques and emotional intelligence for leadership roles.</p>
@@ -403,6 +404,7 @@ export default function SalesforceTrainingPage() {
                     </div>
 
                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8">
+                        {/* Placement Partners Section */}
                         {[
                             "/saleforce-training/softshalaBlackLogo.png",
                             "/saleforce-training/fexle-services.webp",
@@ -410,8 +412,8 @@ export default function SalesforceTrainingPage() {
                             "/saleforce-training/Binario-Logo.webp",
                             "/saleforce-training/Delta-cx-logo.png"
                         ].map((imgSrc, idx) => (
-                            <div key={idx} className="bg-white aspect-square flex items-center justify-center p-6 lg:p-8 hover:scale-105 transition-transform rounded-xl md:rounded-2xl shadow-[inset_0_0_20px_rgba(0,0,0,0.05)] border-4 border-white/10">
-                                <img src={imgSrc} alt={`Placement Partner ${idx + 1}`} className={`w-full h-full object-contain ${imgSrc.includes('White') ? 'invert brightness-0' : ''}`} />
+                            <div key={idx} className="bg-white aspect-square flex items-center justify-center p-6 lg:p-8 hover:scale-105 transition-transform rounded-xl md:rounded-2xl shadow-[inset_0_0_20px_rgba(0,0,0,0.05)] border-4 border-white/10 relative">
+                                <Image src={imgSrc} alt={`Placement Partner ${idx + 1}`} fill className={`w-full h-full object-contain ${imgSrc.includes('White') ? 'invert brightness-0' : ''} p-4 md:p-6 lg:p-8`} />
                             </div>
                         ))}
                     </div>

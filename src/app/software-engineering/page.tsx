@@ -237,23 +237,12 @@ const YouTubePlayer = ({ videoId, title }: { videoId: string; title: string }) =
             onClick={() => setIsPlaying(true)}
         >
             <Image 
-                src="/Other/lab-1.webp" 
+                src="/Other/Software.png" 
                 alt={title}
                 fill
                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
             />
-            <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-all duration-500">
-                <div className="w-20 h-20 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full flex items-center justify-center shadow-2xl transform transition-all duration-500 group-hover:scale-110 group-hover:bg-white/20">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        className="w-10 h-10 text-white ml-1"
-                    >
-                        <path d="M8 5.14v14l11-7-11-7z" />
-                    </svg>
-                </div>
-            </div>
+
         </div>
     );
 };

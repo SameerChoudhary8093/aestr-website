@@ -15,6 +15,7 @@ import FutureFaculty from "@/components/FutureFaculty";
 import Pathways from "@/components/Pathways";
 import PlacementPartners from "@/components/PlacementPartners";
 import ExecutionTeam from "@/components/ExecutionTeam";
+import FAQ from "@/components/FAQ";
 
 
 export default function Home() {
@@ -37,6 +38,7 @@ export default function Home() {
       <PlacementPartners />
       <ExecutionTeam />
       <CourseraPartnership />
+      <FAQ />
     </main>
   );
 }

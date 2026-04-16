@@ -29,7 +29,7 @@ const AboutPointThree = () => {
                     </motion.div>
 
                     {/* Zoomed Out Media Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 w-full max-w-5xl px-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 w-full max-w-6xl px-4">
                         {/* Left Side: Image */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
@@ -38,18 +38,18 @@ const AboutPointThree = () => {
                             transition={{ duration: 0.7 }}
                             className="relative group w-full"
                         >
-                            <div className="h-[300px] md:h-[450px] lg:h-[550px] w-full bg-black/80 rounded-[3rem] border-2 border-white/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/40 group-hover:shadow-[0_0_100px_rgba(216,246,2,0.1)] relative">
+                            <div className="aspect-video w-full bg-black/80 rounded-[2rem] md:rounded-[3rem] border-2 border-white/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/40 group-hover:shadow-[0_0_100px_rgba(216,246,2,0.15)] relative">
                                 <Image
                                     src="/Other/image.jpeg"
                                     alt="Future Technology"
                                     fill
-                                    sizes="(max-width: 1280px) 100vw, 800px"
-                                    className="object-cover"
+                                    priority
+                                    className="object-cover object-top"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 pointer-events-none" />
                             </div>
                         </motion.div>
-
+ 
                         {/* Right Side: Video */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
@@ -58,16 +58,14 @@ const AboutPointThree = () => {
                             transition={{ duration: 0.7 }}
                             className="relative group w-full"
                         >
-                            <div className="h-[300px] md:h-[450px] lg:h-[550px] w-full bg-black/80 rounded-[3rem] border-2 border-white/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/40 group-hover:shadow-[0_0_100px_rgba(216,246,2,0.1)] relative">
-                                <video
-                                    className="w-full h-full object-cover"
-                                    loop
-                                    playsInline
-                                    controls
-                                    preload="auto"
-                                >
-                                    <source src="/Other/Reels.mp4" type="video/mp4" />
-                                </video>
+                            <div className="aspect-video w-full bg-black/80 rounded-[2rem] md:rounded-[3rem] border-2 border-white/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/40 group-hover:shadow-[0_0_100px_rgba(216,246,2,0.15)] relative">
+                                <iframe
+                                    src="https://www.youtube.com/embed/gGh2HYhMSy8?rel=0&modestbranding=1&start=2"
+                                    title="In-Demand Careers of 2030"
+                                    className="w-full h-full"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
                             </div>
                         </motion.div>
                     </div>
