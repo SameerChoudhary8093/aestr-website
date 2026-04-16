@@ -41,7 +41,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester1/CS101.tex"
+    "sourcePath": "public/curriculum/syllabus/semester1/CS101.tex"
   },
   {
     "id": "cx101",
@@ -75,7 +75,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester1/CX101.tex"
+    "sourcePath": "public/curriculum/syllabus/semester1/CX101.tex"
   },
   {
     "id": "hs101",
@@ -117,7 +117,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester1/HS101.tex"
+    "sourcePath": "public/curriculum/syllabus/semester1/HS101.tex"
   },
   {
     "id": "ix101",
@@ -227,7 +227,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester1/IX101.tex"
+    "sourcePath": "public/curriculum/syllabus/semester1/IX101.tex"
   },
   {
     "id": "ma101",
@@ -268,7 +268,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester1/MA101.tex"
+    "sourcePath": "public/curriculum/syllabus/semester1/MA101.tex"
   },
   {
     "id": "ph101",
@@ -312,7 +312,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester1/PH101.tex"
+    "sourcePath": "public/curriculum/syllabus/semester1/PH101.tex"
   },
   {
     "id": "px101",
@@ -347,7 +347,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester1/PX101.tex"
+    "sourcePath": "public/curriculum/syllabus/semester1/PX101.tex"
   },
   {
     "id": "uc1004",
@@ -392,7 +392,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester1/UC1004.tex"
+    "sourcePath": "public/curriculum/syllabus/semester1/UC1004.tex"
   },
   {
     "id": "cs102",
@@ -434,7 +434,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester2/CS102.tex"
+    "sourcePath": "public/curriculum/syllabus/semester2/CS102.tex"
   },
   {
     "id": "cx102",
@@ -468,7 +468,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester2/CX102.tex"
+    "sourcePath": "public/curriculum/syllabus/semester2/CX102.tex"
   },
   {
     "id": "ee101",
@@ -513,7 +513,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester2/EE101.tex"
+    "sourcePath": "public/curriculum/syllabus/semester2/EE101.tex"
   },
   {
     "id": "ex101",
@@ -546,7 +546,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester2/EX101.tex"
+    "sourcePath": "public/curriculum/syllabus/semester2/EX101.tex"
   },
   {
     "id": "hs102",
@@ -590,7 +590,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester2/HS102.tex"
+    "sourcePath": "public/curriculum/syllabus/semester2/HS102.tex"
   },
   {
     "id": "ma102",
@@ -635,7 +635,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester2/MA102.tex"
+    "sourcePath": "public/curriculum/syllabus/semester2/MA102.tex"
   },
   {
     "id": "uc2004",
@@ -679,7 +679,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester2/UC2004.tex"
+    "sourcePath": "public/curriculum/syllabus/semester2/UC2004.tex"
   },
   {
     "id": "cs201",
@@ -723,7 +723,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester3/CS201.tex"
+    "sourcePath": "public/curriculum/syllabus/semester3/CS201.tex"
   },
   {
     "id": "cs202",
@@ -765,7 +765,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester3/CS202.tex"
+    "sourcePath": "public/curriculum/syllabus/semester3/CS202.tex"
   },
   {
     "id": "cs203",
@@ -807,7 +807,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester3/CS203.tex"
+    "sourcePath": "public/curriculum/syllabus/semester3/CS203.tex"
   },
   {
     "id": "cx201",
@@ -841,7 +841,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester3/CX201.tex"
+    "sourcePath": "public/curriculum/syllabus/semester3/CX201.tex"
   },
   {
     "id": "cx202",
@@ -875,7 +875,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester3/CX202.tex"
+    "sourcePath": "public/curriculum/syllabus/semester3/CX202.tex"
   },
   {
     "id": "cy201",
@@ -921,7 +921,7 @@
       "cyber-security"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester3/major1/cyber.tex"
+    "sourcePath": "public/curriculum/syllabus/semester3/major1/cyber.tex"
   },
   {
     "id": "ds201",
@@ -966,7 +966,7 @@
       "data-science"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester3/major1/ds.tex"
+    "sourcePath": "public/curriculum/syllabus/semester3/major1/ds.tex"
   },
   {
     "id": "ix201",
@@ -1076,7 +1076,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester3/IX201.tex"
+    "sourcePath": "public/curriculum/syllabus/semester3/IX201.tex"
   },
   {
     "id": "ma201",
@@ -1123,7 +1123,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester3/MA201.tex"
+    "sourcePath": "public/curriculum/syllabus/semester3/MA201.tex"
   },
   {
     "id": "ml201",
@@ -1169,7 +1169,7 @@
       "artificial-intelligence"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester3/major1/ml.tex"
+    "sourcePath": "public/curriculum/syllabus/semester3/major1/ml.tex"
   },
   {
     "id": "mn-bio",
@@ -1220,7 +1220,7 @@
     "minorTracks": [
       "bioinformatics"
     ],
-    "sourcePath": "public/Curriculum/syllabus/minor_exp/mn-bio.tex"
+    "sourcePath": "public/curriculum/syllabus/minor_exp/mn-bio.tex"
   },
   {
     "id": "mn-civ",
@@ -1275,7 +1275,7 @@
     "minorTracks": [
       "smart-cities"
     ],
-    "sourcePath": "public/Curriculum/syllabus/minor_exp/mn-civ.tex"
+    "sourcePath": "public/curriculum/syllabus/minor_exp/mn-civ.tex"
   },
   {
     "id": "mn-des",
@@ -1326,7 +1326,7 @@
     "minorTracks": [
       "product-design"
     ],
-    "sourcePath": "public/Curriculum/syllabus/minor_exp/mn-des.tex"
+    "sourcePath": "public/curriculum/syllabus/minor_exp/mn-des.tex"
   },
   {
     "id": "mn-evm",
@@ -1381,7 +1381,7 @@
     "minorTracks": [
       "mechatronics"
     ],
-    "sourcePath": "public/Curriculum/syllabus/minor_exp/mn-evm.tex"
+    "sourcePath": "public/curriculum/syllabus/minor_exp/mn-evm.tex"
   },
   {
     "id": "mn-fin",
@@ -1434,7 +1434,7 @@
     "minorTracks": [
       "fintech"
     ],
-    "sourcePath": "public/Curriculum/syllabus/minor_exp/mn-fin.tex"
+    "sourcePath": "public/curriculum/syllabus/minor_exp/mn-fin.tex"
   },
   {
     "id": "mn-geo",
@@ -1489,7 +1489,7 @@
     "minorTracks": [
       "geoinformatics"
     ],
-    "sourcePath": "public/Curriculum/syllabus/minor_exp/mn-geo.tex"
+    "sourcePath": "public/curriculum/syllabus/minor_exp/mn-geo.tex"
   },
   {
     "id": "mn-mat",
@@ -1542,7 +1542,7 @@
     "minorTracks": [
       "nanomaterials"
     ],
-    "sourcePath": "public/Curriculum/syllabus/minor_exp/mn-mat.tex"
+    "sourcePath": "public/curriculum/syllabus/minor_exp/mn-mat.tex"
   },
   {
     "id": "mn-med",
@@ -1592,7 +1592,7 @@
     "minorTracks": [
       "biomedical"
     ],
-    "sourcePath": "public/Curriculum/syllabus/minor_exp/mn-med.tex"
+    "sourcePath": "public/curriculum/syllabus/minor_exp/mn-med.tex"
   },
   {
     "id": "mn-mfg",
@@ -1647,7 +1647,7 @@
     "minorTracks": [
       "smart-manufacturing"
     ],
-    "sourcePath": "public/Curriculum/syllabus/minor_exp/mn-mfg.tex"
+    "sourcePath": "public/curriculum/syllabus/minor_exp/mn-mfg.tex"
   },
   {
     "id": "mn-sem",
@@ -1698,7 +1698,7 @@
     "minorTracks": [
       "semiconductor-risc-v"
     ],
-    "sourcePath": "public/Curriculum/syllabus/minor_exp/mn-sem.tex"
+    "sourcePath": "public/curriculum/syllabus/minor_exp/mn-sem.tex"
   },
   {
     "id": "rb201",
@@ -1743,7 +1743,7 @@
       "robotics"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester3/major1/robotics.tex"
+    "sourcePath": "public/curriculum/syllabus/semester3/major1/robotics.tex"
   },
   {
     "id": "se201",
@@ -1802,7 +1802,7 @@
       "software-cloud"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester3/major1/se.tex"
+    "sourcePath": "public/curriculum/syllabus/semester3/major1/se.tex"
   },
   {
     "id": "cs204",
@@ -1846,7 +1846,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester4/CS204.tex"
+    "sourcePath": "public/curriculum/syllabus/semester4/CS204.tex"
   },
   {
     "id": "cs205",
@@ -1889,7 +1889,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester4/CS205.tex"
+    "sourcePath": "public/curriculum/syllabus/semester4/CS205.tex"
   },
   {
     "id": "cs206",
@@ -1938,7 +1938,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester4/CS206.tex"
+    "sourcePath": "public/curriculum/syllabus/semester4/CS206.tex"
   },
   {
     "id": "cx205",
@@ -1972,7 +1972,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester4/CX205.tex"
+    "sourcePath": "public/curriculum/syllabus/semester4/CX205.tex"
   },
   {
     "id": "cx206",
@@ -2012,7 +2012,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester4/CX206.tex"
+    "sourcePath": "public/curriculum/syllabus/semester4/CX206.tex"
   },
   {
     "id": "cy202",
@@ -2071,7 +2071,7 @@
       "cyber-security"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester4/major2/cyber.tex"
+    "sourcePath": "public/curriculum/syllabus/semester4/major2/cyber.tex"
   },
   {
     "id": "ds202",
@@ -2133,7 +2133,7 @@
       "data-science"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester4/major2/ds.tex"
+    "sourcePath": "public/curriculum/syllabus/semester4/major2/ds.tex"
   },
   {
     "id": "ix202",
@@ -2243,7 +2243,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester4/IX202.tex"
+    "sourcePath": "public/curriculum/syllabus/semester4/IX202.tex"
   },
   {
     "id": "ma202",
@@ -2288,7 +2288,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester4/MA202.tex"
+    "sourcePath": "public/curriculum/syllabus/semester4/MA202.tex"
   },
   {
     "id": "ml202",
@@ -2348,7 +2348,7 @@
       "artificial-intelligence"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester4/major2/ml.tex"
+    "sourcePath": "public/curriculum/syllabus/semester4/major2/ml.tex"
   },
   {
     "id": "rb202",
@@ -2404,7 +2404,7 @@
       "robotics"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester4/major2/robotics.tex"
+    "sourcePath": "public/curriculum/syllabus/semester4/major2/robotics.tex"
   },
   {
     "id": "se202",
@@ -2463,7 +2463,7 @@
       "software-cloud"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester4/major2/se.tex"
+    "sourcePath": "public/curriculum/syllabus/semester4/major2/se.tex"
   },
   {
     "id": "cs301",
@@ -2506,7 +2506,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester5/CS301.tex"
+    "sourcePath": "public/curriculum/syllabus/semester5/CS301.tex"
   },
   {
     "id": "cs302",
@@ -2552,7 +2552,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester5/CS302.tex"
+    "sourcePath": "public/curriculum/syllabus/semester5/CS302.tex"
   },
   {
     "id": "cx301",
@@ -2585,7 +2585,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester5/CX301.tex"
+    "sourcePath": "public/curriculum/syllabus/semester5/CX301.tex"
   },
   {
     "id": "cy301",
@@ -2633,7 +2633,7 @@
       "cyber-security"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester5/major3/cyber.tex"
+    "sourcePath": "public/curriculum/syllabus/semester5/major3/cyber.tex"
   },
   {
     "id": "cy401",
@@ -2693,7 +2693,7 @@
       "cyber-security"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester5/major4/cyber.tex"
+    "sourcePath": "public/curriculum/syllabus/semester5/major4/cyber.tex"
   },
   {
     "id": "ds301",
@@ -2753,7 +2753,7 @@
       "data-science"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester5/major3/ds.tex"
+    "sourcePath": "public/curriculum/syllabus/semester5/major3/ds.tex"
   },
   {
     "id": "ds401",
@@ -2814,7 +2814,7 @@
       "data-science"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester5/major4/ds.tex"
+    "sourcePath": "public/curriculum/syllabus/semester5/major4/ds.tex"
   },
   {
     "id": "ix301",
@@ -2892,7 +2892,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester5/IX301.tex"
+    "sourcePath": "public/curriculum/syllabus/semester5/IX301.tex"
   },
   {
     "id": "ml301",
@@ -2952,7 +2952,7 @@
       "artificial-intelligence"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester5/major3/ml.tex"
+    "sourcePath": "public/curriculum/syllabus/semester5/major3/ml.tex"
   },
   {
     "id": "ml401",
@@ -3013,7 +3013,7 @@
       "artificial-intelligence"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester5/major4/ml.tex"
+    "sourcePath": "public/curriculum/syllabus/semester5/major4/ml.tex"
   },
   {
     "id": "rb301",
@@ -3074,7 +3074,7 @@
       "robotics"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester5/major3/robotics.tex"
+    "sourcePath": "public/curriculum/syllabus/semester5/major3/robotics.tex"
   },
   {
     "id": "rb401",
@@ -3135,7 +3135,7 @@
       "robotics"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester5/major4/robotics.tex"
+    "sourcePath": "public/curriculum/syllabus/semester5/major4/robotics.tex"
   },
   {
     "id": "se301",
@@ -3185,7 +3185,7 @@
       "software-cloud"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester5/major3/se.tex"
+    "sourcePath": "public/curriculum/syllabus/semester5/major3/se.tex"
   },
   {
     "id": "se401",
@@ -3242,7 +3242,7 @@
       "software-cloud"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester5/major4/se.tex"
+    "sourcePath": "public/curriculum/syllabus/semester5/major4/se.tex"
   },
   {
     "id": "cs303",
@@ -3285,7 +3285,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester6/CS303.tex"
+    "sourcePath": "public/curriculum/syllabus/semester6/CS303.tex"
   },
   {
     "id": "cs304",
@@ -3330,7 +3330,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester6/CS304.tex"
+    "sourcePath": "public/curriculum/syllabus/semester6/CS304.tex"
   },
   {
     "id": "cx304",
@@ -3364,7 +3364,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester6/CX304.tex"
+    "sourcePath": "public/curriculum/syllabus/semester6/CX304.tex"
   },
   {
     "id": "cy501",
@@ -3410,7 +3410,7 @@
       "cyber-security"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester6/major5/cyber.tex"
+    "sourcePath": "public/curriculum/syllabus/semester6/major5/cyber.tex"
   },
   {
     "id": "cy601",
@@ -3471,7 +3471,7 @@
       "cyber-security"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester6/major6/cyber.tex"
+    "sourcePath": "public/curriculum/syllabus/semester6/major6/cyber.tex"
   },
   {
     "id": "ds501",
@@ -3529,7 +3529,7 @@
       "data-science"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester6/major5/ds.tex"
+    "sourcePath": "public/curriculum/syllabus/semester6/major5/ds.tex"
   },
   {
     "id": "ds601",
@@ -3588,7 +3588,7 @@
       "data-science"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester6/major6/ds.tex"
+    "sourcePath": "public/curriculum/syllabus/semester6/major6/ds.tex"
   },
   {
     "id": "ml501",
@@ -3646,7 +3646,7 @@
       "artificial-intelligence"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester6/major5/ml.tex"
+    "sourcePath": "public/curriculum/syllabus/semester6/major5/ml.tex"
   },
   {
     "id": "ml601",
@@ -3705,7 +3705,7 @@
       "artificial-intelligence"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester6/major6/ml.tex"
+    "sourcePath": "public/curriculum/syllabus/semester6/major6/ml.tex"
   },
   {
     "id": "rb501",
@@ -3767,7 +3767,7 @@
       "robotics"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester6/major5/robotics.tex"
+    "sourcePath": "public/curriculum/syllabus/semester6/major5/robotics.tex"
   },
   {
     "id": "rb601",
@@ -3823,7 +3823,7 @@
       "robotics"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester6/major6/robotics.tex"
+    "sourcePath": "public/curriculum/syllabus/semester6/major6/robotics.tex"
   },
   {
     "id": "se501",
@@ -3871,7 +3871,7 @@
       "software-cloud"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester6/major5/se.tex"
+    "sourcePath": "public/curriculum/syllabus/semester6/major5/se.tex"
   },
   {
     "id": "se601",
@@ -3934,7 +3934,7 @@
       "software-cloud"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester6/major6/se.tex"
+    "sourcePath": "public/curriculum/syllabus/semester6/major6/se.tex"
   },
   {
     "id": "cy-el1",
@@ -3996,7 +3996,7 @@
       "cyber-security"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_cyber/CY-EL1.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_cyber/CY-EL1.tex"
   },
   {
     "id": "cy-el2",
@@ -4056,7 +4056,7 @@
       "cyber-security"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_cyber/CY-EL2.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_cyber/CY-EL2.tex"
   },
   {
     "id": "cy-el3",
@@ -4117,7 +4117,7 @@
       "cyber-security"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_cyber/CY-EL3.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_cyber/CY-EL3.tex"
   },
   {
     "id": "cy-el4",
@@ -4179,7 +4179,7 @@
       "cyber-security"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_cyber/CY-EL4.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_cyber/CY-EL4.tex"
   },
   {
     "id": "cy-el5",
@@ -4239,7 +4239,7 @@
       "cyber-security"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_cyber/CY-EL5.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_cyber/CY-EL5.tex"
   },
   {
     "id": "cy-el6",
@@ -4285,7 +4285,7 @@
       "cyber-security"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_cyber/CY-EL6.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_cyber/CY-EL6.tex"
   },
   {
     "id": "ds-el1",
@@ -4347,7 +4347,7 @@
       "data-science"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_ds/DS-EL1.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_ds/DS-EL1.tex"
   },
   {
     "id": "ds-el2",
@@ -4410,7 +4410,7 @@
       "data-science"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_ds/DS-EL2.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_ds/DS-EL2.tex"
   },
   {
     "id": "ds-el3",
@@ -4470,7 +4470,7 @@
       "data-science"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_ds/DS-EL3.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_ds/DS-EL3.tex"
   },
   {
     "id": "ds-el4",
@@ -4518,7 +4518,7 @@
       "data-science"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_ds/DS-EL4.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_ds/DS-EL4.tex"
   },
   {
     "id": "ds-el5",
@@ -4578,7 +4578,7 @@
       "data-science"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_ds/DS-EL5.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_ds/DS-EL5.tex"
   },
   {
     "id": "ds-el6",
@@ -4638,7 +4638,7 @@
       "data-science"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_ds/DS-EL6.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_ds/DS-EL6.tex"
   },
   {
     "id": "ml-el1",
@@ -4695,7 +4695,7 @@
       "artificial-intelligence"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_ml/ML-EL1.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_ml/ML-EL1.tex"
   },
   {
     "id": "ml-el2",
@@ -4754,7 +4754,7 @@
       "artificial-intelligence"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_ml/ML-EL2.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_ml/ML-EL2.tex"
   },
   {
     "id": "ml-el3",
@@ -4809,7 +4809,7 @@
       "artificial-intelligence"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_ml/ML-EL3.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_ml/ML-EL3.tex"
   },
   {
     "id": "ml-el4",
@@ -4859,7 +4859,7 @@
       "artificial-intelligence"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_ml/ML-EL4.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_ml/ML-EL4.tex"
   },
   {
     "id": "ml-el5",
@@ -4906,7 +4906,7 @@
       "artificial-intelligence"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_ml/ML-EL5.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_ml/ML-EL5.tex"
   },
   {
     "id": "ml-el6",
@@ -4968,7 +4968,7 @@
       "artificial-intelligence"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_ml/ML-EL6.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_ml/ML-EL6.tex"
   },
   {
     "id": "mn-bio-a",
@@ -5020,7 +5020,7 @@
     "minorTracks": [
       "bioinformatics"
     ],
-    "sourcePath": "public/Curriculum/syllabus/minor_adv/mn-bio-a.tex"
+    "sourcePath": "public/curriculum/syllabus/minor_adv/mn-bio-a.tex"
   },
   {
     "id": "mn-civ-a",
@@ -5073,7 +5073,7 @@
     "minorTracks": [
       "smart-cities"
     ],
-    "sourcePath": "public/Curriculum/syllabus/minor_adv/mn-civ-a.tex"
+    "sourcePath": "public/curriculum/syllabus/minor_adv/mn-civ-a.tex"
   },
   {
     "id": "mn-des-a",
@@ -5126,7 +5126,7 @@
     "minorTracks": [
       "product-design"
     ],
-    "sourcePath": "public/Curriculum/syllabus/minor_adv/mn-des-a.tex"
+    "sourcePath": "public/curriculum/syllabus/minor_adv/mn-des-a.tex"
   },
   {
     "id": "mn-evm-a",
@@ -5179,7 +5179,7 @@
     "minorTracks": [
       "mechatronics"
     ],
-    "sourcePath": "public/Curriculum/syllabus/minor_adv/mn-evm-a.tex"
+    "sourcePath": "public/curriculum/syllabus/minor_adv/mn-evm-a.tex"
   },
   {
     "id": "mn-fin-a",
@@ -5230,7 +5230,7 @@
     "minorTracks": [
       "fintech"
     ],
-    "sourcePath": "public/Curriculum/syllabus/minor_adv/mn-fin-a.tex"
+    "sourcePath": "public/curriculum/syllabus/minor_adv/mn-fin-a.tex"
   },
   {
     "id": "mn-geo-a",
@@ -5283,7 +5283,7 @@
     "minorTracks": [
       "geoinformatics"
     ],
-    "sourcePath": "public/Curriculum/syllabus/minor_adv/mn-geo-a.tex"
+    "sourcePath": "public/curriculum/syllabus/minor_adv/mn-geo-a.tex"
   },
   {
     "id": "mn-mat-a",
@@ -5336,7 +5336,7 @@
     "minorTracks": [
       "nanomaterials"
     ],
-    "sourcePath": "public/Curriculum/syllabus/minor_adv/mn-mat-a.tex"
+    "sourcePath": "public/curriculum/syllabus/minor_adv/mn-mat-a.tex"
   },
   {
     "id": "mn-med-a",
@@ -5388,7 +5388,7 @@
     "minorTracks": [
       "biomedical"
     ],
-    "sourcePath": "public/Curriculum/syllabus/minor_adv/mn-med-a.tex"
+    "sourcePath": "public/curriculum/syllabus/minor_adv/mn-med-a.tex"
   },
   {
     "id": "mn-mfg-a",
@@ -5441,7 +5441,7 @@
     "minorTracks": [
       "smart-manufacturing"
     ],
-    "sourcePath": "public/Curriculum/syllabus/minor_adv/mn-mfg-a.tex"
+    "sourcePath": "public/curriculum/syllabus/minor_adv/mn-mfg-a.tex"
   },
   {
     "id": "mn-sem-a",
@@ -5493,7 +5493,7 @@
     "minorTracks": [
       "semiconductor-risc-v"
     ],
-    "sourcePath": "public/Curriculum/syllabus/minor_adv/mn-sem-a.tex"
+    "sourcePath": "public/curriculum/syllabus/minor_adv/mn-sem-a.tex"
   },
   {
     "id": "rb-el1",
@@ -5548,7 +5548,7 @@
       "robotics"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_robotics/RB-EL1.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_robotics/RB-EL1.tex"
   },
   {
     "id": "rb-el2",
@@ -5607,7 +5607,7 @@
       "robotics"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_robotics/RB-EL2.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_robotics/RB-EL2.tex"
   },
   {
     "id": "rb-el3",
@@ -5667,7 +5667,7 @@
       "robotics"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_robotics/RB-EL3.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_robotics/RB-EL3.tex"
   },
   {
     "id": "rb-el4",
@@ -5724,7 +5724,7 @@
       "robotics"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_robotics/RB-EL4.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_robotics/RB-EL4.tex"
   },
   {
     "id": "rb-el5",
@@ -5782,7 +5782,7 @@
       "robotics"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_robotics/RB-EL5.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_robotics/RB-EL5.tex"
   },
   {
     "id": "rb-el6",
@@ -5838,7 +5838,7 @@
       "robotics"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_robotics/RB-EL6.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_robotics/RB-EL6.tex"
   },
   {
     "id": "se-el1",
@@ -5898,7 +5898,7 @@
       "software-cloud"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_se/SE-EL1.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_se/SE-EL1.tex"
   },
   {
     "id": "se-el2",
@@ -5953,7 +5953,7 @@
       "software-cloud"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_se/SE-EL2.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_se/SE-EL2.tex"
   },
   {
     "id": "se-el3",
@@ -6016,7 +6016,7 @@
       "software-cloud"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_se/SE-EL3.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_se/SE-EL3.tex"
   },
   {
     "id": "se-el4",
@@ -6076,7 +6076,7 @@
       "software-cloud"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_se/SE-EL4.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_se/SE-EL4.tex"
   },
   {
     "id": "se-el5",
@@ -6137,7 +6137,7 @@
       "software-cloud"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_se/SE-EL5.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_se/SE-EL5.tex"
   },
   {
     "id": "se-el6",
@@ -6182,7 +6182,7 @@
       "software-cloud"
     ],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/elec_se/SE-EL6.tex"
+    "sourcePath": "public/curriculum/syllabus/elec_se/SE-EL6.tex"
   },
   {
     "id": "sm401",
@@ -6219,7 +6219,7 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester7/SM401.tex"
+    "sourcePath": "public/curriculum/syllabus/semester7/SM401.tex"
   },
   {
     "id": "pr402",
@@ -6253,6 +6253,6 @@
     ],
     "majorTracks": [],
     "minorTracks": [],
-    "sourcePath": "public/Curriculum/syllabus/semester8/PR402.tex"
+    "sourcePath": "public/curriculum/syllabus/semester8/PR402.tex"
   }
 ]
