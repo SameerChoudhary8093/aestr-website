@@ -69,7 +69,7 @@ export default function DayAtAestr() {
                 </div>
             </div>
 
-            {/* Black Section: Description + Main Image + Grid */}
+            {/* Black Section: Description + Visual Feed */}
             <div className="bg-black py-24 relative overflow-hidden">
                 <div className="container-boxed max-w-7xl mx-auto px-6 relative z-10 space-y-20">
                     {/* Content Section */}
@@ -78,11 +78,19 @@ export default function DayAtAestr() {
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="space-y-8"
+                            className="flex flex-col justify-center h-full"
                         >
-                            <p className="text-lg md:text-xl text-white leading-relaxed font-normal font-sans text-center lg:text-left">
-                                At AESTR, a typical day blends hands-on innovation with AI-driven learning. By 9 AM, students dive into immersive bootcamps like “How to Build a Humanoid Robot,” where theory meets real-world creation. In labs, they design, code, and train robots not rote exams, just functional prototypes as proof of learning. Over lunch, conversations revolve around sensors, models, and routes not marks. By afternoon, feedback sessions turn into mentoring moments, refining both tech and thinking. By 4 PM, robots deliver across campus, showcasing not just knowledge but industry-ready execution. At AESTR, students don’t just study, they build, test, and launch.
-                            </p>
+                            <div className="space-y-6 text-base md:text-lg text-white leading-relaxed font-normal font-sans text-left">
+                                <p>
+                                    At AESTR, education isn't a passive lecture; it's an immersive experience in engineering excellence. A typical day begins at 8 AM in our glass-walled "Deep Work" zones, where students architect neural network topologies before the first line of code is even written. This focus on first principles ensures that every builder understands the "why" behind every "how" of AI.
+                                </p>
+                                <p>
+                                    By mid-morning, the energy shifts to the Innovation Labs where theory collides with hardware as students collaborate on humanoid robots and custom silicon. Using high-performance NVIDIA clusters, they spend afternoons fine-tuning LLMs and computer vision systems. Here, rote exams are replaced with functional prototypes—the definitive proof of learning and industry-ready execution.
+                                </p>
+                                <p>
+                                    As the sun sets, the "Engineering Lounge" becomes a hub for technical architecture reviews and peer-led critiques that refine both tech and thinking. The day often culminates in the "Midnight Build"—pushing code from local environments to live cloud platforms. At AESTR, students don’t just study for a career; they spend four years building, testing, and launching the future.
+                                </p>
+                            </div>
                         </motion.div>
 
                         <motion.div 
@@ -92,8 +100,8 @@ export default function DayAtAestr() {
                             className="relative aspect-[4/3] rounded-[2.5rem] overflow-hidden border-4 border-white/20 shadow-[0_32px_64px_-12px_rgba(0,0,0,0.4)]"
                         >
                             <Image
-                                src="/Other/AI-faculty.png"
-                                alt="AESTR Student Life"
+                                src="/DayInLife/01_morning_focus.png"
+                                alt="AESTR Student Life - Deep Focus"
                                 fill
                                 className="object-cover"
                             />
@@ -101,11 +109,16 @@ export default function DayAtAestr() {
                         </motion.div>
                     </div>
 
-                    {/* 4-Image Grid */}
+                    {/* 4-Image Grid with New Premium Assets */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-                        {[1, 2, 3, 4].map((i, index) => (
+                        {[
+                            { src: "/DayInLife/02_lab_collaboration.png", alt: "Lab Collaboration" },
+                            { src: "/DayInLife/03_afternoon_coding.png", alt: "Intense Coding" },
+                            { src: "/DayInLife/04_evening_discussion.png", alt: "Technical Discussion" },
+                            { src: "/DayInLife/05_night_deployment.png", alt: "Deployment Celebration" }
+                        ].map((img, index) => (
                             <motion.div 
-                                key={i}
+                                key={index}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
@@ -113,8 +126,8 @@ export default function DayAtAestr() {
                                 className="relative aspect-square rounded-3xl overflow-hidden border-2 border-white/10 shadow-xl group cursor-pointer"
                             >
                                 <Image
-                                    src={`/Other/lab-${i}.webp`}
-                                    alt={`AESTR Student Work ${i}`}
+                                    src={img.src}
+                                    alt={img.alt}
                                     fill
                                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                                 />
