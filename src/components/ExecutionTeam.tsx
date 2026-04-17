@@ -154,7 +154,7 @@ const ExecutionTeam = () => {
                     ))}
                 </div>
 
-                {/* 3+1 Global Edge Strip */}
+                {/* 3+1 / 2+2 Global Edge Strip */}
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -188,7 +188,7 @@ const ExecutionTeam = () => {
                             {/* Right: Text Content */}
                             <div className="flex flex-col justify-center space-y-5 md:space-y-6 text-left">
                                 <h3 className="text-3xl md:text-4xl lg:text-[2.6rem] font-orbitron font-extrabold text-[#5B1DD6] leading-snug">
-                                    The 3+1 Global Edge
+                                    The 3+1 / 2+2 Global Edge
                                     <span className="block text-base md:text-lg lg:text-2xl font-orbitron font-bold text-[#1A1040]">
                                         (Your International Pipeline)
                                     </span>

@@ -5,46 +5,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import StickyAdmissionsBar from '@/components/StickyAdmissionsBar';
+import { blogPosts } from '@/data/blogs';
 
 const BlogsPage = () => {
-    const blogPosts = [
-        {
-            title: "The Rise of Agentic AI: Why it's the next Frontier",
-            excerpt: "Understanding how autonomous agents are redefining software engineering and industry workflows.",
-            author: "Dr. Arastu Sharma",
-            date: "Mar 10, 2026",
-            category: "Artificial Intelligence",
-            image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80",
-            categoryColor: "bg-purple-500/10 text-purple-400 border-purple-500/20"
-        },
-        {
-            title: "RISC-V: India's Path to Semiconductor Sovereignty",
-            excerpt: "Why AESTR is betting big on open-source hardware and the future of Indian processors.",
-            author: "Kanishk Sharma",
-            date: "Feb 28, 2026",
-            category: "Hardware",
-            image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
-            categoryColor: "bg-orange-500/10 text-orange-400 border-orange-500/20"
-        },
-        {
-            title: "Embodied Intelligence: Machines that Feel",
-            excerpt: "A deep dive into the Robotics lab and how we are building machines that interact with the physical world.",
-            author: "Team AESTR",
-            date: "Feb 15, 2026",
-            category: "Robotics",
-            image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80",
-            categoryColor: "bg-green-500/10 text-green-400 border-green-500/20"
-        },
-        {
-            title: "The Ethical Dilemma of Generative Systems",
-            excerpt: "How AESTR students are leading the conversation on responsible AI development.",
-            author: "Prof. MP Poonia",
-            date: "Jan 30, 2026",
-            category: "Ethics",
-            image: "https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=800&q=80",
-            categoryColor: "bg-blue-500/10 text-blue-400 border-blue-500/20"
-        }
-    ];
+    // Featured post is the first one
+    const featuredPost = blogPosts[0];
+    // Remaining posts for the grid
+    const feedPosts = blogPosts.slice(1);
 
     return (
         <>
@@ -79,50 +46,53 @@ const BlogsPage = () => {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="group cursor-pointer"
                         >
-                            <div className="bg-black/50 backdrop-blur-sm border border-black/20 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
-                                <div className="flex flex-col lg:flex-row">
-                                    <div className="lg:w-1/2 h-64 lg:h-auto relative">
-                                        <Image 
-                                            src={blogPosts[0].image} 
-                                            alt="Featured Post" 
-                                            fill 
-                                            className="object-cover group-hover:scale-105 transition-transform duration-700"
-                                        />
-                                    </div>
-                                    <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-between">
-                                        <div>
-                                            <div className="flex items-center gap-4 mb-4">
-                                                <span className={`px-3 py-1 rounded-full text-xs font-semibold border ${blogPosts[0].categoryColor}`}>
-                                                    {blogPosts[0].category}
-                                                </span>
-                                                <span className="text-sm text-white/70">{blogPosts[0].date}</span>
-                                            </div>
-                                            <h2 className="text-2xl md:text-3xl font-orbitron font-black text-white mb-4 leading-tight group-hover:text-accent transition-colors">
-                                                {blogPosts[0].title}
-                                            </h2>
-                                            <p className="text-white/80 leading-relaxed mb-6 font-orbitron">
-                                                {blogPosts[0].excerpt}
-                                            </p>
+                            <Link href={`/blogs/${featuredPost.slug}`} className="group block">
+                                <div className="bg-black/50 backdrop-blur-sm border border-black/20 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+                                    <div className="flex flex-col lg:flex-row">
+                                        <div className="lg:w-1/2 h-64 lg:h-auto relative">
+                                            <Image 
+                                                src={featuredPost.image} 
+                                                alt={featuredPost.title} 
+                                                fill 
+                                                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                            />
                                         </div>
-                                        <div className="flex items-center justify-between">
-                                            <div className="flex items-center gap-3">
-                                                <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
-                                                    <span className="text-accent font-semibold text-sm">AS</span>
+                                        <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-between">
+                                            <div>
+                                                <div className="flex items-center gap-4 mb-4">
+                                                    <span className={`px-3 py-1 rounded-full text-xs font-semibold border ${featuredPost.categoryColor}`}>
+                                                        {featuredPost.category}
+                                                    </span>
+                                                    <span className="text-sm text-white/70">{featuredPost.date}</span>
                                                 </div>
-                                                <div>
-                                                    <p className="text-sm font-semibold text-white font-orbitron">{blogPosts[0].author}</p>
-                                                    <p className="text-xs text-white/70 font-orbitron">Founding Member</p>
-                                                </div>
+                                                <h2 className="text-2xl md:text-3xl font-orbitron font-black text-white mb-4 leading-tight group-hover:text-accent transition-colors">
+                                                    {featuredPost.title}
+                                                </h2>
+                                                <p className="text-white/80 leading-relaxed mb-6 font-orbitron">
+                                                    {featuredPost.excerpt}
+                                                </p>
                                             </div>
-                                            <span className="text-accent text-xl group-hover:translate-x-2 transition-transform inline-block">
-                                                →
-                                            </span>
+                                            <div className="flex items-center justify-between">
+                                                <div className="flex items-center gap-3">
+                                                    <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
+                                                        <span className="text-accent font-semibold text-sm">
+                                                            {featuredPost.author.split(' ').map(n => n[0]).join('')}
+                                                        </span>
+                                                    </div>
+                                                    <div>
+                                                        <p className="text-sm font-semibold text-white font-orbitron">{featuredPost.author}</p>
+                                                        <p className="text-xs text-white/70 font-orbitron">Thought Leader</p>
+                                                    </div>
+                                                </div>
+                                                <span className="text-accent text-xl group-hover:translate-x-2 transition-transform inline-block">
+                                                    →
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         </motion.div>
                     </div>
                 </section>
@@ -131,49 +101,68 @@ const BlogsPage = () => {
                 <section className="py-16 px-4 bg-[#D7F601]">
                     <div className="container mx-auto max-w-6xl">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {blogPosts.slice(1).map((post, index) => (
+                            {feedPosts.map((post, index) => (
                                 <motion.article
-                                    key={index}
+                                    key={post.slug}
                                     initial={{ opacity: 0, y: 30 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                                    className="group cursor-pointer"
                                 >
-                                    <div className="bg-black/50 backdrop-blur-sm border border-black/20 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
-                                        <div className="h-48 relative">
-                                            <Image 
-                                                src={post.image} 
-                                                alt={post.title} 
-                                                fill 
-                                                className="object-cover group-hover:scale-105 transition-transform duration-700"
-                                            />
-                                            <div className="absolute top-4 left-4">
-                                                <span className={`px-3 py-1 rounded-full text-xs font-semibold border ${post.categoryColor}`}>
-                                                    {post.category}
-                                                </span>
+                                    <Link href={`/blogs/${post.slug}`} className="group block h-full">
+                                        <div className="bg-black border border-white/5 rounded-2xl overflow-hidden hover:shadow-[0_0_40px_rgba(215,246,1,0.15)] transition-all duration-500 hover:-translate-y-2 h-full flex flex-col group/card">
+                                            <div className="h-60 relative overflow-hidden">
+                                                <Image 
+                                                    src={post.image} 
+                                                    alt={post.title} 
+                                                    fill 
+                                                    className="object-cover group-hover/card:scale-110 transition-transform duration-1000 ease-out"
+                                                />
+                                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+                                                <div className="absolute top-4 left-4">
+                                                    <span className={`px-3 py-1.5 rounded-full text-[9px] uppercase tracking-[0.2em] font-bold border ${post.categoryColor} backdrop-blur-xl bg-black/40`}>
+                                                        {post.category}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div className="p-8 flex flex-col flex-grow bg-black relative">
+                                                {/* Decorative Accent Line */}
+                                                <div className="absolute top-0 left-8 right-8 h-[1px] bg-gradient-to-r from-transparent via-accent/20 to-transparent"></div>
+                                                
+                                                <div className="text-[10px] uppercase tracking-[0.3em] text-accent mb-4 font-orbitron font-black">{post.date}</div>
+                                                <h3 className="text-xl md:text-2xl font-orbitron font-black text-white mb-4 leading-[1.2] group-hover:text-accent transition-colors duration-300">
+                                                    {post.title}
+                                                </h3>
+                                                <p className="text-white/80 text-sm leading-relaxed mb-8 flex-grow font-orbitron font-medium line-clamp-3">
+                                                    {post.excerpt}
+                                                </p>
+                                                
+                                                <div className="flex items-center justify-between pt-6 border-t border-white/5">
+                                                    <div className="flex items-center gap-3">
+                                                        <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center border border-accent/20 group-hover/card:border-accent/50 transition-colors">
+                                                            <span className="text-[10px] text-accent font-black">
+                                                                {post.author.split(' ').map(n => n[0]).join('')}
+                                                            </span>
+                                                        </div>
+                                                        <div className="flex flex-col">
+                                                            <span className="text-[9px] uppercase tracking-widest text-white/40 font-orbitron font-bold">Written By</span>
+                                                            <span className="text-[11px] uppercase tracking-wider text-white font-orbitron font-black">{post.author}</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover/card:border-accent/50 group-hover/card:bg-accent/5 transition-all duration-300">
+                                                        <span className="text-accent text-xl group-hover:translate-x-1 transition-transform inline-block">
+                                                            →
+                                                        </span>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div className="p-6 flex flex-col flex-grow">
-                                            <div className="text-sm text-white/70 mb-3 font-orbitron">{post.date}</div>
-                                            <h3 className="text-xl font-orbitron font-black text-white mb-3 leading-tight group-hover:text-accent transition-colors">
-                                                {post.title}
-                                            </h3>
-                                            <p className="text-white/60 leading-relaxed mb-6 flex-grow font-orbitron">
-                                                {post.excerpt}
-                                            </p>
-                                            <div className="flex items-center justify-between pt-4 border-t border-black/20">
-                                                <span className="text-sm text-white/70 font-orbitron">{post.author}</span>
-                                                <span className="text-accent text-lg group-hover:translate-x-2 transition-transform inline-block opacity-0 group-hover:opacity-100">
-                                                    →
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </Link>
                                 </motion.article>
                             ))}
                         </div>
                     </div>
                 </section>
+
 
                 {/* Newsletter/Call to Action - The Retention - Continue Neon Theme */}
                 <section className="py-24 px-4 bg-[#D7F601]">
