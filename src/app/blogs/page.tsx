@@ -164,40 +164,6 @@ const BlogsPage = () => {
                 </section>
 
 
-                {/* Newsletter/Call to Action - The Retention - Continue Neon Theme */}
-                <section className="py-24 px-4 bg-[#D7F601]">
-                    <div className="container mx-auto max-w-4xl text-center">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.6 }}
-                        >
-                            <h2 className="text-3xl md:text-4xl font-orbitron font-black text-black mb-4">
-                                Stay Ahead of the Curve
-                            </h2>
-                            <p className="text-black/70 mb-8 max-w-2xl mx-auto font-orbitron">
-                                Get the latest AI breakthroughs, research insights, and tech trends delivered directly to your inbox.
-                            </p>
-                            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                                <input 
-                                    type="email" 
-                                    placeholder="Enter your email" 
-                                    className="flex-1 px-4 py-3 bg-black/50 border border-black/20 rounded-xl focus:outline-none focus:border-accent/50 transition-colors text-black placeholder-black/50 font-orbitron"
-                                    required
-                                />
-                                <button 
-                                    type="submit"
-                                    className="px-6 py-3 bg-black text-[#D7F601] font-orbitron font-semibold rounded-xl hover:bg-black/90 transition-colors focus:outline-none focus:ring-2 focus:ring-black/50"
-                                >
-                                    Subscribe
-                                </button>
-                            </form>
-                            <p className="text-xs text-black/60 mt-4 font-orbitron">
-                                Join 10,000+ professionals getting weekly AI insights. No spam, ever.
-                            </p>
-                        </motion.div>
-                    </div>
-                </section>
             </main>
         </>
     );

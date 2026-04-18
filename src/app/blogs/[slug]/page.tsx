@@ -52,8 +52,7 @@ const BlogDetailPage = async ({ params }: PageProps) => {
         <main className="bg-background min-h-screen text-foreground font-sans selection:bg-accent selection:text-black">
             <StickyAdmissionsBar />
             
-            {/* Header / Hero Section */}
-            <section className="relative pt-40 pb-20 px-4 bg-black overflow-hidden">
+            <section className="relative pt-40 pb-20 px-4 bg-[#5B1DD6] overflow-hidden">
                 {/* Decorative background elements */}
                 <div className="absolute top-0 right-0 w-full max-w-[600px] aspect-square bg-[#5B1DD6]/20 blur-[150px] -translate-y-1/2 translate-x-1/4 rounded-full pointer-events-none" />
                 <div className="absolute bottom-0 left-0 w-full max-w-[400px] aspect-square bg-accent/10 blur-[120px] translate-y-1/2 -translate-x-1/4 rounded-full pointer-events-none" />
