@@ -6,6 +6,7 @@ import NetworkBackground from "@/components/NetworkBackground";
 import SmoothScroll from "@/components/SmoothScroll";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import UrgencyPopup from "@/components/UrgencyPopup";
 
 
 const orbitron = Orbitron({
@@ -40,7 +41,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-P6XF789S');`,
+          }}
+        />
+        {/* End Google Tag Manager */}
+      </head>
       <body className={`${orbitron.variable} ${outfit.variable} ${playfair.variable} antialiased selection:bg-accent selection:text-black relative w-full max-w-[100vw] overflow-x-hidden`}>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-P6XF789S"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
+        <UrgencyPopup />
         <SmoothScroll>
           <NetworkBackground />
           <Navbar />

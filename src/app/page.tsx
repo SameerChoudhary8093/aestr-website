@@ -11,6 +11,7 @@ import AboutPointThree from "@/components/AboutPointThree";
 import CareerCarousel from "@/components/CareerCarousel";
 import AboutPointFour from "@/components/AboutPointFour";
 import AboutPointFive from "@/components/AboutPointFive";
+import AestrDifferentiators from "@/components/AestrDifferentiators";
 import FutureFaculty from "@/components/FutureFaculty";
 import Pathways from "@/components/Pathways";
 import PlacementPartners from "@/components/PlacementPartners";
@@ -31,6 +32,7 @@ export default function Home() {
       <ProgramPartners />
       <AboutPointThree />
       <CareerCarousel />
+      <AestrDifferentiators />
       <AboutPointFour />
       <AboutPointFive />
       {/* <FutureFaculty /> */}

@@ -197,7 +197,7 @@ const ExecutionTeam = () => {
                                     Don&apos;t just conquer India. Conquer the world. Spend 3 years building your portfolio at the AESTR Jaipur Hub, and 1 year at a premier university in the US, UK, or Europe. We have 25+ global education partners. You get a B.Tech degree, global exposure, and a world-class portfolio.
                                 </p>
 
-                                <div className="flex flex-wrap items-center gap-8 pt-4">
+                                <div className="flex flex-row flex-nowrap items-center gap-3 md:gap-8 pt-4 overflow-x-auto no-scrollbar">
                                     {[
                                         { src: '/Other/Rooosevelt.png', alt: 'Roosevelt University', bg: 'bg-[#5B1DD6]', scale: 'scale-128' },
                                         { src: '/Other/Niagara-logo.webp', alt: 'Niagara University', bg: 'bg-[#5B1DD6]', scale: 'scale-110' },
@@ -210,9 +210,9 @@ const ExecutionTeam = () => {
                                             viewport={{ once: true }}
                                             transition={{ duration: 0.5, delay: 0.4 + idx * 0.1 }}
                                             whileHover={{ scale: 1.05 }}
-                                            className={`${logo.bg} p-4 md:p-6 rounded-2xl border border-black/10 shadow-lg flex items-center justify-center min-w-[140px] md:min-w-[180px] h-20 md:h-24 transition-transform`}
+                                            className={`${logo.bg} p-2 md:p-6 rounded-xl md:rounded-2xl border border-black/10 shadow-lg flex items-center justify-center min-w-[100px] md:min-w-[180px] h-14 md:h-24 transition-transform shrink-0 md:shrink`}
                                         >
-                                            <div className={`relative w-32 md:w-40 h-12 md:h-16 ${logo.scale} transition-transform`}>
+                                            <div className={`relative w-20 md:w-40 h-8 md:h-16 ${logo.scale} transition-transform`}>
                                                 <Image
                                                     src={logo.src}
                                                     alt={logo.alt}

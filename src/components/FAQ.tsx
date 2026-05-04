@@ -44,6 +44,14 @@ const faqs = [
         q: "How do I apply and what is the admission process?",
         a: "The process is simple: Fill the registration form on this page → Our counsellor contacts you within 24 hours → You appear for a brief aptitude and interest assessment → Offer letter is issued. There are no rigid cut-offs based solely on 12th marks. We evaluate potential, not just past scores. Admissions for 2025–2026 are open now at SGVU."
     },
+    {
+        q: "How is AESTR different from IITs or BITS Pilani?",
+        a: "While IITs and BITS focus on high-level academic theory and competitive exams, AESTR focuses on 'Building and Residency'. In an IIT, you follow a fixed curriculum; at AESTR, you follow a founder-led incubator model. You don't just study AI; you build products for the industry from Day 1. We prioritize portfolio over percentile."
+    },
+    {
+        q: "Why choose AESTR over other top engineering institutions in India?",
+        a: "AESTR is built for the AI era. Most traditional institutions are still teaching old syllabus. AESTR gives you direct access to founders from Cambridge, Microsoft, and Shodh AI. You are not a student here; you are a resident engineer working in a Silicon Valley-style environment. If your goal is to lead the AI revolution, AESTR is the right place."
+    },
 ];
 
 export default function FAQ() {
@@ -76,9 +84,9 @@ export default function FAQ() {
                     </p>
                 </motion.div>
 
-                {/* FAQ 2-Column Grid: 5 left, 5 right */}
+                {/* FAQ 2-Column Grid: 6 left, 6 right */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-4 items-start">
-                    {[{ group: faqs.slice(0, 5), offset: 0 }, { group: faqs.slice(5), offset: 5 }].map(({ group, offset }, colIdx) => (
+                    {[{ group: faqs.slice(0, 6), offset: 0 }, { group: faqs.slice(6), offset: 6 }].map(({ group, offset }, colIdx) => (
                         <div key={colIdx} className="flex flex-col gap-3">
                             {group.map((faq, j) => {
                                 const i = offset + j;
