@@ -2,12 +2,16 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 const UrgencyPopup = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isPastDeadline, setIsPastDeadline] = useState(false);
+    const pathname = usePathname();
 
     useEffect(() => {
+        // Don't show on thank-you page
+        if (pathname === '/thank-you') return;
         // Define deadline: 31st May 2026
         const deadline = new Date('2026-05-31T23:59:59');
         const now = new Date();
