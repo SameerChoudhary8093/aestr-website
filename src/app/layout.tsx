@@ -65,7 +65,7 @@ export default function RootLayout({
           ></iframe>
         </noscript>
         {/* End Google Tag Manager (noscript) */}
-        <UrgencyPopup />
+        {/* <UrgencyPopup /> */}
         <SmoothScroll>
           <NetworkBackground />
           <Navbar />
