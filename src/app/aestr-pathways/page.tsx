@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 const proTrackFeatures = [
     { num: '01', title: 'Tailored for Global Tech Giants', desc: 'Students receive specialized training to crack jobs at Google, Meta, Microsoft, Amazon, OpenAI, etc.' },
-    { num: '02', title: 'Target Salary: ₹35 LPA +', desc: 'Starting packages, positioning students with global top talent.' },
+    { num: '02', title: 'Target Salary: ₹30 LPA +', desc: 'Starting packages, positioning students with global top talent.' },
     { num: '03', title: 'Mentorship', desc: 'Led by ex-Cambridge/Microsoft/NVIDIA faculty and industry professionals.' },
     { num: '04', title: 'Project Work', desc: 'Hands-on in AI systems, LLMs, robotics, and more.' },
     { num: '05', title: 'Real-time coaching', desc: 'For interviews, product case rounds, system design, and research presentations.' },
@@ -40,26 +40,26 @@ const learningApproach = [
 ];
 
 const entrepreneurshipKeyFeatures = [
-    { 
-        num: '01', 
-        title: 'Incubation Support:', 
+    {
+        num: '01',
+        title: 'Incubation Support:',
         points: [
             'Dedicated Aestr Startup Studio.',
             '₹1 crore seed funding pool.',
             'Real-world mentorship from founders, VCs, and IP attorneys.'
         ]
     },
-    { 
-        num: '02', 
-        title: 'Simulated Startup Environment:', 
+    {
+        num: '02',
+        title: 'Simulated Startup Environment:',
         points: [
             'iSeed round pitching, business planning, MVP development.',
             'Legal, IP, compliance support for scaling ventures.'
         ]
     },
-    { 
-        num: '03', 
-        title: 'Cross-disciplinary Innovation:', 
+    {
+        num: '03',
+        title: 'Cross-disciplinary Innovation:',
         points: [
             'Combine AI + humanities, sustainability, law, etc., to build purposeful solutions.'
         ]
@@ -79,14 +79,14 @@ export default function AestrPathways() {
             {/* Header section */}
             <section className="pt-48 pb-16 px-4 sm:px-6 border-b border-white/5 text-center">
                 <div className="container mx-auto max-w-6xl flex flex-col items-center">
-                    <motion.h1 
+                    <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         className="text-3xl sm:text-4xl md:text-5xl lg:text-hero text-foreground mb-10 font-orbitron font-black"
                     >
                         AESTR <span className="text-accent decoration-accent/20">Pathways</span>
                     </motion.h1>
-                    <motion.p 
+                    <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
@@ -100,7 +100,7 @@ export default function AestrPathways() {
             {/* Pathway 1: Pro Track */}
             <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-[#D7F601] relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-full max-w-[500px] aspect-square bg-black/5 rounded-full blur-[80px] sm:blur-[120px] pointer-events-none" />
-                
+
                 <div className="container mx-auto max-w-6xl space-y-12 sm:space-y-16">
                     <div className="space-y-4 sm:space-y-6">
                         <div className="flex flex-col items-start gap-4">
@@ -108,7 +108,7 @@ export default function AestrPathways() {
                             <h2 className="text-2xl md:text-4xl lg:text-5xl font-orbitron font-black uppercase tracking-tight leading-tight text-black flex flex-wrap items-center gap-3">
                                 <span>B.Tech AI With Shodh AI TRACK</span>
                                 <span className="font-light text-black/60">Elite Global Careers</span>
-                                <span className="bg-black/10 border border-black/20 text-black px-4 py-1.5 rounded-xl text-xl font-black whitespace-nowrap">(₹35 LPA+)</span>
+                                <span className="bg-black/10 border border-black/20 text-black px-4 py-1.5 rounded-xl text-xl font-black whitespace-nowrap">(₹30 LPA+)</span>
                             </h2>
                         </div>
                         <div className="space-y-2">
@@ -136,10 +136,11 @@ export default function AestrPathways() {
                         </div>
                         <div className="lg:col-span-6">
                             <div className="relative aspect-square sm:aspect-[4/5] rounded-[2rem] sm:rounded-[3rem] overflow-hidden border border-black/10 shadow-2x-strong group">
-                                <Image 
-                                    src="/pathways/pro-track.png" 
+                                <Image
+                                    src="/pathways/pro-track.png"
                                     alt="Pro Track"
                                     fill
+                                    unoptimized
                                     className="object-cover group-hover:scale-105 transition-transform duration-1000"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
@@ -153,14 +154,14 @@ export default function AestrPathways() {
             {/* Pathway 2: Global Opportunities */}
             <section className="py-24 px-4 sm:px-6 bg-[#181818] relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-full max-w-[600px] aspect-square bg-white/5 rounded-full blur-[140px] pointer-events-none" />
-                
+
                 <div className="container mx-auto max-w-6xl space-y-16">
                     <div className="space-y-6">
                         <div className="flex flex-col items-start gap-4">
                             <span className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-2xl font-orbitron font-bold text-white shrink-0">2</span>
                             <h2 className="text-2xl md:text-4xl lg:text-5xl font-orbitron font-black uppercase tracking-tight text-white flex flex-wrap items-center gap-3">
-                                <span>GLOBAL OPPORTUNITIES</span> 
-                                <span className="font-light text-white/60">International</span> 
+                                <span>GLOBAL OPPORTUNITIES</span>
+                                <span className="font-light text-white/60">International</span>
                                 <span className="bg-white/5 border border-white/10 text-white px-4 py-1.5 rounded-xl text-xl font-black whitespace-nowrap">3+1 / 2+2 Programs</span>
                             </h2>
                         </div>
@@ -172,11 +173,12 @@ export default function AestrPathways() {
 
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         <div className="lg:col-span-6 order-2 lg:order-1">
-                             <div className="relative aspect-square md:aspect-[4/5] rounded-[3rem] overflow-hidden border border-white/10 shadow-2x-strong group">
-                                <Image 
-                                    src="/pathways/global-pathway.png" 
+                            <div className="relative aspect-square md:aspect-[4/5] rounded-[3rem] overflow-hidden border border-white/10 shadow-2x-strong group">
+                                <Image
+                                    src="/pathways/global-pathway.png"
                                     alt="Global Opportunities"
                                     fill
+                                    unoptimized
                                     className="object-cover group-hover:scale-105 transition-transform duration-1000"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
@@ -233,8 +235,8 @@ export default function AestrPathways() {
                         <div className="flex flex-col items-start gap-4">
                             <span className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-2xl font-orbitron font-bold text-white shrink-0">3</span>
                             <h2 className="text-2xl md:text-4xl lg:text-5xl font-orbitron font-black uppercase tracking-tight text-white flex flex-wrap items-center gap-3">
-                                <span>INDUSTRY PARTNER TRAINING</span> 
-                                <span className="font-light text-white/60">& Direct Placement</span> 
+                                <span>INDUSTRY PARTNER TRAINING</span>
+                                <span className="font-light text-white/60">& Direct Placement</span>
                                 <span className="bg-accent/10 border border-accent/20 text-accent px-4 py-1.5 rounded-xl text-xl font-black whitespace-nowrap">(₹10 LPA)</span>
                             </h2>
                         </div>
@@ -246,8 +248,8 @@ export default function AestrPathways() {
 
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         <div className="lg:col-span-12">
-                             <h3 className="text-3xl font-bold mb-10 text-white">Key Features</h3>
-                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                            <h3 className="text-3xl font-bold mb-10 text-white">Key Features</h3>
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                                 <div className="space-y-8">
                                     {industryFeatures.map((item) => (
                                         <div key={item.num} className="flex gap-6 items-start group">
@@ -262,15 +264,16 @@ export default function AestrPathways() {
                                     ))}
                                 </div>
                                 <div className="relative aspect-square md:aspect-[4/3] rounded-[3rem] overflow-hidden border border-white/10 shadow-2x-strong group">
-                                    <Image 
-                                        src="/pathways/industry-partners.png" 
+                                    <Image
+                                        src="/pathways/industry-partners.png"
                                         alt="Industry Partners"
                                         fill
+                                        unoptimized
                                         className="object-cover group-hover:scale-105 transition-transform duration-1000"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
                                 </div>
-                             </div>
+                            </div>
                         </div>
                     </div>
 
@@ -295,12 +298,12 @@ export default function AestrPathways() {
             {/* Pathway 4: Entrepreneurship Track */}
             <section className="py-24 px-4 sm:px-6 bg-[#181818] relative overflow-hidden">
                 <div className="container mx-auto max-w-6xl space-y-12">
-                     <div className="space-y-6">
+                    <div className="space-y-6">
                         <div className="flex flex-col items-start gap-4">
                             <span className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-2xl font-orbitron font-bold text-white shrink-0">4</span>
                             <h2 className="text-2xl md:text-4xl lg:text-5xl font-orbitron font-black uppercase tracking-tight text-white flex flex-wrap items-center gap-3">
-                                <span>ENTREPRENEURSHIP TRACK</span> 
-                                <span className="font-light text-white/60">₹1 Cr Start-up Funding +</span> 
+                                <span>ENTREPRENEURSHIP TRACK</span>
+                                <span className="font-light text-white/60">₹1 Cr Start-up Funding +</span>
                                 <span className="bg-accent/10 border border-accent/20 text-accent px-4 py-1.5 rounded-xl text-xl font-black whitespace-nowrap">Incubation</span>
                             </h2>
                         </div>
@@ -357,10 +360,11 @@ export default function AestrPathways() {
                         </div>
                         <div className="lg:col-span-6">
                             <div className="relative aspect-square md:aspect-[5/6] rounded-[4rem] overflow-hidden border border-black/10 shadow-2x-strong group">
-                                <Image 
-                                    src="/pathways/entrepreneurship-globe.png" 
+                                <Image
+                                    src="/pathways/entrepreneurship-globe.png"
                                     alt="Entrepreneurship Globe"
                                     fill
+                                    unoptimized
                                     className="object-cover group-hover:scale-105 transition-transform duration-1000"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

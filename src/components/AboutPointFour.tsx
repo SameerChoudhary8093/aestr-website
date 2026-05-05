@@ -38,7 +38,7 @@ const AboutPointFour = () => {
                             <div className="flex items-start gap-4 md:gap-6">
                                 {/* Number badge removed as requested */}
                                 <div className="space-y-8 text-left">
-                                    <motion.div 
+                                    <motion.div
                                         variants={{
                                             hidden: { opacity: 0, y: 30 },
                                             visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
@@ -50,7 +50,7 @@ const AboutPointFour = () => {
                                             <span className="opacity-90">Bootcamp.</span>
                                         </h2>
                                     </motion.div>
-                                    <motion.p 
+                                    <motion.p
                                         variants={{
                                             hidden: { opacity: 0, y: 30 },
                                             visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
@@ -59,7 +59,7 @@ const AboutPointFour = () => {
                                     >
                                         At AESTR, theory is just the beginning. We believe the best way to learn engineering is by building real things. That’s why every semester includes immersive AI bootcamps, right on campus — fully integrated into your curriculum.
                                     </motion.p>
-                                    <motion.div 
+                                    <motion.div
                                         variants={{
                                             hidden: { opacity: 0, y: 30 },
                                             visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
@@ -68,7 +68,7 @@ const AboutPointFour = () => {
                                     >
                                         <Link href="/day-at-aestr">
                                             <button className="px-10 py-4 bg-black text-accent font-orbitron font-black text-sm rounded-lg hover:scale-105 transition-all flex items-center gap-2 group">
-                                                Read more
+                                                Day of AESTR Student
                                                 <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform ml-2">↗</span>
                                             </button>
                                         </Link>

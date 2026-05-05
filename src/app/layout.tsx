@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import NetworkBackground from "@/components/NetworkBackground";
 import SmoothScroll from "@/components/SmoothScroll";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 import "./globals.css";
 import UrgencyPopup from "@/components/UrgencyPopup";
 
@@ -43,7 +44,9 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <head>
         {/* Google Tag Manager */}
-        <script
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

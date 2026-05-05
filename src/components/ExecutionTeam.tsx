@@ -16,7 +16,7 @@ const teamData = [
     {
         name: 'Dr. Arastu Sharma',
         role: 'CEO AESTR',
-        image: '/ExecutionTeam/Arastu.jpeg',
+        image: '/ExecutionTeam/Arastu-.jpeg',
         linkedin: 'https://www.linkedin.com/in/drarastu/',
         desc: "Dr. Arastu Sharma's journey spans Cambridge, Columbia, and Microsoft Research. As a serial AI entrepreneur, his pioneering healthcare patent was acquired by the global giant GSK. Today, as CEO of Shodh AI and AESTR, he leverages his deep industry expertise to mentor the next generation of top-tier software and AI engineers.",
         specialStats: true,

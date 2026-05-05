@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 const Pathways = () => {
     const pathwaysData = [
-        { title: 'B.Tech AI with Shodh AI', subtitle: '35 LPA+ Jobs', borderColor: 'border-accent/40' },
+        { title: 'B.Tech AI with Shodh AI', subtitle: '30 LPA+ Jobs', borderColor: 'border-accent/40' },
         { title: 'Global opportunities', subtitle: '3+1 / 2+2 Programs', borderColor: 'border-accent/30' },
         { title: 'Industry partner training', subtitle: '& Direct Placements', borderColor: 'border-accent/20' },
         { title: 'Nurturing entrepreneurs', subtitle: 'Silicon Valley of AI', borderColor: 'border-accent/30' },
