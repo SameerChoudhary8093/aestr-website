@@ -137,7 +137,7 @@ export default function AestrPathways() {
                         <div className="lg:col-span-6">
                             <div className="relative aspect-square sm:aspect-[4/5] rounded-[2rem] sm:rounded-[3rem] overflow-hidden border border-black/10 shadow-2x-strong group">
                                 <Image
-                                    src="/pathways/pro-track.png"
+                                    src="/Pathways/pro-track.png"
                                     alt="Pro Track"
                                     fill
                                     unoptimized
@@ -175,7 +175,7 @@ export default function AestrPathways() {
                         <div className="lg:col-span-6 order-2 lg:order-1">
                             <div className="relative aspect-square md:aspect-[4/5] rounded-[3rem] overflow-hidden border border-white/10 shadow-2x-strong group">
                                 <Image
-                                    src="/pathways/global-pathway.png"
+                                    src="/Pathways/global-pathway.png"
                                     alt="Global Opportunities"
                                     fill
                                     unoptimized
@@ -265,7 +265,7 @@ export default function AestrPathways() {
                                 </div>
                                 <div className="relative aspect-square md:aspect-[4/3] rounded-[3rem] overflow-hidden border border-white/10 shadow-2x-strong group">
                                     <Image
-                                        src="/pathways/industry-partners.png"
+                                        src="/Pathways/industry-partners.png"
                                         alt="Industry Partners"
                                         fill
                                         unoptimized
@@ -361,7 +361,7 @@ export default function AestrPathways() {
                         <div className="lg:col-span-6">
                             <div className="relative aspect-square md:aspect-[5/6] rounded-[4rem] overflow-hidden border border-black/10 shadow-2x-strong group">
                                 <Image
-                                    src="/pathways/entrepreneurship-globe.png"
+                                    src="/Pathways/entrepreneurship-globe.png"
                                     alt="Entrepreneurship Globe"
                                     fill
                                     unoptimized
