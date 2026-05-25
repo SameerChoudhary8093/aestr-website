@@ -103,6 +103,11 @@ const AboutTopOnePercent = () => {
                                 Salesforce Developer Training & Placement Program
                                 <span className="group-hover:translate-x-1 transition-transform ml-3 tracking-normal">→</span>
                             </Link>
+
+                            <Link href="/ios-training" className="px-6 py-3 md:px-8 md:py-4 bg-transparent border-2 border-accent text-accent font-orbitron font-bold uppercase tracking-widest text-xs md:text-sm rounded-[1.25rem] hover:bg-accent hover:!text-black transition-all duration-300 shadow-[0_0_20px_rgba(216,246,2,0.1)] hover:shadow-[0_0_30px_rgba(216,246,2,0.4)] flex items-center justify-center group whitespace-normal text-center">
+                                iOS App Development Training (AATCE & SwiftUI)
+                                <span className="group-hover:translate-x-1 transition-transform ml-3 tracking-normal">→</span>
+                            </Link>
                         </motion.div>
                     </div>
 
