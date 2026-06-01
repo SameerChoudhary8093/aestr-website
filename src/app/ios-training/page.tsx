@@ -3,9 +3,9 @@
 import React, { useState, useMemo } from 'react';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
-import { 
-    Search, Award, CheckCircle, Calendar, Clock, ArrowUpRight, 
-    ChevronDown, ChevronUp, BookOpen, Cpu, Layers, Database, 
+import {
+    Search, Award, CheckCircle, Calendar, Clock, ArrowUpRight,
+    ChevronDown, ChevronUp, BookOpen, Cpu, Layers, Database,
     Code, Sparkles, MapPin, TrendingUp, UserCheck, Check,
     ExternalLink, BookOpenCheck, ShieldAlert
 } from 'lucide-react';
@@ -85,15 +85,15 @@ export default function IosTrainingPage() {
     const trainees = [
         { id: 1, name: "K. Sachin", score: 78, strength: "Strong iOS Development Skills, Modern UI/UX Design Thinking, solid command of App Lifecycle, Debugging & Testing Skills", improvement: "Code Optimization & Clean Coding, UI/UX Enhancement, API Handling & Error Management", team: "Restaurant App" },
         { id: 2, name: "M. Satish", score: 75, strength: "Strong iOS Development Skills, Modern UI/UX Design Thinking, solid command of App Lifecycle, Debugging & Testing Skills", improvement: "Code Optimization & Clean Coding, UI/UX Enhancement, API Handling & Error Management", team: "Restaurant App" },
-        { id: 3, name: "Sumit Prakash", score: 95, strength: "Strong iOS Development Skills, Modern UI/UX Design Thinking, solid command of App Lifecycle, Debugging & Testing Skills", improvement: "Testing & Quality Assurance, Advanced Swift Concepts, Security Practices", team: "Trip Expense App", placement: "RP Whiz (New Delhi) - Internship Selection" },
-        { id: 4, name: "Ritika Kumari", score: 85, strength: "Strong iOS Development Skills, Modern UI/UX Design Thinking, solid command of App Lifecycle, Debugging & Testing Skills", improvement: "Consistency in Code Quality, Architecture Implementation, Error Handling & Edge Cases", team: "Trip Expense App", placement: "RP Whiz (New Delhi) - Internship Selection" },
-        { id: 5, name: "Ayekpam Prithviraj", score: 88, strength: "Strong iOS Development Skills, Modern UI/UX Design Thinking, solid command of App Lifecycle, Debugging & Testing Skills", improvement: "Consistency in Code Quality, Architecture Implementation, Error Handling & Edge Cases", team: "Trip Expense App", placement: "RP Whiz (New Delhi) - Internship Selection" },
+        { id: 3, name: "Sumit Prakash", score: 95, strength: "Strong iOS Development Skills, Modern UI/UX Design Thinking, solid command of App Lifecycle, Debugging & Testing Skills", improvement: "Testing & Quality Assurance, Advanced Swift Concepts, Security Practices", team: "Trip Expense App" },
+        { id: 4, name: "Ritika Kumari", score: 85, strength: "Strong iOS Development Skills, Modern UI/UX Design Thinking, solid command of App Lifecycle, Debugging & Testing Skills", improvement: "Consistency in Code Quality, Architecture Implementation, Error Handling & Edge Cases", team: "Trip Expense App" },
+        { id: 5, name: "Ayekpam Prithviraj", score: 88, strength: "Strong iOS Development Skills, Modern UI/UX Design Thinking, solid command of App Lifecycle, Debugging & Testing Skills", improvement: "Consistency in Code Quality, Architecture Implementation, Error Handling & Edge Cases", team: "Trip Expense App" },
         { id: 6, name: "Rajneesh Meena", score: 77, strength: "Strong iOS Development Skills, Modern UI/UX Design Thinking, solid command of App Lifecycle, Debugging & Testing Skills", improvement: "Code Optimization & Clean Coding, UI/UX Enhancement, API Handling & Error Management", team: "SGVU Connect" },
         { id: 7, name: "Sonu Kumar", score: 80, strength: "Strong iOS Development Skills, Modern UI/UX Design Thinking, solid command of App Lifecycle, Debugging & Testing Skills", improvement: "Consistency in Code Quality, Architecture Implementation, Error Handling & Edge Cases", team: "SGVU Connect" },
-        { id: 8, name: "Sumit Tak", score: 95, strength: "Strong iOS Development Skills, Modern UI/UX Design Thinking, solid command of App Lifecycle, Debugging & Testing Skills", improvement: "Testing & Quality Assurance, Advanced Swift Concepts, Security Practices", team: "Restaurant App", placement: "Ubuy Technologies (Jaipur) - Internship Selection" },
+        { id: 8, name: "Sumit Tak", score: 95, strength: "Strong iOS Development Skills, Modern UI/UX Design Thinking, solid command of App Lifecycle, Debugging & Testing Skills", improvement: "Testing & Quality Assurance, Advanced Swift Concepts, Security Practices", team: "Restaurant App" },
         { id: 9, name: "Somendra Yadav", score: 85, strength: "Strong iOS Development Skills, Modern UI/UX Design Thinking, solid command of App Lifecycle, Debugging & Testing Skills", improvement: "Consistency in Code Quality, Architecture Implementation, Error Handling & Edge Cases", team: "Restaurant App" },
         { id: 10, name: "Siddharth Singh", score: 85, strength: "Strong iOS Development Skills, Modern UI/UX Design Thinking, solid command of App Lifecycle, Debugging & Testing Skills", improvement: "Consistency in Code Quality, Architecture Implementation, Error Handling & Edge Cases", team: "SGVU Connect" },
-        { id: 11, name: "Shaik Karimulla", score: 82, strength: "Strong iOS Development Skills, Modern UI/UX Design Thinking, solid command of App Lifecycle, Debugging & Testing Skills", improvement: "Consistency in Code Quality, Architecture Implementation, Error Handling & Edge Cases", team: "Trip Expense App", placement: "Wayspire Ed-Tech (Gurugram) - Internship Selection" },
+        { id: 11, name: "Shaik Karimulla", score: 82, strength: "Strong iOS Development Skills, Modern UI/UX Design Thinking, solid command of App Lifecycle, Debugging & Testing Skills", improvement: "Consistency in Code Quality, Architecture Implementation, Error Handling & Edge Cases", team: "Trip Expense App" },
         { id: 12, name: "Ankit Kumar", score: 77, strength: "Strong iOS Development Skills, Modern UI/UX Design Thinking, solid command of App Swift, Understanding of Lifecycle, Debugging & Testing Skills", improvement: "Code Optimization & Clean Coding, UI/UX Enhancement, API Handling & Error Management", team: "Trip Expense App" },
         { id: 13, name: "Sachin Pareek", score: 76, strength: "Strong iOS Development Skills, Modern UI/UX Design Thinking, solid command of App Swift, Understanding of Lifecycle, Debugging & Testing Skills", improvement: "Code Optimization & Clean Coding, UI/UX Enhancement, API Handling & Error Management", team: "Trip Expense App" },
         { id: 14, name: "Jyotish Kumar", score: 75, strength: "Strong iOS Development Skills, Modern UI/UX Design Thinking, solid command of App Swift, Understanding of Lifecycle, Debugging & Testing Skills", improvement: "Code Optimization & Clean Coding, UI/UX Enhancement, API Handling & Error Management", team: "Restaurant App" },
@@ -146,7 +146,7 @@ export default function IosTrainingPage() {
             <section className="pt-36 lg:pt-48 pb-20 px-6 md:px-12 lg:px-24 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[150px] pointer-events-none" />
                 <div className="absolute top-1/3 left-0 w-[300px] h-[300px] bg-purple/10 rounded-full blur-[120px] pointer-events-none" />
-                
+
                 <div className="max-w-[1400px] mx-auto w-full relative z-10">
                     <div className="flex flex-col lg:flex-row justify-between items-center gap-12 mb-20">
                         {/* Hero Text */}
@@ -155,11 +155,11 @@ export default function IosTrainingPage() {
                                 <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                                 <p className="text-[10px] font-orbitron font-extrabold uppercase tracking-widest text-[#EAF0BD]/85">AATCE Partnership</p>
                             </div>
-                            
-                            <h1 className="font-orbitron font-black text-[9vw] sm:text-5xl lg:text-6xl xl:text-[80px] leading-[0.95] tracking-tight">
+
+                            <h1 className="font-orbitron font-black text-[9vw] sm:text-5xl lg:text-6xl xl:text-[80px] leading-[1.1] tracking-tight">
                                 <span className="text-white block">iOS App</span>
-                                <span className="text-accent drop-shadow-[0_0_20px_rgba(215,246,1,0.25)] block mt-1">Development</span>
-                                <span className="text-white/60 block text-[5vw] sm:text-3xl lg:text-4xl xl:text-5xl mt-2 tracking-wide font-normal">With SwiftUI</span>
+                                <span className="text-accent drop-shadow-[0_0_20px_rgba(215,246,1,0.25)] block mt-2">Development</span>
+                                <span className="text-white/60 block text-[5vw] sm:text-3xl lg:text-4xl xl:text-5xl mt-4 tracking-wide font-normal">With SwiftUI</span>
                             </h1>
 
                             <p className="text-[14px] md:text-[16px] leading-[1.8] text-white/70 font-medium max-w-xl">
@@ -167,15 +167,15 @@ export default function IosTrainingPage() {
                             </p>
 
                             <div className="flex flex-wrap gap-4 pt-4">
-                                <a 
-                                    href="#curriculum" 
+                                <a
+                                    href="#curriculum"
                                     onClick={scrollToSection('curriculum')}
                                     className="btn-aestr font-bold text-xs"
                                 >
                                     Explore Modules <span className="ml-2">↓</span>
                                 </a>
-                                <a 
-                                    href="#roster" 
+                                <a
+                                    href="#roster"
                                     onClick={scrollToSection('roster')}
                                     className="px-6 py-3 border border-white/20 rounded-[1.25rem] text-white font-orbitron font-bold text-xs uppercase tracking-wider hover:bg-white/5 hover:border-white/40 transition-all flex items-center gap-2"
                                 >
@@ -190,7 +190,7 @@ export default function IosTrainingPage() {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 z-10" />
                                 {/* Glow Effect */}
                                 <div className="absolute inset-0 bg-radial-gradient from-accent/10 via-transparent to-transparent opacity-50 group-hover:scale-110 transition-transform duration-1000 pointer-events-none" />
-                                
+
                                 <div className="relative z-20 flex gap-4 w-full h-full items-center">
                                     {/* SwiftUI Code Editor mockup */}
                                     <div className="hidden sm:block flex-1 bg-[#181818]/90 border border-white/5 rounded-lg p-3 font-mono text-[10px] space-y-1.5 shadow-xl text-left overflow-hidden h-[90%]">
@@ -312,7 +312,7 @@ export default function IosTrainingPage() {
                                     AATCE Setup
                                 </h3>
                                 <p className="text-black/80 text-[10px] xl:text-xs font-bold leading-normal">
-                                    SGVU Apple Training Center
+                                    Apple Authorized Training Centre For Education
                                 </p>
                             </div>
                             <span className="text-black/40 text-[9px] font-orbitron tracking-widest uppercase font-extrabold pt-4 border-t border-black/10">Academic Excellence</span>
@@ -325,7 +325,7 @@ export default function IosTrainingPage() {
             <section className="bg-purple text-white py-20 lg:py-28 px-6 md:px-12 lg:px-24 relative overflow-hidden">
                 <div className="absolute inset-0 bg-radial-gradient from-black/20 via-transparent to-transparent pointer-events-none" />
                 <div className="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                    
+
                     {/* Left content description */}
                     <div className="space-y-10 lg:pt-4">
                         <div>
@@ -338,7 +338,7 @@ export default function IosTrainingPage() {
                                 Bridge Academic Concepts with Premium Ecosystems
                             </h2>
                         </div>
-                        
+
                         <div className="space-y-6 text-white/90 text-[15px] sm:text-base leading-[1.8] font-medium font-sans">
                             <p>
                                 In today’s digital era, mobile applications have become essential tools for communication, finance, and institutional interaction. For AI/ML students, understanding mobile frontend development is crucial, as it serves as the primary interface for user interaction and data collection.
@@ -399,7 +399,7 @@ export default function IosTrainingPage() {
             {/* 3. TRAINING OBJECTIVES (Neon Section) */}
             <section className="bg-accent text-black py-24 px-6 md:px-12 lg:px-24 relative overflow-hidden">
                 <div className="max-w-[1400px] mx-auto w-full">
-                    
+
                     {/* Section Header */}
                     <div className="mb-16 text-center max-w-3xl mx-auto space-y-3">
                         <p className="font-orbitron font-extrabold text-[10px] tracking-[0.3em] uppercase text-black/60">Program Purpose</p>
@@ -423,10 +423,10 @@ export default function IosTrainingPage() {
                             return (
                                 <div key={idx} className="group bg-black rounded-3xl p-8 flex flex-col justify-between hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] hover:-translate-y-2 hover:scale-[1.01] transform transition-all duration-500 cursor-default relative overflow-hidden min-h-[250px]">
                                     <div className="absolute inset-0 bg-gradient-to-t from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                                    
+
                                     <div className="flex justify-between items-start relative z-10">
                                         <span className="font-orbitron font-black text-2xl text-accent/30 group-hover:text-accent transition-colors">{obj.index}</span>
-                                        <div className="w-10 h-10 border border-white/10 flex items-center justify-center rounded-lg text-accent bg-white/5 group-hover:bg-accent group-hover:text-black transition-colors">
+                                        <div className="w-10 h-10 border border-white/10 flex items-center justify-center rounded-lg text-accent bg-white/5 group-hover:bg-accent group-hover:!text-black transition-colors">
                                             <IconComponent className="w-5 h-5" />
                                         </div>
                                     </div>
@@ -445,7 +445,7 @@ export default function IosTrainingPage() {
             {/* 4. COURSE CURRICULUM / MODULES (Black Section with Expandable Accordions) */}
             <section id="curriculum" className="bg-[#111] text-white py-24 px-6 md:px-12 lg:px-24 relative overflow-hidden">
                 <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-purple/5 rounded-full blur-[120px] pointer-events-none" />
-                
+
                 <div className="max-w-[1400px] mx-auto w-full">
                     {/* Header */}
                     <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-16 gap-6">
@@ -464,23 +464,23 @@ export default function IosTrainingPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                         {/* Summary panel */}
                         <div className="lg:col-span-4 space-y-6">
-                            <div className="glass p-8 border border-white/5 space-y-6">
+                            <div className="bg-purple p-8 border border-white/10 rounded-2xl space-y-6 shadow-xl">
                                 <h3 className="font-orbitron font-extrabold text-xl text-white uppercase tracking-wider">Curriculum Roadmap</h3>
-                                <p className="text-xs text-white/60 leading-relaxed font-medium">
+                                <p className="text-xs text-white/80 leading-relaxed font-medium">
                                     The technical curriculum was carefully split into six specialized educational modules. Moving iteratively from fundamental compile rules to full-stack integration protocols.
                                 </p>
-                                
-                                <div className="space-y-4 pt-4 border-t border-white/10">
+
+                                <div className="space-y-4 pt-4 border-t border-white/20">
                                     <div className="flex justify-between items-center text-xs">
-                                        <span className="text-white/50 uppercase tracking-wider">Lectures & Conceptual Labs</span>
-                                        <span className="text-accent font-orbitron font-bold">180 Hours</span>
+                                        <span className="text-white/70 uppercase tracking-wider">Lectures & Conceptual Labs</span>
+                                        <span className="text-accent font-orbitron font-black">180 Hours</span>
                                     </div>
                                     <div className="flex justify-between items-center text-xs">
-                                        <span className="text-white/50 uppercase tracking-wider">Capstone Implementation</span>
-                                        <span className="text-accent font-orbitron font-bold">156 Hours</span>
+                                        <span className="text-white/70 uppercase tracking-wider">Capstone Implementation</span>
+                                        <span className="text-accent font-orbitron font-black">156 Hours</span>
                                     </div>
-                                    <div className="flex justify-between items-center text-xs border-t border-white/5 pt-3">
-                                        <span className="text-white uppercase font-bold tracking-wider">Total Certified Time</span>
+                                    <div className="flex justify-between items-center text-xs border-t border-white/20 pt-3">
+                                        <span className="text-white uppercase font-black tracking-wider">Total Certified Time</span>
                                         <span className="text-accent font-orbitron font-black text-sm">336 Hours</span>
                                     </div>
                                 </div>
@@ -490,9 +490,9 @@ export default function IosTrainingPage() {
                         {/* Accordion List */}
                         <div className="lg:col-span-8 space-y-4">
                             {modules.map((mod, idx) => (
-                                <div key={idx} className="border border-white/10 rounded-2xl overflow-hidden transition-colors bg-white/5">
-                                    <button 
-                                        className="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors focus:outline-none"
+                                <div key={idx} className="border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 bg-purple shadow-lg">
+                                    <button
+                                        className="w-full flex items-center justify-between p-6 text-left hover:bg-black/15 transition-colors focus:outline-none"
                                         onClick={() => setExpandedModule(expandedModule === idx ? null : idx)}
                                     >
                                         <div className="flex gap-4 items-center">
@@ -516,7 +516,7 @@ export default function IosTrainingPage() {
                                     </button>
 
                                     {expandedModule === idx && (
-                                        <div className="p-6 pt-0 border-t border-white/5 bg-black/10">
+                                        <div className="p-6 pt-0 border-t border-white/10 bg-black/15">
                                             <ul className="space-y-4 pt-6">
                                                 {mod.topics.map((topic, j) => (
                                                     <li key={j} className="flex gap-4 items-start border-b border-white/5 last:border-b-0 pb-4 last:pb-0">
@@ -560,13 +560,13 @@ export default function IosTrainingPage() {
                             <div key={idx} className="bg-black/25 border border-white/10 rounded-2xl p-6 flex flex-col justify-between items-center text-center group hover:scale-[1.03] hover:border-accent/40 transition-all duration-300 relative shadow-lg min-h-[160px]">
                                 <div className="absolute top-0 right-0 w-[50px] h-[50px] bg-accent/5 rounded-full blur-[30px] pointer-events-none" />
                                 <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-4 group-hover:bg-accent group-hover:border-accent transition-all duration-300">
-                                    <span className="font-orbitron font-extrabold text-xs text-accent group-hover:text-black transition-colors duration-300">0{idx + 1}</span>
+                                    <span className="font-orbitron font-extrabold text-xs text-accent group-hover:!text-black transition-colors duration-300">0{idx + 1}</span>
                                 </div>
                                 <div>
                                     <h4 className="font-orbitron font-black text-sm uppercase text-white leading-tight">{tech.name}</h4>
                                     <p className="text-[10px] text-white/50 leading-normal pt-1 font-medium">{tech.desc}</p>
                                 </div>
-                                <span className="mt-4 inline-block bg-white/5 border border-white/10 rounded px-2.5 py-0.5 text-[8px] font-orbitron font-bold uppercase tracking-wider text-accent group-hover:bg-accent group-hover:text-black transition-colors duration-300">{tech.tag}</span>
+                                <span className="mt-4 inline-block bg-white/5 border border-white/10 rounded px-2.5 py-0.5 text-[8px] font-orbitron font-bold uppercase tracking-wider text-accent group-hover:bg-accent group-hover:!text-black transition-colors duration-300">{tech.tag}</span>
                             </div>
                         ))}
                     </div>
@@ -576,7 +576,7 @@ export default function IosTrainingPage() {
             {/* 6. CAPSTONE PROJECTS (Neon Showcase Section) */}
             <section className="bg-accent text-black py-24 px-6 md:px-12 lg:px-24 relative overflow-hidden">
                 <div className="max-w-[1400px] mx-auto w-full">
-                    
+
                     {/* Header */}
                     <div className="flex flex-col md:flex-row items-center justify-between mb-16 gap-6">
                         <div className="space-y-2 text-center md:text-left">
@@ -595,7 +595,7 @@ export default function IosTrainingPage() {
                         {/* Project 1 */}
                         <div className="border-3 border-black bg-black text-white p-8 rounded-3xl flex flex-col justify-between min-h-[460px] transition-all group hover:scale-[1.01] hover:shadow-2xl relative overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-t from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                            
+
                             <div className="space-y-6 relative z-10">
                                 <div className="flex justify-between items-start">
                                     <span className="font-orbitron font-black text-accent text-xs">PROJECT 01</span>
@@ -625,7 +625,7 @@ export default function IosTrainingPage() {
                         {/* Project 2 */}
                         <div className="border-3 border-black bg-black text-white p-8 rounded-3xl flex flex-col justify-between min-h-[460px] transition-all group hover:scale-[1.01] hover:shadow-2xl relative overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-t from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                            
+
                             <div className="space-y-6 relative z-10">
                                 <div className="flex justify-between items-start">
                                     <span className="font-orbitron font-black text-accent text-xs">PROJECT 02</span>
@@ -655,7 +655,7 @@ export default function IosTrainingPage() {
                         {/* Project 3 */}
                         <div className="border-3 border-black bg-black text-white p-8 rounded-3xl flex flex-col justify-between min-h-[460px] transition-all group hover:scale-[1.01] hover:shadow-2xl relative overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-t from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                            
+
                             <div className="space-y-6 relative z-10">
                                 <div className="flex justify-between items-start">
                                     <span className="font-orbitron font-black text-accent text-xs">PROJECT 03</span>
@@ -685,116 +685,7 @@ export default function IosTrainingPage() {
                 </div>
             </section>
 
-            {/* 7. INTERNSHIP & PLACEMENT HIGHLIGHTS (Black Section) */}
-            <section className="bg-black text-white py-24 px-6 md:px-12 lg:px-24 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-purple/10 rounded-full blur-[130px] pointer-events-none" />
-                
-                <div className="max-w-[1400px] mx-auto w-full space-y-20">
-                    
-                    {/* Header */}
-                    <div className="text-center space-y-3">
-                        <p className="font-orbitron font-extrabold text-[10px] tracking-[0.3em] uppercase text-accent">Career Success Stories</p>
-                        <h2 className="font-orbitron font-black text-2xl md:text-4xl lg:text-5xl uppercase tracking-[0.15em] flex flex-col md:flex-row justify-center gap-2 md:gap-4">
-                            <span className="text-accent">Internship</span>
-                            <span className="text-white">Success Details</span>
-                        </h2>
-                        <div className="w-16 h-[2px] bg-white/20 mx-auto mt-4" />
-                    </div>
 
-                    {/* Stats Widget */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto bg-white/5 border border-white/10 p-8 rounded-3xl text-center">
-                        <div className="space-y-2 border-b md:border-b-0 md:border-r border-white/10 pb-6 md:pb-0">
-                            <h4 className="font-orbitron font-black text-5xl text-accent">05</h4>
-                            <p className="text-[10px] uppercase font-orbitron font-extrabold tracking-wider text-white/55">Students Selected</p>
-                        </div>
-                        <div className="space-y-2 border-b md:border-b-0 md:border-r border-white/10 py-6 md:py-0">
-                            <h4 className="font-orbitron font-black text-5xl text-white">03</h4>
-                            <p className="text-[10px] uppercase font-orbitron font-extrabold tracking-wider text-white/55">Elite Companies</p>
-                        </div>
-                        <div className="space-y-2 pt-6 md:pt-0">
-                            <h4 className="font-orbitron font-black text-5xl text-accent">100%</h4>
-                            <p className="text-[10px] uppercase font-orbitron font-extrabold tracking-wider text-white/55">Intern Selection Outcome</p>
-                        </div>
-                    </div>
-
-                    {/* Company Selection Cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {/* Company 1 */}
-                        <div className="glass p-8 border border-white/5 flex flex-col justify-between min-h-[300px] text-left hover:border-accent/30 transition-all duration-300 relative group">
-                            <div className="space-y-6">
-                                <div className="flex justify-between items-start">
-                                    <span className="text-[10px] font-orbitron font-black text-accent bg-accent/10 px-2.5 py-1 rounded">3 SELECTIONS</span>
-                                    <MapPin className="w-4 h-4 text-white/40" />
-                                </div>
-                                <div>
-                                    <h3 className="font-orbitron font-black text-xl text-white group-hover:text-accent transition-colors">RP Whiz</h3>
-                                    <p className="text-[10px] text-white/50 uppercase tracking-widest font-extrabold pt-1">New Delhi Office</p>
-                                </div>
-                                <div className="space-y-2">
-                                    <p className="text-xs text-white/60 font-bold uppercase tracking-wider">Placed Students:</p>
-                                    <div className="space-y-1.5">
-                                        {["Ritika Kumari", "Sumit Prakash", "Ayekpam Prithviraj"].map((st, i) => (
-                                            <div key={i} className="flex gap-2 items-center text-xs text-white font-medium">
-                                                <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                                                <span>{st}</span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                            <span className="text-[10px] font-orbitron uppercase text-[#EAF0BD]/60 font-bold border-t border-white/10 pt-4 mt-8 block">Selected for Internships</span>
-                        </div>
-
-                        {/* Company 2 */}
-                        <div className="glass p-8 border border-white/5 flex flex-col justify-between min-h-[300px] text-left hover:border-accent/30 transition-all duration-300 relative group">
-                            <div className="space-y-6">
-                                <div className="flex justify-between items-start">
-                                    <span className="text-[10px] font-orbitron font-black text-accent bg-accent/10 px-2.5 py-1 rounded">1 SELECTION</span>
-                                    <MapPin className="w-4 h-4 text-white/40" />
-                                </div>
-                                <div>
-                                    <h3 className="font-orbitron font-black text-xl text-white group-hover:text-accent transition-colors">Wayspire Ed-Tech</h3>
-                                    <p className="text-[10px] text-white/50 uppercase tracking-widest font-extrabold pt-1">Gurugram Office</p>
-                                </div>
-                                <div className="space-y-2">
-                                    <p className="text-xs text-white/60 font-bold uppercase tracking-wider">Placed Student:</p>
-                                    <div className="space-y-1.5">
-                                        <div className="flex gap-2 items-center text-xs text-white font-medium">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                                            <span>Shaik Karimulla</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <span className="text-[10px] font-orbitron uppercase text-[#EAF0BD]/60 font-bold border-t border-white/10 pt-4 mt-8 block">Selected for Internship</span>
-                        </div>
-
-                        {/* Company 3 */}
-                        <div className="glass p-8 border border-white/5 flex flex-col justify-between min-h-[300px] text-left hover:border-accent/30 transition-all duration-300 relative group">
-                            <div className="space-y-6">
-                                <div className="flex justify-between items-start">
-                                    <span className="text-[10px] font-orbitron font-black text-accent bg-accent/10 px-2.5 py-1 rounded">1 SELECTION</span>
-                                    <MapPin className="w-4 h-4 text-white/40" />
-                                </div>
-                                <div>
-                                    <h3 className="font-orbitron font-black text-xl text-white group-hover:text-accent transition-colors">Ubuy Technologies</h3>
-                                    <p className="text-[10px] text-white/50 uppercase tracking-widest font-extrabold pt-1">Jaipur Office</p>
-                                </div>
-                                <div className="space-y-2">
-                                    <p className="text-xs text-white/60 font-bold uppercase tracking-wider">Placed Student:</p>
-                                    <div className="space-y-1.5">
-                                        <div className="flex gap-2 items-center text-xs text-white font-medium">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                                            <span>Sumit Tak</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <span className="text-[10px] font-orbitron uppercase text-[#EAF0BD]/60 font-bold border-t border-white/10 pt-4 mt-8 block">Selected for Internship</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* 8. TRAINING GALLERY (Apple Minimalist Gallery placeholder elements) */}
             <section className="bg-accent text-black py-24 px-6 md:px-12 lg:px-24 relative overflow-hidden">
@@ -821,7 +712,7 @@ export default function IosTrainingPage() {
             {/* 9. STUDENT LEARNING OUTCOMES (Purple Checklist) */}
             <section className="bg-[#111] text-white py-24 px-6 md:px-12 lg:px-24 relative overflow-hidden">
                 <div className="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    
+
                     {/* Left content panel */}
                     <div className="lg:col-span-5 space-y-8">
                         <div className="space-y-3">
@@ -833,7 +724,7 @@ export default function IosTrainingPage() {
                         <p className="text-xs text-white/60 leading-relaxed font-semibold">
                             By the end of this 336-hour cohort program, participants successfully compiled, verified, and demonstrated professional competence in these core domains:
                         </p>
-                        
+
                         <div className="bg-white/5 border border-white/5 rounded-2xl p-6 relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-[50px] h-[50px] bg-accent/5 rounded-full blur-[20px]" />
                             <h5 className="font-orbitron font-extrabold uppercase text-[10px] tracking-wider text-accent mb-2">Program Integrity</h5>
@@ -869,10 +760,10 @@ export default function IosTrainingPage() {
             {/* 10. TESTIMONIALS / PERFORMANCE INSIGHTS (Neon Stats & searchable/expandable roster) */}
             <section id="roster" className="bg-accent text-black py-24 px-6 md:px-12 lg:px-24 relative overflow-hidden">
                 <div className="max-w-[1400px] mx-auto w-full space-y-16">
-                    
+
                     {/* Performance aggregate dashboard widget */}
                     <div className="flex flex-col lg:flex-row justify-between items-stretch gap-12">
-                        
+
                         <div className="w-full lg:w-1/2 flex flex-col justify-between space-y-8">
                             <div className="space-y-4">
                                 <p className="text-[10px] lg:text-xs font-black uppercase tracking-[0.3em] text-black/60">Cohort Analytics</p>
@@ -902,7 +793,7 @@ export default function IosTrainingPage() {
                         {/* Visual assessment scale bar graphic representation */}
                         <div className="w-full lg:w-1/2 bg-black text-white p-8 rounded-3xl flex flex-col justify-between border-2 border-black shadow-[10px_10px_0px_#fff]">
                             <h4 className="font-orbitron font-black text-sm uppercase text-accent tracking-widest mb-6">Cohort Score Breakdown</h4>
-                            
+
                             <div className="space-y-6">
                                 {/* Score range A */}
                                 <div className="space-y-2">
@@ -961,7 +852,7 @@ export default function IosTrainingPage() {
                                 {/* Search input */}
                                 <div className="relative flex-grow md:flex-grow-0">
                                     <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-black/50" />
-                                    <input 
+                                    <input
                                         type="text"
                                         placeholder="Search trainee name..."
                                         value={searchQuery}
@@ -971,7 +862,7 @@ export default function IosTrainingPage() {
                                 </div>
 
                                 {/* Team filter dropdown */}
-                                <select 
+                                <select
                                     value={selectedTeam}
                                     onChange={(e) => setSelectedTeam(e.target.value)}
                                     className="border-2 border-black bg-white px-3 py-2 rounded-lg text-xs font-bold text-black focus:outline-none"
@@ -1001,23 +892,17 @@ export default function IosTrainingPage() {
                                     displayedTrainees.map((st, idx) => (
                                         <div key={idx} className="flex flex-col border-b border-black/10 last:border-0">
                                             {/* Main Row */}
-                                            <div 
+                                            <div
                                                 onClick={() => setExpandedTrainee(expandedTrainee === idx ? null : idx)}
                                                 className={`grid grid-cols-12 p-4 md:p-5 items-center text-[10px] md:text-xs font-bold uppercase tracking-wider text-black cursor-pointer hover:bg-black/5 transition-colors ${expandedTrainee === idx ? 'bg-black/5' : 'bg-white'}`}
                                             >
                                                 <div className="col-span-1 text-black/50 font-orbitron font-extrabold">{st.id}</div>
                                                 <div className="col-span-3 text-black font-extrabold flex items-center gap-1.5">
                                                     {st.name}
-                                                    {st.placement && (
-                                                        <span className="w-1.5 h-1.5 rounded-full bg-purple animate-pulse" title="Placed" />
-                                                    )}
                                                 </div>
                                                 <div className="col-span-3 text-purple font-extrabold">{st.team}</div>
                                                 <div className="col-span-2 text-black/80 font-orbitron font-extrabold">{st.score}%</div>
                                                 <div className="col-span-3 flex justify-end items-center gap-3">
-                                                    {st.placement && (
-                                                        <span className="bg-purple text-white px-2 py-0.5 text-[8px] font-black rounded tracking-wide uppercase shrink-0">PLACED</span>
-                                                    )}
                                                     <span className="bg-black text-accent px-3 py-1 text-[8px] md:text-[9px] font-orbitron font-black tracking-widest rounded shadow-[2px_2px_0px_rgba(0,0,0,0.15)] flex items-center gap-1 shrink-0">
                                                         QUALIFIED
                                                     </span>
@@ -1048,12 +933,7 @@ export default function IosTrainingPage() {
                                                         </div>
                                                     </div>
 
-                                                    {st.placement && (
-                                                        <div className="pt-3 border-t border-black/5 flex items-center gap-2">
-                                                            <Award className="w-4 h-4 text-purple" />
-                                                            <span className="font-orbitron uppercase text-[9px] tracking-widest font-black text-purple">Placement Outcome: Placed at {st.placement.split(' - ')[0]}</span>
-                                                        </div>
-                                                    )}
+
                                                 </div>
                                             )}
                                         </div>
@@ -1075,7 +955,7 @@ export default function IosTrainingPage() {
                         {/* View all button toggle */}
                         {filteredTrainees.length > 6 && (
                             <div className="mt-12 flex flex-col items-center">
-                                <button 
+                                <button
                                     onClick={() => setShowAllTrainees(!showAllTrainees)}
                                     className="group flex items-center gap-3 text-black font-orbitron font-black text-sm uppercase tracking-widest cursor-pointer hover:scale-105 transition-transform duration-300 outline-none"
                                 >
