@@ -156,10 +156,10 @@ export default function IosTrainingPage() {
                                 <p className="text-[10px] font-orbitron font-extrabold uppercase tracking-widest text-[#EAF0BD]/85">AATCE Partnership</p>
                             </div>
 
-                            <h1 className="font-orbitron font-black text-[9vw] sm:text-5xl lg:text-6xl xl:text-[80px] leading-[1.1] tracking-tight">
+                            <h1 className="font-orbitron font-black text-[9vw] sm:text-5xl lg:text-6xl xl:text-[80px] leading-[1] tracking-tight">
                                 <span className="text-white block">iOS App</span>
-                                <span className="text-accent drop-shadow-[0_0_20px_rgba(215,246,1,0.25)] block mt-2">Development</span>
-                                <span className="text-white/60 block text-[5vw] sm:text-3xl lg:text-4xl xl:text-5xl mt-4 tracking-wide font-normal">With SwiftUI</span>
+                                <span className="text-accent drop-shadow-[0_0_20px_rgba(215,246,1,0.25)] block">Development</span>
+                                <span className="text-white/60 block text-[5vw] sm:text-3xl lg:text-4xl xl:text-5xl mt-1 tracking-wide font-normal">With SwiftUI</span>
                             </h1>
 
                             <p className="text-[14px] md:text-[16px] leading-[1.8] text-white/70 font-medium max-w-xl">
@@ -379,17 +379,21 @@ export default function IosTrainingPage() {
                             <span className="text-white/40 text-[10px] font-orbitron tracking-widest font-black uppercase">Apple Authorized Labs</span>
                         </div>
 
-                        {/* Top Large Image */}
-                        <div className="w-full aspect-[16/9] bg-white/10 rounded-2xl border border-white/10 relative overflow-hidden flex items-center justify-center shadow-2xl group">
-                            <Image src="/ios-training/lab-classroom.png" alt="Apple Authorized Laboratory Classroom" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
+                        {/* Top Large Video/Image */}
+                        <div className="w-full aspect-[16/9] bg-black/40 rounded-2xl border border-white/10 relative overflow-hidden flex items-center justify-center shadow-2xl group">
+                            <video
+                                src="/ios-training/C0014.MP4"
+                                autoPlay muted loop playsInline
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                            />
                         </div>
                         {/* Bottom Two Images */}
                         <div className="grid grid-cols-2 gap-4">
                             <div className="w-full aspect-[4/3] bg-white/10 rounded-2xl border border-white/10 relative overflow-hidden flex items-center justify-center shadow-xl group">
-                                <Image src="/ios-training/app-mockup.png" alt="SwiftUI Expense App mockup close-up" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
+                                <Image src="/ios-training/_DSC6530.JPG" alt="Students learning" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
                             </div>
                             <div className="w-full aspect-[4/3] bg-white/10 rounded-2xl border border-white/10 relative overflow-hidden flex items-center justify-center shadow-xl group">
-                                <Image src="/ios-training/student-cohort.png" alt="Enthusiastic Student cohort" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
+                                <Image src="/ios-training/WhatsApp Image 2026-04-10 at 20.59.26.jpeg" alt="Trainee team" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
                             </div>
                         </div>
                     </div>
@@ -426,7 +430,7 @@ export default function IosTrainingPage() {
 
                                     <div className="flex justify-between items-start relative z-10">
                                         <span className="font-orbitron font-black text-2xl text-accent/30 group-hover:text-accent transition-colors">{obj.index}</span>
-                                        <div className="w-10 h-10 border border-white/10 flex items-center justify-center rounded-lg text-accent bg-white/5 group-hover:bg-accent group-hover:!text-black transition-colors">
+                                        <div className="w-10 h-10 border border-white/10 flex items-center justify-center rounded-lg text-accent bg-white/5 group-hover:bg-accent group-hover:text-black transition-colors">
                                             <IconComponent className="w-5 h-5" />
                                         </div>
                                     </div>
@@ -560,13 +564,13 @@ export default function IosTrainingPage() {
                             <div key={idx} className="bg-black/25 border border-white/10 rounded-2xl p-6 flex flex-col justify-between items-center text-center group hover:scale-[1.03] hover:border-accent/40 transition-all duration-300 relative shadow-lg min-h-[160px]">
                                 <div className="absolute top-0 right-0 w-[50px] h-[50px] bg-accent/5 rounded-full blur-[30px] pointer-events-none" />
                                 <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-4 group-hover:bg-accent group-hover:border-accent transition-all duration-300">
-                                    <span className="font-orbitron font-extrabold text-xs text-accent group-hover:!text-black transition-colors duration-300">0{idx + 1}</span>
+                                    <span className="font-orbitron font-extrabold text-xs text-accent group-hover:text-black transition-colors duration-300">0{idx + 1}</span>
                                 </div>
                                 <div>
                                     <h4 className="font-orbitron font-black text-sm uppercase text-white leading-tight">{tech.name}</h4>
                                     <p className="text-[10px] text-white/50 leading-normal pt-1 font-medium">{tech.desc}</p>
                                 </div>
-                                <span className="mt-4 inline-block bg-white/5 border border-white/10 rounded px-2.5 py-0.5 text-[8px] font-orbitron font-bold uppercase tracking-wider text-accent group-hover:bg-accent group-hover:!text-black transition-colors duration-300">{tech.tag}</span>
+                                <span className="mt-4 inline-block bg-white/5 border border-white/10 rounded px-2.5 py-0.5 text-[8px] font-orbitron font-bold uppercase tracking-wider text-accent group-hover:bg-accent group-hover:text-black transition-colors duration-300">{tech.tag}</span>
                             </div>
                         ))}
                     </div>
@@ -604,6 +608,9 @@ export default function IosTrainingPage() {
                                 <h3 className="font-orbitron font-black text-2xl lg:text-3xl text-white group-hover:text-accent transition-colors leading-tight">
                                     Trip Expense split<br />(SAVE₹ App)
                                 </h3>
+                                <div className="relative w-full h-64 rounded-xl overflow-hidden mt-4 group-hover:scale-[1.02] transition-transform duration-500">
+                                    <Image src="/ios-training/Screenshot 2026-06-02 at 12.26.01 PM.png" alt="Trip Expense Mockup" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-contain" />
+                                </div>
                                 <p className="text-xs text-white/70 leading-relaxed font-semibold italic">
                                     Developed to help users manage and track travel expenses dynamically. Allows users to add, categorize, and monitor shared expense structures in real time during tours.
                                 </p>
@@ -634,6 +641,9 @@ export default function IosTrainingPage() {
                                 <h3 className="font-orbitron font-black text-2xl lg:text-3xl text-accent leading-tight">
                                     SGVU CONNECT<br />Event System
                                 </h3>
+                                <div className="relative w-full h-64 rounded-xl overflow-hidden mt-4 group-hover:scale-[1.02] transition-transform duration-500">
+                                    <Image src="/ios-training/Screenshot 2026-06-02 at 12.26.16 PM.png" alt="SGVU Connect Mockup" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-contain" />
+                                </div>
                                 <p className="text-xs text-white/70 leading-relaxed font-semibold italic">
                                     Streamlined event operations on university campus. Unified platform for organizing registrations, role-based controls, dashboard analytics, and push updates.
                                 </p>
@@ -664,6 +674,9 @@ export default function IosTrainingPage() {
                                 <h3 className="font-orbitron font-black text-2xl lg:text-3xl text-white group-hover:text-accent transition-colors leading-tight">
                                     Digital Restaurant<br />Dining Solution
                                 </h3>
+                                <div className="relative w-full h-64 rounded-xl overflow-hidden mt-4 group-hover:scale-[1.02] transition-transform duration-500">
+                                    <Image src="/ios-training/Screenshot 2026-06-02 at 12.26.26 PM.png" alt="Dining Solution Mockup" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-contain" />
+                                </div>
                                 <p className="text-xs text-white/70 leading-relaxed font-semibold italic">
                                     Enables diners to browse menus dynamically with structured categories, manage order baskets locally, explore pricing, and manage secure profiles.
                                 </p>
@@ -695,14 +708,19 @@ export default function IosTrainingPage() {
                         <div className="flex-grow h-2 bg-black" />
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                         {[
-                            { src: "/ios-training/lab-classroom.png", alt: "Active Laboratory Sessions" },
-                            { src: "/ios-training/app-mockup.png", alt: "Capstone Architectural Code" },
-                            { src: "/ios-training/student-cohort.png", alt: "Internship Interview Reviews" }
-                        ].map((img, i) => (
-                            <div key={i} className="aspect-[4/3] bg-black border-4 border-black rounded-2xl overflow-hidden group shadow-[15px_15px_0px_#000] relative">
-                                <Image src={img.src} alt={img.alt} fill className="object-cover group-hover:scale-110 transition-transform duration-700 hover:rotate-2" />
+                            "/ios-training/_DSC5523.JPG",
+                            "/ios-training/2d00fc0d-3500-49cd-8f90-8b40ea8daeaf.JPG",
+                            "/ios-training/90de21b6-3018-4b90-87ec-d4f716606523.JPG",
+                            "/ios-training/IMG_2686 (1).JPG",
+                            "/ios-training/IMG_2705.JPG",
+                            "/ios-training/IMG_2710.jpg",
+                            "/ios-training/IMG_2895.JPG",
+                            "/ios-training/IMG_2903.JPG"
+                        ].map((src, i) => (
+                            <div key={i} className="aspect-[4/3] bg-black border-4 border-black rounded-2xl overflow-hidden group shadow-[10px_10px_0px_rgba(0,0,0,0.8)] relative">
+                                <Image src={src} alt={`Training Image ${i + 1}`} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" className="object-cover group-hover:scale-[1.03] transition-transform duration-700" />
                             </div>
                         ))}
                     </div>
@@ -751,6 +769,23 @@ export default function IosTrainingPage() {
                                     <h4 className="text-xs font-bold uppercase tracking-wider text-white">{out.t}</h4>
                                     <p className="text-[10px] text-white/50 leading-relaxed pt-0.5">{out.d}</p>
                                 </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Additional Gallery Strip */}
+                <div className="max-w-[1400px] mx-auto w-full mt-20">
+                    <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                        {[
+                            "/ios-training/IMG_2961 (1).JPG",
+                            "/ios-training/IMG_3087.JPG",
+                            "/ios-training/IMG_4961.jpg",
+                            "/ios-training/WhatsApp Image 2026-01-31 at 10.48.42.jpeg",
+                            "/ios-training/WhatsApp Image 2026-04-10 at 20.58.41.jpeg"
+                        ].map((src, idx) => (
+                            <div key={idx} className="aspect-[4/3] bg-black border border-white/10 rounded-xl overflow-hidden group shadow-lg relative">
+                                <Image src={src} alt={`Learning Outcome ${idx + 1}`} fill sizes="(max-width: 768px) 50vw, 20vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                             </div>
                         ))}
                     </div>
