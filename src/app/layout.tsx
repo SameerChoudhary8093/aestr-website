@@ -56,6 +56,19 @@ export default function RootLayout({
           }}
         />
         {/* End Google Tag Manager */}
+        {/* Google Analytics 4 (GA4) */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-GJSF87VWBQ'}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-GJSF87VWBQ'}');
+          `}
+        </Script>
       </head>
       <body className={`${orbitron.variable} ${outfit.variable} ${playfair.variable} antialiased selection:bg-accent selection:text-black relative w-full max-w-[100vw] overflow-x-hidden`}>
         {/* Google Tag Manager (noscript) */}
