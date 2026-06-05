@@ -43,16 +43,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${orbitron.variable} ${outfit.variable} ${playfair.variable} antialiased selection:bg-accent selection:text-black relative w-full max-w-[100vw] overflow-x-hidden`}>
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-TJQLTWSC"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          ></iframe>
-        </noscript>
-        {/* End Google Tag Manager (noscript) */}
         {/* <UrgencyPopup /> */}
         <SmoothScroll>
           <NetworkBackground />
@@ -62,31 +52,18 @@ export default function RootLayout({
         </SmoothScroll>
         <Analytics />
 
-        {/* Google Tag Manager */}
-        <Script
-          id="gtm-script"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-TJQLTWSC');`,
-          }}
-        />
-        {/* End Google Tag Manager */}
-
         {/* Google Analytics 4 (GA4) */}
         <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-GJSF87VWBQ'}`}
+          src="https://www.googletagmanager.com/gtag/js?id=G-X2P12978SV"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
-            window.gtag = function(){window.dataLayer.push(arguments);}
-            window.gtag('js', new Date());
-            window.gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-GJSF87VWBQ'}');
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-X2P12978SV');
+            window.gtag = gtag;
           `}
         </Script>
       </body>
