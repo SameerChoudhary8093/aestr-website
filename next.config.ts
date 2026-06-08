@@ -1,9 +1,10 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
   images: {
-    loader: 'custom',
-    loaderFile: './src/imageLoader.ts',
+    path: isProd ? '/aestr/_next/image' : '/_next/image',
     remotePatterns: [
       {
         protocol: 'https',

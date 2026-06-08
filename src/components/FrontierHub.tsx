@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image from 'next/image';
 
 const FrontierHub = () => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
