@@ -609,7 +609,7 @@ export default function IosTrainingPage() {
                                     Trip Expense split<br />(SAVE₹ App)
                                 </h3>
                                 <div className="relative w-full h-64 rounded-xl overflow-hidden mt-4 group-hover:scale-[1.02] transition-transform duration-500">
-                                    <Image src="/ios-training/capstone-app-1.png" alt="Trip Expense Mockup" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-contain" />
+                                    <Image src="/ios-training/Expensesplitter.png" alt="Trip Expense Mockup" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-contain" />
                                 </div>
                                 <p className="text-xs text-white/70 leading-relaxed font-semibold italic">
                                     Developed to help users manage and track travel expenses dynamically. Allows users to add, categorize, and monitor shared expense structures in real time during tours.
@@ -642,7 +642,7 @@ export default function IosTrainingPage() {
                                     SGVU CONNECT<br />Event System
                                 </h3>
                                 <div className="relative w-full h-64 rounded-xl overflow-hidden mt-4 group-hover:scale-[1.02] transition-transform duration-500">
-                                    <Image src="/ios-training/capstone-app-2.png" alt="SGVU Connect Mockup" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-contain" />
+                                    <Image src="/ios-training/SGVU-project-image.png" alt="SGVU Connect Mockup" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-contain" />
                                 </div>
                                 <p className="text-xs text-white/70 leading-relaxed font-semibold italic">
                                     Streamlined event operations on university campus. Unified platform for organizing registrations, role-based controls, dashboard analytics, and push updates.
@@ -675,7 +675,7 @@ export default function IosTrainingPage() {
                                     Digital Restaurant<br />Dining Solution
                                 </h3>
                                 <div className="relative w-full h-64 rounded-xl overflow-hidden mt-4 group-hover:scale-[1.02] transition-transform duration-500">
-                                    <Image src="/ios-training/capstone-app-3.png" alt="Dining Solution Mockup" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-contain" />
+                                    <Image src="/ios-training/restaurant-project.png" alt="Dining Solution Mockup" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-contain" />
                                 </div>
                                 <p className="text-xs text-white/70 leading-relaxed font-semibold italic">
                                     Enables diners to browse menus dynamically with structured categories, manage order baskets locally, explore pricing, and manage secure profiles.
