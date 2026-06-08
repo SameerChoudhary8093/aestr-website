@@ -5,6 +5,10 @@ import Image from 'next/image';
 
 import { motion } from 'framer-motion';
 
+import sgvuLogo from '../../public/Herosection/Container.svg';
+import nirfLogo from '../../public/Herosection/Nirf white.png';
+import naacLogo from '../../public/Herosection/naac white  .png';
+
 const Footer = () => {
     return (
         <footer className="w-full">
@@ -59,7 +63,7 @@ const Footer = () => {
                             {/* SGVU Primary Logo */}
                             <div className="relative transition-all duration-500 hover:scale-110 flex items-center justify-center">
                                 <Image
-                                    src="/Herosection/Container.svg"
+                                    src={sgvuLogo}
                                     alt="Gyan Vihar"
                                     width={160}
                                     height={40}
@@ -72,7 +76,7 @@ const Footer = () => {
                                 {/* NIRF Logo */}
                                 <div className="relative transition-all duration-500 hover:scale-110 flex items-center justify-center">
                                     <Image
-                                        src="/Herosection/Nirf white.png"
+                                        src={nirfLogo}
                                         alt="NIRF"
                                         width={64}
                                         height={64}
@@ -83,7 +87,7 @@ const Footer = () => {
                                 {/* NAAC Logo */}
                                 <div className="relative transition-all duration-500 hover:scale-110 flex items-center justify-center">
                                     <Image
-                                        src="/Herosection/naac white  .png"
+                                        src={naacLogo}
                                         alt="NAAC A+"
                                         width={80}
                                         height={80}

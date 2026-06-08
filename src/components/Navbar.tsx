@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import MagneticEffect from './MagneticEffect';
-
+import aestrLogo from '../../public/Herosection/by gyan vihar 2 neon.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -92,7 +92,7 @@ const Navbar = () => {
                     {/* Left: AESTR Logo */}
                     <Link href="/#hero" onClick={handleHomeClick} className="flex-none h-[70%] lg:h-[75%] xl:h-[80%] 2xl:h-[90%]">
                         <Image
-                            src="/Herosection/by gyan vihar 2 neon.png"
+                            src={aestrLogo}
                             alt="Aestr Logo"
                             width={350}
                             height={110}
@@ -186,7 +186,7 @@ const Navbar = () => {
                     >
                         <div className="flex justify-between items-center mb-12">
                             <Link href="/#hero" onClick={handleHomeClick} className="w-[130px] relative h-8">
-                                <Image src="/Herosection/by gyan vihar 2 neon.png" alt="Aestr Logo" fill className="object-contain" />
+                                <Image src={aestrLogo} alt="Aestr Logo" fill className="object-contain" />
                             </Link>
                             <button
                                 onClick={() => setIsOpen(false)}
