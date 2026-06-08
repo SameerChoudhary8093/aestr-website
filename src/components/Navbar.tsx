@@ -90,7 +90,7 @@ const Navbar = () => {
                 {/* Navbar Content */}
                 <div className="flex items-center justify-between w-full h-[65px] lg:h-[72px] xl:h-[80px] 2xl:h-[90px] px-4 lg:px-5 xl:px-6">
                     {/* Left: AESTR Logo */}
-                    <Link href="/#hero" onClick={handleHomeClick} className="flex-none h-[70%] lg:h-[75%] xl:h-[80%] 2xl:h-[90%]">
+                    <Link href="/#hero" onClick={handleHomeClick} className="flex-none h-[70%] lg:h-[75%] xl:h-[80%] 2xl:h-[90%]" aria-label="Aestr Home Logo">
                         <Image
                             src={aestrLogo}
                             alt="Aestr Logo"
@@ -163,6 +163,7 @@ const Navbar = () => {
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 className="p-3 text-accent hover:bg-white/5 rounded-xl transition-all focus:outline-none border border-white/5"
+                                aria-label="Toggle navigation menu"
                             >
                                 <div className="w-6 h-5 relative flex flex-col justify-between">
                                     <span className={`w-full h-0.5 bg-accent rounded-full transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`} />
@@ -185,12 +186,13 @@ const Navbar = () => {
                         className="fixed inset-0 bg-background/95 z-[100] p-6 lg:hidden pointer-events-auto flex flex-col overflow-y-auto overflow-x-hidden scrollbar-hide pt-10 pb-20"
                     >
                         <div className="flex justify-between items-center mb-12">
-                            <Link href="/#hero" onClick={handleHomeClick} className="w-[130px] relative h-8">
+                            <Link href="/#hero" onClick={handleHomeClick} className="w-[130px] relative h-8" aria-label="Aestr Home Logo">
                                 <Image src={aestrLogo} alt="Aestr Logo" fill className="object-contain" />
                             </Link>
                             <button
                                 onClick={() => setIsOpen(false)}
                                 className="text-accent text-3xl font-light p-2"
+                                aria-label="Close navigation menu"
                             >
                                 ✕
                             </button>

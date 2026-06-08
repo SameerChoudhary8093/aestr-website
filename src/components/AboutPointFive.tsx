@@ -128,9 +128,9 @@ const AboutPointFive = () => {
                                 {/* Content Section */}
                                 <div className="flex-grow space-y-6">
                                     <div className="space-y-3">
-                                        <h4 className="text-[1.25rem] md:text-[1.4rem] text-white font-black leading-tight font-orbitron uppercase tracking-normal min-h-[3.5rem] flex items-start">
+                                        <h3 className="text-[1.25rem] md:text-[1.4rem] text-white font-black leading-tight font-orbitron uppercase tracking-normal min-h-[3.5rem] flex items-start">
                                             {lab.name}
-                                        </h4>
+                                        </h3>
                                         <div className="flex items-center gap-2">
                                             <div className="w-1.5 h-1.5 bg-accent rounded-[1px] animate-pulse" />
                                             <span className="text-[9px] md:text-[10px] font-orbitron font-black text-accent tracking-[0.2em] uppercase">LAB {String(idx + 1).padStart(2, '0')} IN-CHARGE</span>

@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { Orbitron, Outfit, Playfair_Display } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import NetworkBackground from "@/components/NetworkBackground";
 import SmoothScroll from "@/components/SmoothScroll";
 import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
 import "./globals.css";
 import UrgencyPopup from "@/components/UrgencyPopup";
+import NetworkBackgroundWrapper from "@/components/NetworkBackgroundWrapper";
 
 
 const orbitron = Orbitron({
@@ -53,7 +53,7 @@ export default function RootLayout({
       <body className={`${orbitron.variable} ${outfit.variable} ${playfair.variable} antialiased selection:bg-accent selection:text-black relative w-full max-w-[100vw] overflow-x-hidden`}>
         {/* <UrgencyPopup /> */}
         <SmoothScroll>
-          <NetworkBackground />
+          <NetworkBackgroundWrapper />
           <Navbar />
           {children}
           <Footer />

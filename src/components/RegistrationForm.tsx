@@ -54,6 +54,7 @@ const RegistrationForm = () => {
 
                 {/* Wide iframe container - shifted up to show button */}
                 <iframe
+                    title="Admissions Registration Form"
                     frameBorder="0"
                     width="100%"
                     height="800px"

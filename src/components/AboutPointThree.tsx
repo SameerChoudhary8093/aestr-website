@@ -20,9 +20,9 @@ const AboutPointThree = () => {
                         transition={{ duration: 0.8 }}
                         className="text-center space-y-6 w-full max-w-6xl px-4"
                     >
-                        <h3 className="text-h2 text-white capitalize font-black lg:whitespace-nowrap">
+                        <h2 className="text-h2 text-white capitalize font-black lg:whitespace-nowrap">
                             Targeting <span className="opacity-95 text-accent">In-Demand Careers Of 2030</span>
-                        </h3>
+                        </h2>
                         <p className="text-body text-white/90 font-bold lg:whitespace-nowrap">
                             Train for roles powering the next generation of banking, robotics, healthcare, and more—with real-world impact and future security.
                         </p>

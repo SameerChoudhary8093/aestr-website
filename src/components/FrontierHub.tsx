@@ -75,7 +75,7 @@ const FrontierHub = () => {
                                 {/* Left side - Text content */}
                                 <div className="lg:col-span-7 space-y-6">
                                     <div className="relative">
-                                        <motion.p 
+                                        <motion.h2 
                                             variants={{
                                                 hidden: { opacity: 0, y: 30 },
                                                 visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
@@ -83,7 +83,7 @@ const FrontierHub = () => {
                                             className="text-[40px] md:text-[48px] font-orbitron font-black text-white leading-tight mb-8 relative z-10"
                                         >
                                             Aestr Is INDIA'S SOVEREIGN AI HUB
-                                        </motion.p>
+                                        </motion.h2>
                                     </div>
 
                                     <div className="relative">
@@ -183,9 +183,9 @@ const FrontierHub = () => {
                                     <circle cx="20" cy="20" r="3" fill="currentColor" />
                                 </svg>
                             </div>
-                            <h3 className="text-purple font-orbitron font-black text-sm md:text-base tracking-[0.2em] uppercase">
+                            <p className="text-purple font-orbitron font-black text-sm md:text-base tracking-[0.2em] uppercase">
                                 Welcome to the frontier:
-                            </h3>
+                            </p>
                         </div>
 
                         <div className="bg-black px-5 py-2.5 md:px-7 md:py-3.5 rounded-2xl shadow-xl inline-flex items-center justify-center self-end md:self-auto border-2 border-white/20 lg:translate-x-4 shrink-0 w-fit">
@@ -209,9 +209,9 @@ const FrontierHub = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch h-auto min-h-[440px]">
                         <div className="lg:col-span-5 flex h-full">
                             <div className="glass !bg-[#000000] p-6 md:p-10 rounded-[2.5rem] border border-white/5 shadow-2xl flex flex-col justify-center w-full h-full">
-                                <h4 className="text-[24px] font-orbitron font-black text-[#D8F602] mb-5">
+                                <h3 className="text-[24px] font-orbitron font-black text-[#D8F602] mb-5">
                                     B.Tech AI
-                                </h4>
+                                </h3>
                                 <div className="flex flex-wrap items-center gap-3 mb-6">
                                     <span className="text-white text-xl sm:text-2xl font-orbitron font-extrabold">Powered by</span>
                                     <div className="relative w-32 h-8 sm:w-36 sm:h-9">
@@ -241,6 +241,7 @@ const FrontierHub = () => {
                                     controls
                                 >
                                     <source src="/pm-video.mp4" type="video/mp4" />
+                                    <track kind="captions" src="" label="English" default />
                                     Your browser does not support the video tag.
                                 </video>
                             </div>

@@ -1,10 +1,14 @@
 'use client';
 
 import Image from 'next/image';
-import ParticleEffect from './ParticleEffect';
+import dynamic from 'next/dynamic';
 import RegistrationForm from './RegistrationForm';
 import { scrollToRegistrationForm } from '@/utils/navigation';
 import { motion } from 'framer-motion';
+
+const ParticleEffect = dynamic(() => import('./ParticleEffect'), {
+  ssr: false,
+});
 
 
 const Hero = () => {
