@@ -28,8 +28,16 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://aestr.gyanvihar.org"),
   title: "AESTR: Best Computer Science Engineering College in India",
-  description: "A modern, futuristic web application inspired by Aestr Alpha",
+  description: "AESTR by Gyan Vihar is a premier Computer Science Engineering residency in India. Stop studying, start building with our Silicon Valley-style incubator.",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   verification: {
     google: "EPNBdUPqa_hL7njRbItRI1ZcVPTYBfg8SjVs6llamks",
   },
