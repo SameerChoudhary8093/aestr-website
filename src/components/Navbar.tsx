@@ -129,8 +129,8 @@ const Navbar = () => {
                         
                         <div className="hidden lg:flex items-center h-full gap-1 lg:gap-2 2xl:gap-3">
                             <Image
-                                src="/Herosection/sgvu-logo.png"
-                                alt="Suresh Gyan Vihar University"
+                                src="/Herosection/Container.svg"
+                                alt="Gyan Vihar"
                                 width={240}
                                 height={75}
                                 className="w-auto h-[80%] lg:h-[85%] xl:h-full object-contain brightness-0 invert"
