@@ -241,7 +241,6 @@ const FrontierHub = () => {
                                     controls
                                 >
                                     <source src="/pm-video.mp4" type="video/mp4" />
-                                    <track kind="captions" src="" label="English" default />
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
