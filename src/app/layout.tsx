@@ -30,6 +30,9 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "AESTR: Best Computer Science Engineering College in India",
   description: "A modern, futuristic web application inspired by Aestr Alpha",
+  verification: {
+    google: "EPNBdUPqa_hL7njRbItRI1ZcVPTYBfg8SjVs6llamks",
+  },
 };
 
 export default function RootLayout({
