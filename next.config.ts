@@ -4,7 +4,7 @@ const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig: NextConfig = {
   images: {
-    path: isProd ? '/aestr/_next/image' : '/_next/image',
+    unoptimized: isProd,
     remotePatterns: [
       {
         protocol: 'https',
