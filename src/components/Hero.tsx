@@ -1,5 +1,6 @@
 'use client';
 
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import RegistrationForm from './RegistrationForm';
@@ -7,22 +8,34 @@ import { scrollToRegistrationForm } from '@/utils/navigation';
 import { motion } from 'framer-motion';
 
 const ParticleEffect = dynamic(() => import('./ParticleEffect'), {
-  ssr: false,
+    ssr: false,
 });
 
 
 const Hero = () => {
+    const [showParticles, setShowParticles] = useState(false);
+
+    useEffect(() => {
+        const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+        );
+        const conn = (navigator as any).connection;
+        const isSlowConnection = conn && (conn.saveData || ['slow-2g', '2g', '3g'].includes(conn.effectiveType));
+
+        setShowParticles(window.innerWidth >= 1024 && !isMobileDevice && !isSlowConnection);
+    }, []);
+
     return (
         <section id="hero" className="relative min-h-screen flex items-start lg:items-center justify-center overflow-hidden bg-transparent">
             {/* The global 3D background handles the visuals */}
-            <ParticleEffect />
+            {showParticles && <ParticleEffect />}
 
             {/* Glowing Orbs - Neon Green accents */}
             <div className="absolute top-1/4 left-1/4 w-full max-w-[500px] aspect-square bg-accent/10 rounded-full blur-[120px] pointer-events-none z-0" />
             <div className="absolute bottom-1/4 right-1/4 w-full max-w-[400px] aspect-square bg-accent/5 rounded-full blur-[100px] pointer-events-none z-0" />
 
-            <div id="registration-form" className="container-boxed relative z-10 w-full pt-32 md:pt-36 lg:pt-20 xl:pt-20 2xl:py-24">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center max-w-7xl mx-auto">
+            <div id="registration-form" className="container-boxed relative z-10 w-full pt-24 pb-16 md:pt-40 md:pb-24 lg:pt-28 lg:pb-20 xl:pt-28 xl:pb-20 2xl:py-32">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 lg:gap-10 items-center max-w-7xl mx-auto">
 
                     {/* Left Column: Text & CTA (xl:col-span-7) */}
                     <motion.div
@@ -36,7 +49,7 @@ const Hero = () => {
                                 transition: { staggerChildren: 0.15 }
                             }
                         }}
-                        className="space-y-4 md:space-y-6 lg:col-span-4 order-2 lg:order-1"
+                        className="space-y-4 md:space-y-6 lg:col-span-7 order-2 lg:order-1 lg:pt-10"
                     >
                         <div className="space-y-4 md:space-y-5 text-left">
                             <motion.h1
@@ -44,16 +57,16 @@ const Hero = () => {
                                     hidden: { opacity: 0, y: 30 },
                                     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
                                 }}
-                                className="text-[40px] sm:text-[52px] md:text-[56px] lg:text-[32px] xl:text-[46px] 2xl:text-[64px] font-orbitron font-black tracking-tighter leading-[1.05] w-full lg:whitespace-nowrap"
+                                className="text-[28px] min-[360px]:text-[30px] min-[390px]:text-[32px] sm:text-[44px] md:text-[52px] lg:text-[38px] xl:text-[46px] 2xl:text-[58px] font-orbitron font-black tracking-tighter leading-[1.2] w-full text-left"
                             >
-                                The B.Tech is dead
+                                The B.Tech Computer <br /> Science & Engineering <br /> (CSE) is Dead.
                             </motion.h1>
                             <motion.p
                                 variants={{
                                     hidden: { opacity: 0, y: 30 },
                                     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
                                 }}
-                                className="text-[16px] sm:text-[18px] lg:text-[13px] xl:text-[16px] 2xl:text-[24px] text-foreground font-bold leading-snug tracking-tight w-fit mt-2 border-b-0 lg:whitespace-nowrap"
+                                className="text-[16px] sm:text-[18px] lg:text-[13px] xl:text-[16px] 2xl:text-[24px] text-foreground font-bold leading-snug tracking-tight w-full mt-2 border-b-0 lg:whitespace-nowrap text-left"
                             >
                                 The AESTR Solution: <span className="text-accent">The 4-Year Engineering Residency.</span>
                             </motion.p>
@@ -62,10 +75,11 @@ const Hero = () => {
                                     hidden: { opacity: 0, y: 30 },
                                     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
                                 }}
-                                className="text-[14px] sm:text-[15px] lg:text-[11px] xl:text-[12px] text-foreground/80 font-medium w-full leading-relaxed flex flex-col gap-2 mt-4"
+                                className="text-[14px] sm:text-[15px] lg:text-[11px] xl:text-[12px] text-foreground/80 font-medium w-full leading-relaxed flex flex-col gap-2 mt-4 text-left"
                             >
-                                <span className="block font-bold xl:whitespace-nowrap">AESTR by Gyan Vihar is built on a single, uncompromising premise:</span>
-                                <span className="block font-bold xl:whitespace-nowrap">Stop studying. Start building. We are not a college we are a Silicon Valley-style incubator.</span>
+                                <span className="block font-bold">AESTR by Gyan Vihar is built on a single, uncompromising premise to deliver the best B.Tech CSE in Jaipur:</span>
+                                <span className="block font-bold">Stop studying. Start building. We are not a traditional engineering college; we are a Silicon Valley-style incubator offering an advanced, AI-driven B.Tech Computer Science & Engineering (CSE) program. Our students build production-grade applications, launch scalable tech startups, and receive direct mentorship from top industry leaders to secure elite global placements.</span>
+                                <span className="block font-bold text-foreground/70">Designed in collaboration with elite tech partners, the residency model replaces passive listening with 2000+ hours of hands-on coding, product shipping, and real startups. Graduates leave with a portfolio of shipped products and direct access to high-growth global opportunities.</span>
                             </motion.div>
                         </div>
 
@@ -140,7 +154,7 @@ const Hero = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="lg:col-span-8 lg:ml-auto order-1 lg:order-2"
+                        className="lg:col-span-5 lg:ml-auto order-1 lg:order-2"
                     >
                         <RegistrationForm />
                     </motion.div>

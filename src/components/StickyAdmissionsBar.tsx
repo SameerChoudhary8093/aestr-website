@@ -5,33 +5,42 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { scrollToRegistrationForm } from '@/utils/navigation';
 
 const StickyAdmissionsBar = () => {
-    const [isVisible, setIsVisible] = useState(true);
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            // Get the footer element (BottomCTA's admissions bar part)
+            // Check if user has scrolled past the Hero section (which is min-h-screen)
+            const heroElement = document.getElementById('hero');
+            const heroHeight = heroElement ? heroElement.offsetHeight : 500;
+            const pastHero = window.scrollY > (heroHeight - 100);
+
+            // Get the footer element
             const footerElement = document.querySelector('footer') || document.querySelector('.admissions-bar-footer');
+            let nearFooter = false;
+
             if (footerElement) {
                 const rect = footerElement.getBoundingClientRect();
                 // If the top of the footer is visible on screen, hide the sticky bar
                 if (rect.top < window.innerHeight) {
-                    setIsVisible(false);
-                } else {
-                    setIsVisible(true);
+                    nearFooter = true;
                 }
             } else {
                 // Fallback: use scroll position if element not found
                 const scrollHeight = document.documentElement.scrollHeight;
                 const scrollPos = window.innerHeight + window.scrollY;
                 if (scrollHeight - scrollPos < 400) { // Near bottom
-                    setIsVisible(false);
-                } else {
-                    setIsVisible(true);
+                    nearFooter = true;
                 }
             }
+
+            // Only show banner when scrolled past the hero section AND not near the footer
+            setIsVisible(pastHero && !nearFooter);
         };
 
-        window.addEventListener('scroll', handleScroll);
+        // Run once on mount to handle initial scroll position (e.g. on page refresh mid-page)
+        handleScroll();
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 

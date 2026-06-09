@@ -72,7 +72,7 @@ const AboutTopOnePercent = () => {
                     className="space-y-12"
                 >
                     <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-                        <motion.div 
+                        <motion.div
                             variants={{
                                 hidden: { opacity: 0, y: 30 },
                                 visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
@@ -80,13 +80,13 @@ const AboutTopOnePercent = () => {
                             className="space-y-4 text-left"
                         >
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-orbitron font-bold leading-tight flex flex-wrap items-center gap-2 md:gap-3 text-foreground">
-                                B.Tech for <span className="text-accent">the top 1%</span>
+                                B.Tech CSE for <span className="text-accent">the top 1%</span>
                             </h2>
                             <p className="text-[16px] text-foreground/80 max-w-2xl leading-relaxed whitespace-normal">
                                 Blend of deep CS knowledge with expertise in healthcare, nanotech, robotics, and material science.
                             </p>
                         </motion.div>
-                        
+
                         <motion.div
                             variants={{
                                 hidden: { opacity: 0, y: 30 },
@@ -98,7 +98,7 @@ const AboutTopOnePercent = () => {
                                 Btech AI with Shodh AI
                                 <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform ml-2">↗</span>
                             </Link>
-                            
+
                             <Link href="/salesforce-training" className="px-6 py-3 md:px-8 md:py-4 bg-transparent border-2 border-accent text-accent font-orbitron font-bold uppercase tracking-widest text-xs md:text-sm rounded-[1.25rem] hover:bg-accent hover:!text-black transition-all duration-300 shadow-[0_0_20px_rgba(216,246,2,0.1)] hover:shadow-[0_0_30px_rgba(216,246,2,0.4)] flex items-center justify-center group whitespace-normal text-center">
                                 Salesforce Developer Training & Placement Program
                                 <span className="group-hover:translate-x-1 transition-transform ml-3 tracking-normal">→</span>
@@ -112,7 +112,7 @@ const AboutTopOnePercent = () => {
                     </div>
 
                     {/* Specialization Card */}
-                    <motion.div 
+                    <motion.div
                         variants={{
                             hidden: { opacity: 0, y: 30 },
                             visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
@@ -123,7 +123,7 @@ const AboutTopOnePercent = () => {
                         <div className="aspect-video w-full rounded-xl md:rounded-2xl border border-white/10 overflow-hidden shadow-2xl relative group bg-black">
                             <YouTubePlayer
                                 videoId="mA3Z2VYMNXo"
-                                title="B.Tech for The top 1%"
+                                title="B.Tech CSE for The top 1%"
                             />
                         </div>
 

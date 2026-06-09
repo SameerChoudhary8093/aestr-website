@@ -1,18 +1,18 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Script from 'next/script';
 import ThankYouModal from './ThankYouModal';
 
 const RegistrationForm = () => {
     const [showThankYou, setShowThankYou] = useState(false);
+    const [shouldLoadForm, setShouldLoadForm] = useState(false);
 
     useEffect(() => {
-        // Load the NoPaperForms script
-        const script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.async = true;
-        script.src = 'https://widgets.in6.nopaperforms.com/emwgts.js';
-        document.body.appendChild(script);
+        // Wait for first paint and hydration to finish before loading the form
+        const timer = setTimeout(() => {
+            setShouldLoadForm(true);
+        }, 1200);
 
         // Listen for messages from the NoPaperForms iframe
         const handleMessage = (event: MessageEvent) => {
@@ -33,10 +33,7 @@ const RegistrationForm = () => {
         window.addEventListener('message', handleMessage);
 
         return () => {
-            // Clean up
-            if (document.body.contains(script)) {
-                document.body.removeChild(script);
-            }
+            clearTimeout(timer);
             window.removeEventListener('message', handleMessage);
         };
     }, []);
@@ -52,23 +49,31 @@ const RegistrationForm = () => {
                     Registration Form
                 </h2>
 
-                {/* Wide iframe container - shifted up to show button */}
-                <iframe
-                    title="Admissions Registration Form"
-                    frameBorder="0"
-                    width="100%"
-                    height="800px"
-                    sandbox="allow-top-navigation allow-scripts allow-same-origin allow-downloads allow-forms allow-popups"
-                    src="https://widgets.in6.nopaperforms.com/register?&r=&q=&w=4413174de5dab5bbec3036f720dffea8&m=&cu=https://aestr.gyanvihar.org/"
-                    scrolling="yes"
-                    style={{
-                        width: '100%',
-                        height: '800px',
-                        display: 'block',
-                        border: 'none',
-                        marginTop: '-19px',
-                    }}
-                />
+                {shouldLoadForm ? (
+                    <>
+                        <Script src="https://widgets.in6.nopaperforms.com/emwgts.js" strategy="lazyOnload" />
+                        <iframe
+                            title="Admissions Registration Form"
+                            frameBorder="0"
+                            width="100%"
+                            height="800px"
+                            sandbox="allow-top-navigation allow-scripts allow-same-origin allow-downloads allow-forms allow-popups"
+                            src="https://widgets.in6.nopaperforms.com/register?&r=&q=&w=4413174de5dab5bbec3036f720dffea8&m=&cu=https://aestr.gyanvihar.org/"
+                            scrolling="yes"
+                            style={{
+                                width: '100%',
+                                height: '800px',
+                                display: 'block',
+                                border: 'none',
+                                marginTop: '-19px',
+                            }}
+                        />
+                    </>
+                ) : (
+                    <div className="w-full h-[500px] flex items-center justify-center bg-white">
+                        <div className="w-10 h-10 border-4 border-gray-200 border-t-accent rounded-full animate-spin"></div>
+                    </div>
+                )}
             </div>
 
             <ThankYouModal

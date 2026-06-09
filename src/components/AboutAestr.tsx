@@ -26,7 +26,7 @@ const AboutAestr = () => {
                         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
                             <div className="space-y-4">
                                 <h2 className="text-h2 font-orbitron leading-tight flex flex-wrap items-center gap-3 text-foreground">
-                                    B.Tech for <span className="text-accent">the top 1%</span>
+                                    B.Tech CSE for <span className="text-accent">the top 1%</span>
                                 </h2>
                                 <p className="text-body text-foreground/80 max-w-2xl w-full whitespace-normal">
                                     Blend of deep CS knowledge with expertise in healthcare, nanotech, robotics, and material science.

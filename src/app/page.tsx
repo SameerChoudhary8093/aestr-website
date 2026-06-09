@@ -1,22 +1,21 @@
 import Hero from "@/components/Hero";
 import StickyAdmissionsBar from "@/components/StickyAdmissionsBar";
-import FrontierHub from "@/components/FrontierHub";
-import AboutTopOnePercent from "@/components/AboutTopOnePercent";
-import CourseraPartnership from "@/components/CourseraPartnership";
-import AboutPointOne from "@/components/AboutPointOne";
-import AboutPointTwo from "@/components/AboutPointTwo";
-import FoundingTeamVideo from "@/components/FoundingTeamVideo";
-import ProgramPartners from "@/components/ProgramPartners";
-import AboutPointThree from "@/components/AboutPointThree";
-import CareerCarousel from "@/components/CareerCarousel";
-import AboutPointFour from "@/components/AboutPointFour";
-import AboutPointFive from "@/components/AboutPointFive";
-import AestrDifferentiators from "@/components/AestrDifferentiators";
-import FutureFaculty from "@/components/FutureFaculty";
-import Pathways from "@/components/Pathways";
-import PlacementPartners from "@/components/PlacementPartners";
-import ExecutionTeam from "@/components/ExecutionTeam";
-import FAQ from "@/components/FAQ";
+import dynamic from 'next/dynamic';
+
+const AboutTopOnePercent = dynamic(() => import("@/components/AboutTopOnePercent"));
+const FrontierHub = dynamic(() => import("@/components/FrontierHub"));
+const ProgramPartners = dynamic(() => import("@/components/ProgramPartners"));
+const AboutPointThree = dynamic(() => import("@/components/AboutPointThree"));
+const CareerCarousel = dynamic(() => import("@/components/CareerCarousel"));
+const AestrDifferentiators = dynamic(() => import("@/components/AestrDifferentiators"));
+const AboutPointFour = dynamic(() => import("@/components/AboutPointFour"));
+const AboutPointFive = dynamic(() => import("@/components/AboutPointFive"));
+const Pathways = dynamic(() => import("@/components/Pathways"));
+const PlacementPartners = dynamic(() => import("@/components/PlacementPartners"));
+const ExecutionTeam = dynamic(() => import("@/components/ExecutionTeam"));
+const CourseraPartnership = dynamic(() => import("@/components/CourseraPartnership"));
+const FAQ = dynamic(() => import("@/components/FAQ"));
+const BTechCSEEvolution = dynamic(() => import("@/components/BTechCSEEvolution"));
 
 
 export default function Home() {
@@ -24,6 +23,7 @@ export default function Home() {
     <main className="relative">
       <StickyAdmissionsBar />
       <Hero />
+      <BTechCSEEvolution />
       <AboutTopOnePercent />
       <FrontierHub />
       {/* <AboutPointOne /> */}

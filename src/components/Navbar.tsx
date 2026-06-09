@@ -187,7 +187,7 @@ const Navbar = () => {
                     >
                         <div className="flex justify-between items-center mb-12">
                             <Link href="/#hero" onClick={handleHomeClick} className="w-[130px] relative h-8" aria-label="Aestr Home Logo">
-                                <Image src={aestrLogo} alt="Aestr Logo" fill className="object-contain" />
+                                <Image src={aestrLogo} alt="Aestr Logo" fill sizes="(max-width: 768px) 130px, 130px" className="object-contain" />
                             </Link>
                             <button
                                 onClick={() => setIsOpen(false)}

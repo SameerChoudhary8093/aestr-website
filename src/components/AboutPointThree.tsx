@@ -1,8 +1,52 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+
+const YouTubePlayer = ({ videoId, title }: { videoId: string; title: string }) => {
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    if (isPlaying) {
+        return (
+            <iframe
+                src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&start=2`}
+                title={title}
+                className="w-full h-full border-none"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+            ></iframe>
+        );
+    }
+
+    return (
+        <div
+            className="relative w-full h-full cursor-pointer group"
+            onClick={() => setIsPlaying(true)}
+        >
+            <Image
+                src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
+                alt={title}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover transition-transform duration-1000 group-hover:scale-105"
+            />
+            {/* Transparent Play Button Overlay */}
+            <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-all duration-500">
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full flex items-center justify-center shadow-2xl transform transition-all duration-500 group-hover:scale-110 group-hover:bg-white/20">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        className="w-8 h-8 md:w-10 md:h-10 text-white ml-1"
+                    >
+                        <path d="M8 5.14v14l11-7-11-7z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    );
+};
 
 
 const AboutPointThree = () => {
@@ -43,6 +87,7 @@ const AboutPointThree = () => {
                                     src="/Other/image.jpeg"
                                     alt="Future Technology"
                                     fill
+                                    sizes="(max-width: 768px) 100vw, 50vw"
                                     priority
                                     className="object-cover object-top"
                                 />
@@ -59,13 +104,10 @@ const AboutPointThree = () => {
                             className="relative group w-full"
                         >
                             <div className="aspect-video w-full bg-black/80 rounded-[2rem] md:rounded-[3rem] border-2 border-white/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-accent/40 group-hover:shadow-[0_0_100px_rgba(216,246,2,0.15)] relative">
-                                <iframe
-                                    src="https://www.youtube.com/embed/gGh2HYhMSy8?rel=0&modestbranding=1&start=2"
+                                <YouTubePlayer
+                                    videoId="gGh2HYhMSy8"
                                     title="In-Demand Careers of 2030"
-                                    className="w-full h-full"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                ></iframe>
+                                />
                             </div>
                         </motion.div>
                     </div>
