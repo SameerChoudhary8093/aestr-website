@@ -713,7 +713,7 @@ export const blogPosts: BlogPost[] = [
         author: "Mentors Board",
         date: "Jan 25, 2026",
         category: "Portfolio",
-        image: "/images/blogs/proof-over-paper.png",
+        image: "/images/blogs/death-of-exams.png",
         categoryColor: "bg-emerald-500/10 text-emerald-500 border-emerald-500/20",
         metaDescription: "Step-by-step instructions for aspiring engineers to build a project portfolio for their AESTR application.",
         content: `
@@ -767,7 +767,7 @@ export const blogPosts: BlogPost[] = [
         author: "AESTR Mentors",
         date: "Jan 15, 2026",
         category: "Entrance Prep",
-        image: "/images/blogs/cracking-sgvueee.png",
+        image: "/images/blogs/sgvueee-guide.png",
         categoryColor: "bg-yellow-600/10 text-yellow-600 border-yellow-600/20",
         metaDescription: "Preparation guide for the SGVUEEE entrance exam focusing on applied logic and potential.",
         content: `
@@ -794,7 +794,7 @@ export const blogPosts: BlogPost[] = [
         author: "Program Heads",
         date: "Jan 10, 2026",
         category: "Orientation",
-        image: "/images/blogs/is-aestr-right-for-you.png",
+        image: "/images/blogs/aestr-upgrade.png",
         categoryColor: "bg-cyan-600/10 text-cyan-600 border-cyan-600/20",
         metaDescription: "Self-assessment guide for prospective students to determine if the AESTR residency model fits their goals.",
         content: `
@@ -827,7 +827,7 @@ export const blogPosts: BlogPost[] = [
         author: "Student Community",
         date: "Jan 05, 2026",
         category: "Campus Culture",
-        image: "/images/blogs/forget-college-fests.png",
+        image: "/images/blogs/ditch-textbooks.png",
         categoryColor: "bg-fuchsia-500/10 text-fuchsia-500 border-fuchsia-500/20",
         metaDescription: "A look at the hacker culture and intense weekend build sprints that define the AESTR experience.",
         content: `
@@ -854,7 +854,7 @@ export const blogPosts: BlogPost[] = [
         author: "Collaboration Cell",
         date: "Jan 01, 2026",
         category: "Ethics & Diversity",
-        image: "/images/blogs/inclusive-intelligence.png",
+        image: "/images/blogs/ai-ethics.png",
         categoryColor: "bg-orange-400/10 text-orange-400 border-orange-400/20",
         metaDescription: "How cultural diversity at SGVU/AESTR leads to better, unbiased technological solutions for the global market.",
         content: `
@@ -881,7 +881,7 @@ export const blogPosts: BlogPost[] = [
         author: "Tech Founders",
         date: "Dec 25, 2025",
         category: "Vision",
-        image: "/images/blogs/rajasthan-to-reality.png",
+        image: "/images/blogs/classroom-to-ceo.png",
         categoryColor: "bg-yellow-800/10 text-yellow-800 border-yellow-800/20",
         metaDescription: "Experience the Sillicon Valley ethos within the AESTR residency program in Rajasthan.",
         content: `
@@ -908,7 +908,7 @@ export const blogPosts: BlogPost[] = [
         author: "AESTR Residents",
         date: "Dec 20, 2025",
         category: "Community",
-        image: "/images/blogs/tech-tribe.png",
+        image: "/images/blogs/first-30-days.png",
         categoryColor: "bg-purple-900/10 text-purple-900 border-purple-900/20",
         metaDescription: "The importance of peer learning and high-performance community in the AESTR 100-student cohort model.",
         content: `
@@ -935,7 +935,7 @@ export const blogPosts: BlogPost[] = [
         author: "Incubator Director",
         date: "Dec 15, 2025",
         category: "Infrastructure",
-        image: "/images/blogs/more-than-a-campus.png",
+        image: "/images/blogs/high-aura-lab.png",
         categoryColor: "bg-gray-800/10 text-gray-800 border-gray-800/20",
         metaDescription: "Explore how the AESTR program environment mirrors professional startup accelerators and incubators.",
         content: `
@@ -962,7 +962,7 @@ export const blogPosts: BlogPost[] = [
         author: "Defense Research Lead",
         date: "Dec 10, 2025",
         category: "Sovereign AI",
-        image: "/images/blogs/drdo-projects.png",
+        image: "/images/blogs/riscv-sovereignty.png",
         categoryColor: "bg-orange-950/10 text-orange-950 border-orange-950/20",
         metaDescription: "Insight into the national-interest and defense-related engineering projects available to AESTR residents.",
         content: `
@@ -989,7 +989,7 @@ export const blogPosts: BlogPost[] = [
         author: "Global Alliances",
         date: "Dec 05, 2025",
         category: "Collaboration",
-        image: "/images/blogs/global-researchers.png",
+        image: "/images/blogs/syllabus-tomorrow.png",
         categoryColor: "bg-blue-400/10 text-blue-400 border-blue-400/20",
         metaDescription: "How the AESTR program facilitates direct connections and collaborative research with international technology experts.",
         content: `
@@ -1017,7 +1017,7 @@ export const blogPosts: BlogPost[] = [
         author: "Team AESTR",
         date: "Apr 17, 2026",
         category: "Education",
-        image: "/images/blogs/redefining-education.png",
+        image: "/images/blogs/classroom-to-boardroom.png",
         categoryColor: "bg-purple-500/10 text-purple-400 border-purple-500/20",
         metaDescription: "Learn how the AESTR AI Program at SGVU is redefining engineering education in Rajasthan through practical learning and future-ready technology.",
         content: `
@@ -1044,7 +1044,7 @@ export const blogPosts: BlogPost[] = [
         author: "Team AESTR",
         date: "Feb 15, 2026",
         category: "Robotics",
-        image: "/images/blogs/embodied-intelligence.png",
+        image: "/images/blogs/embodied-brain.png",
         categoryColor: "bg-green-500/10 text-green-400 border-green-500/20",
         metaDescription: "Dive into the world of Embodied Intelligence and Robotics at AESTR, where we build machines that interact and feel the physical world.",
         content: `

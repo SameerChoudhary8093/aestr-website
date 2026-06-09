@@ -191,7 +191,7 @@ const FrontierHub = () => {
                         <div className="bg-black px-5 py-2.5 md:px-7 md:py-3.5 rounded-2xl shadow-xl inline-flex items-center justify-center self-end md:self-auto border-2 border-white/20 lg:translate-x-4 shrink-0 w-fit">
                             <div className="w-auto h-12 md:h-18 lg:h-24 xl:h-28 relative">
                                 <Image
-                                    src="/Herosection/by gyan vihar 2 neon.png"
+                                    src="/Herosection/by-gyan-vihar-2-neon.png"
                                     alt="AESTR Logo"
                                     width={500}
                                     height={120}
