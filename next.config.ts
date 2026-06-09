@@ -1,10 +1,15 @@
 import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === 'production';
+const isVercel = process.env.VERCEL === '1';
 
 const nextConfig: NextConfig = {
+  env: {
+    IS_VERCEL: process.env.VERCEL || '',
+  },
   images: {
-    unoptimized: isProd,
+    loader: (isProd && !isVercel) ? 'custom' : 'default',
+    loaderFile: (isProd && !isVercel) ? './src/imageLoader.ts' : undefined,
     remotePatterns: [
       {
         protocol: 'https',
