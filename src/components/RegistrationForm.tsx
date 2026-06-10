@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Script from 'next/script';
 import ThankYouModal from './ThankYouModal';
+import { SITE_URL, withBasePath } from '@/lib/site';
 
 const RegistrationForm = () => {
     const [showThankYou, setShowThankYou] = useState(false);
@@ -19,13 +20,13 @@ const RegistrationForm = () => {
             // NoPaperForms often sends messages when state changes
             if (event.data && typeof event.data === 'string') {
                 if (event.data.includes('form_submitted') || event.data.includes('success')) {
-                    window.location.href = '/thank-you';
+                    window.location.href = withBasePath('/thank-you');
                 }
             }
 
             if (event.data && typeof event.data === 'object') {
                 if (event.data.action === 'form_submitted' || event.data.type === 'success') {
-                    window.location.href = '/thank-you';
+                    window.location.href = withBasePath('/thank-you');
                 }
             }
         };
@@ -58,7 +59,7 @@ const RegistrationForm = () => {
                             width="100%"
                             height="800px"
                             sandbox="allow-top-navigation allow-scripts allow-same-origin allow-downloads allow-forms allow-popups"
-                            src="https://widgets.in6.nopaperforms.com/register?&r=&q=&w=4413174de5dab5bbec3036f720dffea8&m=&cu=https://aestr.gyanvihar.org/"
+                            src={`https://widgets.in6.nopaperforms.com/register?&r=&q=&w=4413174de5dab5bbec3036f720dffea8&m=&cu=${encodeURIComponent(`${SITE_URL}/`)}`}
                             scrolling="yes"
                             style={{
                                 width: '100%',

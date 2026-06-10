@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import MagneticEffect from './MagneticEffect';
+import { isHomePath, withBasePath } from '@/lib/site';
 import aestrLogo from '../../public/Herosection/by-gyan-vihar-2-neon.png';
 
 const Navbar = () => {
@@ -33,7 +34,7 @@ const Navbar = () => {
     ];
 
     const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        if (pathname !== '/') {
+        if (!isHomePath(pathname) && !isHomePath(window.location.pathname)) {
             setIsOpen(false);
             return;
         }
@@ -44,7 +45,7 @@ const Navbar = () => {
         if (heroSection) {
             heroSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
             if (window.location.hash !== '#hero') {
-                window.history.replaceState(null, '', '/#hero');
+                window.history.replaceState(null, '', withBasePath('/#hero'));
             }
         } else {
             window.location.hash = 'hero';

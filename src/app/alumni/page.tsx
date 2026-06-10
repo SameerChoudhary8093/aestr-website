@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Users, GraduationCap, Briefcase, Network, MessageSquare, Award, Presentation, Heart } from 'lucide-react';
 import StickyAdmissionsBar from '@/components/StickyAdmissionsBar';
+import { withBasePath } from '@/lib/site';
 
 const AlumniPage = () => {
     const alumniData = [
@@ -248,7 +249,7 @@ const AlumniPage = () => {
                                     className="bg-[#D7F601] text-black px-6 py-3 rounded-lg border border-[#D7F601] hover:bg-transparent hover:text-[#D7F601] transition-all duration-300 text-sm sm:text-base font-medium"
                                     onClick={() => {
                                         // Navigate to home page and scroll to registration form
-                                        window.location.href = '/#registration-form';
+                                        window.location.href = withBasePath('/#registration-form');
                                     }}
                                 >
                                     Apply Now
