@@ -10,6 +10,10 @@ import {
   tracksData,
   type CurriculumCourse,
 } from '@/lib/curriculum';
+import JsonLd from '@/components/JsonLd';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import { buildBreadcrumbSchema } from '@/lib/schema';
+import { SITE_URL } from '@/lib/site';
 
 export async function generateStaticParams() {
   return tracksData.map((track) => ({
@@ -34,6 +38,9 @@ export async function generateMetadata({ params }: { params: Promise<{ trackId: 
     title: `${track.title} | Aestr Curriculum`,
     description: `${track.description} Explore ${track.type} track courses, semesters, skills, and curriculum pathways at Aestr.`,
     keywords: `${track.title}, ${track.type} specialization, ${skills.join(', ')}, Aestr curriculum`,
+    alternates: {
+      canonical: `/curriculum/tracks/${trackId}`,
+    },
   };
 }
 
@@ -64,7 +71,7 @@ export default async function TrackPage({ params }: { params: Promise<{ trackId:
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Aestr',
-      sameAs: 'https://aestr.com',
+      sameAs: SITE_URL,
     },
     hasCourse: relatedCourses.map((course) => ({
       '@type': 'Course',
@@ -91,8 +98,15 @@ export default async function TrackPage({ params }: { params: Promise<{ trackId:
     },
   ].filter((section) => section.courses.length > 0);
 
+  const breadcrumbItems = [
+    { name: 'Home', path: '/' },
+    { name: 'Curriculum', path: '/curriculum' },
+    { name: track.title, path: `/curriculum/tracks/${trackId}` },
+  ];
+
   return (
     <>
+      <JsonLd data={buildBreadcrumbSchema(breadcrumbItems)} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -102,6 +116,7 @@ export default async function TrackPage({ params }: { params: Promise<{ trackId:
         <div className="absolute top-16 left-1/2 w-full max-w-[420px] aspect-square -translate-x-1/2 rounded-full bg-accent/8 blur-[120px] pointer-events-none" />
 
         <div className="container-boxed relative z-10">
+          <Breadcrumbs items={breadcrumbItems} />
           <Link
             href="/curriculum"
             className="mb-10 inline-flex items-center gap-2 text-sm font-orbitron uppercase tracking-[0.18em] text-foreground/55 transition-colors hover:text-accent"

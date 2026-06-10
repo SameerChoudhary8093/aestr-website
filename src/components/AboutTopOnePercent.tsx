@@ -108,6 +108,11 @@ const AboutTopOnePercent = () => {
                                 iOS App Development Training (AATCE & SwiftUI)
                                 <span className="group-hover:translate-x-1 transition-transform ml-3 tracking-normal">→</span>
                             </Link>
+
+                            <Link href="/collaborations" className="px-6 py-3 md:px-8 md:py-4 bg-transparent border-2 border-white/20 text-white font-orbitron font-bold uppercase tracking-widest text-xs md:text-sm rounded-[1.25rem] hover:border-accent hover:text-accent transition-all duration-300 flex items-center justify-center group whitespace-normal text-center">
+                                Industry Collaborations
+                                <span className="group-hover:translate-x-1 transition-transform ml-3 tracking-normal">→</span>
+                            </Link>
                         </motion.div>
                     </div>
 
@@ -140,6 +145,8 @@ const AboutTopOnePercent = () => {
                                             { name: "Data Engineering", href: "/data-engineering" },
                                             { name: "Robotics", href: "/robotics" },
                                             { name: "Software & Cloud Engineering", href: "/software-cloud-engineering" },
+                                            { name: "Software Engineering", href: "/software-engineering" },
+                                            { name: "Cloud Engineering", href: "/btech-cloud-engineering" },
                                             { name: "Cyber Security", href: "/cyber-security" },
                                         ].map((item) => (
                                             <Link

@@ -99,12 +99,52 @@ const Footer = () => {
 
                         <div className="flex flex-nowrap items-center justify-center gap-4 md:gap-6 lg:gap-8 text-[9px] md:text-[10px] lg:text-xs font-orbitron font-medium tracking-[0.1em] text-white/60">
                             <a href="/#hero" className="hover:text-accent transition-colors whitespace-nowrap">AESTR Home</a>
+                            <a href="/btech-ai-shodh-ai" className="hover:text-accent transition-colors whitespace-nowrap">B.Tech AI</a>
+                            <a href="/curriculum" className="hover:text-accent transition-colors whitespace-nowrap">Curriculum</a>
+                            <a href="/blogs" className="hover:text-accent transition-colors whitespace-nowrap">Blogs</a>
+                            <a href="/alumni" className="hover:text-accent transition-colors whitespace-nowrap">Alumni</a>
+                            <a href="/sovereign-ai-initiative" className="hover:text-accent transition-colors whitespace-nowrap">Sovereign AI</a>
+                            <a href="/collaborations" className="hover:text-accent transition-colors whitespace-nowrap">Collaborations</a>
                             <a href="https://aestralpha.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors whitespace-nowrap">Aestr Alpha</a>
                             <a href="tel:18003094545" className="hover:text-accent transition-colors whitespace-nowrap">Contact Us</a>
                         </div>
                     </div>
 
                     {/* Copyright - Bottom with Social Media */}
+                    <div className="w-full mt-4 px-4">
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-[10px] md:text-xs font-orbitron text-white/50 max-w-4xl mx-auto text-left">
+                            <div>
+                                <p className="text-accent uppercase tracking-widest mb-2 font-bold">Programs</p>
+                                <div className="flex flex-col gap-1.5">
+                                    <a href="/ai-ml" className="hover:text-accent transition-colors">AI & Machine Learning</a>
+                                    <a href="/software-engineering" className="hover:text-accent transition-colors">Software Engineering</a>
+                                    <a href="/software-cloud-engineering" className="hover:text-accent transition-colors">Software & Cloud</a>
+                                    <a href="/btech-cloud-engineering" className="hover:text-accent transition-colors">Cloud Engineering</a>
+                                    <a href="/cyber-security" className="hover:text-accent transition-colors">Cyber Security</a>
+                                    <a href="/robotics" className="hover:text-accent transition-colors">Robotics</a>
+                                </div>
+                            </div>
+                            <div>
+                                <p className="text-accent uppercase tracking-widest mb-2 font-bold">Explore</p>
+                                <div className="flex flex-col gap-1.5">
+                                    <a href="/day-at-aestr" className="hover:text-accent transition-colors">Day at AESTR</a>
+                                    <a href="/aestr-pathways" className="hover:text-accent transition-colors">AESTR Pathways</a>
+                                    <a href="/data-engineering" className="hover:text-accent transition-colors">Data Engineering</a>
+                                    <a href="/salesforce-training" className="hover:text-accent transition-colors">Salesforce Training</a>
+                                    <a href="/ios-training" className="hover:text-accent transition-colors">iOS Training</a>
+                                </div>
+                            </div>
+                            <div className="col-span-2 md:col-span-1">
+                                <p className="text-accent uppercase tracking-widest mb-2 font-bold">Admissions</p>
+                                <div className="flex flex-col gap-1.5">
+                                    <a href="/#registration-form" className="hover:text-accent transition-colors">Apply Now — 2026 Open</a>
+                                    <a href="/btech-ai-shodh-ai" className="hover:text-accent transition-colors">B.Tech AI with Shodh AI</a>
+                                    <a href="/curriculum" className="hover:text-accent transition-colors">Full Curriculum</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div className="flex flex-col lg:flex-row items-center justify-center gap-4 md:gap-8 text-foreground/60 text-sm mt-6 md:mt-8 border-t border-white/5 pt-5">
                         <span className="font-medium whitespace-nowrap text-center">
                             ©Copyright 2026, Aestr. All Rights Reserved <span className="hidden md:inline mx-2 text-white/20">|</span> <br className="md:hidden" /> <span className="text-foreground/60">Toll Free: <a href="tel:18003094545" className="hover:text-accent transition-colors">18003094545</a></span>

@@ -15,8 +15,6 @@ const BlogsPage = () => {
 
     return (
         <>
-            <meta name="description" content="Explore the latest research, tech breakthroughs, and pedagogical shifts from the architects of India's AI future at AESTR's Insights & Intelligence blog." />
-            
             <main className="bg-background min-h-screen text-foreground font-orbitron overflow-x-hidden selection:bg-accent selection:text-black">
                 <StickyAdmissionsBar />
                 

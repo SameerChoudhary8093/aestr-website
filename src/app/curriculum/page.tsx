@@ -1,17 +1,11 @@
 import React from 'react';
-import type { Metadata } from 'next';
 import TracksSection from './components/TracksSection';
 import InnovationLabsSection from './components/InnovationLabsSection';
 import SemestersSection from './components/SemestersSection';
 import ExpandableSearch from '@/components/ui/ExpandableSearch';
 import { Download, BookOpen, Layers3, GraduationCap } from 'lucide-react';
 import { coursesData, curriculumStructure, tracksData } from '@/lib/curriculum';
-
-export const metadata: Metadata = {
-  title: 'B.Tech Curriculum | Aestr',
-  description: 'Explore the official Aestr curriculum with all semesters, course pages, innovation labs, majors, minors, and track pathways generated from the LaTeX syllabus source.',
-  keywords: 'Aestr curriculum, B.Tech curriculum, semesters, majors, minors, innovation labs, course pages',
-};
+import { SITE_URL } from '@/lib/site';
 
 const curriculumSchema = {
   "@context": "https://schema.org",
@@ -21,7 +15,7 @@ const curriculumSchema = {
   "provider": {
     "@type": "EducationalOrganization",
     "name": "Aestr",
-    "sameAs": "https://aestr.com"
+    sameAs: SITE_URL
   },
   "numberOfCredits": curriculumStructure.semesters.reduce((sum, semester) => sum + Number(semester.totalCredits || 0), 0),
   "hasCourse": coursesData.slice(0, 24).map((course) => ({

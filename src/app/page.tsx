@@ -1,6 +1,15 @@
 import Hero from "@/components/Hero";
 import StickyAdmissionsBar from "@/components/StickyAdmissionsBar";
-import dynamic from 'next/dynamic';
+import JsonLd from "@/components/JsonLd";
+import LatestInsights from "@/components/LatestInsights";
+import { createPageMetadata } from "@/lib/page-seo";
+import {
+  buildFaqPageSchema,
+  buildVideoObjectSchemas,
+} from "@/lib/schema";
+import dynamic from "next/dynamic";
+
+export const metadata = createPageMetadata("home");
 
 const AboutTopOnePercent = dynamic(() => import("@/components/AboutTopOnePercent"));
 const FrontierHub = dynamic(() => import("@/components/FrontierHub"));
@@ -21,6 +30,7 @@ const BTechCSEEvolution = dynamic(() => import("@/components/BTechCSEEvolution")
 export default function Home() {
   return (
     <main className="relative">
+      <JsonLd data={[buildFaqPageSchema(), ...buildVideoObjectSchemas()]} />
       <StickyAdmissionsBar />
       <Hero />
       <BTechCSEEvolution />
@@ -40,6 +50,7 @@ export default function Home() {
       <PlacementPartners />
       <ExecutionTeam />
       <CourseraPartnership />
+      <LatestInsights />
       <FAQ />
     </main>
   );

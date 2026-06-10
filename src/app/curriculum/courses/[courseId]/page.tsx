@@ -5,6 +5,10 @@ import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { coursesData, getCourseById, type CurriculumCourse } from '@/lib/curriculum';
 import CourseTabs from '../../components/CourseTabs';
+import JsonLd from '@/components/JsonLd';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import { buildBreadcrumbSchema } from '@/lib/schema';
+import { SITE_URL } from '@/lib/site';
 
 export async function generateStaticParams() {
   return coursesData.map((course) => ({
@@ -26,6 +30,9 @@ export async function generateMetadata({ params }: { params: Promise<{ courseId:
     title: `${course.title} (${course.code}) | Aestr Curriculum`,
     description: course.description,
     keywords: `${course.title}, ${course.skills.join(', ')}, B.Tech, Aestr`,
+    alternates: {
+      canonical: `/curriculum/courses/${courseId}`,
+    },
   };
 }
 
@@ -46,7 +53,7 @@ export default async function CoursePage({ params }: { params: Promise<{ courseI
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Aestr',
-      sameAs: 'https://aestr.com'
+      sameAs: SITE_URL
     },
     educationalCredentialAwarded: "B.Tech Degree Component",
     teaches: course.skills.map(skill => ({
@@ -62,8 +69,15 @@ export default async function CoursePage({ params }: { params: Promise<{ courseI
     course.type,
   ];
 
+  const breadcrumbItems = [
+    { name: 'Home', path: '/' },
+    { name: 'Curriculum', path: '/curriculum' },
+    { name: course.title, path: `/curriculum/courses/${courseId}` },
+  ];
+
   return (
     <>
+      <JsonLd data={buildBreadcrumbSchema(breadcrumbItems)} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -73,6 +87,7 @@ export default async function CoursePage({ params }: { params: Promise<{ courseI
         <div className="absolute top-16 left-1/2 w-full max-w-[420px] aspect-square -translate-x-1/2 rounded-full bg-accent/8 blur-[120px] pointer-events-none" />
 
         <div className="container-boxed relative z-10 max-w-6xl">
+          <Breadcrumbs items={breadcrumbItems} />
           <Link 
             href="/curriculum" 
             className="mb-10 inline-flex items-center gap-2 text-sm font-orbitron uppercase tracking-[0.18em] text-foreground/55 transition-colors hover:text-accent"

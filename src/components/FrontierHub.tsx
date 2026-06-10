@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Image from 'next/image';
+import Link from 'next/link';
 
 const FrontierHub = () => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -177,6 +178,14 @@ const FrontierHub = () => {
                                         <span className="leading-snug text-white/90 w-full"><strong className="text-white">AESTR ALPHA (The 6-Month Residency):</strong> Fast-tracks ambitious graduates into high-paying Enterprise Cloud, Data, and Backend roles at global tech giants.</span>
                                     </li>
                                 </ul>
+                                <div className="mt-6">
+                                    <Link
+                                        href="/sovereign-ai-initiative"
+                                        className="inline-flex items-center gap-2 px-6 py-3 bg-[#D8F602] text-black font-orbitron font-bold text-sm rounded-xl hover:bg-white transition-colors"
+                                    >
+                                        Explore Sovereign AI Initiative →
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
