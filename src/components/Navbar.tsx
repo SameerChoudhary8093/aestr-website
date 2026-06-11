@@ -146,7 +146,7 @@ const Navbar = () => {
                                                         animate={{ opacity: 1, y: 0, scale: 1 }}
                                                         exit={{ opacity: 0, y: 8, scale: 0.97 }}
                                                         transition={{ duration: 0.2, ease: 'easeOut' }}
-                                                        className="absolute top-full left-0 mt-2 w-[320px] border border-white/10 rounded-2xl shadow-[0_20px_60px_-10px_rgba(0,0,0,0.9)] overflow-hidden z-50"
+                                                        className="absolute top-full left-0 mt-2 w-[520px] border border-white/10 rounded-2xl shadow-[0_20px_60px_-10px_rgba(0,0,0,0.9)] overflow-hidden z-50"
                                                         style={{ backgroundColor: '#111111' }}
                                                     >
                                                         <div className="p-2">
