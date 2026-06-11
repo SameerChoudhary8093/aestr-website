@@ -59,7 +59,7 @@ const Hero = () => {
                                 }}
                                 className="text-[28px] min-[360px]:text-[30px] min-[390px]:text-[32px] sm:text-[44px] md:text-[52px] lg:text-[38px] xl:text-[46px] 2xl:text-[58px] font-orbitron font-black tracking-tighter leading-[1.2] w-full text-left"
                             >
-                                The B.Tech Computer <br /> Science & Engineering <br /> (CSE) is Dead.
+                                The Conventional B.Tech Computer <br /> Science & Engineering <br /> (CSE) is Dead.
                             </motion.h1>
                             <motion.p
                                 variants={{
