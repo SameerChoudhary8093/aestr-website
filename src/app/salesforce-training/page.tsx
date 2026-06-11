@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 
 export default function SalesforceTrainingPage() {
@@ -143,7 +144,7 @@ export default function SalesforceTrainingPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
 
                         {/* Card 1 */}
-                        <a href="/salesforce-training/technical-training" className="group bg-black rounded-3xl p-6 lg:p-8 flex flex-col justify-between hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] hover:-translate-y-3 hover:scale-[1.02] transform transition-all duration-500 ease-out cursor-pointer relative overflow-hidden">
+                        <Link href="/salesforce-training/technical-training" className="group bg-black rounded-3xl p-6 lg:p-8 flex flex-col justify-between hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] hover:-translate-y-3 hover:scale-[1.02] transform transition-all duration-500 ease-out cursor-pointer relative overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-t from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             <div className="w-full aspect-[10/10] bg-white/5 rounded-2xl mb-8 flex items-center justify-center overflow-hidden border border-white/5 group-hover:border-accent/30 transition-colors duration-500 relative z-10">
                                 <div className="absolute inset-0 bg-accent/20 scale-0 group-hover:scale-100 transition-transform duration-700 ease-out rounded-full blur-3xl z-10 pointer-events-none" />
@@ -160,10 +161,10 @@ export default function SalesforceTrainingPage() {
                                     </svg>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
 
                         {/* Card 2 */}
-                        <a href="/salesforce-training/soft-skills" className="group bg-black rounded-3xl p-6 lg:p-8 flex flex-col justify-between hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] hover:-translate-y-3 hover:scale-[1.02] transform transition-all duration-500 ease-out cursor-pointer relative overflow-hidden">
+                        <Link href="/salesforce-training/soft-skills" className="group bg-black rounded-3xl p-6 lg:p-8 flex flex-col justify-between hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] hover:-translate-y-3 hover:scale-[1.02] transform transition-all duration-500 ease-out cursor-pointer relative overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-t from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             <div className="w-full aspect-[10/10] bg-white/5 rounded-2xl mb-8 flex items-center justify-center overflow-hidden border border-white/5 group-hover:border-accent/30 transition-colors duration-500 relative z-10">
                                 <div className="absolute inset-0 bg-accent/20 scale-0 group-hover:scale-100 transition-transform duration-700 ease-out rounded-full blur-3xl z-10 pointer-events-none" />
@@ -180,10 +181,10 @@ export default function SalesforceTrainingPage() {
                                     </svg>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
 
                         {/* Card 3 */}
-                        <a href="/salesforce-training/placement-support" className="group bg-black rounded-3xl p-6 lg:p-8 flex flex-col justify-between hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] hover:-translate-y-3 hover:scale-[1.02] transform transition-all duration-500 ease-out cursor-pointer relative overflow-hidden">
+                        <Link href="/salesforce-training/placement-support" className="group bg-black rounded-3xl p-6 lg:p-8 flex flex-col justify-between hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] hover:-translate-y-3 hover:scale-[1.02] transform transition-all duration-500 ease-out cursor-pointer relative overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-t from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             <div className="w-full aspect-[10/10] bg-white/5 rounded-2xl mb-8 flex items-center justify-center overflow-hidden border border-white/5 group-hover:border-accent/30 transition-colors duration-500 relative z-10">
                                 <div className="absolute inset-0 bg-accent/20 scale-0 group-hover:scale-100 transition-transform duration-700 ease-out rounded-full blur-3xl z-10 pointer-events-none" />
@@ -200,10 +201,10 @@ export default function SalesforceTrainingPage() {
                                     </svg>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
 
                         {/* Card 4 */}
-                        <a href="/salesforce-training/test-results" className="group bg-black rounded-3xl p-6 lg:p-8 flex flex-col justify-between hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] hover:-translate-y-3 hover:scale-[1.02] transform transition-all duration-500 ease-out cursor-pointer relative overflow-hidden">
+                        <Link href="/salesforce-training/test-results" className="group bg-black rounded-3xl p-6 lg:p-8 flex flex-col justify-between hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] hover:-translate-y-3 hover:scale-[1.02] transform transition-all duration-500 ease-out cursor-pointer relative overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-t from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             <div className="w-full aspect-[10/10] bg-white/5 rounded-2xl mb-8 flex items-center justify-center overflow-hidden border border-white/5 group-hover:border-accent/30 transition-colors duration-500 relative z-10">
                                 <div className="absolute inset-0 bg-accent/20 scale-0 group-hover:scale-100 transition-transform duration-700 ease-out rounded-full blur-3xl z-10 pointer-events-none" />
@@ -220,7 +221,7 @@ export default function SalesforceTrainingPage() {
                                     </svg>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
                     </div>
 
                     {/* Objectives List text blocks below */}

@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Image from 'next/image';
 import Link from 'next/link';
+import { withBasePath } from '@/lib/site';
 
 const FrontierHub = () => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -288,7 +289,7 @@ const FrontierHub = () => {
                                         playsInline
                                         controls
                                     >
-                                        <source src="/pm-video.mp4" type="video/mp4" />
+                                        <source src={withBasePath("/pm-video.mp4")} type="video/mp4" />
                                         Your browser does not support the video tag.
                                     </video>
                                 )}

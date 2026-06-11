@@ -5,7 +5,7 @@ import SemestersSection from './components/SemestersSection';
 import ExpandableSearch from '@/components/ui/ExpandableSearch';
 import { Download, BookOpen, Layers3, GraduationCap } from 'lucide-react';
 import { coursesData, curriculumStructure, tracksData } from '@/lib/curriculum';
-import { SITE_URL } from '@/lib/site';
+import { SITE_URL, withBasePath } from '@/lib/site';
 
 const curriculumSchema = {
   "@context": "https://schema.org",
@@ -57,7 +57,7 @@ export default function CurriculumPage() {
       
       <div className="fixed bottom-8 right-8 z-50">
         <a 
-          href="/Curriculum.pdf" 
+          href={withBasePath("/Curriculum.pdf")} 
           target="_blank" 
           rel="noopener noreferrer"
           className="btn-aestr shadow-[0_16px_40px_rgba(215,246,1,0.22)]"

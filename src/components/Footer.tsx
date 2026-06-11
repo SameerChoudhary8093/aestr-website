@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { motion } from 'framer-motion';
 
@@ -98,13 +99,13 @@ const Footer = () => {
                         </div>
 
                         <div className="flex flex-nowrap items-center justify-center gap-4 md:gap-6 lg:gap-8 text-[9px] md:text-[10px] lg:text-xs font-orbitron font-medium tracking-[0.1em] text-white/60">
-                            <a href="/#hero" className="hover:text-accent transition-colors whitespace-nowrap">AESTR Home</a>
-                            <a href="/btech-ai-shodh-ai" className="hover:text-accent transition-colors whitespace-nowrap">B.Tech AI</a>
-                            <a href="/curriculum" className="hover:text-accent transition-colors whitespace-nowrap">Curriculum</a>
-                            <a href="/blogs" className="hover:text-accent transition-colors whitespace-nowrap">Blogs</a>
-                            <a href="/alumni" className="hover:text-accent transition-colors whitespace-nowrap">Alumni</a>
-                            <a href="/sovereign-ai-initiative" className="hover:text-accent transition-colors whitespace-nowrap">Sovereign AI</a>
-                            <a href="/collaborations" className="hover:text-accent transition-colors whitespace-nowrap">Collaborations</a>
+                            <Link href="/#hero" className="hover:text-accent transition-colors whitespace-nowrap">AESTR Home</Link>
+                            <Link href="/btech-ai-shodh-ai" className="hover:text-accent transition-colors whitespace-nowrap">B.Tech AI</Link>
+                            <Link href="/curriculum" className="hover:text-accent transition-colors whitespace-nowrap">Curriculum</Link>
+                            <Link href="/blogs" className="hover:text-accent transition-colors whitespace-nowrap">Blogs</Link>
+                            <Link href="/alumni" className="hover:text-accent transition-colors whitespace-nowrap">Alumni</Link>
+                            <Link href="/sovereign-ai-initiative" className="hover:text-accent transition-colors whitespace-nowrap">Sovereign AI</Link>
+                            <Link href="/collaborations" className="hover:text-accent transition-colors whitespace-nowrap">Collaborations</Link>
                             <a href="https://aestralpha.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors whitespace-nowrap">Aestr Alpha</a>
                             <a href="tel:18003094545" className="hover:text-accent transition-colors whitespace-nowrap">Contact Us</a>
                         </div>
@@ -116,30 +117,30 @@ const Footer = () => {
                             <div>
                                 <p className="text-accent uppercase tracking-widest mb-2 font-bold">Programs</p>
                                 <div className="flex flex-col gap-1.5">
-                                    <a href="/ai-ml" className="hover:text-accent transition-colors">AI & Machine Learning</a>
-                                    <a href="/software-engineering" className="hover:text-accent transition-colors">Software Engineering</a>
-                                    <a href="/software-cloud-engineering" className="hover:text-accent transition-colors">Software & Cloud</a>
-                                    <a href="/btech-cloud-engineering" className="hover:text-accent transition-colors">Cloud Engineering</a>
-                                    <a href="/cyber-security" className="hover:text-accent transition-colors">Cyber Security</a>
-                                    <a href="/robotics" className="hover:text-accent transition-colors">Robotics</a>
+                                    <Link href="/ai-ml" className="hover:text-accent transition-colors">AI & Machine Learning</Link>
+                                    <Link href="/software-engineering" className="hover:text-accent transition-colors">Software Engineering</Link>
+                                    <Link href="/software-cloud-engineering" className="hover:text-accent transition-colors">Software & Cloud</Link>
+                                    <Link href="/btech-cloud-engineering" className="hover:text-accent transition-colors">Cloud Engineering</Link>
+                                    <Link href="/cyber-security" className="hover:text-accent transition-colors">Cyber Security</Link>
+                                    <Link href="/robotics" className="hover:text-accent transition-colors">Robotics</Link>
                                 </div>
                             </div>
                             <div>
                                 <p className="text-accent uppercase tracking-widest mb-2 font-bold">Explore</p>
                                 <div className="flex flex-col gap-1.5">
-                                    <a href="/day-at-aestr" className="hover:text-accent transition-colors">Day at AESTR</a>
-                                    <a href="/aestr-pathways" className="hover:text-accent transition-colors">AESTR Pathways</a>
-                                    <a href="/data-engineering" className="hover:text-accent transition-colors">Data Engineering</a>
-                                    <a href="/salesforce-training" className="hover:text-accent transition-colors">Salesforce Training</a>
-                                    <a href="/ios-training" className="hover:text-accent transition-colors">iOS Training</a>
+                                    <Link href="/day-at-aestr" className="hover:text-accent transition-colors">Day at AESTR</Link>
+                                    <Link href="/aestr-pathways" className="hover:text-accent transition-colors">AESTR Pathways</Link>
+                                    <Link href="/data-engineering" className="hover:text-accent transition-colors">Data Engineering</Link>
+                                    <Link href="/salesforce-training" className="hover:text-accent transition-colors">Salesforce Training</Link>
+                                    <Link href="/ios-training" className="hover:text-accent transition-colors">iOS Training</Link>
                                 </div>
                             </div>
                             <div className="col-span-2 md:col-span-1">
                                 <p className="text-accent uppercase tracking-widest mb-2 font-bold">Admissions</p>
                                 <div className="flex flex-col gap-1.5">
-                                    <a href="/#registration-form" className="hover:text-accent transition-colors">Apply Now — 2026 Open</a>
-                                    <a href="/btech-ai-shodh-ai" className="hover:text-accent transition-colors">B.Tech AI with Shodh AI</a>
-                                    <a href="/curriculum" className="hover:text-accent transition-colors">Full Curriculum</a>
+                                    <Link href="/#registration-form" className="hover:text-accent transition-colors">Apply Now — 2026 Open</Link>
+                                    <Link href="/btech-ai-shodh-ai" className="hover:text-accent transition-colors">B.Tech AI with Shodh AI</Link>
+                                    <Link href="/curriculum" className="hover:text-accent transition-colors">Full Curriculum</Link>
                                 </div>
                             </div>
                         </div>
