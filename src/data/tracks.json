@@ -45,7 +45,7 @@
   },
   {
     "id": "data-science",
-    "title": "Data Science",
+    "title": "Data Engineering",
     "description": "Focuses on statistics, databases, analytics engineering, big data systems, and predictive modeling.",
     "type": "major",
     "requiredCourseCodes": [

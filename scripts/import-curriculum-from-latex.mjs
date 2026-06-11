@@ -29,8 +29,8 @@ const majorTrackCatalog = [
   },
   {
     id: 'data-science',
-    title: 'Data Science',
-    aliases: ['Data Science'],
+    title: 'Data Engineering',
+    aliases: ['Data Engineering'],
     description: 'Focuses on statistics, databases, analytics engineering, big data systems, and predictive modeling.',
     folderNames: ['ds', 'elec_ds'],
     codePrefixes: ['DS'],
@@ -748,9 +748,9 @@ function parseSemesterTables(schemeContent, coursesByCode) {
 
     const totalCells = totalLine
       ? totalLine
-          .replace(/\\&/g, '__LATEX_AMP__')
-          .split('&')
-          .map((cell) => cleanLatex(cell.replace(/__LATEX_AMP__/g, '\\&').replace(/\\\\$/, '')))
+        .replace(/\\&/g, '__LATEX_AMP__')
+        .split('&')
+        .map((cell) => cleanLatex(cell.replace(/__LATEX_AMP__/g, '\\&').replace(/\\\\$/, '')))
       : [];
 
     return {

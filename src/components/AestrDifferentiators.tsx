@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from '@/components/AppLink';
 
 const differentiators = [
     {
@@ -115,22 +116,32 @@ const AestrDifferentiators = () => {
                         <h3 className="text-2xl font-orbitron font-black mb-4 uppercase leading-tight text-accent">
                             Future Career <br /> Alignment
                         </h3>
-                        <p className="text-white/80 font-medium font-outfit mb-8 leading-tight">
+                        <p className="text-white/80 font-medium font-outfit mb-6 leading-tight">
                             Engineered for high-impact roles powering the industries of 2030 and beyond.
                         </p>
-                        <a
-                            href="#registration-form"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                document.getElementById('registration-form')?.scrollIntoView({ behavior: 'smooth' });
-                            }}
-                            className="bg-accent text-black font-orbitron font-bold py-4 rounded-xl text-center hover:bg-white transition-all flex items-center justify-center gap-2"
-                        >
-                            SECURE YOUR SPOT
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
-                        </a>
+                        <div className="flex flex-col gap-3">
+                            <Link href="/salesforce-training" className="border-2 border-accent text-accent font-orbitron font-bold py-3 px-4 rounded-xl text-center text-[10px] uppercase tracking-widest hover:bg-accent hover:text-black transition-all flex items-center justify-center gap-2">
+                                Salesforce Developer Training & Placement Program
+                                <span>→</span>
+                            </Link>
+                            <Link href="/ios-training" className="border-2 border-accent text-accent font-orbitron font-bold py-3 px-4 rounded-xl text-center text-[10px] uppercase tracking-widest hover:bg-accent hover:text-black transition-all flex items-center justify-center gap-2">
+                                iOS App Development Training (AATCE & SwiftUI)
+                                <span>→</span>
+                            </Link>
+                            <a
+                                href="#registration-form"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    document.getElementById('registration-form')?.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                                className="bg-accent text-black font-orbitron font-bold py-4 rounded-xl text-center hover:bg-white transition-all flex items-center justify-center gap-2"
+                            >
+                                SECURE YOUR SPOT
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </div>
                     </motion.div>
                 </div>
             </div>

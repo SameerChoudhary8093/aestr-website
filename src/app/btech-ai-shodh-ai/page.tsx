@@ -241,10 +241,6 @@ const BtechAIShodhAIPage = () => {
                         <div className="flex justify-between items-start gap-4">
                             <h3 className="text-3xl lg:text-4xl font-bold font-orbitron text-[#5B1DD6] leading-tight tracking-tight flex-1">
                                 Built With
-                                <div className="flex items-center gap-4 mt-6">
-                                    <Image src="/ProgramPartners/google.webp" alt="Google" width={80} height={26} className="object-contain" style={{ width: 'auto', height: 'auto' }} />
-                                    <Image src="/placement/nvidia.webp" alt="NVIDIA" width={100} height={32} className="object-contain" style={{ width: 'auto', height: 'auto' }} />
-                                </div>
                             </h3>
                             <div className="shrink-0 mt-1">
                                 <svg className="w-8 h-8 text-[#5B1DD6]" viewBox="0 0 24 24" fill="currentColor">
@@ -252,9 +248,13 @@ const BtechAIShodhAIPage = () => {
                                 </svg>
                             </div>
                         </div>
-                        <p className="text-black font-bold text-lg leading-snug tracking-tight opacity-90 mt-auto">
-                            Indian Govt mandate to build AI for science. Shodh AI released the world's first Large Physics Model.
+                        <p className="text-black font-bold text-lg leading-snug tracking-tight opacity-90">
+                            Indian Govt mandate to build AI for science. Shodh AI released the world&apos;s first Large Physics Model.
                         </p>
+                        <div className="flex items-center gap-6 mt-auto">
+                            <Image src="/ProgramPartners/google.webp" alt="Google" width={120} height={40} className="object-contain" style={{ width: '120px', height: '40px' }} />
+                            <Image src="/placement/nvidia.webp" alt="NVIDIA" width={120} height={40} className="object-contain" style={{ width: '120px', height: '40px' }} />
+                        </div>
                     </motion.div>
 
                     {/* Card 3: Brutally Selective */}

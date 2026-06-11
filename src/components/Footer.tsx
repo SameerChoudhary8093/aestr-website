@@ -105,7 +105,6 @@ const Footer = () => {
                             <Link href="/blogs" className="hover:text-accent transition-colors whitespace-nowrap">Blogs</Link>
                             <Link href="/alumni" className="hover:text-accent transition-colors whitespace-nowrap">Alumni</Link>
                             <Link href="/sovereign-ai-initiative" className="hover:text-accent transition-colors whitespace-nowrap">Sovereign AI</Link>
-                            <Link href="/collaborations" className="hover:text-accent transition-colors whitespace-nowrap">Collaborations</Link>
                             <a href="https://aestralpha.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors whitespace-nowrap">Aestr Alpha</a>
                             <a href="tel:18003094545" className="hover:text-accent transition-colors whitespace-nowrap">Contact Us</a>
                         </div>

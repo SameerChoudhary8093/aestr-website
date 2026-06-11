@@ -169,7 +169,7 @@ export default function RoboticsSpecializationPage() {
                                     B.Tech Computer Science & Engineering with
                                 </h2>
                                 <h1 className="text-4xl md:text-5xl lg:text-7xl font-orbitron font-black text-white leading-tight">
-                                    Robotics & <span className="text-accent">Automation</span>
+                                    Robotics
                                 </h1>
                             </div>
 
@@ -214,7 +214,7 @@ export default function RoboticsSpecializationPage() {
             </section>
 
             {/* What Is Section */}
-            <section className="py-24 relative overflow-hidden" style={{backgroundColor: '#571AD0'}}>
+            <section className="py-24 relative overflow-hidden" style={{ backgroundColor: '#571AD0' }}>
                 <div className="container-boxed w-full max-w-[1224px] mx-auto relative z-10 text-center flex flex-col items-center">
                     <div className="max-w-6xl space-y-8">
                         <motion.h2 className="text-3xl md:text-5xl font-orbitron font-black text-white">
@@ -324,7 +324,7 @@ export default function RoboticsSpecializationPage() {
             </section>
 
             {/* Career Impact */}
-            <section className="py-24 relative overflow-hidden" style={{backgroundColor: '#571AD0'}}>
+            <section className="py-24 relative overflow-hidden" style={{ backgroundColor: '#571AD0' }}>
                 <div className="container-boxed w-full max-w-[1224px] mx-auto relative z-10">
                     <div className="space-y-20">
                         <div className="text-center space-y-4">
@@ -367,11 +367,11 @@ export default function RoboticsSpecializationPage() {
             </section>
 
             {/* Fees Structure */}
-            <section className="py-32 relative overflow-hidden" style={{backgroundColor: '#D8F602'}}>
+            <section className="py-32 relative overflow-hidden" style={{ backgroundColor: '#D8F602' }}>
                 <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto">
                     <div className="space-y-16">
                         <h2 className="text-5xl md:text-8xl font-orbitron font-black text-black tracking-tighter">Fees <span className="opacity-30">Structure</span></h2>
-                        <div className="overflow-x-auto rounded-[3rem] shadow-[0_40px_100px_rgba(0,0,0,0.3)] border border-white/5" style={{backgroundColor: '#571AD0'}}>
+                        <div className="overflow-x-auto rounded-[3rem] shadow-[0_40px_100px_rgba(0,0,0,0.3)] border border-white/5" style={{ backgroundColor: '#571AD0' }}>
                             <table className="w-full text-left border-collapse min-w-[1000px]">
                                 <thead>
                                     <tr className="bg-white/5">

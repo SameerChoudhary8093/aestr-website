@@ -44,12 +44,7 @@ export const PAGE_SEO: Record<string, PageSeoConfig> = {
     description:
       "Learn cloud architecture, DevOps, and scalable systems at AESTR. A hands-on B.Tech cloud engineering program at SGVU Jaipur.",
   },
-  collaborations: {
-    path: "/collaborations",
-    title: "Industry Collaborations | AESTR × Microsoft, IndiaAI & More",
-    description:
-      "Discover AESTR's partnerships with Microsoft, IndiaAI, Shodh AI, and global research labs. Real industry exposure for B.Tech students at SGVU.",
-  },
+
   "cyber-security": {
     path: "/cyber-security",
     title: "Cyber Security B.Tech Specialization | AESTR Jaipur",
@@ -180,7 +175,7 @@ export const SITEMAP_PRIORITIES: Record<string, number> = {
   "/aestr-pathways": 0.9,
   "/ios-training": 0.9,
   "/salesforce-training": 0.9,
-  "/collaborations": 0.9,
+
   "/day-at-aestr": 0.9,
   "/alumni": 0.9,
   "/blogs": 0.8,

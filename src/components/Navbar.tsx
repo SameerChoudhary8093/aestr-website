@@ -12,6 +12,7 @@ import aestrLogo from '../../public/Herosection/by-gyan-vihar-2-neon.png';
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [programDropdownOpen, setProgramDropdownOpen] = useState(false);
     const pathname = usePathname();
 
     useEffect(() => {
@@ -25,12 +26,21 @@ const Navbar = () => {
 
     const navLinks = [
         { name: 'Home', href: '/#hero' },
-        { name: 'B.Tech AI', href: '/btech-ai-shodh-ai' },
+        { name: 'Program Offered', href: '#', dropdown: true },
         { name: 'Aestr Alpha', href: 'https://aestralpha.com', external: true },
         { name: 'Sovereign AI', href: '/sovereign-ai-initiative' },
         { name: 'Alumni', href: '/alumni' },
         { name: 'Blogs', href: '/blogs' },
         { name: 'Curriculum', href: '/curriculum' },
+    ];
+
+    const programLinks = [
+        { name: 'B.Tech AI with Shodh AI', href: '/btech-ai-shodh-ai' },
+        { name: 'AI & Machine Learning', href: '/ai-ml' },
+        { name: 'Data Engineering', href: '/data-engineering' },
+        { name: 'Software & Cloud Engineering', href: '/software-cloud-engineering' },
+        { name: 'Robotics', href: '/robotics' },
+        { name: 'Cyber Security', href: '/cyber-security' },
     ];
 
     const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -78,15 +88,17 @@ const Navbar = () => {
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className={`w-[92%] max-w-[1500px] mx-auto pointer-events-auto transition-all duration-500 rounded-2xl border border-white/10 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.8)] backdrop-blur-md relative overflow-hidden group/nav ${scrolled ? 'py-1 bg-black/80 scale-[0.98]' : 'py-2 bg-black/40'
+                className={`w-[92%] max-w-[1500px] mx-auto pointer-events-auto transition-all duration-500 rounded-2xl border border-white/10 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.8)] backdrop-blur-md relative group/nav ${scrolled ? 'py-1 bg-black/80 scale-[0.98]' : 'py-2 bg-black/40'
                     }`}
             >
                 {/* Futuristic Scanning Line Overlay */}
-                <motion.div
-                    animate={{ x: ['-100%', '200%'] }}
-                    transition={{ duration: 3, repeat: Infinity, ease: "linear", repeatDelay: 5 }}
-                    className="absolute inset-0 w-1/3 h-full bg-gradient-to-r from-transparent via-accent/5 to-transparent skew-x-12 pointer-events-none"
-                />
+                <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
+                    <motion.div
+                        animate={{ x: ['-100%', '200%'] }}
+                        transition={{ duration: 3, repeat: Infinity, ease: "linear", repeatDelay: 5 }}
+                        className="w-1/3 h-full bg-gradient-to-r from-transparent via-accent/5 to-transparent skew-x-12"
+                    />
+                </div>
 
                 {/* Navbar Content */}
                 <div className="flex items-center justify-between w-full h-[65px] lg:h-[72px] xl:h-[80px] 2xl:h-[90px] px-4 lg:px-5 xl:px-6">
@@ -105,23 +117,76 @@ const Navbar = () => {
                     {/* Center: Nav Links */}
                     <div className="hidden lg:flex flex-1 justify-start pl-4 lg:pl-6 xl:pl-10 2xl:pl-20">
                         <div className="flex items-center gap-0 lg:gap-1 xl:gap-2 2xl:gap-3">
-                            {navLinks.map((link) => (
-                                <Link
-                                    key={link.name}
-                                    href={link.href}
-                                    onClick={link.name === 'Home' ? handleHomeClick : link.external ? undefined : handlePageLinkClick(link.href)}
-                                    target={link.external ? '_blank' : undefined}
-                                    rel={link.external ? 'noopener noreferrer' : undefined}
-                                    className="relative px-1.5 lg:px-2 xl:px-3 py-2 group/btn"
-                                >
-                                    <MagneticEffect strength={0.3}>
-                                        <span className="text-[10px] lg:text-[11px] xl:text-[13px] 2xl:text-[14px] font-orbitron font-extrabold text-[#EAF0BD]/80 tracking-wide lg:tracking-wider xl:tracking-widest group-hover/btn:text-accent transition-colors whitespace-nowrap">
-                                            {link.name}
-                                        </span>
-                                    </MagneticEffect>
-                                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-accent transition-all duration-300 group-hover/btn:w-1/3 shadow-[0_0_8px_#D7F601]" />
-                                </Link>
-                            ))}
+                            {navLinks.map((link) => {
+                                if (link.dropdown) {
+                                    return (
+                                        <div
+                                            key={link.name}
+                                            className="relative group/dropdown"
+                                            onMouseEnter={() => setProgramDropdownOpen(true)}
+                                            onMouseLeave={() => setProgramDropdownOpen(false)}
+                                        >
+                                            <button className="relative px-1.5 lg:px-2 xl:px-3 py-2 group/btn flex items-center gap-1">
+                                                <MagneticEffect strength={0.3}>
+                                                    <span className="text-[10px] lg:text-[11px] xl:text-[13px] 2xl:text-[14px] font-orbitron font-extrabold text-[#EAF0BD]/80 tracking-wide lg:tracking-wider xl:tracking-widest group-hover/dropdown:text-accent transition-colors whitespace-nowrap flex items-center gap-1.5">
+                                                        {link.name}
+                                                        <svg className={`w-3 h-3 transition-transform duration-300 ${programDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M19 9l-7 7-7-7" />
+                                                        </svg>
+                                                    </span>
+                                                </MagneticEffect>
+                                                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-accent transition-all duration-300 group-hover/dropdown:w-1/3 shadow-[0_0_8px_#D7F601]" />
+                                            </button>
+
+                                            {/* Dropdown Menu */}
+                                            <AnimatePresence>
+                                                {programDropdownOpen && (
+                                                    <motion.div
+                                                        initial={{ opacity: 0, y: 8, scale: 0.97 }}
+                                                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                                                        exit={{ opacity: 0, y: 8, scale: 0.97 }}
+                                                        transition={{ duration: 0.2, ease: 'easeOut' }}
+                                                        className="absolute top-full left-0 mt-2 w-[320px] border border-white/10 rounded-2xl shadow-[0_20px_60px_-10px_rgba(0,0,0,0.9)] overflow-hidden z-50"
+                                                        style={{ backgroundColor: '#111111' }}
+                                                    >
+                                                        <div className="p-2">
+                                                            {programLinks.map((program, pIdx) => (
+                                                                <Link
+                                                                    key={program.href}
+                                                                    href={program.href}
+                                                                    onClick={() => setProgramDropdownOpen(false)}
+                                                                    className="flex items-center gap-3 px-4 py-3 rounded-xl text-[11px] font-orbitron font-bold text-white/80 hover:text-accent hover:bg-white/5 transition-all duration-200 group/item"
+                                                                >
+                                                                    <span className="w-1.5 h-1.5 rounded-full bg-accent/40 group-hover/item:bg-accent group-hover/item:shadow-[0_0_8px_rgba(215,246,1,0.6)] transition-all shrink-0" />
+                                                                    <span className="tracking-wider">{program.name}</span>
+                                                                </Link>
+                                                            ))}
+                                                        </div>
+                                                    </motion.div>
+                                                )}
+                                            </AnimatePresence>
+                                        </div>
+                                    );
+                                }
+
+                                return (
+                                    <Link
+                                        key={link.name}
+                                        href={link.href}
+                                        onClick={link.name === 'Home' ? handleHomeClick : link.external ? undefined : handlePageLinkClick(link.href)}
+                                        target={link.external ? '_blank' : undefined}
+                                        rel={link.external ? 'noopener noreferrer' : undefined}
+                                        className="relative px-1.5 lg:px-2 xl:px-3 py-2 group/btn"
+                                    >
+                                        <MagneticEffect strength={0.3}>
+                                            <span className="text-[10px] lg:text-[11px] xl:text-[13px] 2xl:text-[14px] font-orbitron font-extrabold text-[#EAF0BD]/80 tracking-wide lg:tracking-wider xl:tracking-widest group-hover/btn:text-accent transition-colors whitespace-nowrap">
+                                                {link.name}
+                                            </span>
+                                        </MagneticEffect>
+                                        <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-accent transition-all duration-300 group-hover/btn:w-1/3 shadow-[0_0_8px_#D7F601]" />
+                                    </Link>
+                                );
+                            })}
                         </div>
                     </div>
 
@@ -199,25 +264,73 @@ const Navbar = () => {
                             </button>
                         </div>
                         <div className="flex flex-col space-y-6 md:space-y-8 flex-grow justify-start items-center py-10">
-                            {navLinks.map((link, idx) => (
-                                <motion.div
-                                    key={link.name}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: idx * 0.1 }}
-                                    className="text-center"
-                                >
-                                    <Link
-                                        href={link.href}
-                                        onClick={link.name === 'Home' ? handleHomeClick : link.external ? undefined : handlePageLinkClick(link.href)}
-                                        target={link.external ? '_blank' : undefined}
-                                        rel={link.external ? 'noopener noreferrer' : undefined}
-                                        className="text-[32px] md:text-[48px] font-orbitron font-extrabold text-foreground hover:text-accent transition-colors duration-300"
+                            {navLinks.map((link, idx) => {
+                                if (link.dropdown) {
+                                    return (
+                                        <motion.div
+                                            key={link.name}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ delay: idx * 0.1 }}
+                                            className="text-center w-full max-w-md"
+                                        >
+                                            <button
+                                                onClick={() => setProgramDropdownOpen(!programDropdownOpen)}
+                                                className="text-[32px] md:text-[48px] font-orbitron font-extrabold text-foreground hover:text-accent transition-colors duration-300 flex items-center justify-center gap-3 w-full"
+                                            >
+                                                {link.name}
+                                                <svg className={`w-6 h-6 md:w-8 md:h-8 transition-transform duration-300 ${programDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M19 9l-7 7-7-7" />
+                                                </svg>
+                                            </button>
+                                            <AnimatePresence>
+                                                {programDropdownOpen && (
+                                                    <motion.div
+                                                        initial={{ opacity: 0, height: 0 }}
+                                                        animate={{ opacity: 1, height: 'auto' }}
+                                                        exit={{ opacity: 0, height: 0 }}
+                                                        transition={{ duration: 0.3 }}
+                                                        className="overflow-hidden"
+                                                    >
+                                                        <div className="flex flex-col gap-3 mt-4 px-4">
+                                                            {programLinks.map((program) => (
+                                                                <Link
+                                                                    key={program.href}
+                                                                    href={program.href}
+                                                                    onClick={() => { setIsOpen(false); setProgramDropdownOpen(false); }}
+                                                                    className="text-[14px] md:text-[18px] font-orbitron font-bold text-white/70 hover:text-accent transition-colors py-2 border-b border-white/5 last:border-0"
+                                                                >
+                                                                    {program.name}
+                                                                </Link>
+                                                            ))}
+                                                        </div>
+                                                    </motion.div>
+                                                )}
+                                            </AnimatePresence>
+                                        </motion.div>
+                                    );
+                                }
+
+                                return (
+                                    <motion.div
+                                        key={link.name}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: idx * 0.1 }}
+                                        className="text-center"
                                     >
-                                        {link.name}
-                                    </Link>
-                                </motion.div>
-                            ))}
+                                        <Link
+                                            href={link.href}
+                                            onClick={link.name === 'Home' ? handleHomeClick : link.external ? undefined : handlePageLinkClick(link.href)}
+                                            target={link.external ? '_blank' : undefined}
+                                            rel={link.external ? 'noopener noreferrer' : undefined}
+                                            className="text-[32px] md:text-[48px] font-orbitron font-extrabold text-foreground hover:text-accent transition-colors duration-300"
+                                        >
+                                            {link.name}
+                                        </Link>
+                                    </motion.div>
+                                );
+                            })}
                         </div>
 
                         <div className="mt-10 pt-10 border-t border-white/10 flex flex-col items-center gap-6">

@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blogs",
     "/btech-ai-shodh-ai",
     "/btech-cloud-engineering",
-    "/collaborations",
+
     "/curriculum",
     "/cyber-security",
     "/data-engineering",
