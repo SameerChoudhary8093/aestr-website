@@ -12,7 +12,7 @@ import aestrLogo from '../../public/Herosection/by-gyan-vihar-2-neon.png';
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-    const [programDropdownOpen, setProgramDropdownOpen] = useState(false);
+    const [openDropdown, setOpenDropdown] = useState<string | null>(null);
     const pathname = usePathname();
 
     useEffect(() => {
@@ -26,11 +26,10 @@ const Navbar = () => {
 
     const navLinks = [
         { name: 'Home', href: '/#hero' },
-        { name: 'Program Offered', href: '#', dropdown: true },
+        { name: 'Program Offered', href: '#', dropdownKey: 'programs' },
         { name: 'Aestr Alpha', href: 'https://aestralpha.com', external: true },
         { name: 'Sovereign AI', href: '/sovereign-ai-initiative' },
-        { name: 'Alumni', href: '/alumni' },
-        { name: 'Blogs', href: '/blogs' },
+        { name: 'Outliers', href: '#', dropdownKey: 'outliers' },
         { name: 'Curriculum', href: '/curriculum' },
     ];
 
@@ -42,6 +41,21 @@ const Navbar = () => {
         { name: 'B.Tech. CSE - Major Specializations in Robotics', href: '/robotics' },
         { name: 'B.Tech. CSE - Major Specializations in Cyber Security', href: '/cyber-security' },
     ];
+
+    const outlierLinks = [
+        { name: 'Alumni', href: '/alumni' },
+        { name: 'Blogs', href: '/blogs' },
+    ];
+
+    const dropdownItems: Record<string, { name: string; href: string }[]> = {
+        programs: programLinks,
+        outliers: outlierLinks,
+    };
+
+    const dropdownWidths: Record<string, string> = {
+        programs: 'w-[520px]',
+        outliers: 'w-[220px]',
+    };
 
     const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
         if (!isHomePath(pathname) && !isHomePath(window.location.pathname)) {
@@ -118,19 +132,22 @@ const Navbar = () => {
                     <div className="hidden lg:flex flex-1 justify-start pl-4 lg:pl-6 xl:pl-10 2xl:pl-20">
                         <div className="flex items-center gap-0 lg:gap-1 xl:gap-2 2xl:gap-3">
                             {navLinks.map((link) => {
-                                if (link.dropdown) {
+                                if (link.dropdownKey) {
+                                    const items = dropdownItems[link.dropdownKey];
+                                    const isOpen = openDropdown === link.dropdownKey;
+                                    const widthClass = dropdownWidths[link.dropdownKey] || 'w-[280px]';
                                     return (
                                         <div
                                             key={link.name}
                                             className="relative group/dropdown"
-                                            onMouseEnter={() => setProgramDropdownOpen(true)}
-                                            onMouseLeave={() => setProgramDropdownOpen(false)}
+                                            onMouseEnter={() => setOpenDropdown(link.dropdownKey!)}
+                                            onMouseLeave={() => setOpenDropdown(null)}
                                         >
                                             <button className="relative px-1.5 lg:px-2 xl:px-3 py-2 group/btn flex items-center gap-1">
                                                 <MagneticEffect strength={0.3}>
                                                     <span className="text-[10px] lg:text-[11px] xl:text-[13px] 2xl:text-[14px] font-orbitron font-extrabold text-[#EAF0BD]/80 tracking-wide lg:tracking-wider xl:tracking-widest group-hover/dropdown:text-accent transition-colors whitespace-nowrap flex items-center gap-1.5">
                                                         {link.name}
-                                                        <svg className={`w-3 h-3 transition-transform duration-300 ${programDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <svg className={`w-3 h-3 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M19 9l-7 7-7-7" />
                                                         </svg>
                                                     </span>
@@ -140,25 +157,25 @@ const Navbar = () => {
 
                                             {/* Dropdown Menu */}
                                             <AnimatePresence>
-                                                {programDropdownOpen && (
+                                                {isOpen && (
                                                     <motion.div
                                                         initial={{ opacity: 0, y: 8, scale: 0.97 }}
                                                         animate={{ opacity: 1, y: 0, scale: 1 }}
                                                         exit={{ opacity: 0, y: 8, scale: 0.97 }}
                                                         transition={{ duration: 0.2, ease: 'easeOut' }}
-                                                        className="absolute top-full left-0 mt-2 w-[520px] border border-white/10 rounded-2xl shadow-[0_20px_60px_-10px_rgba(0,0,0,0.9)] overflow-hidden z-50"
+                                                        className={`absolute top-full left-0 mt-2 ${widthClass} border border-white/10 rounded-2xl shadow-[0_20px_60px_-10px_rgba(0,0,0,0.9)] overflow-hidden z-50`}
                                                         style={{ backgroundColor: '#111111' }}
                                                     >
                                                         <div className="p-2">
-                                                            {programLinks.map((program, pIdx) => (
+                                                            {items.map((item) => (
                                                                 <Link
-                                                                    key={program.href}
-                                                                    href={program.href}
-                                                                    onClick={() => setProgramDropdownOpen(false)}
+                                                                    key={item.href}
+                                                                    href={item.href}
+                                                                    onClick={() => setOpenDropdown(null)}
                                                                     className="flex items-center gap-3 px-4 py-3 rounded-xl text-[11px] font-orbitron font-bold text-white/80 hover:text-accent hover:bg-white/5 transition-all duration-200 group/item"
                                                                 >
                                                                     <span className="w-1.5 h-1.5 rounded-full bg-accent/40 group-hover/item:bg-accent group-hover/item:shadow-[0_0_8px_rgba(215,246,1,0.6)] transition-all shrink-0" />
-                                                                    <span className="tracking-wider">{program.name}</span>
+                                                                    <span className="tracking-wider">{item.name}</span>
                                                                 </Link>
                                                             ))}
                                                         </div>
@@ -265,7 +282,9 @@ const Navbar = () => {
                         </div>
                         <div className="flex flex-col space-y-6 md:space-y-8 flex-grow justify-start items-center py-10">
                             {navLinks.map((link, idx) => {
-                                if (link.dropdown) {
+                                if (link.dropdownKey) {
+                                    const items = dropdownItems[link.dropdownKey];
+                                    const isDropOpen = openDropdown === link.dropdownKey;
                                     return (
                                         <motion.div
                                             key={link.name}
@@ -275,16 +294,16 @@ const Navbar = () => {
                                             className="text-center w-full max-w-md"
                                         >
                                             <button
-                                                onClick={() => setProgramDropdownOpen(!programDropdownOpen)}
+                                                onClick={() => setOpenDropdown(isDropOpen ? null : link.dropdownKey!)}
                                                 className="text-[32px] md:text-[48px] font-orbitron font-extrabold text-foreground hover:text-accent transition-colors duration-300 flex items-center justify-center gap-3 w-full"
                                             >
                                                 {link.name}
-                                                <svg className={`w-6 h-6 md:w-8 md:h-8 transition-transform duration-300 ${programDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <svg className={`w-6 h-6 md:w-8 md:h-8 transition-transform duration-300 ${isDropOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M19 9l-7 7-7-7" />
                                                 </svg>
                                             </button>
                                             <AnimatePresence>
-                                                {programDropdownOpen && (
+                                                {isDropOpen && (
                                                     <motion.div
                                                         initial={{ opacity: 0, height: 0 }}
                                                         animate={{ opacity: 1, height: 'auto' }}
@@ -293,14 +312,14 @@ const Navbar = () => {
                                                         className="overflow-hidden"
                                                     >
                                                         <div className="flex flex-col gap-3 mt-4 px-4">
-                                                            {programLinks.map((program) => (
+                                                            {items.map((item) => (
                                                                 <Link
-                                                                    key={program.href}
-                                                                    href={program.href}
-                                                                    onClick={() => { setIsOpen(false); setProgramDropdownOpen(false); }}
+                                                                    key={item.href}
+                                                                    href={item.href}
+                                                                    onClick={() => { setIsOpen(false); setOpenDropdown(null); }}
                                                                     className="text-[14px] md:text-[18px] font-orbitron font-bold text-white/70 hover:text-accent transition-colors py-2 border-b border-white/5 last:border-0"
                                                                 >
-                                                                    {program.name}
+                                                                    {item.name}
                                                                 </Link>
                                                             ))}
                                                         </div>

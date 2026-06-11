@@ -120,11 +120,11 @@ const AestrDifferentiators = () => {
                             Engineered for high-impact roles powering the industries of 2030 and beyond.
                         </p>
                         <div className="flex flex-col gap-3">
-                            <Link href="/salesforce-training" className="border-2 border-accent text-accent font-orbitron font-bold py-3 px-4 rounded-xl text-center text-[10px] uppercase tracking-widest hover:bg-accent hover:text-black transition-all flex items-center justify-center gap-2">
+                            <Link href="/salesforce-training" className="border-2 border-accent text-accent font-orbitron font-bold py-3 px-4 rounded-xl text-center text-[10px] uppercase tracking-widest hover:bg-accent hover:!text-black transition-all flex items-center justify-center gap-2">
                                 Salesforce Developer Training & Placement Program
                                 <span>→</span>
                             </Link>
-                            <Link href="/ios-training" className="border-2 border-accent text-accent font-orbitron font-bold py-3 px-4 rounded-xl text-center text-[10px] uppercase tracking-widest hover:bg-accent hover:text-black transition-all flex items-center justify-center gap-2">
+                            <Link href="/ios-training" className="border-2 border-accent text-accent font-orbitron font-bold py-3 px-4 rounded-xl text-center text-[10px] uppercase tracking-widest hover:bg-accent hover:!text-black transition-all flex items-center justify-center gap-2">
                                 iOS App Development Training (AATCE & SwiftUI)
                                 <span>→</span>
                             </Link>
