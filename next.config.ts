@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   assetPrefix: "/aestr",
 
   images: {
+    loaderFile: "./src/imageLoader.ts",
     remotePatterns: [
       {
         protocol: "https",
