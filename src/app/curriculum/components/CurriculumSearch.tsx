@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import Link from 'next/link';
+import Link from '@/components/AppLink';
 import { ArrowRight, Search } from 'lucide-react';
 import { coursesData, type CurriculumCourse } from '@/lib/curriculum';
 

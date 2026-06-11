@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+import Link from '@/components/AppLink';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 

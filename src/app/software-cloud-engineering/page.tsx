@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from '@/components/AppLink';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BookOpen, Clock, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/Navbar';

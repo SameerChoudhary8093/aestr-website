@@ -3,7 +3,7 @@
 import React from 'react';
 import * as Accordion from '@radix-ui/react-accordion';
 import { ChevronDown, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+import Link from '@/components/AppLink';
 import { curriculumStructure } from '@/lib/curriculum';
 
 function getItemPillClasses(itemType: string, courseType: string | null) {

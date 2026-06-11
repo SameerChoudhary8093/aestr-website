@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
+import Link from '@/components/AppLink';
 import { ArrowLeft } from 'lucide-react';
 import { coursesData, getCourseById, type CurriculumCourse } from '@/lib/curriculum';
 import CourseTabs from '../../components/CourseTabs';

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { ArrowRight, Layers3 } from 'lucide-react';
-import Link from 'next/link';
+import Link from '@/components/AppLink';
 import { getMajorTracks, getMinorTracks } from '@/lib/curriculum';
 
 const majorTracks = getMajorTracks();

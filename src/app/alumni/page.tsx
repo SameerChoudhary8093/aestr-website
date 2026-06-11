@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from '@/components/AppLink';
 import { Users, GraduationCap, Briefcase, Network, MessageSquare, Award, Presentation, Heart } from 'lucide-react';
 import StickyAdmissionsBar from '@/components/StickyAdmissionsBar';
 import { withBasePath } from '@/lib/site';

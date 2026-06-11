@@ -1,5 +1,7 @@
 "use client";
 
+import { withBasePath } from "@/lib/site";
+
 export default function myImageLoader({
   src,
 }: {
@@ -11,5 +13,5 @@ export default function myImageLoader({
     return src;
   }
 
-  return src;
+  return withBasePath(src);
 }

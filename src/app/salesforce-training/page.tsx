@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from '@/components/AppLink';
 import Navbar from '@/components/Navbar';
 
 export default function SalesforceTrainingPage() {
