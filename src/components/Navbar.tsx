@@ -35,12 +35,12 @@ const Navbar = () => {
     ];
 
     const programLinks = [
-        { name: 'B.Tech AI with Shodh AI', href: '/btech-ai-shodh-ai' },
-        { name: 'AI & Machine Learning', href: '/ai-ml' },
-        { name: 'Data Engineering', href: '/data-engineering' },
-        { name: 'Software & Cloud Engineering', href: '/software-cloud-engineering' },
-        { name: 'Robotics', href: '/robotics' },
-        { name: 'Cyber Security', href: '/cyber-security' },
+        { name: 'B.Tech. Artificial Intelligence with Shodh AI', href: '/btech-ai-shodh-ai' },
+        { name: 'B.Tech. CSE - Major Specializations in AI & Machine Learning', href: '/ai-ml' },
+        { name: 'B.Tech. CSE - Major Specializations in Data Engineering', href: '/data-engineering' },
+        { name: 'B.Tech. CSE - Major Specializations in Software & Cloud Engineering', href: '/software-cloud-engineering' },
+        { name: 'B.Tech. CSE - Major Specializations in Robotics', href: '/robotics' },
+        { name: 'B.Tech. CSE - Major Specializations in Cyber Security', href: '/cyber-security' },
     ];
 
     const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
