@@ -25,7 +25,6 @@ const Navbar = () => {
     }, [scrolled]);
 
     const navLinks = [
-        { name: 'Home', href: '/#hero' },
         { name: 'Program Offered', href: '#', dropdown: true },
         { name: 'Aestr Alpha', href: 'https://aestralpha.com', external: true },
         { name: 'Sovereign AI', href: '/sovereign-ai-initiative' },
