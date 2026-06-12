@@ -70,7 +70,7 @@ export default function RootLayout({
 
         {/* Google Analytics 4 (GA4) */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-X2P12978SV"
+          src="https://www.googletagmanager.com/gtag/js?id=G-D6Y6V9TNKC"
           strategy="lazyOnload"
         />
         <Script id="google-analytics" strategy="lazyOnload">
@@ -78,7 +78,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){window.dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-X2P12978SV');
+            gtag('config', 'G-D6Y6V9TNKC');
             window.gtag = gtag;
           `}
         </Script>
