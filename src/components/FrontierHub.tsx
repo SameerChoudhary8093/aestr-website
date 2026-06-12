@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import Image from 'next/image';
 import Link from '@/components/AppLink';
@@ -8,19 +8,6 @@ import { withBasePath } from '@/lib/site';
 
 const FrontierHub = () => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
-
-    const toggleVideoPlayback = () => {
-        const video = videoRef.current;
-        if (!video) return;
-
-        if (video.paused) {
-            void video.play();
-            setIsPlaying(true);
-        } else {
-            video.pause();
-            setIsPlaying(false);
-        }
-    };
 
     const openAlphaSite = () => {
         window.open("https://www.aestralpha.com/", "_blank", "noopener,noreferrer");
