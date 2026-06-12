@@ -8,40 +8,6 @@ import { withBasePath } from '@/lib/site';
 
 const FrontierHub = () => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
-    const videoContainerRef = useRef<HTMLDivElement | null>(null);
-    const [isPlaying, setIsPlaying] = useState(false);
-    const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
-
-    useEffect(() => {
-        const el = videoContainerRef.current;
-        if (!el) return;
-
-        // Bypassing autoplay/autoload on mobile or slow connections to save bandwidth
-        const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-            navigator.userAgent
-        );
-        const conn = (navigator as any).connection;
-        const isSlowConnection = conn && (conn.saveData || ['slow-2g', '2g', '3g'].includes(conn.effectiveType));
-
-        if (isMobileDevice || isSlowConnection) {
-            // Keep shouldLoadVideo false until user click/interaction
-            return;
-        }
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                const entry = entries[0];
-                if (entry?.isIntersecting) {
-                    setShouldLoadVideo(true);
-                    observer.disconnect();
-                }
-            },
-            { root: null, threshold: 0.1 }
-        );
-
-        observer.observe(el);
-        return () => observer.disconnect();
-    }, []);
 
     const toggleVideoPlayback = () => {
         const video = videoRef.current;
@@ -253,46 +219,19 @@ const FrontierHub = () => {
                         </div>
 
                         <div className="lg:col-span-7 flex h-full w-full">
-                            <div ref={videoContainerRef} className="relative rounded-[2.5rem] overflow-hidden border-2 border-gray-300 shadow-lg w-full h-full min-h-[300px] lg:min-h-[440px] aspect-video lg:aspect-auto">
-                                {!shouldLoadVideo ? (
-                                    <div 
-                                        className="w-full h-full relative cursor-pointer"
-                                        onClick={() => setShouldLoadVideo(true)}
-                                    >
-                                        <Image
-                                            src="/Other/Nvidia-Image.jpeg"
-                                            alt="Sovereign AI Hub Video Preview"
-                                            fill
-                                            sizes="(max-width: 768px) 100vw, 50vw"
-                                            className="object-cover absolute inset-0 w-full h-full"
-                                        />
-                                        <div className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors">
-                                            <div className="w-16 h-16 md:w-20 md:h-20 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full flex items-center justify-center shadow-2xl transform transition-all duration-300 hover:scale-110">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 24 24"
-                                                    fill="currentColor"
-                                                    className="w-8 h-8 md:w-10 md:h-10 text-white ml-1"
-                                                >
-                                                    <path d="M8 5.14v14l11-7-11-7z" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ) : (
-                                    <video
-                                        ref={videoRef}
-                                        className="w-full h-full object-cover absolute inset-0"
-                                        autoPlay
-                                        muted
-                                        loop
-                                        playsInline
-                                        controls
-                                    >
-                                        <source src={withBasePath("/pm-video.mp4")} type="video/mp4" />
-                                        Your browser does not support the video tag.
-                                    </video>
-                                )}
+                            <div className="relative rounded-[2.5rem] overflow-hidden border-2 border-gray-300 shadow-lg w-full h-full min-h-[300px] lg:min-h-[440px] aspect-video lg:aspect-auto">
+                                <video
+                                    ref={videoRef}
+                                    className="w-full h-full object-cover absolute inset-0"
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    controls
+                                >
+                                    <source src={withBasePath("/pm-video.mp4")} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
                             </div>
                         </div>
                     </div>

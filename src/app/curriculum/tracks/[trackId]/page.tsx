@@ -125,7 +125,7 @@ export default async function TrackPage({ params }: { params: Promise<{ trackId:
             Back to Curriculum
           </Link>
 
-          <div className="bg-[#5B1DD6] rounded-3xl p-8 md:p-10">
+          <div className="bg-[#5B1DD6] rounded-3xl p-5 sm:p-8 md:p-10">
             <div className="mb-5 flex flex-wrap items-center gap-3">
               <span className="rounded-full border border-white/30 bg-white/20 px-4 py-2 text-xs font-orbitron uppercase tracking-[0.18em] text-white">
                 {track.type} track
@@ -138,7 +138,7 @@ export default async function TrackPage({ params }: { params: Promise<{ trackId:
               </span>
             </div>
 
-            <h1 className="text-hero max-w-4xl leading-[1.08] text-white">
+            <h1 className="text-hero max-w-4xl leading-[1.08] text-white break-all sm:break-words hyphens-auto">
               {track.title}
             </h1>
 

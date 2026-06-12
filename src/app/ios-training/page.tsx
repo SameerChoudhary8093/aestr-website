@@ -812,12 +812,12 @@ export default function IosTrainingPage() {
 
                             {/* Aggregates representation */}
                             <div className="grid grid-cols-2 gap-4">
-                                <div className="bg-black text-white p-6 rounded-2xl flex flex-col justify-between min-h-[140px] text-left">
+                                <div className="bg-black text-white p-6 rounded-2xl flex flex-col items-center justify-between min-h-[140px] text-center">
                                     <p className="text-[9px] uppercase font-orbitron tracking-widest text-[#D7F601] font-bold">Average Grade</p>
                                     <h3 className="text-4xl font-orbitron font-black text-[#D7F601]">81.43%</h3>
                                     <span className="text-[8px] text-white/50 uppercase font-black">Cohort Assessment</span>
                                 </div>
-                                <div className="bg-black text-white p-6 rounded-2xl flex flex-col justify-between min-h-[140px] text-left">
+                                <div className="bg-black text-white p-6 rounded-2xl flex flex-col items-center justify-between min-h-[140px] text-center">
                                     <p className="text-[9px] uppercase font-orbitron tracking-widest text-[#D7F601] font-bold">Certified Rate</p>
                                     <h3 className="text-4xl font-orbitron font-black text-white">30/30</h3>
                                     <span className="text-[8px] text-white/50 uppercase font-black">Qualified Trainees</span>

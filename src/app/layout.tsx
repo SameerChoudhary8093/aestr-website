@@ -7,7 +7,7 @@ import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
 import JsonLd from "@/components/JsonLd";
 import { buildGlobalSchemaGraph } from "@/lib/schema";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, withBasePath } from "@/lib/site";
 import "./globals.css";
 import UrgencyPopup from "@/components/UrgencyPopup";
 import NetworkBackgroundWrapper from "@/components/NetworkBackgroundWrapper";
@@ -47,6 +47,14 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "EPNBdUPqa_hL7njRbItRI1ZcVPTYBfg8SjVs6llamks",
+  },
+  icons: {
+    icon: [
+      {
+        url: withBasePath("/Favicon-image.svg"),
+        type: "image/svg+xml",
+      }
+    ]
   },
 };
 

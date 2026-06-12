@@ -104,80 +104,56 @@ const AlumniPage = () => {
                         </p>
                     </div>
 
-                    {/* Alumni Cards Container - Responsive */}
-                    <div className="relative overflow-hidden">
-                        {/* Mobile: Horizontal Scroll Carousel */}
-                        <div className="lg:hidden flex flex-col gap-6 px-4">
-                            {/* Top Row Carousel */}
-                            <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 no-scrollbar">
-                                {alumniData.slice(0, 10).map((alumni, i) => (
-                                    <div
-                                        key={`mobile-top-${i}`}
-                                        className="relative bg-black/80 border border-white/20 rounded-lg overflow-hidden flex-shrink-0 w-[65vw] sm:w-[45vw] aspect-[3.4/4] snap-center"
-                                    >
-                                        <Image
-                                            src={i < 8 ? `/Alumni/Alumni-${i + 1}.svg` : `/Alumni/Alumni-${i + 1}.jpg`}
-                                            alt={alumni.name}
-                                            fill
-                                            className="object-contain"
-                                        />
-                                    </div>
-                                ))}
-                            </div>
-                            
-                            {/* Bottom Row Carousel */}
-                            <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 no-scrollbar">
-                                {alumniData.slice(10, 21).map((alumni, i) => (
-                                    <div
-                                        key={`mobile-bottom-${i}`}
-                                        className="relative bg-black/80 border border-white/20 rounded-lg overflow-hidden flex-shrink-0 w-[65vw] sm:w-[45vw] aspect-[3.4/4] snap-center"
-                                    >
-                                        <Image
-                                            src={`/Alumni/Alumni-${i + 11}.jpg`}
-                                            alt={alumni.name}
-                                            fill
-                                            className="object-contain"
-                                        />
-                                    </div>
-                                ))}
-                            </div>
+                    {/* Alumni Cards Container - Responsive Continuous Slider */}
+                    <div className="relative overflow-hidden w-full">
+                        {/* Top Row - Moving Left */}
+                        <div className="flex w-max mb-6 sm:mb-8 animate-slide-left hover:[animation-play-state:paused]">
+                            {[1, 2].map((group) => (
+                                <div key={group} className="flex gap-4 sm:gap-6 pr-4 sm:pr-6">
+                                    {alumniData.slice(0, 11).map((alumni, i) => {
+                                        const imgNum = i + 1;
+                                        const imgSrc = imgNum <= 8 ? `/Alumni/Alumni-${imgNum}.svg` : `/Alumni/Alumni-${imgNum}.jpg`;
+                                        return (
+                                            <div
+                                                key={`top-${i}`}
+                                                className="relative bg-black/80 border border-white/20 rounded-lg overflow-hidden flex-shrink-0 w-56 h-64 sm:w-64 sm:h-72 lg:w-80 lg:h-96"
+                                            >
+                                                <Image
+                                                    src={imgSrc}
+                                                    alt={alumni.name}
+                                                    fill
+                                                    className="object-contain"
+                                                />
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            ))}
                         </div>
 
-                        {/* Desktop: Sliding Cards */}
-                        <div className="hidden lg:block">
-                            {/* Top Row - Moving Left */}
-                            <div className="flex space-x-6 mb-8 animate-slide-left">
-                                {alumniData.slice(0, 10).map((alumni, i) => (
-                                    <div
-                                        key={`top-${i}`}
-                                        className="relative bg-black/80 border border-white/20 rounded-lg overflow-hidden flex-shrink-0 w-72 h-80 lg:w-80 lg:h-96"
-                                    >
-                                        <Image
-                                            src={i < 8 ? `/Alumni/Alumni-${i + 1}.svg` : `/Alumni/Alumni-${i + 1}.jpg`}
-                                            alt={alumni.name}
-                                            fill
-                                            className="object-contain"
-                                        />
-                                    </div>
-                                ))}
-                            </div>
-
-                            {/* Bottom Row - Moving Right */}
-                            <div className="flex space-x-6 animate-slide-right">
-                                {alumniData.slice(11, 21).map((alumni, i) => (
-                                    <div
-                                        key={`bottom-${i}`}
-                                        className="relative bg-black/80 border border-white/20 rounded-lg overflow-hidden flex-shrink-0 w-72 h-80 lg:w-80 lg:h-96"
-                                    >
-                                        <Image
-                                            src={`/Alumni/Alumni-${i + 12}.jpg`}
-                                            alt={alumni.name}
-                                            fill
-                                            className="object-contain"
-                                        />
-                                    </div>
-                                ))}
-                            </div>
+                        {/* Bottom Row - Moving Right */}
+                        <div className="flex w-max animate-slide-right hover:[animation-play-state:paused]">
+                            {[1, 2].map((group) => (
+                                <div key={group} className="flex gap-4 sm:gap-6 pr-4 sm:pr-6">
+                                    {alumniData.slice(11, 21).map((alumni, i) => {
+                                        const imgNum = i + 12;
+                                        const imgSrc = `/Alumni/Alumni-${imgNum}.jpg`;
+                                        return (
+                                            <div
+                                                key={`bottom-${i}`}
+                                                className="relative bg-black/80 border border-white/20 rounded-lg overflow-hidden flex-shrink-0 w-56 h-64 sm:w-64 sm:h-72 lg:w-80 lg:h-96"
+                                            >
+                                                <Image
+                                                    src={imgSrc}
+                                                    alt={alumni.name}
+                                                    fill
+                                                    className="object-contain"
+                                                />
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
