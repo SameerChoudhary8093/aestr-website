@@ -1,12 +1,16 @@
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.gyanvihar.org";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://aestr.gyanvihar.org";
 
 export const BASE_PATH =
-  process.env.NEXT_PUBLIC_BASE_PATH ?? "/aestr";
+  process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export function withBasePath(path: string): string {
   if (path.startsWith("http://") || path.startsWith("https://")) {
     return path;
+  }
+
+  if (!BASE_PATH) {
+    return path.startsWith("/") ? path : `/${path}`;
   }
 
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
@@ -15,7 +19,10 @@ export function withBasePath(path: string): string {
 
 export function absoluteUrl(path: string = "/"): string {
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
-  return `${SITE_URL}${BASE_PATH}${normalizedPath === "/" ? "" : normalizedPath}`;
+  if (BASE_PATH) {
+    return `${SITE_URL}${BASE_PATH}${normalizedPath === "/" ? "" : normalizedPath}`;
+  }
+  return `${SITE_URL}${normalizedPath === "/" ? "" : normalizedPath}`;
 }
 
 export function isHomePath(pathname: string): boolean {

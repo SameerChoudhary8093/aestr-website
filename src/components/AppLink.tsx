@@ -8,7 +8,7 @@ type AppLinkProps = ComponentProps<typeof NextLink>;
 
 /**
  * Drop-in replacement for next/link that automatically
- * prefixes the href with the deployment base path (/aestr).
+ * prefixes the href with the deployment base path (if any).
  *
  * Use this instead of importing Link from "next/link" directly.
  */
