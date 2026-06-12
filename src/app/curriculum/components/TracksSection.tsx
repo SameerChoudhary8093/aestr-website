@@ -30,7 +30,7 @@ export default function TracksSection() {
             <div className="mb-6 flex items-end justify-between gap-4 border-b border-black/20 pb-4">
               <div>
                 <h3 className="text-h3 text-black">Majors</h3>
-                <p className="mt-2 text-sm text-black/70">Fix required specialization courses plus four advanced electives from the same track.</p>
+                <p className="mt-2 text-sm text-black/70">Five required specialization courses plus four advanced electives from the same track.</p>
               </div>
             </div>
 
