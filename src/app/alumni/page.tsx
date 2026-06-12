@@ -77,7 +77,7 @@ const AlumniPage = () => {
 
                 <div className="container mx-auto px-4 sm:px-6 relative z-10">
                     <div className="max-w-2xl lg:max-w-3xl">
-                        <h1 className="text-white font-orbitron font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap mb-6">
+                        <h1 className="text-white font-orbitron font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6">
                             Our Alumni, Our Legacy
                         </h1>
                         <p className="text-body text-white/90 leading-relaxed text-sm sm:text-base lg:text-lg">
@@ -106,21 +106,41 @@ const AlumniPage = () => {
 
                     {/* Alumni Cards Container - Responsive */}
                     <div className="relative overflow-hidden">
-                        {/* Mobile: Static Grid */}
-                        <div className="lg:hidden grid grid-cols-2 sm:grid-cols-3 gap-4 px-4">
-                            {alumniData.slice(0, 6).map((alumni, i) => (
-                                <div
-                                    key={`mobile-${i}`}
-                                    className="relative bg-black/80 border border-white/20 rounded-lg overflow-hidden aspect-[3.4/4]"
-                                >
-                                    <Image
-                                        src={i < 8 ? `/Alumni/Alumni-${i + 1}.svg` : `/Alumni/Alumni-${i + 1}.jpg`}
-                                        alt={alumni.name}
-                                        fill
-                                        className="object-contain"
-                                    />
-                                </div>
-                            ))}
+                        {/* Mobile: Horizontal Scroll Carousel */}
+                        <div className="lg:hidden flex flex-col gap-6 px-4">
+                            {/* Top Row Carousel */}
+                            <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 no-scrollbar">
+                                {alumniData.slice(0, 10).map((alumni, i) => (
+                                    <div
+                                        key={`mobile-top-${i}`}
+                                        className="relative bg-black/80 border border-white/20 rounded-lg overflow-hidden flex-shrink-0 w-[65vw] sm:w-[45vw] aspect-[3.4/4] snap-center"
+                                    >
+                                        <Image
+                                            src={i < 8 ? `/Alumni/Alumni-${i + 1}.svg` : `/Alumni/Alumni-${i + 1}.jpg`}
+                                            alt={alumni.name}
+                                            fill
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                            
+                            {/* Bottom Row Carousel */}
+                            <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 no-scrollbar">
+                                {alumniData.slice(10, 21).map((alumni, i) => (
+                                    <div
+                                        key={`mobile-bottom-${i}`}
+                                        className="relative bg-black/80 border border-white/20 rounded-lg overflow-hidden flex-shrink-0 w-[65vw] sm:w-[45vw] aspect-[3.4/4] snap-center"
+                                    >
+                                        <Image
+                                            src={`/Alumni/Alumni-${i + 11}.jpg`}
+                                            alt={alumni.name}
+                                            fill
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
                         </div>
 
                         {/* Desktop: Sliding Cards */}

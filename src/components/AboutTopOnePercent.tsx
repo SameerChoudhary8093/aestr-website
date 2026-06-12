@@ -148,10 +148,25 @@ const AboutTopOnePercent = () => {
                                 <div className="space-y-4 md:space-y-6 pt-4">
                                     <h4 className="subheading-font text-white font-medium uppercase tracking-widest">Minor specialization along with one major</h4>
                                     <div className="flex flex-wrap gap-2 md:gap-2.5">
-                                        {["Mechatronics in EV", "Smart Manufacturing", "Nano Technology", "Smart Cities", "Bio-Informatics", "Semiconductor & RISC-V", "Geo-Informatics", "Product Design", "Fintech", "Bio Medical"].map((item) => (
-                                            <span key={item} className="px-4 md:px-5 py-2 md:py-2.5 text-[16px] bg-foreground/5 border border-foreground/10 text-foreground/80 rounded-lg font-medium transition-all cursor-default hover:border-accent/40 hover:text-accent whitespace-nowrap">
-                                                {item}
-                                            </span>
+                                        {[
+                                            { name: "Mechatronics in EV", href: "https://www.gyanvihar.org/aestr/curriculum/tracks/mechatronics" },
+                                            { name: "Smart Manufacturing", href: "https://www.gyanvihar.org/aestr/curriculum/tracks/smart-manufacturing" },
+                                            { name: "Nano Technology", href: "https://www.gyanvihar.org/aestr/curriculum/tracks/nanomaterials" },
+                                            { name: "Smart Cities", href: "https://www.gyanvihar.org/aestr/curriculum/tracks/smart-cities" },
+                                            { name: "Bio-Informatics", href: "https://www.gyanvihar.org/aestr/curriculum/tracks/bioinformatics" },
+                                            { name: "Semiconductor & RISC-V", href: "https://www.gyanvihar.org/aestr/curriculum/tracks/semiconductor-risc-v" },
+                                            { name: "Geo-Informatics", href: "https://www.gyanvihar.org/aestr/curriculum/tracks/geoinformatics" },
+                                            { name: "Product Design", href: "https://www.gyanvihar.org/aestr/curriculum/tracks/product-design" },
+                                            { name: "Fintech", href: "https://www.gyanvihar.org/aestr/curriculum/tracks/fintech" },
+                                            { name: "Biomedical", href: "https://www.gyanvihar.org/aestr/curriculum/tracks/biomedical" }
+                                        ].map((item) => (
+                                            <Link
+                                                key={item.name}
+                                                href={item.href}
+                                                className="px-4 md:px-5 py-2 md:py-2.5 text-[16px] bg-foreground/5 border border-foreground/10 text-foreground/80 rounded-lg font-medium transition-all cursor-pointer hover:border-accent/40 hover:text-accent hover:bg-accent/5 backdrop-blur-sm shadow-sm whitespace-nowrap"
+                                            >
+                                                {item.name}
+                                            </Link>
                                         ))}
                                     </div>
                                 </div>

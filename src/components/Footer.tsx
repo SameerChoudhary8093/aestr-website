@@ -98,7 +98,7 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        <div className="flex flex-nowrap items-center justify-center gap-4 md:gap-6 lg:gap-8 text-[9px] md:text-[10px] lg:text-xs font-orbitron font-medium tracking-[0.1em] text-white/60">
+                        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 lg:gap-8 text-[9px] md:text-[10px] lg:text-xs font-orbitron font-medium tracking-[0.1em] text-white/60">
                             <Link href="/#hero" className="hover:text-accent transition-colors whitespace-nowrap">AESTR Home</Link>
                             <Link href="/btech-ai-shodh-ai" className="hover:text-accent transition-colors whitespace-nowrap">B.Tech AI</Link>
                             <Link href="/curriculum" className="hover:text-accent transition-colors whitespace-nowrap">Curriculum</Link>

@@ -453,14 +453,14 @@ const SoftwareEngineeringPage = () => {
                             </h3>
 
                             <div className="flex flex-col lg:flex-row gap-12">
-                                <div className="flex lg:flex-col gap-3 overflow-x-auto pb-4 lg:pb-0 lg:w-48 shrink-0">
+                                <div className="grid grid-cols-2 md:grid-cols-4 lg:flex lg:flex-col gap-3 pb-4 lg:pb-0 lg:w-48 shrink-0">
                                     {yearData.map((y, i) => (
                                         <button
                                             key={y.year}
                                             onClick={() => setActiveYear(i)}
-                                            className={`px-6 py-4 rounded-2xl font-orbitron font-bold text-sm transition-all duration-300 whitespace-nowrap text-left border ${activeYear === i
-                                                ? 'bg-accent text-black border-accent'
-                                                : 'bg-background-alt text-foreground/40 border-white/5 hover:border-accent/30'
+                                            className={`px-4 py-4 rounded-xl font-orbitron font-black text-xs uppercase tracking-widest transition-all duration-300 whitespace-nowrap text-center lg:text-left border ${activeYear === i
+                                                ? 'bg-black text-accent border-black'
+                                                : 'bg-black/5 text-black/50 border-black/10 hover:border-black/30'
                                                 }`}
                                         >
                                             {y.year}
@@ -894,78 +894,76 @@ const SoftwareEngineeringPage = () => {
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="overflow-x-auto rounded-[2rem] border border-white/5 shadow-2xl"
+                            className="rounded-[2rem] border border-white/5 shadow-2xl overflow-hidden bg-background-alt/30"
                         >
-                            <table className="w-full text-left border-collapse min-w-[1000px]">
-                                <thead>
-                                    <tr className="bg-purple/10">
-                                        <th className="p-8 text-lg subheading-font font-bold text-foreground border-r border-white/5 w-1/3 text-center">Program Name</th>
-                                        <th className="p-8 text-lg subheading-font font-bold text-foreground border-r border-white/5 w-1/12 text-center">Duration</th>
-                                        <th className="p-8 text-lg subheading-font font-bold text-foreground border-r border-white/5 w-1/6 text-center">Annual Fee (INR)</th>
-                                        <th className="p-8 text-lg subheading-font font-bold text-foreground w-1/3 text-center">Qualification</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr className="bg-background-alt/30 group">
-                                        <td className="p-10 border-r border-white/5 align-top space-y-8">
-                                            <div className="space-y-4">
-                                                <p className="text-foreground/60 font-medium">B.Tech. (with one Major & one Minor Specialization pattern)</p>
-                                                <h4 className="text-xl subheading-font font-bold text-foreground leading-snug">
-                                                    Computer Science & Engineering with any one Major Specialization in
-                                                </h4>
-                                                <ul className="grid grid-cols-1 gap-2">
-                                                    {["Software Engineering", "Cloud Engineering", "Artificial Intelligence & Machine Learning", "Data Engineering", "Cyber Security"].map((item) => (
-                                                        <li key={item} className="flex items-center gap-3 text-foreground/70">
-                                                            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                                                            {item}
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
+                            <div className="hidden lg:grid grid-cols-12 bg-purple/10 border-b border-white/5">
+                                <div className="col-span-4 p-8 text-lg subheading-font font-bold text-foreground border-r border-white/5 text-center">Program Name</div>
+                                <div className="col-span-2 p-8 text-lg subheading-font font-bold text-foreground border-r border-white/5 text-center">Duration</div>
+                                <div className="col-span-3 p-8 text-lg subheading-font font-bold text-foreground border-r border-white/5 text-center">Annual Fee (INR)</div>
+                                <div className="col-span-3 p-8 text-lg subheading-font font-bold text-foreground text-center">Qualification</div>
+                            </div>
+                            
+                            <div className="grid grid-cols-1 lg:grid-cols-12 group">
+                                <div className="col-span-1 lg:col-span-4 p-8 lg:p-10 border-b lg:border-b-0 lg:border-r border-white/5 align-top space-y-8">
+                                    <div className="space-y-4">
+                                        <p className="text-foreground/60 font-medium">B.Tech. (with one Major & one Minor Specialization pattern)</p>
+                                        <h4 className="text-xl subheading-font font-bold text-foreground leading-snug">
+                                            Computer Science & Engineering with any one Major Specialization in
+                                        </h4>
+                                        <ul className="grid grid-cols-1 gap-2">
+                                            {["Software Engineering", "Cloud Engineering", "Artificial Intelligence & Machine Learning", "Data Engineering", "Cyber Security"].map((item) => (
+                                                <li key={item} className="flex items-center gap-3 text-foreground/70">
+                                                    <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                                                    {item}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
 
-                                            <div className="space-y-4 pt-4">
-                                                <h4 className="text-xl subheading-font font-bold text-foreground leading-snug">
-                                                    Minor Specialization (Choose any one Minor):
-                                                </h4>
-                                                <ul className="grid grid-cols-2 gap-x-6 gap-y-2">
-                                                    {["Robotics", "Bioinformatics", "Industry & Manufacturing", "Nanotechnology", "Geoinformatics", "Chip & Semiconductor", "Smart Cities", "Design", "Fintech"].map((item) => (
-                                                        <li key={item} className="flex items-center gap-3 text-foreground/70">
-                                                            <span className="w-1 h-1 rounded-full bg-purple" />
-                                                            {item}
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-                                        </td>
-
-                                        <td className="p-10 border-r border-white/5 text-center align-middle">
-                                            <span className="text-2xl subheading-font font-bold text-foreground">4 Years</span>
-                                        </td>
-
-                                        <td className="p-10 border-r border-white/5 text-center align-middle">
-                                            <div className="space-y-1">
-                                                <span className="text-3xl subheading-font font-bold text-accent">₹ 2,00,000</span>
-                                                <p className="text-[10px] text-foreground/40 font-bold uppercase tracking-widest leading-none">Per Annum</p>
-                                            </div>
-                                        </td>
-
-                                        <td className="p-10 align-top">
-                                            <div className="space-y-6 text-foreground/70 leading-relaxed font-medium">
-                                                <p>
-                                                    Passed 10+2 from any government recognized board with <span className="text-foreground font-bold">Physics and Mathematics</span> as compulsory subjects,
-                                                </p>
-                                                <p className="">along with one of the following:</p>
-                                                <div className="bg-purple/10 p-6 rounded-2xl border border-purple/20">
-                                                    <p className="text-foreground font-bold">
-                                                        Chemistry / Biotechnology / Computer Science / Biology
-                                                    </p>
-                                                    <p className="mt-2">with at least <span className="text-accent font-black text-xl">70%.</span></p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                    <div className="space-y-4 pt-4 border-t border-white/5">
+                                        <h4 className="text-xl subheading-font font-bold text-foreground leading-snug">
+                                            Minor Specialization (Choose any one Minor):
+                                        </h4>
+                                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
+                                            {["Robotics", "Bioinformatics", "Industry & Manufacturing", "Nanotechnology", "Geoinformatics", "Chip & Semiconductor", "Smart Cities", "Design", "Fintech"].map((item) => (
+                                                <li key={item} className="flex items-center gap-3 text-foreground/70">
+                                                    <span className="w-1 h-1 rounded-full bg-purple" />
+                                                    {item}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div className="col-span-1 lg:col-span-2 p-8 lg:p-10 border-b lg:border-b-0 lg:border-r border-white/5 flex flex-col items-center justify-center text-center">
+                                    <span className="lg:hidden text-purple font-orbitron text-xs uppercase tracking-widest mb-2 font-bold">Duration</span>
+                                    <span className="text-2xl subheading-font font-bold text-foreground">4 Years</span>
+                                </div>
+                                
+                                <div className="col-span-1 lg:col-span-3 p-8 lg:p-10 border-b lg:border-b-0 lg:border-r border-white/5 flex flex-col items-center justify-center text-center">
+                                    <span className="lg:hidden text-purple font-orbitron text-xs uppercase tracking-widest mb-2 font-bold">Annual Fee (INR)</span>
+                                    <div className="space-y-1">
+                                        <span className="text-3xl subheading-font font-bold text-accent">₹ 2,00,000</span>
+                                        <p className="text-[10px] text-foreground/40 font-bold uppercase tracking-widest leading-none">Per Annum</p>
+                                    </div>
+                                </div>
+                                
+                                <div className="col-span-1 lg:col-span-3 p-8 lg:p-10 flex flex-col justify-center">
+                                    <span className="lg:hidden text-purple font-orbitron text-xs uppercase tracking-widest mb-4 font-bold text-center">Qualification</span>
+                                    <div className="space-y-6 text-foreground/70 leading-relaxed font-medium">
+                                        <p className="text-center lg:text-left">
+                                            Passed 10+2 from any government recognized board with <span className="text-foreground font-bold">Physics and Mathematics</span> as compulsory subjects,
+                                        </p>
+                                        <p className="text-center lg:text-left">along with one of the following:</p>
+                                        <div className="bg-purple/10 p-6 rounded-2xl border border-purple/20 text-center">
+                                            <p className="text-foreground font-bold">
+                                                Chemistry / Biotechnology / Computer Science / Biology
+                                            </p>
+                                            <p className="mt-2">with at least <span className="text-accent font-black text-xl">70%.</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </motion.div>
                     </div>
                 </div>

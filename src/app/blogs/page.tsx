@@ -30,7 +30,7 @@ const BlogsPage = () => {
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-orbitron font-black text-white mb-4 leading-tight mx-auto">
                                 Insights &amp; Intelligence
                             </h1>
-                            <p className="text-lg md:text-xl text-white/80 leading-relaxed font-orbitron whitespace-nowrap mx-auto text-center mb-0">
+                            <p className="text-lg md:text-xl text-white/80 leading-relaxed font-orbitron mx-auto text-center mb-0">
                                 Exploring the latest research, tech breakthroughs, and pedagogical shifts from the architects of India's AI future.
                             </p>
                         </motion.div>

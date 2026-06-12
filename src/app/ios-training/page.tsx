@@ -452,10 +452,10 @@ export default function IosTrainingPage() {
 
                 <div className="max-w-[1400px] mx-auto w-full">
                     {/* Header */}
-                    <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-16 gap-6">
-                        <div className="space-y-2">
+                    <div className="flex flex-col md:flex-row items-center md:items-center justify-between mb-16 gap-6 text-center md:text-left">
+                        <div className="space-y-2 flex flex-col items-center md:items-start w-full">
                             <p className="text-accent font-orbitron text-[9px] tracking-[0.3em] font-black uppercase">Structured Syllabus</p>
-                            <h2 className="font-orbitron font-bold text-2xl md:text-3xl lg:text-4xl uppercase tracking-[0.1em] flex items-center gap-3">
+                            <h2 className="font-orbitron font-bold text-2xl md:text-3xl lg:text-4xl uppercase tracking-[0.1em] flex flex-wrap justify-center md:justify-start items-center gap-x-3 gap-y-1 w-full">
                                 <span className="text-white">Technical</span>
                                 <span className="text-accent">Curriculum</span>
                             </h2>

@@ -199,9 +199,9 @@ const ExecutionTeam = () => {
 
                                 <div className="flex flex-row flex-nowrap items-center gap-3 md:gap-8 pt-4 overflow-x-auto no-scrollbar">
                                     {[
-                                        { src: '/Other/Rooosevelt.png', alt: 'Roosevelt University', bg: 'bg-[#5B1DD6]', scale: 'scale-128' },
-                                        { src: '/Other/Niagara-logo.webp', alt: 'Niagara University', bg: 'bg-[#5B1DD6]', scale: 'scale-110' },
-                                        { src: '/Other/LOUISVILLE copy 2.png', alt: 'University of Louisville', bg: 'bg-[#5B1DD6]', scale: 'scale-130' }
+                                        { src: '/Other/Rooosevelt.png', alt: 'Roosevelt University', bg: 'bg-[#5B1DD6]', scale: 'scale-100 md:scale-125' },
+                                        { src: '/Other/Niagara-logo.webp', alt: 'Niagara University', bg: 'bg-[#5B1DD6]', scale: 'scale-100 md:scale-110' },
+                                        { src: '/Other/LOUISVILLE copy 2.png', alt: 'University of Louisville', bg: 'bg-[#5B1DD6]', scale: 'scale-100 md:scale-[1.3]' }
                                     ].map((logo, idx) => (
                                         <motion.div
                                             key={logo.alt}

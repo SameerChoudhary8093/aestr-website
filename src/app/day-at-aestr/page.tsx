@@ -52,7 +52,7 @@ export default function DayAtAestr() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="text-h1 lg:text-[5.5rem] leading-[1] text-white font-black font-orbitron whitespace-nowrap"
+                            className="text-h1 lg:text-[5.5rem] leading-[1] text-white font-black font-orbitron"
                         >
                             Day of <span className="text-accent">AESTR Student</span>
                         </motion.h1>
@@ -61,7 +61,7 @@ export default function DayAtAestr() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="text-xl md:text-2xl text-white/90 font-medium whitespace-nowrap"
+                            className="text-xl md:text-2xl text-white/90 font-medium max-w-3xl mx-auto"
                         >
                             Experience the intense, focused, and rewarding life of an AI engineering student at India's most innovative institution.
                         </motion.p>

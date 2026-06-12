@@ -275,12 +275,12 @@ export default function CyberSecuritySpecializationPage() {
                             <h3 className="text-5xl md:text-7xl font-orbitron font-black text-black tracking-tighter">Programme & Curriculum</h3>
 
                             <div className="flex flex-col lg:flex-row gap-12">
-                                <div className="flex lg:flex-col gap-3 overflow-x-auto pb-4 lg:pb-0 lg:w-48 shrink-0 no-scrollbar">
+                                <div className="grid grid-cols-2 md:grid-cols-4 lg:flex lg:flex-col gap-3 pb-4 lg:pb-0 lg:w-48 shrink-0">
                                     {yearData.map((y, i) => (
                                         <button
                                             key={y.year}
                                             onClick={() => setActiveYear(i)}
-                                            className={`px-6 py-4 rounded-xl font-orbitron font-black text-xs uppercase tracking-widest transition-all duration-300 whitespace-nowrap text-left border ${activeYear === i
+                                            className={`px-4 py-4 rounded-xl font-orbitron font-black text-xs uppercase tracking-widest transition-all duration-300 whitespace-nowrap text-center lg:text-left border ${activeYear === i
                                                 ? 'bg-black text-accent border-black'
                                                 : 'bg-black/5 text-black/50 border-black/10 hover:border-black/30'
                                                 }`}
@@ -371,40 +371,52 @@ export default function CyberSecuritySpecializationPage() {
                 <div className="container-boxed relative z-10 w-full max-w-[1224px] mx-auto">
                     <div className="space-y-16">
                         <h2 className="text-5xl md:text-8xl font-orbitron font-black text-black tracking-tighter">Fees <span className="opacity-30">Structure</span></h2>
-                        <div className="overflow-x-auto rounded-[3rem] shadow-[0_40px_100px_rgba(0,0,0,0.3)] border border-white/5" style={{backgroundColor: '#571AD0'}}>
-                            <table className="w-full text-left border-collapse min-w-[1000px]">
-                                <thead>
-                                    <tr className="bg-white/5">
-                                        <th className="p-10 text-xs font-orbitron font-black text-accent uppercase tracking-[0.2em] border-r border-white/5 w-1/3 text-center">Specialization Architecture</th>
-                                        <th className="p-10 text-xs font-orbitron font-black text-accent uppercase tracking-[0.2em] border-r border-white/5 w-1/12 text-center">Duration</th>
-                                        <th className="p-10 text-xs font-orbitron font-black text-accent uppercase tracking-[0.2em] border-r border-white/5 w-1/6 text-center">Annual Investment</th>
-                                        <th className="p-10 text-xs font-orbitron font-black text-accent uppercase tracking-[0.2em] w-1/3 text-center">Entry Threshold</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr className="group">
-                                        <td className="p-12 border-r border-white/5 align-top space-y-10">
-                                            <div className="space-y-6">
-                                                <p className="text-white/40 font-orbitron text-[10px] uppercase tracking-widest">Major Specialization</p>
-                                                <h4 className="text-2xl font-orbitron font-black text-white">Cyber <span className="text-accent">Security</span></h4>
-                                            </div>
-                                            <div className="space-y-6 pt-6 border-t border-white/5">
-                                                <p className="text-white/40 font-orbitron text-[10px] uppercase tracking-widest">Minor Specializations</p>
-                                                <ul className="grid grid-cols-2 gap-4">
-                                                    {["Robotics", "Data Engineering", "Software & Cloud", "AI", "Blockchain"].map((item) => (
-                                                        <li key={item} className="flex items-center gap-3 text-white/70 text-sm font-medium">
-                                                            <span className="w-1.5 h-1.5 rounded-full bg-accent/40" />{item}
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-                                        </td>
-                                        <td className="p-12 border-r border-white/5 text-center">04 <p className="text-[10px] font-bold text-white/30 truncate">YEARS</p></td>
-                                        <td className="p-12 border-r border-white/5 text-center"><span className="text-accent font-black text-2xl">₹2.0L</span></td>
-                                        <td className="p-12">70% Aggregate Minimum</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div className="rounded-[3rem] shadow-[0_40px_100px_rgba(0,0,0,0.3)] border border-white/5 overflow-hidden" style={{ backgroundColor: '#571AD0' }}>
+                            <div className="hidden lg:grid grid-cols-12 bg-white/5 border-b border-white/5">
+                                <div className="col-span-4 p-10 text-xs font-orbitron font-black text-accent uppercase tracking-[0.2em] border-r border-white/5 text-center">Specialization Architecture</div>
+                                <div className="col-span-2 p-10 text-xs font-orbitron font-black text-accent uppercase tracking-[0.2em] border-r border-white/5 text-center">Duration</div>
+                                <div className="col-span-3 p-10 text-xs font-orbitron font-black text-accent uppercase tracking-[0.2em] border-r border-white/5 text-center">Annual Investment</div>
+                                <div className="col-span-3 p-10 text-xs font-orbitron font-black text-accent uppercase tracking-[0.2em] text-center">Entry Threshold</div>
+                            </div>
+                            
+                            <div className="grid grid-cols-1 lg:grid-cols-12 group">
+                                <div className="col-span-1 lg:col-span-4 p-8 lg:p-12 border-b lg:border-b-0 lg:border-r border-white/5 align-top space-y-10">
+                                    <div className="space-y-6">
+                                        <p className="text-white/40 font-orbitron text-[10px] uppercase tracking-widest">Major Specialization</p>
+                                        <h4 className="text-2xl font-orbitron font-black text-white">Cyber <span className="text-accent">Security</span></h4>
+                                    </div>
+                                    <div className="space-y-6 pt-6 border-t border-white/5">
+                                        <p className="text-white/40 font-orbitron text-[10px] uppercase tracking-widest">Minor Specializations</p>
+                                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                            {["Robotics", "Data Engineering", "Software & Cloud", "AI", "Blockchain"].map((item) => (
+                                                <li key={item} className="flex items-center gap-3 text-white/70 text-sm font-medium">
+                                                    <span className="w-1.5 h-1.5 rounded-full bg-accent/40" />{item}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div className="col-span-1 lg:col-span-2 p-8 lg:p-12 border-b lg:border-b-0 lg:border-r border-white/5 flex flex-col items-center justify-center text-center">
+                                    <span className="lg:hidden text-accent font-orbitron text-xs uppercase tracking-widest mb-2 font-bold">Duration</span>
+                                    <div className="flex flex-col items-center">
+                                        <span className="text-2xl font-orbitron font-black text-white">04</span>
+                                        <p className="text-[10px] font-bold text-white/30 truncate mt-1">YEARS</p>
+                                    </div>
+                                </div>
+                                
+                                <div className="col-span-1 lg:col-span-3 p-8 lg:p-12 border-b lg:border-b-0 lg:border-r border-white/5 flex flex-col items-center justify-center text-center">
+                                    <span className="lg:hidden text-accent font-orbitron text-xs uppercase tracking-widest mb-2 font-bold">Annual Investment</span>
+                                    <span className="text-accent font-black text-2xl lg:text-3xl">₹2.0L</span>
+                                </div>
+                                
+                                <div className="col-span-1 lg:col-span-3 p-8 lg:p-12 flex flex-col justify-center items-center lg:items-start">
+                                    <span className="lg:hidden text-accent font-orbitron text-xs uppercase tracking-widest mb-4 font-bold text-center">Entry Threshold</span>
+                                    <div className="text-white/80 font-medium text-center lg:text-left">
+                                        70% Aggregate Minimum
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

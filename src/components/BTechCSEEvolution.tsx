@@ -88,7 +88,7 @@ const BTechCSEEvolution = () => {
                             <div className="space-y-8">
                                 <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 text-left">
                                     <div className="space-y-2">
-                                        <h3 className="text-lg sm:text-xl md:text-2xl font-orbitron font-black text-white/55 tracking-wide uppercase whitespace-nowrap">
+                                        <h3 className="text-lg sm:text-xl md:text-2xl font-orbitron font-black text-white/55 tracking-wide uppercase">
                                             Traditional B.Tech CSE
                                         </h3>
                                         <p className="text-xs text-white/30 font-outfit font-medium uppercase tracking-[0.2em]">
@@ -125,7 +125,7 @@ const BTechCSEEvolution = () => {
                                                 </svg>
                                             </div>
                                             <div className="space-y-1">
-                                                <strong className="text-white/80 text-xs sm:text-sm md:text-base font-bold font-orbitron block uppercase whitespace-nowrap">{item.title}</strong>
+                                                <strong className="text-white/80 text-xs sm:text-sm md:text-base font-bold font-orbitron block uppercase">{item.title}</strong>
                                                 <p className="text-white/45 text-xs md:text-sm font-outfit leading-relaxed font-medium">{item.desc}</p>
                                             </div>
                                         </motion.li>
@@ -146,7 +146,7 @@ const BTechCSEEvolution = () => {
                             <div className="space-y-8">
                                 <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 text-left">
                                     <div className="space-y-2">
-                                        <h3 className="text-lg sm:text-xl md:text-2xl font-orbitron font-black text-[#D7F601] tracking-wide uppercase whitespace-nowrap">
+                                        <h3 className="text-lg sm:text-xl md:text-2xl font-orbitron font-black text-[#D7F601] tracking-wide uppercase">
                                             AESTR B.Tech CSE
                                         </h3>
                                         <p className="text-xs text-[#D7F601]/75 font-outfit font-medium uppercase tracking-[0.2em]">
@@ -182,7 +182,7 @@ const BTechCSEEvolution = () => {
                                                 </svg>
                                             </div>
                                             <div className="space-y-1">
-                                                <strong className="text-white text-xs sm:text-sm md:text-base font-semibold font-orbitron block uppercase whitespace-nowrap">{item.title}</strong>
+                                                <strong className="text-white text-xs sm:text-sm md:text-base font-semibold font-orbitron block uppercase">{item.title}</strong>
                                                 <p className="text-white/85 text-xs md:text-sm font-outfit leading-relaxed font-medium">{item.desc}</p>
                                             </div>
                                         </motion.li>
