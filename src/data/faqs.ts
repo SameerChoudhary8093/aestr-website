@@ -52,4 +52,24 @@ export const faqs: FaqItem[] = [
     q: "Why choose AESTR over other top engineering institutions in India?",
     a: "AESTR is built for the AI era. Most traditional institutions are still teaching old syllabus. AESTR gives you direct access to founders from Cambridge, Microsoft, and Shodh AI. You are not a student here; you are a resident engineer working in a Silicon Valley-style environment. If your goal is to lead the AI revolution, AESTR is the right place.",
   },
+  {
+    q: "Is the B.Tech CSE degree from AESTR SGVU UGC/AICTE approved?",
+    a: "Yes. The B.Tech Computer Science & Engineering (CSE) degree is awarded by Suresh Gyan Vihar University (SGVU), which is a UGC-recognized university. All engineering programs under SGVU are approved by the All India Council for Technical Education (AICTE) and accredited with a NAAC A+ grade.",
+  },
+  {
+    q: "How is AESTR B.Tech CSE different from traditional B.Tech Computer Science?",
+    a: "Traditional B.Tech CSE programs are often theory-heavy with written exams. AESTR redefines this through a 100% practical, residency-based learning model. Instead of standard exams, students build real products, commit code to GitHub daily, undergo continuous sprint reviews, and work under the direct mentorship of active tech founders and computer scientists at Shodh AI.",
+  },
+  {
+    q: "What specialized tracks are offered in AESTR (AI/ML, Cloud, etc.)?",
+    a: "AESTR offers cutting-edge specializations aligned with the future of technology, including: B.Tech in Artificial Intelligence (Powered by Shodh AI), Software & Cloud Engineering, Cyber Security, Data Engineering, and Cloud Engineering.",
+  },
+  {
+    q: "What are the placement opportunities and packages for AESTR students?",
+    a: "AESTR prepares students directly for elite engineering and developer roles. Due to intensive project-based training and residency programs, students secure placements in top-tier tech giants, product startups, and AI research labs. Recruiters focus on hiring AESTR graduates for roles like AI Engineers, Cloud Architects, and DevOps specialists. (Audited placement metrics are updated transparently in our outcome reports).",
+  },
+  {
+    q: "What is the \"Silicon Valley-style incubator\" model in AESTR?",
+    a: "The incubator model treats the campus as a tech startup lab rather than a passive classroom. Students operate as software residents where they build actual commercialized deep-tech products, launch startups from scratch, or transition directly into high-growth product roles under the guidance of industry founders.",
+  },
 ];
