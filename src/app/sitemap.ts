@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "@/data/blogs";
 import { coursesData, tracksData } from "@/lib/curriculum";
-import { absoluteUrl } from "@/lib/site";
+import { canonicalUrl } from "@/lib/site";
 import { getSitemapPriority } from "@/lib/page-seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -37,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const allRoutes = [...staticRoutes, ...blogRoutes, ...courseRoutes, ...trackRoutes];
 
   return allRoutes.map((path) => ({
-    url: absoluteUrl(path),
+    url: canonicalUrl(path),
     lastModified: new Date(),
     changeFrequency: path.startsWith("/blogs/") ? "weekly" : "monthly",
     priority: getSitemapPriority(path),

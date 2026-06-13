@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { absoluteUrl } from "@/lib/site";
+import { canonicalUrl } from "@/lib/site";
 
 const AI_BOTS = [
   "GPTBot",
@@ -17,6 +17,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "*", allow: "/" },
       ...AI_BOTS.map((bot) => ({ userAgent: bot, allow: "/" as const })),
     ],
-    sitemap: absoluteUrl("/sitemap.xml"),
+    sitemap: canonicalUrl("/sitemap.xml"),
   };
 }

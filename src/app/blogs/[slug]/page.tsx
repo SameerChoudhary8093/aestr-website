@@ -11,7 +11,7 @@ import {
   buildBlogPostingSchema,
   buildBreadcrumbSchema,
 } from '@/lib/schema';
-import { absoluteUrl } from '@/lib/site';
+import { absoluteUrl, canonicalUrl } from '@/lib/site';
 
 interface PageProps {
     params: Promise<{
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         title: `${post.title} | AESTR Insights`,
         description: post.metaDescription,
         alternates: {
-            canonical: `/blogs/${slug}`,
+            canonical: canonicalUrl(`/blogs/${slug}`),
         },
         openGraph: {
             title: post.title,

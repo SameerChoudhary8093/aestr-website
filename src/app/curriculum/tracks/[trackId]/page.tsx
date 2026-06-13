@@ -13,7 +13,7 @@ import {
 import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildBreadcrumbSchema } from '@/lib/schema';
-import { SITE_URL } from '@/lib/site';
+import { SITE_URL, canonicalUrl } from '@/lib/site';
 
 export async function generateStaticParams() {
   return tracksData.map((track) => ({
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: { params: Promise<{ trackId: 
     description: `${track.description} Explore ${track.type} track courses, semesters, skills, and curriculum pathways at Aestr.`,
     keywords: `${track.title}, ${track.type} specialization, ${skills.join(', ')}, Aestr curriculum`,
     alternates: {
-      canonical: `/curriculum/tracks/${trackId}`,
+      canonical: canonicalUrl(`/curriculum/tracks/${trackId}`),
     },
   };
 }

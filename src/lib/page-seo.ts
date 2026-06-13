@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { canonicalUrl } from "@/lib/site";
 
 export interface PageSeoConfig {
   title: string;
@@ -149,7 +150,7 @@ export function createPageMetadata(key: keyof typeof PAGE_SEO): Metadata {
     title: seo.title,
     description: seo.description,
     alternates: {
-      canonical: seo.path,
+      canonical: canonicalUrl(seo.path),
     },
     ...(seo.noIndex
       ? { robots: { index: false, follow: false } }

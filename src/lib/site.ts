@@ -1,6 +1,8 @@
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.gyanvihar.org";
 
+export const CANONICAL_BASE = "https://aestr.gyanvihar.org";
+
 export const BASE_PATH =
   process.env.NEXT_PUBLIC_BASE_PATH ?? "/aestr";
 
@@ -16,6 +18,11 @@ export function withBasePath(path: string): string {
 export function absoluteUrl(path: string = "/"): string {
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
   return `${SITE_URL}${BASE_PATH}${normalizedPath === "/" ? "" : normalizedPath}`;
+}
+
+export function canonicalUrl(path: string = "/"): string {
+  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
+  return `${CANONICAL_BASE}${normalizedPath === "/" ? "/" : normalizedPath}`;
 }
 
 export function isHomePath(pathname: string): boolean {

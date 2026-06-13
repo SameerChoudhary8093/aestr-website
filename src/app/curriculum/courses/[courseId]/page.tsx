@@ -8,7 +8,7 @@ import CourseTabs from '../../components/CourseTabs';
 import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildBreadcrumbSchema } from '@/lib/schema';
-import { SITE_URL } from '@/lib/site';
+import { SITE_URL, canonicalUrl } from '@/lib/site';
 
 export async function generateStaticParams() {
   return coursesData.map((course) => ({
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<{ courseId:
     description: course.description,
     keywords: `${course.title}, ${course.skills.join(', ')}, B.Tech, Aestr`,
     alternates: {
-      canonical: `/curriculum/courses/${courseId}`,
+      canonical: canonicalUrl(`/curriculum/courses/${courseId}`),
     },
   };
 }
