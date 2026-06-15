@@ -214,9 +214,9 @@ const Navbar = () => {
                             <Image
                                 src="/Herosection/Container.svg"
                                 alt="Gyan Vihar"
-                                width={240}
-                                height={75}
-                                className="w-auto h-[85%] lg:h-[90%] xl:h-full object-contain brightness-0 invert"
+                                width={130}
+                                height={40}
+                                className="w-auto h-[60%] lg:h-[65%] xl:h-[70%] object-contain brightness-0 invert"
                                 priority
                             />
 
