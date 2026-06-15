@@ -115,7 +115,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Navbar Content */}
-                <div className="flex items-center justify-between w-full h-[65px] lg:h-[72px] xl:h-[80px] 2xl:h-[90px] px-4 lg:px-5 xl:px-6 overflow-visible">
+                <div className="flex items-center justify-between w-full h-[65px] lg:h-[72px] xl:h-[80px] 2xl:h-[90px] px-4 lg:px-5 xl:px-6 overflow-hidden">
                     {/* Left: AESTR Logo */}
                     <Link href="/#hero" onClick={handleHomeClick} className="flex-none h-[70%] lg:h-[75%] xl:h-[80%] 2xl:h-[90%]" aria-label="Aestr Home Logo">
                         <Image
@@ -220,13 +220,13 @@ const Navbar = () => {
                                 priority
                             />
 
-                            <div className="flex items-center h-full gap-1 xl:gap-2 2xl:gap-3 border-l border-white/10 pl-1 lg:pl-2 xl:pl-3 overflow-visible">
+                            <div className="flex items-center h-full gap-1 xl:gap-2 2xl:gap-3 border-l border-white/10 pl-1 lg:pl-2 xl:pl-3 overflow-hidden">
                                 <Image
                                     src="/Herosection/Nirf white.png"
                                     alt="NIRF"
                                     width={140}
                                     height={90}
-                                    className="w-auto h-full lg:h-[110%] xl:h-[120%] object-contain px-0.5"
+                                    className="w-auto h-[85%] lg:h-[90%] xl:h-full object-contain px-0.5"
                                     priority
                                 />
 
@@ -235,7 +235,7 @@ const Navbar = () => {
                                     alt="NAAC A+"
                                     width={160}
                                     height={100}
-                                    className="w-auto h-[110%] lg:h-[120%] xl:h-[140%] object-contain px-1"
+                                    className="w-auto h-[85%] lg:h-[90%] xl:h-full object-contain px-1"
                                     priority
                                 />
                             </div>
