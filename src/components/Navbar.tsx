@@ -115,7 +115,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Navbar Content */}
-                <div className="flex items-center justify-between w-full h-[65px] lg:h-[72px] xl:h-[80px] 2xl:h-[90px] px-4 lg:px-5 xl:px-6">
+                <div className="flex items-center justify-between w-full h-[65px] lg:h-[72px] xl:h-[80px] 2xl:h-[90px] px-4 lg:px-5 xl:px-6 overflow-visible">
                     {/* Left: AESTR Logo */}
                     <Link href="/#hero" onClick={handleHomeClick} className="flex-none h-[70%] lg:h-[75%] xl:h-[80%] 2xl:h-[90%]" aria-label="Aestr Home Logo">
                         <Image
@@ -208,7 +208,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Right: Partner Logos & Mobile Menu */}
-                    <div className="flex items-center justify-end h-[50%] lg:h-[52%] xl:h-[55%] 2xl:h-[60%] flex-none shrink-0">
+                    <div className="flex items-center justify-end h-[60%] lg:h-[65%] xl:h-[70%] 2xl:h-[75%] flex-none shrink-0">
                         
                         <div className="hidden lg:flex items-center h-full gap-1 lg:gap-2 2xl:gap-3">
                             <Image
@@ -216,17 +216,17 @@ const Navbar = () => {
                                 alt="Gyan Vihar"
                                 width={240}
                                 height={75}
-                                className="w-auto h-[80%] lg:h-[85%] xl:h-full object-contain brightness-0 invert"
+                                className="w-auto h-[85%] lg:h-[90%] xl:h-full object-contain brightness-0 invert"
                                 priority
                             />
 
-                            <div className="flex items-center h-full gap-1 xl:gap-2 2xl:gap-3 border-l border-white/10 pl-1 lg:pl-2 xl:pl-3">
+                            <div className="flex items-center h-full gap-1 xl:gap-2 2xl:gap-3 border-l border-white/10 pl-1 lg:pl-2 xl:pl-3 overflow-visible">
                                 <Image
                                     src="/Herosection/Nirf white.png"
                                     alt="NIRF"
                                     width={140}
                                     height={90}
-                                    className="w-auto h-[110%] lg:h-[120%] xl:h-[140%] object-contain px-0.5"
+                                    className="w-auto h-full lg:h-[110%] xl:h-[120%] object-contain px-0.5"
                                     priority
                                 />
 
@@ -235,7 +235,7 @@ const Navbar = () => {
                                     alt="NAAC A+"
                                     width={160}
                                     height={100}
-                                    className="w-auto h-[130%] lg:h-[140%] xl:h-[160%] object-contain px-0.5"
+                                    className="w-auto h-[110%] lg:h-[120%] xl:h-[140%] object-contain px-1"
                                     priority
                                 />
                             </div>

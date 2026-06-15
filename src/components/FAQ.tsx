@@ -34,9 +34,12 @@ export default function FAQ() {
                     </p>
                 </motion.div>
 
-                {/* FAQ 2-Column Grid: 6 left, 6 right */}
+                {/* FAQ 2-Column Grid: balanced split */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-4 items-start">
-                    {[{ group: faqs.slice(0, 6), offset: 0 }, { group: faqs.slice(6), offset: 6 }].map(({ group, offset }, colIdx) => (
+                    {(() => {
+                        const mid = Math.ceil(faqs.length / 2);
+                        return [{ group: faqs.slice(0, mid), offset: 0 }, { group: faqs.slice(mid), offset: mid }];
+                    })().map(({ group, offset }, colIdx) => (
                         <div key={colIdx} className="flex flex-col gap-3">
                             {group.map((faq, j) => {
                                 const i = offset + j;

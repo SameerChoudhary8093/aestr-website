@@ -72,4 +72,8 @@ export const faqs: FaqItem[] = [
     q: "What is the \"Silicon Valley-style incubator\" model in AESTR?",
     a: "The incubator model treats the campus as a tech startup lab rather than a passive classroom. Students operate as software residents where they build actual commercialized deep-tech products, launch startups from scratch, or transition directly into high-growth product roles under the guidance of industry founders.",
   },
+  {
+    q: "What is campus life like at AESTR and what facilities are available?",
+    a: "AESTR's campus at Suresh Gyan Vihar University offers a vibrant, innovation-driven environment. Students have 24/7 access to state-of-the-art AI labs, high-performance GPU workstations, dedicated co-working spaces, a well-stocked digital library, and collaborative maker spaces. Beyond academics, the campus features modern hostels, sports facilities, a cafeteria, and regular community events including hackathons, tech talks, and cultural fests — creating a holistic experience that fuels both professional growth and personal well-being.",
+  },
 ];
