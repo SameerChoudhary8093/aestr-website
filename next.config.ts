@@ -3,6 +3,21 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   assetPrefix: "/aestr",
 
+  async redirects() {
+    return [
+      {
+        source: '/aestr/software-engineering',
+        destination: '/aestr/software-cloud-engineering',
+        permanent: true,
+      },
+      {
+        source: '/aestr/btech-cloud-engineering',
+        destination: '/aestr/software-cloud-engineering',
+        permanent: true,
+      }
+    ];
+  },
+
   images: {
     loaderFile: "./src/imageLoader.ts",
     remotePatterns: [
