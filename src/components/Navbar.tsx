@@ -25,7 +25,7 @@ const Navbar = () => {
     }, [scrolled]);
 
     const navLinks = [
-        { name: 'Home', href: '/#hero' },
+        { name: 'Home', href: 'https://www.gyanvihar.org/aestr/' },
         { name: 'Program Offered', href: '#', dropdownKey: 'programs' },
         { name: 'Aestr Alpha', href: 'https://aestralpha.com', external: true },
         { name: 'Sovereign AI', href: '/sovereign-ai-initiative' },
