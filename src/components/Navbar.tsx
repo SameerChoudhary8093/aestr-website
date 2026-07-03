@@ -117,7 +117,7 @@ const Navbar = () => {
                 {/* Navbar Content */}
                 <div className="flex items-center justify-between w-full h-[65px] lg:h-[72px] xl:h-[80px] 2xl:h-[90px] px-4 lg:px-5 xl:px-6 overflow-visible">
                     {/* Left: AESTR Logo */}
-                    <Link href="/#hero" onClick={handleHomeClick} className="flex-none h-[70%] lg:h-[75%] xl:h-[80%] 2xl:h-[90%]" aria-label="Aestr Home Logo">
+                    <Link href="https://www.gyanvihar.org/aestr/" onClick={handleHomeClick} className="flex-none h-[70%] lg:h-[75%] xl:h-[80%] 2xl:h-[90%]" aria-label="Aestr Home Logo">
                         <Image
                             src={aestrLogo}
                             alt="Aestr Logo"
