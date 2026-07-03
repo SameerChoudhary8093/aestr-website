@@ -6,12 +6,12 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: '/aestr/software-engineering',
+        source: '/software-engineering',
         destination: '/aestr/software-cloud-engineering',
         permanent: true,
       },
       {
-        source: '/aestr/btech-cloud-engineering',
+        source: '/btech-cloud-engineering',
         destination: '/aestr/software-cloud-engineering',
         permanent: true,
       }
